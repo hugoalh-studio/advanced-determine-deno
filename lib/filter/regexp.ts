@@ -96,13 +96,15 @@ interface RegExpFilterOptions extends Partial<Omit<RegExpFilterStatus, "dotAll" 
  * @description Filter for `RegExp`.
  */
 class RegExpFilter {
-	#dotAll: ThreePhaseConditionEnumValuesType = "neutral";
-	#exactly: ThreePhaseConditionEnumValuesType = "neutral";
-	#global: ThreePhaseConditionEnumValuesType = "neutral";
-	#ignoreCase: ThreePhaseConditionEnumValuesType = "neutral";
-	#multipleLine: ThreePhaseConditionEnumValuesType = "neutral";
-	#sticky: ThreePhaseConditionEnumValuesType = "neutral";
-	#unicode: ThreePhaseConditionEnumValuesType = "neutral";
+	#status: RegExpFilterStatus = {
+		dotAll: "neutral",
+		exactly: "neutral",
+		global: "neutral",
+		ignoreCase: "neutral",
+		multipleLine: "neutral",
+		sticky: "neutral",
+		unicode: "neutral"
+	};
 	/**
 	 * @constructor
 	 * @description Initialize the `RegExp` filter.
@@ -110,13 +112,7 @@ class RegExpFilter {
 	 */
 	constructor(options?: RegExpFilter | RegExpFilterOptions) {
 		if (options instanceof RegExpFilter) {
-			this.#dotAll = options.#dotAll;
-			this.#exactly = options.#exactly;
-			this.#global = options.#global;
-			this.#ignoreCase = options.#ignoreCase;
-			this.#multipleLine = options.#multipleLine;
-			this.#sticky = options.#sticky;
-			this.#unicode = options.#unicode;
+			this.#status = { ...options.#status };
 		} else if (typeof options !== "undefined") {
 			options.exactly ??= options.exact;
 			options.ignoreCase ??= options.caseInsensitive;
@@ -144,15 +140,7 @@ class RegExpFilter {
 	 * @returns {RegExpFilterStatus} Status of this `RegExp` filter.
 	 */
 	get status(): RegExpFilterStatus {
-		return {
-			dotAll: this.#dotAll,
-			exactly: this.#exactly,
-			global: this.#global,
-			ignoreCase: this.#ignoreCase,
-			multipleLine: this.#multipleLine,
-			sticky: this.#sticky,
-			unicode: this.#unicode
-		};
+		return { ...this.#status };
 	}
 	/**
 	 * @method dotAll
@@ -161,14 +149,7 @@ class RegExpFilter {
 	 * @returns {this}
 	 */
 	dotAll(value: ThreePhaseConditionEnumKeysType): this {
-		if (typeof value !== "string") {
-			throw new TypeError(`Filter argument \`dotAll\` must be type of string!`);
-		}
-		let valueResolve: ThreePhaseConditionEnumValuesType | undefined = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value);
-		if (typeof valueResolve !== "string") {
-			throw new RangeError(`Filter argument \`dotAll\` must be either of these values: "${Object.keys(ThreePhaseConditionEnum).sort().join("\", \"")}"`);
-		}
-		this.#dotAll = valueResolve;
+		this.#status.dotAll = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "dotAll");
 		return this;
 	}
 	/**
@@ -178,14 +159,7 @@ class RegExpFilter {
 	 * @returns {this}
 	 */
 	exactly(value: ThreePhaseConditionEnumKeysType): this {
-		if (typeof value !== "string") {
-			throw new TypeError(`Filter argument \`exactly\` must be type of string!`);
-		}
-		let valueResolve: ThreePhaseConditionEnumValuesType | undefined = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value);
-		if (typeof valueResolve !== "string") {
-			throw new RangeError(`Filter argument \`exactly\` must be either of these values: "${Object.keys(ThreePhaseConditionEnum).sort().join("\", \"")}"`);
-		}
-		this.#exactly = valueResolve;
+		this.#status.exactly = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "exactly");
 		return this;
 	}
 	/**
@@ -195,14 +169,7 @@ class RegExpFilter {
 	 * @returns {this}
 	 */
 	global(value: ThreePhaseConditionEnumKeysType): this {
-		if (typeof value !== "string") {
-			throw new TypeError(`Filter argument \`global\` must be type of string!`);
-		}
-		let valueResolve: ThreePhaseConditionEnumValuesType | undefined = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value);
-		if (typeof valueResolve !== "string") {
-			throw new RangeError(`Filter argument \`global\` must be either of these values: "${Object.keys(ThreePhaseConditionEnum).sort().join("\", \"")}"`);
-		}
-		this.#global = valueResolve;
+		this.#status.global = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "global");
 		return this;
 	}
 	/**
@@ -212,14 +179,7 @@ class RegExpFilter {
 	 * @returns {this}
 	 */
 	ignoreCase(value: ThreePhaseConditionEnumKeysType): this {
-		if (typeof value !== "string") {
-			throw new TypeError(`Filter argument \`ignoreCase\` must be type of string!`);
-		}
-		let valueResolve: ThreePhaseConditionEnumValuesType | undefined = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value);
-		if (typeof valueResolve !== "string") {
-			throw new RangeError(`Filter argument \`ignoreCase\` must be either of these values: "${Object.keys(ThreePhaseConditionEnum).sort().join("\", \"")}"`);
-		}
-		this.#ignoreCase = valueResolve;
+		this.#status.ignoreCase = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "ignoreCase");
 		return this;
 	}
 	/**
@@ -229,14 +189,7 @@ class RegExpFilter {
 	 * @returns {this}
 	 */
 	multipleLine(value: ThreePhaseConditionEnumKeysType): this {
-		if (typeof value !== "string") {
-			throw new TypeError(`Filter argument \`multipleLine\` must be type of string!`);
-		}
-		let valueResolve: ThreePhaseConditionEnumValuesType | undefined = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value);
-		if (typeof valueResolve !== "string") {
-			throw new RangeError(`Filter argument \`multipleLine\` must be either of these values: "${Object.keys(ThreePhaseConditionEnum).sort().join("\", \"")}"`);
-		}
-		this.#multipleLine = valueResolve;
+		this.#status.multipleLine = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "multipleLine");
 		return this;
 	}
 	/**
@@ -246,14 +199,7 @@ class RegExpFilter {
 	 * @returns {this}
 	 */
 	sticky(value: ThreePhaseConditionEnumKeysType): this {
-		if (typeof value !== "string") {
-			throw new TypeError(`Filter argument \`sticky\` must be type of string!`);
-		}
-		let valueResolve: ThreePhaseConditionEnumValuesType | undefined = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value);
-		if (typeof valueResolve !== "string") {
-			throw new RangeError(`Filter argument \`sticky\` must be either of these values: "${Object.keys(ThreePhaseConditionEnum).sort().join("\", \"")}"`);
-		}
-		this.#sticky = valueResolve;
+		this.#status.sticky = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "sticky");
 		return this;
 	}
 	/**
@@ -263,14 +209,7 @@ class RegExpFilter {
 	 * @returns {this}
 	 */
 	unicode(value: ThreePhaseConditionEnumKeysType): this {
-		if (typeof value !== "string") {
-			throw new TypeError(`Filter argument \`unicode\` must be type of string!`);
-		}
-		let valueResolve: ThreePhaseConditionEnumValuesType | undefined = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value);
-		if (typeof valueResolve !== "string") {
-			throw new RangeError(`Filter argument \`unicode\` must be either of these values: "${Object.keys(ThreePhaseConditionEnum).sort().join("\", \"")}"`);
-		}
-		this.#unicode = valueResolve;
+		this.#status.unicode = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "unicode");
 		return this;
 	}
 	/** @alias exactly */exact = this.exactly;
@@ -286,23 +225,23 @@ class RegExpFilter {
 	test(item: unknown): boolean {
 		if (
 			!(item instanceof RegExp) ||
-			(this.#dotAll === "false" && item.dotAll) ||
-			(this.#dotAll === "true" && !item.dotAll) ||
-			(this.#exactly === "false" && item.source.startsWith("^") && item.source.endsWith("$")) ||
-			(this.#exactly === "true" && (
+			(this.#status.dotAll === "false" && item.dotAll) ||
+			(this.#status.dotAll === "true" && !item.dotAll) ||
+			(this.#status.exactly === "false" && item.source.startsWith("^") && item.source.endsWith("$")) ||
+			(this.#status.exactly === "true" && (
 				!item.source.startsWith("^") ||
 				!item.source.endsWith("$")
 			)) ||
-			(this.#global === "false" && item.global) ||
-			(this.#global === "true" && !item.global) ||
-			(this.#ignoreCase === "false" && item.ignoreCase) ||
-			(this.#ignoreCase === "true" && !item.ignoreCase) ||
-			(this.#multipleLine === "false" && item.multiline) ||
-			(this.#multipleLine === "true" && !item.multiline) ||
-			(this.#sticky === "false" && item.sticky) ||
-			(this.#sticky === "true" && !item.sticky) ||
-			(this.#unicode === "false" && item.unicode) ||
-			(this.#unicode === "true" && !item.unicode)
+			(this.#status.global === "false" && item.global) ||
+			(this.#status.global === "true" && !item.global) ||
+			(this.#status.ignoreCase === "false" && item.ignoreCase) ||
+			(this.#status.ignoreCase === "true" && !item.ignoreCase) ||
+			(this.#status.multipleLine === "false" && item.multiline) ||
+			(this.#status.multipleLine === "true" && !item.multiline) ||
+			(this.#status.sticky === "false" && item.sticky) ||
+			(this.#status.sticky === "true" && !item.sticky) ||
+			(this.#status.unicode === "false" && item.unicode) ||
+			(this.#status.unicode === "true" && !item.unicode)
 		) {
 			return false;
 		}

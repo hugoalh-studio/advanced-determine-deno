@@ -37,8 +37,10 @@ interface MapFilterOptions extends Partial<MapFilterStatus> {
  * @description Filter for `Map`.
  */
 class MapFilter {
-	#sizeMaximum = Infinity;
-	#sizeMinimum = 1;
+	#status: MapFilterStatus = {
+		sizeMaximum: Infinity,
+		sizeMinimum: 1
+	};
 	/**
 	 * @constructor
 	 * @description Initialize the `Map` filter.
@@ -46,8 +48,7 @@ class MapFilter {
 	 */
 	constructor(options?: MapFilter | MapFilterOptions) {
 		if (options instanceof MapFilter) {
-			this.#sizeMaximum = options.#sizeMaximum;
-			this.#sizeMinimum = options.#sizeMinimum;
+			this.#status = { ...options.#status };
 		} else if (typeof options !== "undefined") {
 			options.sizeMaximum ??= options.sizeMax ?? options.maximumSize ?? options.maxSize;
 			options.sizeMinimum ??= options.sizeMin ?? options.minimumSize ?? options.minSize;
@@ -74,10 +75,7 @@ class MapFilter {
 	 * @returns {MapFilterStatus} Status of this `Map` filter.
 	 */
 	get status(): MapFilterStatus {
-		return {
-			sizeMaximum: this.#sizeMaximum,
-			sizeMinimum: this.#sizeMinimum
-		};
+		return { ...this.#status };
 	}
 	/**
 	 * @method allowEmpty
@@ -89,7 +87,7 @@ class MapFilter {
 		if (typeof value !== "boolean") {
 			throw new TypeError(`Filter argument \`allowEmpty\` must be type of boolean!`);
 		}
-		this.#sizeMinimum = value ? 0 : 1;
+		this.#status.sizeMinimum = value ? 0 : 1;
 		return this;
 	}
 	/**
@@ -105,8 +103,8 @@ class MapFilter {
 		if (!(Number.isSafeInteger(value) && value >= 0)) {
 			throw new RangeError(`Filter argument \`size\` must be a number which is integer, positive, and safe!`);
 		}
-		this.#sizeMaximum = value;
-		this.#sizeMinimum = value;
+		this.#status.sizeMaximum = value;
+		this.#status.sizeMinimum = value;
 		return this;
 	}
 	/**
@@ -119,10 +117,10 @@ class MapFilter {
 		if (!(typeof value === "number" && !Number.isNaN(value))) {
 			throw new TypeError(`Filter argument \`sizeMaximum\` must be type of number!`);
 		}
-		if (value !== Infinity && !(Number.isSafeInteger(value) && value >= 0 && value >= this.#sizeMinimum)) {
-			throw new RangeError(`Filter argument \`sizeMaximum\` must be \`Infinity\`, or a number which is integer, positive, safe, and >= ${this.#sizeMinimum}!`);
+		if (value !== Infinity && !(Number.isSafeInteger(value) && value >= 0 && value >= this.#status.sizeMinimum)) {
+			throw new RangeError(`Filter argument \`sizeMaximum\` must be \`Infinity\`, or a number which is integer, positive, safe, and >= ${this.#status.sizeMinimum}!`);
 		}
-		this.#sizeMaximum = value;
+		this.#status.sizeMaximum = value;
 		return this;
 	}
 	/**
@@ -135,10 +133,10 @@ class MapFilter {
 		if (!(typeof value === "number" && !Number.isNaN(value))) {
 			throw new TypeError(`Filter argument \`sizeMinimum\` must be type of number!`);
 		}
-		if (!(Number.isSafeInteger(value) && value >= 0 && value <= this.#sizeMaximum)) {
-			throw new RangeError(`Filter argument \`sizeMinimum\` must be a number which is integer, positive, safe, and <= ${this.#sizeMaximum}!`);
+		if (!(Number.isSafeInteger(value) && value >= 0 && value <= this.#status.sizeMaximum)) {
+			throw new RangeError(`Filter argument \`sizeMinimum\` must be a number which is integer, positive, safe, and <= ${this.#status.sizeMaximum}!`);
 		}
-		this.#sizeMinimum = value;
+		this.#status.sizeMinimum = value;
 		return this;
 	}
 	/** @alias sizeMaximum */sizeMax = this.sizeMaximum;
@@ -156,8 +154,8 @@ class MapFilter {
 	test(item: unknown): boolean {
 		if (
 			!(item instanceof Map) ||
-			this.#sizeMaximum < item.size ||
-			item.size < this.#sizeMinimum
+			this.#status.sizeMaximum < item.size ||
+			item.size < this.#status.sizeMinimum
 		) {
 			return false;
 		}

@@ -1,23 +1,29 @@
 type EnumCase<T extends string> = T | Capitalize<T> | Uncapitalize<T>;
 /**
  * @function enumResolver
- * @template {unknown} K
- * @template {unknown} V
- * @param {Readonly<{ [x: string]: string; }>} e
- * @param {K} k
- * @returns {V | undefined}
+ * @template {unknown} I
+ * @template {unknown} O
+ * @param {Readonly<{ [x: string]: string; }>} enumObject
+ * @param {I} input
+ * @param {string} paramName
+ * @returns {O}
  */
-function enumResolver<K, V>(e: Readonly<{ [x: string]: string; }>, k: K): V | undefined {
-	for (let [eKey, eValue] of Object.entries(e)) {
+function enumResolver<I, O>(enumObject: Readonly<{ [x: string]: string; }>, input: I, paramName: string): O {
+	if (typeof input !== "string") {
+		throw new TypeError(`Filter argument \`${paramName}\` must be type of string!`);
+	}
+	for (let [enumObjectKey, enumObjectValue] of Object.entries(enumObject)) {
 		if (
-			k === eKey ||
-			k === `${eKey.slice(0, 1).toLowerCase()}${eKey.slice(1)}` ||
-			k === `${eKey.slice(0, 1).toUpperCase()}${eKey.slice(1)}`
+			input === enumObjectKey ||
+			input === `${enumObjectKey.slice(0, 1).toLowerCase()}${enumObjectKey.slice(1)}` ||
+			input === `${enumObjectKey.slice(0, 1).toUpperCase()}${enumObjectKey.slice(1)}`
 		) {
-			return (eValue as V);
+			return (enumObjectValue as O);
 		}
 	}
-	return undefined;
+	throw new RangeError(`\`${input}\` is not a valid value for filter argument \`${paramName}\`! Must be either of these values: "${Array.from(new Set(Object.keys(enumObject).flatMap((value: string): string[] => {
+		return [value, `${value.slice(0, 1).toLowerCase()}${value.slice(1)}`, `${value.slice(0, 1).toUpperCase()}${value.slice(1)}`];
+	})).values()).sort().join("\", \"")}"`);
 }
 const IEEE754Enum = Object.freeze({
 	Any: "any",

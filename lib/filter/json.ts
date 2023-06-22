@@ -126,10 +126,12 @@ function isJSONInternal(item: unknown, keysPattern?: RegExp): boolean {
  * @description Filter for JSON.
  */
 class JSONFilter {
-	#entriesCountMaximum = Infinity;
-	#entriesCountMinimum = 1;
-	#keysPattern?: RegExp;
-	#rootType: JSONRootTypeEnumValuesType = "any";
+	#status: JSONFilterStatus = {
+		entriesCountMaximum: Infinity,
+		entriesCountMinimum: 1,
+		keysPattern: undefined,
+		rootType: "any"
+	};
 	/**
 	 * @constructor
 	 * @description Initialize the JSON filter.
@@ -137,10 +139,7 @@ class JSONFilter {
 	 */
 	constructor(options?: JSONFilter | JSONFilterOptions) {
 		if (options instanceof JSONFilter) {
-			this.#entriesCountMaximum = options.#entriesCountMaximum;
-			this.#entriesCountMinimum = options.#entriesCountMinimum;
-			this.#keysPattern = options.#keysPattern;
-			this.#rootType = options.#rootType;
+			this.#status = { ...options.#status };
 		} else if (typeof options !== "undefined") {
 			options.entriesCountMaximum ??= options.entriesCountMax ?? options.maximumEntries ?? options.maxEntries;
 			options.entriesCountMinimum ??= options.entriesCountMin ?? options.minimumEntries ?? options.minEntries;
@@ -168,12 +167,7 @@ class JSONFilter {
 	 * @returns {JSONFilterStatus} Status of this JSON filter.
 	 */
 	get status(): JSONFilterStatus {
-		return {
-			entriesCountMaximum: this.#entriesCountMaximum,
-			entriesCountMinimum: this.#entriesCountMinimum,
-			keysPattern: this.#keysPattern,
-			rootType: this.#rootType
-		};
+		return { ...this.#status };
 	}
 	/**
 	 * @method allowEmpty
@@ -185,7 +179,7 @@ class JSONFilter {
 		if (typeof value !== "boolean") {
 			throw new TypeError(`Filter argument \`allowEmpty\` must be type of boolean!`);
 		}
-		this.#entriesCountMinimum = value ? 0 : 1;
+		this.#status.entriesCountMinimum = value ? 0 : 1;
 		return this;
 	}
 	/**
@@ -201,8 +195,8 @@ class JSONFilter {
 		if (!(Number.isSafeInteger(value) && value >= 0)) {
 			throw new RangeError(`Filter argument \`entriesCount\` must be a number which is integer, positive, and safe!`);
 		}
-		this.#entriesCountMaximum = value;
-		this.#entriesCountMinimum = value;
+		this.#status.entriesCountMaximum = value;
+		this.#status.entriesCountMinimum = value;
 		return this;
 	}
 	/**
@@ -215,10 +209,10 @@ class JSONFilter {
 		if (!(typeof value === "number" && !Number.isNaN(value))) {
 			throw new TypeError(`Filter argument \`entriesCountMaximum\` must be type of number!`);
 		}
-		if (value !== Infinity && !(Number.isSafeInteger(value) && value >= 0 && value >= this.#entriesCountMinimum)) {
-			throw new RangeError(`Filter argument \`entriesCountMaximum\` must be \`Infinity\`, or a number which is integer, positive, safe, and >= ${this.#entriesCountMinimum}!`);
+		if (value !== Infinity && !(Number.isSafeInteger(value) && value >= 0 && value >= this.#status.entriesCountMinimum)) {
+			throw new RangeError(`Filter argument \`entriesCountMaximum\` must be \`Infinity\`, or a number which is integer, positive, safe, and >= ${this.#status.entriesCountMinimum}!`);
 		}
-		this.#entriesCountMaximum = value;
+		this.#status.entriesCountMaximum = value;
 		return this;
 	}
 	/**
@@ -231,10 +225,10 @@ class JSONFilter {
 		if (!(typeof value === "number" && !Number.isNaN(value))) {
 			throw new TypeError(`Filter argument \`entriesCountMinimum\` must be type of number!`);
 		}
-		if (!(Number.isSafeInteger(value) && value >= 0 && value <= this.#entriesCountMaximum)) {
-			throw new RangeError(`Filter argument \`entriesCountMinimum\` must be a number which is integer, positive, safe, and <= ${this.#entriesCountMaximum}!`);
+		if (!(Number.isSafeInteger(value) && value >= 0 && value <= this.#status.entriesCountMaximum)) {
+			throw new RangeError(`Filter argument \`entriesCountMinimum\` must be a number which is integer, positive, safe, and <= ${this.#status.entriesCountMaximum}!`);
 		}
-		this.#entriesCountMinimum = value;
+		this.#status.entriesCountMinimum = value;
 		return this;
 	}
 	/**
@@ -247,7 +241,7 @@ class JSONFilter {
 		if (!(value instanceof RegExp) && typeof value !== "undefined") {
 			throw new TypeError(`Filter argument \`keysPattern\` must be instance of regular expression, or type of undefined!`);
 		}
-		this.#keysPattern = value;
+		this.#status.keysPattern = value;
 		return this;
 	}
 	/**
@@ -257,14 +251,7 @@ class JSONFilter {
 	 * @returns {this}
 	 */
 	rootType(value: JSONRootTypeEnumKeysType): this {
-		if (typeof value !== "string") {
-			throw new TypeError(`Filter argument \`rootType\` must be type of string!`);
-		}
-		let valueResolve: JSONRootTypeEnumValuesType | undefined = enumResolver<JSONRootTypeEnumKeysType, JSONRootTypeEnumValuesType>(JSONRootTypeEnum, value);
-		if (typeof valueResolve !== "string") {
-			throw new RangeError(`Filter argument \`rootType\` must be either of these values: "${Object.keys(JSONRootTypeEnum).sort().join("\", \"")}"`);
-		}
-		this.#rootType = valueResolve;
+		this.#status.rootType = enumResolver<JSONRootTypeEnumKeysType, JSONRootTypeEnumValuesType>(JSONRootTypeEnum, value, "rootType");
 		return this;
 	}
 	/**
@@ -278,11 +265,11 @@ class JSONFilter {
 			throw new TypeError(`Filter argument \`strict\` must be type of boolean!`);
 		}
 		if (value) {
-			this.#keysPattern = jsonLegalKeysPatternRegExp;
-			this.#rootType = "object";
+			this.#status.keysPattern = jsonLegalKeysPatternRegExp;
+			this.#status.rootType = "object";
 		} else {
-			this.#keysPattern = undefined;
-			this.#rootType = "any";
+			this.#status.keysPattern = undefined;
+			this.#status.rootType = "any";
 		}
 		return this;
 	}
@@ -296,7 +283,7 @@ class JSONFilter {
 		if (typeof value !== "boolean") {
 			throw new TypeError(`Filter argument \`strictKeys\` must be type of boolean!`);
 		}
-		this.#keysPattern = value ? jsonLegalKeysPatternRegExp : undefined;
+		this.#status.keysPattern = value ? jsonLegalKeysPatternRegExp : undefined;
 		return this;
 	}
 	/** @alias entriesCountMaximum */entriesCountMax = this.entriesCountMaximum;
@@ -316,11 +303,11 @@ class JSONFilter {
 		//@ts-ignore False positive.
 		let itemEntriesCount: number = Object.entries(item).length;
 		if (
-			!isJSONInternal(item, this.#keysPattern) ||
-			(this.#rootType === "array" && !Array.isArray(item)) ||
-			(this.#rootType === "object" && Array.isArray(item)) ||
-			this.#entriesCountMaximum < itemEntriesCount ||
-			itemEntriesCount < this.#entriesCountMinimum
+			!isJSONInternal(item, this.#status.keysPattern) ||
+			(this.#status.rootType === "array" && !Array.isArray(item)) ||
+			(this.#status.rootType === "object" && Array.isArray(item)) ||
+			this.#status.entriesCountMaximum < itemEntriesCount ||
+			itemEntriesCount < this.#status.entriesCountMinimum
 		) {
 			return false;
 		}

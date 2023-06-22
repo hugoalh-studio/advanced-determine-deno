@@ -120,16 +120,18 @@ interface NumberFilterOptions extends Partial<Omit<NumberFilterStatus, "finitene
  * @description Filter for number.
  */
 class NumberFilter {
-	#finiteness: MathematicsFinitenessEnumValuesType = "any";
-	#ieee754: IEEE754EnumValuesType = "any";
-	#maximum?: number;
-	#maximumExclusive = false;
-	#minimum?: number;
-	#minimumExclusive = false;
-	#numericType: NumericTypeEnumValuesType = "any";
-	#parity: MathematicsParityEnumValuesType = "any";
-	#primality: MathematicsPrimalityEnumValuesType = "any";
-	#sign: MathematicsSignEnumValuesType = "any";
+	#status: NumberFilterStatus = {
+		finiteness: "any",
+		ieee754: "any",
+		maximum: undefined,
+		maximumExclusive: false,
+		minimum: undefined,
+		minimumExclusive: false,
+		numericType: "any",
+		parity: "any",
+		primality: "any",
+		sign: "any"
+	};
 	/**
 	 * @constructor
 	 * @description Initialize the number filter.
@@ -137,16 +139,7 @@ class NumberFilter {
 	 */
 	constructor(options?: NumberFilter | NumberFilterOptions) {
 		if (options instanceof NumberFilter) {
-			this.#finiteness = options.#finiteness;
-			this.#ieee754 = options.#ieee754;
-			this.#maximum = options.#maximum;
-			this.#maximumExclusive = options.#maximumExclusive;
-			this.#minimum = options.#minimum;
-			this.#minimumExclusive = options.#minimumExclusive;
-			this.#numericType = options.#numericType;
-			this.#parity = options.#parity;
-			this.#primality = options.#primality;
-			this.#sign = options.#sign;
+			this.#status = { ...options.#status };
 		} else if (typeof options !== "undefined") {
 			options.maximum ??= options.max;
 			options.maximumExclusive ??= options.maxExclusive ?? options.exclusiveMaximum ?? options.exclusiveMax;
@@ -175,18 +168,7 @@ class NumberFilter {
 	 * @returns {NumberFilterStatus} Status of this number filter.
 	 */
 	get status(): NumberFilterStatus {
-		return {
-			finiteness: this.#finiteness,
-			ieee754: this.#ieee754,
-			maximum: this.#maximum,
-			maximumExclusive: this.#maximumExclusive,
-			minimum: this.#minimum,
-			minimumExclusive: this.#minimumExclusive,
-			numericType: this.#numericType,
-			parity: this.#parity,
-			primality: this.#primality,
-			sign: this.#sign
-		};
+		return { ...this.#status };
 	}
 	/**
 	 * @method finiteness
@@ -195,14 +177,7 @@ class NumberFilter {
 	 * @returns {this}
 	 */
 	finiteness(value: MathematicsFinitenessEnumKeysType): this {
-		if (typeof value !== "string") {
-			throw new TypeError(`Filter argument \`finiteness\` must be type of string!`);
-		}
-		let valueResolve: MathematicsFinitenessEnumValuesType | undefined = enumResolver<MathematicsFinitenessEnumKeysType, MathematicsFinitenessEnumValuesType>(MathematicsFinitenessEnum, value);
-		if (typeof valueResolve !== "string") {
-			throw new RangeError(`Filter argument \`finiteness\` must be either of these values: "${Object.keys(MathematicsFinitenessEnum).sort().join("\", \"")}"`);
-		}
-		this.#finiteness = valueResolve;
+		this.#status.finiteness = enumResolver<MathematicsFinitenessEnumKeysType, MathematicsFinitenessEnumValuesType>(MathematicsFinitenessEnum, value, "finiteness");
 		return this;
 	}
 	/**
@@ -212,14 +187,7 @@ class NumberFilter {
 	 * @returns {this}
 	 */
 	ieee754(value: IEEE754EnumKeysType): this {
-		if (typeof value !== "string") {
-			throw new TypeError(`Filter argument \`ieee754\` must be type of string!`);
-		}
-		let valueResolve: IEEE754EnumValuesType | undefined = enumResolver<IEEE754EnumKeysType, IEEE754EnumValuesType>(IEEE754Enum, value);
-		if (typeof valueResolve !== "string") {
-			throw new RangeError(`Filter argument \`ieee754\` must be either of these values: "${Object.keys(IEEE754Enum).sort().join("\", \"")}"`);
-		}
-		this.#ieee754 = valueResolve;
+		this.#status.ieee754 = enumResolver<IEEE754EnumKeysType, IEEE754EnumValuesType>(IEEE754Enum, value, "ieee754");
 		return this;
 	}
 	/**
@@ -230,10 +198,10 @@ class NumberFilter {
 	 */
 	integralNumericType(value: IntegralNumericTypeEnumKeysType): this {
 		let [intrMin, intrMax] = integralNumericTypeRange(value);
-		this.#maximum = Number(intrMax);
-		this.#minimum = Number(intrMin);
-		this.#maximumExclusive = false;
-		this.#minimumExclusive = false;
+		this.#status.maximum = Number(intrMax);
+		this.#status.minimum = Number(intrMin);
+		this.#status.maximumExclusive = false;
+		this.#status.minimumExclusive = false;
 		return this;
 	}
 	/**
@@ -244,13 +212,13 @@ class NumberFilter {
 	 */
 	maximum(value?: number | undefined): this {
 		if (typeof value === "number" && !Number.isNaN(value)) {
-			if (typeof this.#minimum === "number" && !(this.#minimum <= value)) {
-				throw new RangeError(`Filter argument \`maximum\` must be a number which is >= ${this.#minimum}!`);
+			if (typeof this.#status.minimum === "number" && !(this.#status.minimum <= value)) {
+				throw new RangeError(`Filter argument \`maximum\` must be a number which is >= ${this.#status.minimum}!`);
 			}
 		} else if (typeof value !== "undefined") {
 			throw new TypeError(`Filter argument \`maximum\` must be type of number or undefined!`);
 		}
-		this.#maximum = value;
+		this.#status.maximum = value;
 		return this;
 	}
 	/**
@@ -263,7 +231,7 @@ class NumberFilter {
 		if (typeof value !== "boolean") {
 			throw new TypeError(`Filter argument \`maximumExclusive\` must be type of boolean!`);
 		}
-		this.#maximumExclusive = value;
+		this.#status.maximumExclusive = value;
 		return this;
 	}
 	/**
@@ -274,13 +242,13 @@ class NumberFilter {
 	 */
 	minimum(value?: number | undefined): this {
 		if (typeof value === "number" && !Number.isNaN(value)) {
-			if (typeof this.#maximum === "number" && !(value <= this.#maximum)) {
-				throw new RangeError(`Filter argument \`minimum\` must be a number which is <= ${this.#maximum}!`);
+			if (typeof this.#status.maximum === "number" && !(value <= this.#status.maximum)) {
+				throw new RangeError(`Filter argument \`minimum\` must be a number which is <= ${this.#status.maximum}!`);
 			}
 		} else if (typeof value !== "undefined") {
 			throw new TypeError(`Filter argument \`minimum\` must be type of number or undefined!`);
 		}
-		this.#minimum = value;
+		this.#status.minimum = value;
 		return this;
 	}
 	/**
@@ -293,7 +261,7 @@ class NumberFilter {
 		if (typeof value !== "boolean") {
 			throw new TypeError(`Filter argument \`minimumExclusive\` must be type of boolean!`);
 		}
-		this.#minimumExclusive = value;
+		this.#status.minimumExclusive = value;
 		return this;
 	}
 	/**
@@ -303,14 +271,7 @@ class NumberFilter {
 	 * @returns {this}
 	 */
 	numericType(value: NumericTypeEnumKeysType): this {
-		if (typeof value !== "string") {
-			throw new TypeError(`Filter argument \`numericType\` must be type of string!`);
-		}
-		let valueResolve: NumericTypeEnumValuesType | undefined = enumResolver<NumericTypeEnumKeysType, NumericTypeEnumValuesType>(NumericTypeEnum, value);
-		if (typeof valueResolve !== "string") {
-			throw new RangeError(`Filter argument \`numericType\` must be either of these values: "${Object.keys(NumericTypeEnum).sort().join("\", \"")}"`);
-		}
-		this.#numericType = valueResolve;
+		this.#status.numericType = enumResolver<NumericTypeEnumKeysType, NumericTypeEnumValuesType>(NumericTypeEnum, value, "numericType");
 		return this;
 	}
 	/**
@@ -320,14 +281,7 @@ class NumberFilter {
 	 * @returns {this}
 	 */
 	parity(value: MathematicsParityEnumKeysType): this {
-		if (typeof value !== "string") {
-			throw new TypeError(`Filter argument \`parity\` must be type of string!`);
-		}
-		let valueResolve: MathematicsParityEnumValuesType | undefined = enumResolver<MathematicsParityEnumKeysType, MathematicsParityEnumValuesType>(MathematicsParityEnum, value);
-		if (typeof valueResolve !== "string") {
-			throw new RangeError(`Filter argument \`parity\` must be either of these values: "${Object.keys(MathematicsParityEnum).sort().join("\", \"")}"`);
-		}
-		this.#parity = valueResolve;
+		this.#status.parity = enumResolver<MathematicsParityEnumKeysType, MathematicsParityEnumValuesType>(MathematicsParityEnum, value, "parity");
 		return this;
 	}
 	/**
@@ -337,14 +291,7 @@ class NumberFilter {
 	 * @returns {this}
 	 */
 	primality(value: MathematicsPrimalityEnumKeysType): this {
-		if (typeof value !== "string") {
-			throw new TypeError(`Filter argument \`primality\` must be type of string!`);
-		}
-		let valueResolve: MathematicsPrimalityEnumValuesType | undefined = enumResolver<MathematicsPrimalityEnumKeysType, MathematicsPrimalityEnumValuesType>(MathematicsPrimalityEnum, value);
-		if (typeof valueResolve !== "string") {
-			throw new RangeError(`Filter argument \`primality\` must be either of these values: "${Object.keys(MathematicsPrimalityEnum).sort().join("\", \"")}"`);
-		}
-		this.#primality = valueResolve;
+		this.#status.primality = enumResolver<MathematicsPrimalityEnumKeysType, MathematicsPrimalityEnumValuesType>(MathematicsPrimalityEnum, value, "primality");
 		return this;
 	}
 	/**
@@ -354,14 +301,7 @@ class NumberFilter {
 	 * @returns {this}
 	 */
 	sign(value: MathematicsSignEnumKeysType): this {
-		if (typeof value !== "string") {
-			throw new TypeError(`Filter argument \`sign\` must be type of string!`);
-		}
-		let valueResolve: MathematicsSignEnumValuesType | undefined = enumResolver<MathematicsSignEnumKeysType, MathematicsSignEnumValuesType>(MathematicsSignEnum, value);
-		if (typeof valueResolve !== "string") {
-			throw new RangeError(`Filter argument \`sign\` must be either of these values: "${Object.keys(MathematicsSignEnum).sort().join("\", \"")}"`);
-		}
-		this.#sign = valueResolve;
+		this.#status.sign = enumResolver<MathematicsSignEnumKeysType, MathematicsSignEnumValuesType>(MathematicsSignEnum, value, "sign");
 		return this;
 	}
 	/** @alias maximum */max = this.maximum;
@@ -478,22 +418,22 @@ class NumberFilter {
 		if (
 			typeof item !== "number" ||
 			Number.isNaN(item) ||
-			(this.#finiteness === "finite" && !Number.isFinite(item)) ||
-			(this.#finiteness === "infinite" && Number.isFinite(item)) ||
-			(this.#ieee754 === "safe" && !isNumberSafe(item)) ||
-			(this.#ieee754 === "unsafe" && isNumberSafe(item)) ||
-			(typeof this.#maximum === "number" && this.#maximumExclusive && !(item < this.#maximum)) ||
-			(typeof this.#maximum === "number" && !this.#maximumExclusive && !(item <= this.#maximum)) ||
-			(typeof this.#minimum === "number" && this.#minimumExclusive && !(this.#minimum < item)) ||
-			(typeof this.#minimum === "number" && !this.#minimumExclusive && !(this.#minimum <= item)) ||
-			(this.#numericType === "float" && !isNumberFloat(item)) ||
-			(this.#numericType === "integer" && !Number.isInteger(item)) ||
-			(this.#parity === "even" && !isNumberEven(item)) ||
-			(this.#parity === "odd" && !isNumberOdd(item)) ||
-			(this.#primality === "composite" && isNumberPrime(item)) ||
-			(this.#primality === "prime" && !isNumberPrime(item)) ||
-			(this.#sign === "negative" && !isNumberNegative(item)) ||
-			(this.#sign === "positive" && !isNumberPositive(item))
+			(this.#status.finiteness === "finite" && !Number.isFinite(item)) ||
+			(this.#status.finiteness === "infinite" && Number.isFinite(item)) ||
+			(this.#status.ieee754 === "safe" && !isNumberSafe(item)) ||
+			(this.#status.ieee754 === "unsafe" && isNumberSafe(item)) ||
+			(typeof this.#status.maximum === "number" && this.#status.maximumExclusive && !(item < this.#status.maximum)) ||
+			(typeof this.#status.maximum === "number" && !this.#status.maximumExclusive && !(item <= this.#status.maximum)) ||
+			(typeof this.#status.minimum === "number" && this.#status.minimumExclusive && !(this.#status.minimum < item)) ||
+			(typeof this.#status.minimum === "number" && !this.#status.minimumExclusive && !(this.#status.minimum <= item)) ||
+			(this.#status.numericType === "float" && !isNumberFloat(item)) ||
+			(this.#status.numericType === "integer" && !Number.isInteger(item)) ||
+			(this.#status.parity === "even" && !isNumberEven(item)) ||
+			(this.#status.parity === "odd" && !isNumberOdd(item)) ||
+			(this.#status.primality === "composite" && isNumberPrime(item)) ||
+			(this.#status.primality === "prime" && !isNumberPrime(item)) ||
+			(this.#status.sign === "negative" && !isNumberNegative(item)) ||
+			(this.#status.sign === "positive" && !isNumberPositive(item))
 		) {
 			return false;
 		}

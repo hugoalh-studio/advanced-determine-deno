@@ -96,13 +96,15 @@ interface StringFilterOptions extends Partial<Omit<StringFilterStatus, "ascii" |
  * @description Filter for string.
  */
 class StringFilter {
-	#ascii: ThreePhaseConditionEnumValuesType = "neutral";
-	#case: StringCaseEnumValuesType = "any";
-	#lengthMaximum = Infinity;
-	#lengthMinimum = 1;
-	#line: StringLineEnumValuesType = "any";
-	#pattern?: RegExp;
-	#preTrim = false;
+	#status: StringFilterStatus = {
+		ascii: "neutral",
+		case: "any",
+		lengthMaximum: Infinity,
+		lengthMinimum: 1,
+		line: "any",
+		pattern: undefined,
+		preTrim: false
+	};
 	/**
 	 * @constructor
 	 * @description Initialize the string filter.
@@ -110,13 +112,7 @@ class StringFilter {
 	 */
 	constructor(options?: StringFilter | StringFilterOptions) {
 		if (options instanceof StringFilter) {
-			this.#ascii = options.#ascii;
-			this.#case = options.#case;
-			this.#lengthMaximum = options.#lengthMaximum;
-			this.#lengthMinimum = options.#lengthMinimum;
-			this.#line = options.#line;
-			this.#pattern = options.#pattern;
-			this.#preTrim = options.#preTrim;
+			this.#status = { ...options.#status };
 		} else if (typeof options !== "undefined") {
 			options.length ??= options.characters;
 			options.lengthMaximum ??= options.lengthMax ?? options.charactersMaximum ?? options.charactersMax ?? options.maximumLength ?? options.maxLength ?? options.maximumCharacters ?? options.maxCharacters;
@@ -144,15 +140,7 @@ class StringFilter {
 	 * @returns {StringFilterStatus} Status of this string filter.
 	 */
 	get status(): StringFilterStatus {
-		return {
-			ascii: this.#ascii,
-			case: this.#case,
-			lengthMaximum: this.#lengthMaximum,
-			lengthMinimum: this.#lengthMinimum,
-			line: this.#line,
-			pattern: this.#pattern,
-			preTrim: this.#preTrim
-		};
+		return { ...this.#status };
 	}
 	/**
 	 * @method allowEmpty
@@ -164,7 +152,7 @@ class StringFilter {
 		if (typeof value !== "boolean") {
 			throw new TypeError(`Filter argument \`allowEmpty\` must be type of boolean!`);
 		}
-		this.#lengthMinimum = value ? 0 : 1;
+		this.#status.lengthMinimum = value ? 0 : 1;
 		return this;
 	}
 	/**
@@ -174,14 +162,7 @@ class StringFilter {
 	 * @returns {this}
 	 */
 	ascii(value: ThreePhaseConditionEnumKeysType): this {
-		if (typeof value !== "string") {
-			throw new TypeError(`Filter argument \`ascii\` must be type of string!`);
-		}
-		let valueResolve: ThreePhaseConditionEnumValuesType | undefined = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value);
-		if (typeof valueResolve !== "string") {
-			throw new RangeError(`Filter argument \`ascii\` must be either of these values: "${Object.keys(ThreePhaseConditionEnum).sort().join("\", \"")}"`);
-		}
-		this.#ascii = valueResolve;
+		this.#status.ascii = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "ascii");
 		return this;
 	}
 	/**
@@ -191,14 +172,7 @@ class StringFilter {
 	 * @returns {this}
 	 */
 	case(value: StringCaseEnumKeysType): this {
-		if (typeof value !== "string") {
-			throw new TypeError(`Filter argument \`case\` must be type of string!`);
-		}
-		let valueResolve: StringCaseEnumValuesType | undefined = enumResolver<StringCaseEnumKeysType, StringCaseEnumValuesType>(StringCaseEnum, value);
-		if (typeof valueResolve !== "string") {
-			throw new RangeError(`Filter argument \`case\` must be either of these values: "${Object.keys(StringCaseEnum).sort().join("\", \"")}"`);
-		}
-		this.#case = valueResolve;
+		this.#status.case = enumResolver<StringCaseEnumKeysType, StringCaseEnumValuesType>(StringCaseEnum, value, "case");
 		return this;
 	}
 	/**
@@ -214,8 +188,8 @@ class StringFilter {
 		if (!(Number.isSafeInteger(value) && value >= 0)) {
 			throw new RangeError(`Filter argument \`length\` must be a number which is integer, positive, and safe!`);
 		}
-		this.#lengthMaximum = value;
-		this.#lengthMinimum = value;
+		this.#status.lengthMaximum = value;
+		this.#status.lengthMinimum = value;
 		return this;
 	}
 	/**
@@ -228,10 +202,10 @@ class StringFilter {
 		if (!(typeof value === "number" && !Number.isNaN(value))) {
 			throw new TypeError(`Filter argument \`lengthMaximum\` must be type of number!`);
 		}
-		if (value !== Infinity && !(Number.isSafeInteger(value) && value >= 0 && value >= this.#lengthMinimum)) {
-			throw new RangeError(`Filter argument \`lengthMaximum\` must be \`Infinity\`, or a number which is integer, positive, safe, and >= ${this.#lengthMinimum}!`);
+		if (value !== Infinity && !(Number.isSafeInteger(value) && value >= 0 && value >= this.#status.lengthMinimum)) {
+			throw new RangeError(`Filter argument \`lengthMaximum\` must be \`Infinity\`, or a number which is integer, positive, safe, and >= ${this.#status.lengthMinimum}!`);
 		}
-		this.#lengthMaximum = value;
+		this.#status.lengthMaximum = value;
 		return this;
 	}
 	/**
@@ -244,10 +218,10 @@ class StringFilter {
 		if (!(typeof value === "number" && !Number.isNaN(value))) {
 			throw new TypeError(`Filter argument \`lengthMinimum\` must be type of number!`);
 		}
-		if (!(Number.isSafeInteger(value) && value >= 0 && value <= this.#lengthMaximum)) {
-			throw new RangeError(`Filter argument \`lengthMinimum\` must be a number which is integer, positive, safe, and <= ${this.#lengthMaximum}!`);
+		if (!(Number.isSafeInteger(value) && value >= 0 && value <= this.#status.lengthMaximum)) {
+			throw new RangeError(`Filter argument \`lengthMinimum\` must be a number which is integer, positive, safe, and <= ${this.#status.lengthMaximum}!`);
 		}
-		this.#lengthMinimum = value;
+		this.#status.lengthMinimum = value;
 		return this;
 	}
 	/**
@@ -257,14 +231,7 @@ class StringFilter {
 	 * @returns {this}
 	 */
 	line(value: StringLineEnumKeysType): this {
-		if (typeof value !== "string") {
-			throw new TypeError(`Filter argument \`line\` must be type of string!`);
-		}
-		let valueResolve: StringLineEnumValuesType | undefined = enumResolver<StringLineEnumKeysType, StringLineEnumValuesType>(StringLineEnum, value);
-		if (typeof valueResolve !== "string") {
-			throw new RangeError(`Filter argument \`line\` must be either of these values: "${Object.keys(StringLineEnum).sort().join("\", \"")}"`);
-		}
-		this.#line = valueResolve;
+		this.#status.line = enumResolver<StringLineEnumKeysType, StringLineEnumValuesType>(StringLineEnum, value, "line");
 		return this;
 	}
 	/**
@@ -277,7 +244,7 @@ class StringFilter {
 		if (!(value instanceof RegExp) && typeof value !== "undefined") {
 			throw new TypeError(`Filter argument \`pattern\` must be instance of regular expression, or type of undefined!`);
 		}
-		this.#pattern = value;
+		this.#status.pattern = value;
 		return this;
 	}
 	/**
@@ -290,7 +257,7 @@ class StringFilter {
 		if (typeof value !== "boolean") {
 			throw new TypeError(`Filter argument \`preTrim\` must be type of boolean!`);
 		}
-		this.#preTrim = value;
+		this.#status.preTrim = value;
 		return this;
 	}
 	/** @alias length */characters = this.length;
@@ -352,17 +319,17 @@ class StringFilter {
 		if (typeof item !== "string") {
 			return false;
 		}
-		let itemRaw: string = this.#preTrim ? item.trim() : item;
+		let itemRaw: string = this.#status.preTrim ? item.trim() : item;
 		if (
-			(this.#ascii === "false" && isStringASCII(itemRaw)) ||
-			(this.#ascii === "true" && !isStringASCII(itemRaw)) ||
-			(this.#case === "lower" && !isStringLowerCase(itemRaw)) ||
-			(this.#case === "upper" && !isStringUpperCase(itemRaw)) ||
-			this.#lengthMaximum < itemRaw.length ||
-			itemRaw.length < this.#lengthMinimum ||
-			(this.#pattern instanceof RegExp && !this.#pattern.test(itemRaw)) ||
-			(this.#line === "multiple" && !isStringMultipleLine(itemRaw)) ||
-			(this.#line === "single" && !isStringSingleLine(itemRaw))
+			(this.#status.ascii === "false" && isStringASCII(itemRaw)) ||
+			(this.#status.ascii === "true" && !isStringASCII(itemRaw)) ||
+			(this.#status.case === "lower" && !isStringLowerCase(itemRaw)) ||
+			(this.#status.case === "upper" && !isStringUpperCase(itemRaw)) ||
+			this.#status.lengthMaximum < itemRaw.length ||
+			itemRaw.length < this.#status.lengthMinimum ||
+			(this.#status.pattern instanceof RegExp && !this.#status.pattern.test(itemRaw)) ||
+			(this.#status.line === "multiple" && !isStringMultipleLine(itemRaw)) ||
+			(this.#status.line === "single" && !isStringSingleLine(itemRaw))
 		) {
 			return false;
 		}

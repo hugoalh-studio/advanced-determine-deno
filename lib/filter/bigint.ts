@@ -96,14 +96,16 @@ interface BigIntFilterOptions extends Partial<Omit<BigIntFilterStatus, "ieee754"
  * @description Filter for big integer.
  */
 class BigIntFilter {
-	#ieee754: IEEE754EnumValuesType = "any";
-	#maximum?: bigint;
-	#maximumExclusive = false;
-	#minimum?: bigint;
-	#minimumExclusive = false;
-	#parity: MathematicsParityEnumValuesType = "any";
-	#primality: MathematicsPrimalityEnumValuesType = "any";
-	#sign: MathematicsSignEnumValuesType = "any";
+	#status: BigIntFilterStatus = {
+		ieee754: "any",
+		maximum: undefined,
+		maximumExclusive: false,
+		minimum: undefined,
+		minimumExclusive: false,
+		parity: "any",
+		primality: "any",
+		sign: "any"
+	};
 	/**
 	 * @constructor
 	 * @description Initialize the big integer filter.
@@ -111,14 +113,7 @@ class BigIntFilter {
 	 */
 	constructor(options?: BigIntFilter | BigIntFilterOptions) {
 		if (options instanceof BigIntFilter) {
-			this.#ieee754 = options.#ieee754;
-			this.#maximum = options.#maximum;
-			this.#maximumExclusive = options.#maximumExclusive;
-			this.#minimum = options.#minimum;
-			this.#minimumExclusive = options.#minimumExclusive;
-			this.#parity = options.#parity;
-			this.#primality = options.#primality;
-			this.#sign = options.#sign;
+			this.#status = { ...options.#status };
 		} else if (typeof options !== "undefined") {
 			options.maximum ??= options.max;
 			options.maximumExclusive ??= options.maxExclusive ?? options.exclusiveMaximum ?? options.exclusiveMax;
@@ -147,16 +142,7 @@ class BigIntFilter {
 	 * @returns {BigIntFilterStatus} Status of this big integer filter.
 	 */
 	get status(): BigIntFilterStatus {
-		return {
-			ieee754: this.#ieee754,
-			maximum: this.#maximum,
-			maximumExclusive: this.#maximumExclusive,
-			minimum: this.#minimum,
-			minimumExclusive: this.#minimumExclusive,
-			parity: this.#parity,
-			primality: this.#primality,
-			sign: this.#sign
-		};
+		return { ...this.#status };
 	}
 	/**
 	 * @method ieee754
@@ -165,14 +151,7 @@ class BigIntFilter {
 	 * @returns {this}
 	 */
 	ieee754(value: IEEE754EnumKeysType): this {
-		if (typeof value !== "string") {
-			throw new TypeError(`Filter argument \`ieee754\` must be type of string!`);
-		}
-		let valueResolve: IEEE754EnumValuesType | undefined = enumResolver<IEEE754EnumKeysType, IEEE754EnumValuesType>(IEEE754Enum, value);
-		if (typeof valueResolve !== "string") {
-			throw new RangeError(`Filter argument \`ieee754\` must be either of these values: "${Object.keys(IEEE754Enum).sort().join("\", \"")}"`);
-		}
-		this.#ieee754 = valueResolve;
+		this.#status.ieee754 = enumResolver<IEEE754EnumKeysType, IEEE754EnumValuesType>(IEEE754Enum, value, "ieee754");
 		return this;
 	}
 	/**
@@ -182,9 +161,9 @@ class BigIntFilter {
 	 * @returns {this}
 	 */
 	integralNumericType(value: IntegralNumericTypeEnumKeysType): this {
-		[this.#minimum, this.#maximum] = integralNumericTypeRange(value);
-		this.#maximumExclusive = false;
-		this.#minimumExclusive = false;
+		[this.#status.minimum, this.#status.maximum] = integralNumericTypeRange(value);
+		this.#status.maximumExclusive = false;
+		this.#status.minimumExclusive = false;
 		return this;
 	}
 	/**
@@ -195,13 +174,13 @@ class BigIntFilter {
 	 */
 	maximum(value?: bigint | undefined): this {
 		if (typeof value === "bigint") {
-			if (typeof this.#minimum === "bigint" && !(this.#minimum <= value)) {
-				throw new RangeError(`Filter argument \`maximum\` must be a big integer which is >= ${this.#minimum}!`);
+			if (typeof this.#status.minimum === "bigint" && !(this.#status.minimum <= value)) {
+				throw new RangeError(`Filter argument \`maximum\` must be a big integer which is >= ${this.#status.minimum}!`);
 			}
 		} else if (typeof value !== "undefined") {
 			throw new TypeError(`Filter argument \`maximum\` must be type of big integer or undefined!`);
 		}
-		this.#maximum = value;
+		this.#status.maximum = value;
 		return this;
 	}
 	/**
@@ -214,7 +193,7 @@ class BigIntFilter {
 		if (typeof value !== "boolean") {
 			throw new TypeError(`Filter argument \`maximumExclusive\` must be type of boolean!`);
 		}
-		this.#maximumExclusive = value;
+		this.#status.maximumExclusive = value;
 		return this;
 	}
 	/**
@@ -225,13 +204,13 @@ class BigIntFilter {
 	 */
 	minimum(value?: bigint | undefined): this {
 		if (typeof value === "bigint") {
-			if (typeof this.#maximum === "bigint" && !(value <= this.#maximum)) {
-				throw new RangeError(`Filter argument \`minimum\` must be a big integer which is <= ${this.#maximum}!`);
+			if (typeof this.#status.maximum === "bigint" && !(value <= this.#status.maximum)) {
+				throw new RangeError(`Filter argument \`minimum\` must be a big integer which is <= ${this.#status.maximum}!`);
 			}
 		} else if (typeof value !== "undefined") {
 			throw new TypeError(`Filter argument \`minimum\` must be type of big integer or undefined!`);
 		}
-		this.#minimum = value;
+		this.#status.minimum = value;
 		return this;
 	}
 	/**
@@ -244,7 +223,7 @@ class BigIntFilter {
 		if (typeof value !== "boolean") {
 			throw new TypeError(`Filter argument \`minimumExclusive\` must be type of boolean!`);
 		}
-		this.#minimumExclusive = value;
+		this.#status.minimumExclusive = value;
 		return this;
 	}
 	/**
@@ -254,14 +233,7 @@ class BigIntFilter {
 	 * @returns {this}
 	 */
 	parity(value: MathematicsParityEnumKeysType): this {
-		if (typeof value !== "string") {
-			throw new TypeError(`Filter argument \`parity\` must be type of string!`);
-		}
-		let valueResolve: MathematicsParityEnumValuesType | undefined = enumResolver<MathematicsParityEnumKeysType, MathematicsParityEnumValuesType>(MathematicsParityEnum, value);
-		if (typeof valueResolve !== "string") {
-			throw new RangeError(`Filter argument \`parity\` must be either of these values: "${Object.keys(MathematicsParityEnum).sort().join("\", \"")}"`);
-		}
-		this.#parity = valueResolve;
+		this.#status.parity = enumResolver<MathematicsParityEnumKeysType, MathematicsParityEnumValuesType>(MathematicsParityEnum, value, "parity");
 		return this;
 	}
 	/**
@@ -271,14 +243,7 @@ class BigIntFilter {
 	 * @returns {this}
 	 */
 	primality(value: MathematicsPrimalityEnumKeysType): this {
-		if (typeof value !== "string") {
-			throw new TypeError(`Filter argument \`primality\` must be type of string!`);
-		}
-		let valueResolve: MathematicsPrimalityEnumValuesType | undefined = enumResolver<MathematicsPrimalityEnumKeysType, MathematicsPrimalityEnumValuesType>(MathematicsPrimalityEnum, value);
-		if (typeof valueResolve !== "string") {
-			throw new RangeError(`Filter argument \`primality\` must be either of these values: "${Object.keys(MathematicsPrimalityEnum).sort().join("\", \"")}"`);
-		}
-		this.#primality = valueResolve;
+		this.#status.primality = enumResolver<MathematicsPrimalityEnumKeysType, MathematicsPrimalityEnumValuesType>(MathematicsPrimalityEnum, value, "primality");
 		return this;
 	}
 	/**
@@ -288,14 +253,7 @@ class BigIntFilter {
 	 * @returns {this}
 	 */
 	sign(value: MathematicsSignEnumKeysType): this {
-		if (typeof value !== "string") {
-			throw new TypeError(`Filter argument \`sign\` must be type of string!`);
-		}
-		let valueResolve: MathematicsSignEnumValuesType | undefined = enumResolver<MathematicsSignEnumKeysType, MathematicsSignEnumValuesType>(MathematicsSignEnum, value);
-		if (typeof valueResolve !== "string") {
-			throw new RangeError(`Filter argument \`sign\` must be either of these values: "${Object.keys(MathematicsSignEnum).sort().join("\", \"")}"`);
-		}
-		this.#sign = valueResolve;
+		this.#status.sign = enumResolver<MathematicsSignEnumKeysType, MathematicsSignEnumValuesType>(MathematicsSignEnum, value, "sign");
 		return this;
 	}
 	/** @alias maximum */max = this.maximum;
@@ -379,18 +337,18 @@ class BigIntFilter {
 	test(item: unknown): boolean {
 		if (
 			typeof item !== "bigint" ||
-			(this.#ieee754 === "safe" && !isBigIntSafe(item)) ||
-			(this.#ieee754 === "unsafe" && isBigIntSafe(item)) ||
-			(typeof this.#maximum === "bigint" && this.#maximumExclusive && !(item < this.#maximum)) ||
-			(typeof this.#maximum === "bigint" && !this.#maximumExclusive && !(item <= this.#maximum)) ||
-			(typeof this.#minimum === "bigint" && this.#minimumExclusive && !(this.#minimum < item)) ||
-			(typeof this.#minimum === "bigint" && !this.#minimumExclusive && !(this.#minimum <= item)) ||
-			(this.#parity === "even" && !isBigIntEven(item)) ||
-			(this.#parity === "odd" && !isBigIntOdd(item)) ||
-			(this.#primality === "composite" && isBigIntPrime(item)) ||
-			(this.#primality === "prime" && !isBigIntPrime(item)) ||
-			(this.#sign === "negative" && !isBigIntNegative(item)) ||
-			(this.#sign === "positive" && !isBigIntPositive(item))
+			(this.#status.ieee754 === "safe" && !isBigIntSafe(item)) ||
+			(this.#status.ieee754 === "unsafe" && isBigIntSafe(item)) ||
+			(typeof this.#status.maximum === "bigint" && this.#status.maximumExclusive && !(item < this.#status.maximum)) ||
+			(typeof this.#status.maximum === "bigint" && !this.#status.maximumExclusive && !(item <= this.#status.maximum)) ||
+			(typeof this.#status.minimum === "bigint" && this.#status.minimumExclusive && !(this.#status.minimum < item)) ||
+			(typeof this.#status.minimum === "bigint" && !this.#status.minimumExclusive && !(this.#status.minimum <= item)) ||
+			(this.#status.parity === "even" && !isBigIntEven(item)) ||
+			(this.#status.parity === "odd" && !isBigIntOdd(item)) ||
+			(this.#status.primality === "composite" && isBigIntPrime(item)) ||
+			(this.#status.primality === "prime" && !isBigIntPrime(item)) ||
+			(this.#status.sign === "negative" && !isBigIntNegative(item)) ||
+			(this.#status.sign === "positive" && !isBigIntPositive(item))
 		) {
 			return false;
 		}

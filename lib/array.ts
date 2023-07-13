@@ -1,4 +1,4 @@
-import { equal } from "https://deno.land/std@0.193.0/testing/asserts.ts";
+import { equal } from "https://deno.land/std@0.194.0/testing/asserts.ts";
 const arrayIndexRegExp = /^(?:0|[1-9]\d*)$/u;
 /**
  * @function isArrayStrict

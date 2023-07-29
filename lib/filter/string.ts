@@ -1,77 +1,65 @@
 import { enumResolver, StringCaseEnum, StringLineEnum, ThreePhaseConditionEnum, type StringCaseEnumKeysType, type StringCaseEnumValuesType, type StringLineEnumKeysType, type StringLineEnumValuesType, type ThreePhaseConditionEnumKeysType, type ThreePhaseConditionEnumValuesType } from "../internal/enum.ts";
 import { isStringASCII, isStringLowerCase, isStringMultipleLine, isStringSingleLine, isStringUpperCase } from "../string.ts";
-interface StringFilterStatus {
+export interface StringFilterStatus {
 	/**
-	 * @property ascii
-	 * @description Whether an ASCII string.
+	 * Whether an ASCII string.
 	 * @default "neutral"
 	 */
 	ascii: ThreePhaseConditionEnumValuesType;
 	/**
-	 * @property case
-	 * @description Case of the string.
+	 * Case of the string.
 	 * @default "any"
 	 */
 	case: StringCaseEnumValuesType;
 	/**
-	 * @property lengthMaximum
-	 * @description Maximum length of the string.
+	 * Maximum length of the string.
 	 * @default Infinity
 	 */
 	lengthMaximum: number;
 	/**
-	 * @property lengthMinimum
-	 * @description Minimum length of the string.
+	 * Minimum length of the string.
 	 * @default 1
 	 */
 	lengthMinimum: number;
 	/**
-	 * @property line
-	 * @description Line of the string.
+	 * Line of the string.
 	 * @default "any"
 	 */
 	line: StringLineEnumValuesType;
 	/**
-	 * @property pattern
-	 * @description Whether a pattern matchable string.
+	 * Whether a pattern matchable string.
 	 * @default undefined
 	 */
 	pattern?: RegExp;
 	/**
-	 * @property preTrim
-	 * @description Whether to trim the string internally before determine.
+	 * Whether to trim the string internally before determine.
 	 * @default false
 	 */
 	preTrim?: boolean;
 }
-interface StringFilterOptions extends Partial<Omit<StringFilterStatus, "ascii" | "case" | "line">> {
+export interface StringFilterOptions extends Partial<Omit<StringFilterStatus, "ascii" | "case" | "line">> {
 	/**
-	 * @property allowEmpty
-	 * @description Whether to allow an empty string.
+	 * Whether to allow an empty string.
 	 * @default false
 	 */
 	allowEmpty?: boolean;
 	/**
-	 * @property ascii
-	 * @description Whether an ASCII string.
+	 * Whether an ASCII string.
 	 * @default "neutral"
 	 */
 	ascii?: ThreePhaseConditionEnumKeysType;
 	/**
-	 * @property case
-	 * @description Case of the string.
+	 * Case of the string.
 	 * @default "any"
 	 */
 	case?: StringCaseEnumKeysType;
 	/**
-	 * @property length
-	 * @description Length of the string.
+	 * Length of the string.
 	 * @default undefined
 	 */
 	length?: number;
 	/**
-	 * @property line
-	 * @description Line of the string.
+	 * Line of the string.
 	 * @default "any"
 	 */
 	line?: StringLineEnumKeysType;
@@ -92,10 +80,9 @@ interface StringFilterOptions extends Partial<Omit<StringFilterStatus, "ascii" |
 	/** @alias lengthMinimum */minLength?: number;
 }
 /**
- * @class StringFilter
- * @description Filter for string.
+ * Filter for string.
  */
-class StringFilter {
+export class StringFilter {
 	#status: StringFilterStatus = {
 		ascii: "neutral",
 		case: "any",
@@ -106,8 +93,7 @@ class StringFilter {
 		preTrim: false
 	};
 	/**
-	 * @constructor
-	 * @description Initialize the string filter.
+	 * Initialize the string filter.
 	 * @param {StringFilter | StringFilterOptions} [options] Options.
 	 */
 	constructor(options?: StringFilter | StringFilterOptions) {
@@ -127,24 +113,21 @@ class StringFilter {
 		}
 	}
 	/**
-	 * @method clone
-	 * @description Clone this string filter for reuse.
+	 * Clone this string filter for reuse.
 	 * @returns {StringFilter} Another instance of this string filter.
 	 */
 	get clone(): StringFilter {
 		return new StringFilter(this);
 	}
 	/**
-	 * @method status
-	 * @description Get the status of this string filter.
+	 * Get the status of this string filter.
 	 * @returns {StringFilterStatus} Status of this string filter.
 	 */
 	get status(): StringFilterStatus {
 		return { ...this.#status };
 	}
 	/**
-	 * @method allowEmpty
-	 * @description Whether to allow an empty string.
+	 * Whether to allow an empty string.
 	 * @param {boolean} [value=true]
 	 * @returns {this}
 	 */
@@ -156,8 +139,7 @@ class StringFilter {
 		return this;
 	}
 	/**
-	 * @method ascii
-	 * @description Whether an ASCII string.
+	 * Whether an ASCII string.
 	 * @param {ThreePhaseConditionEnumKeysType} value
 	 * @returns {this}
 	 */
@@ -166,8 +148,7 @@ class StringFilter {
 		return this;
 	}
 	/**
-	 * @method case
-	 * @description Case of the string.
+	 * Case of the string.
 	 * @param {StringCaseEnumKeysType} value
 	 * @returns {this}
 	 */
@@ -176,8 +157,7 @@ class StringFilter {
 		return this;
 	}
 	/**
-	 * @method length
-	 * @description Length of the string.
+	 * Length of the string.
 	 * @param {number} value
 	 * @returns {this}
 	 */
@@ -193,8 +173,7 @@ class StringFilter {
 		return this;
 	}
 	/**
-	 * @method lengthMaximum
-	 * @description Maximum length of the string.
+	 * Maximum length of the string.
 	 * @param {number} value
 	 * @returns {this}
 	 */
@@ -209,8 +188,7 @@ class StringFilter {
 		return this;
 	}
 	/**
-	 * @method lengthMinimum
-	 * @description Minimum length of the string.
+	 * Minimum length of the string.
 	 * @param {number} value
 	 * @returns {this}
 	 */
@@ -225,8 +203,7 @@ class StringFilter {
 		return this;
 	}
 	/**
-	 * @method line
-	 * @description Line of the string.
+	 * Line of the string.
 	 * @param {StringLineEnumKeysType} value
 	 * @returns {this}
 	 */
@@ -235,8 +212,7 @@ class StringFilter {
 		return this;
 	}
 	/**
-	 * @method pattern
-	 * @description Whether a pattern matchable string.
+	 * Whether a pattern matchable string.
 	 * @param {RegExp | undefined} [value]
 	 * @returns {this}
 	 */
@@ -248,8 +224,7 @@ class StringFilter {
 		return this;
 	}
 	/**
-	 * @method preTrim
-	 * @description Whether to trim the string internally before determine.
+	 * Whether to trim the string internally before determine.
 	 * @param {boolean} [value=true]
 	 * @returns {this}
 	 */
@@ -276,32 +251,28 @@ class StringFilter {
 	/** @alias lengthMinimum */minimumLength = this.lengthMinimum;
 	/** @alias lengthMinimum */minLength = this.lengthMinimum;
 	/**
-	 * @method lowerCase
-	 * @description Set to allow a lower case string.
+	 * Set to allow a lower case string.
 	 * @returns {this}
 	 */
 	lowerCase() {
 		return this.case("lower");
 	}
 	/**
-	 * @method multipleLine
-	 * @description Set to allow a multiple line string.
+	 * Set to allow a multiple line string.
 	 * @returns {this}
 	 */
 	multipleLine() {
 		return this.line("multiple");
 	}
 	/**
-	 * @method singleLine
-	 * @description Set to allow a single line string.
+	 * Set to allow a single line string.
 	 * @returns {this}
 	 */
 	singleLine() {
 		return this.line("single");
 	}
 	/**
-	 * @method upperCase
-	 * @description Set to allow an upper case string.
+	 * Set to allow an upper case string.
 	 * @returns {this}
 	 */
 	upperCase() {
@@ -310,8 +281,7 @@ class StringFilter {
 	/** @alias multipleLine */multiline = this.multipleLine;
 	/** @alias multipleLine */multiLine = this.multipleLine;
 	/**
-	 * @method test
-	 * @description Determine item with the configured string filter.
+	 * Determine item with the configured string filter.
 	 * @param {unknown} item Item that need to determine.
 	 * @returns {boolean} Determine result.
 	 */
@@ -336,8 +306,7 @@ class StringFilter {
 		return true;
 	}
 	/**
-	 * @static test
-	 * @description Determine item with the string filter.
+	 * Determine item with the string filter.
 	 * @param {unknown} item Item that need to determine.
 	 * @param {StringFilterOptions} [options={}] Options.
 	 * @returns {boolean} Determine result.
@@ -347,18 +316,11 @@ class StringFilter {
 	}
 }
 /**
- * @function filterString
- * @description Determine item with the string filter.
+ * Determine item with the string filter.
  * @param {unknown} item Item that need to determine.
  * @param {StringFilterOptions} [options={}] Options.
  * @returns {boolean} Determine result.
  */
-function filterString(item: unknown, options: StringFilterOptions = {}): boolean {
+export function filterString(item: unknown, options: StringFilterOptions = {}): boolean {
 	return new StringFilter(options).test(item);
 }
-export {
-	filterString,
-	StringFilter,
-	type StringFilterOptions,
-	type StringFilterStatus
-};

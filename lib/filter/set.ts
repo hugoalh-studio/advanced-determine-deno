@@ -1,27 +1,23 @@
-interface SetFilterStatus {
+export interface SetFilterStatus {
 	/**
-	 * @property sizeMaximum
-	 * @description Maximum size of the `Set`.
+	 * Maximum size of the `Set`.
 	 * @default Infinity
 	 */
 	sizeMaximum: number;
 	/**
-	 * @property sizeMinimum
-	 * @description Minimum size of the `Set`.
+	 * Minimum size of the `Set`.
 	 * @default 1
 	 */
 	sizeMinimum: number;
 }
-interface SetFilterOptions extends Partial<SetFilterStatus> {
+export interface SetFilterOptions extends Partial<SetFilterStatus> {
 	/**
-	 * @property allowEmpty
-	 * @description Whether to allow an empty `Set`.
+	 * Whether to allow an empty `Set`.
 	 * @default false
 	 */
 	allowEmpty?: boolean;
 	/**
-	 * @property size
-	 * @description Size of the `Set`.
+	 * Size of the `Set`.
 	 * @default undefined
 	 */
 	size?: number;
@@ -33,17 +29,15 @@ interface SetFilterOptions extends Partial<SetFilterStatus> {
 	/** @alias sizeMinimum */minSize?: number;
 }
 /**
- * @class SetFilter
- * @description Filter for `Set`.
+ * Filter for `Set`.
  */
-class SetFilter {
+export class SetFilter {
 	#status: SetFilterStatus = {
 		sizeMaximum: Infinity,
 		sizeMinimum: 1
 	};
 	/**
-	 * @constructor
-	 * @description Initialize the `Set` filter.
+	 * Initialize the `Set` filter.
 	 * @param {SetFilter | SetFilterOptions} [options] Options.
 	 */
 	constructor(options?: SetFilter | SetFilterOptions) {
@@ -62,24 +56,21 @@ class SetFilter {
 		}
 	}
 	/**
-	 * @method clone
-	 * @description Clone this `Set` filter for reuse.
+	 * Clone this `Set` filter for reuse.
 	 * @returns {SetFilter} Another instance of this `Set` filter.
 	 */
 	get clone(): SetFilter {
 		return new SetFilter(this);
 	}
 	/**
-	 * @method status
-	 * @description Get the status of this `Set` filter.
+	 * Get the status of this `Set` filter.
 	 * @returns {SetFilterStatus} Status of this `Set` filter.
 	 */
 	get status(): SetFilterStatus {
 		return { ...this.#status };
 	}
 	/**
-	 * @method allowEmpty
-	 * @description Whether to allow an empty `Set`.
+	 * Whether to allow an empty `Set`.
 	 * @param {boolean} [value=true]
 	 * @returns {this}
 	 */
@@ -91,8 +82,7 @@ class SetFilter {
 		return this;
 	}
 	/**
-	 * @method size
-	 * @description Size of the `Set`.
+	 * Size of the `Set`.
 	 * @param {number} value
 	 * @returns {this}
 	 */
@@ -108,8 +98,7 @@ class SetFilter {
 		return this;
 	}
 	/**
-	 * @method sizeMaximum
-	 * @description Maximum size of the `Set`.
+	 * Maximum size of the `Set`.
 	 * @param {number} value
 	 * @returns {this}
 	 */
@@ -124,8 +113,7 @@ class SetFilter {
 		return this;
 	}
 	/**
-	 * @method sizeMinimum
-	 * @description Minimum size of the `Set`.
+	 * Minimum size of the `Set`.
 	 * @param {number} value
 	 * @returns {this}
 	 */
@@ -146,8 +134,7 @@ class SetFilter {
 	/** @alias sizeMinimum */minimumSize = this.sizeMinimum;
 	/** @alias sizeMinimum */minSize = this.sizeMinimum;
 	/**
-	 * @method test
-	 * @description Determine item with the configured `Set` filter.
+	 * Determine item with the configured `Set` filter.
 	 * @param {unknown} item Item that need to determine.
 	 * @returns {boolean} Determine result.
 	 */
@@ -162,8 +149,7 @@ class SetFilter {
 		return true;
 	}
 	/**
-	 * @static test
-	 * @description Determine item with the `Set` filter.
+	 * Determine item with the `Set` filter.
 	 * @param {unknown} item Item that need to determine.
 	 * @param {SetFilterOptions} [options={}] Options.
 	 * @returns {boolean} Determine result.
@@ -173,18 +159,11 @@ class SetFilter {
 	}
 }
 /**
- * @function filterSet
- * @description Determine item with the `Set` filter.
+ * Determine item with the `Set` filter.
  * @param {unknown} item Item that need to determine.
  * @param {SetFilterOptions} [options={}] Options.
  * @returns {boolean} Determine result.
  */
-function filterSet(item: unknown, options: SetFilterOptions = {}): boolean {
+export function filterSet(item: unknown, options: SetFilterOptions = {}): boolean {
 	return new SetFilter(options).test(item);
 }
-export {
-	filterSet,
-	SetFilter,
-	type SetFilterOptions,
-	type SetFilterStatus
-};

@@ -1,40 +1,34 @@
 import { isArrayStrict, isArrayUnique } from "../array.ts";
-interface ArrayFilterStatus {
+export interface ArrayFilterStatus {
 	/**
-	 * @property lengthMaximum
-	 * @description Maximum length of the array.
+	 * Maximum length of the array.
 	 * @default Infinity
 	 */
 	lengthMaximum: number;
 	/**
-	 * @property lengthMinimum
-	 * @description Minimum length of the array.
+	 * Minimum length of the array.
 	 * @default 1
 	 */
 	lengthMinimum: number;
 	/**
-	 * @property strict
-	 * @description Whether to determine no custom defined properties in the array.
+	 * Whether to determine no custom defined properties in the array.
 	 * @default false
 	 */
 	strict: boolean;
 	/**
-	 * @property unique
-	 * @description Whether to determine all of the elements in the array are unique.
+	 * Whether to determine all of the elements in the array are unique.
 	 * @default false
 	 */
 	unique: boolean;
 }
-interface ArrayFilterOptions extends Partial<ArrayFilterStatus> {
+export interface ArrayFilterOptions extends Partial<ArrayFilterStatus> {
 	/**
-	 * @property allowEmpty
-	 * @description Whether to allow an empty array.
+	 * Whether to allow an empty array.
 	 * @default false
 	 */
 	allowEmpty?: boolean;
 	/**
-	 * @property length
-	 * @description Length of the array.
+	 * Length of the array.
 	 * @default undefined
 	 */
 	length?: number;
@@ -55,10 +49,9 @@ interface ArrayFilterOptions extends Partial<ArrayFilterStatus> {
 	/** @alias lengthMinimum */minLength?: number;
 }
 /**
- * @class ArrayFilter
- * @description Filter for array.
+ * Filter for array.
  */
-class ArrayFilter {
+export class ArrayFilter {
 	#status: ArrayFilterStatus = {
 		lengthMaximum: Infinity,
 		lengthMinimum: 1,
@@ -66,8 +59,7 @@ class ArrayFilter {
 		unique: false
 	};
 	/**
-	 * @constructor
-	 * @description Initialize the array filter.
+	 * Initialize the array filter.
 	 * @param {ArrayFilter | ArrayFilterOptions} [options] Options.
 	 */
 	constructor(options?: ArrayFilter | ArrayFilterOptions) {
@@ -87,24 +79,21 @@ class ArrayFilter {
 		}
 	}
 	/**
-	 * @method clone
-	 * @description Clone this array filter for reuse.
+	 * Clone this array filter for reuse.
 	 * @returns {ArrayFilter} Another instance of this array filter.
 	 */
 	get clone(): ArrayFilter {
 		return new ArrayFilter(this);
 	}
 	/**
-	 * @method status
-	 * @description Get the status of this array filter.
+	 * Get the status of this array filter.
 	 * @returns {ArrayFilterStatus} Status of this array filter.
 	 */
 	get status(): ArrayFilterStatus {
 		return { ...this.#status };
 	}
 	/**
-	 * @method allowEmpty
-	 * @description Whether to allow an empty array.
+	 * Whether to allow an empty array.
 	 * @param {boolean} [value=true]
 	 * @returns {this}
 	 */
@@ -116,8 +105,7 @@ class ArrayFilter {
 		return this;
 	}
 	/**
-	 * @method length
-	 * @description Length of the array.
+	 * Length of the array.
 	 * @param {number} value
 	 * @returns {this}
 	 */
@@ -133,8 +121,7 @@ class ArrayFilter {
 		return this;
 	}
 	/**
-	 * @method lengthMaximum
-	 * @description Maximum length of the array.
+	 * Maximum length of the array.
 	 * @param {number} value
 	 * @returns {this}
 	 */
@@ -149,8 +136,7 @@ class ArrayFilter {
 		return this;
 	}
 	/**
-	 * @method lengthMinimum
-	 * @description Minimum length of the array.
+	 * Minimum length of the array.
 	 * @param {number} value
 	 * @returns {this}
 	 */
@@ -165,8 +151,7 @@ class ArrayFilter {
 		return this;
 	}
 	/**
-	 * @method strict
-	 * @description Whether to determine no custom defined properties in the array.
+	 * Whether to determine no custom defined properties in the array.
 	 * @param {boolean} [value=true]
 	 * @returns {this}
 	 */
@@ -178,8 +163,7 @@ class ArrayFilter {
 		return this;
 	}
 	/**
-	 * @method unique
-	 * @description Whether to determine all of the elements in the array are unique.
+	 * Whether to determine all of the elements in the array are unique.
 	 * @param {boolean} [value=true]
 	 * @returns {this}
 	 */
@@ -206,8 +190,7 @@ class ArrayFilter {
 	/** @alias lengthMinimum */minimumLength = this.lengthMinimum;
 	/** @alias lengthMinimum */minLength = this.lengthMinimum;
 	/**
-	 * @method test
-	 * @description Determine item with the configured array filter.
+	 * Determine item with the configured array filter.
 	 * @param {unknown} item Item that need to determine.
 	 * @returns {boolean} Determine result.
 	 */
@@ -228,8 +211,7 @@ class ArrayFilter {
 		return true;
 	}
 	/**
-	 * @static test
-	 * @description Determine item with the array filter.
+	 * Determine item with the array filter.
 	 * @param {unknown} item Item that need to determine.
 	 * @param {ArrayFilterOptions} [options={}] Options.
 	 * @returns {boolean} Determine result.
@@ -239,18 +221,11 @@ class ArrayFilter {
 	}
 }
 /**
- * @function filterArray
- * @description Determine item with the array filter.
+ * Determine item with the array filter.
  * @param {unknown} item Item that need to determine.
  * @param {ArrayFilterOptions} [options={}] Options.
  * @returns {boolean} Determine result.
  */
-function filterArray(item: unknown, options: ArrayFilterOptions = {}): boolean {
+export function filterArray(item: unknown, options: ArrayFilterOptions = {}): boolean {
 	return new ArrayFilter(options).test(item);
 }
-export {
-	ArrayFilter,
-	filterArray,
-	type ArrayFilterOptions,
-	type ArrayFilterStatus
-};

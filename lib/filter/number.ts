@@ -1,108 +1,91 @@
 import { enumResolver, IEEE754Enum, MathematicsFinitenessEnum, MathematicsParityEnum, MathematicsPrimalityEnum, MathematicsSignEnum, NumericTypeEnum, type IEEE754EnumKeysType, type IEEE754EnumValuesType, type IntegralNumericTypeEnumKeysType, type MathematicsFinitenessEnumKeysType, type MathematicsFinitenessEnumValuesType, type MathematicsParityEnumKeysType, type MathematicsParityEnumValuesType, type MathematicsPrimalityEnumKeysType, type MathematicsPrimalityEnumValuesType, type MathematicsSignEnumKeysType, type MathematicsSignEnumValuesType, type NumericTypeEnumKeysType, type NumericTypeEnumValuesType } from "../internal/enum.ts";
 import { integralNumericTypeRange } from "../internal/numeric.ts";
 import { isNumberEven, isNumberFloat, isNumberNegative, isNumberOdd, isNumberPositive, isNumberPrime, isNumberSafe } from "../number.ts";
-interface NumberFilterStatus {
+export interface NumberFilterStatus {
 	/**
-	 * @property finiteness
-	 * @description Finiteness of the number.
+	 * Finiteness of the number.
 	 * @default "any"
 	 */
 	finiteness: MathematicsFinitenessEnumValuesType;
 	/**
-	 * @property ieee754
-	 * @description IEEE-754 safe mode of the number.
+	 * IEEE-754 safe mode of the number.
 	 * @default "any"
 	 */
 	ieee754: IEEE754EnumValuesType;
 	/**
-	 * @property maximum
-	 * @description Maximum of the number.
+	 * Maximum of the number.
 	 * @default undefined
 	 */
 	maximum?: number;
 	/**
-	 * @property maximumExclusive
-	 * @description Whether to exclusive maximum of the number.
+	 * Whether to exclusive maximum of the number.
 	 * @default false
 	 */
 	maximumExclusive: boolean;
 	/**
-	 * @property minimum
-	 * @description Minimum of the number.
+	 * Minimum of the number.
 	 * @default undefined
 	 */
 	minimum?: number;
 	/**
-	 * @property minimumExclusive
-	 * @description Whether to exclusive minimum of the number.
+	 * Whether to exclusive minimum of the number.
 	 * @default false
 	 */
 	minimumExclusive: boolean;
 	/**
-	 * @property numericType
-	 * @description Numeric type of the number.
+	 * Numeric type of the number.
 	 * @default "any"
 	 */
 	numericType: NumericTypeEnumValuesType;
 	/**
-	 * @property parity
-	 * @description Parity of the number.
+	 * Parity of the number.
 	 * @default "any"
 	 */
 	parity: MathematicsParityEnumValuesType;
 	/**
-	 * @property primality
-	 * @description Primality of the number.
+	 * Primality of the number.
 	 * @default "any"
 	 */
 	primality: MathematicsPrimalityEnumValuesType;
 	/**
-	 * @property sign
-	 * @description Sign of the number.
+	 * Sign of the number.
 	 * @default "any"
 	 */
 	sign: MathematicsSignEnumValuesType;
 }
-interface NumberFilterOptions extends Partial<Omit<NumberFilterStatus, "finiteness" | "ieee754" | "numericType" | "parity" | "primality" | "sign">> {
+export interface NumberFilterOptions extends Partial<Omit<NumberFilterStatus, "finiteness" | "ieee754" | "numericType" | "parity" | "primality" | "sign">> {
 	/**
-	 * @property finiteness
-	 * @description Finiteness of the number.
+	 * Finiteness of the number.
 	 * @default "any"
 	 */
 	finiteness?: MathematicsFinitenessEnumKeysType;
 	/**
-	 * @property ieee754
-	 * @description IEEE-754 mode of the number.
+	 * IEEE-754 mode of the number.
 	 * @default "any"
 	 */
 	ieee754?: IEEE754EnumKeysType;
 	/**
-	 * @property integralNumericType
-	 * @description Integral numeric type of the number.
+	 * Integral numeric type of the number.
 	 * @default undefined
 	 */
 	integralNumericType?: IntegralNumericTypeEnumKeysType;
 	/**
-	 * @property numericType
-	 * @description Numeric type of the number.
+	 * Numeric type of the number.
 	 * @default "any"
 	 */
 	numericType?: NumericTypeEnumKeysType;
 	/**
-	 * @property parity
-	 * @description Parity of the number.
+	 * Parity of the number.
 	 * @default "any"
 	 */
 	parity?: MathematicsParityEnumKeysType;
 	/**
-	 * @property primality
-	 * @description Primality of the number.
+	 * Primality of the number.
 	 * @default "any"
 	 */
 	primality?: MathematicsPrimalityEnumKeysType;
 	/**
-	 * @property sign
-	 * @description Sign of the number.
+	 * Sign of the number.
 	 * @default "any"
 	 */
 	sign?: MathematicsSignEnumKeysType;
@@ -116,10 +99,9 @@ interface NumberFilterOptions extends Partial<Omit<NumberFilterStatus, "finitene
 	/** @alias minimumExclusive */minExclusive?: boolean;
 }
 /**
- * @class NumberFilter
- * @description Filter for number.
+ * Filter for number.
  */
-class NumberFilter {
+export class NumberFilter {
 	#status: NumberFilterStatus = {
 		finiteness: "any",
 		ieee754: "any",
@@ -133,8 +115,7 @@ class NumberFilter {
 		sign: "any"
 	};
 	/**
-	 * @constructor
-	 * @description Initialize the number filter.
+	 * Initialize the number filter.
 	 * @param {NumberFilter | NumberFilterOptions} [options] Options.
 	 */
 	constructor(options?: NumberFilter | NumberFilterOptions) {
@@ -155,24 +136,21 @@ class NumberFilter {
 		}
 	}
 	/**
-	 * @method clone
-	 * @description Clone this number filter for reuse.
+	 * Clone this number filter for reuse.
 	 * @returns {NumberFilter} Another instance of this number filter.
 	 */
 	get clone(): NumberFilter {
 		return new NumberFilter(this);
 	}
 	/**
-	 * @method status
-	 * @description Get the status of this number filter.
+	 * Get the status of this number filter.
 	 * @returns {NumberFilterStatus} Status of this number filter.
 	 */
 	get status(): NumberFilterStatus {
 		return { ...this.#status };
 	}
 	/**
-	 * @method finiteness
-	 * @description Finiteness of the number.
+	 * Finiteness of the number.
 	 * @param {MathematicsFinitenessEnumKeysType} value
 	 * @returns {this}
 	 */
@@ -181,8 +159,7 @@ class NumberFilter {
 		return this;
 	}
 	/**
-	 * @method ieee754
-	 * @description IEEE-754 safe mode of the number.
+	 * IEEE-754 safe mode of the number.
 	 * @param {IEEE754EnumKeysType} value
 	 * @returns {this}
 	 */
@@ -191,8 +168,7 @@ class NumberFilter {
 		return this;
 	}
 	/**
-	 * @method integralNumericType
-	 * @description Integral numeric type of the number.
+	 * Integral numeric type of the number.
 	 * @param {IntegralNumericTypeEnumKeysType} value
 	 * @returns {this}
 	 */
@@ -205,8 +181,7 @@ class NumberFilter {
 		return this;
 	}
 	/**
-	 * @method maximum
-	 * @description Maximum of the number.
+	 * Maximum of the number.
 	 * @param {number | undefined} [value]
 	 * @returns {this}
 	 */
@@ -222,8 +197,7 @@ class NumberFilter {
 		return this;
 	}
 	/**
-	 * @method maximumExclusive
-	 * @description Whether to exclusive maximum of the number.
+	 * Whether to exclusive maximum of the number.
 	 * @param {boolean} [value=true]
 	 * @returns {this}
 	 */
@@ -235,8 +209,7 @@ class NumberFilter {
 		return this;
 	}
 	/**
-	 * @method minimum
-	 * @description Minimum of the number.
+	 * Minimum of the number.
 	 * @param {number | undefined} [value]
 	 * @returns {this}
 	 */
@@ -252,8 +225,7 @@ class NumberFilter {
 		return this;
 	}
 	/**
-	 * @method minimumExclusive
-	 * @description Whether to exclusive minimum of the number.
+	 * Whether to exclusive minimum of the number.
 	 * @param {boolean} [value=true]
 	 * @returns {this}
 	 */
@@ -265,8 +237,7 @@ class NumberFilter {
 		return this;
 	}
 	/**
-	 * @method numericType
-	 * @description Numeric type of the number.
+	 * Numeric type of the number.
 	 * @param {NumericTypeEnumKeysType} value
 	 * @returns {this}
 	 */
@@ -275,8 +246,7 @@ class NumberFilter {
 		return this;
 	}
 	/**
-	 * @method parity
-	 * @description Parity of the number.
+	 * Parity of the number.
 	 * @param {MathematicsParityEnumKeysType} value
 	 * @returns {this}
 	 */
@@ -285,8 +255,7 @@ class NumberFilter {
 		return this;
 	}
 	/**
-	 * @method primality
-	 * @description Primality of the number.
+	 * Primality of the number.
 	 * @param {MathematicsPrimalityEnumKeysType} value
 	 * @returns {this}
 	 */
@@ -295,8 +264,7 @@ class NumberFilter {
 		return this;
 	}
 	/**
-	 * @method sign
-	 * @description Sign of the number.
+	 * Sign of the number.
 	 * @param {MathematicsSignEnumKeysType} value
 	 * @returns {this}
 	 */
@@ -313,104 +281,91 @@ class NumberFilter {
 	/** @alias minimumExclusive */exclusiveMinimum = this.minimumExclusive;
 	/** @alias minimumExclusive */minExclusive = this.minimumExclusive;
 	/**
-	 * @method composite
-	 * @description Set to allow a composite number.
+	 * Set to allow a composite number.
 	 * @returns {this}
 	 */
 	composite() {
 		return this.primality("composite");
 	}
 	/**
-	 * @method even
-	 * @description Set to allow an even number.
+	 * Set to allow an even number.
 	 * @returns {this}
 	 */
 	even() {
 		return this.parity("even");
 	}
 	/**
-	 * @method finite
-	 * @description Set to allow a finite number.
+	 * Set to allow a finite number.
 	 * @returns {this}
 	 */
 	finite() {
 		return this.finiteness("finite");
 	}
 	/**
-	 * @method float
-	 * @description Set to allow a float number.
+	 * Set to allow a float number.
 	 * @returns {this}
 	 */
 	float() {
 		return this.numericType("float");
 	}
 	/**
-	 * @method infinite
-	 * @description Set to allow an infinite number.
+	 * Set to allow an infinite number.
 	 * @returns {this}
 	 */
 	infinite() {
 		return this.finiteness("infinite");
 	}
 	/**
-	 * @method integer
-	 * @description Set to allow an integer number.
+	 * Set to allow an integer number.
 	 * @returns {this}
 	 */
 	integer() {
 		return this.numericType("float");
 	}
 	/**
-	 * @method negative
-	 * @description Set to allow a negative number.
+	 * Set to allow a negative number.
 	 * @returns {this}
 	 */
 	negative() {
 		return this.sign("negative");
 	}
 	/**
-	 * @method odd
-	 * @description Set to allow an odd number.
+	 * Set to allow an odd number.
 	 * @returns {this}
 	 */
 	odd() {
 		return this.parity("odd");
 	}
 	/**
-	 * @method positive
-	 * @description Set to allow a positive number.
+	 * Set to allow a positive number.
 	 * @returns {this}
 	 */
 	positive() {
 		return this.sign("positive");
 	}
 	/**
-	 * @method prime
-	 * @description Set to allow a prime number.
+	 * Set to allow a prime number.
 	 * @returns {this}
 	 */
 	prime() {
 		return this.primality("prime");
 	}
 	/**
-	 * @method safe
-	 * @description Set to allow an IEEE-754 safe number.
+	 * Set to allow an IEEE-754 safe number.
 	 * @returns {this}
 	 */
 	safe() {
 		return this.ieee754("safe");
 	}
 	/**
-	 * @method unsafe
-	 * @description Set to allow an IEEE-754 unsafe number.
+	 * Set to allow an IEEE-754 unsafe number.
 	 * @returns {this}
 	 */
 	unsafe() {
 		return this.ieee754("unsafe");
 	}
 	/**
-	 * @method test
-	 * @description Determine item with the configured number filter.
+	 * Determine item with the configured number filter.
 	 * @param {unknown} item Item that need to determine.
 	 * @returns {boolean} Determine result.
 	 */
@@ -440,8 +395,7 @@ class NumberFilter {
 		return true;
 	}
 	/**
-	 * @static test
-	 * @description Determine item with the number filter.
+	 * Determine item with the number filter.
 	 * @param {unknown} item Item that need to determine.
 	 * @param {NumberFilterOptions} [options={}] Options.
 	 * @returns {boolean} Determine result.
@@ -451,18 +405,11 @@ class NumberFilter {
 	}
 }
 /**
- * @function filterNumber
- * @description Determine item with the number filter.
+ * Determine item with the number filter.
  * @param {unknown} item Item that need to determine.
  * @param {NumberFilterOptions} [options={}] Options
  * @returns {boolean} Determine result.
  */
-function filterNumber(item: unknown, options: NumberFilterOptions = {}): boolean {
+export function filterNumber(item: unknown, options: NumberFilterOptions = {}): boolean {
 	return new NumberFilter(options).test(item);
 }
-export {
-	filterNumber,
-	NumberFilter,
-	type NumberFilterOptions,
-	type NumberFilterStatus
-};

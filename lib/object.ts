@@ -1,11 +1,10 @@
 import { ObjectMeta } from "./internal/object-meta.ts";
 /**
- * @function isObjectPlain
- * @description Whether the object is plain.
+ * Determine whether the object is plain.
  * @param {object} item Item that need to determine.
  * @returns {boolean} Determine result.
  */
-function isObjectPlain(item: object): boolean {
+export function isObjectPlain(item: object): boolean {
 	if (
 		!(item instanceof Object) ||
 		item.constructor.name !== "Object" ||
@@ -42,6 +41,3 @@ function isObjectPlain(item: object): boolean {
 	}
 	return true;
 }
-export {
-	isObjectPlain
-};

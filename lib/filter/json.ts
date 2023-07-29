@@ -4,60 +4,51 @@ import { enumResolver, JSONRootTypeEnum, type JSONRootTypeEnumKeysType, type JSO
 const jsonArrayFilter: ArrayFilter = new ArrayFilter().allowEmpty().strict();
 const jsonObjectFilter: ObjectFilter = new ObjectFilter().allowEmpty().plain();
 const jsonLegalKeysPatternRegExp = /^[$_A-Za-z][$\d_A-Za-z]*$/u;
-interface JSONFilterStatus {
+export interface JSONFilterStatus {
 	/**
-	 * @property entriesCountMaximum
-	 * @description Maximum entries count of the JSON.
+	 * Maximum entries count of the JSON.
 	 * @default Infinity
 	 */
 	entriesCountMaximum: number;
 	/**
-	 * @property entriesCountMinimum
-	 * @description Minimum entries count of the JSON.
+	 * Minimum entries count of the JSON.
 	 * @default 1
 	 */
 	entriesCountMinimum: number;
 	/**
-	 * @property keysPattern
-	 * @description Whether a pattern matchable JSON keys.
+	 * Whether a pattern matchable JSON keys.
 	 * @default undefined
 	 */
 	keysPattern?: RegExp;
 	/**
-	 * @property rootType
-	 * @description Root type of the JSON.
+	 * Root type of the JSON.
 	 * @default "any"
 	 */
 	rootType: JSONRootTypeEnumValuesType;
 }
-interface JSONFilterOptions extends Partial<Omit<JSONFilterStatus, "rootType">> {
+export interface JSONFilterOptions extends Partial<Omit<JSONFilterStatus, "rootType">> {
 	/**
-	 * @property allowEmpty
-	 * @description Whether to allow an empty JSON.
+	 * Whether to allow an empty JSON.
 	 * @default false
 	 */
 	allowEmpty?: boolean;
 	/**
-	 * @property entriesCount
-	 * @description Entries count of the JSON.
+	 * Entries count of the JSON.
 	 * @default undefined
 	 */
 	entriesCount?: number;
 	/**
-	 * @property rootType
-	 * @description Root type of the JSON.
+	 * Root type of the JSON.
 	 * @default "any"
 	 */
 	rootType?: JSONRootTypeEnumKeysType;
 	/**
-	 * @property strict
-	 * @description Whether to determine type of array not as the root of the JSON, and no illegal namespace characters in the JSON keys.
+	 * Whether to determine type of array not as the root of the JSON, and no illegal namespace characters in the JSON keys.
 	 * @default false
 	 */
 	strict?: boolean;
 	/**
-	 * @property strictKeys
-	 * @description Whether to determine no illegal namespace characters in the JSON keys.
+	 * Whether to determine no illegal namespace characters in the JSON keys.
 	 * @default false
 	 */
 	strictKeys?: boolean;
@@ -71,7 +62,6 @@ interface JSONFilterOptions extends Partial<Omit<JSONFilterStatus, "rootType">> 
 }
 /**
  * @access private
- * @function isJSONValue
  * @param {unknown} item Item that need to determine.
  * @param {RegExp} [keysPattern] Whether a pattern matchable JSON keys.
  * @returns {boolean}
@@ -87,7 +77,6 @@ function isJSONValue(item: unknown, keysPattern?: RegExp): boolean {
 }
 /**
  * @access private
- * @function isJSONInternal
  * @param {unknown} item Item that need to determine.
  * @param {RegExp} [keysPattern] Whether a pattern matchable JSON keys.
  * @returns {boolean}
@@ -122,10 +111,9 @@ function isJSONInternal(item: unknown, keysPattern?: RegExp): boolean {
 	return false;
 }
 /**
- * @class JSONFilter
- * @description Filter for JSON.
+ * Filter for JSON.
  */
-class JSONFilter {
+export class JSONFilter {
 	#status: JSONFilterStatus = {
 		entriesCountMaximum: Infinity,
 		entriesCountMinimum: 1,
@@ -133,8 +121,7 @@ class JSONFilter {
 		rootType: "any"
 	};
 	/**
-	 * @constructor
-	 * @description Initialize the JSON filter.
+	 * Initialize the JSON filter.
 	 * @param {JSONFilter | JSONFilterOptions} [options] Options.
 	 */
 	constructor(options?: JSONFilter | JSONFilterOptions) {
@@ -154,24 +141,21 @@ class JSONFilter {
 		}
 	}
 	/**
-	 * @method clone
-	 * @description Clone this JSON filter for reuse.
+	 * Clone this JSON filter for reuse.
 	 * @returns {JSONFilter} Another instance of this JSON filter.
 	 */
 	get clone(): JSONFilter {
 		return new JSONFilter(this);
 	}
 	/**
-	 * @method status
-	 * @description Get the status of this JSON filter.
+	 * Get the status of this JSON filter.
 	 * @returns {JSONFilterStatus} Status of this JSON filter.
 	 */
 	get status(): JSONFilterStatus {
 		return { ...this.#status };
 	}
 	/**
-	 * @method allowEmpty
-	 * @description Whether to allow an empty JSON.
+	 * Whether to allow an empty JSON.
 	 * @param {boolean} [value=true]
 	 * @returns {this}
 	 */
@@ -183,8 +167,7 @@ class JSONFilter {
 		return this;
 	}
 	/**
-	 * @method entriesCount
-	 * @description Entries count of the JSON.
+	 * Entries count of the JSON.
 	 * @param {number} value
 	 * @returns {this}
 	 */
@@ -200,8 +183,7 @@ class JSONFilter {
 		return this;
 	}
 	/**
-	 * @method entriesCountMaximum
-	 * @description Maximum entries count of the JSON.
+	 * Maximum entries count of the JSON.
 	 * @param {number} value
 	 * @returns {this}
 	 */
@@ -216,8 +198,7 @@ class JSONFilter {
 		return this;
 	}
 	/**
-	 * @method entriesCountMinimum
-	 * @description Minimum entries count of the JSON.
+	 * Minimum entries count of the JSON.
 	 * @param {number} value
 	 * @returns {this}
 	 */
@@ -232,8 +213,7 @@ class JSONFilter {
 		return this;
 	}
 	/**
-	 * @method keysPattern
-	 * @description Whether a pattern matchable JSON keys.
+	 * Whether a pattern matchable JSON keys.
 	 * @param {RegExp | undefined} [value]
 	 * @returns {this}
 	 */
@@ -245,8 +225,7 @@ class JSONFilter {
 		return this;
 	}
 	/**
-	 * @method rootType
-	 * @description Root type of the JSON.
+	 * Root type of the JSON.
 	 * @param {JSONRootTypeEnumKeysType} value
 	 * @returns {this}
 	 */
@@ -255,8 +234,7 @@ class JSONFilter {
 		return this;
 	}
 	/**
-	 * @method strict
-	 * @description Whether to determine type of array not as the root of the JSON, and no illegal namespace characters in the JSON keys.
+	 * Whether to determine type of array not as the root of the JSON, and no illegal namespace characters in the JSON keys.
 	 * @param {boolean} [value=true]
 	 * @returns {this}
 	 */
@@ -274,8 +252,7 @@ class JSONFilter {
 		return this;
 	}
 	/**
-	 * @method strictKeys
-	 * @description Whether to determine no illegal namespace characters in the JSON keys.
+	 * Whether to determine no illegal namespace characters in the JSON keys.
 	 * @param {boolean} [value=true]
 	 * @returns {this}
 	 */
@@ -294,8 +271,7 @@ class JSONFilter {
 	/** @alias entriesCountMinimum */minimumEntries = this.entriesCountMinimum;
 	/** @alias strictKeys */keysStrict = this.strictKeys;
 	/**
-	 * @method test
-	 * @description Determine item with the configured JSON filter.
+	 * Determine item with the configured JSON filter.
 	 * @param {unknown} item Item that need to determine.
 	 * @returns {boolean} Determine result.
 	 */
@@ -314,8 +290,7 @@ class JSONFilter {
 		return true;
 	}
 	/**
-	 * @method testStringify
-	 * @description Determine stringify item with the configured JSON filter.
+	 * Determine stringify item with the configured JSON filter.
 	 * @param {unknown} item Item that need to determine.
 	 * @returns {boolean} Determine result.
 	 */
@@ -335,8 +310,7 @@ class JSONFilter {
 	/** @alias testStringify */stringifyTest = this.testStringify;
 	/** @alias testStringify */testStringified = this.testStringify;
 	/**
-	 * @static test
-	 * @description Determine item with the JSON filter.
+	 * Determine item with the JSON filter.
 	 * @param {unknown} item Item that need to determine.
 	 * @param {JSONFilterOptions} [options={}] Options.
 	 * @returns {boolean} Determine result.
@@ -345,8 +319,7 @@ class JSONFilter {
 		return new this(options).test(item);
 	}
 	/**
-	 * @static testStringify
-	 * @description Determine stringify item with the JSON filter.
+	 * Determine stringify item with the JSON filter.
 	 * @param {unknown} item Item that need to determine.
 	 * @param {JSONFilterOptions} [options={}] Options.
 	 * @returns {boolean} Determine result.
@@ -359,32 +332,25 @@ class JSONFilter {
 	/** @alias testStringify */static testStringified = this.testStringify;
 }
 /**
- * @function filterJSON
- * @description Determine item with the JSON filter.
+ * Determine item with the JSON filter.
  * @param {unknown} item Item that need to determine.
  * @param {JSONFilterOptions} [options={}] Options.
  * @returns {boolean} Determine result.
  */
-function filterJSON(item: unknown, options: JSONFilterOptions = {}): boolean {
+export function filterJSON(item: unknown, options: JSONFilterOptions = {}): boolean {
 	return new JSONFilter(options).test(item);
 }
 /**
- * @function filterStringifyJSON
- * @description Determine stringify item with the JSON filter.
+ * Determine stringify item with the JSON filter.
  * @param {unknown} item Item that need to determine.
  * @param {JSONFilterOptions} [options={}] Options.
  * @returns {boolean} Determine result.
  */
-function filterStringifyJSON(item: unknown, options: JSONFilterOptions = {}): boolean {
+export function filterStringifyJSON(item: unknown, options: JSONFilterOptions = {}): boolean {
 	return new JSONFilter(options).testStringify(item);
 }
 export {
-	filterJSON,
-	filterStringifyJSON,
 	filterStringifyJSON as filterJSONStringified,
 	filterStringifyJSON as filterJSONStringify,
-	filterStringifyJSON as filterStringifiedJSON,
-	JSONFilter,
-	type JSONFilterOptions,
-	type JSONFilterStatus
+	filterStringifyJSON as filterStringifiedJSON
 };

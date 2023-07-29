@@ -1,7 +1,6 @@
 import { enumResolver, IntegralNumericTypeEnum, type IntegralNumericTypeEnumKeysType, type IntegralNumericTypeEnumValuesType } from "./enum.ts";
 /**
  * @access private
- * @function bigIntegerSquareRoot
  * @param {bigint} n
  * @param {bigint} [x0=1n]
  * @returns {bigint}
@@ -19,7 +18,6 @@ function bigIntegerSquareRoot(n: bigint, x0 = 1n): bigint {
 }
 /**
  * @access private
- * @function integralNumericTypeRangeIntBase
  * @param {bigint} base
  * @returns {[bigint, bigint]}
  */
@@ -29,7 +27,6 @@ function integralNumericTypeRangeIntBase(base: bigint): [bigint, bigint] {
 }
 /**
  * @access private
- * @function integralNumericTypeRangeUIntBase
  * @param {bigint} base
  * @returns {[bigint, bigint]}
  */
@@ -37,11 +34,10 @@ function integralNumericTypeRangeUIntBase(base: bigint): [bigint, bigint] {
 	return [0n, (2n ** base) - 1n];
 }
 /**
- * @function integralNumericTypeRange
  * @param {IntegralNumericTypeEnumKeysType} name
  * @returns {[bigint, bigint]}
  */
-function integralNumericTypeRange(name: IntegralNumericTypeEnumKeysType): [bigint, bigint] {
+export function integralNumericTypeRange(name: IntegralNumericTypeEnumKeysType): [bigint, bigint] {
 	let nameResolve: IntegralNumericTypeEnumValuesType | undefined;
 	try {
 		nameResolve = enumResolver<IntegralNumericTypeEnumKeysType, IntegralNumericTypeEnumValuesType>(IntegralNumericTypeEnum, name, "");
@@ -74,11 +70,10 @@ function integralNumericTypeRange(name: IntegralNumericTypeEnumKeysType): [bigin
 	}
 }
 /**
- * @function isPrimeNumeric
  * @param {bigint | number} item
  * @returns {boolean}
  */
-function isPrimeNumeric(item: bigint | number): boolean {
+export function isPrimeNumeric(item: bigint | number): boolean {
 	let itemRaw: bigint = (typeof item === "bigint") ? item : BigInt(item);
 	if (
 		itemRaw === 2n ||
@@ -104,7 +99,3 @@ function isPrimeNumeric(item: bigint | number): boolean {
 	}
 	return true;
 }
-export {
-	integralNumericTypeRange,
-	isPrimeNumeric
-};

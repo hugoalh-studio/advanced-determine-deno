@@ -1,12 +1,11 @@
 import { equal } from "https://deno.land/std@0.196.0/assert/equal.ts";
 const arrayIndexRegExp = /^(?:0|[1-9]\d*)$/u;
 /**
- * @function isArrayStrict
- * @description Whether the array is not contain custom defined properties.
+ * Determine whether the array is not contain custom defined properties.
  * @param {unknown[]} item Item that need to determine.
  * @returns {boolean} Determine result.
  */
-function isArrayStrict(item: unknown[]): boolean {
+export function isArrayStrict(item: unknown[]): boolean {
 	let itemPrototype: unknown = Object.getPrototypeOf(item);
 	if (
 		(itemPrototype !== null && itemPrototype !== Array.prototype) ||
@@ -47,21 +46,19 @@ function isArrayStrict(item: unknown[]): boolean {
 	return true;
 }
 /**
- * @function isArrayUniqueReference
- * @description Whether the array is contain unique references.
+ * Determine whether the array is contain unique references.
  * @param {unknown[]} item Item that need to determine.
  * @returns {boolean} Determine result.
  */
-function isArrayUniqueReference(item: unknown[]): boolean {
+export function isArrayUniqueReference(item: unknown[]): boolean {
 	return (new Set<unknown>(item).size === item.length);
 }
 /**
- * @function isArrayUnique
- * @description Whether the array is contain unique elements.
+ * Determine whether the array is contain unique elements.
  * @param {unknown[]} item Item that need to determine.
  * @returns {boolean} Determine result.
  */
-function isArrayUnique(item: unknown[]): boolean {
+export function isArrayUnique(item: unknown[]): boolean {
 	if (!isArrayUniqueReference(item)) {
 		return false;
 	}
@@ -77,8 +74,3 @@ function isArrayUnique(item: unknown[]): boolean {
 	}
 	return true;
 }
-export {
-	isArrayStrict,
-	isArrayUnique,
-	isArrayUniqueReference
-};

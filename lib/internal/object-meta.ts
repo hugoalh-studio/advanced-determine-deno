@@ -1,4 +1,4 @@
-class ObjectMeta {
+export class ObjectMeta {
 	prototypes: unknown;
 	keysSymbol: symbol[];
 	descriptors: object & { [x: string]: PropertyDescriptor; };
@@ -12,7 +12,6 @@ class ObjectMeta {
 	entriesSetter: string[];
 	entriesWritable: string[];
 	/**
-	 * @constructor
 	 * @param {object} item
 	 */
 	constructor(item: object) {
@@ -59,6 +58,3 @@ class ObjectMeta {
 		}
 	}
 }
-export {
-	ObjectMeta
-};

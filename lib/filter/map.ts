@@ -1,27 +1,23 @@
-interface MapFilterStatus {
+export interface MapFilterStatus {
 	/**
-	 * @property sizeMaximum
-	 * @description Maximum size of the `Map`.
+	 * Maximum size of the `Map`.
 	 * @default Infinity
 	 */
 	sizeMaximum: number;
 	/**
-	 * @property sizeMinimum
-	 * @description Minimum size of the `Map`.
+	 * Minimum size of the `Map`.
 	 * @default 1
 	 */
 	sizeMinimum: number;
 }
-interface MapFilterOptions extends Partial<MapFilterStatus> {
+export interface MapFilterOptions extends Partial<MapFilterStatus> {
 	/**
-	 * @property allowEmpty
-	 * @description Whether to allow an empty `Map`.
+	 * Whether to allow an empty `Map`.
 	 * @default false
 	 */
 	allowEmpty?: boolean;
 	/**
-	 * @property size
-	 * @description Size of the `Map`.
+	 * Size of the `Map`.
 	 * @default undefined
 	 */
 	size?: number;
@@ -33,17 +29,15 @@ interface MapFilterOptions extends Partial<MapFilterStatus> {
 	/** @alias sizeMinimum */minSize?: number;
 }
 /**
- * @class MapFilter
- * @description Filter for `Map`.
+ * Filter for `Map`.
  */
-class MapFilter {
+export class MapFilter {
 	#status: MapFilterStatus = {
 		sizeMaximum: Infinity,
 		sizeMinimum: 1
 	};
 	/**
-	 * @constructor
-	 * @description Initialize the `Map` filter.
+	 * Initialize the `Map` filter.
 	 * @param {MapFilter | MapFilterOptions} [options] Options.
 	 */
 	constructor(options?: MapFilter | MapFilterOptions) {
@@ -62,24 +56,21 @@ class MapFilter {
 		}
 	}
 	/**
-	 * @method clone
-	 * @description Clone this `Map` filter for reuse.
+	 * Clone this `Map` filter for reuse.
 	 * @returns {MapFilter} Another instance of this `Map` filter.
 	 */
 	get clone(): MapFilter {
 		return new MapFilter(this);
 	}
 	/**
-	 * @method status
-	 * @description Get the status of this `Map` filter.
+	 * Get the status of this `Map` filter.
 	 * @returns {MapFilterStatus} Status of this `Map` filter.
 	 */
 	get status(): MapFilterStatus {
 		return { ...this.#status };
 	}
 	/**
-	 * @method allowEmpty
-	 * @description Whether to allow an empty `Map`.
+	 * Whether to allow an empty `Map`.
 	 * @param {boolean} [value=true]
 	 * @returns {this}
 	 */
@@ -91,8 +82,7 @@ class MapFilter {
 		return this;
 	}
 	/**
-	 * @method size
-	 * @description Size of the `Map`.
+	 * Size of the `Map`.
 	 * @param {number} value
 	 * @returns {this}
 	 */
@@ -108,8 +98,7 @@ class MapFilter {
 		return this;
 	}
 	/**
-	 * @method sizeMaximum
-	 * @description Maximum size of the `Map`.
+	 * Maximum size of the `Map`.
 	 * @param {number} value
 	 * @returns {this}
 	 */
@@ -124,8 +113,7 @@ class MapFilter {
 		return this;
 	}
 	/**
-	 * @method sizeMinimum
-	 * @description Minimum size of the `Map`.
+	 * Minimum size of the `Map`.
 	 * @param {number} value
 	 * @returns {this}
 	 */
@@ -146,8 +134,7 @@ class MapFilter {
 	/** @alias sizeMinimum */minimumSize = this.sizeMinimum;
 	/** @alias sizeMinimum */minSize = this.sizeMinimum;
 	/**
-	 * @method test
-	 * @description Determine item with the configured `Map` filter.
+	 * Determine item with the configured `Map` filter.
 	 * @param {unknown} item Item that need to determine.
 	 * @returns {boolean} Determine result.
 	 */
@@ -162,8 +149,7 @@ class MapFilter {
 		return true;
 	}
 	/**
-	 * @static test
-	 * @description Determine item with the `Map` filter.
+	 * Determine item with the `Map` filter.
 	 * @param {unknown} item Item that need to determine.
 	 * @param {MapFilterOptions} [options={}] Options.
 	 * @returns {boolean} Determine result.
@@ -173,18 +159,11 @@ class MapFilter {
 	}
 }
 /**
- * @function filterMap
- * @description Determine item with the `Map` filter.
+ * Determine item with the `Map` filter.
  * @param {unknown} item Item that need to determine.
  * @param {MapFilterOptions} [options={}] Options.
  * @returns {boolean} Determine result.
  */
-function filterMap(item: unknown, options: MapFilterOptions = {}): boolean {
+export function filterMap(item: unknown, options: MapFilterOptions = {}): boolean {
 	return new MapFilter(options).test(item);
 }
-export {
-	filterMap,
-	MapFilter,
-	type MapFilterOptions,
-	type MapFilterStatus
-};

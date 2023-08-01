@@ -1,16 +1,12 @@
 const newLineRegExp = /[\n\r]/u;
+const nonASCIIRegExp = /[^\u0000-\u007F]/u;
 /**
  * Determine whether the string is ASCII.
  * @param {string} item Item that need to determine.
  * @returns {boolean} Determine result.
  */
 export function isStringASCII(item: string): boolean {
-	for (let character of item.split("")) {
-		if (character.charCodeAt(0) >= 128) {
-			return false;
-		}
-	}
-	return true;
+	return !nonASCIIRegExp.test(item);
 }
 /**
  * Determine whether the string is lower case.

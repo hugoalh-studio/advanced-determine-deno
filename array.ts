@@ -1,4 +1,4 @@
-import { equal } from "https://deno.land/std@0.196.0/assert/equal.ts";
+import { equal } from "https://deno.land/std@0.197.0/assert/equal.ts";
 const arrayIndexRegExp = /^(?:0|[1-9]\d*)$/u;
 /**
  * Determine whether the array is not contain custom defined properties.

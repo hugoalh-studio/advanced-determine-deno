@@ -16,7 +16,7 @@ A Deno module to provide advanced method to determine item.
 >
 > - [NodeJS](https://github.com/hugoalh-studio/advanced-determine-nodejs)
 
-## 📚 Documentation (Excerpt)
+## 📓 Documentation (Excerpt)
 
 For the full documentation, please visit the [GitHub Repository Wiki](https://github.com/hugoalh-studio/advanced-determine-deno/wiki).
 

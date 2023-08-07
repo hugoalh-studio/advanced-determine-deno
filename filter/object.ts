@@ -103,19 +103,19 @@ export interface ObjectFilterOptions extends Partial<Omit<ObjectFilterStatus, "e
 	 * @default false
 	 */
 	plain?: boolean;
-	/** @alias allowRegExp */allowRegularExpression?: boolean;
-	/** @alias entriesConfigurable */configurableEntries?: ThreePhaseConditionEnumKeysType;
-	/** @alias entriesCountMaximum */entriesCountMax?: number;
-	/** @alias entriesCountMaximum */maximumEntries?: number;
-	/** @alias entriesCountMaximum */maxEntries?: number;
-	/** @alias entriesCountMinimum */entriesCountMin?: number;
-	/** @alias entriesCountMinimum */minimumEntries?: number;
-	/** @alias entriesCountMinimum */minEntries?: number;
-	/** @alias entriesEnumerable */enumerableEntries?: ThreePhaseConditionEnumKeysType;
-	/** @alias entriesGetter */getterEntries?: ThreePhaseConditionEnumKeysType;
-	/** @alias entriesSetter */setterEntries?: ThreePhaseConditionEnumKeysType;
-	/** @alias entriesWritable */writableEntries?: ThreePhaseConditionEnumKeysType;
-	/** @alias keysSymbol */symbolKeys?: ThreePhaseConditionEnumKeysType;
+	/** @alias allowRegExp */allowRegularExpression?: ObjectFilterStatus["allowRegExp"];
+	/** @alias entriesConfigurable */configurableEntries?: ObjectFilterOptions["entriesConfigurable"];
+	/** @alias entriesCountMaximum */entriesCountMax?: ObjectFilterStatus["entriesCountMaximum"];
+	/** @alias entriesCountMaximum */maximumEntries?: ObjectFilterStatus["entriesCountMaximum"];
+	/** @alias entriesCountMaximum */maxEntries?: ObjectFilterStatus["entriesCountMaximum"];
+	/** @alias entriesCountMinimum */entriesCountMin?: ObjectFilterStatus["entriesCountMinimum"];
+	/** @alias entriesCountMinimum */minimumEntries?: ObjectFilterStatus["entriesCountMinimum"];
+	/** @alias entriesCountMinimum */minEntries?: ObjectFilterStatus["entriesCountMinimum"];
+	/** @alias entriesEnumerable */enumerableEntries?: ObjectFilterOptions["entriesEnumerable"];
+	/** @alias entriesGetter */getterEntries?: ObjectFilterOptions["entriesGetter"];
+	/** @alias entriesSetter */setterEntries?: ObjectFilterOptions["entriesSetter"];
+	/** @alias entriesWritable */writableEntries?: ObjectFilterOptions["entriesWritable"];
+	/** @alias keysSymbol */symbolKeys?: ObjectFilterOptions["keysSymbol"];
 }
 /**
  * Filter for object.

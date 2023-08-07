@@ -72,10 +72,10 @@ export interface RegExpFilterOptions extends Partial<Omit<RegExpFilterStatus, "d
 	 * @default "neutral"
 	 */
 	unicode?: ThreePhaseConditionEnumKeysType;
-	/** @alias exactly */exact?: ThreePhaseConditionEnumKeysType;
-	/** @alias ignoreCase */caseInsensitive?: ThreePhaseConditionEnumKeysType;
-	/** @alias multipleLine */multiline?: ThreePhaseConditionEnumKeysType;
-	/** @alias multipleLine */multiLine?: ThreePhaseConditionEnumKeysType;
+	/** @alias exactly */exact?: RegExpFilterOptions["exactly"];
+	/** @alias ignoreCase */caseInsensitive?: RegExpFilterOptions["ignoreCase"];
+	/** @alias multipleLine */multiline?: RegExpFilterOptions["multipleLine"];
+	/** @alias multipleLine */multiLine?: RegExpFilterOptions["multipleLine"];
 }
 /**
  * Filter for `RegExp`.

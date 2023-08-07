@@ -63,21 +63,21 @@ export interface StringFilterOptions extends Partial<Omit<StringFilterStatus, "a
 	 * @default "any"
 	 */
 	line?: StringLineEnumKeysType;
-	/** @alias length */characters?: number;
-	/** @alias lengthMaximum */charactersMax?: number;
-	/** @alias lengthMaximum */charactersMaximum?: number;
-	/** @alias lengthMaximum */lengthMax?: number;
-	/** @alias lengthMaximum */maxCharacters?: number;
-	/** @alias lengthMaximum */maximumCharacters?: number;
-	/** @alias lengthMaximum */maximumLength?: number;
-	/** @alias lengthMaximum */maxLength?: number;
-	/** @alias lengthMinimum */charactersMin?: number;
-	/** @alias lengthMinimum */charactersMinimum?: number;
-	/** @alias lengthMinimum */lengthMin?: number;
-	/** @alias lengthMinimum */minCharacters?: number;
-	/** @alias lengthMinimum */minimumCharacters?: number;
-	/** @alias lengthMinimum */minimumLength?: number;
-	/** @alias lengthMinimum */minLength?: number;
+	/** @alias length */characters?: StringFilterOptions["length"];
+	/** @alias lengthMaximum */charactersMax?: StringFilterStatus["lengthMaximum"];
+	/** @alias lengthMaximum */charactersMaximum?: StringFilterStatus["lengthMaximum"];
+	/** @alias lengthMaximum */lengthMax?: StringFilterStatus["lengthMaximum"];
+	/** @alias lengthMaximum */maxCharacters?: StringFilterStatus["lengthMaximum"];
+	/** @alias lengthMaximum */maximumCharacters?: StringFilterStatus["lengthMaximum"];
+	/** @alias lengthMaximum */maximumLength?: StringFilterStatus["lengthMaximum"];
+	/** @alias lengthMaximum */maxLength?: StringFilterStatus["lengthMaximum"];
+	/** @alias lengthMinimum */charactersMin?: StringFilterStatus["lengthMinimum"];
+	/** @alias lengthMinimum */charactersMinimum?: StringFilterStatus["lengthMinimum"];
+	/** @alias lengthMinimum */lengthMin?: StringFilterStatus["lengthMinimum"];
+	/** @alias lengthMinimum */minCharacters?: StringFilterStatus["lengthMinimum"];
+	/** @alias lengthMinimum */minimumCharacters?: StringFilterStatus["lengthMinimum"];
+	/** @alias lengthMinimum */minimumLength?: StringFilterStatus["lengthMinimum"];
+	/** @alias lengthMinimum */minLength?: StringFilterStatus["lengthMinimum"];
 }
 /**
  * Filter for string.

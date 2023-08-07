@@ -32,21 +32,21 @@ export interface ArrayFilterOptions extends Partial<ArrayFilterStatus> {
 	 * @default undefined
 	 */
 	length?: number;
-	/** @alias length */elements?: number;
-	/** @alias lengthMaximum */elementsMax?: number;
-	/** @alias lengthMaximum */elementsMaximum?: number;
-	/** @alias lengthMaximum */lengthMax?: number;
-	/** @alias lengthMaximum */maxElements?: number;
-	/** @alias lengthMaximum */maximumElements?: number;
-	/** @alias lengthMaximum */maximumLength?: number;
-	/** @alias lengthMaximum */maxLength?: number;
-	/** @alias lengthMinimum */elementsMin?: number;
-	/** @alias lengthMinimum */elementsMinimum?: number;
-	/** @alias lengthMinimum */lengthMin?: number;
-	/** @alias lengthMinimum */minElements?: number;
-	/** @alias lengthMinimum */minimumElements?: number;
-	/** @alias lengthMinimum */minimumLength?: number;
-	/** @alias lengthMinimum */minLength?: number;
+	/** @alias length */elements?: ArrayFilterOptions["length"];
+	/** @alias lengthMaximum */elementsMax?: ArrayFilterStatus["lengthMaximum"];
+	/** @alias lengthMaximum */elementsMaximum?: ArrayFilterStatus["lengthMaximum"];
+	/** @alias lengthMaximum */lengthMax?: ArrayFilterStatus["lengthMaximum"];
+	/** @alias lengthMaximum */maxElements?: ArrayFilterStatus["lengthMaximum"];
+	/** @alias lengthMaximum */maximumElements?: ArrayFilterStatus["lengthMaximum"];
+	/** @alias lengthMaximum */maximumLength?: ArrayFilterStatus["lengthMaximum"];
+	/** @alias lengthMaximum */maxLength?: ArrayFilterStatus["lengthMaximum"];
+	/** @alias lengthMinimum */elementsMin?: ArrayFilterStatus["lengthMinimum"];
+	/** @alias lengthMinimum */elementsMinimum?: ArrayFilterStatus["lengthMinimum"];
+	/** @alias lengthMinimum */lengthMin?: ArrayFilterStatus["lengthMinimum"];
+	/** @alias lengthMinimum */minElements?: ArrayFilterStatus["lengthMinimum"];
+	/** @alias lengthMinimum */minimumElements?: ArrayFilterStatus["lengthMinimum"];
+	/** @alias lengthMinimum */minimumLength?: ArrayFilterStatus["lengthMinimum"];
+	/** @alias lengthMinimum */minLength?: ArrayFilterStatus["lengthMinimum"];
 }
 /**
  * Filter for array.

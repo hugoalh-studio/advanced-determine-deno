@@ -69,14 +69,14 @@ export interface BigIntFilterOptions extends Partial<Omit<BigIntFilterStatus, "i
 	 * @default "any"
 	 */
 	sign?: MathematicsSignEnumKeysType;
-	/** @alias maximum */max?: bigint;
-	/** @alias maximumExclusive */exclusiveMax?: boolean;
-	/** @alias maximumExclusive */exclusiveMaximum?: boolean;
-	/** @alias maximumExclusive */maxExclusive?: boolean;
-	/** @alias minimum */min?: bigint;
-	/** @alias minimumExclusive */exclusiveMin?: boolean;
-	/** @alias minimumExclusive */exclusiveMinimum?: boolean;
-	/** @alias minimumExclusive */minExclusive?: boolean;
+	/** @alias maximum */max?: BigIntFilterStatus["maximum"];
+	/** @alias maximumExclusive */exclusiveMax?: BigIntFilterStatus["maximumExclusive"];
+	/** @alias maximumExclusive */exclusiveMaximum?: BigIntFilterStatus["maximumExclusive"];
+	/** @alias maximumExclusive */maxExclusive?: BigIntFilterStatus["maximumExclusive"];
+	/** @alias minimum */min?: BigIntFilterStatus["minimum"];
+	/** @alias minimumExclusive */exclusiveMin?: BigIntFilterStatus["minimumExclusive"];
+	/** @alias minimumExclusive */exclusiveMinimum?: BigIntFilterStatus["minimumExclusive"];
+	/** @alias minimumExclusive */minExclusive?: BigIntFilterStatus["minimumExclusive"];
 }
 /**
  * Filter for big integer.

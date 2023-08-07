@@ -89,14 +89,14 @@ export interface NumberFilterOptions extends Partial<Omit<NumberFilterStatus, "f
 	 * @default "any"
 	 */
 	sign?: MathematicsSignEnumKeysType;
-	/** @alias maximum */max?: number;
-	/** @alias maximumExclusive */exclusiveMax?: boolean;
-	/** @alias maximumExclusive */exclusiveMaximum?: boolean;
-	/** @alias maximumExclusive */maxExclusive?: boolean;
-	/** @alias minimum */min?: number;
-	/** @alias minimumExclusive */exclusiveMin?: boolean;
-	/** @alias minimumExclusive */exclusiveMinimum?: boolean;
-	/** @alias minimumExclusive */minExclusive?: boolean;
+	/** @alias maximum */max?: NumberFilterStatus["maximum"];
+	/** @alias maximumExclusive */exclusiveMax?: NumberFilterStatus["maximumExclusive"];
+	/** @alias maximumExclusive */exclusiveMaximum?: NumberFilterStatus["maximumExclusive"];
+	/** @alias maximumExclusive */maxExclusive?: NumberFilterStatus["maximumExclusive"];
+	/** @alias minimum */min?: NumberFilterStatus["minimum"];
+	/** @alias minimumExclusive */exclusiveMin?: NumberFilterStatus["minimumExclusive"];
+	/** @alias minimumExclusive */exclusiveMinimum?: NumberFilterStatus["minimumExclusive"];
+	/** @alias minimumExclusive */minExclusive?: NumberFilterStatus["minimumExclusive"];
 }
 /**
  * Filter for number.

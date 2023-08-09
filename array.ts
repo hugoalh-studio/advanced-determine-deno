@@ -1,4 +1,4 @@
-import { equal } from "https://deno.land/std@0.197.0/assert/equal.ts";
+import uniqueArray from "https://deno.land/x/unique_array@v1.0.6/mod.ts";
 const arrayIndexRegExp = /^(?:0|[1-9]\d*)$/u;
 /**
  * Determine whether the array is not contain custom defined properties.
@@ -59,18 +59,5 @@ export function isArrayUniqueReference(item: unknown[]): boolean {
  * @returns {boolean} Determine result.
  */
 export function isArrayUnique(item: unknown[]): boolean {
-	if (!isArrayUniqueReference(item)) {
-		return false;
-	}
-	for (let indexA = 0; indexA < item.length; indexA++) {
-		for (let indexB = 0; indexB < item.length; indexB++) {
-			if (indexA === indexB) {
-				continue;
-			}
-			if (equal(item[indexA], item[indexB])) {
-				return false;
-			}
-		}
-	}
-	return true;
+	return (uniqueArray<unknown>(item).length === item.length);
 }

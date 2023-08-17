@@ -69,14 +69,14 @@ export interface BigIntFilterOptions extends Partial<Omit<BigIntFilterStatus, "i
 	 * @default "any"
 	 */
 	sign?: MathematicsSignEnumKeysType;
-	/** @alias maximum */max?: BigIntFilterStatus["maximum"];
-	/** @alias maximumExclusive */exclusiveMax?: BigIntFilterStatus["maximumExclusive"];
-	/** @alias maximumExclusive */exclusiveMaximum?: BigIntFilterStatus["maximumExclusive"];
-	/** @alias maximumExclusive */maxExclusive?: BigIntFilterStatus["maximumExclusive"];
-	/** @alias minimum */min?: BigIntFilterStatus["minimum"];
-	/** @alias minimumExclusive */exclusiveMin?: BigIntFilterStatus["minimumExclusive"];
-	/** @alias minimumExclusive */exclusiveMinimum?: BigIntFilterStatus["minimumExclusive"];
-	/** @alias minimumExclusive */minExclusive?: BigIntFilterStatus["minimumExclusive"];
+	/** @alias maximum */max?: this["maximum"];
+	/** @alias maximumExclusive */exclusiveMax?: this["maximumExclusive"];
+	/** @alias maximumExclusive */exclusiveMaximum?: this["maximumExclusive"];
+	/** @alias maximumExclusive */maxExclusive?: this["maximumExclusive"];
+	/** @alias minimum */min?: this["minimum"];
+	/** @alias minimumExclusive */exclusiveMin?: this["minimumExclusive"];
+	/** @alias minimumExclusive */exclusiveMinimum?: this["minimumExclusive"];
+	/** @alias minimumExclusive */minExclusive?: this["minimumExclusive"];
 }
 /**
  * Filter for big integer.
@@ -105,9 +105,9 @@ export class BigIntFilter {
 			options.minimum ??= options.min;
 			options.minimumExclusive ??= options.minExclusive ?? options.exclusiveMinimum ?? options.exclusiveMin;
 			for (let option of ["ieee754", "maximum", "maximumExclusive", "minimum", "minimumExclusive", "parity", "primality", "sign", "integralNumericType"]) {
-				//@ts-ignore False positive.
+				//@ts-ignore Handle by it's method.
 				if (typeof options[option] !== "undefined") {
-					//@ts-ignore False positive.
+					//@ts-ignore Handle by it's method.
 					this[option](options[option]);
 				}
 			}
@@ -133,7 +133,7 @@ export class BigIntFilter {
 	 * @returns {this}
 	 */
 	ieee754(value: IEEE754EnumKeysType): this {
-		this.#status.ieee754 = enumResolver<IEEE754EnumKeysType, IEEE754EnumValuesType>(IEEE754Enum, value, "ieee754");
+		this.#status.ieee754 = enumResolver<IEEE754EnumKeysType, IEEE754EnumValuesType>(IEEE754Enum, value, "Filter status `ieee754`");
 		return this;
 	}
 	/**
@@ -155,10 +155,10 @@ export class BigIntFilter {
 	maximum(value?: bigint | undefined): this {
 		if (typeof value === "bigint") {
 			if (typeof this.#status.minimum === "bigint" && !(this.#status.minimum <= value)) {
-				throw new RangeError(`Filter argument \`maximum\` must be a big integer which is >= ${this.#status.minimum}!`);
+				throw new RangeError(`Filter status \`maximum\` must be a big integer which is >= ${this.#status.minimum}!`);
 			}
 		} else if (typeof value !== "undefined") {
-			throw new TypeError(`Filter argument \`maximum\` must be type of big integer or undefined!`);
+			throw new TypeError(`Filter status \`maximum\` must be type of big integer or undefined!`);
 		}
 		this.#status.maximum = value;
 		return this;
@@ -170,7 +170,7 @@ export class BigIntFilter {
 	 */
 	maximumExclusive(value = true): this {
 		if (typeof value !== "boolean") {
-			throw new TypeError(`Filter argument \`maximumExclusive\` must be type of boolean!`);
+			throw new TypeError(`Filter status \`maximumExclusive\` must be type of boolean!`);
 		}
 		this.#status.maximumExclusive = value;
 		return this;
@@ -183,10 +183,10 @@ export class BigIntFilter {
 	minimum(value?: bigint | undefined): this {
 		if (typeof value === "bigint") {
 			if (typeof this.#status.maximum === "bigint" && !(value <= this.#status.maximum)) {
-				throw new RangeError(`Filter argument \`minimum\` must be a big integer which is <= ${this.#status.maximum}!`);
+				throw new RangeError(`Filter status \`minimum\` must be a big integer which is <= ${this.#status.maximum}!`);
 			}
 		} else if (typeof value !== "undefined") {
-			throw new TypeError(`Filter argument \`minimum\` must be type of big integer or undefined!`);
+			throw new TypeError(`Filter status \`minimum\` must be type of big integer or undefined!`);
 		}
 		this.#status.minimum = value;
 		return this;
@@ -198,7 +198,7 @@ export class BigIntFilter {
 	 */
 	minimumExclusive(value = true): this {
 		if (typeof value !== "boolean") {
-			throw new TypeError(`Filter argument \`minimumExclusive\` must be type of boolean!`);
+			throw new TypeError(`Filter status \`minimumExclusive\` must be type of boolean!`);
 		}
 		this.#status.minimumExclusive = value;
 		return this;
@@ -209,7 +209,7 @@ export class BigIntFilter {
 	 * @returns {this}
 	 */
 	parity(value: MathematicsParityEnumKeysType): this {
-		this.#status.parity = enumResolver<MathematicsParityEnumKeysType, MathematicsParityEnumValuesType>(MathematicsParityEnum, value, "parity");
+		this.#status.parity = enumResolver<MathematicsParityEnumKeysType, MathematicsParityEnumValuesType>(MathematicsParityEnum, value, "Filter status `parity`");
 		return this;
 	}
 	/**
@@ -218,7 +218,7 @@ export class BigIntFilter {
 	 * @returns {this}
 	 */
 	primality(value: MathematicsPrimalityEnumKeysType): this {
-		this.#status.primality = enumResolver<MathematicsPrimalityEnumKeysType, MathematicsPrimalityEnumValuesType>(MathematicsPrimalityEnum, value, "primality");
+		this.#status.primality = enumResolver<MathematicsPrimalityEnumKeysType, MathematicsPrimalityEnumValuesType>(MathematicsPrimalityEnum, value, "Filter status `primality`");
 		return this;
 	}
 	/**
@@ -227,7 +227,7 @@ export class BigIntFilter {
 	 * @returns {this}
 	 */
 	sign(value: MathematicsSignEnumKeysType): this {
-		this.#status.sign = enumResolver<MathematicsSignEnumKeysType, MathematicsSignEnumValuesType>(MathematicsSignEnum, value, "sign");
+		this.#status.sign = enumResolver<MathematicsSignEnumKeysType, MathematicsSignEnumValuesType>(MathematicsSignEnum, value, "Filter status `sign`");
 		return this;
 	}
 	/** @alias maximum */max = this.maximum;

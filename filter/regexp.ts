@@ -72,10 +72,10 @@ export interface RegExpFilterOptions extends Partial<Omit<RegExpFilterStatus, "d
 	 * @default "neutral"
 	 */
 	unicode?: ThreePhaseConditionEnumKeysType;
-	/** @alias exactly */exact?: RegExpFilterOptions["exactly"];
-	/** @alias ignoreCase */caseInsensitive?: RegExpFilterOptions["ignoreCase"];
-	/** @alias multipleLine */multiline?: RegExpFilterOptions["multipleLine"];
-	/** @alias multipleLine */multiLine?: RegExpFilterOptions["multipleLine"];
+	/** @alias exactly */exact?: this["exactly"];
+	/** @alias ignoreCase */caseInsensitive?: this["ignoreCase"];
+	/** @alias multipleLine */multiline?: this["multipleLine"];
+	/** @alias multipleLine */multiLine?: this["multipleLine"];
 }
 /**
  * Filter for `RegExp`.
@@ -102,9 +102,9 @@ export class RegExpFilter {
 			options.ignoreCase ??= options.caseInsensitive;
 			options.multipleLine ??= options.multiLine ?? options.multiline;
 			for (let option of ["dotAll", "exactly", "global", "ignoreCase", "multipleLine", "sticky", "unicode"]) {
-				//@ts-ignore False positive.
+				//@ts-ignore Handle by it's method.
 				if (typeof options[option] !== "undefined") {
-					//@ts-ignore False positive.
+					//@ts-ignore Handle by it's method.
 					this[option](options[option]);
 				}
 			}
@@ -130,7 +130,7 @@ export class RegExpFilter {
 	 * @returns {this}
 	 */
 	dotAll(value: ThreePhaseConditionEnumKeysType): this {
-		this.#status.dotAll = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "dotAll");
+		this.#status.dotAll = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "Filter status `dotAll`");
 		return this;
 	}
 	/**
@@ -139,7 +139,7 @@ export class RegExpFilter {
 	 * @returns {this}
 	 */
 	exactly(value: ThreePhaseConditionEnumKeysType): this {
-		this.#status.exactly = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "exactly");
+		this.#status.exactly = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "Filter status `exactly`");
 		return this;
 	}
 	/**
@@ -148,7 +148,7 @@ export class RegExpFilter {
 	 * @returns {this}
 	 */
 	global(value: ThreePhaseConditionEnumKeysType): this {
-		this.#status.global = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "global");
+		this.#status.global = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "Filter status `global`");
 		return this;
 	}
 	/**
@@ -157,7 +157,7 @@ export class RegExpFilter {
 	 * @returns {this}
 	 */
 	ignoreCase(value: ThreePhaseConditionEnumKeysType): this {
-		this.#status.ignoreCase = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "ignoreCase");
+		this.#status.ignoreCase = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "Filter status `ignoreCase`");
 		return this;
 	}
 	/**
@@ -166,7 +166,7 @@ export class RegExpFilter {
 	 * @returns {this}
 	 */
 	multipleLine(value: ThreePhaseConditionEnumKeysType): this {
-		this.#status.multipleLine = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "multipleLine");
+		this.#status.multipleLine = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "Filter status `multipleLine`");
 		return this;
 	}
 	/**
@@ -175,7 +175,7 @@ export class RegExpFilter {
 	 * @returns {this}
 	 */
 	sticky(value: ThreePhaseConditionEnumKeysType): this {
-		this.#status.sticky = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "sticky");
+		this.#status.sticky = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "Filter status `sticky`");
 		return this;
 	}
 	/**
@@ -184,7 +184,7 @@ export class RegExpFilter {
 	 * @returns {this}
 	 */
 	unicode(value: ThreePhaseConditionEnumKeysType): this {
-		this.#status.unicode = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "unicode");
+		this.#status.unicode = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "Filter status `unicode`");
 		return this;
 	}
 	/** @alias exactly */exact = this.exactly;

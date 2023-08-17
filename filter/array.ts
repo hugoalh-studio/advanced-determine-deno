@@ -32,21 +32,21 @@ export interface ArrayFilterOptions extends Partial<ArrayFilterStatus> {
 	 * @default undefined
 	 */
 	length?: number;
-	/** @alias length */elements?: ArrayFilterOptions["length"];
-	/** @alias lengthMaximum */elementsMax?: ArrayFilterStatus["lengthMaximum"];
-	/** @alias lengthMaximum */elementsMaximum?: ArrayFilterStatus["lengthMaximum"];
-	/** @alias lengthMaximum */lengthMax?: ArrayFilterStatus["lengthMaximum"];
-	/** @alias lengthMaximum */maxElements?: ArrayFilterStatus["lengthMaximum"];
-	/** @alias lengthMaximum */maximumElements?: ArrayFilterStatus["lengthMaximum"];
-	/** @alias lengthMaximum */maximumLength?: ArrayFilterStatus["lengthMaximum"];
-	/** @alias lengthMaximum */maxLength?: ArrayFilterStatus["lengthMaximum"];
-	/** @alias lengthMinimum */elementsMin?: ArrayFilterStatus["lengthMinimum"];
-	/** @alias lengthMinimum */elementsMinimum?: ArrayFilterStatus["lengthMinimum"];
-	/** @alias lengthMinimum */lengthMin?: ArrayFilterStatus["lengthMinimum"];
-	/** @alias lengthMinimum */minElements?: ArrayFilterStatus["lengthMinimum"];
-	/** @alias lengthMinimum */minimumElements?: ArrayFilterStatus["lengthMinimum"];
-	/** @alias lengthMinimum */minimumLength?: ArrayFilterStatus["lengthMinimum"];
-	/** @alias lengthMinimum */minLength?: ArrayFilterStatus["lengthMinimum"];
+	/** @alias length */elements?: this["length"];
+	/** @alias lengthMaximum */elementsMax?: this["lengthMaximum"];
+	/** @alias lengthMaximum */elementsMaximum?: this["lengthMaximum"];
+	/** @alias lengthMaximum */lengthMax?: this["lengthMaximum"];
+	/** @alias lengthMaximum */maxElements?: this["lengthMaximum"];
+	/** @alias lengthMaximum */maximumElements?: this["lengthMaximum"];
+	/** @alias lengthMaximum */maximumLength?: this["lengthMaximum"];
+	/** @alias lengthMaximum */maxLength?: this["lengthMaximum"];
+	/** @alias lengthMinimum */elementsMin?: this["lengthMinimum"];
+	/** @alias lengthMinimum */elementsMinimum?: this["lengthMinimum"];
+	/** @alias lengthMinimum */lengthMin?: this["lengthMinimum"];
+	/** @alias lengthMinimum */minElements?: this["lengthMinimum"];
+	/** @alias lengthMinimum */minimumElements?: this["lengthMinimum"];
+	/** @alias lengthMinimum */minimumLength?: this["lengthMinimum"];
+	/** @alias lengthMinimum */minLength?: this["lengthMinimum"];
 }
 /**
  * Filter for array.
@@ -70,9 +70,9 @@ export class ArrayFilter {
 			options.lengthMaximum ??= options.lengthMax ?? options.elementsMaximum ?? options.elementsMax ?? options.maximumLength ?? options.maxLength ?? options.maximumElements ?? options.maxElements;
 			options.lengthMinimum ??= options.lengthMin ?? options.elementsMinimum ?? options.elementsMin ?? options.minimumLength ?? options.minLength ?? options.minimumElements ?? options.minElements;
 			for (let option of ["lengthMaximum", "lengthMinimum", "strict", "unique", "allowEmpty", "length"]) {
-				//@ts-ignore False positive.
+				//@ts-ignore Handle by it's method.
 				if (typeof options[option] !== "undefined") {
-					//@ts-ignore False positive.
+					//@ts-ignore Handle by it's method.
 					this[option](options[option]);
 				}
 			}
@@ -99,7 +99,7 @@ export class ArrayFilter {
 	 */
 	allowEmpty(value = true): this {
 		if (typeof value !== "boolean") {
-			throw new TypeError(`Filter argument \`allowEmpty\` must be type of boolean!`);
+			throw new TypeError(`Filter status \`allowEmpty\` must be type of boolean!`);
 		}
 		this.#status.lengthMinimum = value ? 0 : 1;
 		return this;
@@ -111,10 +111,10 @@ export class ArrayFilter {
 	 */
 	length(value: number): this {
 		if (!(typeof value === "number" && !Number.isNaN(value))) {
-			throw new TypeError(`Filter argument \`length\` must be type of number!`);
+			throw new TypeError(`Filter status \`length\` must be type of number!`);
 		}
 		if (!(Number.isSafeInteger(value) && value >= 0)) {
-			throw new RangeError(`Filter argument \`length\` must be a number which is integer, positive, and safe!`);
+			throw new RangeError(`Filter status \`length\` must be a number which is integer, positive, and safe!`);
 		}
 		this.#status.lengthMaximum = value;
 		this.#status.lengthMinimum = value;
@@ -127,10 +127,10 @@ export class ArrayFilter {
 	 */
 	lengthMaximum(value: number): this {
 		if (!(typeof value === "number" && !Number.isNaN(value))) {
-			throw new TypeError(`Filter argument \`lengthMaximum\` must be type of number!`);
+			throw new TypeError(`Filter status \`lengthMaximum\` must be type of number!`);
 		}
 		if (value !== Infinity && !(Number.isSafeInteger(value) && value >= 0 && value >= this.#status.lengthMinimum)) {
-			throw new RangeError(`Filter argument \`lengthMaximum\` must be \`Infinity\`, or a number which is integer, positive, safe, and >= ${this.#status.lengthMinimum}!`);
+			throw new RangeError(`Filter status \`lengthMaximum\` must be \`Infinity\`, or a number which is integer, positive, safe, and >= ${this.#status.lengthMinimum}!`);
 		}
 		this.#status.lengthMaximum = value;
 		return this;
@@ -142,10 +142,10 @@ export class ArrayFilter {
 	 */
 	lengthMinimum(value: number): this {
 		if (!(typeof value === "number" && !Number.isNaN(value))) {
-			throw new TypeError(`Filter argument \`lengthMinimum\` must be type of number!`);
+			throw new TypeError(`Filter status \`lengthMinimum\` must be type of number!`);
 		}
 		if (!(Number.isSafeInteger(value) && value >= 0 && value <= this.#status.lengthMaximum)) {
-			throw new RangeError(`Filter argument \`lengthMinimum\` must be a number which is integer, positive, safe, and <= ${this.#status.lengthMaximum}!`);
+			throw new RangeError(`Filter status \`lengthMinimum\` must be a number which is integer, positive, safe, and <= ${this.#status.lengthMaximum}!`);
 		}
 		this.#status.lengthMinimum = value;
 		return this;
@@ -157,7 +157,7 @@ export class ArrayFilter {
 	 */
 	strict(value = true): this {
 		if (typeof value !== "boolean") {
-			throw new TypeError(`Filter argument \`strict\` must be type of boolean!`);
+			throw new TypeError(`Filter status \`strict\` must be type of boolean!`);
 		}
 		this.#status.strict = value;
 		return this;
@@ -169,7 +169,7 @@ export class ArrayFilter {
 	 */
 	unique(value = true): this {
 		if (typeof value !== "boolean") {
-			throw new TypeError(`Filter argument \`unique\` must be type of boolean!`);
+			throw new TypeError(`Filter status \`unique\` must be type of boolean!`);
 		}
 		this.#status.unique = value;
 		return this;

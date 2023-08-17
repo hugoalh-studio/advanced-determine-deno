@@ -21,12 +21,12 @@ export interface SetFilterOptions extends Partial<SetFilterStatus> {
 	 * @default undefined
 	 */
 	size?: number;
-	/** @alias sizeMaximum */sizeMax?: SetFilterStatus["sizeMaximum"];
-	/** @alias sizeMaximum */maximumSize?: SetFilterStatus["sizeMaximum"];
-	/** @alias sizeMaximum */maxSize?: SetFilterStatus["sizeMaximum"];
-	/** @alias sizeMinimum */sizeMin?: SetFilterStatus["sizeMinimum"];
-	/** @alias sizeMinimum */minimumSize?: SetFilterStatus["sizeMinimum"];
-	/** @alias sizeMinimum */minSize?: SetFilterStatus["sizeMinimum"];
+	/** @alias sizeMaximum */sizeMax?: this["sizeMaximum"];
+	/** @alias sizeMaximum */maximumSize?: this["sizeMaximum"];
+	/** @alias sizeMaximum */maxSize?: this["sizeMaximum"];
+	/** @alias sizeMinimum */sizeMin?: this["sizeMinimum"];
+	/** @alias sizeMinimum */minimumSize?: this["sizeMinimum"];
+	/** @alias sizeMinimum */minSize?: this["sizeMinimum"];
 }
 /**
  * Filter for `Set`.
@@ -47,9 +47,9 @@ export class SetFilter {
 			options.sizeMaximum ??= options.sizeMax ?? options.maximumSize ?? options.maxSize;
 			options.sizeMinimum ??= options.sizeMin ?? options.minimumSize ?? options.minSize;
 			for (let option of ["sizeMaximum", "sizeMinimum", "allowEmpty", "size"]) {
-				//@ts-ignore False positive.
+				//@ts-ignore Handle by it's method.
 				if (typeof options[option] !== "undefined") {
-					//@ts-ignore False positive.
+					//@ts-ignore Handle by it's method.
 					this[option](options[option]);
 				}
 			}
@@ -76,7 +76,7 @@ export class SetFilter {
 	 */
 	allowEmpty(value = true): this {
 		if (typeof value !== "boolean") {
-			throw new TypeError(`Filter argument \`allowEmpty\` must be type of boolean!`);
+			throw new TypeError(`Filter status \`allowEmpty\` must be type of boolean!`);
 		}
 		this.#status.sizeMinimum = value ? 0 : 1;
 		return this;
@@ -88,10 +88,10 @@ export class SetFilter {
 	 */
 	size(value: number): this {
 		if (!(typeof value === "number" && !Number.isNaN(value))) {
-			throw new TypeError(`Filter argument \`size\` must be type of number!`);
+			throw new TypeError(`Filter status \`size\` must be type of number!`);
 		}
 		if (!(Number.isSafeInteger(value) && value >= 0)) {
-			throw new RangeError(`Filter argument \`size\` must be a number which is integer, positive, and safe!`);
+			throw new RangeError(`Filter status \`size\` must be a number which is integer, positive, and safe!`);
 		}
 		this.#status.sizeMaximum = value;
 		this.#status.sizeMinimum = value;
@@ -104,10 +104,10 @@ export class SetFilter {
 	 */
 	sizeMaximum(value: number): this {
 		if (!(typeof value === "number" && !Number.isNaN(value))) {
-			throw new TypeError(`Filter argument \`sizeMaximum\` must be type of number!`);
+			throw new TypeError(`Filter status \`sizeMaximum\` must be type of number!`);
 		}
 		if (value !== Infinity && !(Number.isSafeInteger(value) && value >= 0 && value >= this.#status.sizeMinimum)) {
-			throw new RangeError(`Filter argument \`sizeMaximum\` must be \`Infinity\`, or a number which is integer, positive, safe, and >= ${this.#status.sizeMinimum}!`);
+			throw new RangeError(`Filter status \`sizeMaximum\` must be \`Infinity\`, or a number which is integer, positive, safe, and >= ${this.#status.sizeMinimum}!`);
 		}
 		this.#status.sizeMaximum = value;
 		return this;
@@ -119,10 +119,10 @@ export class SetFilter {
 	 */
 	sizeMinimum(value: number): this {
 		if (!(typeof value === "number" && !Number.isNaN(value))) {
-			throw new TypeError(`Filter argument \`sizeMinimum\` must be type of number!`);
+			throw new TypeError(`Filter status \`sizeMinimum\` must be type of number!`);
 		}
 		if (!(Number.isSafeInteger(value) && value >= 0 && value <= this.#status.sizeMaximum)) {
-			throw new RangeError(`Filter argument \`sizeMinimum\` must be a number which is integer, positive, safe, and <= ${this.#status.sizeMaximum}!`);
+			throw new RangeError(`Filter status \`sizeMinimum\` must be a number which is integer, positive, safe, and <= ${this.#status.sizeMaximum}!`);
 		}
 		this.#status.sizeMinimum = value;
 		return this;

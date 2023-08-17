@@ -63,21 +63,21 @@ export interface StringFilterOptions extends Partial<Omit<StringFilterStatus, "a
 	 * @default "any"
 	 */
 	line?: StringLineEnumKeysType;
-	/** @alias length */characters?: StringFilterOptions["length"];
-	/** @alias lengthMaximum */charactersMax?: StringFilterStatus["lengthMaximum"];
-	/** @alias lengthMaximum */charactersMaximum?: StringFilterStatus["lengthMaximum"];
-	/** @alias lengthMaximum */lengthMax?: StringFilterStatus["lengthMaximum"];
-	/** @alias lengthMaximum */maxCharacters?: StringFilterStatus["lengthMaximum"];
-	/** @alias lengthMaximum */maximumCharacters?: StringFilterStatus["lengthMaximum"];
-	/** @alias lengthMaximum */maximumLength?: StringFilterStatus["lengthMaximum"];
-	/** @alias lengthMaximum */maxLength?: StringFilterStatus["lengthMaximum"];
-	/** @alias lengthMinimum */charactersMin?: StringFilterStatus["lengthMinimum"];
-	/** @alias lengthMinimum */charactersMinimum?: StringFilterStatus["lengthMinimum"];
-	/** @alias lengthMinimum */lengthMin?: StringFilterStatus["lengthMinimum"];
-	/** @alias lengthMinimum */minCharacters?: StringFilterStatus["lengthMinimum"];
-	/** @alias lengthMinimum */minimumCharacters?: StringFilterStatus["lengthMinimum"];
-	/** @alias lengthMinimum */minimumLength?: StringFilterStatus["lengthMinimum"];
-	/** @alias lengthMinimum */minLength?: StringFilterStatus["lengthMinimum"];
+	/** @alias length */characters?: this["length"];
+	/** @alias lengthMaximum */charactersMax?: this["lengthMaximum"];
+	/** @alias lengthMaximum */charactersMaximum?: this["lengthMaximum"];
+	/** @alias lengthMaximum */lengthMax?: this["lengthMaximum"];
+	/** @alias lengthMaximum */maxCharacters?: this["lengthMaximum"];
+	/** @alias lengthMaximum */maximumCharacters?: this["lengthMaximum"];
+	/** @alias lengthMaximum */maximumLength?: this["lengthMaximum"];
+	/** @alias lengthMaximum */maxLength?: this["lengthMaximum"];
+	/** @alias lengthMinimum */charactersMin?: this["lengthMinimum"];
+	/** @alias lengthMinimum */charactersMinimum?: this["lengthMinimum"];
+	/** @alias lengthMinimum */lengthMin?: this["lengthMinimum"];
+	/** @alias lengthMinimum */minCharacters?: this["lengthMinimum"];
+	/** @alias lengthMinimum */minimumCharacters?: this["lengthMinimum"];
+	/** @alias lengthMinimum */minimumLength?: this["lengthMinimum"];
+	/** @alias lengthMinimum */minLength?: this["lengthMinimum"];
 }
 /**
  * Filter for string.
@@ -104,9 +104,9 @@ export class StringFilter {
 			options.lengthMaximum ??= options.lengthMax ?? options.charactersMaximum ?? options.charactersMax ?? options.maximumLength ?? options.maxLength ?? options.maximumCharacters ?? options.maxCharacters;
 			options.lengthMinimum ??= options.lengthMin ?? options.charactersMinimum ?? options.charactersMin ?? options.minimumLength ?? options.minLength ?? options.minimumCharacters ?? options.minCharacters;
 			for (let option of ["ascii", "case", "lengthMaximum", "lengthMinimum", "line", "pattern", "preTrim", "allowEmpty", "length"]) {
-				//@ts-ignore False positive.
+				//@ts-ignore Handle by it's method.
 				if (typeof options[option] !== "undefined") {
-					//@ts-ignore False positive.
+					//@ts-ignore Handle by it's method.
 					this[option](options[option]);
 				}
 			}
@@ -133,7 +133,7 @@ export class StringFilter {
 	 */
 	allowEmpty(value = true): this {
 		if (typeof value !== "boolean") {
-			throw new TypeError(`Filter argument \`allowEmpty\` must be type of boolean!`);
+			throw new TypeError(`Filter status \`allowEmpty\` must be type of boolean!`);
 		}
 		this.#status.lengthMinimum = value ? 0 : 1;
 		return this;
@@ -144,7 +144,7 @@ export class StringFilter {
 	 * @returns {this}
 	 */
 	ascii(value: ThreePhaseConditionEnumKeysType): this {
-		this.#status.ascii = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "ascii");
+		this.#status.ascii = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "Filter status `ascii`");
 		return this;
 	}
 	/**
@@ -153,7 +153,7 @@ export class StringFilter {
 	 * @returns {this}
 	 */
 	case(value: StringCaseEnumKeysType): this {
-		this.#status.case = enumResolver<StringCaseEnumKeysType, StringCaseEnumValuesType>(StringCaseEnum, value, "case");
+		this.#status.case = enumResolver<StringCaseEnumKeysType, StringCaseEnumValuesType>(StringCaseEnum, value, "Filter status `case`");
 		return this;
 	}
 	/**
@@ -163,10 +163,10 @@ export class StringFilter {
 	 */
 	length(value: number): this {
 		if (!(typeof value === "number" && !Number.isNaN(value))) {
-			throw new TypeError(`Filter argument \`length\` must be type of number!`);
+			throw new TypeError(`Filter status \`length\` must be type of number!`);
 		}
 		if (!(Number.isSafeInteger(value) && value >= 0)) {
-			throw new RangeError(`Filter argument \`length\` must be a number which is integer, positive, and safe!`);
+			throw new RangeError(`Filter status \`length\` must be a number which is integer, positive, and safe!`);
 		}
 		this.#status.lengthMaximum = value;
 		this.#status.lengthMinimum = value;
@@ -179,10 +179,10 @@ export class StringFilter {
 	 */
 	lengthMaximum(value: number): this {
 		if (!(typeof value === "number" && !Number.isNaN(value))) {
-			throw new TypeError(`Filter argument \`lengthMaximum\` must be type of number!`);
+			throw new TypeError(`Filter status \`lengthMaximum\` must be type of number!`);
 		}
 		if (value !== Infinity && !(Number.isSafeInteger(value) && value >= 0 && value >= this.#status.lengthMinimum)) {
-			throw new RangeError(`Filter argument \`lengthMaximum\` must be \`Infinity\`, or a number which is integer, positive, safe, and >= ${this.#status.lengthMinimum}!`);
+			throw new RangeError(`Filter status \`lengthMaximum\` must be \`Infinity\`, or a number which is integer, positive, safe, and >= ${this.#status.lengthMinimum}!`);
 		}
 		this.#status.lengthMaximum = value;
 		return this;
@@ -194,10 +194,10 @@ export class StringFilter {
 	 */
 	lengthMinimum(value: number): this {
 		if (!(typeof value === "number" && !Number.isNaN(value))) {
-			throw new TypeError(`Filter argument \`lengthMinimum\` must be type of number!`);
+			throw new TypeError(`Filter status \`lengthMinimum\` must be type of number!`);
 		}
 		if (!(Number.isSafeInteger(value) && value >= 0 && value <= this.#status.lengthMaximum)) {
-			throw new RangeError(`Filter argument \`lengthMinimum\` must be a number which is integer, positive, safe, and <= ${this.#status.lengthMaximum}!`);
+			throw new RangeError(`Filter status \`lengthMinimum\` must be a number which is integer, positive, safe, and <= ${this.#status.lengthMaximum}!`);
 		}
 		this.#status.lengthMinimum = value;
 		return this;
@@ -208,7 +208,7 @@ export class StringFilter {
 	 * @returns {this}
 	 */
 	line(value: StringLineEnumKeysType): this {
-		this.#status.line = enumResolver<StringLineEnumKeysType, StringLineEnumValuesType>(StringLineEnum, value, "line");
+		this.#status.line = enumResolver<StringLineEnumKeysType, StringLineEnumValuesType>(StringLineEnum, value, "Filter status `line`");
 		return this;
 	}
 	/**
@@ -218,7 +218,7 @@ export class StringFilter {
 	 */
 	pattern(value?: RegExp | undefined): this {
 		if (!(value instanceof RegExp) && typeof value !== "undefined") {
-			throw new TypeError(`Filter argument \`pattern\` must be instance of regular expression, or type of undefined!`);
+			throw new TypeError(`Filter status \`pattern\` must be instance of regular expression, or type of undefined!`);
 		}
 		this.#status.pattern = value;
 		return this;
@@ -230,7 +230,7 @@ export class StringFilter {
 	 */
 	preTrim(value = true): this {
 		if (typeof value !== "boolean") {
-			throw new TypeError(`Filter argument \`preTrim\` must be type of boolean!`);
+			throw new TypeError(`Filter status \`preTrim\` must be type of boolean!`);
 		}
 		this.#status.preTrim = value;
 		return this;

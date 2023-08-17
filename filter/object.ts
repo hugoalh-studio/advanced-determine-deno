@@ -103,19 +103,19 @@ export interface ObjectFilterOptions extends Partial<Omit<ObjectFilterStatus, "e
 	 * @default false
 	 */
 	plain?: boolean;
-	/** @alias allowRegExp */allowRegularExpression?: ObjectFilterStatus["allowRegExp"];
-	/** @alias entriesConfigurable */configurableEntries?: ObjectFilterOptions["entriesConfigurable"];
-	/** @alias entriesCountMaximum */entriesCountMax?: ObjectFilterStatus["entriesCountMaximum"];
-	/** @alias entriesCountMaximum */maximumEntries?: ObjectFilterStatus["entriesCountMaximum"];
-	/** @alias entriesCountMaximum */maxEntries?: ObjectFilterStatus["entriesCountMaximum"];
-	/** @alias entriesCountMinimum */entriesCountMin?: ObjectFilterStatus["entriesCountMinimum"];
-	/** @alias entriesCountMinimum */minimumEntries?: ObjectFilterStatus["entriesCountMinimum"];
-	/** @alias entriesCountMinimum */minEntries?: ObjectFilterStatus["entriesCountMinimum"];
-	/** @alias entriesEnumerable */enumerableEntries?: ObjectFilterOptions["entriesEnumerable"];
-	/** @alias entriesGetter */getterEntries?: ObjectFilterOptions["entriesGetter"];
-	/** @alias entriesSetter */setterEntries?: ObjectFilterOptions["entriesSetter"];
-	/** @alias entriesWritable */writableEntries?: ObjectFilterOptions["entriesWritable"];
-	/** @alias keysSymbol */symbolKeys?: ObjectFilterOptions["keysSymbol"];
+	/** @alias allowRegExp */allowRegularExpression?: this["allowRegExp"];
+	/** @alias entriesConfigurable */configurableEntries?: this["entriesConfigurable"];
+	/** @alias entriesCountMaximum */entriesCountMax?: this["entriesCountMaximum"];
+	/** @alias entriesCountMaximum */maximumEntries?: this["entriesCountMaximum"];
+	/** @alias entriesCountMaximum */maxEntries?: this["entriesCountMaximum"];
+	/** @alias entriesCountMinimum */entriesCountMin?: this["entriesCountMinimum"];
+	/** @alias entriesCountMinimum */minimumEntries?: this["entriesCountMinimum"];
+	/** @alias entriesCountMinimum */minEntries?: this["entriesCountMinimum"];
+	/** @alias entriesEnumerable */enumerableEntries?: this["entriesEnumerable"];
+	/** @alias entriesGetter */getterEntries?: this["entriesGetter"];
+	/** @alias entriesSetter */setterEntries?: this["entriesSetter"];
+	/** @alias entriesWritable */writableEntries?: this["entriesWritable"];
+	/** @alias keysSymbol */symbolKeys?: this["keysSymbol"];
 }
 /**
  * Filter for object.
@@ -152,9 +152,9 @@ export class ObjectFilter {
 			options.entriesWritable ??= options.writableEntries;
 			options.keysSymbol ??= options.symbolKeys;
 			for (let option of ["allowArray", "allowNull", "allowRegExp", "entriesConfigurable", "entriesCountMaximum", "entriesCountMinimum", "entriesEnumerable", "entriesGetter", "entriesSetter", "entriesWritable", "keysSymbol", "allowEmpty", "entriesCount", "plain"]) {
-				//@ts-ignore False positive.
+				//@ts-ignore Handle by it's method.
 				if (typeof options[option] !== "undefined") {
-					//@ts-ignore False positive.
+					//@ts-ignore Handle by it's method.
 					this[option](options[option]);
 				}
 			}
@@ -181,7 +181,7 @@ export class ObjectFilter {
 	 */
 	allowArray(value = true): this {
 		if (typeof value !== "boolean") {
-			throw new TypeError(`Filter argument \`allowArray\` must be type of boolean!`);
+			throw new TypeError(`Filter status \`allowArray\` must be type of boolean!`);
 		}
 		this.#status.allowArray = value;
 		return this;
@@ -193,7 +193,7 @@ export class ObjectFilter {
 	 */
 	allowEmpty(value = true): this {
 		if (typeof value !== "boolean") {
-			throw new TypeError(`Filter argument \`allowEmpty\` must be type of boolean!`);
+			throw new TypeError(`Filter status \`allowEmpty\` must be type of boolean!`);
 		}
 		this.#status.entriesCountMinimum = value ? 0 : 1;
 		return this;
@@ -205,7 +205,7 @@ export class ObjectFilter {
 	 */
 	allowNull(value = true): this {
 		if (typeof value !== "boolean") {
-			throw new TypeError(`Filter argument \`allowNull\` must be type of boolean!`);
+			throw new TypeError(`Filter status \`allowNull\` must be type of boolean!`);
 		}
 		this.#status.allowNull = value;
 		return this;
@@ -217,7 +217,7 @@ export class ObjectFilter {
 	 */
 	allowRegExp(value = true): this {
 		if (typeof value !== "boolean") {
-			throw new TypeError(`Filter argument \`allowRegExp\` must be type of boolean!`);
+			throw new TypeError(`Filter status \`allowRegExp\` must be type of boolean!`);
 		}
 		this.#status.allowRegExp = value;
 		return this;
@@ -228,7 +228,7 @@ export class ObjectFilter {
 	 * @returns {this}
 	 */
 	entriesConfigurable(value: ThreePhaseConditionEnumKeysType): this {
-		this.#status.entriesConfigurable = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "entriesConfigurable");
+		this.#status.entriesConfigurable = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "Filter status `entriesConfigurable`");
 		return this;
 	}
 	/**
@@ -238,10 +238,10 @@ export class ObjectFilter {
 	 */
 	entriesCount(value: number): this {
 		if (!(typeof value === "number" && !Number.isNaN(value))) {
-			throw new TypeError(`Filter argument \`entriesCount\` must be type of number!`);
+			throw new TypeError(`Filter status \`entriesCount\` must be type of number!`);
 		}
 		if (!(Number.isSafeInteger(value) && value >= 0)) {
-			throw new RangeError(`Filter argument \`entriesCount\` must be a number which is integer, positive, and safe!`);
+			throw new RangeError(`Filter status \`entriesCount\` must be a number which is integer, positive, and safe!`);
 		}
 		this.#status.entriesCountMaximum = value;
 		this.#status.entriesCountMinimum = value;
@@ -254,10 +254,10 @@ export class ObjectFilter {
 	 */
 	entriesCountMaximum(value: number): this {
 		if (!(typeof value === "number" && !Number.isNaN(value))) {
-			throw new TypeError(`Filter argument \`entriesCountMaximum\` must be type of number!`);
+			throw new TypeError(`Filter status \`entriesCountMaximum\` must be type of number!`);
 		}
 		if (value !== Infinity && !(Number.isSafeInteger(value) && value >= 0 && value >= this.#status.entriesCountMinimum)) {
-			throw new RangeError(`Filter argument \`entriesCountMaximum\` must be \`Infinity\`, or a number which is integer, positive, safe, and >= ${this.#status.entriesCountMinimum}!`);
+			throw new RangeError(`Filter status \`entriesCountMaximum\` must be \`Infinity\`, or a number which is integer, positive, safe, and >= ${this.#status.entriesCountMinimum}!`);
 		}
 		this.#status.entriesCountMaximum = value;
 		return this;
@@ -269,10 +269,10 @@ export class ObjectFilter {
 	 */
 	entriesCountMinimum(value: number): this {
 		if (!(typeof value === "number" && !Number.isNaN(value))) {
-			throw new TypeError(`Filter argument \`entriesCountMinimum\` must be type of number!`);
+			throw new TypeError(`Filter status \`entriesCountMinimum\` must be type of number!`);
 		}
 		if (!(Number.isSafeInteger(value) && value >= 0 && value <= this.#status.entriesCountMaximum)) {
-			throw new RangeError(`Filter argument \`entriesCountMinimum\` must be a number which is integer, positive, safe, and <= ${this.#status.entriesCountMaximum}!`);
+			throw new RangeError(`Filter status \`entriesCountMinimum\` must be a number which is integer, positive, safe, and <= ${this.#status.entriesCountMaximum}!`);
 		}
 		this.#status.entriesCountMinimum = value;
 		return this;
@@ -283,7 +283,7 @@ export class ObjectFilter {
 	 * @returns {this}
 	 */
 	entriesEnumerable(value: ThreePhaseConditionEnumKeysType): this {
-		this.#status.entriesEnumerable = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "entriesEnumerable");
+		this.#status.entriesEnumerable = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "Filter status `entriesEnumerable`");
 		return this;
 	}
 	/**
@@ -292,7 +292,7 @@ export class ObjectFilter {
 	 * @returns {this}
 	 */
 	entriesGetter(value: ThreePhaseConditionEnumKeysType): this {
-		this.#status.entriesGetter = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "entriesGetter");
+		this.#status.entriesGetter = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "Filter status `entriesGetter`");
 		return this;
 	}
 	/**
@@ -301,7 +301,7 @@ export class ObjectFilter {
 	 * @returns {this}
 	 */
 	entriesSetter(value: ThreePhaseConditionEnumKeysType): this {
-		this.#status.entriesSetter = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "entriesSetter");
+		this.#status.entriesSetter = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "Filter status `entriesSetter`");
 		return this;
 	}
 	/**
@@ -310,7 +310,7 @@ export class ObjectFilter {
 	 * @returns {this}
 	 */
 	entriesWritable(value: ThreePhaseConditionEnumKeysType): this {
-		this.#status.entriesWritable = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "entriesWritable");
+		this.#status.entriesWritable = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "Filter status `entriesWritable`");
 		return this;
 	}
 	/**
@@ -319,7 +319,7 @@ export class ObjectFilter {
 	 * @returns {this}
 	 */
 	keysSymbol(value: ThreePhaseConditionEnumKeysType): this {
-		this.#status.keysSymbol = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "keysSymbol");
+		this.#status.keysSymbol = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "Filter status `keysSymbol`");
 		return this;
 	}
 	/**
@@ -329,7 +329,7 @@ export class ObjectFilter {
 	 */
 	plain(value = true): this {
 		if (typeof value !== "boolean") {
-			throw new TypeError(`Filter argument \`plain\` must be type of boolean!`);
+			throw new TypeError(`Filter status \`plain\` must be type of boolean!`);
 		}
 		if (value) {
 			this.#status.entriesConfigurable = "true";
@@ -375,11 +375,13 @@ export class ObjectFilter {
 		) {
 			return false;
 		}
-		//@ts-ignore False positive.
-		let itemObjectMeta: ObjectMeta = new ObjectMeta(item);
+		if (this.#status.allowNull && item === null) {
+			return true;
+		}
+		let itemObjectMeta: ObjectMeta = new ObjectMeta(item as object);
 		if (
-			//@ts-ignore False positive.
-			Object.entries(item).length !== itemObjectMeta.entriesEnumerable.length ||
+			
+			Object.entries(item as object).length !== itemObjectMeta.entriesEnumerable.length ||
 			(this.#status.keysSymbol === "false" && itemObjectMeta.keysSymbol.length > 0) ||
 			(this.#status.keysSymbol === "true" && itemObjectMeta.keysSymbol.length === 0) ||
 			this.#status.entriesCountMaximum < itemObjectMeta.entriesGetter.length + itemObjectMeta.entriesNonAccessor.length + itemObjectMeta.entriesSetter.length + itemObjectMeta.keysSymbol.length ||

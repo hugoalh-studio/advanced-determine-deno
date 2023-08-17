@@ -1,7 +1,5 @@
-import { ArrayFilter } from "./array.ts";
 import { ObjectFilter } from "./object.ts";
 import { enumResolver, JSONRootTypeEnum, type JSONRootTypeEnumKeysType, type JSONRootTypeEnumValuesType } from "../internal/enum.ts";
-const jsonArrayFilter: ArrayFilter = new ArrayFilter().allowEmpty().strict();
 const jsonObjectFilter: ObjectFilter = new ObjectFilter().allowEmpty().plain();
 const jsonLegalKeysPatternRegExp = /^[$_A-Za-z][$\d_A-Za-z]*$/u;
 export interface JSONFilterStatus {
@@ -52,13 +50,13 @@ export interface JSONFilterOptions extends Partial<Omit<JSONFilterStatus, "rootT
 	 * @default false
 	 */
 	strictKeys?: boolean;
-	/** @alias entriesCountMaximum */entriesCountMax?: JSONFilterStatus["entriesCountMaximum"];
-	/** @alias entriesCountMaximum */maxEntries?: JSONFilterStatus["entriesCountMaximum"];
-	/** @alias entriesCountMaximum */maximumEntries?: JSONFilterStatus["entriesCountMaximum"];
-	/** @alias entriesCountMinimum */entriesCountMin?: JSONFilterStatus["entriesCountMinimum"];
-	/** @alias entriesCountMinimum */minEntries?: JSONFilterStatus["entriesCountMinimum"];
-	/** @alias entriesCountMinimum */minimumEntries?: JSONFilterStatus["entriesCountMinimum"];
-	/** @alias strictKeys */keysStrict?: JSONFilterOptions["strictKeys"];
+	/** @alias entriesCountMaximum */entriesCountMax?: this["entriesCountMaximum"];
+	/** @alias entriesCountMaximum */maxEntries?: this["entriesCountMaximum"];
+	/** @alias entriesCountMaximum */maximumEntries?: this["entriesCountMaximum"];
+	/** @alias entriesCountMinimum */entriesCountMin?: this["entriesCountMinimum"];
+	/** @alias entriesCountMinimum */minEntries?: this["entriesCountMinimum"];
+	/** @alias entriesCountMinimum */minimumEntries?: this["entriesCountMinimum"];
+	/** @alias strictKeys */keysStrict?: this["strictKeys"];
 }
 /**
  * @access private
@@ -67,23 +65,35 @@ export interface JSONFilterOptions extends Partial<Omit<JSONFilterStatus, "rootT
  * @returns {boolean}
  */
 function isJSONValue(item: unknown, keysPattern?: RegExp): boolean {
-	return (
+	if (
+		typeof item === "bigint" ||
+		typeof item === "function" ||
+		typeof item === "symbol" ||
+		typeof item === "undefined"
+	) {
+		return false;
+	}
+	if (
 		typeof item === "boolean" ||
-		isJSONInternal(item, keysPattern) ||
-		item === null ||
-		(typeof item === "number" && !Number.isNaN(item)) ||
-		typeof item === "string"
-	);
+		typeof item === "string" ||
+		item === null
+	) {
+		return true;
+	}
+	if (typeof item === "number") {
+		return !Number.isNaN(item);
+	}
+	return isJSONObject(item, keysPattern);
 }
 /**
  * @access private
- * @param {unknown} item Item that need to determine.
+ * @param {object} item Item that need to determine.
  * @param {RegExp} [keysPattern] Whether a pattern matchable JSON keys.
  * @returns {boolean}
  */
-function isJSONInternal(item: unknown, keysPattern?: RegExp): boolean {
-	if (jsonArrayFilter.test(item)) {
-		for (let itemElement of (item as unknown[])) {
+function isJSONObject(item: object, keysPattern?: RegExp): boolean {
+	if (Array.isArray(item)) {
+		for (let itemElement of item) {
 			if (!isJSONValue(itemElement, keysPattern)) {
 				return false;
 			}
@@ -96,12 +106,10 @@ function isJSONInternal(item: unknown, keysPattern?: RegExp): boolean {
 		} catch {
 			return false;
 		}
-		//@ts-ignore False positive.
-		for (let itemKey of Object.keys(item)) {
+		for (let [key, value] of Object.entries(item)) {
 			if (
-				(keysPattern instanceof RegExp && !keysPattern.test(itemKey)) ||
-				//@ts-ignore False positive.
-				!isJSONValue(item[itemKey], keysPattern)
+				(keysPattern instanceof RegExp && !keysPattern.test(key)) ||
+				!isJSONValue(value, keysPattern)
 			) {
 				return false;
 			}
@@ -132,9 +140,9 @@ export class JSONFilter {
 			options.entriesCountMinimum ??= options.entriesCountMin ?? options.minimumEntries ?? options.minEntries;
 			options.strictKeys ??= options.keysStrict ?? false;
 			for (let option of ["entriesCountMaximum", "entriesCountMinimum", "keysPattern", "rootType", "strictKeys", "allowEmpty", "entriesCount", "strict"]) {
-				//@ts-ignore False positive.
+				//@ts-ignore Handle by it's method.
 				if (typeof options[option] !== "undefined") {
-					//@ts-ignore False positive.
+					//@ts-ignore Handle by it's method.
 					this[option](options[option]);
 				}
 			}
@@ -161,7 +169,7 @@ export class JSONFilter {
 	 */
 	allowEmpty(value = true): this {
 		if (typeof value !== "boolean") {
-			throw new TypeError(`Filter argument \`allowEmpty\` must be type of boolean!`);
+			throw new TypeError(`Filter status \`allowEmpty\` must be type of boolean!`);
 		}
 		this.#status.entriesCountMinimum = value ? 0 : 1;
 		return this;
@@ -173,10 +181,10 @@ export class JSONFilter {
 	 */
 	entriesCount(value: number): this {
 		if (!(typeof value === "number" && !Number.isNaN(value))) {
-			throw new TypeError(`Filter argument \`entriesCount\` must be type of number!`);
+			throw new TypeError(`Filter status \`entriesCount\` must be type of number!`);
 		}
 		if (!(Number.isSafeInteger(value) && value >= 0)) {
-			throw new RangeError(`Filter argument \`entriesCount\` must be a number which is integer, positive, and safe!`);
+			throw new RangeError(`Filter status \`entriesCount\` must be a number which is integer, positive, and safe!`);
 		}
 		this.#status.entriesCountMaximum = value;
 		this.#status.entriesCountMinimum = value;
@@ -189,10 +197,10 @@ export class JSONFilter {
 	 */
 	entriesCountMaximum(value: number): this {
 		if (!(typeof value === "number" && !Number.isNaN(value))) {
-			throw new TypeError(`Filter argument \`entriesCountMaximum\` must be type of number!`);
+			throw new TypeError(`Filter status \`entriesCountMaximum\` must be type of number!`);
 		}
 		if (value !== Infinity && !(Number.isSafeInteger(value) && value >= 0 && value >= this.#status.entriesCountMinimum)) {
-			throw new RangeError(`Filter argument \`entriesCountMaximum\` must be \`Infinity\`, or a number which is integer, positive, safe, and >= ${this.#status.entriesCountMinimum}!`);
+			throw new RangeError(`Filter status \`entriesCountMaximum\` must be \`Infinity\`, or a number which is integer, positive, safe, and >= ${this.#status.entriesCountMinimum}!`);
 		}
 		this.#status.entriesCountMaximum = value;
 		return this;
@@ -204,10 +212,10 @@ export class JSONFilter {
 	 */
 	entriesCountMinimum(value: number): this {
 		if (!(typeof value === "number" && !Number.isNaN(value))) {
-			throw new TypeError(`Filter argument \`entriesCountMinimum\` must be type of number!`);
+			throw new TypeError(`Filter status \`entriesCountMinimum\` must be type of number!`);
 		}
 		if (!(Number.isSafeInteger(value) && value >= 0 && value <= this.#status.entriesCountMaximum)) {
-			throw new RangeError(`Filter argument \`entriesCountMinimum\` must be a number which is integer, positive, safe, and <= ${this.#status.entriesCountMaximum}!`);
+			throw new RangeError(`Filter status \`entriesCountMinimum\` must be a number which is integer, positive, safe, and <= ${this.#status.entriesCountMaximum}!`);
 		}
 		this.#status.entriesCountMinimum = value;
 		return this;
@@ -219,7 +227,7 @@ export class JSONFilter {
 	 */
 	keysPattern(value?: RegExp | undefined): this {
 		if (!(value instanceof RegExp) && typeof value !== "undefined") {
-			throw new TypeError(`Filter argument \`keysPattern\` must be instance of regular expression, or type of undefined!`);
+			throw new TypeError(`Filter status \`keysPattern\` must be instance of regular expression, or type of undefined!`);
 		}
 		this.#status.keysPattern = value;
 		return this;
@@ -230,7 +238,7 @@ export class JSONFilter {
 	 * @returns {this}
 	 */
 	rootType(value: JSONRootTypeEnumKeysType): this {
-		this.#status.rootType = enumResolver<JSONRootTypeEnumKeysType, JSONRootTypeEnumValuesType>(JSONRootTypeEnum, value, "rootType");
+		this.#status.rootType = enumResolver<JSONRootTypeEnumKeysType, JSONRootTypeEnumValuesType>(JSONRootTypeEnum, value, "Filter status `rootType`");
 		return this;
 	}
 	/**
@@ -240,7 +248,7 @@ export class JSONFilter {
 	 */
 	strict(value = true): this {
 		if (typeof value !== "boolean") {
-			throw new TypeError(`Filter argument \`strict\` must be type of boolean!`);
+			throw new TypeError(`Filter status \`strict\` must be type of boolean!`);
 		}
 		if (value) {
 			this.#status.keysPattern = jsonLegalKeysPatternRegExp;
@@ -258,7 +266,7 @@ export class JSONFilter {
 	 */
 	strictKeys(value = true): this {
 		if (typeof value !== "boolean") {
-			throw new TypeError(`Filter argument \`strictKeys\` must be type of boolean!`);
+			throw new TypeError(`Filter status \`strictKeys\` must be type of boolean!`);
 		}
 		this.#status.keysPattern = value ? jsonLegalKeysPatternRegExp : undefined;
 		return this;
@@ -276,12 +284,20 @@ export class JSONFilter {
 	 * @returns {boolean} Determine result.
 	 */
 	test(item: unknown): boolean {
-		//@ts-ignore False positive.
-		let itemEntriesCount: number = Object.entries(item).length;
+		let itemType = typeof item;
 		if (
-			!isJSONInternal(item, this.#status.keysPattern) ||
+			!isJSONValue(item, this.#status.keysPattern) ||
 			(this.#status.rootType === "array" && !Array.isArray(item)) ||
-			(this.#status.rootType === "object" && Array.isArray(item)) ||
+			(this.#status.rootType === "literal" && itemType === "object" && item !== null) ||
+			(this.#status.rootType === "object" && (
+				item === null ||
+				itemType === "object" && Array.isArray(item)
+			))
+		) {
+			return false;
+		}
+		let itemEntriesCount: number = Object.entries(item as object).length;
+		if (
 			this.#status.entriesCountMaximum < itemEntriesCount ||
 			itemEntriesCount < this.#status.entriesCountMinimum
 		) {
@@ -298,7 +314,7 @@ export class JSONFilter {
 		if (typeof item !== "string") {
 			return false;
 		}
-		let itemParse: object;
+		let itemParse: unknown;
 		try {
 			itemParse = JSON.parse(item);
 		} catch {

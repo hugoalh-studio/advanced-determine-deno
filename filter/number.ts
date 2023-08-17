@@ -89,14 +89,14 @@ export interface NumberFilterOptions extends Partial<Omit<NumberFilterStatus, "f
 	 * @default "any"
 	 */
 	sign?: MathematicsSignEnumKeysType;
-	/** @alias maximum */max?: NumberFilterStatus["maximum"];
-	/** @alias maximumExclusive */exclusiveMax?: NumberFilterStatus["maximumExclusive"];
-	/** @alias maximumExclusive */exclusiveMaximum?: NumberFilterStatus["maximumExclusive"];
-	/** @alias maximumExclusive */maxExclusive?: NumberFilterStatus["maximumExclusive"];
-	/** @alias minimum */min?: NumberFilterStatus["minimum"];
-	/** @alias minimumExclusive */exclusiveMin?: NumberFilterStatus["minimumExclusive"];
-	/** @alias minimumExclusive */exclusiveMinimum?: NumberFilterStatus["minimumExclusive"];
-	/** @alias minimumExclusive */minExclusive?: NumberFilterStatus["minimumExclusive"];
+	/** @alias maximum */max?: this["maximum"];
+	/** @alias maximumExclusive */exclusiveMax?: this["maximumExclusive"];
+	/** @alias maximumExclusive */exclusiveMaximum?: this["maximumExclusive"];
+	/** @alias maximumExclusive */maxExclusive?: this["maximumExclusive"];
+	/** @alias minimum */min?: this["minimum"];
+	/** @alias minimumExclusive */exclusiveMin?: this["minimumExclusive"];
+	/** @alias minimumExclusive */exclusiveMinimum?: this["minimumExclusive"];
+	/** @alias minimumExclusive */minExclusive?: this["minimumExclusive"];
 }
 /**
  * Filter for number.
@@ -127,9 +127,9 @@ export class NumberFilter {
 			options.minimum ??= options.min;
 			options.minimumExclusive ??= options.minExclusive ?? options.exclusiveMinimum ?? options.exclusiveMin;
 			for (let option of ["finiteness", "ieee754", "maximum", "maximumExclusive", "minimum", "minimumExclusive", "numericType", "parity", "primality", "sign", "integralNumericType"]) {
-				//@ts-ignore False positive.
+				//@ts-ignore Handle by it's method.
 				if (typeof options[option] !== "undefined") {
-					//@ts-ignore False positive.
+					//@ts-ignore Handle by it's method.
 					this[option](options[option]);
 				}
 			}
@@ -155,7 +155,7 @@ export class NumberFilter {
 	 * @returns {this}
 	 */
 	finiteness(value: MathematicsFinitenessEnumKeysType): this {
-		this.#status.finiteness = enumResolver<MathematicsFinitenessEnumKeysType, MathematicsFinitenessEnumValuesType>(MathematicsFinitenessEnum, value, "finiteness");
+		this.#status.finiteness = enumResolver<MathematicsFinitenessEnumKeysType, MathematicsFinitenessEnumValuesType>(MathematicsFinitenessEnum, value, "Filter status `finiteness`");
 		return this;
 	}
 	/**
@@ -164,7 +164,7 @@ export class NumberFilter {
 	 * @returns {this}
 	 */
 	ieee754(value: IEEE754EnumKeysType): this {
-		this.#status.ieee754 = enumResolver<IEEE754EnumKeysType, IEEE754EnumValuesType>(IEEE754Enum, value, "ieee754");
+		this.#status.ieee754 = enumResolver<IEEE754EnumKeysType, IEEE754EnumValuesType>(IEEE754Enum, value, "Filter status `ieee754`");
 		return this;
 	}
 	/**
@@ -188,10 +188,10 @@ export class NumberFilter {
 	maximum(value?: number | undefined): this {
 		if (typeof value === "number" && !Number.isNaN(value)) {
 			if (typeof this.#status.minimum === "number" && !(this.#status.minimum <= value)) {
-				throw new RangeError(`Filter argument \`maximum\` must be a number which is >= ${this.#status.minimum}!`);
+				throw new RangeError(`Filter status \`maximum\` must be a number which is >= ${this.#status.minimum}!`);
 			}
 		} else if (typeof value !== "undefined") {
-			throw new TypeError(`Filter argument \`maximum\` must be type of number or undefined!`);
+			throw new TypeError(`Filter status \`maximum\` must be type of number or undefined!`);
 		}
 		this.#status.maximum = value;
 		return this;
@@ -203,7 +203,7 @@ export class NumberFilter {
 	 */
 	maximumExclusive(value = true): this {
 		if (typeof value !== "boolean") {
-			throw new TypeError(`Filter argument \`maximumExclusive\` must be type of boolean!`);
+			throw new TypeError(`Filter status \`maximumExclusive\` must be type of boolean!`);
 		}
 		this.#status.maximumExclusive = value;
 		return this;
@@ -216,10 +216,10 @@ export class NumberFilter {
 	minimum(value?: number | undefined): this {
 		if (typeof value === "number" && !Number.isNaN(value)) {
 			if (typeof this.#status.maximum === "number" && !(value <= this.#status.maximum)) {
-				throw new RangeError(`Filter argument \`minimum\` must be a number which is <= ${this.#status.maximum}!`);
+				throw new RangeError(`Filter status \`minimum\` must be a number which is <= ${this.#status.maximum}!`);
 			}
 		} else if (typeof value !== "undefined") {
-			throw new TypeError(`Filter argument \`minimum\` must be type of number or undefined!`);
+			throw new TypeError(`Filter status \`minimum\` must be type of number or undefined!`);
 		}
 		this.#status.minimum = value;
 		return this;
@@ -231,7 +231,7 @@ export class NumberFilter {
 	 */
 	minimumExclusive(value = true): this {
 		if (typeof value !== "boolean") {
-			throw new TypeError(`Filter argument \`minimumExclusive\` must be type of boolean!`);
+			throw new TypeError(`Filter status \`minimumExclusive\` must be type of boolean!`);
 		}
 		this.#status.minimumExclusive = value;
 		return this;
@@ -242,7 +242,7 @@ export class NumberFilter {
 	 * @returns {this}
 	 */
 	numericType(value: NumericTypeEnumKeysType): this {
-		this.#status.numericType = enumResolver<NumericTypeEnumKeysType, NumericTypeEnumValuesType>(NumericTypeEnum, value, "numericType");
+		this.#status.numericType = enumResolver<NumericTypeEnumKeysType, NumericTypeEnumValuesType>(NumericTypeEnum, value, "Filter status `numericType`");
 		return this;
 	}
 	/**
@@ -251,7 +251,7 @@ export class NumberFilter {
 	 * @returns {this}
 	 */
 	parity(value: MathematicsParityEnumKeysType): this {
-		this.#status.parity = enumResolver<MathematicsParityEnumKeysType, MathematicsParityEnumValuesType>(MathematicsParityEnum, value, "parity");
+		this.#status.parity = enumResolver<MathematicsParityEnumKeysType, MathematicsParityEnumValuesType>(MathematicsParityEnum, value, "Filter status `parity`");
 		return this;
 	}
 	/**
@@ -260,7 +260,7 @@ export class NumberFilter {
 	 * @returns {this}
 	 */
 	primality(value: MathematicsPrimalityEnumKeysType): this {
-		this.#status.primality = enumResolver<MathematicsPrimalityEnumKeysType, MathematicsPrimalityEnumValuesType>(MathematicsPrimalityEnum, value, "primality");
+		this.#status.primality = enumResolver<MathematicsPrimalityEnumKeysType, MathematicsPrimalityEnumValuesType>(MathematicsPrimalityEnum, value, "Filter status `primality`");
 		return this;
 	}
 	/**
@@ -269,7 +269,7 @@ export class NumberFilter {
 	 * @returns {this}
 	 */
 	sign(value: MathematicsSignEnumKeysType): this {
-		this.#status.sign = enumResolver<MathematicsSignEnumKeysType, MathematicsSignEnumValuesType>(MathematicsSignEnum, value, "sign");
+		this.#status.sign = enumResolver<MathematicsSignEnumKeysType, MathematicsSignEnumValuesType>(MathematicsSignEnum, value, "Filter status `sign`");
 		return this;
 	}
 	/** @alias maximum */max = this.maximum;

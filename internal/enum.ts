@@ -11,7 +11,7 @@ export function enumResolver<I, O>(enumObject: Readonly<Record<string, string>>,
 	if (typeof input !== "string") {
 		throw new TypeError(`${parameterDescription.slice(0, 1).toUpperCase()}${parameterDescription.slice(1)} must be type of string!`);
 	}
-	for (let [enumObjectKey, enumObjectValue] of Object.entries(enumObject)) {
+	for (const [enumObjectKey, enumObjectValue] of Object.entries(enumObject)) {
 		if (
 			input === enumObjectKey ||
 			input === `${enumObjectKey.slice(0, 1).toLowerCase()}${enumObjectKey.slice(1)}` ||

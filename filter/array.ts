@@ -69,7 +69,7 @@ export class ArrayFilter {
 			options.length ??= options.elements;
 			options.lengthMaximum ??= options.lengthMax ?? options.elementsMaximum ?? options.elementsMax ?? options.maximumLength ?? options.maxLength ?? options.maximumElements ?? options.maxElements;
 			options.lengthMinimum ??= options.lengthMin ?? options.elementsMinimum ?? options.elementsMin ?? options.minimumLength ?? options.minLength ?? options.minimumElements ?? options.minElements;
-			for (let option of ["lengthMaximum", "lengthMinimum", "strict", "unique", "allowEmpty", "length"]) {
+			for (const option of ["lengthMaximum", "lengthMinimum", "strict", "unique", "allowEmpty", "length"]) {
 				//@ts-ignore Handle by it's method.
 				if (typeof options[option] !== "undefined") {
 					//@ts-ignore Handle by it's method.

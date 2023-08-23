@@ -101,7 +101,7 @@ export class RegExpFilter {
 			options.exactly ??= options.exact;
 			options.ignoreCase ??= options.caseInsensitive;
 			options.multipleLine ??= options.multiLine ?? options.multiline;
-			for (let option of ["dotAll", "exactly", "global", "ignoreCase", "multipleLine", "sticky", "unicode"]) {
+			for (const option of ["dotAll", "exactly", "global", "ignoreCase", "multipleLine", "sticky", "unicode"]) {
 				//@ts-ignore Handle by it's method.
 				if (typeof options[option] !== "undefined") {
 					//@ts-ignore Handle by it's method.

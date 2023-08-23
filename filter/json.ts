@@ -93,7 +93,7 @@ function isJSONValue(item: unknown, keysPattern?: RegExp): boolean {
  */
 function isJSONObject(item: object, keysPattern?: RegExp): boolean {
 	if (Array.isArray(item)) {
-		for (let itemElement of item) {
+		for (const itemElement of item) {
 			if (!isJSONValue(itemElement, keysPattern)) {
 				return false;
 			}
@@ -106,7 +106,7 @@ function isJSONObject(item: object, keysPattern?: RegExp): boolean {
 		} catch {
 			return false;
 		}
-		for (let [key, value] of Object.entries(item)) {
+		for (const [key, value] of Object.entries(item)) {
 			if (
 				(keysPattern instanceof RegExp && !keysPattern.test(key)) ||
 				!isJSONValue(value, keysPattern)
@@ -139,7 +139,7 @@ export class JSONFilter {
 			options.entriesCountMaximum ??= options.entriesCountMax ?? options.maximumEntries ?? options.maxEntries;
 			options.entriesCountMinimum ??= options.entriesCountMin ?? options.minimumEntries ?? options.minEntries;
 			options.strictKeys ??= options.keysStrict ?? false;
-			for (let option of ["entriesCountMaximum", "entriesCountMinimum", "keysPattern", "rootType", "strictKeys", "allowEmpty", "entriesCount", "strict"]) {
+			for (const option of ["entriesCountMaximum", "entriesCountMinimum", "keysPattern", "rootType", "strictKeys", "allowEmpty", "entriesCount", "strict"]) {
 				//@ts-ignore Handle by it's method.
 				if (typeof options[option] !== "undefined") {
 					//@ts-ignore Handle by it's method.
@@ -284,7 +284,7 @@ export class JSONFilter {
 	 * @returns {boolean} Determine result.
 	 */
 	test(item: unknown): boolean {
-		let itemType = typeof item;
+		const itemType = typeof item;
 		if (
 			!isJSONValue(item, this.#status.keysPattern) ||
 			(this.#status.rootType === "array" && !Array.isArray(item)) ||
@@ -296,7 +296,7 @@ export class JSONFilter {
 		) {
 			return false;
 		}
-		let itemEntriesCount: number = Object.entries(item as object).length;
+		const itemEntriesCount: number = Object.entries(item as object).length;
 		if (
 			this.#status.entriesCountMaximum < itemEntriesCount ||
 			itemEntriesCount < this.#status.entriesCountMinimum

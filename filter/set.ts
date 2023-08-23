@@ -46,7 +46,7 @@ export class SetFilter {
 		} else if (typeof options !== "undefined") {
 			options.sizeMaximum ??= options.sizeMax ?? options.maximumSize ?? options.maxSize;
 			options.sizeMinimum ??= options.sizeMin ?? options.minimumSize ?? options.minSize;
-			for (let option of ["sizeMaximum", "sizeMinimum", "allowEmpty", "size"]) {
+			for (const option of ["sizeMaximum", "sizeMinimum", "allowEmpty", "size"]) {
 				//@ts-ignore Handle by it's method.
 				if (typeof options[option] !== "undefined") {
 					//@ts-ignore Handle by it's method.

@@ -7,6 +7,9 @@ import { types } from "node:util";
 export function isAsyncFunction(item: unknown): item is (...parameters: unknown[]) => Promise<unknown> {
 	return (types.isAsyncFunction(item) && !types.isGeneratorFunction(item) && Object.prototype.toString.call(item) === "[object AsyncFunction]");
 }
+export {
+	isAsyncFunction as isAsynchronousFunction
+};
 /**
  * Determine whether the item is an asynchronous generator function. This only reports back what the JavaScript engine is seeing; In particular, the return value may not match the original source code if a transpilation tool was used.
  * @param {unknown} item Item that need to determine.
@@ -15,6 +18,9 @@ export function isAsyncFunction(item: unknown): item is (...parameters: unknown[
 export function isAsyncGeneratorFunction(item: unknown): item is AsyncGeneratorFunction {
 	return (types.isAsyncFunction(item) && types.isGeneratorFunction(item) && Object.prototype.toString.call(item) === "[object AsyncGeneratorFunction]");
 }
+export {
+	isAsyncGeneratorFunction as isAsynchronousGeneratorFunction,
+};
 /**
  * Determine whether the item is a synchronous function. This only reports back what the JavaScript engine is seeing; In particular, the return value may not match the original source code if a transpilation tool was used.
  * @param {unknown} item Item that need to determine.
@@ -23,6 +29,9 @@ export function isAsyncGeneratorFunction(item: unknown): item is AsyncGeneratorF
 export function isSyncFunction(item: unknown): item is (...parameters: unknown[]) => Exclude<unknown, Promise<unknown>> {
 	return (typeof item === "function" && !types.isAsyncFunction(item) && !types.isGeneratorFunction(item) && Object.prototype.toString.call(item) === "[object Function]");
 }
+export {
+	isSyncFunction as isSynchronousFunction
+};
 /**
  * Determine whether the item is a synchronous generator function. This only reports back what the JavaScript engine is seeing; In particular, the return value may not match the original source code if a transpilation tool was used.
  * @param {unknown} item Item that need to determine.
@@ -32,8 +41,5 @@ export function isSyncGeneratorFunction(item: unknown): item is GeneratorFunctio
 	return (!types.isAsyncFunction(item) && types.isGeneratorFunction(item) && Object.prototype.toString.call(item) === "[object GeneratorFunction]");
 }
 export {
-	isAsyncFunction as isAsynchronousFunction,
-	isAsyncGeneratorFunction as isAsynchronousGeneratorFunction,
-	isSyncFunction as isSynchronousFunction,
 	isSyncGeneratorFunction as isSynchronousGeneratorFunction
 };

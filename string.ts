@@ -1,4 +1,5 @@
 const newLineRegExp = /[\n\r]/u;
+//deno-lint-ignore no-control-regex
 const nonASCIIRegExp = /[^\u0000-\u007F]/u;
 /**
  * Determine whether the string is ASCII.

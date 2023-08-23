@@ -126,7 +126,7 @@ export class NumberFilter {
 			options.maximumExclusive ??= options.maxExclusive ?? options.exclusiveMaximum ?? options.exclusiveMax;
 			options.minimum ??= options.min;
 			options.minimumExclusive ??= options.minExclusive ?? options.exclusiveMinimum ?? options.exclusiveMin;
-			for (let option of ["finiteness", "ieee754", "maximum", "maximumExclusive", "minimum", "minimumExclusive", "numericType", "parity", "primality", "sign", "integralNumericType"]) {
+			for (const option of ["finiteness", "ieee754", "maximum", "maximumExclusive", "minimum", "minimumExclusive", "numericType", "parity", "primality", "sign", "integralNumericType"]) {
 				//@ts-ignore Handle by it's method.
 				if (typeof options[option] !== "undefined") {
 					//@ts-ignore Handle by it's method.
@@ -173,9 +173,9 @@ export class NumberFilter {
 	 * @returns {this}
 	 */
 	integralNumericType(value: IntegralNumericTypeEnumKeysType): this {
-		let [intrMin, intrMax] = integralNumericTypeRange(value);
-		this.#status.maximum = Number(intrMax);
-		this.#status.minimum = Number(intrMin);
+		const [intrMinimum, intrMaximum] = integralNumericTypeRange(value);
+		this.#status.maximum = Number(intrMaximum);
+		this.#status.minimum = Number(intrMinimum);
 		this.#status.maximumExclusive = false;
 		this.#status.minimumExclusive = false;
 		return this;

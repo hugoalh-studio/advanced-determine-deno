@@ -103,7 +103,7 @@ export class StringFilter {
 			options.length ??= options.characters;
 			options.lengthMaximum ??= options.lengthMax ?? options.charactersMaximum ?? options.charactersMax ?? options.maximumLength ?? options.maxLength ?? options.maximumCharacters ?? options.maxCharacters;
 			options.lengthMinimum ??= options.lengthMin ?? options.charactersMinimum ?? options.charactersMin ?? options.minimumLength ?? options.minLength ?? options.minimumCharacters ?? options.minCharacters;
-			for (let option of ["ascii", "case", "lengthMaximum", "lengthMinimum", "line", "pattern", "preTrim", "allowEmpty", "length"]) {
+			for (const option of ["ascii", "case", "lengthMaximum", "lengthMinimum", "line", "pattern", "preTrim", "allowEmpty", "length"]) {
 				//@ts-ignore Handle by it's method.
 				if (typeof options[option] !== "undefined") {
 					//@ts-ignore Handle by it's method.
@@ -289,7 +289,7 @@ export class StringFilter {
 		if (typeof item !== "string") {
 			return false;
 		}
-		let itemRaw: string = this.#status.preTrim ? item.trim() : item;
+		const itemRaw: string = this.#status.preTrim ? item.trim() : item;
 		if (
 			(this.#status.ascii === "false" && isStringASCII(itemRaw)) ||
 			(this.#status.ascii === "true" && !isStringASCII(itemRaw)) ||

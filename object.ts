@@ -12,7 +12,7 @@ export function isObjectPlain(item: object): boolean {
 	) {
 		return false;
 	}
-	let itemPrototype: unknown = Object.getPrototypeOf(item);
+	const itemPrototype: unknown = Object.getPrototypeOf(item);
 	if (itemPrototype !== null && itemPrototype !== Object.prototype) {
 		return false;
 	}
@@ -23,7 +23,7 @@ export function isObjectPlain(item: object): boolean {
 	if (itemPrototype !== itemShadow) {
 		return false;
 	}
-	let itemObjectMeta: ObjectMeta = new ObjectMeta(item);
+	const itemObjectMeta: ObjectMeta = new ObjectMeta(item);
 	if (
 		Object.entries(item).length !== itemObjectMeta.entriesEnumerable.length ||
 		itemObjectMeta.entriesConfigurable.length + itemObjectMeta.entriesNonConfigurable.length !== itemObjectMeta.entriesEnumerable.length + itemObjectMeta.entriesNonEnumerable.length ||

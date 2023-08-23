@@ -1,4 +1,4 @@
-import uniqueArray from "https://deno.land/x/unique_array@v1.0.7/mod.ts";
+import uniqueArray from "https://deno.land/x/unique_array@v1.0.8/mod.ts";
 const arrayIndexRegExp = /^(?:0|[1-9]\d*)$/u;
 /**
  * Determine whether the array is not contain custom defined properties.
@@ -6,18 +6,18 @@ const arrayIndexRegExp = /^(?:0|[1-9]\d*)$/u;
  * @returns {boolean} Determine result.
  */
 export function isArrayStrict(item: unknown[]): boolean {
-	let itemPrototype: unknown = Object.getPrototypeOf(item);
+	const itemPrototype: unknown = Object.getPrototypeOf(item);
 	if (
 		(itemPrototype !== null && itemPrototype !== Array.prototype) ||
 		Object.getOwnPropertySymbols(item).length > 0
 	) {
 		return false;
 	}
-	let itemDescriptors = Object.getOwnPropertyDescriptors(item);
-	for (let itemPropertyKey in itemDescriptors) {
-		if (Object.prototype.hasOwnProperty.call(itemDescriptors, itemPropertyKey)) {
+	const itemDescriptors = Object.getOwnPropertyDescriptors(item);
+	for (const itemPropertyKey in itemDescriptors) {
+		if (Object.hasOwn(itemDescriptors, itemPropertyKey)) {
 			if (arrayIndexRegExp.test(itemPropertyKey) && Number(itemPropertyKey) < 4294967296) {
-				let itemPropertyDescriptor: PropertyDescriptor = itemDescriptors[itemPropertyKey];
+				const itemPropertyDescriptor: PropertyDescriptor = itemDescriptors[itemPropertyKey];
 				if (
 					!itemPropertyDescriptor.configurable ||
 					!itemPropertyDescriptor.enumerable ||
@@ -28,7 +28,7 @@ export function isArrayStrict(item: unknown[]): boolean {
 					return false;
 				}
 			} else if (itemPropertyKey === "length") {
-				let itemPropertyDescriptor: PropertyDescriptor = itemDescriptors[itemPropertyKey] as PropertyDescriptor;
+				const itemPropertyDescriptor: PropertyDescriptor = itemDescriptors[itemPropertyKey] as PropertyDescriptor;
 				if (
 					itemPropertyDescriptor.configurable ||
 					itemPropertyDescriptor.enumerable ||

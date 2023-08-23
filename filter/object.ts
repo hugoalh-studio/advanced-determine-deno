@@ -151,7 +151,7 @@ export class ObjectFilter {
 			options.entriesSetter ??= options.setterEntries;
 			options.entriesWritable ??= options.writableEntries;
 			options.keysSymbol ??= options.symbolKeys;
-			for (let option of ["allowArray", "allowNull", "allowRegExp", "entriesConfigurable", "entriesCountMaximum", "entriesCountMinimum", "entriesEnumerable", "entriesGetter", "entriesSetter", "entriesWritable", "keysSymbol", "allowEmpty", "entriesCount", "plain"]) {
+			for (const option of ["allowArray", "allowNull", "allowRegExp", "entriesConfigurable", "entriesCountMaximum", "entriesCountMinimum", "entriesEnumerable", "entriesGetter", "entriesSetter", "entriesWritable", "keysSymbol", "allowEmpty", "entriesCount", "plain"]) {
 				//@ts-ignore Handle by it's method.
 				if (typeof options[option] !== "undefined") {
 					//@ts-ignore Handle by it's method.
@@ -378,7 +378,7 @@ export class ObjectFilter {
 		if (this.#status.allowNull && item === null) {
 			return true;
 		}
-		let itemObjectMeta: ObjectMeta = new ObjectMeta(item as object);
+		const itemObjectMeta: ObjectMeta = new ObjectMeta(item as object);
 		if (
 			
 			Object.entries(item as object).length !== itemObjectMeta.entriesEnumerable.length ||

@@ -36,6 +36,10 @@ export interface RegExpFilterStatus {
 	 */
 	unicode: ThreePhaseConditionEnumValuesType;
 }
+export {
+	type RegExpFilterStatus as RegExFilterStatus,
+	type RegExpFilterStatus as RegularExpressionFilterStatus
+};
 export interface RegExpFilterOptions extends Partial<Omit<RegExpFilterStatus, "dotAll" | "exactly" | "global" | "ignoreCase" | "multipleLine" | "sticky" | "unicode">> {
 	/**
 	 * Whether a dot-all `RegExp`.
@@ -77,6 +81,10 @@ export interface RegExpFilterOptions extends Partial<Omit<RegExpFilterStatus, "d
 	/** @alias multipleLine */multiline?: this["multipleLine"];
 	/** @alias multipleLine */multiLine?: this["multipleLine"];
 }
+export {
+	type RegExpFilterOptions as RegExFilterOptions,
+	type RegExpFilterOptions as RegularExpressionFilterOptions
+};
 /**
  * Filter for `RegExp`.
  */
@@ -231,6 +239,10 @@ export class RegExpFilter {
 		return new this(options).test(item);
 	}
 }
+export {
+	RegExpFilter as RegExFilter,
+	RegExpFilter as RegularExpressionFilter
+};
 /**
  * Determine item with the `RegExp` filter.
  * @param {unknown} item Item that need to determine.
@@ -242,11 +254,5 @@ export function filterRegExp(item: unknown, options: RegExpFilterOptions = {}): 
 }
 export {
 	filterRegExp as filterRegEx,
-	filterRegExp as filterRegularExpression,
-	RegExpFilter as RegExFilter,
-	RegExpFilter as RegularExpressionFilter,
-	type RegExpFilterOptions as RegExFilterOptions,
-	type RegExpFilterOptions as RegularExpressionFilterOptions,
-	type RegExpFilterStatus as RegExFilterStatus,
-	type RegExpFilterStatus as RegularExpressionFilterStatus
+	filterRegExp as filterRegularExpression
 };

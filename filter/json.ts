@@ -291,7 +291,7 @@ export class JSONFilter {
 			(this.#status.rootType === "literal" && itemType === "object" && item !== null) ||
 			(this.#status.rootType === "object" && (
 				item === null ||
-				itemType === "object" && Array.isArray(item)
+				Array.isArray(item)
 			))
 		) {
 			return false;

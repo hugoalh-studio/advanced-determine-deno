@@ -17,7 +17,7 @@ export function enumResolver<I, O>(enumObject: Readonly<Record<string, string>>,
 			input === `${enumObjectKey.slice(0, 1).toLowerCase()}${enumObjectKey.slice(1)}` ||
 			input === `${enumObjectKey.slice(0, 1).toUpperCase()}${enumObjectKey.slice(1)}`
 		) {
-			return (enumObjectValue as O);
+			return enumObjectValue as O;
 		}
 	}
 	throw new RangeError(`\`${input}\` is not a valid value for ${parameterDescription.slice(0, 1).toLowerCase()}${parameterDescription.slice(1)}! Must be either of these values: "${Array.from(new Set(Object.keys(enumObject).flatMap((value: string): string[] => {

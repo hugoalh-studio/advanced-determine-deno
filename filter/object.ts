@@ -380,7 +380,6 @@ export class ObjectFilter {
 		}
 		const itemObjectMeta: ObjectMeta = new ObjectMeta(item as object);
 		if (
-			
 			Object.entries(item as object).length !== itemObjectMeta.entriesEnumerable.length ||
 			(this.#status.keysSymbol === "false" && itemObjectMeta.keysSymbol.length > 0) ||
 			(this.#status.keysSymbol === "true" && itemObjectMeta.keysSymbol.length === 0) ||

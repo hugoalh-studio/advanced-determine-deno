@@ -19,7 +19,7 @@ export function isAsyncGeneratorFunction(item: unknown): item is AsyncGeneratorF
 	return (types.isAsyncFunction(item) && types.isGeneratorFunction(item) && Object.prototype.toString.call(item) === "[object AsyncGeneratorFunction]");
 }
 export {
-	isAsyncGeneratorFunction as isAsynchronousGeneratorFunction,
+	isAsyncGeneratorFunction as isAsynchronousGeneratorFunction
 };
 /**
  * Determine whether the item is a synchronous function. This only reports back what the JavaScript engine is seeing; In particular, the return value may not match the original source code if a transpilation tool was used.

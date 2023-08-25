@@ -1,4 +1,4 @@
-import uniqueArray from "https://deno.land/x/unique_array@v1.0.8/mod.ts";
+import uniqueArray from "https://deno.land/x/unique_array@v1.0.9/mod.ts";
 const arrayIndexRegExp = /^(?:0|[1-9]\d*)$/u;
 /**
  * Determine whether the array is not contain custom defined properties.

@@ -19,6 +19,7 @@ body:
       description: "What versions are affected? Versions must be listed as supported in the Security Policy (file: `SECURITY.md`)."
       multiple: true
       options:
+        - "v0.1.9"
         - "v0.1.8"
         - "v0.1.7"
         - "v0.1.6"

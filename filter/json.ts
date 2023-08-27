@@ -169,7 +169,7 @@ export class JSONFilter {
 	 */
 	allowEmpty(value = true): this {
 		if (typeof value !== "boolean") {
-			throw new TypeError(`Filter status \`allowEmpty\` must be type of boolean!`);
+			throw new TypeError(`Filter status \`allowEmpty\` must be a boolean!`);
 		}
 		this.#status.entriesCountMinimum = value ? 0 : 1;
 		return this;
@@ -181,7 +181,7 @@ export class JSONFilter {
 	 */
 	entriesCount(value: number): this {
 		if (!(typeof value === "number" && !Number.isNaN(value))) {
-			throw new TypeError(`Filter status \`entriesCount\` must be type of number!`);
+			throw new TypeError(`Filter status \`entriesCount\` must be a number!`);
 		}
 		if (!(Number.isSafeInteger(value) && value >= 0)) {
 			throw new RangeError(`Filter status \`entriesCount\` must be a number which is integer, positive, and safe!`);
@@ -197,7 +197,7 @@ export class JSONFilter {
 	 */
 	entriesCountMaximum(value: number): this {
 		if (!(typeof value === "number" && !Number.isNaN(value))) {
-			throw new TypeError(`Filter status \`entriesCountMaximum\` must be type of number!`);
+			throw new TypeError(`Filter status \`entriesCountMaximum\` must be a number!`);
 		}
 		if (value !== Infinity && !(Number.isSafeInteger(value) && value >= 0 && value >= this.#status.entriesCountMinimum)) {
 			throw new RangeError(`Filter status \`entriesCountMaximum\` must be \`Infinity\`, or a number which is integer, positive, safe, and >= ${this.#status.entriesCountMinimum}!`);
@@ -212,7 +212,7 @@ export class JSONFilter {
 	 */
 	entriesCountMinimum(value: number): this {
 		if (!(typeof value === "number" && !Number.isNaN(value))) {
-			throw new TypeError(`Filter status \`entriesCountMinimum\` must be type of number!`);
+			throw new TypeError(`Filter status \`entriesCountMinimum\` must be a number!`);
 		}
 		if (!(Number.isSafeInteger(value) && value >= 0 && value <= this.#status.entriesCountMaximum)) {
 			throw new RangeError(`Filter status \`entriesCountMinimum\` must be a number which is integer, positive, safe, and <= ${this.#status.entriesCountMaximum}!`);
@@ -227,7 +227,7 @@ export class JSONFilter {
 	 */
 	keysPattern(value?: RegExp | undefined): this {
 		if (!(value instanceof RegExp) && typeof value !== "undefined") {
-			throw new TypeError(`Filter status \`keysPattern\` must be instance of regular expression, or type of undefined!`);
+			throw new TypeError(`Filter status \`keysPattern\` must be a RegExp or undefined!`);
 		}
 		this.#status.keysPattern = value;
 		return this;
@@ -248,7 +248,7 @@ export class JSONFilter {
 	 */
 	strict(value = true): this {
 		if (typeof value !== "boolean") {
-			throw new TypeError(`Filter status \`strict\` must be type of boolean!`);
+			throw new TypeError(`Filter status \`strict\` must be a boolean!`);
 		}
 		if (value) {
 			this.#status.keysPattern = jsonLegalKeysPatternRegExp;
@@ -266,7 +266,7 @@ export class JSONFilter {
 	 */
 	strictKeys(value = true): this {
 		if (typeof value !== "boolean") {
-			throw new TypeError(`Filter status \`strictKeys\` must be type of boolean!`);
+			throw new TypeError(`Filter status \`strictKeys\` must be a boolean!`);
 		}
 		this.#status.keysPattern = value ? jsonLegalKeysPatternRegExp : undefined;
 		return this;

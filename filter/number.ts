@@ -191,7 +191,7 @@ export class NumberFilter {
 				throw new RangeError(`Filter status \`maximum\` must be a number which is >= ${this.#status.minimum}!`);
 			}
 		} else if (typeof value !== "undefined") {
-			throw new TypeError(`Filter status \`maximum\` must be type of number or undefined!`);
+			throw new TypeError(`Filter status \`maximum\` must be a number or undefined!`);
 		}
 		this.#status.maximum = value;
 		return this;
@@ -203,7 +203,7 @@ export class NumberFilter {
 	 */
 	maximumExclusive(value = true): this {
 		if (typeof value !== "boolean") {
-			throw new TypeError(`Filter status \`maximumExclusive\` must be type of boolean!`);
+			throw new TypeError(`Filter status \`maximumExclusive\` must be a boolean!`);
 		}
 		this.#status.maximumExclusive = value;
 		return this;
@@ -219,7 +219,7 @@ export class NumberFilter {
 				throw new RangeError(`Filter status \`minimum\` must be a number which is <= ${this.#status.maximum}!`);
 			}
 		} else if (typeof value !== "undefined") {
-			throw new TypeError(`Filter status \`minimum\` must be type of number or undefined!`);
+			throw new TypeError(`Filter status \`minimum\` must be a number or undefined!`);
 		}
 		this.#status.minimum = value;
 		return this;
@@ -231,7 +231,7 @@ export class NumberFilter {
 	 */
 	minimumExclusive(value = true): this {
 		if (typeof value !== "boolean") {
-			throw new TypeError(`Filter status \`minimumExclusive\` must be type of boolean!`);
+			throw new TypeError(`Filter status \`minimumExclusive\` must be a boolean!`);
 		}
 		this.#status.minimumExclusive = value;
 		return this;

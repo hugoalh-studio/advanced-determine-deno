@@ -9,7 +9,7 @@ export type EnumCase<T extends string> = T | Capitalize<T> | Uncapitalize<T>;
  */
 export function enumResolver<I, O>(enumObject: Readonly<Record<string, string>>, input: I, parameterDescription: string): O {
 	if (typeof input !== "string") {
-		throw new TypeError(`${parameterDescription.slice(0, 1).toUpperCase()}${parameterDescription.slice(1)} must be type of string!`);
+		throw new TypeError(`${parameterDescription.slice(0, 1).toUpperCase()}${parameterDescription.slice(1)} must be a string!`);
 	}
 	for (const [enumObjectKey, enumObjectValue] of Object.entries(enumObject)) {
 		if (

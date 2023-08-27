@@ -181,7 +181,7 @@ export class ObjectFilter {
 	 */
 	allowArray(value = true): this {
 		if (typeof value !== "boolean") {
-			throw new TypeError(`Filter status \`allowArray\` must be type of boolean!`);
+			throw new TypeError(`Filter status \`allowArray\` must be a boolean!`);
 		}
 		this.#status.allowArray = value;
 		return this;
@@ -193,7 +193,7 @@ export class ObjectFilter {
 	 */
 	allowEmpty(value = true): this {
 		if (typeof value !== "boolean") {
-			throw new TypeError(`Filter status \`allowEmpty\` must be type of boolean!`);
+			throw new TypeError(`Filter status \`allowEmpty\` must be a boolean!`);
 		}
 		this.#status.entriesCountMinimum = value ? 0 : 1;
 		return this;
@@ -205,7 +205,7 @@ export class ObjectFilter {
 	 */
 	allowNull(value = true): this {
 		if (typeof value !== "boolean") {
-			throw new TypeError(`Filter status \`allowNull\` must be type of boolean!`);
+			throw new TypeError(`Filter status \`allowNull\` must be a boolean!`);
 		}
 		this.#status.allowNull = value;
 		return this;
@@ -217,7 +217,7 @@ export class ObjectFilter {
 	 */
 	allowRegExp(value = true): this {
 		if (typeof value !== "boolean") {
-			throw new TypeError(`Filter status \`allowRegExp\` must be type of boolean!`);
+			throw new TypeError(`Filter status \`allowRegExp\` must be a boolean!`);
 		}
 		this.#status.allowRegExp = value;
 		return this;
@@ -238,7 +238,7 @@ export class ObjectFilter {
 	 */
 	entriesCount(value: number): this {
 		if (!(typeof value === "number" && !Number.isNaN(value))) {
-			throw new TypeError(`Filter status \`entriesCount\` must be type of number!`);
+			throw new TypeError(`Filter status \`entriesCount\` must be a number!`);
 		}
 		if (!(Number.isSafeInteger(value) && value >= 0)) {
 			throw new RangeError(`Filter status \`entriesCount\` must be a number which is integer, positive, and safe!`);
@@ -254,7 +254,7 @@ export class ObjectFilter {
 	 */
 	entriesCountMaximum(value: number): this {
 		if (!(typeof value === "number" && !Number.isNaN(value))) {
-			throw new TypeError(`Filter status \`entriesCountMaximum\` must be type of number!`);
+			throw new TypeError(`Filter status \`entriesCountMaximum\` must be a number!`);
 		}
 		if (value !== Infinity && !(Number.isSafeInteger(value) && value >= 0 && value >= this.#status.entriesCountMinimum)) {
 			throw new RangeError(`Filter status \`entriesCountMaximum\` must be \`Infinity\`, or a number which is integer, positive, safe, and >= ${this.#status.entriesCountMinimum}!`);
@@ -269,7 +269,7 @@ export class ObjectFilter {
 	 */
 	entriesCountMinimum(value: number): this {
 		if (!(typeof value === "number" && !Number.isNaN(value))) {
-			throw new TypeError(`Filter status \`entriesCountMinimum\` must be type of number!`);
+			throw new TypeError(`Filter status \`entriesCountMinimum\` must be a number!`);
 		}
 		if (!(Number.isSafeInteger(value) && value >= 0 && value <= this.#status.entriesCountMaximum)) {
 			throw new RangeError(`Filter status \`entriesCountMinimum\` must be a number which is integer, positive, safe, and <= ${this.#status.entriesCountMaximum}!`);
@@ -329,7 +329,7 @@ export class ObjectFilter {
 	 */
 	plain(value = true): this {
 		if (typeof value !== "boolean") {
-			throw new TypeError(`Filter status \`plain\` must be type of boolean!`);
+			throw new TypeError(`Filter status \`plain\` must be a boolean!`);
 		}
 		if (value) {
 			this.#status.entriesConfigurable = "true";

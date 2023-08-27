@@ -164,7 +164,7 @@ export class BigIntFilter {
 				throw new RangeError(`Filter status \`maximum\` must be a big integer which is >= ${this.#status.minimum}!`);
 			}
 		} else if (typeof value !== "undefined") {
-			throw new TypeError(`Filter status \`maximum\` must be type of big integer or undefined!`);
+			throw new TypeError(`Filter status \`maximum\` must be a big integer or undefined!`);
 		}
 		this.#status.maximum = value;
 		return this;
@@ -176,7 +176,7 @@ export class BigIntFilter {
 	 */
 	maximumExclusive(value = true): this {
 		if (typeof value !== "boolean") {
-			throw new TypeError(`Filter status \`maximumExclusive\` must be type of boolean!`);
+			throw new TypeError(`Filter status \`maximumExclusive\` must be a boolean!`);
 		}
 		this.#status.maximumExclusive = value;
 		return this;
@@ -192,7 +192,7 @@ export class BigIntFilter {
 				throw new RangeError(`Filter status \`minimum\` must be a big integer which is <= ${this.#status.maximum}!`);
 			}
 		} else if (typeof value !== "undefined") {
-			throw new TypeError(`Filter status \`minimum\` must be type of big integer or undefined!`);
+			throw new TypeError(`Filter status \`minimum\` must be a big integer or undefined!`);
 		}
 		this.#status.minimum = value;
 		return this;
@@ -204,7 +204,7 @@ export class BigIntFilter {
 	 */
 	minimumExclusive(value = true): this {
 		if (typeof value !== "boolean") {
-			throw new TypeError(`Filter status \`minimumExclusive\` must be type of boolean!`);
+			throw new TypeError(`Filter status \`minimumExclusive\` must be a boolean!`);
 		}
 		this.#status.minimumExclusive = value;
 		return this;

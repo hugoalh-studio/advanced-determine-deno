@@ -76,7 +76,7 @@ export class MapFilter {
 	 */
 	allowEmpty(value = true): this {
 		if (typeof value !== "boolean") {
-			throw new TypeError(`Filter status \`allowEmpty\` must be type of boolean!`);
+			throw new TypeError(`Filter status \`allowEmpty\` must be a boolean!`);
 		}
 		this.#status.sizeMinimum = value ? 0 : 1;
 		return this;
@@ -88,7 +88,7 @@ export class MapFilter {
 	 */
 	size(value: number): this {
 		if (!(typeof value === "number" && !Number.isNaN(value))) {
-			throw new TypeError(`Filter status \`size\` must be type of number!`);
+			throw new TypeError(`Filter status \`size\` must be a number!`);
 		}
 		if (!(Number.isSafeInteger(value) && value >= 0)) {
 			throw new RangeError(`Filter status \`size\` must be a number which is integer, positive, and safe!`);
@@ -104,7 +104,7 @@ export class MapFilter {
 	 */
 	sizeMaximum(value: number): this {
 		if (!(typeof value === "number" && !Number.isNaN(value))) {
-			throw new TypeError(`Filter status \`sizeMaximum\` must be type of number!`);
+			throw new TypeError(`Filter status \`sizeMaximum\` must be a number!`);
 		}
 		if (value !== Infinity && !(Number.isSafeInteger(value) && value >= 0 && value >= this.#status.sizeMinimum)) {
 			throw new RangeError(`Filter status \`sizeMaximum\` must be \`Infinity\`, or a number which is integer, positive, safe, and >= ${this.#status.sizeMinimum}!`);
@@ -119,7 +119,7 @@ export class MapFilter {
 	 */
 	sizeMinimum(value: number): this {
 		if (!(typeof value === "number" && !Number.isNaN(value))) {
-			throw new TypeError(`Filter status \`sizeMinimum\` must be type of number!`);
+			throw new TypeError(`Filter status \`sizeMinimum\` must be a number!`);
 		}
 		if (!(Number.isSafeInteger(value) && value >= 0 && value <= this.#status.sizeMaximum)) {
 			throw new RangeError(`Filter status \`sizeMinimum\` must be a number which is integer, positive, safe, and <= ${this.#status.sizeMaximum}!`);

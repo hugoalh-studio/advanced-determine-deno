@@ -133,7 +133,7 @@ export class StringFilter {
 	 */
 	allowEmpty(value = true): this {
 		if (typeof value !== "boolean") {
-			throw new TypeError(`Filter status \`allowEmpty\` must be type of boolean!`);
+			throw new TypeError(`Filter status \`allowEmpty\` must be a boolean!`);
 		}
 		this.#status.lengthMinimum = value ? 0 : 1;
 		return this;
@@ -163,7 +163,7 @@ export class StringFilter {
 	 */
 	length(value: number): this {
 		if (!(typeof value === "number" && !Number.isNaN(value))) {
-			throw new TypeError(`Filter status \`length\` must be type of number!`);
+			throw new TypeError(`Filter status \`length\` must be a number!`);
 		}
 		if (!(Number.isSafeInteger(value) && value >= 0)) {
 			throw new RangeError(`Filter status \`length\` must be a number which is integer, positive, and safe!`);
@@ -179,7 +179,7 @@ export class StringFilter {
 	 */
 	lengthMaximum(value: number): this {
 		if (!(typeof value === "number" && !Number.isNaN(value))) {
-			throw new TypeError(`Filter status \`lengthMaximum\` must be type of number!`);
+			throw new TypeError(`Filter status \`lengthMaximum\` must be a number!`);
 		}
 		if (value !== Infinity && !(Number.isSafeInteger(value) && value >= 0 && value >= this.#status.lengthMinimum)) {
 			throw new RangeError(`Filter status \`lengthMaximum\` must be \`Infinity\`, or a number which is integer, positive, safe, and >= ${this.#status.lengthMinimum}!`);
@@ -194,7 +194,7 @@ export class StringFilter {
 	 */
 	lengthMinimum(value: number): this {
 		if (!(typeof value === "number" && !Number.isNaN(value))) {
-			throw new TypeError(`Filter status \`lengthMinimum\` must be type of number!`);
+			throw new TypeError(`Filter status \`lengthMinimum\` must be a number!`);
 		}
 		if (!(Number.isSafeInteger(value) && value >= 0 && value <= this.#status.lengthMaximum)) {
 			throw new RangeError(`Filter status \`lengthMinimum\` must be a number which is integer, positive, safe, and <= ${this.#status.lengthMaximum}!`);
@@ -218,7 +218,7 @@ export class StringFilter {
 	 */
 	pattern(value?: RegExp | undefined): this {
 		if (!(value instanceof RegExp) && typeof value !== "undefined") {
-			throw new TypeError(`Filter status \`pattern\` must be instance of regular expression, or type of undefined!`);
+			throw new TypeError(`Filter status \`pattern\` must be a RegExp or undefined!`);
 		}
 		this.#status.pattern = value;
 		return this;
@@ -230,7 +230,7 @@ export class StringFilter {
 	 */
 	preTrim(value = true): this {
 		if (typeof value !== "boolean") {
-			throw new TypeError(`Filter status \`preTrim\` must be type of boolean!`);
+			throw new TypeError(`Filter status \`preTrim\` must be a boolean!`);
 		}
 		this.#status.preTrim = value;
 		return this;

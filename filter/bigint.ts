@@ -161,10 +161,10 @@ export class BigIntFilter {
 	maximum(value?: bigint | undefined): this {
 		if (typeof value === "bigint") {
 			if (typeof this.#status.minimum === "bigint" && !(this.#status.minimum <= value)) {
-				throw new RangeError(`Filter status \`maximum\` must be a big integer which is >= ${this.#status.minimum}!`);
+				throw new RangeError(`Filter status \`maximum\` must be a bigint which is >= ${this.#status.minimum}!`);
 			}
 		} else if (typeof value !== "undefined") {
-			throw new TypeError(`Filter status \`maximum\` must be a big integer or undefined!`);
+			throw new TypeError(`Filter status \`maximum\` must be a bigint or undefined!`);
 		}
 		this.#status.maximum = value;
 		return this;
@@ -189,10 +189,10 @@ export class BigIntFilter {
 	minimum(value?: bigint | undefined): this {
 		if (typeof value === "bigint") {
 			if (typeof this.#status.maximum === "bigint" && !(value <= this.#status.maximum)) {
-				throw new RangeError(`Filter status \`minimum\` must be a big integer which is <= ${this.#status.maximum}!`);
+				throw new RangeError(`Filter status \`minimum\` must be a bigint which is <= ${this.#status.maximum}!`);
 			}
 		} else if (typeof value !== "undefined") {
-			throw new TypeError(`Filter status \`minimum\` must be a big integer or undefined!`);
+			throw new TypeError(`Filter status \`minimum\` must be a bigint or undefined!`);
 		}
 		this.#status.minimum = value;
 		return this;

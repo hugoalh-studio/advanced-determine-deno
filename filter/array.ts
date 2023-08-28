@@ -99,7 +99,7 @@ export class ArrayFilter {
 	 */
 	allowEmpty(value = true): this {
 		if (typeof value !== "boolean") {
-			throw new TypeError(`Filter status \`allowEmpty\` must be a boolean!`);
+			throw new TypeError(`Filter status \`allowEmpty\` is not a boolean!`);
 		}
 		this.#status.lengthMinimum = value ? 0 : 1;
 		return this;
@@ -111,10 +111,10 @@ export class ArrayFilter {
 	 */
 	length(value: number): this {
 		if (!(typeof value === "number" && !Number.isNaN(value))) {
-			throw new TypeError(`Filter status \`length\` must be a number!`);
+			throw new TypeError(`Filter status \`length\` is not a number!`);
 		}
 		if (!(Number.isSafeInteger(value) && value >= 0)) {
-			throw new RangeError(`Filter status \`length\` must be a number which is integer, positive, and safe!`);
+			throw new RangeError(`Filter status \`length\` is not a number which is integer, positive, and safe!`);
 		}
 		this.#status.lengthMaximum = value;
 		this.#status.lengthMinimum = value;
@@ -127,10 +127,10 @@ export class ArrayFilter {
 	 */
 	lengthMaximum(value: number): this {
 		if (!(typeof value === "number" && !Number.isNaN(value))) {
-			throw new TypeError(`Filter status \`lengthMaximum\` must be a number!`);
+			throw new TypeError(`Filter status \`lengthMaximum\` is not a number!`);
 		}
 		if (value !== Infinity && !(Number.isSafeInteger(value) && value >= 0 && value >= this.#status.lengthMinimum)) {
-			throw new RangeError(`Filter status \`lengthMaximum\` must be \`Infinity\`, or a number which is integer, positive, safe, and >= ${this.#status.lengthMinimum}!`);
+			throw new RangeError(`Filter status \`lengthMaximum\` is not \`Infinity\`, or a number which is integer, positive, safe, and >= ${this.#status.lengthMinimum}!`);
 		}
 		this.#status.lengthMaximum = value;
 		return this;
@@ -142,10 +142,10 @@ export class ArrayFilter {
 	 */
 	lengthMinimum(value: number): this {
 		if (!(typeof value === "number" && !Number.isNaN(value))) {
-			throw new TypeError(`Filter status \`lengthMinimum\` must be a number!`);
+			throw new TypeError(`Filter status \`lengthMinimum\` is not a number!`);
 		}
 		if (!(Number.isSafeInteger(value) && value >= 0 && value <= this.#status.lengthMaximum)) {
-			throw new RangeError(`Filter status \`lengthMinimum\` must be a number which is integer, positive, safe, and <= ${this.#status.lengthMaximum}!`);
+			throw new RangeError(`Filter status \`lengthMinimum\` is not a number which is integer, positive, safe, and <= ${this.#status.lengthMaximum}!`);
 		}
 		this.#status.lengthMinimum = value;
 		return this;
@@ -157,7 +157,7 @@ export class ArrayFilter {
 	 */
 	strict(value = true): this {
 		if (typeof value !== "boolean") {
-			throw new TypeError(`Filter status \`strict\` must be a boolean!`);
+			throw new TypeError(`Filter status \`strict\` is not a boolean!`);
 		}
 		this.#status.strict = value;
 		return this;
@@ -169,7 +169,7 @@ export class ArrayFilter {
 	 */
 	unique(value = true): this {
 		if (typeof value !== "boolean") {
-			throw new TypeError(`Filter status \`unique\` must be a boolean!`);
+			throw new TypeError(`Filter status \`unique\` is not a boolean!`);
 		}
 		this.#status.unique = value;
 		return this;

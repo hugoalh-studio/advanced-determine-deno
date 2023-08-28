@@ -161,10 +161,10 @@ export class BigIntFilter {
 	maximum(value?: bigint | undefined): this {
 		if (typeof value === "bigint") {
 			if (typeof this.#status.minimum === "bigint" && !(this.#status.minimum <= value)) {
-				throw new RangeError(`Filter status \`maximum\` must be a bigint which is >= ${this.#status.minimum}!`);
+				throw new RangeError(`Filter status \`maximum\` is not a bigint which is >= ${this.#status.minimum}!`);
 			}
 		} else if (typeof value !== "undefined") {
-			throw new TypeError(`Filter status \`maximum\` must be a bigint or undefined!`);
+			throw new TypeError(`Filter status \`maximum\` is not a bigint or undefined!`);
 		}
 		this.#status.maximum = value;
 		return this;
@@ -176,7 +176,7 @@ export class BigIntFilter {
 	 */
 	maximumExclusive(value = true): this {
 		if (typeof value !== "boolean") {
-			throw new TypeError(`Filter status \`maximumExclusive\` must be a boolean!`);
+			throw new TypeError(`Filter status \`maximumExclusive\` is not a boolean!`);
 		}
 		this.#status.maximumExclusive = value;
 		return this;
@@ -189,10 +189,10 @@ export class BigIntFilter {
 	minimum(value?: bigint | undefined): this {
 		if (typeof value === "bigint") {
 			if (typeof this.#status.maximum === "bigint" && !(value <= this.#status.maximum)) {
-				throw new RangeError(`Filter status \`minimum\` must be a bigint which is <= ${this.#status.maximum}!`);
+				throw new RangeError(`Filter status \`minimum\` is not a bigint which is <= ${this.#status.maximum}!`);
 			}
 		} else if (typeof value !== "undefined") {
-			throw new TypeError(`Filter status \`minimum\` must be a bigint or undefined!`);
+			throw new TypeError(`Filter status \`minimum\` is not a bigint or undefined!`);
 		}
 		this.#status.minimum = value;
 		return this;
@@ -204,7 +204,7 @@ export class BigIntFilter {
 	 */
 	minimumExclusive(value = true): this {
 		if (typeof value !== "boolean") {
-			throw new TypeError(`Filter status \`minimumExclusive\` must be a boolean!`);
+			throw new TypeError(`Filter status \`minimumExclusive\` is not a boolean!`);
 		}
 		this.#status.minimumExclusive = value;
 		return this;

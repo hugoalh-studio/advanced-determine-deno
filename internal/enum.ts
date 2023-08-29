@@ -28,13 +28,13 @@ export function enumResolver<Eo, Es>(enumObject: object, input: Eo | Es, paramet
 		return [value, `${value.slice(0, 1).toLowerCase()}${value.slice(1)}`, `${value.slice(0, 1).toUpperCase()}${value.slice(1)}`];
 	})).values()).sort().join("\", \"")}"`);
 }
-export const enum IEEE754Enum {
+export enum IEEE754Enum {
 	Any = "any",
 	Safe = "safe",
 	Unsafe = "unsafe"
 }
 export type IEEE754EnumStringify = EnumCase<keyof typeof IEEE754Enum>;
-export const enum IntegralNumericTypeEnum {
+export enum IntegralNumericTypeEnum {
 	Byte = "uint8",
 	Char = "int8",
 	Int8 = "int8",
@@ -63,45 +63,45 @@ export const enum IntegralNumericTypeEnum {
 	UShort = "uint16"
 }
 export type IntegralNumericTypeEnumStringify = EnumCase<keyof typeof IntegralNumericTypeEnum>;
-export const enum JSONRootTypeEnum {
+export enum JSONRootTypeEnum {
 	Any = "any",
 	Array = "array",
 	Literal = "literal",
 	Object = "object"
 }
 export type JSONRootTypeEnumStringify = EnumCase<keyof typeof JSONRootTypeEnum>;
-export const enum MathematicsFinitenessEnum {
+export enum MathematicsFinitenessEnum {
 	Any = "any",
 	Finite = "finite",
 	Infinite = "infinite"
 }
 export type MathematicsFinitenessEnumStringify = EnumCase<keyof typeof MathematicsFinitenessEnum>;
-export const enum MathematicsParityEnum {
+export enum MathematicsParityEnum {
 	Any = "any",
 	Even = "even",
 	Odd = "odd"
 }
 export type MathematicsParityEnumStringify = EnumCase<keyof typeof MathematicsParityEnum>;
-export const enum MathematicsPrimalityEnum {
+export enum MathematicsPrimalityEnum {
 	Any = "any",
 	Composite = "composite",
 	Prime = "prime"
 }
 export type MathematicsPrimalityEnumStringify = EnumCase<keyof typeof MathematicsPrimalityEnum>;
-export const enum MathematicsSignEnum {
+export enum MathematicsSignEnum {
 	Any = "any",
 	Negative = "negative",
 	Positive = "positive"
 }
 export type MathematicsSignEnumStringify = EnumCase<keyof typeof MathematicsSignEnum>;
-export const enum NumericTypeEnum {
+export enum NumericTypeEnum {
 	Any = "any",
 	Float = "float",
 	Int = "integer",
 	Integer = "integer"
 }
 export type NumericTypeEnumStringify = EnumCase<keyof typeof NumericTypeEnum>;
-export const enum StringCaseEnum {
+export enum StringCaseEnum {
 	Any = "any",
 	Lower = "lower",
 	Lowercase = "lower",
@@ -111,7 +111,7 @@ export const enum StringCaseEnum {
 	UpperCase = "upper"
 }
 export type StringCaseEnumStringify = EnumCase<keyof typeof StringCaseEnum>;
-export const enum StringLineEnum {
+export enum StringLineEnum {
 	Any = "any",
 	Multiline = "multiple",
 	MultiLine = "multiple",
@@ -123,7 +123,7 @@ export const enum StringLineEnum {
 	SingleLine = "single"
 }
 export type StringLineEnumStringify = EnumCase<keyof typeof StringLineEnum>;
-export const enum ThreePhaseConditionEnum {
+export enum ThreePhaseConditionEnum {
 	Allow = "true",
 	Deny = "false",
 	Exclude = "false",

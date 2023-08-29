@@ -1,5 +1,5 @@
 import { ObjectFilter } from "./object.ts";
-import { enumResolver, JSONRootTypeEnum, type JSONRootTypeEnumKeysType, type JSONRootTypeEnumValuesType } from "../internal/enum.ts";
+import { enumResolver, JSONRootTypeEnum, type JSONRootTypeEnumStringify } from "../internal/enum.ts";
 const jsonObjectFilter: ObjectFilter = new ObjectFilter().allowEmpty().plain();
 const jsonLegalKeysPatternRegExp = /^[$_A-Za-z][$\d_A-Za-z]*$/u;
 export interface JSONFilterStatus {
@@ -22,7 +22,7 @@ export interface JSONFilterStatus {
 	 * Root type of the JSON.
 	 * @default "any"
 	 */
-	rootType: JSONRootTypeEnumValuesType;
+	rootType: JSONRootTypeEnum;
 }
 export interface JSONFilterOptions extends Partial<Omit<JSONFilterStatus, "rootType">> {
 	/**
@@ -39,7 +39,7 @@ export interface JSONFilterOptions extends Partial<Omit<JSONFilterStatus, "rootT
 	 * Root type of the JSON.
 	 * @default "any"
 	 */
-	rootType?: JSONRootTypeEnumKeysType;
+	rootType?: JSONRootTypeEnumStringify;
 	/**
 	 * Whether to determine type of array not as the root of the JSON, and no illegal namespace characters in the JSON keys.
 	 * @default false
@@ -126,7 +126,7 @@ export class JSONFilter {
 		entriesCountMaximum: Infinity,
 		entriesCountMinimum: 1,
 		keysPattern: undefined,
-		rootType: "any"
+		rootType: JSONRootTypeEnum.Any
 	};
 	/**
 	 * Initialize the JSON filter.
@@ -234,11 +234,11 @@ export class JSONFilter {
 	}
 	/**
 	 * Root type of the JSON.
-	 * @param {JSONRootTypeEnumKeysType} value
+	 * @param {JSONRootTypeEnum | JSONRootTypeEnumStringify} value
 	 * @returns {this}
 	 */
-	rootType(value: JSONRootTypeEnumKeysType): this {
-		this.#status.rootType = enumResolver<JSONRootTypeEnumKeysType, JSONRootTypeEnumValuesType>(JSONRootTypeEnum, value, "Filter status `rootType`");
+	rootType(value: JSONRootTypeEnum | JSONRootTypeEnumStringify): this {
+		this.#status.rootType = enumResolver<JSONRootTypeEnum, JSONRootTypeEnumStringify>(JSONRootTypeEnum, value, "Filter status `rootType`");
 		return this;
 	}
 	/**
@@ -252,10 +252,10 @@ export class JSONFilter {
 		}
 		if (value) {
 			this.#status.keysPattern = jsonLegalKeysPatternRegExp;
-			this.#status.rootType = "object";
+			this.#status.rootType = JSONRootTypeEnum.Object;
 		} else {
 			this.#status.keysPattern = undefined;
-			this.#status.rootType = "any";
+			this.#status.rootType = JSONRootTypeEnum.Any;
 		}
 		return this;
 	}

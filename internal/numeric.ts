@@ -1,4 +1,4 @@
-import { enumResolver, IntegralNumericTypeEnum, type IntegralNumericTypeEnumKeysType, type IntegralNumericTypeEnumValuesType } from "./enum.ts";
+import { enumResolver, IntegralNumericTypeEnum, type IntegralNumericTypeEnumStringify } from "./enum.ts";
 /**
  * @access private
  * @param {bigint} n
@@ -34,13 +34,13 @@ function integralNumericTypeRangeUIntBase(base: bigint): [bigint, bigint] {
 	return [0n, (2n ** base) - 1n];
 }
 /**
- * @param {IntegralNumericTypeEnumKeysType} name
+ * @param {IntegralNumericTypeEnum | IntegralNumericTypeEnumStringify} name
  * @returns {[bigint, bigint]}
  */
-export function integralNumericTypeRange(name: IntegralNumericTypeEnumKeysType): [bigint, bigint] {
-	let nameResolve: IntegralNumericTypeEnumValuesType | undefined = undefined;
+export function integralNumericTypeRange(name: IntegralNumericTypeEnum | IntegralNumericTypeEnumStringify): [bigint, bigint] {
+	let nameResolve: IntegralNumericTypeEnum | undefined = undefined;
 	try {
-		nameResolve = enumResolver<IntegralNumericTypeEnumKeysType, IntegralNumericTypeEnumValuesType>(IntegralNumericTypeEnum, name, "");
+		nameResolve = enumResolver<IntegralNumericTypeEnum, IntegralNumericTypeEnumStringify>(IntegralNumericTypeEnum, name, "");
 	} catch {
 		// Handle at below.
 	}

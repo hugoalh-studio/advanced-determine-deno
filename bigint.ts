@@ -1,4 +1,4 @@
-import { type IntegralNumericTypeEnumKeysType } from "./internal/enum.ts";
+import { type IntegralNumericTypeEnumStringify } from "./internal/enum.ts";
 import { integralNumericTypeRange, isPrimeNumeric } from "./internal/numeric.ts";
 const MAX_SAFE_INTEGER = BigInt(Number.MAX_SAFE_INTEGER);
 const MIN_SAFE_INTEGER = BigInt(Number.MIN_SAFE_INTEGER);
@@ -15,11 +15,11 @@ export {
 };
 /**
  * Determine whether the big integer is match the specified integral numeric type.
- * @param {IntegralNumericTypeEnumKeysType} typeName Name of the integral numeric type.
+ * @param {IntegralNumericTypeEnumStringify} typeName Name of the integral numeric type.
  * @param {bigint} item Item that need to determine.
  * @returns {boolean} Determine result.
  */
-export function isBigIntIntegralNumericType(typeName: IntegralNumericTypeEnumKeysType, item: bigint): boolean {
+export function isBigIntIntegralNumericType(typeName: IntegralNumericTypeEnumStringify, item: bigint): boolean {
 	const [minimum, maximum] = integralNumericTypeRange(typeName);
 	return (minimum <= item && item <= maximum);
 }

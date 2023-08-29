@@ -1,4 +1,4 @@
-import { enumResolver, IEEE754Enum, MathematicsFinitenessEnum, MathematicsParityEnum, MathematicsPrimalityEnum, MathematicsSignEnum, NumericTypeEnum, type IEEE754EnumKeysType, type IEEE754EnumValuesType, type IntegralNumericTypeEnumKeysType, type MathematicsFinitenessEnumKeysType, type MathematicsFinitenessEnumValuesType, type MathematicsParityEnumKeysType, type MathematicsParityEnumValuesType, type MathematicsPrimalityEnumKeysType, type MathematicsPrimalityEnumValuesType, type MathematicsSignEnumKeysType, type MathematicsSignEnumValuesType, type NumericTypeEnumKeysType, type NumericTypeEnumValuesType } from "../internal/enum.ts";
+import { enumResolver, IEEE754Enum, IntegralNumericTypeEnum, MathematicsFinitenessEnum, MathematicsParityEnum, MathematicsPrimalityEnum, MathematicsSignEnum, NumericTypeEnum, type IEEE754EnumStringify, type IntegralNumericTypeEnumStringify, type MathematicsFinitenessEnumStringify, type MathematicsParityEnumStringify, type MathematicsPrimalityEnumStringify, type MathematicsSignEnumStringify, type NumericTypeEnumStringify } from "../internal/enum.ts";
 import { integralNumericTypeRange } from "../internal/numeric.ts";
 import { isNumberEven, isNumberFloat, isNumberNegative, isNumberOdd, isNumberPositive, isNumberPrime, isNumberSafe } from "../number.ts";
 export interface NumberFilterStatus {
@@ -6,12 +6,12 @@ export interface NumberFilterStatus {
 	 * Finiteness of the number.
 	 * @default "any"
 	 */
-	finiteness: MathematicsFinitenessEnumValuesType;
+	finiteness: MathematicsFinitenessEnum;
 	/**
 	 * IEEE-754 safe mode of the number.
 	 * @default "any"
 	 */
-	ieee754: IEEE754EnumValuesType;
+	ieee754: IEEE754Enum;
 	/**
 	 * Maximum of the number.
 	 * @default undefined
@@ -36,59 +36,59 @@ export interface NumberFilterStatus {
 	 * Numeric type of the number.
 	 * @default "any"
 	 */
-	numericType: NumericTypeEnumValuesType;
+	numericType: NumericTypeEnum;
 	/**
 	 * Parity of the number.
 	 * @default "any"
 	 */
-	parity: MathematicsParityEnumValuesType;
+	parity: MathematicsParityEnum;
 	/**
 	 * Primality of the number.
 	 * @default "any"
 	 */
-	primality: MathematicsPrimalityEnumValuesType;
+	primality: MathematicsPrimalityEnum;
 	/**
 	 * Sign of the number.
 	 * @default "any"
 	 */
-	sign: MathematicsSignEnumValuesType;
+	sign: MathematicsSignEnum;
 }
 export interface NumberFilterOptions extends Partial<Omit<NumberFilterStatus, "finiteness" | "ieee754" | "numericType" | "parity" | "primality" | "sign">> {
 	/**
 	 * Finiteness of the number.
 	 * @default "any"
 	 */
-	finiteness?: MathematicsFinitenessEnumKeysType;
+	finiteness?: MathematicsFinitenessEnumStringify;
 	/**
 	 * IEEE-754 mode of the number.
 	 * @default "any"
 	 */
-	ieee754?: IEEE754EnumKeysType;
+	ieee754?: IEEE754EnumStringify;
 	/**
 	 * Integral numeric type of the number.
 	 * @default undefined
 	 */
-	integralNumericType?: IntegralNumericTypeEnumKeysType;
+	integralNumericType?: IntegralNumericTypeEnumStringify;
 	/**
 	 * Numeric type of the number.
 	 * @default "any"
 	 */
-	numericType?: NumericTypeEnumKeysType;
+	numericType?: NumericTypeEnumStringify;
 	/**
 	 * Parity of the number.
 	 * @default "any"
 	 */
-	parity?: MathematicsParityEnumKeysType;
+	parity?: MathematicsParityEnumStringify;
 	/**
 	 * Primality of the number.
 	 * @default "any"
 	 */
-	primality?: MathematicsPrimalityEnumKeysType;
+	primality?: MathematicsPrimalityEnumStringify;
 	/**
 	 * Sign of the number.
 	 * @default "any"
 	 */
-	sign?: MathematicsSignEnumKeysType;
+	sign?: MathematicsSignEnumStringify;
 	/** @alias maximum */max?: this["maximum"];
 	/** @alias maximumExclusive */exclusiveMax?: this["maximumExclusive"];
 	/** @alias maximumExclusive */exclusiveMaximum?: this["maximumExclusive"];
@@ -103,16 +103,16 @@ export interface NumberFilterOptions extends Partial<Omit<NumberFilterStatus, "f
  */
 export class NumberFilter {
 	#status: NumberFilterStatus = {
-		finiteness: "any",
-		ieee754: "any",
+		finiteness: MathematicsFinitenessEnum.Any,
+		ieee754: IEEE754Enum.Any,
 		maximum: undefined,
 		maximumExclusive: false,
 		minimum: undefined,
 		minimumExclusive: false,
-		numericType: "any",
-		parity: "any",
-		primality: "any",
-		sign: "any"
+		numericType: NumericTypeEnum.Any,
+		parity: MathematicsParityEnum.Any,
+		primality: MathematicsPrimalityEnum.Any,
+		sign: MathematicsSignEnum.Any
 	};
 	/**
 	 * Initialize the number filter.
@@ -151,28 +151,28 @@ export class NumberFilter {
 	}
 	/**
 	 * Finiteness of the number.
-	 * @param {MathematicsFinitenessEnumKeysType} value
+	 * @param {MathematicsFinitenessEnum | MathematicsFinitenessEnumStringify} value
 	 * @returns {this}
 	 */
-	finiteness(value: MathematicsFinitenessEnumKeysType): this {
-		this.#status.finiteness = enumResolver<MathematicsFinitenessEnumKeysType, MathematicsFinitenessEnumValuesType>(MathematicsFinitenessEnum, value, "Filter status `finiteness`");
+	finiteness(value: MathematicsFinitenessEnum | MathematicsFinitenessEnumStringify): this {
+		this.#status.finiteness = enumResolver<MathematicsFinitenessEnum, MathematicsFinitenessEnumStringify>(MathematicsFinitenessEnum, value, "Filter status `finiteness`");
 		return this;
 	}
 	/**
 	 * IEEE-754 safe mode of the number.
-	 * @param {IEEE754EnumKeysType} value
+	 * @param {IEEE754Enum | IEEE754EnumStringify} value
 	 * @returns {this}
 	 */
-	ieee754(value: IEEE754EnumKeysType): this {
-		this.#status.ieee754 = enumResolver<IEEE754EnumKeysType, IEEE754EnumValuesType>(IEEE754Enum, value, "Filter status `ieee754`");
+	ieee754(value: IEEE754Enum | IEEE754EnumStringify): this {
+		this.#status.ieee754 = enumResolver<IEEE754Enum, IEEE754EnumStringify>(IEEE754Enum, value, "Filter status `ieee754`");
 		return this;
 	}
 	/**
 	 * Integral numeric type of the number.
-	 * @param {IntegralNumericTypeEnumKeysType} value
+	 * @param {IntegralNumericTypeEnum | IntegralNumericTypeEnumStringify} value
 	 * @returns {this}
 	 */
-	integralNumericType(value: IntegralNumericTypeEnumKeysType): this {
+	integralNumericType(value: IntegralNumericTypeEnum | IntegralNumericTypeEnumStringify): this {
 		const [intrMinimum, intrMaximum] = integralNumericTypeRange(value);
 		this.#status.maximum = Number(intrMaximum);
 		this.#status.minimum = Number(intrMinimum);
@@ -238,38 +238,38 @@ export class NumberFilter {
 	}
 	/**
 	 * Numeric type of the number.
-	 * @param {NumericTypeEnumKeysType} value
+	 * @param {NumericTypeEnum | NumericTypeEnumStringify} value
 	 * @returns {this}
 	 */
-	numericType(value: NumericTypeEnumKeysType): this {
-		this.#status.numericType = enumResolver<NumericTypeEnumKeysType, NumericTypeEnumValuesType>(NumericTypeEnum, value, "Filter status `numericType`");
+	numericType(value: NumericTypeEnum | NumericTypeEnumStringify): this {
+		this.#status.numericType = enumResolver<NumericTypeEnum, NumericTypeEnumStringify>(NumericTypeEnum, value, "Filter status `numericType`");
 		return this;
 	}
 	/**
 	 * Parity of the number.
-	 * @param {MathematicsParityEnumKeysType} value
+	 * @param {MathematicsParityEnum | MathematicsParityEnumStringify} value
 	 * @returns {this}
 	 */
-	parity(value: MathematicsParityEnumKeysType): this {
-		this.#status.parity = enumResolver<MathematicsParityEnumKeysType, MathematicsParityEnumValuesType>(MathematicsParityEnum, value, "Filter status `parity`");
+	parity(value: MathematicsParityEnum | MathematicsParityEnumStringify): this {
+		this.#status.parity = enumResolver<MathematicsParityEnum, MathematicsParityEnumStringify>(MathematicsParityEnum, value, "Filter status `parity`");
 		return this;
 	}
 	/**
 	 * Primality of the number.
-	 * @param {MathematicsPrimalityEnumKeysType} value
+	 * @param {MathematicsPrimalityEnum | MathematicsPrimalityEnumStringify} value
 	 * @returns {this}
 	 */
-	primality(value: MathematicsPrimalityEnumKeysType): this {
-		this.#status.primality = enumResolver<MathematicsPrimalityEnumKeysType, MathematicsPrimalityEnumValuesType>(MathematicsPrimalityEnum, value, "Filter status `primality`");
+	primality(value: MathematicsPrimalityEnum | MathematicsPrimalityEnumStringify): this {
+		this.#status.primality = enumResolver<MathematicsPrimalityEnum, MathematicsPrimalityEnumStringify>(MathematicsPrimalityEnum, value, "Filter status `primality`");
 		return this;
 	}
 	/**
 	 * Sign of the number.
-	 * @param {MathematicsSignEnumKeysType} value
+	 * @param {MathematicsSignEnum | MathematicsSignEnumStringify} value
 	 * @returns {this}
 	 */
-	sign(value: MathematicsSignEnumKeysType): this {
-		this.#status.sign = enumResolver<MathematicsSignEnumKeysType, MathematicsSignEnumValuesType>(MathematicsSignEnum, value, "Filter status `sign`");
+	sign(value: MathematicsSignEnum | MathematicsSignEnumStringify): this {
+		this.#status.sign = enumResolver<MathematicsSignEnum, MathematicsSignEnumStringify>(MathematicsSignEnum, value, "Filter status `sign`");
 		return this;
 	}
 	/** @alias maximum */max = this.maximum;
@@ -373,22 +373,22 @@ export class NumberFilter {
 		if (
 			typeof item !== "number" ||
 			Number.isNaN(item) ||
-			(this.#status.finiteness === "finite" && !Number.isFinite(item)) ||
-			(this.#status.finiteness === "infinite" && Number.isFinite(item)) ||
-			(this.#status.ieee754 === "safe" && !isNumberSafe(item)) ||
-			(this.#status.ieee754 === "unsafe" && isNumberSafe(item)) ||
+			(this.#status.finiteness === MathematicsFinitenessEnum.Finite && !Number.isFinite(item)) ||
+			(this.#status.finiteness === MathematicsFinitenessEnum.Infinite && Number.isFinite(item)) ||
+			(this.#status.ieee754 === IEEE754Enum.Safe && !isNumberSafe(item)) ||
+			(this.#status.ieee754 === IEEE754Enum.Unsafe && isNumberSafe(item)) ||
 			(typeof this.#status.maximum === "number" && this.#status.maximumExclusive && !(item < this.#status.maximum)) ||
 			(typeof this.#status.maximum === "number" && !this.#status.maximumExclusive && !(item <= this.#status.maximum)) ||
 			(typeof this.#status.minimum === "number" && this.#status.minimumExclusive && !(this.#status.minimum < item)) ||
 			(typeof this.#status.minimum === "number" && !this.#status.minimumExclusive && !(this.#status.minimum <= item)) ||
-			(this.#status.numericType === "float" && !isNumberFloat(item)) ||
-			(this.#status.numericType === "integer" && !Number.isInteger(item)) ||
-			(this.#status.parity === "even" && !isNumberEven(item)) ||
-			(this.#status.parity === "odd" && !isNumberOdd(item)) ||
-			(this.#status.primality === "composite" && isNumberPrime(item)) ||
-			(this.#status.primality === "prime" && !isNumberPrime(item)) ||
-			(this.#status.sign === "negative" && !isNumberNegative(item)) ||
-			(this.#status.sign === "positive" && !isNumberPositive(item))
+			(this.#status.numericType === NumericTypeEnum.Float && !isNumberFloat(item)) ||
+			(this.#status.numericType === NumericTypeEnum.Integer && !Number.isInteger(item)) ||
+			(this.#status.parity === MathematicsParityEnum.Even && !isNumberEven(item)) ||
+			(this.#status.parity === MathematicsParityEnum.Odd && !isNumberOdd(item)) ||
+			(this.#status.primality === MathematicsPrimalityEnum.Composite && isNumberPrime(item)) ||
+			(this.#status.primality === MathematicsPrimalityEnum.Prime && !isNumberPrime(item)) ||
+			(this.#status.sign === MathematicsSignEnum.Negative && !isNumberNegative(item)) ||
+			(this.#status.sign === MathematicsSignEnum.Positive && !isNumberPositive(item))
 		) {
 			return false;
 		}

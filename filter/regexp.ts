@@ -1,40 +1,40 @@
-import { enumResolver, ThreePhaseConditionEnum, type ThreePhaseConditionEnumKeysType, type ThreePhaseConditionEnumValuesType } from "../internal/enum.ts";
+import { enumResolver, ThreePhaseConditionEnum, type ThreePhaseConditionEnumStringify } from "../internal/enum.ts";
 export interface RegExpFilterStatus {
 	/**
 	 * Whether a dot-all `RegExp`.
 	 * @default "neutral"
 	 */
-	dotAll: ThreePhaseConditionEnumValuesType;
+	dotAll: ThreePhaseConditionEnum;
 	/**
 	 * Whether an exactly `RegExp`.
 	 * @default "neutral"
 	 */
-	exactly: ThreePhaseConditionEnumValuesType;
+	exactly: ThreePhaseConditionEnum;
 	/**
 	 * Whether a global `RegExp`.
 	 * @default "neutral"
 	 */
-	global: ThreePhaseConditionEnumValuesType;
+	global: ThreePhaseConditionEnum;
 	/**
 	 * Whether a case insensitive `RegExp`.
 	 * @default "neutral"
 	 */
-	ignoreCase: ThreePhaseConditionEnumValuesType;
+	ignoreCase: ThreePhaseConditionEnum;
 	/**
 	 * Whether a multiple line `RegExp`.
 	 * @default "neutral"
 	 */
-	multipleLine: ThreePhaseConditionEnumValuesType;
+	multipleLine: ThreePhaseConditionEnum;
 	/**
 	 * Whether a sticky `RegExp`.
 	 * @default "neutral"
 	 */
-	sticky: ThreePhaseConditionEnumValuesType;
+	sticky: ThreePhaseConditionEnum;
 	/**
 	 * Whether an unicode `RegExp`.
 	 * @default "neutral"
 	 */
-	unicode: ThreePhaseConditionEnumValuesType;
+	unicode: ThreePhaseConditionEnum;
 }
 export {
 	type RegExpFilterStatus as RegExFilterStatus,
@@ -45,37 +45,37 @@ export interface RegExpFilterOptions extends Partial<Omit<RegExpFilterStatus, "d
 	 * Whether a dot-all `RegExp`.
 	 * @default "neutral"
 	 */
-	dotAll?: ThreePhaseConditionEnumKeysType;
+	dotAll?: ThreePhaseConditionEnumStringify;
 	/**
 	 * Whether an exactly `RegExp`.
 	 * @default "neutral"
 	 */
-	exactly?: ThreePhaseConditionEnumKeysType;
+	exactly?: ThreePhaseConditionEnumStringify;
 	/**
 	 * Whether a global `RegExp`.
 	 * @default "neutral"
 	 */
-	global?: ThreePhaseConditionEnumKeysType;
+	global?: ThreePhaseConditionEnumStringify;
 	/**
 	 * Whether a case insensitive `RegExp`.
 	 * @default "neutral"
 	 */
-	ignoreCase?: ThreePhaseConditionEnumKeysType;
+	ignoreCase?: ThreePhaseConditionEnumStringify;
 	/**
 	 * Whether a multiple line `RegExp`.
 	 * @default "neutral"
 	 */
-	multipleLine?: ThreePhaseConditionEnumKeysType;
+	multipleLine?: ThreePhaseConditionEnumStringify;
 	/**
 	 * Whether a sticky `RegExp`.
 	 * @default "neutral"
 	 */
-	sticky?: ThreePhaseConditionEnumKeysType;
+	sticky?: ThreePhaseConditionEnumStringify;
 	/**
 	 * Whether an unicode `RegExp`.
 	 * @default "neutral"
 	 */
-	unicode?: ThreePhaseConditionEnumKeysType;
+	unicode?: ThreePhaseConditionEnumStringify;
 	/** @alias exactly */exact?: this["exactly"];
 	/** @alias ignoreCase */caseInsensitive?: this["ignoreCase"];
 	/** @alias multipleLine */multiline?: this["multipleLine"];
@@ -90,13 +90,13 @@ export {
  */
 export class RegExpFilter {
 	#status: RegExpFilterStatus = {
-		dotAll: "neutral",
-		exactly: "neutral",
-		global: "neutral",
-		ignoreCase: "neutral",
-		multipleLine: "neutral",
-		sticky: "neutral",
-		unicode: "neutral"
+		dotAll: ThreePhaseConditionEnum.Neutral,
+		exactly: ThreePhaseConditionEnum.Neutral,
+		global: ThreePhaseConditionEnum.Neutral,
+		ignoreCase: ThreePhaseConditionEnum.Neutral,
+		multipleLine: ThreePhaseConditionEnum.Neutral,
+		sticky: ThreePhaseConditionEnum.Neutral,
+		unicode: ThreePhaseConditionEnum.Neutral
 	};
 	/**
 	 * Initialize the `RegExp` filter.
@@ -134,65 +134,65 @@ export class RegExpFilter {
 	}
 	/**
 	 * Whether a dot-all `RegExp`.
-	 * @param {ThreePhaseConditionEnumKeysType} value
+	 * @param {ThreePhaseConditionEnum | ThreePhaseConditionEnumStringify} value
 	 * @returns {this}
 	 */
-	dotAll(value: ThreePhaseConditionEnumKeysType): this {
-		this.#status.dotAll = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "Filter status `dotAll`");
+	dotAll(value: ThreePhaseConditionEnum | ThreePhaseConditionEnumStringify): this {
+		this.#status.dotAll = enumResolver<ThreePhaseConditionEnum, ThreePhaseConditionEnumStringify>(ThreePhaseConditionEnum, value, "Filter status `dotAll`");
 		return this;
 	}
 	/**
 	 * Whether an exactly `RegExp`.
-	 * @param {ThreePhaseConditionEnumKeysType} value
+	 * @param {ThreePhaseConditionEnum | ThreePhaseConditionEnumStringify} value
 	 * @returns {this}
 	 */
-	exactly(value: ThreePhaseConditionEnumKeysType): this {
-		this.#status.exactly = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "Filter status `exactly`");
+	exactly(value: ThreePhaseConditionEnum | ThreePhaseConditionEnumStringify): this {
+		this.#status.exactly = enumResolver<ThreePhaseConditionEnum, ThreePhaseConditionEnumStringify>(ThreePhaseConditionEnum, value, "Filter status `exactly`");
 		return this;
 	}
 	/**
 	 * Whether a global `RegExp`.
-	 * @param {ThreePhaseConditionEnumKeysType} value
+	 * @param {ThreePhaseConditionEnum | ThreePhaseConditionEnumStringify} value
 	 * @returns {this}
 	 */
-	global(value: ThreePhaseConditionEnumKeysType): this {
-		this.#status.global = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "Filter status `global`");
+	global(value: ThreePhaseConditionEnum | ThreePhaseConditionEnumStringify): this {
+		this.#status.global = enumResolver<ThreePhaseConditionEnum, ThreePhaseConditionEnumStringify>(ThreePhaseConditionEnum, value, "Filter status `global`");
 		return this;
 	}
 	/**
 	 * Whether a case insensitive `RegExp`.
-	 * @param {ThreePhaseConditionEnumKeysType} value
+	 * @param {ThreePhaseConditionEnum | ThreePhaseConditionEnumStringify} value
 	 * @returns {this}
 	 */
-	ignoreCase(value: ThreePhaseConditionEnumKeysType): this {
-		this.#status.ignoreCase = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "Filter status `ignoreCase`");
+	ignoreCase(value: ThreePhaseConditionEnum | ThreePhaseConditionEnumStringify): this {
+		this.#status.ignoreCase = enumResolver<ThreePhaseConditionEnum, ThreePhaseConditionEnumStringify>(ThreePhaseConditionEnum, value, "Filter status `ignoreCase`");
 		return this;
 	}
 	/**
 	 * Whether a multiple line `RegExp`.
-	 * @param {ThreePhaseConditionEnumKeysType} value
+	 * @param {ThreePhaseConditionEnum | ThreePhaseConditionEnumStringify} value
 	 * @returns {this}
 	 */
-	multipleLine(value: ThreePhaseConditionEnumKeysType): this {
-		this.#status.multipleLine = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "Filter status `multipleLine`");
+	multipleLine(value: ThreePhaseConditionEnum | ThreePhaseConditionEnumStringify): this {
+		this.#status.multipleLine = enumResolver<ThreePhaseConditionEnum, ThreePhaseConditionEnumStringify>(ThreePhaseConditionEnum, value, "Filter status `multipleLine`");
 		return this;
 	}
 	/**
 	 * Whether a sticky `RegExp`.
-	 * @param {ThreePhaseConditionEnumKeysType} value
+	 * @param {ThreePhaseConditionEnum | ThreePhaseConditionEnumStringify} value
 	 * @returns {this}
 	 */
-	sticky(value: ThreePhaseConditionEnumKeysType): this {
-		this.#status.sticky = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "Filter status `sticky`");
+	sticky(value: ThreePhaseConditionEnum | ThreePhaseConditionEnumStringify): this {
+		this.#status.sticky = enumResolver<ThreePhaseConditionEnum, ThreePhaseConditionEnumStringify>(ThreePhaseConditionEnum, value, "Filter status `sticky`");
 		return this;
 	}
 	/**
 	 * Whether an unicode `RegExp`.
-	 * @param {ThreePhaseConditionEnumKeysType} value
+	 * @param {ThreePhaseConditionEnum | ThreePhaseConditionEnumStringify} value
 	 * @returns {this}
 	 */
-	unicode(value: ThreePhaseConditionEnumKeysType): this {
-		this.#status.unicode = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "Filter status `unicode`");
+	unicode(value: ThreePhaseConditionEnum | ThreePhaseConditionEnumStringify): this {
+		this.#status.unicode = enumResolver<ThreePhaseConditionEnum, ThreePhaseConditionEnumStringify>(ThreePhaseConditionEnum, value, "Filter status `unicode`");
 		return this;
 	}
 	/** @alias exactly */exact = this.exactly;
@@ -207,23 +207,23 @@ export class RegExpFilter {
 	test(item: unknown): boolean {
 		if (
 			!(item instanceof RegExp) ||
-			(this.#status.dotAll === "false" && item.dotAll) ||
-			(this.#status.dotAll === "true" && !item.dotAll) ||
-			(this.#status.exactly === "false" && item.source.startsWith("^") && item.source.endsWith("$")) ||
-			(this.#status.exactly === "true" && (
+			(this.#status.dotAll === ThreePhaseConditionEnum.False && item.dotAll) ||
+			(this.#status.dotAll === ThreePhaseConditionEnum.True && !item.dotAll) ||
+			(this.#status.exactly === ThreePhaseConditionEnum.False && item.source.startsWith("^") && item.source.endsWith("$")) ||
+			(this.#status.exactly === ThreePhaseConditionEnum.True && (
 				!item.source.startsWith("^") ||
 				!item.source.endsWith("$")
 			)) ||
-			(this.#status.global === "false" && item.global) ||
-			(this.#status.global === "true" && !item.global) ||
-			(this.#status.ignoreCase === "false" && item.ignoreCase) ||
-			(this.#status.ignoreCase === "true" && !item.ignoreCase) ||
-			(this.#status.multipleLine === "false" && item.multiline) ||
-			(this.#status.multipleLine === "true" && !item.multiline) ||
-			(this.#status.sticky === "false" && item.sticky) ||
-			(this.#status.sticky === "true" && !item.sticky) ||
-			(this.#status.unicode === "false" && item.unicode) ||
-			(this.#status.unicode === "true" && !item.unicode)
+			(this.#status.global === ThreePhaseConditionEnum.False && item.global) ||
+			(this.#status.global === ThreePhaseConditionEnum.True && !item.global) ||
+			(this.#status.ignoreCase === ThreePhaseConditionEnum.False && item.ignoreCase) ||
+			(this.#status.ignoreCase === ThreePhaseConditionEnum.True && !item.ignoreCase) ||
+			(this.#status.multipleLine === ThreePhaseConditionEnum.False && item.multiline) ||
+			(this.#status.multipleLine === ThreePhaseConditionEnum.True && !item.multiline) ||
+			(this.#status.sticky === ThreePhaseConditionEnum.False && item.sticky) ||
+			(this.#status.sticky === ThreePhaseConditionEnum.True && !item.sticky) ||
+			(this.#status.unicode === ThreePhaseConditionEnum.False && item.unicode) ||
+			(this.#status.unicode === ThreePhaseConditionEnum.True && !item.unicode)
 		) {
 			return false;
 		}

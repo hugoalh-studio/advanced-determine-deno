@@ -1,12 +1,12 @@
 import { isBigIntEven, isBigIntNegative, isBigIntOdd, isBigIntPositive, isBigIntPrime, isBigIntSafe } from "../bigint.ts";
-import { enumResolver, IEEE754Enum, MathematicsParityEnum, MathematicsPrimalityEnum, MathematicsSignEnum, type IEEE754EnumKeysType, type IEEE754EnumValuesType, type IntegralNumericTypeEnumKeysType, type MathematicsParityEnumKeysType, type MathematicsParityEnumValuesType, type MathematicsPrimalityEnumKeysType, type MathematicsPrimalityEnumValuesType, type MathematicsSignEnumKeysType, type MathematicsSignEnumValuesType } from "../internal/enum.ts";
+import { enumResolver, IEEE754Enum, IntegralNumericTypeEnum, MathematicsParityEnum, MathematicsPrimalityEnum, MathematicsSignEnum, type IEEE754EnumStringify, type IntegralNumericTypeEnumStringify, type MathematicsParityEnumStringify, type MathematicsPrimalityEnumStringify, type MathematicsSignEnumStringify } from "../internal/enum.ts";
 import { integralNumericTypeRange } from "../internal/numeric.ts";
 export interface BigIntFilterStatus {
 	/**
 	 * IEEE-754 safe mode of the big integer.
 	 * @default "any"
 	 */
-	ieee754: IEEE754EnumValuesType;
+	ieee754: IEEE754Enum;
 	/**
 	 * Maximum of the big integer.
 	 * @default undefined
@@ -31,17 +31,17 @@ export interface BigIntFilterStatus {
 	 * Parity of the big integer.
 	 * @default "any"
 	 */
-	parity: MathematicsParityEnumValuesType;
+	parity: MathematicsParityEnum;
 	/**
 	 * Primality of the big integer.
 	 * @default "any"
 	 */
-	primality: MathematicsPrimalityEnumValuesType;
+	primality: MathematicsPrimalityEnum;
 	/**
 	 * Sign of the big integer.
 	 * @default "any"
 	 */
-	sign: MathematicsSignEnumValuesType;
+	sign: MathematicsSignEnum;
 }
 export {
 	type BigIntFilterStatus as BigIntegerFilterStatus
@@ -51,27 +51,27 @@ export interface BigIntFilterOptions extends Partial<Omit<BigIntFilterStatus, "i
 	 * IEEE-754 mode of the big integer.
 	 * @default "any"
 	 */
-	ieee754?: IEEE754EnumKeysType;
+	ieee754?: IEEE754Enum | IEEE754EnumStringify;
 	/**
 	 * Integral numeric type of the big integer.
 	 * @default undefined
 	 */
-	integralNumericType?: IntegralNumericTypeEnumKeysType;
+	integralNumericType?: IntegralNumericTypeEnum | IntegralNumericTypeEnumStringify;
 	/**
 	 * Parity of the big integer.
 	 * @default "any"
 	 */
-	parity?: MathematicsParityEnumKeysType;
+	parity?: MathematicsParityEnum | MathematicsParityEnumStringify;
 	/**
 	 * Primality of the big integer.
 	 * @default "any"
 	 */
-	primality?: MathematicsPrimalityEnumKeysType;
+	primality?: MathematicsPrimalityEnum | MathematicsPrimalityEnumStringify;
 	/**
 	 * Sign of the big integer.
 	 * @default "any"
 	 */
-	sign?: MathematicsSignEnumKeysType;
+	sign?: MathematicsSignEnum | MathematicsSignEnumStringify;
 	/** @alias maximum */max?: this["maximum"];
 	/** @alias maximumExclusive */exclusiveMax?: this["maximumExclusive"];
 	/** @alias maximumExclusive */exclusiveMaximum?: this["maximumExclusive"];
@@ -89,14 +89,14 @@ export {
  */
 export class BigIntFilter {
 	#status: BigIntFilterStatus = {
-		ieee754: "any",
+		ieee754: IEEE754Enum.Any,
 		maximum: undefined,
 		maximumExclusive: false,
 		minimum: undefined,
 		minimumExclusive: false,
-		parity: "any",
-		primality: "any",
-		sign: "any"
+		parity: MathematicsParityEnum.Any,
+		primality: MathematicsPrimalityEnum.Any,
+		sign: MathematicsSignEnum.Any
 	};
 	/**
 	 * Initialize the big integer filter.
@@ -135,19 +135,19 @@ export class BigIntFilter {
 	}
 	/**
 	 * IEEE-754 safe mode of the big integer.
-	 * @param {IEEE754EnumKeysType} value
+	 * @param {IEEE754Enum | IEEE754EnumStringify} value
 	 * @returns {this}
 	 */
-	ieee754(value: IEEE754EnumKeysType): this {
-		this.#status.ieee754 = enumResolver<IEEE754EnumKeysType, IEEE754EnumValuesType>(IEEE754Enum, value, "Filter status `ieee754`");
+	ieee754(value: IEEE754Enum | IEEE754EnumStringify): this {
+		this.#status.ieee754 = enumResolver<IEEE754Enum, IEEE754EnumStringify>(IEEE754Enum, value, "Filter status `ieee754`");
 		return this;
 	}
 	/**
 	 * Integral numeric type of the big integer.
-	 * @param {IntegralNumericTypeEnumKeysType} value
+	 * @param {IntegralNumericTypeEnum | IntegralNumericTypeEnumStringify} value
 	 * @returns {this}
 	 */
-	integralNumericType(value: IntegralNumericTypeEnumKeysType): this {
+	integralNumericType(value: IntegralNumericTypeEnum | IntegralNumericTypeEnumStringify): this {
 		[this.#status.minimum, this.#status.maximum] = integralNumericTypeRange(value);
 		this.#status.maximumExclusive = false;
 		this.#status.minimumExclusive = false;
@@ -211,29 +211,29 @@ export class BigIntFilter {
 	}
 	/**
 	 * Parity of the big integer.
-	 * @param {MathematicsParityEnumKeysType} value
+	 * @param {MathematicsParityEnum | MathematicsParityEnumStringify} value
 	 * @returns {this}
 	 */
-	parity(value: MathematicsParityEnumKeysType): this {
-		this.#status.parity = enumResolver<MathematicsParityEnumKeysType, MathematicsParityEnumValuesType>(MathematicsParityEnum, value, "Filter status `parity`");
+	parity(value: MathematicsParityEnum | MathematicsParityEnumStringify): this {
+		this.#status.parity = enumResolver<MathematicsParityEnum, MathematicsParityEnumStringify>(MathematicsParityEnum, value, "Filter status `parity`");
 		return this;
 	}
 	/**
 	 * Primality of the big integer.
-	 * @param {MathematicsPrimalityEnumKeysType} value
+	 * @param {MathematicsPrimalityEnum | MathematicsPrimalityEnumStringify} value
 	 * @returns {this}
 	 */
-	primality(value: MathematicsPrimalityEnumKeysType): this {
-		this.#status.primality = enumResolver<MathematicsPrimalityEnumKeysType, MathematicsPrimalityEnumValuesType>(MathematicsPrimalityEnum, value, "Filter status `primality`");
+	primality(value: MathematicsPrimalityEnum | MathematicsPrimalityEnumStringify): this {
+		this.#status.primality = enumResolver<MathematicsPrimalityEnum, MathematicsPrimalityEnumStringify>(MathematicsPrimalityEnum, value, "Filter status `primality`");
 		return this;
 	}
 	/**
 	 * Sign of the big integer.
-	 * @param {MathematicsSignEnumKeysType} value
+	 * @param {MathematicsSignEnum | MathematicsSignEnumStringify} value
 	 * @returns {this}
 	 */
-	sign(value: MathematicsSignEnumKeysType): this {
-		this.#status.sign = enumResolver<MathematicsSignEnumKeysType, MathematicsSignEnumValuesType>(MathematicsSignEnum, value, "Filter status `sign`");
+	sign(value: MathematicsSignEnum | MathematicsSignEnumStringify): this {
+		this.#status.sign = enumResolver<MathematicsSignEnum, MathematicsSignEnumStringify>(MathematicsSignEnum, value, "Filter status `sign`");
 		return this;
 	}
 	/** @alias maximum */max = this.maximum;
@@ -308,18 +308,18 @@ export class BigIntFilter {
 	test(item: unknown): boolean {
 		if (
 			typeof item !== "bigint" ||
-			(this.#status.ieee754 === "safe" && !isBigIntSafe(item)) ||
-			(this.#status.ieee754 === "unsafe" && isBigIntSafe(item)) ||
+			(this.#status.ieee754 === IEEE754Enum.Safe && !isBigIntSafe(item)) ||
+			(this.#status.ieee754 === IEEE754Enum.Unsafe && isBigIntSafe(item)) ||
 			(typeof this.#status.maximum === "bigint" && this.#status.maximumExclusive && !(item < this.#status.maximum)) ||
 			(typeof this.#status.maximum === "bigint" && !this.#status.maximumExclusive && !(item <= this.#status.maximum)) ||
 			(typeof this.#status.minimum === "bigint" && this.#status.minimumExclusive && !(this.#status.minimum < item)) ||
 			(typeof this.#status.minimum === "bigint" && !this.#status.minimumExclusive && !(this.#status.minimum <= item)) ||
-			(this.#status.parity === "even" && !isBigIntEven(item)) ||
-			(this.#status.parity === "odd" && !isBigIntOdd(item)) ||
-			(this.#status.primality === "composite" && isBigIntPrime(item)) ||
-			(this.#status.primality === "prime" && !isBigIntPrime(item)) ||
-			(this.#status.sign === "negative" && !isBigIntNegative(item)) ||
-			(this.#status.sign === "positive" && !isBigIntPositive(item))
+			(this.#status.parity === MathematicsParityEnum.Even && !isBigIntEven(item)) ||
+			(this.#status.parity === MathematicsParityEnum.Odd && !isBigIntOdd(item)) ||
+			(this.#status.primality === MathematicsPrimalityEnum.Composite && isBigIntPrime(item)) ||
+			(this.#status.primality === MathematicsPrimalityEnum.Prime && !isBigIntPrime(item)) ||
+			(this.#status.sign === MathematicsSignEnum.Negative && !isBigIntNegative(item)) ||
+			(this.#status.sign === MathematicsSignEnum.Positive && !isBigIntPositive(item))
 		) {
 			return false;
 		}

@@ -1,4 +1,4 @@
-import { type IntegralNumericTypeEnumKeysType } from "./internal/enum.ts";
+import { type IntegralNumericTypeEnumStringify } from "./internal/enum.ts";
 import { integralNumericTypeRange, isPrimeNumeric } from "./internal/numeric.ts";
 /**
  * Determine whether the number is even.
@@ -18,11 +18,11 @@ export function isNumberFloat(item: number): boolean {
 }
 /**
  * Determine whether the number is match the specified integral numeric type.
- * @param {IntegralNumericTypeEnumKeysType} typeName Name of the integral numeric type.
+ * @param {IntegralNumericTypeEnumStringify} typeName Name of the integral numeric type.
  * @param {number} item Item that need to determine.
  * @returns {boolean} Determine result.
  */
-export function isNumberIntegralNumericType(typeName: IntegralNumericTypeEnumKeysType, item: number): boolean {
+export function isNumberIntegralNumericType(typeName: IntegralNumericTypeEnumStringify, item: number): boolean {
 	const [minimum, maximum] = integralNumericTypeRange(typeName);
 	return (Number.isInteger(item) && Number(minimum) <= item && item <= Number(maximum));
 }

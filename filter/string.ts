@@ -1,16 +1,16 @@
-import { enumResolver, StringCaseEnum, StringLineEnum, ThreePhaseConditionEnum, type StringCaseEnumKeysType, type StringCaseEnumValuesType, type StringLineEnumKeysType, type StringLineEnumValuesType, type ThreePhaseConditionEnumKeysType, type ThreePhaseConditionEnumValuesType } from "../internal/enum.ts";
+import { enumResolver, StringCaseEnum, StringLineEnum, ThreePhaseConditionEnum, type StringCaseEnumStringify, type StringLineEnumStringify, type ThreePhaseConditionEnumStringify } from "../internal/enum.ts";
 import { isStringASCII, isStringLowerCase, isStringMultipleLine, isStringSingleLine, isStringUpperCase } from "../string.ts";
 export interface StringFilterStatus {
 	/**
 	 * Whether an ASCII string.
 	 * @default "neutral"
 	 */
-	ascii: ThreePhaseConditionEnumValuesType;
+	ascii: ThreePhaseConditionEnum;
 	/**
 	 * Case of the string.
 	 * @default "any"
 	 */
-	case: StringCaseEnumValuesType;
+	case: StringCaseEnum;
 	/**
 	 * Maximum length of the string.
 	 * @default Infinity
@@ -25,7 +25,7 @@ export interface StringFilterStatus {
 	 * Line of the string.
 	 * @default "any"
 	 */
-	line: StringLineEnumValuesType;
+	line: StringLineEnum;
 	/**
 	 * Whether a pattern matchable string.
 	 * @default undefined
@@ -47,12 +47,12 @@ export interface StringFilterOptions extends Partial<Omit<StringFilterStatus, "a
 	 * Whether an ASCII string.
 	 * @default "neutral"
 	 */
-	ascii?: ThreePhaseConditionEnumKeysType;
+	ascii?: ThreePhaseConditionEnumStringify;
 	/**
 	 * Case of the string.
 	 * @default "any"
 	 */
-	case?: StringCaseEnumKeysType;
+	case?: StringCaseEnumStringify;
 	/**
 	 * Length of the string.
 	 * @default undefined
@@ -62,7 +62,7 @@ export interface StringFilterOptions extends Partial<Omit<StringFilterStatus, "a
 	 * Line of the string.
 	 * @default "any"
 	 */
-	line?: StringLineEnumKeysType;
+	line?: StringLineEnumStringify;
 	/** @alias length */characters?: this["length"];
 	/** @alias lengthMaximum */charactersMax?: this["lengthMaximum"];
 	/** @alias lengthMaximum */charactersMaximum?: this["lengthMaximum"];
@@ -84,11 +84,11 @@ export interface StringFilterOptions extends Partial<Omit<StringFilterStatus, "a
  */
 export class StringFilter {
 	#status: StringFilterStatus = {
-		ascii: "neutral",
-		case: "any",
+		ascii: ThreePhaseConditionEnum.Neutral,
+		case: StringCaseEnum.Any,
 		lengthMaximum: Infinity,
 		lengthMinimum: 1,
-		line: "any",
+		line: StringLineEnum.Any,
 		pattern: undefined,
 		preTrim: false
 	};
@@ -140,20 +140,20 @@ export class StringFilter {
 	}
 	/**
 	 * Whether an ASCII string.
-	 * @param {ThreePhaseConditionEnumKeysType} value
+	 * @param {ThreePhaseConditionEnum | ThreePhaseConditionEnumStringify} value
 	 * @returns {this}
 	 */
-	ascii(value: ThreePhaseConditionEnumKeysType): this {
-		this.#status.ascii = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "Filter status `ascii`");
+	ascii(value: ThreePhaseConditionEnum | ThreePhaseConditionEnumStringify): this {
+		this.#status.ascii = enumResolver<ThreePhaseConditionEnum, ThreePhaseConditionEnumStringify>(ThreePhaseConditionEnum, value, "Filter status `ascii`");
 		return this;
 	}
 	/**
 	 * Case of the string.
-	 * @param {StringCaseEnumKeysType} value
+	 * @param {StringCaseEnum | StringCaseEnumStringify} value
 	 * @returns {this}
 	 */
-	case(value: StringCaseEnumKeysType): this {
-		this.#status.case = enumResolver<StringCaseEnumKeysType, StringCaseEnumValuesType>(StringCaseEnum, value, "Filter status `case`");
+	case(value: StringCaseEnum | StringCaseEnumStringify): this {
+		this.#status.case = enumResolver<StringCaseEnum, StringCaseEnumStringify>(StringCaseEnum, value, "Filter status `case`");
 		return this;
 	}
 	/**
@@ -204,11 +204,11 @@ export class StringFilter {
 	}
 	/**
 	 * Line of the string.
-	 * @param {StringLineEnumKeysType} value
+	 * @param {StringLineEnum | StringLineEnumStringify} value
 	 * @returns {this}
 	 */
-	line(value: StringLineEnumKeysType): this {
-		this.#status.line = enumResolver<StringLineEnumKeysType, StringLineEnumValuesType>(StringLineEnum, value, "Filter status `line`");
+	line(value: StringLineEnum | StringLineEnumStringify): this {
+		this.#status.line = enumResolver<StringLineEnum, StringLineEnumStringify>(StringLineEnum, value, "Filter status `line`");
 		return this;
 	}
 	/**
@@ -291,15 +291,15 @@ export class StringFilter {
 		}
 		const itemRaw: string = this.#status.preTrim ? item.trim() : item;
 		if (
-			(this.#status.ascii === "false" && isStringASCII(itemRaw)) ||
-			(this.#status.ascii === "true" && !isStringASCII(itemRaw)) ||
-			(this.#status.case === "lower" && !isStringLowerCase(itemRaw)) ||
-			(this.#status.case === "upper" && !isStringUpperCase(itemRaw)) ||
+			(this.#status.ascii === ThreePhaseConditionEnum.False && isStringASCII(itemRaw)) ||
+			(this.#status.ascii === ThreePhaseConditionEnum.True && !isStringASCII(itemRaw)) ||
+			(this.#status.case === StringCaseEnum.Lower && !isStringLowerCase(itemRaw)) ||
+			(this.#status.case === StringCaseEnum.Upper && !isStringUpperCase(itemRaw)) ||
 			this.#status.lengthMaximum < itemRaw.length ||
 			itemRaw.length < this.#status.lengthMinimum ||
 			(this.#status.pattern instanceof RegExp && !this.#status.pattern.test(itemRaw)) ||
-			(this.#status.line === "multiple" && !isStringMultipleLine(itemRaw)) ||
-			(this.#status.line === "single" && !isStringSingleLine(itemRaw))
+			(this.#status.line === StringLineEnum.MultipleLine && !isStringMultipleLine(itemRaw)) ||
+			(this.#status.line === StringLineEnum.SingleLine && !isStringSingleLine(itemRaw))
 		) {
 			return false;
 		}

@@ -1,4 +1,4 @@
-import { enumResolver, ThreePhaseConditionEnum, type ThreePhaseConditionEnumKeysType, type ThreePhaseConditionEnumValuesType } from "../internal/enum.ts";
+import { enumResolver, ThreePhaseConditionEnum, type ThreePhaseConditionEnumStringify } from "../internal/enum.ts";
 import { ObjectMeta } from "../internal/object-meta.ts";
 export interface ObjectFilterStatus {
 	/**
@@ -20,7 +20,7 @@ export interface ObjectFilterStatus {
 	 * Whether contain configurable entries in the object.
 	 * @default "neutral"
 	 */
-	entriesConfigurable: ThreePhaseConditionEnumValuesType;
+	entriesConfigurable: ThreePhaseConditionEnum;
 	/**
 	 * Maximum entries count of the object.
 	 * @default Infinity
@@ -35,27 +35,27 @@ export interface ObjectFilterStatus {
 	 * Whether contain enumerable entries in the object.
 	 * @default "neutral"
 	 */
-	entriesEnumerable: ThreePhaseConditionEnumValuesType;
+	entriesEnumerable: ThreePhaseConditionEnum;
 	/**
 	 * Whether contain getter entries in the object.
 	 * @default "neutral"
 	 */
-	entriesGetter: ThreePhaseConditionEnumValuesType;
+	entriesGetter: ThreePhaseConditionEnum;
 	/**
 	 * Whether contain setter entries in the object.
 	 * @default "neutral"
 	 */
-	entriesSetter: ThreePhaseConditionEnumValuesType;
+	entriesSetter: ThreePhaseConditionEnum;
 	/**
 	 * Whether contain writable entries in the object.
 	 * @default "neutral"
 	 */
-	entriesWritable: ThreePhaseConditionEnumValuesType;
+	entriesWritable: ThreePhaseConditionEnum;
 	/**
 	 * Whether contain symbols in the object keys.
 	 * @default "neutral"
 	 */
-	keysSymbol: ThreePhaseConditionEnumValuesType;
+	keysSymbol: ThreePhaseConditionEnum;
 }
 export interface ObjectFilterOptions extends Partial<Omit<ObjectFilterStatus, "entriesConfigurable" | "entriesEnumerable" | "entriesGetter" | "entriesSetter" | "entriesWritable" | "keysSymbol">> {
 	/**
@@ -67,7 +67,7 @@ export interface ObjectFilterOptions extends Partial<Omit<ObjectFilterStatus, "e
 	 * Whether contain configurable entries in the object.
 	 * @default "neutral"
 	 */
-	entriesConfigurable?: ThreePhaseConditionEnumKeysType;
+	entriesConfigurable?: ThreePhaseConditionEnumStringify;
 	/**
 	 * Entries count of the object.
 	 * @default undefined
@@ -77,27 +77,27 @@ export interface ObjectFilterOptions extends Partial<Omit<ObjectFilterStatus, "e
 	 * Whether contain enumerable entries in the object.
 	 * @default "neutral"
 	 */
-	entriesEnumerable?: ThreePhaseConditionEnumKeysType;
+	entriesEnumerable?: ThreePhaseConditionEnumStringify;
 	/**
 	 * Whether contain getter entries in the object.
 	 * @default "neutral"
 	 */
-	entriesGetter?: ThreePhaseConditionEnumKeysType;
+	entriesGetter?: ThreePhaseConditionEnumStringify;
 	/**
 	 * Whether contain setter entries in the object.
 	 * @default "neutral"
 	 */
-	entriesSetter?: ThreePhaseConditionEnumKeysType;
+	entriesSetter?: ThreePhaseConditionEnumStringify;
 	/**
 	 * Whether contain writable entries in the object.
 	 * @default "neutral"
 	 */
-	entriesWritable?: ThreePhaseConditionEnumKeysType;
+	entriesWritable?: ThreePhaseConditionEnumStringify;
 	/**
 	 * Whether contain symbols in the object keys.
 	 * @default "neutral"
 	 */
-	keysSymbol?: ThreePhaseConditionEnumKeysType;
+	keysSymbol?: ThreePhaseConditionEnumStringify;
 	/**
 	 * Whether to not allow getters, setters, non-configurable, non-enumerable, and non-writable in the object, and not allow symbols in the object keys.
 	 * @default false
@@ -125,14 +125,14 @@ export class ObjectFilter {
 		allowArray: false,
 		allowNull: false,
 		allowRegExp: false,
-		entriesConfigurable: "neutral",
+		entriesConfigurable: ThreePhaseConditionEnum.Neutral,
 		entriesCountMaximum: Infinity,
 		entriesCountMinimum: 1,
-		entriesEnumerable: "neutral",
-		entriesGetter: "neutral",
-		entriesSetter: "neutral",
-		entriesWritable: "neutral",
-		keysSymbol: "neutral"
+		entriesEnumerable: ThreePhaseConditionEnum.Neutral,
+		entriesGetter: ThreePhaseConditionEnum.Neutral,
+		entriesSetter: ThreePhaseConditionEnum.Neutral,
+		entriesWritable: ThreePhaseConditionEnum.Neutral,
+		keysSymbol: ThreePhaseConditionEnum.Neutral
 	};
 	/**
 	 * Initialize the object filter.
@@ -224,11 +224,11 @@ export class ObjectFilter {
 	}
 	/**
 	 * Whether contain configurable entries in the object.
-	 * @param {ThreePhaseConditionEnumKeysType} value
+	 * @param {ThreePhaseConditionEnum | ThreePhaseConditionEnumStringify} value
 	 * @returns {this}
 	 */
-	entriesConfigurable(value: ThreePhaseConditionEnumKeysType): this {
-		this.#status.entriesConfigurable = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "Filter status `entriesConfigurable`");
+	entriesConfigurable(value: ThreePhaseConditionEnum | ThreePhaseConditionEnumStringify): this {
+		this.#status.entriesConfigurable = enumResolver<ThreePhaseConditionEnum, ThreePhaseConditionEnumStringify>(ThreePhaseConditionEnum, value, "Filter status `entriesConfigurable`");
 		return this;
 	}
 	/**
@@ -279,47 +279,47 @@ export class ObjectFilter {
 	}
 	/**
 	 * Whether contain enumerable entries in the object.
-	 * @param {ThreePhaseConditionEnumKeysType} value
+	 * @param {ThreePhaseConditionEnum | ThreePhaseConditionEnumStringify} value
 	 * @returns {this}
 	 */
-	entriesEnumerable(value: ThreePhaseConditionEnumKeysType): this {
-		this.#status.entriesEnumerable = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "Filter status `entriesEnumerable`");
+	entriesEnumerable(value: ThreePhaseConditionEnum | ThreePhaseConditionEnumStringify): this {
+		this.#status.entriesEnumerable = enumResolver<ThreePhaseConditionEnum, ThreePhaseConditionEnumStringify>(ThreePhaseConditionEnum, value, "Filter status `entriesEnumerable`");
 		return this;
 	}
 	/**
 	 * Whether contain getter entries in the object.
-	 * @param {ThreePhaseConditionEnumKeysType} value
+	 * @param {ThreePhaseConditionEnum | ThreePhaseConditionEnumStringify} value
 	 * @returns {this}
 	 */
-	entriesGetter(value: ThreePhaseConditionEnumKeysType): this {
-		this.#status.entriesGetter = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "Filter status `entriesGetter`");
+	entriesGetter(value: ThreePhaseConditionEnum | ThreePhaseConditionEnumStringify): this {
+		this.#status.entriesGetter = enumResolver<ThreePhaseConditionEnum, ThreePhaseConditionEnumStringify>(ThreePhaseConditionEnum, value, "Filter status `entriesGetter`");
 		return this;
 	}
 	/**
 	 * Whether contain setter entries in the object.
-	 * @param {ThreePhaseConditionEnumKeysType} value
+	 * @param {ThreePhaseConditionEnum | ThreePhaseConditionEnumStringify} value
 	 * @returns {this}
 	 */
-	entriesSetter(value: ThreePhaseConditionEnumKeysType): this {
-		this.#status.entriesSetter = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "Filter status `entriesSetter`");
+	entriesSetter(value: ThreePhaseConditionEnum | ThreePhaseConditionEnumStringify): this {
+		this.#status.entriesSetter = enumResolver<ThreePhaseConditionEnum, ThreePhaseConditionEnumStringify>(ThreePhaseConditionEnum, value, "Filter status `entriesSetter`");
 		return this;
 	}
 	/**
 	 * Whether contain writable entries in the object.
-	 * @param {ThreePhaseConditionEnumKeysType} value
+	 * @param {ThreePhaseConditionEnum | ThreePhaseConditionEnumStringify} value
 	 * @returns {this}
 	 */
-	entriesWritable(value: ThreePhaseConditionEnumKeysType): this {
-		this.#status.entriesWritable = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "Filter status `entriesWritable`");
+	entriesWritable(value: ThreePhaseConditionEnum | ThreePhaseConditionEnumStringify): this {
+		this.#status.entriesWritable = enumResolver<ThreePhaseConditionEnum, ThreePhaseConditionEnumStringify>(ThreePhaseConditionEnum, value, "Filter status `entriesWritable`");
 		return this;
 	}
 	/**
 	 * Whether contain symbols in the object keys.
-	 * @param {ThreePhaseConditionEnumKeysType} value
+	 * @param {ThreePhaseConditionEnum | ThreePhaseConditionEnumStringify} value
 	 * @returns {this}
 	 */
-	keysSymbol(value: ThreePhaseConditionEnumKeysType): this {
-		this.#status.keysSymbol = enumResolver<ThreePhaseConditionEnumKeysType, ThreePhaseConditionEnumValuesType>(ThreePhaseConditionEnum, value, "Filter status `keysSymbol`");
+	keysSymbol(value: ThreePhaseConditionEnum | ThreePhaseConditionEnumStringify): this {
+		this.#status.keysSymbol = enumResolver<ThreePhaseConditionEnum, ThreePhaseConditionEnumStringify>(ThreePhaseConditionEnum, value, "Filter status `keysSymbol`");
 		return this;
 	}
 	/**
@@ -332,19 +332,19 @@ export class ObjectFilter {
 			throw new TypeError(`Filter status \`plain\` is not a boolean!`);
 		}
 		if (value) {
-			this.#status.entriesConfigurable = "true";
-			this.#status.entriesEnumerable = "true";
-			this.#status.entriesGetter = "false";
-			this.#status.entriesSetter = "false";
-			this.#status.entriesWritable = "true";
-			this.#status.keysSymbol = "false";
+			this.#status.entriesConfigurable = ThreePhaseConditionEnum.True;
+			this.#status.entriesEnumerable = ThreePhaseConditionEnum.True;
+			this.#status.entriesGetter = ThreePhaseConditionEnum.False;
+			this.#status.entriesSetter = ThreePhaseConditionEnum.False;
+			this.#status.entriesWritable = ThreePhaseConditionEnum.True;
+			this.#status.keysSymbol = ThreePhaseConditionEnum.False;
 		} else {
-			this.#status.entriesConfigurable = "neutral";
-			this.#status.entriesEnumerable = "neutral";
-			this.#status.entriesGetter = "neutral";
-			this.#status.entriesSetter = "neutral";
-			this.#status.entriesWritable = "neutral";
-			this.#status.keysSymbol = "neutral";
+			this.#status.entriesConfigurable = ThreePhaseConditionEnum.Neutral;
+			this.#status.entriesEnumerable = ThreePhaseConditionEnum.Neutral;
+			this.#status.entriesGetter = ThreePhaseConditionEnum.Neutral;
+			this.#status.entriesSetter = ThreePhaseConditionEnum.Neutral;
+			this.#status.entriesWritable = ThreePhaseConditionEnum.Neutral;
+			this.#status.keysSymbol = ThreePhaseConditionEnum.Neutral;
 		}
 		return this;
 	}
@@ -381,22 +381,22 @@ export class ObjectFilter {
 		const itemObjectMeta: ObjectMeta = new ObjectMeta(item as object);
 		if (
 			Object.entries(item as object).length !== itemObjectMeta.entriesEnumerable.length ||
-			(this.#status.keysSymbol === "false" && itemObjectMeta.keysSymbol.length > 0) ||
-			(this.#status.keysSymbol === "true" && itemObjectMeta.keysSymbol.length === 0) ||
+			(this.#status.keysSymbol === ThreePhaseConditionEnum.False && itemObjectMeta.keysSymbol.length > 0) ||
+			(this.#status.keysSymbol === ThreePhaseConditionEnum.True && itemObjectMeta.keysSymbol.length === 0) ||
 			this.#status.entriesCountMaximum < itemObjectMeta.entriesGetter.length + itemObjectMeta.entriesNonAccessor.length + itemObjectMeta.entriesSetter.length + itemObjectMeta.keysSymbol.length ||
 			itemObjectMeta.entriesGetter.length + itemObjectMeta.entriesNonAccessor.length + itemObjectMeta.entriesSetter.length + itemObjectMeta.keysSymbol.length < this.#status.entriesCountMinimum ||
-			(this.#status.entriesConfigurable === "false" && itemObjectMeta.entriesConfigurable.length > 0) ||
-			(this.#status.entriesConfigurable === "true" && itemObjectMeta.entriesNonConfigurable.length > 0) ||
-			(this.#status.entriesEnumerable === "false" && itemObjectMeta.entriesEnumerable.length > 0) ||
-			(this.#status.entriesEnumerable === "true" && itemObjectMeta.entriesNonEnumerable.length > 0) ||
-			(this.#status.entriesGetter === "false" && itemObjectMeta.entriesGetter.length > 0) ||
-			(this.#status.entriesSetter === "false" && itemObjectMeta.entriesSetter.length > 0) ||
+			(this.#status.entriesConfigurable === ThreePhaseConditionEnum.False && itemObjectMeta.entriesConfigurable.length > 0) ||
+			(this.#status.entriesConfigurable === ThreePhaseConditionEnum.True && itemObjectMeta.entriesNonConfigurable.length > 0) ||
+			(this.#status.entriesEnumerable === ThreePhaseConditionEnum.False && itemObjectMeta.entriesEnumerable.length > 0) ||
+			(this.#status.entriesEnumerable === ThreePhaseConditionEnum.True && itemObjectMeta.entriesNonEnumerable.length > 0) ||
+			(this.#status.entriesGetter === ThreePhaseConditionEnum.False && itemObjectMeta.entriesGetter.length > 0) ||
+			(this.#status.entriesSetter === ThreePhaseConditionEnum.False && itemObjectMeta.entriesSetter.length > 0) ||
 			((
-				this.#status.entriesGetter === "true" ||
-				this.#status.entriesSetter === "true"
+				this.#status.entriesGetter === ThreePhaseConditionEnum.True ||
+				this.#status.entriesSetter === ThreePhaseConditionEnum.True
 			) && itemObjectMeta.entriesNonAccessor.length > 0) ||
-			(this.#status.entriesWritable === "false" && itemObjectMeta.entriesWritable.length > 0) ||
-			(this.#status.entriesWritable === "true" && itemObjectMeta.entriesNonWritable.length > 0)
+			(this.#status.entriesWritable === ThreePhaseConditionEnum.False && itemObjectMeta.entriesWritable.length > 0) ||
+			(this.#status.entriesWritable === ThreePhaseConditionEnum.True && itemObjectMeta.entriesNonWritable.length > 0)
 		) {
 			return false;
 		}

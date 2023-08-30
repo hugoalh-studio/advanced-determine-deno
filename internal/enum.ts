@@ -20,7 +20,7 @@ export function enumResolver<Eo, Es>(enumObject: object, input: Eo | Es, paramet
 			input === `${key.slice(0, 1).toLowerCase()}${key.slice(1)}` ||
 			input === `${key.slice(0, 1).toUpperCase()}${key.slice(1)}`
 		) {
-			//@ts-ignore Type determine error.
+			//@ts-ignore Determine error.
 			return enumObject[key] as Eo;
 		}
 	}

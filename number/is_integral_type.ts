@@ -1,0 +1,1 @@
+export { isNumericIntegralType as isNumberNumericIntegralType, isNumericIntegralType as default, NumericIntegralTypeEnum, type NumericIntegralTypeEnumStringify } from "../numeric/is_integral_type.ts";

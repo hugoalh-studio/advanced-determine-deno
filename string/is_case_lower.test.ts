@@ -1,0 +1,8 @@
+import { assertEquals } from "https://deno.land/std@0.201.0/assert/assert_equals.ts";
+import { isStringCaseLower } from "./is_case_lower.ts";
+Deno.test("False 1", () => {
+	assertEquals(isStringCaseLower("Hello, world!"), false);
+});
+Deno.test("True 1", () => {
+	assertEquals(isStringCaseLower("qwerty"), true);
+});

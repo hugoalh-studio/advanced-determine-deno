@@ -5,7 +5,7 @@ Deno.test("False 1", () => {
 		a: 1,
 		b: 2,
 		c: 3,
-		d: () => {}
+		d: () => { }
 	}), false);
 });
 Deno.test("False 2", () => {
@@ -23,6 +23,27 @@ Deno.test("False 3", () => {
 		c: 3,
 		d: new Set()
 	}), false);
+});
+Deno.test("False 4", () => {
+	assertEquals(isJSON(NaN), false);
+});
+Deno.test("False 5", () => {
+	assertEquals(isJSON(Infinity), false);
+});
+Deno.test("False 6", () => {
+	assertEquals(isJSON(-Infinity), false);
+});
+Deno.test("False 7", () => {
+	assertEquals(isJSON(undefined), false);
+});
+Deno.test("False 8", () => {
+	assertEquals(isJSON(void 0), false);
+});
+Deno.test("False 9", () => {
+	assertEquals(isJSON(this), false);
+});
+Deno.test("False 10", () => {
+	assertEquals(isJSON(async function* () { }), false);
 });
 Deno.test("True 1", () => {
 	assertEquals(isJSON({

@@ -28,26 +28,3 @@ export function resolveEnum<Eo, Es>(enumObject: object, input: Eo | Es, paramete
 		return [value, `${value.slice(0, 1).toLowerCase()}${value.slice(1)}`, `${value.slice(0, 1).toUpperCase()}${value.slice(1)}`];
 	})).values()).sort().join("\", \"")}"`);
 }
-export enum JSONRootTypeEnum {
-	Any = "any",
-	Array = "array",
-	Literal = "literal",
-	Object = "object"
-}
-export type JSONRootTypeEnumStringify = EnumCase<keyof typeof JSONRootTypeEnum>;
-export enum ThreePhaseConditionEnum {
-	Allow = "true",
-	Deny = "false",
-	Exclude = "false",
-	Exclusive = "false",
-	False = "false",
-	Include = "true",
-	Inclusive = "true",
-	Neutral = "neutral",
-	None = "neutral",
-	Null = "neutral",
-	True = "true",
-	Undefine = "neutral",
-	Undefined = "neutral"
-}
-export type ThreePhaseConditionEnumStringify = EnumCase<keyof typeof ThreePhaseConditionEnum>;

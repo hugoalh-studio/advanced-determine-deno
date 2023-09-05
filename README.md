@@ -63,13 +63,12 @@ import * as advancedDetermine from "<URL>";// Namespace Import
 - `isNumberSafe`
 - `isObjectPlain`
 - `isStringASCII`
-- `isStringLowerCase`
-- `isStringMultipleLine`
+- `isStringCaseLower`
+- `isStringCaseUpper`
 - `isStringSingleLine`
 - `isStringTrimmable`
 - `isStringTrimmableEnd`
 - `isStringTrimmableStart`
-- `isStringUpperCase`
 - `isSyncFunction`
 - `isSyncGenerator`
 - `isSyncGeneratorFunction`
@@ -77,10 +76,18 @@ import * as advancedDetermine from "<URL>";// Namespace Import
 ### Example
 
 - ```ts
+  isArrayUnique([{ foo: "bar" }, { foo: "bar" }]);
+  //=> false
+  ```
+- ```ts
   isArrayUniqueReference([{ foo: "bar" }, { foo: "bar" }]);
   //=> true
   ```
 - ```ts
-  isArrayUnique([{ foo: "bar" }, { foo: "bar" }]);
+  isBigIntPrime(17n);
+  //=> true
+  ```
+- ```ts
+  isStringCaseUpper("Hello, world!");
   //=> false
   ```

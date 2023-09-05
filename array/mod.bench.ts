@@ -8,11 +8,14 @@ Deno.bench("Unique 2", { permissions: "none" }, () => {
 	isArrayUnique([{ foo: "bar" }, { foo: "bar" }]);
 });
 Deno.bench("Unique 3", { permissions: "none" }, () => {
-	isArrayUnique([1, 2, 3]);
+	isArrayUnique([element1, { foo: "bar" }]);
 });
 Deno.bench("UniqueReference 1", { permissions: "none" }, () => {
 	isArrayUniqueReference([element1, element1]);
 });
 Deno.bench("UniqueReference 2", { permissions: "none" }, () => {
+	isArrayUniqueReference([element1, { foo: "bar" }]);
+});
+Deno.bench("UniqueReference 3", { permissions: "none" }, () => {
 	isArrayUniqueReference([{ foo: "bar" }, { foo: "bar" }]);
 });

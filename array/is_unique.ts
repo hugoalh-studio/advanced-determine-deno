@@ -1,4 +1,4 @@
-import uniqueArray from "https://deno.land/x/unique_array@v1.0.10/mod.ts";
+import uniqueArray from "https://deno.land/x/unique_array@v1.0.11/mod.ts";
 /**
  * Determine whether the array is contain unique elements.
  * @param {unknown[]} item Item that need to determine.

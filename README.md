@@ -66,9 +66,21 @@ import * as advancedDetermine from "<URL>";// Namespace Import
 - `isStringLowerCase`
 - `isStringMultipleLine`
 - `isStringSingleLine`
+- `isStringTrimmable`
+- `isStringTrimmableEnd`
+- `isStringTrimmableStart`
 - `isStringUpperCase`
 - `isSyncFunction`
 - `isSyncGenerator`
 - `isSyncGeneratorFunction`
 
 ### Example
+
+- ```ts
+  isArrayUniqueReference([{ foo: "bar" }, { foo: "bar" }]);
+  //=> true
+  ```
+- ```ts
+  isArrayUnique([{ foo: "bar" }, { foo: "bar" }]);
+  //=> false
+  ```

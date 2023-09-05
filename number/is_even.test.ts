@@ -1,8 +1,8 @@
 import { assertEquals } from "https://deno.land/std@0.201.0/assert/assert_equals.ts";
-import { isNumberEven } from "./is_even.ts"
-Deno.test("False 1", () => {
+import { isNumberEven } from "./is_even.ts";
+Deno.test("False 1", { permissions: "none" }, () => {
 	assertEquals(isNumberEven(69), false);
 });
-Deno.test("True 1", () => {
+Deno.test("True 1", { permissions: "none" }, () => {
 	assertEquals(isNumberEven(64), true);
 });

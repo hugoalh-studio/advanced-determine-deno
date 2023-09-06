@@ -5,10 +5,10 @@ Deno.test("Unique False 1", { permissions: "none" }, () => {
 	assertEquals(isArrayUnique([element1, element1]), false);
 });
 Deno.test("Unique False 2", { permissions: "none" }, () => {
-	assertEquals(isArrayUnique([{ foo: "bar" }, { foo: "bar" }]), false);
+	assertEquals(isArrayUnique([element1, { foo: "bar" }]), false);
 });
 Deno.test("Unique False 3", { permissions: "none" }, () => {
-	assertEquals(isArrayUnique([element1, { foo: "bar" }]), false);
+	assertEquals(isArrayUnique([{ foo: "bar" }, { foo: "bar" }]), false);
 });
 Deno.test("UniqueReference False 1", { permissions: "none" }, () => {
 	assertEquals(isArrayUniqueReference([element1, element1]), false);

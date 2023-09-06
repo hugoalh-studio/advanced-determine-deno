@@ -10,4 +10,4 @@ export { isSyncGeneratorFunction, isSynchronousGeneratorFunction } from "./is_sy
 export { isNumberEven, isNumberFloat, isNumberNegative, isNumberNumericIntegralType, isNumberOdd, isNumberPositive, isNumberPrime, isNumberSafe } from "./number/mod.ts";
 export { isNumericIntegralType, isNumericPrime, NumericIntegralTypeEnum, type NumericIntegralTypeEnumStringify } from "./numeric/mod.ts";
 export { isObjectPlain } from "./object/mod.ts";
-export { isStringASCII, isStringCaseLower, isStringCaseUpper, isStringSingleLine, isStringTrimmable, isStringTrimmableEnd, isStringTrimmableStart } from "./string/mod.ts";
+export { isStringASCII, isStringCaseLower, isStringCaseUpper, isStringLowerCase, isStringSingleLine, isStringTrimmable, isStringTrimmableEnd, isStringTrimmableStart, isStringUpperCase } from "./string/mod.ts";

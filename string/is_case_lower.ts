@@ -6,4 +6,7 @@
 export function isStringCaseLower(item: string): boolean {
 	return (item === item.toLowerCase());
 }
+export {
+	isStringCaseLower as isStringLowerCase
+};
 export default isStringCaseLower;

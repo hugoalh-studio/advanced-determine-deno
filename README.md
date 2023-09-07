@@ -33,15 +33,15 @@ A Deno module to provide advanced method to determine item.
 - **Deno Land:** *N/A*
 - **DenoPKG:**
   ```
-  https://denopkg.com/hugoalh-studio/shuffle-array-deno[@<Tag>]/mod.ts
+  https://denopkg.com/hugoalh-studio/advanced-determine-deno[@<Tag>]/mod.ts
   ```
 - **GitHub Raw *\[Require Tag\]*:**
   ```
-  https://raw.githubusercontent.com/hugoalh-studio/shuffle-array-deno/<Tag>/mod.ts
+  https://raw.githubusercontent.com/hugoalh-studio/advanced-determine-deno/<Tag>/mod.ts
   ```
 - **Pax:**
   ```
-  https://pax.deno.dev/hugoalh-studio/shuffle-array-deno[@<Tag>]/mod.ts
+  https://pax.deno.dev/hugoalh-studio/advanced-determine-deno[@<Tag>]/mod.ts
   ```
 
 ## API (Excerpt)

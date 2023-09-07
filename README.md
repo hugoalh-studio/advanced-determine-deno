@@ -13,32 +13,40 @@ A Deno module to provide advanced method to determine item.
 >
 > - [NodeJS](https://github.com/hugoalh-studio/advanced-determine-nodejs)
 
-## 📓 Documentation (Excerpt)
+## 📥 Import
 
-For the full documentation, please visit the [GitHub Repository Wiki](https://github.com/hugoalh-studio/advanced-determine-deno/wiki).
+### Deno
 
-### Getting Started
+- **Target Version:** >= v1.34.0
+- **Require Permission:** *N/A*
 
-- Deno >= v1.34.0
+#### From
 
-```ts
-/* Either */
-import { ... } from "<URL>";// Named Import
-import * as advancedDetermine from "<URL>";// Namespace Import
-```
+> **ℹ️ Notice:** Although it is recommended to import with default module path `mod.ts` in general, it is also able to import with submodule path (if available), but do not import that submodule if either:
+>
+> - It's file path has an underscore prefix (e.g.: `_foo.ts`, `_util/bar.ts`).
+> - It is a benchmark or test file (e.g.: `foo.bench.ts`, `foo.test.ts`).
+> - It's symbol has an underscore prefix (e.g.: `export function _baz() {}`).
+>
+> These elements are not considered part of the public API, thus no stability is guaranteed for them.
 
-| **Domain / Registry** | **URL** |
-|:-:|:--|
-| Deno Land | *N/A* |
-| DenoPKG | `https://denopkg.com/hugoalh-studio/advanced-determine-deno[@<Tag>]/mod.ts` |
-| GitHub Raw **\*** | `https://raw.githubusercontent.com/hugoalh-studio/advanced-determine-deno/<Tag>/mod.ts` |
-| Pax | `https://pax.deno.dev/hugoalh-studio/advanced-determine-deno[@<Tag>]/mod.ts` |
+- **Deno Land:** *N/A*
+- **DenoPKG:**
+  ```
+  https://denopkg.com/hugoalh-studio/shuffle-array-deno[@<Tag>]/mod.ts
+  ```
+- **GitHub Raw *\[Require Tag\]*:**
+  ```
+  https://raw.githubusercontent.com/hugoalh-studio/shuffle-array-deno/<Tag>/mod.ts
+  ```
+- **Pax:**
+  ```
+  https://pax.deno.dev/hugoalh-studio/shuffle-array-deno[@<Tag>]/mod.ts
+  ```
 
-**\*:** Must provide a tag.
+## API (Excerpt)
 
-### API
-
-#### Function
+### Function
 
 - `isArrayStrict`
 - `isArrayUnique`
@@ -46,21 +54,25 @@ import * as advancedDetermine from "<URL>";// Namespace Import
 - `isAsyncFunction`
 - `isAsyncGenerator`
 - `isAsyncGeneratorFunction`
+- `isBigIntegerEven`
 - `isBigIntEven`
-- `isBigIntIntegralNumericType`
 - `isBigIntNegative`
+- `isBigIntNumericIntegralType`
 - `isBigIntOdd`
 - `isBigIntPositive`
 - `isBigIntPrime`
 - `isBigIntSafe`
+- `isJSON`
 - `isNumberEven`
 - `isNumberFloat`
-- `isNumberIntegralNumericType`
 - `isNumberNegative`
+- `isNumberNumericIntegralType`
 - `isNumberOdd`
 - `isNumberPositive`
 - `isNumberPrime`
 - `isNumberSafe`
+- `isNumericIntegralType`
+- `isNumericPrime`
 - `isObjectPlain`
 - `isStringASCII`
 - `isStringCaseLower`
@@ -73,21 +85,29 @@ import * as advancedDetermine from "<URL>";// Namespace Import
 - `isSyncGenerator`
 - `isSyncGeneratorFunction`
 
-### Example
+## Example
 
 - ```ts
+  import { isArrayUnique } from "https://raw.githubusercontent.com/hugoalh-studio/advanced-determine-deno/main/array/is_unique.ts";
+
   isArrayUnique([{ foo: "bar" }, { foo: "bar" }]);
   //=> false
   ```
 - ```ts
+  import { isArrayUniqueReference } from "https://raw.githubusercontent.com/hugoalh-studio/advanced-determine-deno/main/array/is_unique_reference.ts";
+
   isArrayUniqueReference([{ foo: "bar" }, { foo: "bar" }]);
   //=> true
   ```
 - ```ts
-  isBigIntPrime(17n);
+  import { isNumericPrime } from "https://raw.githubusercontent.com/hugoalh-studio/advanced-determine-deno/main/numeric/is_prime.ts";
+
+  isNumericPrime(17n);
   //=> true
   ```
 - ```ts
+  import { isStringCaseUpper } from "https://raw.githubusercontent.com/hugoalh-studio/advanced-determine-deno/main/string/is_case_upper.ts";
+
   isStringCaseUpper("Hello, world!");
   //=> false
   ```

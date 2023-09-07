@@ -1,4 +1,4 @@
-import { resolveEnum, type EnumCase } from "../internal/enum.ts";
+import { resolveEnum, type EnumCase } from "../_internal/enum.ts";
 export enum NumericIntegralTypeEnum {
 	Byte = "uint8",
 	Char = "int8",

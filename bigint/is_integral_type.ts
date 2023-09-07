@@ -1,1 +1,0 @@
-export { isNumericIntegralType as isBigIntNumericIntegralType, isNumericIntegralType as isBigIntegerNumericIntegralType, isNumericIntegralType as default, NumericIntegralTypeEnum, type NumericIntegralTypeEnumStringify } from "../numeric/is_integral_type.ts";

@@ -9,42 +9,36 @@
 
 A Deno module to provide advanced method to determine item.
 
-> **🔗 Other Edition:**
->
-> - [NodeJS](https://github.com/hugoalh-studio/advanced-determine-nodejs)
-
 ## 📥 Import
 
 ### Deno
 
 - **Target Version:** >= v1.34.0
 - **Require Permission:** *N/A*
+- **Domain/Registry:**
+  - **Deno Land:** *N/A*
+  - **DenoPKG:**
+    ```
+    https://denopkg.com/hugoalh-studio/advanced-determine-deno[@<Tag>]/mod.ts
+    ```
+  - **GitHub Raw *\[Require Tag\]*:**
+    ```
+    https://raw.githubusercontent.com/hugoalh-studio/advanced-determine-deno/<Tag>/mod.ts
+    ```
+  - **Pax:**
+    ```
+    https://pax.deno.dev/hugoalh-studio/advanced-determine-deno[@<Tag>]/mod.ts
+    ```
 
-#### From
-
-> **ℹ️ Notice:** Although it is recommended to import with default module path `mod.ts` in general, it is also able to import with submodule path (if available), but do not import that submodule if either:
+> **ℹ️ Notice:** Although it is recommended to import module with main path `mod.ts` in general, it is also able to import part of the module with sub path (if available), but do not import if:
 >
-> - It's file path has an underscore prefix (e.g.: `_foo.ts`, `_util/bar.ts`).
-> - It is a benchmark or test file (e.g.: `foo.bench.ts`, `foo.test.ts`).
-> - It's symbol has an underscore prefix (e.g.: `export function _baz() {}`).
+> - it's file path has an underscore prefix (e.g.: `_foo.ts`, `_util/bar.ts`), or
+> - it is a benchmark or test file (e.g.: `foo.bench.ts`, `foo.test.ts`), or
+> - it's symbol has an underscore prefix (e.g.: `export function _baz() {}`).
 >
 > These elements are not considered part of the public API, thus no stability is guaranteed for them.
 
-- **Deno Land:** *N/A*
-- **DenoPKG:**
-  ```
-  https://denopkg.com/hugoalh-studio/advanced-determine-deno[@<Tag>]/mod.ts
-  ```
-- **GitHub Raw *\[Require Tag\]*:**
-  ```
-  https://raw.githubusercontent.com/hugoalh-studio/advanced-determine-deno/<Tag>/mod.ts
-  ```
-- **Pax:**
-  ```
-  https://pax.deno.dev/hugoalh-studio/advanced-determine-deno[@<Tag>]/mod.ts
-  ```
-
-## API (Excerpt)
+## 🧩 API (Excerpt)
 
 ### Function
 
@@ -81,7 +75,12 @@ A Deno module to provide advanced method to determine item.
 - `isSyncGenerator`
 - `isSyncGeneratorFunction`
 
-## Example
+> **ℹ️ Notice:** Documentation is included inside the script file, can view it via:
+>
+> - [Deno CLI `deno doc`](https://deno.land/manual/tools/documentation_generator)
+> - [Deno Doc Land](https://doc.deno.land)
+
+## ✍️ Example
 
 - ```ts
   import { isArrayUnique } from "https://raw.githubusercontent.com/hugoalh-studio/advanced-determine-deno/main/array/is_unique.ts";
@@ -107,3 +106,7 @@ A Deno module to provide advanced method to determine item.
   isStringCaseUpper("Hello, world!");
   //=> false
   ```
+
+## 🔗 Other Edition
+
+- [NodeJS](https://github.com/hugoalh-studio/advanced-determine-nodejs)

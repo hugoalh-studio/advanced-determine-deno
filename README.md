@@ -40,6 +40,11 @@ A Deno module to provide advanced method to determine item.
 
 ## 🧩 API (Excerpt)
 
+> **ℹ️ Notice:** Documentation is included inside the script file, can view it via:
+>
+> - [Deno CLI `deno doc`](https://deno.land/manual/tools/documentation_generator)
+> - [Deno Doc Land](https://doc.deno.land)
+
 ### Function
 
 - `isArrayStrict`
@@ -74,11 +79,6 @@ A Deno module to provide advanced method to determine item.
 - `isSyncFunction`
 - `isSyncGenerator`
 - `isSyncGeneratorFunction`
-
-> **ℹ️ Notice:** Documentation is included inside the script file, can view it via:
->
-> - [Deno CLI `deno doc`](https://deno.land/manual/tools/documentation_generator)
-> - [Deno Doc Land](https://doc.deno.land)
 
 ## ✍️ Example
 

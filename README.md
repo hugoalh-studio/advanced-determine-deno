@@ -59,6 +59,7 @@ A Deno module to provide advanced method to determine item.
 - `isBigIntOdd`
 - `isBigIntPositive`
 - `isBigIntSafe`
+- `isEmpty`
 - `isJSON`
 - `isNumberEven`
 - `isNumberFloat`

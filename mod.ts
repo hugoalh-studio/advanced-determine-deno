@@ -3,6 +3,7 @@ export { isBigIntEven, isBigIntNegative, isBigIntOdd, isBigIntPositive, isBigInt
 export { isAsyncFunction, isAsynchronousFunction } from "./is_async_function.ts";
 export { isAsyncGenerator, isAsynchronousGenerator } from "./is_async_generator.ts";
 export { isAsyncGeneratorFunction, isAsynchronousGeneratorFunction } from "./is_async_generator_function.ts";
+export { isEmpty } from "./is_empty.ts";
 export { isJSON } from "./is_json.ts";
 export { isSyncFunction, isSynchronousFunction } from "./is_sync_function.ts";
 export { isSyncGenerator, isSynchronousGenerator } from "./is_sync_generator.ts";

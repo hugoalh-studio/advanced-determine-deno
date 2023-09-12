@@ -37,7 +37,7 @@ export function isJSON(item: unknown): item is JsonValue {
 			}
 			for (const key in item) {
 				if (Object.hasOwn(item, key)) {
-					//@ts-ignore No impact.
+					//@ts-ignore Impact not exists.
 					if (!isJSON(item[key])) {
 						return false;
 					}

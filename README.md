@@ -9,25 +9,24 @@
 
 A Deno module to provide advanced method to determine item.
 
-## 📥 Import
+## 🔰 Begin
 
 ### Deno
 
 - **Target Version:** >= v1.34.0
 - **Require Permission:** *N/A*
 - **Domain/Registry:**
-  - **Deno Land:** *N/A*
-  - **DenoPKG:**
+  - DenoPKG
+    ```ts
+    import ... from "https://denopkg.com/hugoalh-studio/advanced-determine-deno[@<Tag>]/mod.ts";
     ```
-    https://denopkg.com/hugoalh-studio/advanced-determine-deno[@<Tag>]/mod.ts
+  - GitHub Raw *\[Require Tag\]*
+    ```ts
+    import ... from "https://raw.githubusercontent.com/hugoalh-studio/advanced-determine-deno/<Tag>/mod.ts";
     ```
-  - **GitHub Raw *\[Require Tag\]*:**
-    ```
-    https://raw.githubusercontent.com/hugoalh-studio/advanced-determine-deno/<Tag>/mod.ts
-    ```
-  - **Pax:**
-    ```
-    https://pax.deno.dev/hugoalh-studio/advanced-determine-deno[@<Tag>]/mod.ts
+  - Pax
+    ```ts
+    import ... from "https://pax.deno.dev/hugoalh-studio/advanced-determine-deno[@<Tag>]/mod.ts";
     ```
 
 > **ℹ️ Notice:** Although it is recommended to import main module with path `mod.ts` in general, it is also able to import part of the module with sub path if available, but do not import if:

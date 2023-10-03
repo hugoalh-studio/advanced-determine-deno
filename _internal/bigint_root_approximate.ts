@@ -1,9 +1,12 @@
+/**
+ * @access private
+ */
 interface BigIntRootApproximateResult {
 	ceil: bigint;
 	floor: bigint;
 }
 /**
- * Root for the big integer, approximate.
+ * Root for the big integer, approximate. From https://stackoverflow.com/a/64190462.
  * @param {bigint} radicand Radicand.
  * @param {bigint} index Index.
  * @returns {BigIntRootApproximateResult} Root, approximate.
@@ -24,8 +27,8 @@ export function bigintRootApproximate(radicand: bigint, index = 2n): BigIntRootA
 			floor: radicand,
 		};
 	}
-	let u: bigint = radicand;
 	let s: bigint = radicand + 1n;
+	let u: bigint = radicand;
 	while (u < s) {
 		s = u;
 		u = ((u * (index - 1n)) + radicand / (u ** (index - 1n))) / index;

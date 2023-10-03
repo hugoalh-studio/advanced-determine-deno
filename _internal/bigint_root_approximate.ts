@@ -15,6 +15,15 @@ export function bigintRootApproximate(radicand: bigint, index = 2n): BigIntRootA
 	if (!(index > 0n)) {
 		throw new RangeError(`Index is not a bigint which is > 0!`);
 	}
+	if (
+		radicand === 0n ||
+		index === 1n
+	) {
+		return {
+			ceil: radicand,
+			floor: radicand,
+		};
+	}
 	let u: bigint = radicand;
 	let s: bigint = radicand + 1n;
 	while (u < s) {

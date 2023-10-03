@@ -1,20 +1,4 @@
-/**
- * Square root for the big integer. From https://stackoverflow.com/a/53684036.
- * @access private
- * @param {bigint} n Big integer.
- * @param {bigint} [x0=1n]
- * @returns {bigint}
- */
-function bigIntegerSquareRoot(n: bigint, x0 = 1n): bigint {
-	const x1: bigint = (n / x0 + x0) >> 1n;
-	if (
-		x0 === x1 ||
-		x0 === x1 - 1n
-	) {
-		return x0;
-	}
-	return bigIntegerSquareRoot(n, x1);
-}
+import { bigintRootApproximate } from "../_internal/bigint_root_approximate.ts";
 /**
  * Determine whether the numeric is prime.
  * @param {bigint | number} item Item that need to determine.
@@ -47,7 +31,8 @@ export function isNumericPrime(item: bigint | number): boolean {
 	) {
 		return false;
 	}
-	for (let divisor = 3n; divisor <= bigIntegerSquareRoot(itemBigInteger) + 1n; divisor += 2n) {
+	const divisorMaximum: bigint = bigintRootApproximate(itemBigInteger).ceil;
+	for (let divisor = 3n; divisor <= divisorMaximum; divisor += 2n) {
 		if (itemBigInteger % divisor === 0n) {
 			return false;
 		}

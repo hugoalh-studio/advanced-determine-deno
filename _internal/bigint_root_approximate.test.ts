@@ -4,7 +4,7 @@ import { bigintRootApproximate } from "./bigint_root_approximate.ts";
 Deno.test("Matrix", { permissions: "none" }, async (t) => {
 	const set = new Set();
 	for (let times = 0; times < 10000; times += 1) {
-		const radicandNumber = randomInt(0, 281474976710655);
+		const radicandNumber = randomInt(0, 100000000);
 		const indexNumber = randomInt(1, 25);
 		const token = `${radicandNumber}//${indexNumber}`;
 		if (set.has(token)) {

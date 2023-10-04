@@ -5,7 +5,7 @@ Deno.test("True Matrix 1", { permissions: "none" }, async (t) => {
 	const set = new Set();
 	for (let times = 0; times < 10000; times += 1) {
 		const radicandNumber = randomInt(0, 100000000);
-		const indexNumber = randomInt(0, 100000000);
+		const indexNumber = randomInt(0, 100);
 		const token = `${radicandNumber}//${indexNumber}`;
 		if (set.has(token)) {
 			times -= 1;

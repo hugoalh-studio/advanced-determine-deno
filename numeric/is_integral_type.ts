@@ -86,7 +86,7 @@ export enum NumericIntegralTypeEnum {
 }
 export type NumericIntegralTypeEnumStringify = keyof typeof NumericIntegralTypeEnum;
 type NumericIntegralTypeEnumValue = `${NumericIntegralTypeEnum}`;
-const enumNumericIntegralTypeKeys: Set<NumericIntegralTypeEnumStringify> = enumGetKeys<NumericIntegralTypeEnum, NumericIntegralTypeEnumStringify>(NumericIntegralTypeEnum);
+const enumNumericIntegralTypeKeys: Set<NumericIntegralTypeEnumStringify> = enumGetKeys<NumericIntegralTypeEnumStringify>(NumericIntegralTypeEnum);
 type NumericIntegralTypeRange = [
 	minimum: bigint,
 	maximum: bigint

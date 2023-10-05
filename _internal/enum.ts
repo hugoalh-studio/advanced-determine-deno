@@ -1,10 +1,9 @@
 /**
- * @template {unknown} O
  * @template {unknown} K
  * @param {object} enumObject
  * @returns {Set<K>}
  */
-export function enumGetKeys<O, K>(enumObject: object): Set<K> {
+export function enumGetKeys<K>(enumObject: object): Set<K> {
 	return new Set(Object.keys(enumObject).sort()) as Set<K>;
 }
 /**

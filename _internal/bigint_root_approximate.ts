@@ -24,7 +24,7 @@ export function bigintRootApproximate(radicand: bigint, index = 2n): BigIntRootA
 	) {
 		return {
 			ceil: radicand,
-			floor: radicand,
+			floor: radicand
 		};
 	}
 	let s: bigint = radicand + 1n;

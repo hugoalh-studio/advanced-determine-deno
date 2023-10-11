@@ -11,7 +11,7 @@ jobs:
     with:
       payload: |
         embeds:
-          - title: "Advanced Determine (Deno)"
+          - title: "Determine (Deno)"
             description: |
               > ${{github.event.repository.description}}
 

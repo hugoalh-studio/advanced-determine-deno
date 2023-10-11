@@ -1,13 +1,13 @@
-# Advanced Determine (Deno)
+# Determine (Deno)
 
 [⚖️ MIT](./LICENSE.md)
-[![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/hugoalh-studio/advanced-determine-deno?label=Grade&logo=codefactor&logoColor=ffffff&style=flat-square "CodeFactor Grade")](https://www.codefactor.io/repository/github/hugoalh-studio/advanced-determine-deno)
+[![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/hugoalh-studio/determine-deno?label=Grade&logo=codefactor&logoColor=ffffff&style=flat-square "CodeFactor Grade")](https://www.codefactor.io/repository/github/hugoalh-studio/determine-deno)
 
 |  | **Heat** | **Release - Latest** | **Release - Pre** |
 |:-:|:-:|:-:|:-:|
-| [![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=ffffff&style=flat-square "GitHub")](https://github.com/hugoalh-studio/advanced-determine-deno) | [![GitHub Stars](https://img.shields.io/github/stars/hugoalh-studio/advanced-determine-deno?label=&logoColor=ffffff&style=flat-square "GitHub Stars")](https://github.com/hugoalh-studio/advanced-determine-deno/stargazers) \| ![GitHub Total Downloads](https://img.shields.io/github/downloads/hugoalh-studio/advanced-determine-deno/total?label=&style=flat-square "GitHub Total Downloads") | ![GitHub Latest Release Version](https://img.shields.io/github/release/hugoalh-studio/advanced-determine-deno?sort=semver&label=&style=flat-square "GitHub Latest Release Version") (![GitHub Latest Release Date](https://img.shields.io/github/release-date/hugoalh-studio/advanced-determine-deno?label=&style=flat-square "GitHub Latest Release Date")) | ![GitHub Latest Pre-Release Version](https://img.shields.io/github/release/hugoalh-studio/advanced-determine-deno?include_prereleases&sort=semver&label=&style=flat-square "GitHub Latest Pre-Release Version") (![GitHub Latest Pre-Release Date](https://img.shields.io/github/release-date-pre/hugoalh-studio/advanced-determine-deno?label=&style=flat-square "GitHub Latest Pre-Release Date")) |
+| [![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=ffffff&style=flat-square "GitHub")](https://github.com/hugoalh-studio/determine-deno) | [![GitHub Stars](https://img.shields.io/github/stars/hugoalh-studio/determine-deno?label=&logoColor=ffffff&style=flat-square "GitHub Stars")](https://github.com/hugoalh-studio/determine-deno/stargazers) \| ![GitHub Total Downloads](https://img.shields.io/github/downloads/hugoalh-studio/determine-deno/total?label=&style=flat-square "GitHub Total Downloads") | ![GitHub Latest Release Version](https://img.shields.io/github/release/hugoalh-studio/determine-deno?sort=semver&label=&style=flat-square "GitHub Latest Release Version") (![GitHub Latest Release Date](https://img.shields.io/github/release-date/hugoalh-studio/determine-deno?label=&style=flat-square "GitHub Latest Release Date")) | ![GitHub Latest Pre-Release Version](https://img.shields.io/github/release/hugoalh-studio/determine-deno?include_prereleases&sort=semver&label=&style=flat-square "GitHub Latest Pre-Release Version") (![GitHub Latest Pre-Release Date](https://img.shields.io/github/release-date-pre/hugoalh-studio/determine-deno?label=&style=flat-square "GitHub Latest Pre-Release Date")) |
 
-A Deno module to provide advanced method to determine item.
+A Deno module to determine item.
 
 ## 🔰 Begin
 
@@ -18,15 +18,15 @@ A Deno module to provide advanced method to determine item.
 - **Domain/Registry:**
   - DenoPKG
     ```ts
-    import ... from "https://denopkg.com/hugoalh-studio/advanced-determine-deno[@<Tag>]/mod.ts";
+    import ... from "https://denopkg.com/hugoalh-studio/determine-deno[@<Tag>]/mod.ts";
     ```
   - GitHub Raw *\[Require Tag\]*
     ```ts
-    import ... from "https://raw.githubusercontent.com/hugoalh-studio/advanced-determine-deno/<Tag>/mod.ts";
+    import ... from "https://raw.githubusercontent.com/hugoalh-studio/determine-deno/<Tag>/mod.ts";
     ```
   - Pax
     ```ts
-    import ... from "https://pax.deno.dev/hugoalh-studio/advanced-determine-deno[@<Tag>]/mod.ts";
+    import ... from "https://pax.deno.dev/hugoalh-studio/determine-deno[@<Tag>]/mod.ts";
     ```
 
 > **ℹ️ Notice:** Although it is recommended to import main module with path `mod.ts` in general, it is also able to import part of the module with sub path if available, but do not import if:
@@ -83,25 +83,25 @@ A Deno module to provide advanced method to determine item.
 ## ✍️ Example
 
 - ```ts
-  import { isArrayUnique } from "https://raw.githubusercontent.com/hugoalh-studio/advanced-determine-deno/main/array/is_unique.ts";
+  import { isArrayUnique } from "https://raw.githubusercontent.com/hugoalh-studio/determine-deno/main/array/is_unique.ts";
 
   isArrayUnique([{ foo: "bar" }, { foo: "bar" }]);
   //=> false
   ```
 - ```ts
-  import { isArrayUniqueReference } from "https://raw.githubusercontent.com/hugoalh-studio/advanced-determine-deno/main/array/is_unique_reference.ts";
+  import { isArrayUniqueReference } from "https://raw.githubusercontent.com/hugoalh-studio/determine-deno/main/array/is_unique_reference.ts";
 
   isArrayUniqueReference([{ foo: "bar" }, { foo: "bar" }]);
   //=> true
   ```
 - ```ts
-  import { isNumericPrime } from "https://raw.githubusercontent.com/hugoalh-studio/advanced-determine-deno/main/numeric/is_prime.ts";
+  import { isNumericPrime } from "https://raw.githubusercontent.com/hugoalh-studio/determine-deno/main/numeric/is_prime.ts";
 
   isNumericPrime(17n);
   //=> true
   ```
 - ```ts
-  import { isStringCaseUpper } from "https://raw.githubusercontent.com/hugoalh-studio/advanced-determine-deno/main/string/is_case_upper.ts";
+  import { isStringCaseUpper } from "https://raw.githubusercontent.com/hugoalh-studio/determine-deno/main/string/is_case_upper.ts";
 
   isStringCaseUpper("Hello, world!");
   //=> false
@@ -109,4 +109,4 @@ A Deno module to provide advanced method to determine item.
 
 ## 🔗 Other Edition
 
-- [NodeJS](https://github.com/hugoalh-studio/advanced-determine-nodejs)
+- [NodeJS](https://github.com/hugoalh-studio/determine-nodejs)

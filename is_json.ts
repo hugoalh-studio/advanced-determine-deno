@@ -1,4 +1,4 @@
-import { type JsonValue } from "https://deno.land/std@0.203.0/json/common.ts";
+import { type JsonValue } from "https://deno.land/std@0.204.0/json/common.ts";
 import { isObjectPlain } from "./object/is_plain.ts";
 /**
  * Determine whether the item is a JSON.

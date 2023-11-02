@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.204.0/assert/assert_equals.ts";
+import { assertEquals } from "https://deno.land/std@0.205.0/assert/assert_equals.ts";
 import { isNumericIntegralType } from "./is_integral_type.ts";
 Deno.test("False 1", { permissions: "none" }, () => {
 	assertEquals(isNumericIntegralType("Byte", 9876), false);

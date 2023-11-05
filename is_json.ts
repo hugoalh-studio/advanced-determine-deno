@@ -26,7 +26,10 @@ export default isJSON;
  * @returns {item is JSONArray} Determine result.
  */
 export function isJSONArray(item: unknown): item is JSONArray {
-	if (!(Array.isArray(item) && isArrayStrict(item))) {
+	if (
+		!Array.isArray(item) ||
+		!isArrayStrict(item)
+	) {
 		return false;
 	}
 	for (const element of item) {

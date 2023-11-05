@@ -1,4 +1,3 @@
-import { enumGetKeys, enumResolve } from "../_internal/enum.ts";
 export enum NumericIntegralTypeEnum {
 	bigint = "int64",
 	bigInt = "int64",
@@ -85,8 +84,6 @@ export enum NumericIntegralTypeEnum {
 	UShort = "uint16"
 }
 export type NumericIntegralTypeEnumStringify = keyof typeof NumericIntegralTypeEnum;
-type NumericIntegralTypeEnumValue = `${NumericIntegralTypeEnum}`;
-const enumNumericIntegralTypeKeys: Set<NumericIntegralTypeEnumStringify> = enumGetKeys<NumericIntegralTypeEnumStringify>(NumericIntegralTypeEnum);
 type NumericIntegralTypeRange = [
 	minimum: bigint,
 	maximum: bigint
@@ -114,7 +111,7 @@ function resolveNumericIntegralTypeRangeUIntBase(base: bigint): NumericIntegralT
  * @returns {NumericIntegralTypeRange}
  */
 function resolveNumericIntegralTypeRange(name: NumericIntegralTypeEnum | NumericIntegralTypeEnumStringify): NumericIntegralTypeRange {
-	switch (enumResolve<NumericIntegralTypeEnum, NumericIntegralTypeEnumStringify, NumericIntegralTypeEnumValue>(NumericIntegralTypeEnum, name)) {
+	switch (Object.values(NumericIntegralTypeEnum).includes(name as NumericIntegralTypeEnum) ? name as `${NumericIntegralTypeEnum}` : NumericIntegralTypeEnum[name]) {
 		case "int8":
 			return resolveNumericIntegralTypeRangeIntBase(8n);
 		case "int16":
@@ -136,7 +133,7 @@ function resolveNumericIntegralTypeRange(name: NumericIntegralTypeEnum | Numeric
 		case "uint128":
 			return resolveNumericIntegralTypeRangeUIntBase(128n);
 		default:
-			throw new RangeError(`\`${name}\` is not a valid integral numeric type! Only accept these values: ${Array.from(enumNumericIntegralTypeKeys.values()).join(", ")}`);
+			throw new RangeError(`\`${name}\` is not a valid integral numeric type! Only accept these values: ${Array.from(new Set(Object.keys(NumericIntegralTypeEnum).sort()).values()).join(", ")}`);
 	}
 }
 /**

@@ -8,14 +8,8 @@ import { isObjectPlain } from "./object/is_plain.ts";
  */
 export function isEmpty(item: unknown): boolean {
 	switch (typeof item) {
-		case "bigint":
-			return false;
-		case "boolean":
-			return false;
-		case "function":
-			return false;
-		case "number":
-			return false;
+		case "undefined":
+			return true;
 		case "object":
 			if (item === null) {
 				return true;
@@ -35,9 +29,6 @@ export function isEmpty(item: unknown): boolean {
 			return false;
 		case "string":
 			return !(item.length > 0);
-		case "symbol":
-		case "undefined":
-			return true;
 		default:
 			return false;
 	}

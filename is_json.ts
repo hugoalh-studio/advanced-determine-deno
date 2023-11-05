@@ -38,10 +38,7 @@ export default isJSON;
  * @returns {item is JSONArray} Determine result.
  */
 export function isJSONArray(item: unknown): item is JSONArray {
-	if (
-		!Array.isArray(item) ||
-		!isArrayStrict(item)
-	) {
+	if (!(Array.isArray(item) && isArrayStrict(item))) {
 		return false;
 	}
 	for (const element of item) {
@@ -57,11 +54,7 @@ export function isJSONArray(item: unknown): item is JSONArray {
  * @returns {item is JSONObject} Determine result.
  */
 export function isJSONObject(item: unknown): item is JSONObject {
-	if (
-		typeof item !== "object" ||
-		item === null ||
-		Array.isArray(item)
-	) {
+	if (!(typeof item === "object" && item !== null && !Array.isArray(item))) {
 		return false;
 	}
 	try {

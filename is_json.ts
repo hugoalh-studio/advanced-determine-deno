@@ -1,8 +1,20 @@
 import { isArrayStrict } from "./array/is_strict.ts";
 import { isObjectPlain } from "./object/is_plain.ts";
+/**
+ * Type of JSON primitive.
+ */
 export type JSONPrimitive = boolean | null | number | string;
+/**
+ * Type of JSON array.
+ */
 export type JSONArray = JSONValue[];
+/**
+ * Type of JSON object.
+ */
 export type JSONObject = { [key: string]: JSONValue; };
+/**
+ * Type of JSON value.
+ */
 export type JSONValue = JSONArray | JSONObject | JSONPrimitive;
 /**
  * Determine whether the item is a JSON.

@@ -1,3 +1,6 @@
+/**
+ * Enum of numeric integral type.
+ */
 export enum NumericIntegralTypeEnum {
 	bigint = "int64",
 	bigInt = "int64",
@@ -83,6 +86,9 @@ export enum NumericIntegralTypeEnum {
 	Ushort = "uint16",
 	UShort = "uint16"
 }
+/**
+ * Key of enum of numeric integral type.
+ */
 export type NumericIntegralTypeEnumStringify = keyof typeof NumericIntegralTypeEnum;
 type NumericIntegralTypeRange = [
 	minimum: bigint,

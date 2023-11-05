@@ -1,3 +1,6 @@
+/**
+ * Type of JavaScript primitive.
+ */
 export type Primitive = bigint | boolean | null | number | string | symbol | undefined;
 export function isPrimitive(item: unknown): item is Primitive {
 	switch (typeof item) {

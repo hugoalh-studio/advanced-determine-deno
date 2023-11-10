@@ -2,23 +2,26 @@
 
 ## Supported Versions
 
-> | **Legend** | **Description** |
-> |:-:|:--|
-> | L | **LTS:** Long term supported. |
-> | ✔️ | **Active / Current:** Currently supported. |
-> | 👎{🐛} | **Partially (Issue):** Partially supported due to confirmed contains bugs and/or issues. |
-> | 👎{🧓} | **Partially (Old):** Partially supported due to deprecated by newer versions. |
-> | ❌{🐛} | **No (Issue):** Not supported due to confirmed contains bugs and/or issues. |
-> | ❌{🧓} | **No (Old):** Not supported due to too old. |
+> | **Support** | **Legend** | **Description** |
+> |:-:|:-:|:--|
+> | ✔️ | 🟤 | Pending / Pre Release / Unstable |
+> | ✔️ | 🔵 | Current Release |
+> | ✔️ | 🟢 | Long Term Support |
+> | ❌ | 🔴 | End of Life |
 
-| **Versions** | **Status** | **Target - Deno** |
-|:-:|:-:|:-:|
-| v0.6.X | ✔️ | >= v1.34.0 |
-| v0.5.X | 👎{🐛🧓} | >= v1.34.0 |
-| v0.4.X | 👎{🐛🧓} | >= v1.34.0 |
-| v0.3.X | 👎{🐛🧓} | >= v1.34.0 |
-| v0.2.X | 👎{🐛🧓} | >= v1.34.0 |
-| v0.1.X | 👎{🐛🧓} | >= v1.34.0 |
+| **Versions** | **Status** | **🔵 Date** | **🟢 Date** | **🔴 Date** | **Target - Deno** |
+|:-:|:-:|:-:|:-:|:-:|:-:|
+| v0.6.X | 🔵 | 2023-11-05 | *N/A* | *Unknown* | >= v1.34.0 |
+| v0.5.X | 🔴 | 2023-11-02 | *N/A* | 2023-11-05 | >= v1.34.0 |
+| v0.4.X | 🔴 | 2023-09-25 | *N/A* | 2023-11-02 | >= v1.34.0 |
+| v0.3.X | 🔴 | 2023-09-12 | *N/A* | 2023-09-25 | >= v1.34.0 |
+| v0.2.X | 🔴 | 2023-09-08 | *N/A* | 2023-09-12 | >= v1.34.0 |
+| v0.1.X | 🔴 | 2023-06-21 | *N/A* | 2023-09-08 | >= v1.34.0 |
+
+> **ℹ️ Notice:**
+>
+> - The date format is according to ISO 8601 standard.
+> - Versions which not in the list are also end of life.
 
 ## Report Vulnerability
 

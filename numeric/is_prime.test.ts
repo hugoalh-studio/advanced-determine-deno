@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.205.0/assert/assert_equals.ts";
+import { assertEquals } from "https://deno.land/std@0.206.0/assert/assert_equals.ts";
 import { isNumericPrime } from "./is_prime.ts";
 Deno.test("Number False 1", { permissions: "none" }, () => {
 	assertEquals(isNumericPrime(9876), false);

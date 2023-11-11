@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.205.0/assert/assert_equals.ts";
+import { assertEquals } from "https://deno.land/std@0.206.0/assert/assert_equals.ts";
 import { isBigIntNegative } from "./is_negative.ts";
 Deno.test("False 1", { permissions: "none" }, () => {
 	assertEquals(isBigIntNegative(69n), false);

@@ -7,11 +7,12 @@
 > | ✔️ | 🟤 | Pending / Pre Release / Unstable |
 > | ✔️ | 🔵 | Current Release |
 > | ✔️ | 🟢 | Long Term Support |
+> | ✔️ | 🟠 | Maintenance |
 > | ❌ | 🔴 | End of Life |
 
 | **Versions** | **Status** | **🔵 Date** | **🟢 Date** | **🔴 Date** | **Target - Deno** |
 |:-:|:-:|:-:|:-:|:-:|:-:|
-| v1.0.X | 🟤 | *Pending* | *N/A* | *N/A* | *Unknown* |
+| v1.X.X | 🟤 | *Pending* | *N/A* | *N/A* | *Unknown* |
 | v0.6.X | 🔵 | 2023-11-05 | *N/A* | *Unknown* | >= v1.34.0 |
 | v0.5.X | 🔴 | 2023-11-02 | *N/A* | 2023-11-05 | >= v1.34.0 |
 | v0.4.X | 🔴 | 2023-09-25 | *N/A* | 2023-11-02 | >= v1.34.0 |

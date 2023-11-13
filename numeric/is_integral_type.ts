@@ -90,10 +90,10 @@ export enum NumericIntegralTypeEnum {
  * Key of enum of numeric integral type.
  */
 export type NumericIntegralTypeEnumStringify = keyof typeof NumericIntegralTypeEnum;
-type NumericIntegralTypeRange = [
-	minimum: bigint,
-	maximum: bigint
-];
+interface NumericIntegralTypeRange {
+	maximum: bigint;
+	minimum: bigint;
+};
 /**
  * @access private
  * @param {bigint} base
@@ -101,7 +101,10 @@ type NumericIntegralTypeRange = [
  */
 function resolveNumericIntegralTypeRangeIntBase(base: bigint): NumericIntegralTypeRange {
 	const gridHalf: bigint = (2n ** base) / 2n;
-	return [-gridHalf, gridHalf - 1n];
+	return {
+		maximum: gridHalf - 1n,
+		minimum: -gridHalf
+	};
 }
 /**
  * @access private
@@ -109,7 +112,10 @@ function resolveNumericIntegralTypeRangeIntBase(base: bigint): NumericIntegralTy
  * @returns {NumericIntegralTypeRange}
  */
 function resolveNumericIntegralTypeRangeUIntBase(base: bigint): NumericIntegralTypeRange {
-	return [0n, (2n ** base) - 1n];
+	return {
+		maximum: (2n ** base) - 1n,
+		minimum: 0n
+	};
 }
 /**
  * @access private
@@ -149,7 +155,7 @@ function resolveNumericIntegralTypeRange(name: NumericIntegralTypeEnum | Numeric
  * @returns {boolean} Determine result.
  */
 export function isNumericIntegralType(typeName: NumericIntegralTypeEnum | NumericIntegralTypeEnumStringify, item: bigint | number): boolean {
-	const [minimum, maximum] = resolveNumericIntegralTypeRange(typeName);
+	const { maximum, minimum } = resolveNumericIntegralTypeRange(typeName);
 	if (typeof item === "bigint") {
 		return (minimum <= item && item <= maximum);
 	}

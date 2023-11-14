@@ -16,7 +16,7 @@ export async function isEnvironmentPodman(): Promise<boolean> {
 }
 export default isEnvironmentPodman;
 /**
- * Determine whether this process is inside WSL (Windows Subsystem for Linux).
+ * Determine whether this process is inside Podman.
  * 
  * **Require Permission:**
  * - **File System - Read (`allow-read`):**

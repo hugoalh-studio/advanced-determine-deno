@@ -5,7 +5,7 @@
  */
 function isEnvironmentDockerDataMatcher(data: Uint8Array): boolean {
 	const dataString: string = new TextDecoder("utf-8").decode(data);
-	return /docker/u.test(dataString);
+	return /docker/iu.test(dataString);
 }
 /**
  * Determine whether this process is inside Docker.

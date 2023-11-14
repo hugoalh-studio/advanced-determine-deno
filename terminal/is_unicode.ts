@@ -3,7 +3,12 @@
  * 
  * **Require Permission:**
  * - **Environment (`allow-env`):**
- *   - `SSH_CLIENT`
+ *   - `ConEmuTask`
+ *   - `TERM`
+ *   - `TERM_PROGRAM`
+ *   - `TERMINAL_EMULATOR`
+ *   - `TERMINUS_SUBLIME`
+ *   - `WT_SESSION`
  * @returns {boolean} Determine result.
  */
 export function isTerminalUnicode(): boolean {

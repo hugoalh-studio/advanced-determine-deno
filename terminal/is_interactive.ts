@@ -21,10 +21,13 @@ function getOpenResourceID(identifier: unknown): number | undefined {
  * @returns {boolean} Determine result.
  */
 export function isTerminalInteractive(): boolean {
-	const stdoutID: number | undefined = getOpenResourceID("stdout");
+	const idStdIn: number | undefined = getOpenResourceID("stdin");
+	const idStdOut: number | undefined = getOpenResourceID("stdout");
 	if (
-		typeof stdoutID === "undefined" ||
-		!Deno.isatty(stdoutID)
+		typeof idStdIn === "undefined" ||
+		typeof idStdOut === "undefined" ||
+		!Deno.isatty(idStdIn) ||
+		!Deno.isatty(idStdOut)
 	) {
 		return false;
 	}

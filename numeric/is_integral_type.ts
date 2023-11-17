@@ -93,7 +93,7 @@ export type NumericIntegralTypeEnumStringify = keyof typeof NumericIntegralTypeE
 interface NumericIntegralTypeRange {
 	maximum: bigint;
 	minimum: bigint;
-};
+}
 /**
  * @access private
  * @param {bigint} base

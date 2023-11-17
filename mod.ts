@@ -1,5 +1,6 @@
 export { isArrayStrict, isArrayUnique, isArrayUniqueReference } from "./array/mod.ts";
 export { isBigIntEven, isBigIntNegative, isBigIntOdd, isBigIntPositive, isBigIntSafe, isBigIntegerEven, isBigIntegerNegative, isBigIntegerOdd, isBigIntegerPositive, isBigIntegerSafe } from "./bigint/mod.ts";
+export { isEnvironmentCI, isEnvironmentDocker, isEnvironmentDockerSync, isEnvironmentPodman, isEnvironmentPodmanSync, isEnvironmentSSH, isEnvironmentWSL, isEnvironmentWSLSync } from "./environment/mod.ts";
 export { isAsyncFunction, isAsynchronousFunction } from "./is_async_function.ts";
 export { isAsyncGenerator, isAsynchronousGenerator } from "./is_async_generator.ts";
 export { isAsyncGeneratorFunction, isAsynchronousGeneratorFunction } from "./is_async_generator_function.ts";
@@ -13,3 +14,4 @@ export { isNumberEven, isNumberFloat, isNumberNegative, isNumberOdd, isNumberPos
 export { isNumericIntegralType, isNumericPrime, NumericIntegralTypeEnum, type NumericIntegralTypeEnumStringify } from "./numeric/mod.ts";
 export { isObjectPlain } from "./object/mod.ts";
 export { isStringASCII, isStringCaseLower, isStringCaseUpper, isStringLowerCase, isStringSingleLine, isStringTrimmable, isStringTrimmableEnd, isStringTrimmableStart, isStringUpperCase } from "./string/mod.ts";
+export { isTerminalInteractive, isTerminalUnicode } from "./terminal/mod.ts";

@@ -17,6 +17,18 @@ export type JSONObject = { [key: string]: JSONValue; };
  */
 export type JSONValue = JSONArray | JSONObject | JSONPrimitive;
 /**
+ * Type of JSON array (extend).
+ */
+export type JSONArrayExtend = JSONValueExtend[] | readonly JSONValueExtend[];
+/**
+ * Type of JSON object (extend).
+ */
+export type JSONObjectExtend = { [key: string]: JSONValueExtend | undefined; };
+/**
+ * Type of JSON value (extend).
+ */
+export type JSONValueExtend = JSONArrayExtend | JSONObjectExtend | JSONPrimitive;
+/**
  * Determine whether the item is a JSON.
  * @param {unknown} item Item that need to determine.
  * @returns {item is JSONValue} Determine result.

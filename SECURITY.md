@@ -13,16 +13,14 @@
 | **Versions** | **Status** | **🔵 Date** | **🟢 Date** | **🔴 Date** | **Target - Deno** |
 |:-:|:-:|:-:|:-:|:-:|:-:|
 | v1.X.X | 🟤 | *Pending* | *N/A* | *N/A* | *Unknown* |
+| v0.7.X | 🟤 | *Pending* | *N/A* | *N/A* | >= v1.34.0 |
 | v0.6.X | 🔵 | 2023-11-05 | *N/A* | *Unknown* | >= v1.34.0 |
 | v0.5.X | 🔴 | 2023-11-02 | *N/A* | 2023-11-05 | >= v1.34.0 |
-| v0.4.X | 🔴 | 2023-09-25 | *N/A* | 2023-11-02 | >= v1.34.0 |
-| v0.3.X | 🔴 | 2023-09-12 | *N/A* | 2023-09-25 | >= v1.34.0 |
-| v0.2.X | 🔴 | 2023-09-08 | *N/A* | 2023-09-12 | >= v1.34.0 |
-| v0.1.X | 🔴 | 2023-06-21 | *N/A* | 2023-09-08 | >= v1.34.0 |
 
 > **ℹ️ Notice:**
 >
 > - The date format is according to ISO 8601 standard.
+> - Values in italic format are subject to change.
 > - Versions which not in the list are also end of life.
 
 ## Report Vulnerability

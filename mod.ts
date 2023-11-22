@@ -5,7 +5,7 @@ export { isAsyncFunction, isAsynchronousFunction } from "./is_async_function.ts"
 export { isAsyncGenerator, isAsynchronousGenerator } from "./is_async_generator.ts";
 export { isAsyncGeneratorFunction, isAsynchronousGeneratorFunction } from "./is_async_generator_function.ts";
 export { isEmpty } from "./is_empty.ts";
-export { isJSON, isJSONArray, isJSONObject, isJSONPrimitive, isJSONValue, type JSONArray, type JSONObject, type JSONPrimitive, type JSONValue } from "./is_json.ts";
+export { isJSON, isJSONArray, isJSONObject, isJSONPrimitive, isJSONValue, type JSONArray, type JSONArrayExtend, type JSONObject, type JSONObjectExtend, type JSONPrimitive, type JSONValue, type JSONValueExtend } from "./is_json.ts";
 export { isPrimitive, type Primitive } from "./is_primitive.ts";
 export { isSyncFunction, isSynchronousFunction } from "./is_sync_function.ts";
 export { isSyncGenerator, isSynchronousGenerator } from "./is_sync_generator.ts";

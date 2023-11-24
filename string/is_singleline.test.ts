@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.207.0/assert/assert_equals.ts";
+import { assertEquals } from "https://deno.land/std@0.208.0/assert/assert_equals.ts";
 import { isStringSingleLine } from "./is_singleline.ts";
 const sample1 = `Wisi sed et at vero eos nostrud volutpat sed stet dignissim sit sanctus in eros.
 Et laoreet odio sanctus ea.

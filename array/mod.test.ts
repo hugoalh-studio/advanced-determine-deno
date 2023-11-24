@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.207.0/assert/assert_equals.ts";
+import { assertEquals } from "https://deno.land/std@0.208.0/assert/assert_equals.ts";
 import { isArrayUnique, isArrayUniqueReference } from "./mod.ts";
 const element1 = { foo: "bar" };
 Deno.test("Unique False 1", { permissions: "none" }, () => {

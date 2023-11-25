@@ -6,7 +6,7 @@ interface BigIntRootApproximateResult {
 	floor: bigint;
 }
 /**
- * Root for the big integer, approximate. From https://stackoverflow.com/a/64190462.
+ * Return the root of the big integer, approximate. From https://stackoverflow.com/a/64190462.
  * @param {bigint} radicand Radicand.
  * @param {bigint} index Index.
  * @returns {BigIntRootApproximateResult} Root, approximate.

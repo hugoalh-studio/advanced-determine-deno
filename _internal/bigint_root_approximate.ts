@@ -31,7 +31,7 @@ export function bigintRootApproximate(radicand: bigint, index = 2n): BigIntRootA
 	let u: bigint = radicand;
 	while (u < s) {
 		s = u;
-		u = ((u * (index - 1n)) + radicand / (u ** (index - 1n))) / index;
+		u = (u * (index - 1n) + radicand / (u ** (index - 1n))) / index;
 	}
 	return {
 		ceil: (s ** index === radicand) ? s : s + 1n,

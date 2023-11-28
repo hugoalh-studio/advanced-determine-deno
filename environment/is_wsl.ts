@@ -1,3 +1,4 @@
+const regexpWordMicrosoft = /microsoft/iv;
 /**
  * @access private
  * @param {Uint8Array} data
@@ -5,7 +6,7 @@
  */
 function isEnvironmentWSLDataMatcher(data: Uint8Array): boolean {
 	const dataString: string = new TextDecoder("utf-8").decode(data);
-	return /microsoft/iv.test(dataString);
+	return regexpWordMicrosoft.test(dataString);
 }
 /**
  * Determine whether this process is inside WSL (Windows Subsystem for Linux).

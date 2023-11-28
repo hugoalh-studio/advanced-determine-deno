@@ -1,3 +1,4 @@
+const regexpWordDocker = /docker/iv;
 /**
  * @access private
  * @param {Uint8Array} data
@@ -5,7 +6,7 @@
  */
 function isEnvironmentDockerDataMatcher(data: Uint8Array): boolean {
 	const dataString: string = new TextDecoder("utf-8").decode(data);
-	return /docker/iv.test(dataString);
+	return regexpWordDocker.test(dataString);
 }
 /**
  * Determine whether this process is inside Docker.

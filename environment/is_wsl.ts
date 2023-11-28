@@ -5,7 +5,7 @@
  */
 function isEnvironmentWSLDataMatcher(data: Uint8Array): boolean {
 	const dataString: string = new TextDecoder("utf-8").decode(data);
-	return /microsoft/iu.test(dataString);
+	return /microsoft/iv.test(dataString);
 }
 /**
  * Determine whether this process is inside WSL (Windows Subsystem for Linux).

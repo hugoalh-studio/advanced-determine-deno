@@ -1,5 +1,5 @@
 //deno-lint-ignore no-control-regex
-const regexpNonASCII = /[^\u0000-\u007F]/u;
+const regexpNonASCII = /[^\u0000-\u007F]/v;
 /**
  * Determine whether the string is ASCII.
  * @param {string} item Item that need to determine.

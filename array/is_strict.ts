@@ -1,4 +1,4 @@
-const regexpArrayIndex = /^(?:0|[1-9]\d*)$/u;
+const regexpArrayIndex = /^(?:0|[1-9]\d*)$/v;
 /**
  * Determine whether the array is not contain custom defined properties.
  * @param {unknown[]} item Item that need to determine.

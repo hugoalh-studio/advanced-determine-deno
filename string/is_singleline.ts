@@ -1,4 +1,4 @@
-const regexpSingleLine = /^.+$/u;
+const regexpSingleLine = /^.+$/v;
 /**
  * Determine whether the string is single line.
  * @param {string} item Item that need to determine.

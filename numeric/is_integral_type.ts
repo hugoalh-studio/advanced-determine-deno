@@ -90,6 +90,9 @@ export enum NumericIntegralTypeEnum {
  * Key of enum of numeric integral type.
  */
 export type NumericIntegralTypeEnumStringify = keyof typeof NumericIntegralTypeEnum;
+/**
+ * @access private
+ */
 interface NumericIntegralTypeRange {
 	maximum: bigint;
 	minimum: bigint;
@@ -149,7 +152,7 @@ function resolveNumericIntegralTypeRange(name: NumericIntegralTypeEnum | Numeric
 	}
 }
 /**
- * Determine whether the numeric is in the range of the specified integral type.
+ * Determine whether the numeric is in the range of the specify integral type.
  * @param {NumericIntegralTypeEnum | NumericIntegralTypeEnumStringify} typeName Name of the integral numeric type.
  * @param {bigint | number} item Item that need to determine.
  * @returns {boolean} Determine result.

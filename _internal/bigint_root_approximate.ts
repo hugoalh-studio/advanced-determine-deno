@@ -1,6 +1,3 @@
-/**
- * @access private
- */
 interface BigIntRootApproximateResult {
 	ceil: bigint;
 	floor: bigint;

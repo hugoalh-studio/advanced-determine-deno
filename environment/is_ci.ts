@@ -3,7 +3,7 @@ const regexpEnvCIDisable = /^false$/iv;
  * Determine whether this process is in CI (Continuous Integration) mode.
  * 
  * **Require Permission:**
- * - **Environment (`allow-env`):** *All*
+ * - **Environment (`allow-env`):** All
  * @returns {boolean} Determine result.
  */
 export function isEnvironmentCI(): boolean {

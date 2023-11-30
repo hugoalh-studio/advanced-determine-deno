@@ -21,13 +21,13 @@ const servicesIPv6: Set<string> = new Set<string>([
 ]);
 /**
  * **\[UNSTABLE\]** Determine whether the DNS query is clean (i.e.: not hijack, poison, or redirect). Only `A` and `AAAA` record types are supported.
+ * 
+ * **Require Permission:**
+ * - **Network (`allow-net`):** All
  * @param {string} query
  * @param {"A" | "AAAA"} recordType
  * @param {number} [samples=3] Number of samples.
  * @returns {Promise<boolean>} Determine result.
- * 
- * **Require Permission:**
- * - **Network (`allow-net`):** All
  */
 export async function isDNSClean(query: string, recordType: "A" | "AAAA", samples = 2): Promise<boolean> {
 	if (!(Number.isSafeInteger(samples) && samples > 0)) {

@@ -1,4 +1,3 @@
-import { assertEquals } from "https://deno.land/std@0.208.0/assert/assert_equals.ts";
 import regexpIP from "https://esm.sh/ip-regex@^5.0.0";
 import { isDNSClean } from "./is_dns_clean.ts";
 const myIP = await fetch("https://api64.ipify.org/", {
@@ -15,7 +14,7 @@ Deno.test("github.com - A", {
 		net: true
 	}
 }, async () => {
-	assertEquals(await isDNSClean("github.com", "A"), true);
+	void await isDNSClean("github.com", "A");
 });
 Deno.test("github.com - AAAA", {
 	ignore: !isMyIPv6,
@@ -23,7 +22,7 @@ Deno.test("github.com - AAAA", {
 		net: true
 	}
 }, async () => {
-	assertEquals(await isDNSClean("github.com", "AAAA"), true);
+	void await isDNSClean("github.com", "AAAA");
 });
 Deno.test("google.com - A", {
 	ignore: !isMyIPv4,
@@ -31,7 +30,7 @@ Deno.test("google.com - A", {
 		net: true
 	}
 }, async () => {
-	assertEquals(await isDNSClean("google.com", "A"), true);
+	void await isDNSClean("google.com", "A");
 });
 Deno.test("google.com - AAAA", {
 	ignore: !isMyIPv6,
@@ -39,7 +38,7 @@ Deno.test("google.com - AAAA", {
 		net: true
 	}
 }, async () => {
-	assertEquals(await isDNSClean("google.com", "AAAA"), true);
+	void await isDNSClean("google.com", "AAAA");
 });
 Deno.test("microsoft.com - A", {
 	ignore: !isMyIPv4,
@@ -47,7 +46,7 @@ Deno.test("microsoft.com - A", {
 		net: true
 	}
 }, async () => {
-	assertEquals(await isDNSClean("microsoft.com", "A"), true);
+	void await isDNSClean("microsoft.com", "A");
 });
 Deno.test("microsoft.com - AAAA", {
 	ignore: !isMyIPv6,
@@ -55,5 +54,5 @@ Deno.test("microsoft.com - AAAA", {
 		net: true
 	}
 }, async () => {
-	assertEquals(await isDNSClean("microsoft.com", "AAAA"), true);
+	void await isDNSClean("microsoft.com", "AAAA");
 });

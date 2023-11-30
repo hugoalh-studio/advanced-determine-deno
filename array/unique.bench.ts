@@ -1,20 +1,20 @@
 import { isArrayUnique } from "./is_unique.ts";
 import { isArrayUniqueReference } from "./is_unique_reference.ts";
-const element1 = { foo: "bar" };
+const sample1 = { foo: "bar" };
 Deno.bench("Unique 1", { permissions: "none" }, () => {
-	isArrayUnique([element1, element1]);
+	isArrayUnique([sample1, sample1]);
 });
 Deno.bench("Unique 2", { permissions: "none" }, () => {
 	isArrayUnique([{ foo: "bar" }, { foo: "bar" }]);
 });
 Deno.bench("Unique 3", { permissions: "none" }, () => {
-	isArrayUnique([element1, { foo: "bar" }]);
+	isArrayUnique([sample1, { foo: "bar" }]);
 });
 Deno.bench("UniqueReference 1", { permissions: "none" }, () => {
-	isArrayUniqueReference([element1, element1]);
+	isArrayUniqueReference([sample1, sample1]);
 });
 Deno.bench("UniqueReference 2", { permissions: "none" }, () => {
-	isArrayUniqueReference([element1, { foo: "bar" }]);
+	isArrayUniqueReference([sample1, { foo: "bar" }]);
 });
 Deno.bench("UniqueReference 3", { permissions: "none" }, () => {
 	isArrayUniqueReference([{ foo: "bar" }, { foo: "bar" }]);

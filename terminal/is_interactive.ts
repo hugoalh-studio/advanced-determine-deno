@@ -17,7 +17,7 @@ function getOpenResourceID(identifier: unknown): number | undefined {
  * Determine whether this terminal is support interactive.
  * 
  * **Require Permission:**
- * - **Environment (`allow-env`):** All
+ * - Environment (`allow-env`): All
  * @returns {boolean} Determine result.
  */
 export function isTerminalInteractive(): boolean {

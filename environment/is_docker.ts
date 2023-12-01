@@ -12,7 +12,7 @@ function isEnvironmentDockerDataMatcher(data: Uint8Array): boolean {
  * Determine whether this process is inside Docker.
  * 
  * **Require Permission:**
- * - **File System - Read (`allow-read`):**
+ * - File System - Read (`allow-read`):
  *   - `/.dockerenv`
  *   - `/proc/self/cgroup`
  * @returns {Promise<boolean>} Determine result.
@@ -35,7 +35,7 @@ export default isEnvironmentDocker;
  * Determine whether this process is inside Docker.
  * 
  * **Require Permission:**
- * - **File System - Read (`allow-read`):**
+ * - File System - Read (`allow-read`):
  *   - `/.dockerenv`
  *   - `/proc/self/cgroup`
  * @returns {boolean} Determine result.

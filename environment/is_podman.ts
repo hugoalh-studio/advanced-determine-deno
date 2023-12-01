@@ -2,7 +2,7 @@
  * Determine whether this process is inside Podman.
  * 
  * **Require Permission:**
- * - **File System - Read (`allow-read`):**
+ * - File System - Read (`allow-read`):
  *   - `/run/.containerenv`
  * @returns {Promise<boolean>} Determine result.
  */
@@ -19,7 +19,7 @@ export default isEnvironmentPodman;
  * Determine whether this process is inside Podman.
  * 
  * **Require Permission:**
- * - **File System - Read (`allow-read`):**
+ * - File System - Read (`allow-read`):
  *   - `/run/.containerenv`
  * @returns {boolean} Determine result.
  */

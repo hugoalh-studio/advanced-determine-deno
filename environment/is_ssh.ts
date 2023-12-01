@@ -2,7 +2,7 @@
  * Determine whether this process is inside SSH.
  * 
  * **Require Permission:**
- * - **Environment (`allow-env`):**
+ * - Environment (`allow-env`):
  *   - `SSH_CLIENT`
  * @returns {boolean} Determine result.
  */

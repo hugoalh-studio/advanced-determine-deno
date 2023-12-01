@@ -12,7 +12,7 @@ function isEnvironmentWSLDataMatcher(data: Uint8Array): boolean {
  * Determine whether this process is inside WSL (Windows Subsystem for Linux).
  * 
  * **Require Permission:**
- * - **File System - Read (`allow-read`):**
+ * - File System - Read (`allow-read`):
  *   - `/proc/version`
  * @returns {Promise<boolean>} Determine result.
  */
@@ -31,7 +31,7 @@ export default isEnvironmentWSL;
  * Determine whether this process is inside WSL (Windows Subsystem for Linux).
  * 
  * **Require Permission:**
- * - **File System - Read (`allow-read`):**
+ * - File System - Read (`allow-read`):
  *   - `/proc/version`
  * @returns {boolean} Determine result.
  */

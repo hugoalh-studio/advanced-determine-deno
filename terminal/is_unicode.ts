@@ -2,7 +2,7 @@
  * Determine whether this terminal is support Unicode.
  * 
  * **Require Permission:**
- * - **Environment (`allow-env`):**
+ * - Environment (`allow-env`):
  *   - `ConEmuTask`
  *   - `TERM`
  *   - `TERM_PROGRAM`

@@ -1,4 +1,4 @@
-interface BigIntRootApproximateResult {
+export interface BigIntRootApproximateResult {
 	ceil: bigint;
 	floor: bigint;
 }

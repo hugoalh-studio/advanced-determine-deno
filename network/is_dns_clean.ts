@@ -23,7 +23,7 @@ const servicesIPv6: Set<string> = new Set<string>([
  * **\[UNSTABLE\]** Determine whether the DNS query is clean (i.e.: not hijack, poison, or redirect). Only `A` and `AAAA` record types are supported.
  * 
  * **Require Permission:**
- * - **Network (`allow-net`):** All
+ * - Network (`allow-net`): All
  * @param {string} query
  * @param {"A" | "AAAA"} recordType
  * @param {number} [samples=3] Number of samples.
@@ -38,7 +38,7 @@ export async function isDNSClean(query: string, recordType: "A" | "AAAA", sample
 		return Deno.resolveDns(query, recordType, { nameServer: { ipAddr: value } });
 	});
 	const clientResult: string[] = await clientRequest;
-	const servicesResult: string[] = (await Promise.all(servicesRequest)).flat(Infinity) as string[];
+	const servicesResult: string[] = (await Promise.all(servicesRequest)).flat();
 	for (const clientValue of clientResult) {
 		if (servicesResult.includes(clientValue)) {
 			return true;

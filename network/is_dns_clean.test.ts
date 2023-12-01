@@ -3,6 +3,12 @@ import { getIPInfo } from "./ip_info.ts";
 const ipInfo = getIPInfo();
 const hostnames = new Set([
 	"bing.com",
+	"dash.deno.com",
+	"deno.com",
+	"deno.dev",
+	"deno.land",
+	"docs.deno.com",
+	"examples.deno.land",
 	"github.com",
 	"google.com",
 	"microsoft.com",

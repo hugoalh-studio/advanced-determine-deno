@@ -39,7 +39,9 @@ export async function isDNSClean(query: string | URL, recordType: "A" | "AAAA", 
 		return Deno.resolveDns(queryResolve, recordType, { nameServer: { ipAddr: value } });
 	});
 	const clientResult: string[] = await clientRequest;
-	const servicesResult: string[] = (await Promise.all(servicesRequest)).flat();
+	const servicesResult: string[] = (await Promise.allSettled(servicesRequest)).flatMap((serviceResult: PromiseSettledResult<string[]>): string[] => {
+		return serviceResult.status === "fulfilled" ? serviceResult.value : [];
+	});
 	for (const clientValue of clientResult) {
 		if (servicesResult.includes(clientValue)) {
 			return true;

@@ -25,7 +25,10 @@ Deno.test("IPv4", {
 			try {
 				void await isDNSClean(hostname, "A");
 			} catch (error) {
-				if (!(error instanceof Deno.errors.NetworkUnreachable)) {
+				if (!(
+					error instanceof Deno.errors.NetworkUnreachable ||
+					((error?.message ?? error) as string).search(/network.*?unreachable|unreachable.*?network/iu) === -1
+				)) {
 					throw error;
 				}
 			}
@@ -43,7 +46,10 @@ Deno.test("IPv6", {
 			try {
 				void await isDNSClean(hostname, "AAAA");
 			} catch (error) {
-				if (!(error instanceof Deno.errors.NetworkUnreachable)) {
+				if (!(
+					error instanceof Deno.errors.NetworkUnreachable ||
+					((error?.message ?? error) as string).search(/network.*?unreachable|unreachable.*?network/iu) === -1
+				)) {
 					throw error;
 				}
 			}

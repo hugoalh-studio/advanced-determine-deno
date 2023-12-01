@@ -3,12 +3,11 @@ import { randomInt } from "node:crypto";
 import { bigintRootApproximate } from "./bigint_root_approximate.ts";
 Deno.test("Matrix", { permissions: "none" }, async (t) => {
 	const set = new Set();
-	for (let times = 0; times < 500; times += 1) {
+	while (set.size < 500) {
 		const radicandNumber = randomInt(0, 100000000);
 		const indexNumber = randomInt(1, 25);
 		const token = `${radicandNumber}//${indexNumber}`;
 		if (set.has(token)) {
-			times -= 1;
 			continue;
 		}
 		set.add(token);

@@ -1,58 +1,34 @@
 import { isDNSClean } from "./is_dns_clean.ts";
-import { resolveIPVersion } from "./ip_version.ts";
-const myIPVersion = await fetch("https://api64.ipify.org/", {
-	method: "GET",
-	redirect: "error"
-}).then((response) => {
-	return response.text();
-}).then((ip) => {
-	return resolveIPVersion(ip);
-});
-Deno.test("github.com - A", {
-	ignore: myIPVersion !== 4,
+import { getIPInfo } from "./ip_info.ts";
+const ipInfo = getIPInfo();
+const hostnames = new Set([
+	"bing.com",
+	"github.com",
+	"google.com",
+	"microsoft.com",
+	"outlook.com"
+]);
+Deno.test("IPv4", {
+	ignore: ipInfo.externalIPv4 === null,
 	permissions: {
 		net: true
 	}
-}, async () => {
-	void await isDNSClean("github.com", "A");
+}, async (t) => {
+	for (const hostname of hostnames.values()) {
+		await t.step(hostname, async () => {
+			void await isDNSClean(hostname, "A");
+		});
+	}
 });
-Deno.test("github.com - AAAA", {
-	ignore: myIPVersion !== 6,
+Deno.test("IPv6", {
+	ignore: ipInfo.externalIPv6 === null,
 	permissions: {
 		net: true
 	}
-}, async () => {
-	void await isDNSClean("github.com", "AAAA");
-});
-Deno.test("google.com - A", {
-	ignore: myIPVersion !== 4,
-	permissions: {
-		net: true
+}, async (t) => {
+	for (const hostname of hostnames.values()) {
+		await t.step(hostname, async () => {
+			void await isDNSClean(hostname, "AAAA");
+		});
 	}
-}, async () => {
-	void await isDNSClean("google.com", "A");
-});
-Deno.test("google.com - AAAA", {
-	ignore: myIPVersion !== 6,
-	permissions: {
-		net: true
-	}
-}, async () => {
-	void await isDNSClean("google.com", "AAAA");
-});
-Deno.test("microsoft.com - A", {
-	ignore: myIPVersion !== 4,
-	permissions: {
-		net: true
-	}
-}, async () => {
-	void await isDNSClean("microsoft.com", "A");
-});
-Deno.test("microsoft.com - AAAA", {
-	ignore: myIPVersion !== 6,
-	permissions: {
-		net: true
-	}
-}, async () => {
-	void await isDNSClean("microsoft.com", "AAAA");
 });

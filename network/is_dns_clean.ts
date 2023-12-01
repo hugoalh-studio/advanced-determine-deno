@@ -24,18 +24,19 @@ const servicesIPv6: Set<string> = new Set<string>([
  * 
  * **Require Permission:**
  * - Network (`allow-net`): All
- * @param {string} query
+ * @param {string | URL} query
  * @param {"A" | "AAAA"} recordType
  * @param {number} [samples=3] Number of samples.
  * @returns {Promise<boolean>} Determine result.
  */
-export async function isDNSClean(query: string, recordType: "A" | "AAAA", samples = 2): Promise<boolean> {
+export async function isDNSClean(query: string | URL, recordType: "A" | "AAAA", samples = 2): Promise<boolean> {
+	const queryResolve: string = (typeof query === "string") ? query : query.hostname;
 	if (!(Number.isSafeInteger(samples) && samples > 0)) {
 		throw new RangeError(`Argument \`samples\` is not a number which is integer, safe, and > 0!`);
 	}
-	const clientRequest: Promise<string[]> = Deno.resolveDns(query, recordType);
+	const clientRequest: Promise<string[]> = Deno.resolveDns(queryResolve, recordType);
 	const servicesRequest: Promise<string[]>[] = shuffleArray(Array.from((recordType === "AAAA" ? servicesIPv6 : servicesIPv4).values())).slice(0, samples).map((value: string): Promise<string[]> => {
-		return Deno.resolveDns(query, recordType, { nameServer: { ipAddr: value } });
+		return Deno.resolveDns(queryResolve, recordType, { nameServer: { ipAddr: value } });
 	});
 	const clientResult: string[] = await clientRequest;
 	const servicesResult: string[] = (await Promise.all(servicesRequest)).flat();

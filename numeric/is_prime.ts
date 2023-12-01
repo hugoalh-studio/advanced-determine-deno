@@ -1,4 +1,4 @@
-import { bigintRootApproximate } from "../_internal/bigint_root_approximate.ts";
+import { bigintRootApproximate } from "./_bigint_root_approximate.ts";
 /**
  * Determine whether the numeric is prime.
  * @param {bigint | number} item Item that need to determine.

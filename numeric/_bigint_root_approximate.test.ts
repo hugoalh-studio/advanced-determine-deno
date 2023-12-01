@@ -1,6 +1,6 @@
 import { assertEquals } from "https://deno.land/std@0.208.0/assert/assert_equals.ts";
 import { randomInt } from "node:crypto";
-import { bigintRootApproximate } from "./bigint_root_approximate.ts";
+import { bigintRootApproximate } from "./_bigint_root_approximate.ts";
 Deno.test("Matrix", { permissions: "none" }, async (t) => {
 	const set = new Set();
 	while (set.size < 500) {

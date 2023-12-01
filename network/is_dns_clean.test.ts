@@ -22,7 +22,13 @@ Deno.test("IPv4", {
 }, async (t) => {
 	for (const hostname of hostnames.values()) {
 		await t.step(hostname, async () => {
-			void await isDNSClean(hostname, "A");
+			try {
+				void await isDNSClean(hostname, "A");
+			} catch (error) {
+				if (!(error instanceof Deno.errors.NetworkUnreachable)) {
+					throw error;
+				}
+			}
 		});
 	}
 });
@@ -34,7 +40,13 @@ Deno.test("IPv6", {
 }, async (t) => {
 	for (const hostname of hostnames.values()) {
 		await t.step(hostname, async () => {
-			void await isDNSClean(hostname, "AAAA");
+			try {
+				void await isDNSClean(hostname, "AAAA");
+			} catch (error) {
+				if (!(error instanceof Deno.errors.NetworkUnreachable)) {
+					throw error;
+				}
+			}
 		});
 	}
 });

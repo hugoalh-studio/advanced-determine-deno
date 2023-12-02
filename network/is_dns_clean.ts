@@ -26,7 +26,7 @@ const servicesIPv6: Set<string> = new Set<string>([
  * - Network (`allow-net`): All
  * @param {string | URL} query
  * @param {"A" | "AAAA"} recordType
- * @param {number} [samples=3] Number of samples.
+ * @param {number} [samples=2] Number of samples.
  * @returns {Promise<boolean>} Determine result.
  */
 export async function isDNSClean(query: string | URL, recordType: "A" | "AAAA", samples = 2): Promise<boolean> {

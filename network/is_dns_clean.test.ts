@@ -27,7 +27,7 @@ Deno.test("IPv4", {
 			} catch (error) {
 				if (!(
 					error instanceof Deno.errors.NetworkUnreachable ||
-					((error?.message ?? error) as string).search(/network.*?unreachable|unreachable.*?network/iu) === -1
+					String(error).search(/network.*?unreachable|unreachable.*?network/iu) !== -1
 				)) {
 					throw error;
 				}
@@ -48,7 +48,7 @@ Deno.test("IPv6", {
 			} catch (error) {
 				if (!(
 					error instanceof Deno.errors.NetworkUnreachable ||
-					((error?.message ?? error) as string).search(/network.*?unreachable|unreachable.*?network/iu) === -1
+					String(error).search(/network.*?unreachable|unreachable.*?network/iu) !== -1
 				)) {
 					throw error;
 				}

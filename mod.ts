@@ -6,6 +6,7 @@ export { isAsyncGenerator, isAsynchronousGenerator } from "./is_async_generator.
 export { isAsyncGeneratorFunction, isAsynchronousGeneratorFunction } from "./is_async_generator_function.ts";
 export { isEmpty } from "./is_empty.ts";
 export { isJSON, isJSONArray, isJSONObject, isJSONPrimitive, isJSONValue, type JSONArray, type JSONArrayExtend, type JSONObject, type JSONObjectExtend, type JSONPrimitive, type JSONValue, type JSONValueExtend } from "./is_json.ts";
+export { getIPInfo, getIPInformation, isDNSClean, isIPValid, resolveIPVersion, type NetworkIPAddressInformation } from "./network/mod.ts";
 export { isPrimitive, type Primitive } from "./is_primitive.ts";
 export { isSyncFunction, isSynchronousFunction } from "./is_sync_function.ts";
 export { isSyncGenerator, isSynchronousGenerator } from "./is_sync_generator.ts";
@@ -13,5 +14,5 @@ export { isSyncGeneratorFunction, isSynchronousGeneratorFunction } from "./is_sy
 export { isNumberEven, isNumberFloat, isNumberIntegralType, isNumberNegative, isNumberOdd, isNumberPositive, isNumberPrime, isNumberSafe } from "./number/mod.ts";
 export { isNumericIntegralType, isNumericPrime, NumericIntegralTypeEnum, type NumericIntegralTypeEnumStringify } from "./numeric/mod.ts";
 export { isObjectPlain } from "./object/mod.ts";
-export { isStringASCII, isStringCaseLower, isStringCaseUpper, isStringLowerCase, isStringSingleLine, isStringTrimmable, isStringTrimmableEnd, isStringTrimmableStart, isStringUpperCase } from "./string/mod.ts";
+export { isStringASCII, isStringCaseLower, isStringCaseUpper, isStringLowerCase, isStringSingleLine, isStringTrimmable, isStringTrimmableEnd, isStringTrimmableStart, isStringUpperCase, StringDissector, stringDissect, stringDissectExtend, StringSegmentType, type StringDissectorOptions, type StringSegmentDescriptor, type StringSegmentDescriptorExtend } from "./string/mod.ts";
 export { isTerminalInteractive, isTerminalUnicode } from "./terminal/mod.ts";

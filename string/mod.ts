@@ -1,3 +1,4 @@
+export { StringDissector, stringDissect, stringDissectExtend, StringSegmentType, type StringDissectorOptions, type StringSegmentDescriptor, type StringSegmentDescriptorExtend } from "./dissect.ts";
 export { isStringASCII } from "./is_ascii.ts";
 export { isStringCaseLower, isStringLowerCase } from "./is_case_lower.ts";
 export { isStringCaseUpper, isStringUpperCase } from "./is_case_upper.ts";

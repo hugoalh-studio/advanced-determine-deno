@@ -1,12 +1,11 @@
 import { isIP as netIsIP } from "node:net";
 /**
- * Return the IP version. IPv4 address must be in dot-decimal notation with no leading zeroes.
- * 
+ * Determine the IP address version of the item. IPv4 address must be in dot-decimal notation with no leading zeroes.
+ * @param {string} item Item that need to determine.
+ * @returns {number} IP address version of the item.
  * - **`4`:** IPv4.
  * - **`6`:** IPv6.
  * - **`0`:** Unknown.
- * @param {string} item Item that need to determine.
- * @returns {number} IP version.
  * @example
  * getIPVersion("::1");
  * //=> 6

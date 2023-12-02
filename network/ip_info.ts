@@ -1,19 +1,19 @@
 import { networkInterfaces } from "node:os";
-export interface NetworkIPInfo {
+export interface NetworkIPAddressInformation {
 	externalIPv4: string | null;
 	externalIPv6: string | null;
 	internalIPv4: string | null;
 	internalIPv6: string | null;
 }
 /**
- * **\[UNSTABLE\]** Return network IP address information of the machine.
+ * **\[UNSTABLE\]** Get the IP address information of the machine.
  * 
  * **Require Permission:**
  * - System Info (`allow-sys`): All
- * @returns {NetworkIPInfo}
+ * @returns {NetworkIPAddressInformation} IP address information of the machine.
  */
-export function getIPInfo(): NetworkIPInfo {
-	const result: NetworkIPInfo = {
+export function getIPInfo(): NetworkIPAddressInformation {
+	const result: NetworkIPAddressInformation = {
 		externalIPv4: null,
 		externalIPv6: null,
 		internalIPv4: null,
@@ -34,5 +34,8 @@ export function getIPInfo(): NetworkIPInfo {
 		}
 	}
 	return result;
+};
+export {
+	getIPInfo as getIPInformation
 };
 export default getIPInfo;

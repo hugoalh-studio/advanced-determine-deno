@@ -2,7 +2,7 @@ import { isIP as netIsIP, isIPv4 as netIsIPv4, isIPv6 as netIsIPv6 } from "node:
 /**
  * Determine whether the item is a valid IP address. IPv4 address must be in dot-decimal notation with no leading zeroes.
  * @param {string} item Item that need to determine.
- * @param {4 | 6 | "*" | "4" | "6"} [version="*"] IP version.
+ * @param {4 | 6 | "*" | "4" | "6"} [version="*"] IP address version.
  * @returns {boolean} Determine result.
  * @example
  * isIPValid("::1");

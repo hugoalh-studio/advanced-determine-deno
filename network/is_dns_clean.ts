@@ -34,16 +34,19 @@ export async function isDNSClean(query: string | URL, recordType: "A" | "AAAA", 
 	if (!(Number.isSafeInteger(samples) && samples > 0)) {
 		throw new RangeError(`Argument \`samples\` is not a number which is integer, safe, and > 0!`);
 	}
-	const clientRequest: Promise<string[]> = Deno.resolveDns(queryResolve, recordType);
-	const servicesRequest: Promise<string[]>[] = shuffleArray(Array.from((recordType === "AAAA" ? servicesIPv6 : servicesIPv4).values())).slice(0, samples).map((value: string): Promise<string[]> => {
-		return Deno.resolveDns(queryResolve, recordType, { nameServer: { ipAddr: value } });
+	const resultClient: string[] = await Deno.resolveDns(queryResolve, recordType).catch((): string[] => {
+		return [];
 	});
-	const clientResult: string[] = await clientRequest;
-	const servicesResult: string[] = (await Promise.allSettled(servicesRequest)).flatMap((serviceResult: PromiseSettledResult<string[]>): string[] => {
-		return serviceResult.status === "fulfilled" ? serviceResult.value : [];
-	});
-	for (const clientValue of clientResult) {
-		if (servicesResult.includes(clientValue)) {
+	const servicesIP: string[] = shuffleArray(Array.from((recordType === "AAAA" ? servicesIPv6 : servicesIPv4).values()));
+	const resultServices: string[] = [];
+	for (let count = 0, index = 0; count < samples && index < servicesIP.length; count += 1, index += 1) {
+		resultServices.push(...await Deno.resolveDns(queryResolve, recordType, { nameServer: { ipAddr: servicesIP[index] } }).catch((): string[] => {
+			count -= 1;
+			return [];
+		}));
+	}
+	for (const clientValue of resultClient) {
+		if (resultServices.includes(clientValue)) {
 			return true;
 		}
 	}

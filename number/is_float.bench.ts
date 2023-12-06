@@ -1,13 +1,13 @@
-import { isStringASCII } from "./is_ascii.ts";
+import { isNumberFloat } from "./is_float.ts";
 Deno.bench("1", { permissions: "none" }, () => {
-	isStringASCII("日本語");
+	isNumberFloat(69);
 });
 Deno.bench("2", { permissions: "none" }, () => {
-	isStringASCII("👀");
+	isNumberFloat(-69);
 });
 Deno.bench("3", { permissions: "none" }, () => {
-	isStringASCII("Hello, world!");
+	isNumberFloat(6.4);
 });
 Deno.bench("4", { permissions: "none" }, () => {
-	isStringASCII("");
+	isNumberFloat(-6.4);
 });

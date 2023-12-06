@@ -20,7 +20,7 @@ const servicesIPv6: Set<string> = new Set<string>([
 	/* OpenDNS */"2620:0:ccd::2"
 ]);
 /**
- * **\[UNSTABLE\]** Determine whether the DNS query is clean (i.e.: not hijack, poison, or redirect). Only "A" and "AAAA" record types are supported.
+ * Determine whether the DNS query is clean (i.e.: not hijack, poison, or redirect). Only "A" and "AAAA" record types are supported.
  * 
  * **Require Permission:**
  * - Network (`allow-net`): All

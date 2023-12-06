@@ -6,7 +6,7 @@ export interface NetworkIPAddressInformation {
 	internalIPv6: string | null;
 }
 /**
- * **\[UNSTABLE\]** Get the IP address information of the machine.
+ * Get the IP address information of the machine.
  * 
  * **Require Permission:**
  * - System Info (`allow-sys`): All

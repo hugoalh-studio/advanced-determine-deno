@@ -86,7 +86,7 @@ function* dissectSegmentWithRegExp({ matcher, segment, type }: StringDissectSegm
 	}
 }
 /**
- * **\[UNSTABLE\]** Dissect the string; Safe with the emojis, URLs, and words.
+ * Dissect the string; Safe with the emojis, URLs, and words.
  */
 export class StringDissector {
 	#locales?: StringDissectorLocales;
@@ -193,7 +193,7 @@ export class StringDissector {
 }
 export default StringDissector;
 /**
- * **\[UNSTABLE\]** Dissect the string; Safe with the emojis, URLs, and words.
+ * Dissect the string; Safe with the emojis, URLs, and words.
  * @param {string} item String that need to dissect.
  * @param {StringDissectorOptions} [options={}] Options.
  * @returns {Generator<StringSegmentDescriptor>} A dissected string with descriptor.
@@ -202,7 +202,7 @@ export function stringDissect(item: string, options: StringDissectorOptions = {}
 	return new StringDissector(options).dissect(item);
 }
 /**
- * **\[UNSTABLE\]** Dissect the string with extend information; Safe with the emojis, URLs, and words.
+ * Dissect the string with extend information; Safe with the emojis, URLs, and words.
  * @param {string} item String that need to dissect.
  * @param {StringDissectorOptions} [options={}] Options.
  * @returns {Generator<StringSegmentDescriptorExtend>} A dissected string with extend descriptor.

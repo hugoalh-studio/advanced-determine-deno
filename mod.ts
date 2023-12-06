@@ -1,6 +1,7 @@
 export { isArrayStrict, isArrayUnique, isArrayUniqueReference } from "./array/mod.ts";
 export { isBigIntEven, isBigIntIntegralType, isBigIntNegative, isBigIntOdd, isBigIntPositive, isBigIntPrime, isBigIntSafe, isBigIntegerEven, isBigIntegerIntegralType, isBigIntegerNegative, isBigIntegerOdd, isBigIntegerPositive, isBigIntegerPrime, isBigIntegerSafe } from "./bigint/mod.ts";
 export { isEnvironmentCI, isEnvironmentDocker, isEnvironmentDockerSync, isEnvironmentPodman, isEnvironmentPodmanSync, isEnvironmentSSH, isEnvironmentWSL, isEnvironmentWSLSync } from "./environment/mod.ts";
+export { GitHubWebhookDeliveryValidator, type GitHubWebhookDeliveryMeta } from "./github/mod.ts";
 export { isAsyncFunction, isAsynchronousFunction } from "./is_async_function.ts";
 export { isAsyncGenerator, isAsynchronousGenerator } from "./is_async_generator.ts";
 export { isAsyncGeneratorFunction, isAsynchronousGeneratorFunction } from "./is_async_generator_function.ts";

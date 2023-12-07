@@ -47,8 +47,8 @@ export enum StringSegmentType {
  * String segment descriptor.
  */
 export interface StringSegmentDescriptor {
-	value: string;
 	type: StringSegmentType;
+	value: string;
 }
 /**
  * String segment descriptor with extend information.

@@ -1,7 +1,7 @@
 import { isNumberEven } from "./is_even.ts";
-Deno.bench("1", { permissions: "none" }, () => {
+Deno.bench("False 1", { permissions: "none" }, () => {
 	isNumberEven(69);
 });
-Deno.bench("2", { permissions: "none" }, () => {
+Deno.bench("True 1", { permissions: "none" }, () => {
 	isNumberEven(64);
 });

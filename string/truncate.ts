@@ -92,42 +92,42 @@ export class StringTruncator {
 		if (item.length <= maximumLength) {
 			return item;
 		}
-		let resultLengthLeft = 0;
-		let resultLengthRight = 0;
+		let resultLengthEnd = 0;
+		let resultLengthStart = 0;
 		switch (this.#ellipsisPosition) {
 			case "end":
-				resultLengthLeft = resultLengthMaximum;
+				resultLengthStart = resultLengthMaximum;
 				break;
 			case "middle": {
 				const resultLengthHalf: number = Math.floor(resultLengthMaximum / 2);
-				resultLengthLeft = resultLengthHalf;
-				resultLengthRight = resultLengthHalf;
+				resultLengthStart = resultLengthHalf;
+				resultLengthEnd = resultLengthHalf;
 			}
 				break;
 			case "start":
-				resultLengthRight = resultLengthMaximum;
+				resultLengthEnd = resultLengthMaximum;
 				break;
 		}
 		const stringSegments: string[] = Array.from(this.#stringDissector.dissect(item), (segment: StringSegmentDescriptor): string => {
 			return segment.value;
 		});
-		let resultStringLeft = "";
+		let resultStringStart = "";
 		for (let index = 0; index < stringSegments.length; index += 1) {
 			const segment: string = stringSegments[index];
-			if (resultStringLeft.length + segment.length > resultLengthLeft) {
+			if (resultStringStart.length + segment.length > resultLengthStart) {
 				break;
 			}
-			resultStringLeft = `${resultStringLeft}${segment}`;
+			resultStringStart = `${resultStringStart}${segment}`;
 		}
-		let resultStringRight = "";
+		let resultStringEnd = "";
 		for (let index: number = stringSegments.length - 1; index >= 0; index -= 1) {
 			const segment: string = stringSegments[index];
-			if (resultStringRight.length + segment.length > resultLengthRight) {
+			if (resultStringEnd.length + segment.length > resultLengthEnd) {
 				break;
 			}
-			resultStringRight = `${segment}${resultStringRight}`;
+			resultStringEnd = `${segment}${resultStringEnd}`;
 		}
-		return `${resultStringLeft}${this.#ellipsisMark}${resultStringRight}`;
+		return `${resultStringStart}${this.#ellipsisMark}${resultStringEnd}`;
 	}
 	/**
 	 * Truncate the string with the specify length; Safe with the emojis, URLs, and words.

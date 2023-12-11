@@ -34,7 +34,7 @@ export interface StringTruncatorOptions extends StringDissectorOptions {
  */
 function checkLength(maximumLength: number, ellipsisMarkLength: number): void {
 	if (!(Number.isSafeInteger(maximumLength) && maximumLength >= 0)) {
-		throw new RangeError(`Argument \`maximumLength\` must be a number which is integer, positive, and safe!`);
+		throw new RangeError(`Argument \`maximumLength\` is not a number which is integer, positive, and safe!`);
 	}
 	if (ellipsisMarkLength > maximumLength) {
 		throw new Error(`Ellipsis string is too long!`);

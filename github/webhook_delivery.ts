@@ -40,15 +40,15 @@ export class GitHubWebhookDeliveryValidator {
 		}
 	}
 	/**
-	 * Correctly load cryptor; This is a necessary step when the webhook secret was provided at the initial.
-	 * @returns {Promise<this>}
+	 * Correctly load cryptor.
+	 * @access private
+	 * @returns {Promise<void>}
 	 */
-	async loadCryptor(): Promise<this> {
+	async #loadCryptor(): Promise<void> {
 		if (typeof this.#cryptorDefer !== "undefined") {
 			this.#cryptor = await this.#cryptorDefer;
 			this.#cryptorDefer = undefined;
 		}
-		return this;
 	}
 	/**
 	 * Resolve the request whether is from GitHub webhook delivery.
@@ -64,9 +64,6 @@ export class GitHubWebhookDeliveryValidator {
 	 */
 	async resolve(requestHeaders: Headers, requestPayload: string): Promise<GitHubWebhookDeliveryMeta>;
 	async resolve(...inputs: [request: Request] | [requestHeaders: Headers, requestPayload: string]): Promise<GitHubWebhookDeliveryMeta> {
-		if (this.#hasCryptor && typeof this.#cryptor === "undefined") {
-			throw new Error(`Cryptor is not correctly loaded!`);
-		}
 		const headers: Headers = (inputs.length === 1) ? inputs[0].headers : inputs[0];
 		const contentType: string | null = headers.get("Content-Type");
 		if (contentType === null) {
@@ -86,10 +83,10 @@ export class GitHubWebhookDeliveryValidator {
 		const meta: GitHubWebhookDeliveryMeta = { event, id };
 		const signature256: string | null = headers.get("X-Hub-Signature-256");
 		if (signature256 === null) {
-			if (typeof this.#cryptor === "undefined") {
-				return meta;
+			if (this.#hasCryptor) {
+				throw new ReferenceError(`Request is missing header \`X-Hub-Signature-256\`!`);
 			}
-			throw new ReferenceError(`Request is missing header \`X-Hub-Signature-256\`!`);
+			return meta;
 		}
 		const [signatureAlgorithm, signatureValue, ...rest] = signature256.split("=");
 		if (
@@ -99,6 +96,7 @@ export class GitHubWebhookDeliveryValidator {
 		) {
 			throw new SyntaxError(`Signature of the request is not a valid signature syntax!`);
 		}
+		await this.#loadCryptor();
 		if (await crypto.subtle.verify("HMAC", this.#cryptor!, decodeHex(signatureValue), new TextEncoder().encode((inputs.length === 1) ? await inputs[0].clone().text() : inputs[1]))) {
 			return meta;
 		}

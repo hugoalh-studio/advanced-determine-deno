@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.208.0/assert/assert_equals.ts";
+import { assertEquals } from "https://deno.land/std@0.209.0/assert/assert_equals.ts";
 import { isNumberFloat } from "./is_float.ts";
 Deno.test("False 1", { permissions: "none" }, () => {
 	assertEquals(isNumberFloat(69), false);

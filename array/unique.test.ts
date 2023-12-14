@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.208.0/assert/assert_equals.ts";
+import { assertEquals } from "https://deno.land/std@0.209.0/assert/assert_equals.ts";
 import { isArrayUnique } from "./is_unique.ts";
 import { isArrayUniqueReference } from "./is_unique_reference.ts";
 const sample1 = { foo: "bar" };

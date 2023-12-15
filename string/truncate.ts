@@ -27,6 +27,7 @@ export interface StringTruncatorOptions extends StringDissectorOptions {
 	ellipsisPosition?: StringTruncateEllipsisPosition | StringTruncateEllipsisPositionStringify;
 }
 /**
+ * Check length.
  * @access private
  * @param {number} maximumLength Maximum length of the target string.
  * @param {number} ellipsisMarkLength Ellipsis mark length of the target string.

@@ -83,7 +83,9 @@ function assertPathExecutableWindows(stat: Deno.FileInfo, path: string): boolean
  * **Require Permission:**
  * - Environment (`allow-env`):
  *   - `PATHEXT` *(Windows Only)*
- * - System Info (`allow-sys`): All *(Non-Windows Only)*
+ * - System Info (`allow-sys`):
+ *   - `gid` *(Non-Windows Only)*
+ *   - `uid` *(Non-Windows Only)*
  * @param {string} path Path.
  * @param {IsExecutableOptions} [options={}] Options.
  * @returns {Promise<boolean>} Determine result.
@@ -110,7 +112,9 @@ export default isExecutable;
  * **Require Permission:**
  * - Environment (`allow-env`):
  *   - `PATHEXT` *(Windows Only)*
- * - System Info (`allow-sys`): All *(Non-Windows Only)*
+ * - System Info (`allow-sys`):
+ *   - `gid` *(Non-Windows Only)*
+ *   - `uid` *(Non-Windows Only)*
  * @param {string} path Path.
  * @param {IsExecutableOptions} [options={}] Options.
  * @returns {boolean} Determine result.

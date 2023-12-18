@@ -1,6 +1,6 @@
 import { extname as pathExtName } from "https://deno.land/std@0.209.0/path/extname.ts";
 import { isOSWindows } from "./_os.ts";
-import { getPathExts } from "./path.ts";
+import { getEnvironmentPathExts } from "./pathext.ts";
 export interface IsExecutableOptions {
 	/**
 	 * If the path is not exist, whether to return `false` instead of throw an error.
@@ -69,7 +69,7 @@ function assertPathExecutableWindows(stat: Deno.FileInfo, path: string): boolean
 	if (!stat.isFile) {
 		return false;
 	}
-	const pathExts: string[] | null = getPathExts();
+	const pathExts: string[] | null = getEnvironmentPathExts();
 	if (pathExts === null) {
 		return true;
 	}

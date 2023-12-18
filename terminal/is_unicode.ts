@@ -15,7 +15,7 @@ export function isTerminalUnicode(): boolean {
 	const envTerm: string | undefined = Deno.env.get("TERM");
 	if (Deno.build.os !== "windows") {
 		// Linux Console (Kernel)
-		return envTerm !== "linux";
+		return (envTerm !== "linux");
 	}
 	if (
 		envTerm === "alacritty" ||

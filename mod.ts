@@ -1,6 +1,6 @@
 export { isArrayStrict, isArrayUnique, isArrayUniqueReference } from "./array/mod.ts";
 export { isBigIntEven, isBigIntIntegralType, isBigIntNegative, isBigIntOdd, isBigIntPositive, isBigIntPrime, isBigIntSafe, isBigIntegerEven, isBigIntegerIntegralType, isBigIntegerNegative, isBigIntegerOdd, isBigIntegerPositive, isBigIntegerPrime, isBigIntegerSafe } from "./bigint/mod.ts";
-export { isEnvironmentCI, isEnvironmentDocker, isEnvironmentDockerSync, isEnvironmentPodman, isEnvironmentPodmanSync, isEnvironmentSSH, isEnvironmentWSL, isEnvironmentWSLSync } from "./environment/mod.ts";
+export { environmentValueDelimiter, getEnvironmentPathExts, getEnvironmentPaths, isEnvironmentCI, isEnvironmentDocker, isEnvironmentDockerSync, isEnvironmentPodman, isEnvironmentPodmanSync, isEnvironmentSSH, isEnvironmentWSL, isEnvironmentWSLSync } from "./environment/mod.ts";
 export { GitHubWebhookDeliveryValidator, type GitHubWebhookDeliveryMeta } from "./github/mod.ts";
 export { isAsyncFunction, isAsynchronousFunction } from "./is_async_function.ts";
 export { isAsyncGenerator, isAsynchronousGenerator } from "./is_async_generator.ts";
@@ -15,5 +15,6 @@ export { isSyncGeneratorFunction, isSynchronousGeneratorFunction } from "./is_sy
 export { isNumberEven, isNumberFloat, isNumberIntegralType, isNumberNegative, isNumberOdd, isNumberPositive, isNumberPrime, isNumberSafe } from "./number/mod.ts";
 export { isNumericIntegralType, isNumericPrime, NumericIntegralType, type NumericIntegralTypeStringify } from "./numeric/mod.ts";
 export { isObjectPlain } from "./object/mod.ts";
+export { isPathExecutable, isPathExecutableSync, pathSeparator, type IsPathExecutableOptions } from "./path/mod.ts";
 export { isStringASCII, isStringCaseLower, isStringCaseUpper, isStringLowerCase, isStringSingleLine, isStringTrimmable, isStringTrimmableEnd, isStringTrimmableStart, isStringUpperCase, stringDissect, stringDissectExtend, StringDissector, stringTruncate, StringTruncator, StringSegmentType, StringTruncateEllipsisPosition, type StringDissectorOptions, type StringSegmentDescriptor, type StringSegmentDescriptorExtend, type StringTruncateEllipsisPositionStringify, type StringTruncatorOptions } from "./string/mod.ts";
 export { isTerminalInteractive, isTerminalUnicode } from "./terminal/mod.ts";

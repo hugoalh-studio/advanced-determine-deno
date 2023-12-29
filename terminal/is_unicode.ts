@@ -21,9 +21,9 @@ export function isTerminalUnicode(): boolean {
 		envTerm === "alacritty" ||
 		envTerm === "xterm-256color" ||
 		// Terminus (< v0.2.27)
-		typeof Deno.env.get("TERMINUS_SUBLIME") !== "undefined" ||
+		Deno.env.has("TERMINUS_SUBLIME") ||
 		// Windows Terminal
-		typeof Deno.env.get("WT_SESSION") !== "undefined" ||
+		Deno.env.has("WT_SESSION") ||
 		// ConEmu and cmder
 		Deno.env.get("ConEmuTask") === "{cmd::Cmder}" ||
 		Deno.env.get("TERMINAL_EMULATOR") === "JetBrains-JediTerm"

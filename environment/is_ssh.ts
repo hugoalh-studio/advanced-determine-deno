@@ -7,6 +7,6 @@
  * @returns {boolean} Determine result.
  */
 export function isEnvironmentSSH(): boolean {
-	return (typeof Deno.env.get("SSH_CLIENT") !== "undefined");
+	return Deno.env.has("SSH_CLIENT");
 }
 export default isEnvironmentSSH;

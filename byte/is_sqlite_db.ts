@@ -5,6 +5,6 @@ import { isByteMatch } from "./_matcher.ts";
  * @returns {boolean} Determine result.
  */
 export function isByteSQLiteDB(item: Uint8Array): boolean {
-	return isByteMatch(item, ["53 51 4C 69 74 65 20 66 6F 72 6D 61 74 20 33 00"]);
+	return isByteMatch(item, "53 51 4C 69 74 65 20 66 6F 72 6D 61 74 20 33 00");
 }
 export default isByteSQLiteDB;

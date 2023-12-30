@@ -4,7 +4,7 @@ import { isByteMatch } from "./_matcher.ts";
  * @param {Uint8Array} item Item that need to determine.
  * @returns {boolean} Determine result.
  */
-export function isBytePcap(item: Uint8Array): boolean {
+export function isByteLibpcap(item: Uint8Array): boolean {
 	return isByteMatch(item, [
 		"D4 C3 B2 A1",
 		"A1 B2 C3 D4",
@@ -12,4 +12,4 @@ export function isBytePcap(item: Uint8Array): boolean {
 		"A1 B2 3C 4D"
 	]);
 }
-export default isBytePcap;
+export default isByteLibpcap;

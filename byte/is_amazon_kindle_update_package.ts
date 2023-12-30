@@ -5,6 +5,6 @@ import { isByteMatch } from "./_matcher.ts";
  * @returns {boolean} Determine result.
  */
 export function isByteAmazonKindleUpdatePackage(item: Uint8Array): boolean {
-	return isByteMatch(item, ["53 50 30 31"]);
+	return isByteMatch(item, "53 50 30 31");
 }
 export default isByteAmazonKindleUpdatePackage;

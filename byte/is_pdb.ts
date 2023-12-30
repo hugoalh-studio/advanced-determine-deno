@@ -5,6 +5,6 @@ import { isByteMatch } from "./_matcher.ts";
  * @returns {boolean} Determine result.
  */
 export function isBytePdb(item: Uint8Array): boolean {
-	return isByteMatch(item, ["00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00"], 11);
+	return isByteMatch(item, "00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00", 11);
 }
 export default isBytePdb;

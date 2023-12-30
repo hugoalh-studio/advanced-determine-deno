@@ -4,7 +4,7 @@ import { isByteMatch } from "./_matcher.ts";
  * @param {Uint8Array} item Item that need to determine.
  * @returns {boolean} Determine result.
  */
-export function isBytePSafe3(item: Uint8Array): boolean {
-	return isByteMatch(item, ["50 57 53 33"]);
+export function isBytePasswordGorillaPasswordDatabase(item: Uint8Array): boolean {
+	return isByteMatch(item, "50 57 53 33");
 }
-export default isBytePSafe3;
+export default isBytePasswordGorillaPasswordDatabase;

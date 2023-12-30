@@ -1,6 +1,6 @@
 import { isByteMatch } from "./_matcher.ts";
 /**
- * Determine whether the item is GIF (Graphics Interchange Format) (`.gif`) file format.
+ * Determine whether the byte is GIF (Graphics Interchange Format) (`.gif`) file format.
  * @param {Uint8Array} item Item that need to determine.
  * @returns {boolean} Determine result.
  */

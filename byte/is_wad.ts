@@ -1,6 +1,6 @@
 import { isByteMatch } from "./_matcher.ts";
 /**
- * Determine whether the item is WAD (`.wad`) file format.
+ * Determine whether the byte is WAD (`.wad`) file format.
  * @param {Uint8Array} item Item that need to determine.
  * @returns {boolean} Determine result.
  */

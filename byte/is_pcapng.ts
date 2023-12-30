@@ -1,6 +1,6 @@
 import { isByteMatch } from "./_matcher.ts";
 /**
- * Determine whether the item is PCAP Next Generation Dump (`.pcapng`) file format.
+ * Determine whether the byte is PCAP Next Generation Dump (`.pcapng`) file format.
  * @param {Uint8Array} item Item that need to determine.
  * @returns {boolean} Determine result.
  */

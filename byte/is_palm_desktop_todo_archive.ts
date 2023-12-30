@@ -1,6 +1,6 @@
 import { isByteMatch } from "./_matcher.ts";
 /**
- * Determine whether the item is Palm Desktop To Do Archive (`.dba`) file format.
+ * Determine whether the byte is Palm Desktop To Do Archive (`.dba`) file format.
  * @param {Uint8Array} item Item that need to determine.
  * @returns {boolean} Determine result.
  */

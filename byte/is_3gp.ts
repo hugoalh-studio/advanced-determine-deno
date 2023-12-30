@@ -1,6 +1,6 @@
 import { isByteMatch } from "./_matcher.ts";
 /**
- * Determine whether the item is 3GP (3rd Generation Partnership Project) (`.3gp`/`.3g2`) file format.
+ * Determine whether the byte is 3GP (3rd Generation Partnership Project) (`.3gp`/`.3g2`) file format.
  * @param {Uint8Array} item Item that need to determine.
  * @returns {boolean} Determine result.
  */

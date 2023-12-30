@@ -1,6 +1,6 @@
 import { isByteMatch } from "./_matcher.ts";
 /**
- * Determine whether the item is Lotus 1-2-3 spreadsheet version 9 (`.123`) file format.
+ * Determine whether the byte is Lotus 1-2-3 spreadsheet version 9 (`.123`) file format.
  * @param {Uint8Array} item Item that need to determine.
  * @returns {boolean} Determine result.
  */

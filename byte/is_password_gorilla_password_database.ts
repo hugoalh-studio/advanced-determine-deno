@@ -1,6 +1,6 @@
 import { isByteMatch } from "./_matcher.ts";
 /**
- * Determine whether the item is Password Gorilla Password Database (`.psafe3`) file format.
+ * Determine whether the byte is Password Gorilla Password Database (`.psafe3`) file format.
  * @param {Uint8Array} item Item that need to determine.
  * @returns {boolean} Determine result.
  */

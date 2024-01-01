@@ -1,11 +1,11 @@
 import { BytesMatcher } from "./_matcher.ts";
-const matcher: BytesMatcher = new BytesMatcher().addExactHex(11, "00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00");
+export const bytesMatcherPalmPilotDatabase: BytesMatcher = new BytesMatcher().addExactGroupHex(11, "00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00").freeze();
 /**
  * Determine whether the byte is PalmPilot Database/Document (`.pdb`) file format.
  * @param {Uint8Array} item Item that need to determine.
  * @returns {boolean} Determine result.
  */
 export function isBytePalmPilotDatabase(item: Uint8Array): boolean {
-	return matcher.match(item);
+	return bytesMatcherPalmPilotDatabase.match(item);
 }
 export default isBytePalmPilotDatabase;

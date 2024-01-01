@@ -16,7 +16,11 @@ export interface BytesMatcherInvalidSyntaxDetail {
 }
 export class BytesMatcher {
 	#exacts: BytesMatcherExact[] = [];
-	addExactHex(start: number, ...signatures: (string | Uint8Array)[]): this {
+	#freeze = false;
+	addExactGroupHex(start: number, ...signatures: (string | Uint8Array)[]): this {
+		if (this.#freeze) {
+			throw new Error(`This matcher is not modifiable!`);
+		}
 		checkStartValue(start);
 		const signaturesResolve: Uint8Array[] = signatures.map((signature: string | Uint8Array): Uint8Array => {
 			if (signature instanceof Uint8Array) {
@@ -45,10 +49,14 @@ export class BytesMatcher {
 		});
 		return this;
 	}
-	addExactText(start: number, ...signatures: string[]): this {
-		return this.addExactHex(start, ...signatures.map((signature: string): Uint8Array => {
+	addExactGroupText(start: number, ...signatures: string[]): this {
+		return this.addExactGroupHex(start, ...signatures.map((signature: string): Uint8Array => {
 			return new TextEncoder().encode(signature);
 		}));
+	}
+	freeze(): this {
+		this.#freeze = true;
+		return this;
 	}
 	matchDetail(source: Uint8Array): BytesMatcherInvalidSyntaxDetail[] {
 		const errors: BytesMatcherInvalidSyntaxDetail[] = [];

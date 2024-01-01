@@ -1,5 +1,5 @@
 import { BytesMatcher } from "./_matcher.ts";
-export const bytesMatcherLibpcap: BytesMatcher = new BytesMatcher().addExactGroupHex(0, "D4 C3 B2 A1", "A1 B2 C3 D4", "4D 3C B2 A1", "A1 B2 3C 4D").freeze();
+export const bytesMatcherLibpcap: BytesMatcher = new BytesMatcher().addExactStartGroupHex(0, ["D4 C3 B2 A1", "A1 B2 C3 D4", "4D 3C B2 A1", "A1 B2 3C 4D"]).freeze();
 /**
  * Determine whether the byte is Libpcap (`.pcap`) file format.
  * @param {Uint8Array} item Item that need to determine.

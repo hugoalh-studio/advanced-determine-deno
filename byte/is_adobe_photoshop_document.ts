@@ -1,5 +1,5 @@
 import { BytesMatcher } from "./_matcher.ts";
-export const bytesMatcherAdobePhotoshopDocument: BytesMatcher = new BytesMatcher().addExactGroupHex(0, "38 42 50 53").freeze();
+export const bytesMatcherAdobePhotoshopDocument: BytesMatcher = new BytesMatcher().addExactStartGroupHex(0, "38 42 50 53").freeze();
 /**
  * Determine whether the byte is Adobe Photoshop Document (`.psd`) file format.
  * @param {Uint8Array} item Item that need to determine.

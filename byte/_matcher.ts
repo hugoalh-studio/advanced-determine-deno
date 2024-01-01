@@ -1,56 +1,73 @@
+import { uniqueArray } from "https://deno.land/x/unique_array@v1.0.14/mod.ts";
 const regexpHexBytesSignature = /^[\dA-F]{2}(?: [\dA-F]{2})*$/v;
-function checkStartValue(start: number): void {
-	if (!(Number.isSafeInteger(start) && start >= 0)) {
-		throw new RangeError(`Argument \`start\` is not a number which is integer, positive, and safe!`);
-	}
-}
-export interface BytesMatcherExact {
+interface BytesMatcherExact {
 	length: number;
 	signatures: Uint8Array[];
-	start: number;
 }
-export interface BytesMatcherInvalidSyntaxDetail {
-	actual: Uint8Array;
-	expect: Uint8Array[];
-	start: number;
+interface BytesMatcherExactEnd extends BytesMatcherExact {
+	ends: number[];
+}
+interface BytesMatcherExactStart extends BytesMatcherExact {
+	starts: number[];
+}
+function resolveSignatures(signatures: string | Uint8Array | (string | Uint8Array)[]): BytesMatcherExact {
+	const resolve: Uint8Array[] = (Array.isArray(signatures) ? signatures : [signatures]).map((signature: string | Uint8Array): Uint8Array => {
+		if (signature instanceof Uint8Array) {
+			return signature;
+		}
+		if (!regexpHexBytesSignature.test(signature)) {
+			throw new SyntaxError(`\`${signature}\` is not a valid hex!`);
+		}
+		return Uint8Array.of(...signature.split(" ").map((byte: string): number => {
+			return Number.parseInt(byte, 16);
+		}));
+	});
+	const lengths: number[] = resolve.map((signature: Uint8Array): number => {
+		return signature.length;
+	});
+	if (
+		lengths.includes(0) ||
+		uniqueArray(lengths).length !== 1
+	) {
+		throw new SyntaxError(`{${lengths.join(" || ")}} is not a valid signatures group!`);
+	}
+	return {
+		length: lengths[0],
+		signatures: resolve
+	};
 }
 export class BytesMatcher {
-	#exacts: BytesMatcherExact[] = [];
+	#exactsEnd: BytesMatcherExactEnd[] = [];
+	#exactsStart: BytesMatcherExactStart[] = [];
 	#freeze = false;
-	addExactGroupHex(start: number, ...signatures: (string | Uint8Array)[]): this {
+	#checkFreeze(): void {
 		if (this.#freeze) {
 			throw new Error(`This matcher is not modifiable!`);
 		}
-		checkStartValue(start);
-		const signaturesResolve: Uint8Array[] = signatures.map((signature: string | Uint8Array): Uint8Array => {
-			if (signature instanceof Uint8Array) {
-				return signature;
-			}
-			if (!regexpHexBytesSignature.test(signature)) {
-				throw new SyntaxError(`\`${signature}\` is not a valid hex!`);
-			}
-			return Uint8Array.of(...signature.split(" ").map((byte: string): number => {
-				return Number.parseInt(byte, 16);
-			}));
-		});
-		const signaturesLength: number[] = signaturesResolve.map((signature: Uint8Array): number => {
-			return signature.length;
-		});
-		if (signaturesLength.includes(0)) {
-			throw new SyntaxError(`Some of the signatures are empty: {${signaturesLength.join(", ")}}`);
-		}
-		if (new Set<number>(signaturesLength).size !== 1) {
-			throw new SyntaxError(`Lengths in the signatures group are not equivalent: {${signaturesLength.join(", ")}}`);
-		}
-		this.#exacts.push({
-			length: start + signaturesLength[0],
-			signatures: signaturesResolve,
-			start
+	}
+	addExactEndGroupHex(ends: number | number[], signatures: string | Uint8Array | (string | Uint8Array)[]): this {
+		this.#checkFreeze();
+		this.#exactsEnd.push({
+			...resolveSignatures(signatures),
+			ends: Array.isArray(ends) ? ends : [ends]
 		});
 		return this;
 	}
-	addExactGroupText(start: number, ...signatures: string[]): this {
-		return this.addExactGroupHex(start, ...signatures.map((signature: string): Uint8Array => {
+	addExactEndGroupText(ends: number | number[], signatures: string | string[]): this {
+		return this.addExactEndGroupHex(ends, (Array.isArray(signatures) ? signatures : [signatures]).map((signature: string): Uint8Array => {
+			return new TextEncoder().encode(signature);
+		}));
+	}
+	addExactStartGroupHex(starts: number | number[], signatures: string | Uint8Array | (string | Uint8Array)[]): this {
+		this.#checkFreeze();
+		this.#exactsStart.push({
+			...resolveSignatures(signatures),
+			starts: Array.isArray(starts) ? starts : [starts]
+		});
+		return this;
+	}
+	addExactStartGroupText(starts: number | number[], signatures: string | string[]): this {
+		return this.addExactStartGroupHex(starts, (Array.isArray(signatures) ? signatures : [signatures]).map((signature: string): Uint8Array => {
 			return new TextEncoder().encode(signature);
 		}));
 	}
@@ -58,32 +75,37 @@ export class BytesMatcher {
 		this.#freeze = true;
 		return this;
 	}
-	matchDetail(source: Uint8Array): BytesMatcherInvalidSyntaxDetail[] {
-		const errors: BytesMatcherInvalidSyntaxDetail[] = [];
-		this.#exacts.forEach(({ length, signatures, start }: BytesMatcherExact): void => {
-			const sourceSection: Uint8Array = source.slice(start, start + length);
-			if (!signatures.some((signature: Uint8Array): boolean => {
-				if (sourceSection.length !== signature.length) {
+	match(source: Uint8Array): boolean {
+		for (const { ends, length, signatures } of this.#exactsEnd) {
+			if (!ends.some((end: number): boolean => {
+				const sourceSection: Uint8Array = source.slice(source.length - end, source.length - end + length);
+				if (sourceSection.length !== length) {
 					return false;
 				}
-				return signature.every((byte: number, index: number): boolean => {
-					return (sourceSection[index] === byte);
+				return signatures.some((signature: Uint8Array): boolean => {
+					return signature.every((byte: number, index: number): boolean => {
+						return (sourceSection[index] === byte);
+					});
 				});
 			})) {
-				errors.push({
-					actual: new Uint8Array(sourceSection),
-					expect: signatures.map((signature: Uint8Array): Uint8Array => {
-						return new Uint8Array(signature);
-					}),
-					start
-				});
+				return false;
 			}
-		});
-		return errors.sort((a: BytesMatcherInvalidSyntaxDetail, b: BytesMatcherInvalidSyntaxDetail): number => {
-			return (a.start - b.start);
-		});
-	}
-	match(source: Uint8Array): boolean {
-		return (this.matchDetail(source).length === 0);
+		}
+		for (const { length, signatures, starts } of this.#exactsStart) {
+			if (!starts.some((start: number): boolean => {
+				const sourceSection: Uint8Array = source.slice(start, start + length);
+				if (sourceSection.length !== length) {
+					return false;
+				}
+				return signatures.some((signature: Uint8Array): boolean => {
+					return signature.every((byte: number, index: number): boolean => {
+						return (sourceSection[index] === byte);
+					});
+				});
+			})) {
+				return false;
+			}
+		}
+		return true;
 	}
 }

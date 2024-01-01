@@ -1,7 +1,7 @@
 import { BytesMatcher } from "./_matcher.ts";
 export const bytesMatcherAmazonKindleUpdatePackage: BytesMatcher = new BytesMatcher().addExactStartGroupHex(0, "53 50 30 31").freeze();
 /**
- * Determine whether the byte is Amazon Kindle Update Package (`.bin`) file format.
+ * **\[EXPERIMENTAL\]** Determine whether the byte is Amazon Kindle Update Package (`.bin`) file format.
  * @param {Uint8Array} item Item that need to determine.
  * @returns {boolean} Determine result.
  */

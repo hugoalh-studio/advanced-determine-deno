@@ -1,7 +1,7 @@
 import { BytesMatcher } from "./_matcher.ts";
 export const bytesMatcherJPEGXR: BytesMatcher = new BytesMatcher().addExactStartGroupHex(0, "49 49 BC").freeze();
 /**
- * Determine whether the byte is JPEG XR (JPEG extended range) (`.jxr`/`.hdp`/`.wdp`) file format.
+ * **\[EXPERIMENTAL\]** Determine whether the byte is JPEG XR (JPEG extended range) (`.jxr`/`.hdp`/`.wdp`) file format.
  * @param {Uint8Array} item Item that need to determine.
  * @returns {boolean} Determine result.
  */

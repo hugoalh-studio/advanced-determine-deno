@@ -2458,7 +2458,19 @@ export default [
 				"fromIndex": 0,
 				"hex": "3F 5F"
 			}
-		]
+		],
+		"patternVariant": "wikipedia"
+	},
+	{
+		"extension": ".hlp",
+		"name": "Windows Help file",
+		"pattern": [
+			{
+				"fromIndex": 6,
+				"hex": "00 00 FF FF FF FF"
+			}
+		],
+		"patternVariant": "garykessler"
 	},
 	{
 		"extension": ".pdf",
@@ -3157,6 +3169,260 @@ export default [
 			{
 				"fromIndex": 0,
 				"hex": "3A 42 61 73 65 20"
+			}
+		]
+	},
+	{
+		"extension": ".nri",
+		"name": "Nero CD Compilation",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "0E 4E 65 72 6F 49 53 4F"
+			}
+		]
+	},
+	{
+		"extension": ".wks",
+		"name": "DeskMate Worksheet",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "0E 57 4B 53"
+			}
+		]
+	},
+	{
+		"extension": ".sib",
+		"name": "Sibelius Music Score File",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "0F 53 49 42 45 4C 49 55 53"
+			}
+		]
+	},
+	{
+		"extension": ".gz",
+		"name": "GZip Compressed Archive",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "1F 8B"
+			}
+		]
+	},
+	{
+		"extension": ".tar.gz",
+		"name": "GZip Compressed Archive",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "1F 8B"
+			}
+		]
+	},
+	{
+		"extension": ".xz",
+		"name": "XZ LZMA2 Compressed Archive",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "FD 37 7A 58 5A 00"
+			}
+		]
+	},
+	{
+		"extension": ".tar.xz",
+		"name": "XZ LZMA2 Compressed Archive",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "FD 37 7A 58 5A 00"
+			}
+		]
+	},
+	{
+		"extension": ".crt",
+		"name": "PEM Encoded X.509 Certificate File",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "2D 2D 2D 2D 2D 42 45 47 49 4E 20 43 45 52 54 49 46 49 43 41 54 45 2D 2D 2D 2D 2D"
+			}
+		]
+	},
+	{
+		"extension": ".pem",
+		"name": "PEM Encoded X.509 Certificate File",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "2D 2D 2D 2D 2D 42 45 47 49 4E 20 43 45 52 54 49 46 49 43 41 54 45 2D 2D 2D 2D 2D"
+			}
+		]
+	},
+	{
+		"extension": ".csr",
+		"name": "PEM Encoded X.509 Certificate Signing Request File",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "2D 2D 2D 2D 2D 42 45 47 49 4E 20 43 45 52 54 49 46 49 43 41 54 45 20 52 45 51 55 45 53 54 2D 2D 2D 2D 2D"
+			}
+		]
+	},
+	{
+		"extension": ".pem",
+		"name": "PEM Encoded X.509 Certificate Signing Request File",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "2D 2D 2D 2D 2D 42 45 47 49 4E 20 43 45 52 54 49 46 49 43 41 54 45 20 52 45 51 55 45 53 54 2D 2D 2D 2D 2D"
+			}
+		]
+	},
+	{
+		"extension": ".key",
+		"name": "Pem Encoded X.509 PKCS#8 Private Key File",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "2D 2D 2D 2D 2D 42 45 47 49 4E 20 50 52 49 56 41 54 45 20 4B 45 59 2D 2D 2D 2D 2D"
+			}
+		]
+	},
+	{
+		"extension": ".pem",
+		"name": "Pem Encoded X.509 PKCS#8 Private Key File",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "2D 2D 2D 2D 2D 42 45 47 49 4E 20 50 52 49 56 41 54 45 20 4B 45 59 2D 2D 2D 2D 2D"
+			}
+		]
+	},
+	{
+		"extension": ".key",
+		"name": "PEM Encoded X.509 PKCS#1 DSA Private Key File",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "2D 2D 2D 2D 2D 42 45 47 49 4E 20 44 53 41 20 50 52 49 56 41 54 45 20 4B 45 59 2D 2D 2D 2D 2D"
+			}
+		]
+	},
+	{
+		"extension": ".pem",
+		"name": "PEM Encoded X.509 PKCS#1 DSA Private Key File",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "2D 2D 2D 2D 2D 42 45 47 49 4E 20 44 53 41 20 50 52 49 56 41 54 45 20 4B 45 59 2D 2D 2D 2D 2D"
+			}
+		]
+	},
+	{
+		"extension": ".key",
+		"name": "PEM Encoded X.509 PKCS#1 RSA Private Key File",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "2D 2D 2D 2D 2D 42 45 47 49 4E 20 52 45 41 20 50 52 49 56 41 54 45 20 4B 45 59 2D 2D 2D 2D 2D"
+			}
+		]
+	},
+	{
+		"extension": ".pem",
+		"name": "PEM Encoded X.509 PKCS#1 RSA Private Key File",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "2D 2D 2D 2D 2D 42 45 47 49 4E 20 52 45 41 20 50 52 49 56 41 54 45 20 4B 45 59 2D 2D 2D 2D 2D"
+			}
+		]
+	},
+	{
+		"extension": ".tga",
+		"name": "Truevision Targa Graphic File",
+		"pattern": [
+			{
+				"fromIndex": -18,
+				"hex": "54 52 55 45 56 49 53 49 4F 4E 2D 58 46 49 4C 45 2E 00"
+			}
+		]
+	},
+	{
+		"extension": ".avif",
+		"name": "Alliance for Open Media (AOMedia) Video 1 (AV1) Image Format",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "00 00 00"
+			}
+		]
+	},
+	{
+		"extension": ".xxx",
+		"name": "Compucon/Singer Embroidery Design File",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00"
+			}
+		]
+	},
+	{
+		"extension": ".rvt",
+		"name": "Revit Project File Subheader",
+		"pattern": [
+			{
+				"fromIndex": 512,
+				"hex": "00 00 00 00 00 00 00 00"
+			}
+		]
+	},
+	{
+		"extension": ".tbi",
+		"name": "Windows Disk Image File",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "00 00 00 00 14 00 00 00"
+			}
+		]
+	},
+	{
+		"extension": ".dat",
+		"name": "Bitcoin Core Wallet File",
+		"pattern": [
+			{
+				"fromIndex": 8,
+				"hex": "00 00 00 00 62 31 05 00 09 00 00 00 00 20 00 00 00 09 00 00 00 00 00 00"
+			}
+		]
+	},
+	{
+		"extension": ".bsb",
+		"name": "NOAA Raster Navigation Chart (RNC) File",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "21 0D 0A 43 52 52 2F 54 68 69 73 20 65 6C 65 63 74 72 6F 6E 69 63 20 63 68 61 72 74 20 77 61 73 20 70 72 6F 64 75 63 65 64 20 75 6E 64 65 72 20 74 68 65 20 61 75 74 68 6F 72 69 74 79 20 6F 66 20 55 53 41 2D 4E 4F 41 41 2F 4E 4F 53 2E 0D 0A"
+			}
+		]
+	},
+	{
+		"extension": ".epub",
+		"name": "Electronic Publication File",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "50 4B 03 04"
+			},
+			{
+				"fromIndex": 30,
+				"hex": "6D 69 6D 65 74 79 70 65 61 70 70 6C 69 63 61 74 69 6F 6E 2F 65 70 75 62 2B 7A 69 70"
 			}
 		]
 	}

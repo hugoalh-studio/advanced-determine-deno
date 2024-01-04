@@ -1,0 +1,318 @@
+extension	mime	name	pattern	patternVariant
+.wk1		Lotus 1-2-3 Spreadsheet (V1) File	"[{""fromIndex"":0,""hex"":""00 00 02 00 06 04 06 00 08 00 00 00 00 00""}]"	
+.wk3		Lotus 1-2-3 Spreadsheet (V3) File	"[{""fromIndex"":0,""hex"":""00 00 1A 00 00 10 04 00 00 00 00 00""}]"	
+.wk4		Lotus 1-2-3 Spreadsheet (V4) File	"[{""fromIndex"":0,""hex"":""00 00 1A 00 02 10 04 00 00 00 00 00""}]"	
+.wk5		Lotus 1-2-3 Spreadsheet (V5) File	"[{""fromIndex"":0,""hex"":""00 00 1A 00 02 10 04 00 00 00 00 00""}]"	
+.123		Lotus 1-2-3 Spreadsheet (V9) File	"[{""fromIndex"":0,""hex"":""00 00 1A 00 05 10 04""}]"	
+		Amiga Hunk Executable File	"[{""fromIndex"":0,""hex"":""00 00 03 F3""}]"	
+.qxd		Quark Express Document	"[{""fromIndex"":0,""hex"":""00 00 4D 4D 58 50 52""}]"	BE
+.qxd		Quark Express Document	"[{""fromIndex"":0,""hex"":""00 00 49 49 58 50 52""}]"	LE
+.psafe3		Password Gorilla Password Database	"[{""fromIndex"":0,""hex"":""50 57 53 33""}]"	
+.pcap		Libpcap File	"[{""fromIndex"":0,""hex"":""A1 B2 C3 D4""}]"	BE
+.pcap		Libpcap File	"[{""fromIndex"":0,""hex"":""D4 C3 B2 A1""}]"	LE
+.pcap		Libpcap File	"[{""fromIndex"":0,""hex"":""A1 B2 3C 4D""}]"	Nanosecond Resolution; BE
+.pcap		Libpcap File	"[{""fromIndex"":0,""hex"":""4D 3C B2 A1""}]"	Nanosecond Resolution; LE
+.pcapng		PCAP Next Generation Dump File	"[{""fromIndex"":0,""hex"":""0A 0D 0D 0A""}]"	
+.rpm		RedHat Package Manager (RPM) Package	"[{""fromIndex"":0,""hex"":""ED AB EE DB""}]"	
+.bin		Amazon Kindle Update Package	"[{""fromIndex"":0,""hex"":""53 50 30 31""}]"	
+.wad		Internal WAD	"[{""fromIndex"":0,""hex"":""49 57 41 44""}]"	
+.pdb		PalmPilot Database/Document File	"[{""fromIndex"":11,""hex"":""00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00""}]"	
+.dba		Palm Desktop Calendar Archive	"[{""fromIndex"":0,""hex"":""BE BA FE CA""}]"	
+.dba		Palm Desktop To Do Archive	"[{""fromIndex"":0,""hex"":""00 01 42 44""}]"	
+.tda		Palm Desktop Calendar Archive	"[{""fromIndex"":0,""hex"":""00 01 44 54""}]"	
+.tdf$		Telegram Desktop File	"[{""fromIndex"":0,""hex"":""54 44 46 24""}]"	
+.tdef		Telegram Desktop Encrypted File	"[{""fromIndex"":0,""hex"":""54 44 45 46""}]"	
+.ico	image/vnd.microsoft.icon	Computer Icons	"[{""fromIndex"":0,""hex"":""00 00 01 00""}]"	
+.ico	image/x-icon	Computer Icons	"[{""fromIndex"":0,""hex"":""00 00 01 00""}]"	
+.ico	image/ico	Computer Icons	"[{""fromIndex"":0,""hex"":""00 00 01 00""}]"	
+.icns		Apple Icon Image	"[{""fromIndex"":0,""hex"":""69 63 6E 73""}]"	
+.heic		High Efficiency Image Container (HEIC)	"[{""fromIndex"":4,""hex"":""66 74 79 70 68 65 69 63""}]"	
+.lzh		Lempel Ziv Huffman Archive	"[{""fromIndex"":2,""hex"":""2D 68 6C 30 2D""}]"	Method 0 (No Compression)
+.lzh		Lempel Ziv Huffman Archive	"[{""fromIndex"":2,""hex"":""2D 68 6C 35 2D""}]"	Method 5 (8 KiB Sliding Window)
+.bac		AmiBack Amiga Backup Data File	"[{""fromIndex"":0,""hex"":""42 41 43 4B 4D 49 4B 45 44 49 53 4B""}]"	
+.idx		AmiBack Amiga Backup Index File	"[{""fromIndex"":0,""hex"":""49 4E 44 58""}]"	
+.plist		Binary Property List File	"[{""fromIndex"":0,""hex"":""62 70 6C 69 73 74""}]"	
+.bz2		BZip2 Archive	"[{""fromIndex"":0,""hex"":""42 5A 68""}]"	
+.vdr		VirtualDub	"[{""fromIndex"":0,""hex"":""52 49 46 46""},{""fromIndex"":8,""hex"":""56 44 52 4D""}]"	
+.trd		TrID	"[{""fromIndex"":0,""hex"":""52 59 46 46""},{""fromIndex"":8,""hex"":""54 52 49 44""}]"	
+.shw		Corel SHOW! 4.0	"[{""fromIndex"":0,""hex"":""52 49 46 46""},{""fromIndex"":8,""hex"":""73 68 77 34""}]"	
+.shw		Corel SHOW! 5.0	"[{""fromIndex"":0,""hex"":""52 49 46 46""},{""fromIndex"":8,""hex"":""73 68 77 35""}]"	
+.shb		Corel SHOW! 5.0 Background	"[{""fromIndex"":0,""hex"":""52 49 46 46""},{""fromIndex"":8,""hex"":""73 68 62 35""}]"	
+.shr		Corel SHOW! 5.0 Player	"[{""fromIndex"":0,""hex"":""52 49 46 46""},{""fromIndex"":8,""hex"":""73 68 72 35""}]"	
+.dcr		Macromedia ShockWave	"[{""fromIndex"":0,""hex"":""58 46 49 52""},{""fromIndex"":8,""hex"":""4D 44 47 46""}]"	
+.mmm		Multimedia Movie	"[{""fromIndex"":0,""hex"":""52 49 46 46""},{""fromIndex"":8,""hex"":""52 4D 4D 50""}]"	
+.mny		Microsoft Money File	"[{""fromIndex"":0,""hex"":""00 01 00 00 4D 53 49 53 41 4D 20 44 61 74 61 62 61 73 65""}]"	
+.accdb		Microsoft Access 2007 Database	"[{""fromIndex"":0,""hex"":""00 01 00 00 53 74 61 6E 64 61 72 64 20 41 43 45 20 44 42""}]"	
+.mdb		Microsoft Access Database	"[{""fromIndex"":0,""hex"":""00 01 00 00 53 74 61 6E 64 61 72 64 20 4A 65 74 20 44 42""}]"	
+.swf		Adobe Flash	"[{""fromIndex"":0,""hex"":""43 57 53""}]"	CWS
+.swf		Adobe Flash	"[{""fromIndex"":0,""hex"":""46 57 53""}]"	FWS
+.indd		Adobe InDesign Document	"[{""fromIndex"":0,""hex"":""06 06 ED F5 D8 1D 46 E5 BD 31 EF E7 FE 74 B7 1D""}]"	
+.zlib		ZLib Archive	"[{""fromIndex"":0,""hex"":""78 01""}]"	No Compression Without Preset Dictionary
+.zlib		ZLib Archive	"[{""fromIndex"":0,""hex"":""78 5E""}]"	Best Speed Without Preset Dictionary
+.zlib		ZLib Archive	"[{""fromIndex"":0,""hex"":""78 9C""}]"	Default Compression Without Preset Dictionary
+.zlib		ZLib Archive	"[{""fromIndex"":0,""hex"":""78 DA""}]"	Best Compression Without Preset Dictionary
+.zlib		ZLib Archive	"[{""fromIndex"":0,""hex"":""78 20""}]"	No Compression With Preset Dictionary
+.zlib		ZLib Archive	"[{""fromIndex"":0,""hex"":""78 7D""}]"	Best Speed With Preset Dictionary
+.zlib		ZLib Archive	"[{""fromIndex"":0,""hex"":""78 BB""}]"	Default Compression With Preset Dictionary
+.zlib		ZLib Archive	"[{""fromIndex"":0,""hex"":""78 F9""}]"	Best Compression With Preset Dictionary
+.zoo		Zoo File	"[{""fromIndex"":0,""hex"":""5A 4F 4F""}]"	
+.pbm		Portable Bitmap ASCII	"[{""fromIndex"":0,""hex"":""50 31 0A""}]"	
+.pbm		Portable Bitmap Binary	"[{""fromIndex"":0,""hex"":""50 34 0A""}]"	
+.pgm		Portable Gray Map ASCII	"[{""fromIndex"":0,""hex"":""50 32 0A""}]"	
+.pgm		Portable Gray Map Binary	"[{""fromIndex"":0,""hex"":""50 35 0A""}]"	
+.ppm		Portable Pixmap ASCII	"[{""fromIndex"":0,""hex"":""50 33 0A""}]"	
+.ppm		Portable Pixmap Binary	"[{""fromIndex"":0,""hex"":""50 36 0A""}]"	
+.j2c		JPEG 2000	"[{""fromIndex"":0,""hex"":""00 00 00 0C 6A 50 20 20 0D 0A 87 0A""}]"	Long
+.j2k		JPEG 2000	"[{""fromIndex"":0,""hex"":""00 00 00 0C 6A 50 20 20 0D 0A 87 0A""}]"	Long
+.jp2		JPEG 2000	"[{""fromIndex"":0,""hex"":""00 00 00 0C 6A 50 20 20 0D 0A 87 0A""}]"	Long
+.jpc		JPEG 2000	"[{""fromIndex"":0,""hex"":""00 00 00 0C 6A 50 20 20 0D 0A 87 0A""}]"	Long
+.jpf		JPEG 2000	"[{""fromIndex"":0,""hex"":""00 00 00 0C 6A 50 20 20 0D 0A 87 0A""}]"	Long
+.jpg2		JPEG 2000	"[{""fromIndex"":0,""hex"":""00 00 00 0C 6A 50 20 20 0D 0A 87 0A""}]"	Long
+.jpm		JPEG 2000	"[{""fromIndex"":0,""hex"":""00 00 00 0C 6A 50 20 20 0D 0A 87 0A""}]"	Long
+.jpx		JPEG 2000	"[{""fromIndex"":0,""hex"":""00 00 00 0C 6A 50 20 20 0D 0A 87 0A""}]"	Long
+.mj2		JPEG 2000	"[{""fromIndex"":0,""hex"":""00 00 00 0C 6A 50 20 20 0D 0A 87 0A""}]"	Long
+.j2c		JPEG 2000	"[{""fromIndex"":0,""hex"":""FF 4F FF 51""}]"	Short
+.j2k		JPEG 2000	"[{""fromIndex"":0,""hex"":""FF 4F FF 51""}]"	Short
+.jp2		JPEG 2000	"[{""fromIndex"":0,""hex"":""FF 4F FF 51""}]"	Short
+.jpc		JPEG 2000	"[{""fromIndex"":0,""hex"":""FF 4F FF 51""}]"	Short
+.jpf		JPEG 2000	"[{""fromIndex"":0,""hex"":""FF 4F FF 51""}]"	Short
+.jpg2		JPEG 2000	"[{""fromIndex"":0,""hex"":""FF 4F FF 51""}]"	Short
+.jpm		JPEG 2000	"[{""fromIndex"":0,""hex"":""FF 4F FF 51""}]"	Short
+.jpx		JPEG 2000	"[{""fromIndex"":0,""hex"":""FF 4F FF 51""}]"	Short
+.mj2		JPEG 2000	"[{""fromIndex"":0,""hex"":""FF 4F FF 51""}]"	Short
+.hl7		Health Level Seven (HL7) Standard for Electronic Data Exchange	"[{""fromIndex"":0,""hex"":""42 53 48 7C""}]"	BSH
+.hl7		Health Level Seven (HL7) Standard for Electronic Data Exchange	"[{""fromIndex"":0,""hex"":""4D 53 48 7C""}]"	MSH
+.sqlitedb		SQLite Database	"[{""fromIndex"":0,""hex"":""53 51 4C 69 74 65 20 66 6F 72 6D 61 74 20 33 00""}]"	
+.sqlite		SQLite Database	"[{""fromIndex"":0,""hex"":""53 51 4C 69 74 65 20 66 6F 72 6D 61 74 20 33 00""}]"	
+.db		SQLite Database	"[{""fromIndex"":0,""hex"":""53 51 4C 69 74 65 20 66 6F 72 6D 61 74 20 33 00""}]"	
+.pic		IBM Storyboard Bitmap File	"[{""fromIndex"":0,""hex"":""00""}]"	
+.mov		Apple QuickTime Movie File	"[{""fromIndex"":0,""hex"":""00""}]"	
+.pif		Windows Program Information File	"[{""fromIndex"":0,""hex"":""00""}]"	
+.sea		Mac Stuffit Self-Extracting Archive	"[{""fromIndex"":0,""hex"":""00""}]"	
+.ytr		IRIS OCR Data File	"[{""fromIndex"":0,""hex"":""00""}]"	
+		Palm Desktop Data File (Access Format)	"[{""fromIndex"":0,""hex"":""00 01 00 00""}]"	
+.3gp		3rd Generation Partnership Project Multimedia File	"[{""fromIndex"":4,""hex"":""66 74 79 70 33 67""}]"	
+.3g2		3rd Generation Partnership Project 2 Multimedia File	"[{""fromIndex"":4,""hex"":""66 74 79 70 33 67""}]"	
+.z		Tar Zip Lempel-Ziv-Welch Algorithm Archive	"[{""fromIndex"":0,""hex"":""1F 9D""}]"	
+.tar.z		Tar Zip Lempel-Ziv-Welch Algorithm Archive	"[{""fromIndex"":0,""hex"":""1F 9D""}]"	
+.z		Tar Zip LZH Algorithm Archive	"[{""fromIndex"":0,""hex"":""1F A0""}]"	
+.tar.z		Tar Zip LZH Algorithm Archive	"[{""fromIndex"":0,""hex"":""1F A0""}]"	
+.gif	image/gif	Graphics Interchange Format (GIF) File	"[{""fromIndex"":0,""hex"":""47 49 46 38 37 61""}]"	7
+.gif	image/gif	Graphics Interchange Format (GIF) File	"[{""fromIndex"":0,""hex"":""47 49 46 38 39 61""}]"	9
+.tif		Tagged Image File Format (TIFF)	"[{""fromIndex"":0,""hex"":""4D 4D 00 2A""}]"	BE
+.tiff		Tagged Image File Format (TIFF)	"[{""fromIndex"":0,""hex"":""4D 4D 00 2A""}]"	BE
+.tif		Tagged Image File Format (TIFF)	"[{""fromIndex"":0,""hex"":""49 49 2A 00""}]"	LE
+.tiff		Tagged Image File Format (TIFF)	"[{""fromIndex"":0,""hex"":""49 49 2A 00""}]"	LE
+.cr2		Canon RAW Format Version 2	"[{""fromIndex"":0,""hex"":""49 49 2A 00 10 00 00 00 43 52""}]"	
+.cin		Kodak Cineon Image	"[{""fromIndex"":0,""hex"":""80 2A 5F D7""}]"	
+		Rob Northen Compression (Version 1) Algorithm Archive	"[{""fromIndex"":0,""hex"":""52 4E 43 01""}]"	
+		Rob Northen Compression (Version 2) Algorithm Archive	"[{""fromIndex"":0,""hex"":""52 4E 43 02""}]"	
+.nui		nuru Image File	"[{""fromIndex"":0,""hex"":""4E 55 52 55 49 4D 47""}]"	
+.nup		nuru Palette File	"[{""fromIndex"":0,""hex"":""4E 55 52 55 50 41 4C""}]"	
+.dpx		SMPTE DPX Image	"[{""fromIndex"":0,""hex"":""53 44 50 58""}]"	BE
+.dpx		SMPTE DPX Image	"[{""fromIndex"":0,""hex"":""58 50 44 53""}]"	LE
+.exr		OpenEXR Image	"[{""fromIndex"":0,""hex"":""76 2F 31 01""}]"	
+.bpg		Better Portable Graphic (BPG)	"[{""fromIndex"":0,""hex"":""42 50 47 FB""}]"	
+.exe		DOS ZM Executable	"[{""fromIndex"":0,""hex"":""5A 4D""}]"	
+.iso		ISO9660 CD/DVD Image	"[{""fromIndex"":32769,""hex"":""43 44 30 30 31""}]"	
+.iso		ISO9660 CD/DVD Image	"[{""fromIndex"":34817,""hex"":""43 44 30 30 31""}]"	
+.iso		ISO9660 CD/DVD Image	"[{""fromIndex"":36865,""hex"":""43 44 30 30 31""}]"	
+.qoi		Quite OK Image (QOI)	"[{""fromIndex"":0,""hex"":""71 6F 69 66""}]"	
+.ilbm		IFF Interleaved Bitmap Image	"[{""fromIndex"":0,""hex"":""46 4F 52 4D""},{""fromIndex"":8,""hex"":""49 4C 42 4D""}]"	
+.lbm		IFF Interleaved Bitmap Image	"[{""fromIndex"":0,""hex"":""46 4F 52 4D""},{""fromIndex"":8,""hex"":""49 4C 42 4D""}]"	
+.ibm		IFF Interleaved Bitmap Image	"[{""fromIndex"":0,""hex"":""46 4F 52 4D""},{""fromIndex"":8,""hex"":""49 4C 42 4D""}]"	
+.iff		IFF Interleaved Bitmap Image	"[{""fromIndex"":0,""hex"":""46 4F 52 4D""},{""fromIndex"":8,""hex"":""49 4C 42 4D""}]"	
+.8svx		IFF 8-Bit Sampled Voice	"[{""fromIndex"":0,""hex"":""46 4F 52 4D""},{""fromIndex"":8,""hex"":""38 53 56 58""}]"	
+.8sv		IFF 8-Bit Sampled Voice	"[{""fromIndex"":0,""hex"":""46 4F 52 4D""},{""fromIndex"":8,""hex"":""38 53 56 58""}]"	
+.svx		IFF 8-Bit Sampled Voice	"[{""fromIndex"":0,""hex"":""46 4F 52 4D""},{""fromIndex"":8,""hex"":""38 53 56 58""}]"	
+.snd		IFF 8-Bit Sampled Voice	"[{""fromIndex"":0,""hex"":""46 4F 52 4D""},{""fromIndex"":8,""hex"":""38 53 56 58""}]"	
+.iff		IFF 8-Bit Sampled Voice	"[{""fromIndex"":0,""hex"":""46 4F 52 4D""},{""fromIndex"":8,""hex"":""38 53 56 58""}]"	
+.acbm		Amiga Contiguous Bitmap	"[{""fromIndex"":0,""hex"":""46 4F 52 4D""},{""fromIndex"":8,""hex"":""41 43 42 4D""}]"	
+.iff		Amiga Contiguous Bitmap	"[{""fromIndex"":0,""hex"":""46 4F 52 4D""},{""fromIndex"":8,""hex"":""41 43 42 4D""}]"	
+.anbm		IFF Animated Bitmap	"[{""fromIndex"":0,""hex"":""46 4F 52 4D""},{""fromIndex"":8,""hex"":""41 4E 42 4D""}]"	
+.iff		IFF Animated Bitmap	"[{""fromIndex"":0,""hex"":""46 4F 52 4D""},{""fromIndex"":8,""hex"":""41 4E 42 4D""}]"	
+.anim		IFF CEL Animation	"[{""fromIndex"":0,""hex"":""46 4F 52 4D""},{""fromIndex"":8,""hex"":""41 4E 49 4D""}]"	
+.iff		IFF CEL Animation	"[{""fromIndex"":0,""hex"":""46 4F 52 4D""},{""fromIndex"":8,""hex"":""41 4E 49 4D""}]"	
+.faxx		IFF Facsimile Image	"[{""fromIndex"":0,""hex"":""46 4F 52 4D""},{""fromIndex"":8,""hex"":""46 41 58 58""}]"	
+.fax		IFF Facsimile Image	"[{""fromIndex"":0,""hex"":""46 4F 52 4D""},{""fromIndex"":8,""hex"":""46 41 58 58""}]"	
+.iff		IFF Facsimile Image	"[{""fromIndex"":0,""hex"":""46 4F 52 4D""},{""fromIndex"":8,""hex"":""46 41 58 58""}]"	
+.ftxt		IFF Formatted Text	"[{""fromIndex"":0,""hex"":""46 4F 52 4D""},{""fromIndex"":8,""hex"":""46 54 58 54""}]"	
+.iff		IFF Formatted Text	"[{""fromIndex"":0,""hex"":""46 4F 52 4D""},{""fromIndex"":8,""hex"":""46 54 58 54""}]"	
+.smus		IFF Simple Musical Score	"[{""fromIndex"":0,""hex"":""46 4F 52 4D""},{""fromIndex"":8,""hex"":""53 4D 55 53""}]"	
+.smu		IFF Simple Musical Score	"[{""fromIndex"":0,""hex"":""46 4F 52 4D""},{""fromIndex"":8,""hex"":""53 4D 55 53""}]"	
+.mus		IFF Simple Musical Score	"[{""fromIndex"":0,""hex"":""46 4F 52 4D""},{""fromIndex"":8,""hex"":""53 4D 55 53""}]"	
+.iff		IFF Simple Musical Score	"[{""fromIndex"":0,""hex"":""46 4F 52 4D""},{""fromIndex"":8,""hex"":""53 4D 55 53""}]"	
+.cmus		IFF Musical Score	"[{""fromIndex"":0,""hex"":""46 4F 52 4D""},{""fromIndex"":8,""hex"":""43 4D 55 53""}]"	
+.mus		IFF Musical Score	"[{""fromIndex"":0,""hex"":""46 4F 52 4D""},{""fromIndex"":8,""hex"":""43 4D 55 53""}]"	
+.iff		IFF Musical Score	"[{""fromIndex"":0,""hex"":""46 4F 52 4D""},{""fromIndex"":8,""hex"":""43 4D 55 53""}]"	
+.yuv		IFF YUV Image	"[{""fromIndex"":0,""hex"":""46 4F 52 4D""},{""fromIndex"":8,""hex"":""59 55 56 4E""}]"	
+.yuvn		IFF YUV Image	"[{""fromIndex"":0,""hex"":""46 4F 52 4D""},{""fromIndex"":8,""hex"":""59 55 56 4E""}]"	
+.iff		IFF YUV Image	"[{""fromIndex"":0,""hex"":""46 4F 52 4D""},{""fromIndex"":8,""hex"":""59 55 56 4E""}]"	
+.iff		Amiga Fantavision Movie	"[{""fromIndex"":0,""hex"":""46 4F 52 4D""},{""fromIndex"":8,""hex"":""46 41 4E 54""}]"	
+.aif		Audio Interchange File	"[{""fromIndex"":0,""hex"":""46 4F 52 4D""},{""fromIndex"":8,""hex"":""41 49 46 46""}]"	
+.aifc		Audio Interchange File	"[{""fromIndex"":0,""hex"":""46 4F 52 4D""},{""fromIndex"":8,""hex"":""41 49 46 46""}]"	
+.aiff		Audio Interchange File	"[{""fromIndex"":0,""hex"":""46 4F 52 4D""},{""fromIndex"":8,""hex"":""41 49 46 46""}]"	
+.iff		Audio Interchange File	"[{""fromIndex"":0,""hex"":""46 4F 52 4D""},{""fromIndex"":8,""hex"":""41 49 46 46""}]"	
+.snd		Audio Interchange File	"[{""fromIndex"":0,""hex"":""46 4F 52 4D""},{""fromIndex"":8,""hex"":""41 49 46 46""}]"	
+.xml		eXtensible Markup Language	"[{""fromIndex"":0,""hex"":""3C 3F 78 6D 6C 20""}]"	1
+.xml		eXtensible Markup Language	"[{""fromIndex"":0,""hex"":""3C 00 3F 00 78 00 6D 00 6C 00 20""}]"	2
+.xml		eXtensible Markup Language	"[{""fromIndex"":0,""hex"":""00 3C 00 3F 00 78 00 6D 00 6C 00 20""}]"	3
+.xml		eXtensible Markup Language	"[{""fromIndex"":0,""hex"":""3C 00 00 00 3F 00 00 00 78 00 00 00 6D 00 00 00 6C 00 00 00 20 00 00 00""}]"	4
+.xml		eXtensible Markup Language	"[{""fromIndex"":0,""hex"":""00 00 00 3C 00 00 00 3F 00 00 00 78 00 00 00 6D 00 00 00 6C 00 00 00 20""}]"	5
+.xml		eXtensible Markup Language	"[{""fromIndex"":0,""hex"":""4C 6F A7 94 93 40""}]"	6
+.wim		Windows Imaging Format File	"[{""fromIndex"":0,""hex"":""4D 53 57 49 4D 00 00 00 D0 00 00 00 00""}]"	
+.swm		Windows Imaging Format File	"[{""fromIndex"":0,""hex"":""4D 53 57 49 4D 00 00 00 D0 00 00 00 00""}]"	
+.esd		Windows Imaging Format File	"[{""fromIndex"":0,""hex"":""4D 53 57 49 4D 00 00 00 D0 00 00 00 00""}]"	
+.webp		WebP Image File	"[{""fromIndex"":0,""hex"":""52 49 46 46""},{""fromIndex"":8,""hex"":""57 45 42 50""}]"	
+.psd		Adobe Photoshop Document File	"[{""fromIndex"":0,""hex"":""38 42 50 53""}]"	
+.bmp		BMP Image File	"[{""fromIndex"":0,""hex"":""42 4D""}]"	
+.dib		BMP Image File	"[{""fromIndex"":0,""hex"":""42 4D""}]"	
+.wasm		WebAssembly Binary	"[{""fromIndex"":0,""hex"":""00 61 73 6D""}]"	
+.jpg		JPEG Image	"[{""fromIndex"":0,""hex"":""FF D8 FF DB""}]"	
+.jpeg		JPEG Image	"[{""fromIndex"":0,""hex"":""FF D8 FF DB""}]"	
+.jpg		JPEG Image	"[{""fromIndex"":0,""hex"":""FF D8 FF EE""}]"	
+.jpeg		JPEG Image	"[{""fromIndex"":0,""hex"":""FF D8 FF EE""}]"	
+.jpg		JPEG JFIF Image	"[{""fromIndex"":0,""hex"":""FF D8 FF E0 00 10 4A 46 49 46 00 01""}]"	
+.jpeg		JPEG JFIF Image	"[{""fromIndex"":0,""hex"":""FF D8 FF E0 00 10 4A 46 49 46 00 01""}]"	
+.jpg		JPEG Exif Image	"[{""fromIndex"":0,""hex"":""FF D8 FF E1""},{""fromIndex"":6,""hex"":""45 78 69 66 00 00""}]"	
+.jpeg		JPEG Exif Image	"[{""fromIndex"":0,""hex"":""FF D8 FF E1""},{""fromIndex"":6,""hex"":""45 78 69 66 00 00""}]"	
+.jpg		JPEG Image	"[{""fromIndex"":0,""hex"":""FF D8 FF E0""}]"	
+.jpeg		JPEG Image	"[{""fromIndex"":0,""hex"":""FF D8 FF E0""}]"	
+.lz		LZip Archive	"[{""fromIndex"":0,""hex"":""4C 5A 49 50""}]"	
+.cpio		cpio Archive	"[{""fromIndex"":0,""hex"":""30 37 30 37 30 37""}]"	
+.exe		DOS MZ Executable	"[{""fromIndex"":0,""hex"":""4D 5A""}]"	
+.dll		DOS MZ Executable	"[{""fromIndex"":0,""hex"":""4D 5A""}]"	
+.mui		DOS MZ Executable	"[{""fromIndex"":0,""hex"":""4D 5A""}]"	
+.sys		DOS MZ Executable	"[{""fromIndex"":0,""hex"":""4D 5A""}]"	
+.scr		DOS MZ Executable	"[{""fromIndex"":0,""hex"":""4D 5A""}]"	
+.cpl		DOS MZ Executable	"[{""fromIndex"":0,""hex"":""4D 5A""}]"	
+.ocx		DOS MZ Executable	"[{""fromIndex"":0,""hex"":""4D 5A""}]"	
+.ax		DOS MZ Executable	"[{""fromIndex"":0,""hex"":""4D 5A""}]"	
+.iec		DOS MZ Executable	"[{""fromIndex"":0,""hex"":""4D 5A""}]"	
+.ime		DOS MZ Executable	"[{""fromIndex"":0,""hex"":""4D 5A""}]"	
+.rs		DOS MZ Executable	"[{""fromIndex"":0,""hex"":""4D 5A""}]"	
+.tsp		DOS MZ Executable	"[{""fromIndex"":0,""hex"":""4D 5A""}]"	
+.fon		DOS MZ Executable	"[{""fromIndex"":0,""hex"":""4D 5A""}]"	
+.efi		DOS MZ Executable	"[{""fromIndex"":0,""hex"":""4D 5A""}]"	
+.rar		Roshal Archive V1.50	"[{""fromIndex"":0,""hex"":""52 61 72 21 1A 07 00""}]"	
+.rar		Roshal Archive V5.00	"[{""fromIndex"":0,""hex"":""52 61 72 21 1A 07 01 00""}]"	
+		Executable & Linkable Format	"[{""fromIndex"":0,""hex"":""7F 45 4C 46""}]"	
+.png		Portable Network Graphics (PNG) Image	"[{""fromIndex"":0,""hex"":""89 50 4E 47 0D 0A 1A 0A""}]"	
+.com		CP/M 3 File	"[{""fromIndex"":0,""hex"":""C9""}]"	
+.d64		Commodore 64 1541 Disk Image (D64 Format)	"[{""fromIndex"":91556,""hex"":""A0 32 41 A0 A0 A0""}]"	
+.g64		Commodore 64 1541 Disk Image (G64 Format)	"[{""fromIndex"":0,""hex"":""47 53 52 2D 31 35 34 31""}]"	
+.d81		Commodore 64 1581 Disk Image (D81 Format)	"[{""fromIndex"":399385,""hex"":""A0 33 44 A0 A0""}]"	
+.t64		Commodore 64 Tape Image	"[{""fromIndex"":0,""hex"":""43 36 34 20 74 61 70 65 20 69 6D 61 67 65 20 66 69 6C 65""}]"	
+.crt		Commodore 64 Cartridge Image	"[{""fromIndex"":0,""hex"":""43 36 34 20 43 41 52 54 52 49 44 47 45 20 20 20""}]"	
+.class		Java Class File	"[{""fromIndex"":0,""hex"":""CA FE BA BE""}]"	
+.class		Mach-O Fat Binary	"[{""fromIndex"":0,""hex"":""CA FE BA BE""}]"	
+		Mach-O Binary	"[{""fromIndex"":0,""hex"":""FE ED FA CE""}]"	32-Bit; Head 0
+		Mach-O Binary	"[{""fromIndex"":4096,""hex"":""FE ED FA CE""}]"	32-Bit; Head 4096
+		Mach-O Binary	"[{""fromIndex"":0,""hex"":""FE ED FA CF""}]"	64-Bit; Head 0
+		Mach-O Binary	"[{""fromIndex"":4096,""hex"":""FE ED FA CF""}]"	64-Bit; Head 4096
+		Mach-O Binary	"[{""fromIndex"":0,""hex"":""CE FA ED FE""}]"	32-Bit; Reverse Byte Ordering Scheme
+		Mach-O Binary	"[{""fromIndex"":0,""hex"":""CF FA ED FE""}]"	64-Bit; Reverse Byte Ordering Scheme
+		JKS JavakeyStore	"[{""fromIndex"":0,""hex"":""FE ED FE ED""}]"	
+.ps		PostScript Document	"[{""fromIndex"":0,""hex"":""25 21 50 53""}]"	
+.eps		Encapsulated PostScript File Version 3.0	"[{""fromIndex"":0,""hex"":""25 21 50 53 2D 41 64 6F 62 65 2D 33 2E 30 20 45 50 53 46 2D 33 2E 30""}]"	
+.epsf		Encapsulated PostScript File Version 3.0	"[{""fromIndex"":0,""hex"":""25 21 50 53 2D 41 64 6F 62 65 2D 33 2E 30 20 45 50 53 46 2D 33 2E 30""}]"	
+.eps		Encapsulated PostScript File Version 3.1	"[{""fromIndex"":0,""hex"":""25 21 50 53 2D 41 64 6F 62 65 2D 33 2E 31 20 45 50 53 46 2D 33 2E 30""}]"	
+.epsf		Encapsulated PostScript File Version 3.1	"[{""fromIndex"":0,""hex"":""25 21 50 53 2D 41 64 6F 62 65 2D 33 2E 31 20 45 50 53 46 2D 33 2E 30""}]"	
+.chm		Windows HTML Help Data	"[{""fromIndex"":0,""hex"":""49 54 53 46 03 00 00 00 60 00 00 00""}]"	
+.hlp		Windows Help file	"[{""fromIndex"":0,""hex"":""3F 5F""}]"	wikipedia
+.hlp		Windows Help file	"[{""fromIndex"":6,""hex"":""00 00 FF FF FF FF""}]"	garykessler
+.pdf		PDF Document	"[{""fromIndex"":0,""hex"":""25 50 44 46 2D""}]"	
+.asf		Advanced Systems Format	"[{""fromIndex"":0,""hex"":""30 26 B2 75 8E 66 CF 11 A6 D9 00 AA 00 62 CE 6C""}]"	
+.wma		Advanced Systems Format	"[{""fromIndex"":0,""hex"":""30 26 B2 75 8E 66 CF 11 A6 D9 00 AA 00 62 CE 6C""}]"	
+.wmv		Advanced Systems Format	"[{""fromIndex"":0,""hex"":""30 26 B2 75 8E 66 CF 11 A6 D9 00 AA 00 62 CE 6C""}]"	
+		System Deployment Image	"[{""fromIndex"":0,""hex"":""24 53 44 49 30 30 30 31""}]"	
+.ogg		Ogg Media	"[{""fromIndex"":0,""hex"":""4F 67 67 53""}]"	
+.oga		Ogg Media	"[{""fromIndex"":0,""hex"":""4F 67 67 53""}]"	
+.ogv		Ogg Media	"[{""fromIndex"":0,""hex"":""4F 67 67 53""}]"	
+.wav		Waveform Audio File	"[{""fromIndex"":0,""hex"":""52 49 46 46""},{""fromIndex"":8,""hex"":""57 41 56 45""}]"	
+.avi		Audio Video Interleave (AVI)	"[{""fromIndex"":0,""hex"":""52 49 46 46""},{""fromIndex"":8,""hex"":""41 56 49 20""}]"	
+.mp3		MP3 File	"[{""fromIndex"":0,""hex"":""FF FB FF F3 FF F2""}]"	
+.mp3		MP3 File With ID3v2 Container	"[{""fromIndex"":0,""hex"":""49 44 33""}]"	
+.cdi		CD-i CD Image File	"[{""fromIndex"":387785,""hex"":""43 44 30 30 31""}]"	
+.mgw		Nintendo Game & Watch Image File	"[{""fromIndex"":0,""hex"":""6D 61 69 6E 2E 62 73""}]"	
+.nes		Nintendo Entertainment System Image File	"[{""fromIndex"":0,""hex"":""4E 45 53""}]"	
+.fits		Flexible Image Transport System (FITS)	"[{""fromIndex"":0,""hex"":""53 49 4D 50 4C 45 20 20 3D 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 54""}]"	
+.flac		Free Lossless Audio Codec (FLAC)	"[{""fromIndex"":0,""hex"":""66 4C 61 43""}]"	
+.mid		MIDI Sound File	"[{""fromIndex"":0,""hex"":""4D 54 68 64""}]"	
+.midi		MIDI Sound File	"[{""fromIndex"":0,""hex"":""4D 54 68 64""}]"	
+.dex		Dalvik Executable	"[{""fromIndex"":0,""hex"":""64 65 78 0A 30 33 35 00""}]"	
+.vmdk		VMware Virtual Disk	"[{""fromIndex"":0,""hex"":""4B 44 4D""}]"	
+.vmdk		VMware 4 Virtual Disk Description File	"[{""fromIndex"":0,""hex"":""23 20 44 69 73 6B 20 44 65 73 63 72 69 70 74 6F""}]"	
+.crx		Google Chrome Extension	"[{""fromIndex"":0,""hex"":""43 72 32 34""}]"	
+.fh8		FreeHand 8 Document	"[{""fromIndex"":0,""hex"":""41 47 44 33""}]"	
+.cwk		AppleWorks 5 Document	"[{""fromIndex"":0,""hex"":""05 07 00 00 42 4F 42 4F 05 07 00 00 00 00 00 00 00 00 00 00 00 01""}]"	
+.cwk		AppleWorks 6 Document	"[{""fromIndex"":0,""hex"":""06 07 E1 00 42 4F 42 4F 06 07 E1 00 00 00 00 00 00 00 00 00 00 01""}]"	
+.toast		Roxio Toast Disc Image	"[{""fromIndex"":0,""hex"":""45 52 02 00 00 00""}]"	NoPrefix
+.toast		Roxio Toast Disc Image	"[{""fromIndex"":0,""hex"":""8B 45 52 02 00 00 00""}]"	Prefix
+.xar		eXtensible ARchive format	"[{""fromIndex"":0,""hex"":""78 61 72 21""}]"	
+.dat		Windows Files & Settings Transfer Repository	"[{""fromIndex"":0,""hex"":""50 4D 4F 43 43 4D 4F 43""}]"	
+.nes		Nintendo Entertainment System ROM file	"[{""fromIndex"":0,""hex"":""4E 45 53 1A""}]"	
+.tar		tar archive	"[{""fromIndex"":257,""hex"":""75 73 74 61 72 00 30 30 75 73 74 61 72 20 20 00""}]"	
+.oar		OAR Archive	"[{""fromIndex"":0,""hex"":""4F 41 52""}]"	
+.tox		Open Source Portable Voxel File	"[{""fromIndex"":0,""hex"":""74 6F 78 33""}]"	
+.MLV		Magic Lantern Video file	"[{""fromIndex"":0,""hex"":""4D 4C 56 49""}]"	
+		Windows Update Binary Delta Compression file	"[{""fromIndex"":0,""hex"":""44 43 4D 01 50 41 33 30 50 41 33 30""}]"	
+.7z		7-Zip File Format	"[{""fromIndex"":0,""hex"":""37 7A BC AF 27 1C""}]"	
+.lz4		LZ4 Frame File	"[{""fromIndex"":0,""hex"":""04 22 4D 18""}]"	
+.cab		Microsoft Cabinet file	"[{""fromIndex"":0,""hex"":""4D 53 43 46""}]"	
+.flif		Free Lossless Image Format	"[{""fromIndex"":0,""hex"":""46 4C 49 46""}]"	
+.stg		SEAN Session Analysis Training File	"[{""fromIndex"":0,""hex"":""4D 49 4C 20""}]"	
+.der		DER Encoded X.509 Certificate File	"[{""fromIndex"":0,""hex"":""30 82""}]"	
+.ppk		PuTTY Private Key File Version 2	"[{""fromIndex"":0,""hex"":""50 75 54 54 59 2D 55 73 65 72 2D 4B 65 79 2D 46 69 6C 65 2D 32 3A""}]"	
+.ppk		PuTTY Private Key File Version 3	"[{""fromIndex"":0,""hex"":""50 75 54 54 59 2D 55 73 65 72 2D 4B 65 79 2D 46 69 6C 65 2D 33 3A""}]"	
+		OpenSSH Private Key File	"[{""fromIndex"":0,""hex"":""2D 2D 2D 2D 2D 42 45 47 49 4E 20 4F 50 45 4E 53 53 48 20 50 52 49 56 41 54 45 20 4B 45 59 2D 2D 2D 2D 2D""}]"	
+.pub		OpenSSH Public Key File	"[{""fromIndex"":0,""hex"":""2D 2D 2D 2D 2D 42 45 47 49 4E 20 53 53 48 32 20 4B 45 59 2D 2D 2D 2D 2D""}]"	
+.dcm		DICOM Medical File Format	"[{""fromIndex"":128,""hex"":""44 49 43 4D""}]"	
+.woff		WOFF 1.0 Font	"[{""fromIndex"":0,""hex"":""77 4F 46 46""}]"	
+.woff2		WOFF 2.0 Font	"[{""fromIndex"":0,""hex"":""77 4F 46 32""}]"	
+.lep		Lepton Compressed JPEG Image	"[{""fromIndex"":0,""hex"":""CF 84 01""}]"	
+.deb		Linux Deb File	"[{""fromIndex"":0,""hex"":""21 3C 61 72 63 68 3E 0A""}]"	
+.rtf		Rich Text Format	"[{""fromIndex"":0,""hex"":""7B 5C 72 74 66 31""}]"	
+		Microsoft Tape File	"[{""fromIndex"":0,""hex"":""54 41 50 45""}]"	
+.mp4		MPEG-4 Video	"[{""fromIndex"":4,""hex"":""66 74 79 70 4D 53 4E 56""}]"	
+.orc		Apache Optimized Row Columnar (ORC) File	"[{""fromIndex"":0,""hex"":""4F 52 43""}]"	
+.m3u8		Multimedia Playlist	"[{""fromIndex"":0,""hex"":""23 45 58 54 4D 33 55""}]"	
+.m3u		Multimedia Playlist	"[{""fromIndex"":0,""hex"":""23 45 58 54 4D 33 55""}]"	
+.m		M2 Archive	"[{""fromIndex"":0,""hex"":""6D 64 66 00""}]"	
+.pak		Capcom RE Engine Game Data Archive	"[{""fromIndex"":0,""hex"":""4B 50 4B 41""}]"	
+.arc		Capcom MT Framework Game Data Archive	"[{""fromIndex"":0,""hex"":""41 52 43""}]"	
+.pl		Interleaf PrinterLeaf	"[{""fromIndex"":0,""hex"":""D0 4F 50 53""}]"	
+.nii		NIfTI File	"[{""fromIndex"":344,""hex"":""6E 2B 31 00""}]"	
+.hdr		NIfTI Header File	"[{""fromIndex"":344,""hex"":""6E 69 31 00""}]"	
+		Digital Metaphors Report Builder File	"[{""fromIndex"":0,""hex"":""52 41 46 36 34""}]"	
+		Visionaire 3 Engine Resource File	"[{""fromIndex"":0,""hex"":""56 49 53 33""}]"	
+.pwrdata		SAP Power Monitor (Version 1.1.0) Data File	"[{""fromIndex"":0,""hex"":""70 77 72 64 61 74 61""}]"	
+.arc		ARC Archive	"[{""fromIndex"":0,""hex"":""1A 08""}]"	
+.asc		Armored PGP Public Key File	"[{""fromIndex"":0,""hex"":""2D 2D 2D 2D 2D 42 45 47 49 4E 20 50 47 50 20 50 55 42 4C 49 43 20 4B 45 49 20 42 4C 4F 43 4B 2D 2D 2D 2D 2D""}]"	
+.cnt		Windows Help Content	"[{""fromIndex"":0,""hex"":""3A 42 61 73 65 20""}]"	
+.nri		Nero CD Compilation	"[{""fromIndex"":0,""hex"":""0E 4E 65 72 6F 49 53 4F""}]"	
+.wks		DeskMate Worksheet	"[{""fromIndex"":0,""hex"":""0E 57 4B 53""}]"	
+.sib		Sibelius Music Score File	"[{""fromIndex"":0,""hex"":""0F 53 49 42 45 4C 49 55 53""}]"	
+.gz		GZip Compressed Archive	"[{""fromIndex"":0,""hex"":""1F 8B""}]"	
+.tar.gz		GZip Compressed Archive	"[{""fromIndex"":0,""hex"":""1F 8B""}]"	
+.xz		XZ LZMA2 Compressed Archive	"[{""fromIndex"":0,""hex"":""FD 37 7A 58 5A 00""}]"	
+.tar.xz		XZ LZMA2 Compressed Archive	"[{""fromIndex"":0,""hex"":""FD 37 7A 58 5A 00""}]"	
+.crt		PEM Encoded X.509 Certificate File	"[{""fromIndex"":0,""hex"":""2D 2D 2D 2D 2D 42 45 47 49 4E 20 43 45 52 54 49 46 49 43 41 54 45 2D 2D 2D 2D 2D""}]"	
+.pem		PEM Encoded X.509 Certificate File	"[{""fromIndex"":0,""hex"":""2D 2D 2D 2D 2D 42 45 47 49 4E 20 43 45 52 54 49 46 49 43 41 54 45 2D 2D 2D 2D 2D""}]"	
+.csr		PEM Encoded X.509 Certificate Signing Request File	"[{""fromIndex"":0,""hex"":""2D 2D 2D 2D 2D 42 45 47 49 4E 20 43 45 52 54 49 46 49 43 41 54 45 20 52 45 51 55 45 53 54 2D 2D 2D 2D 2D""}]"	
+.pem		PEM Encoded X.509 Certificate Signing Request File	"[{""fromIndex"":0,""hex"":""2D 2D 2D 2D 2D 42 45 47 49 4E 20 43 45 52 54 49 46 49 43 41 54 45 20 52 45 51 55 45 53 54 2D 2D 2D 2D 2D""}]"	
+.key		Pem Encoded X.509 PKCS#8 Private Key File	"[{""fromIndex"":0,""hex"":""2D 2D 2D 2D 2D 42 45 47 49 4E 20 50 52 49 56 41 54 45 20 4B 45 59 2D 2D 2D 2D 2D""}]"	
+.pem		Pem Encoded X.509 PKCS#8 Private Key File	"[{""fromIndex"":0,""hex"":""2D 2D 2D 2D 2D 42 45 47 49 4E 20 50 52 49 56 41 54 45 20 4B 45 59 2D 2D 2D 2D 2D""}]"	
+.key		PEM Encoded X.509 PKCS#1 DSA Private Key File	"[{""fromIndex"":0,""hex"":""2D 2D 2D 2D 2D 42 45 47 49 4E 20 44 53 41 20 50 52 49 56 41 54 45 20 4B 45 59 2D 2D 2D 2D 2D""}]"	
+.pem		PEM Encoded X.509 PKCS#1 DSA Private Key File	"[{""fromIndex"":0,""hex"":""2D 2D 2D 2D 2D 42 45 47 49 4E 20 44 53 41 20 50 52 49 56 41 54 45 20 4B 45 59 2D 2D 2D 2D 2D""}]"	
+.key		PEM Encoded X.509 PKCS#1 RSA Private Key File	"[{""fromIndex"":0,""hex"":""2D 2D 2D 2D 2D 42 45 47 49 4E 20 52 45 41 20 50 52 49 56 41 54 45 20 4B 45 59 2D 2D 2D 2D 2D""}]"	
+.pem		PEM Encoded X.509 PKCS#1 RSA Private Key File	"[{""fromIndex"":0,""hex"":""2D 2D 2D 2D 2D 42 45 47 49 4E 20 52 45 41 20 50 52 49 56 41 54 45 20 4B 45 59 2D 2D 2D 2D 2D""}]"	
+.tga		Truevision Targa Graphic File	"[{""fromIndex"":-18,""hex"":""54 52 55 45 56 49 53 49 4F 4E 2D 58 46 49 4C 45 2E 00""}]"	
+.avif		Alliance for Open Media (AOMedia) Video 1 (AV1) Image Format	"[{""fromIndex"":0,""hex"":""00 00 00""}]"	
+.xxx		Compucon/Singer Embroidery Design File	"[{""fromIndex"":0,""hex"":""00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00""}]"	
+.rvt		Revit Project File Subheader	"[{""fromIndex"":512,""hex"":""00 00 00 00 00 00 00 00""}]"	
+.tbi		Windows Disk Image File	"[{""fromIndex"":0,""hex"":""00 00 00 00 14 00 00 00""}]"	
+.dat		Bitcoin Core Wallet File	"[{""fromIndex"":8,""hex"":""00 00 00 00 62 31 05 00 09 00 00 00 00 20 00 00 00 09 00 00 00 00 00 00""}]"	
+.bsb		NOAA Raster Navigation Chart (RNC) File	"[{""fromIndex"":0,""hex"":""21 0D 0A 43 52 52 2F 54 68 69 73 20 65 6C 65 63 74 72 6F 6E 69 63 20 63 68 61 72 74 20 77 61 73 20 70 72 6F 64 75 63 65 64 20 75 6E 64 65 72 20 74 68 65 20 61 75 74 68 6F 72 69 74 79 20 6F 66 20 55 53 41 2D 4E 4F 41 41 2F 4E 4F 53 2E 0D 0A""}]"	
+.epub		Electronic Publication File	"[{""fromIndex"":0,""hex"":""50 4B 03 04""},{""fromIndex"":30,""hex"":""6D 69 6D 65 74 79 70 65 61 70 70 6C 69 63 61 74 69 6F 6E 2F 65 70 75 62 2B 7A 69 70""}]"	
+

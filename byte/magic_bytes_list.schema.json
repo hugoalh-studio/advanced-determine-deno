@@ -1,0 +1,73 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"type": "array",
+	"items": {
+		"type": "object",
+		"properties": {
+			"extension": {
+				"anyOf": [
+					{
+						"type": "string",
+						"minLength": 1,
+						"pattern": "^\\.[^\\r\\n\\s\\t]+$"
+					},
+					{
+						"type": "null"
+					}
+				]
+			},
+			"mime": {
+				"type": "string",
+				"minLength": 1,
+				"pattern": "^(?:[^\\s].*)?[^\\s]$"
+			},
+			"name": {
+				"type": "string",
+				"minLength": 1,
+				"pattern": "^(?:[^\\s].*)?[^\\s]$"
+			},
+			"pattern": {
+				"type": "array",
+				"items": {
+					"type": "object",
+					"properties": {
+						"fromIndex": {
+							"anyOf": [
+								{
+									"type": "integer"
+								},
+								{
+									"type": "string",
+									"enum": [
+										"*"
+									]
+								}
+							]
+						},
+						"hex": {
+							"type": "string",
+							"minLength": 1,
+							"pattern": "^[\\dA-F]{2}(?: [\\dA-F]{2})*$"
+						}
+					},
+					"required": [
+						"fromIndex",
+						"hex"
+					]
+				},
+				"uniqueItems": true
+			},
+			"patternVariant": {
+				"type": "string",
+				"minLength": 1,
+				"pattern": "^(?:[^\\s].*)?[^\\s]$"
+			}
+		},
+		"required": [
+			"extension",
+			"name",
+			"pattern"
+		]
+	},
+	"uniqueItems": true
+}

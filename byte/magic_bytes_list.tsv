@@ -63,24 +63,24 @@ extension	mime	name	pattern	patternVariant
 .pgm		Portable Gray Map Binary	"[{""fromIndex"":0,""hex"":""50 35 0A""}]"	
 .ppm		Portable Pixmap ASCII	"[{""fromIndex"":0,""hex"":""50 33 0A""}]"	
 .ppm		Portable Pixmap Binary	"[{""fromIndex"":0,""hex"":""50 36 0A""}]"	
-.j2c		JPEG 2000	"[{""fromIndex"":0,""hex"":""00 00 00 0C 6A 50 20 20 0D 0A 87 0A""}]"	Long
-.j2k		JPEG 2000	"[{""fromIndex"":0,""hex"":""00 00 00 0C 6A 50 20 20 0D 0A 87 0A""}]"	Long
-.jp2		JPEG 2000	"[{""fromIndex"":0,""hex"":""00 00 00 0C 6A 50 20 20 0D 0A 87 0A""}]"	Long
-.jpc		JPEG 2000	"[{""fromIndex"":0,""hex"":""00 00 00 0C 6A 50 20 20 0D 0A 87 0A""}]"	Long
-.jpf		JPEG 2000	"[{""fromIndex"":0,""hex"":""00 00 00 0C 6A 50 20 20 0D 0A 87 0A""}]"	Long
-.jpg2		JPEG 2000	"[{""fromIndex"":0,""hex"":""00 00 00 0C 6A 50 20 20 0D 0A 87 0A""}]"	Long
-.jpm		JPEG 2000	"[{""fromIndex"":0,""hex"":""00 00 00 0C 6A 50 20 20 0D 0A 87 0A""}]"	Long
-.jpx		JPEG 2000	"[{""fromIndex"":0,""hex"":""00 00 00 0C 6A 50 20 20 0D 0A 87 0A""}]"	Long
-.mj2		JPEG 2000	"[{""fromIndex"":0,""hex"":""00 00 00 0C 6A 50 20 20 0D 0A 87 0A""}]"	Long
-.j2c		JPEG 2000	"[{""fromIndex"":0,""hex"":""FF 4F FF 51""}]"	Short
-.j2k		JPEG 2000	"[{""fromIndex"":0,""hex"":""FF 4F FF 51""}]"	Short
-.jp2		JPEG 2000	"[{""fromIndex"":0,""hex"":""FF 4F FF 51""}]"	Short
-.jpc		JPEG 2000	"[{""fromIndex"":0,""hex"":""FF 4F FF 51""}]"	Short
-.jpf		JPEG 2000	"[{""fromIndex"":0,""hex"":""FF 4F FF 51""}]"	Short
-.jpg2		JPEG 2000	"[{""fromIndex"":0,""hex"":""FF 4F FF 51""}]"	Short
-.jpm		JPEG 2000	"[{""fromIndex"":0,""hex"":""FF 4F FF 51""}]"	Short
-.jpx		JPEG 2000	"[{""fromIndex"":0,""hex"":""FF 4F FF 51""}]"	Short
-.mj2		JPEG 2000	"[{""fromIndex"":0,""hex"":""FF 4F FF 51""}]"	Short
+.j2c		JPEG 2000 Image	"[{""fromIndex"":0,""hex"":""00 00 00 0C 6A 50 20 20 0D 0A 87 0A""}]"	Long
+.j2k		JPEG 2000 Image	"[{""fromIndex"":0,""hex"":""00 00 00 0C 6A 50 20 20 0D 0A 87 0A""}]"	Long
+.jp2		JPEG 2000 Image	"[{""fromIndex"":0,""hex"":""00 00 00 0C 6A 50 20 20 0D 0A 87 0A""}]"	Long
+.jpc		JPEG 2000 Image	"[{""fromIndex"":0,""hex"":""00 00 00 0C 6A 50 20 20 0D 0A 87 0A""}]"	Long
+.jpf		JPEG 2000 Image	"[{""fromIndex"":0,""hex"":""00 00 00 0C 6A 50 20 20 0D 0A 87 0A""}]"	Long
+.jpg2		JPEG 2000 Image	"[{""fromIndex"":0,""hex"":""00 00 00 0C 6A 50 20 20 0D 0A 87 0A""}]"	Long
+.jpm		JPEG 2000 Image	"[{""fromIndex"":0,""hex"":""00 00 00 0C 6A 50 20 20 0D 0A 87 0A""}]"	Long
+.jpx		JPEG 2000 Image	"[{""fromIndex"":0,""hex"":""00 00 00 0C 6A 50 20 20 0D 0A 87 0A""}]"	Long
+.mj2		JPEG 2000 Image	"[{""fromIndex"":0,""hex"":""00 00 00 0C 6A 50 20 20 0D 0A 87 0A""}]"	Long
+.j2c		JPEG 2000 Image	"[{""fromIndex"":0,""hex"":""FF 4F FF 51""}]"	Short
+.j2k		JPEG 2000 Image	"[{""fromIndex"":0,""hex"":""FF 4F FF 51""}]"	Short
+.jp2		JPEG 2000 Image	"[{""fromIndex"":0,""hex"":""FF 4F FF 51""}]"	Short
+.jpc		JPEG 2000 Image	"[{""fromIndex"":0,""hex"":""FF 4F FF 51""}]"	Short
+.jpf		JPEG 2000 Image	"[{""fromIndex"":0,""hex"":""FF 4F FF 51""}]"	Short
+.jpg2		JPEG 2000 Image	"[{""fromIndex"":0,""hex"":""FF 4F FF 51""}]"	Short
+.jpm		JPEG 2000 Image	"[{""fromIndex"":0,""hex"":""FF 4F FF 51""}]"	Short
+.jpx		JPEG 2000 Image	"[{""fromIndex"":0,""hex"":""FF 4F FF 51""}]"	Short
+.mj2		JPEG 2000 Image	"[{""fromIndex"":0,""hex"":""FF 4F FF 51""}]"	Short
 .hl7		Electronic Data Exchange Health Level Seven (HL7) Standard File	"[{""fromIndex"":0,""hex"":""42 53 48 7C""}]"	B
 .hl7		Electronic Data Exchange Health Level Seven (HL7) Standard File	"[{""fromIndex"":0,""hex"":""4D 53 48 7C""}]"	M
 .sqlitedb		SQLite Database	"[{""fromIndex"":0,""hex"":""53 51 4C 69 74 65 20 66 6F 72 6D 61 74 20 33 00""}]"	

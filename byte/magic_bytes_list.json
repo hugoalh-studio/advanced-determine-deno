@@ -700,7 +700,7 @@
 	},
 	{
 		"extension": ".j2c",
-		"name": "JPEG 2000",
+		"name": "JPEG 2000 Image",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -711,7 +711,7 @@
 	},
 	{
 		"extension": ".j2k",
-		"name": "JPEG 2000",
+		"name": "JPEG 2000 Image",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -722,7 +722,7 @@
 	},
 	{
 		"extension": ".jp2",
-		"name": "JPEG 2000",
+		"name": "JPEG 2000 Image",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -733,7 +733,7 @@
 	},
 	{
 		"extension": ".jpc",
-		"name": "JPEG 2000",
+		"name": "JPEG 2000 Image",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -744,7 +744,7 @@
 	},
 	{
 		"extension": ".jpf",
-		"name": "JPEG 2000",
+		"name": "JPEG 2000 Image",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -755,7 +755,7 @@
 	},
 	{
 		"extension": ".jpg2",
-		"name": "JPEG 2000",
+		"name": "JPEG 2000 Image",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -766,7 +766,7 @@
 	},
 	{
 		"extension": ".jpm",
-		"name": "JPEG 2000",
+		"name": "JPEG 2000 Image",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -777,7 +777,7 @@
 	},
 	{
 		"extension": ".jpx",
-		"name": "JPEG 2000",
+		"name": "JPEG 2000 Image",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -788,7 +788,7 @@
 	},
 	{
 		"extension": ".mj2",
-		"name": "JPEG 2000",
+		"name": "JPEG 2000 Image",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -799,7 +799,7 @@
 	},
 	{
 		"extension": ".j2c",
-		"name": "JPEG 2000",
+		"name": "JPEG 2000 Image",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -810,7 +810,7 @@
 	},
 	{
 		"extension": ".j2k",
-		"name": "JPEG 2000",
+		"name": "JPEG 2000 Image",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -821,7 +821,7 @@
 	},
 	{
 		"extension": ".jp2",
-		"name": "JPEG 2000",
+		"name": "JPEG 2000 Image",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -832,7 +832,7 @@
 	},
 	{
 		"extension": ".jpc",
-		"name": "JPEG 2000",
+		"name": "JPEG 2000 Image",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -843,7 +843,7 @@
 	},
 	{
 		"extension": ".jpf",
-		"name": "JPEG 2000",
+		"name": "JPEG 2000 Image",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -854,7 +854,7 @@
 	},
 	{
 		"extension": ".jpg2",
-		"name": "JPEG 2000",
+		"name": "JPEG 2000 Image",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -865,7 +865,7 @@
 	},
 	{
 		"extension": ".jpm",
-		"name": "JPEG 2000",
+		"name": "JPEG 2000 Image",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -876,7 +876,7 @@
 	},
 	{
 		"extension": ".jpx",
-		"name": "JPEG 2000",
+		"name": "JPEG 2000 Image",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -887,7 +887,7 @@
 	},
 	{
 		"extension": ".mj2",
-		"name": "JPEG 2000",
+		"name": "JPEG 2000 Image",
 		"pattern": [
 			{
 				"fromIndex": 0,

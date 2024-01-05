@@ -356,51 +356,51 @@
   pattern:
     - fromIndex: 0
       hex: "50 36 0A"
-- &JPEG2000LongGroup
+- &JPEG2000ImageLongGroup
   extension: ".j2c"
-  name: "JPEG 2000"
+  name: "JPEG 2000 Image"
   pattern:
     - fromIndex: 0
       hex: "00 00 00 0C 6A 50 20 20 0D 0A 87 0A"
   patternVariant: "Long"
-- <<: *JPEG2000LongGroup
+- <<: *JPEG2000ImageLongGroup
   extension: ".j2k"
-- <<: *JPEG2000LongGroup
+- <<: *JPEG2000ImageLongGroup
   extension: ".jp2"
-- <<: *JPEG2000LongGroup
+- <<: *JPEG2000ImageLongGroup
   extension: ".jpc"
-- <<: *JPEG2000LongGroup
+- <<: *JPEG2000ImageLongGroup
   extension: ".jpf"
-- <<: *JPEG2000LongGroup
+- <<: *JPEG2000ImageLongGroup
   extension: ".jpg2"
-- <<: *JPEG2000LongGroup
+- <<: *JPEG2000ImageLongGroup
   extension: ".jpm"
-- <<: *JPEG2000LongGroup
+- <<: *JPEG2000ImageLongGroup
   extension: ".jpx"
-- <<: *JPEG2000LongGroup
+- <<: *JPEG2000ImageLongGroup
   extension: ".mj2"
-- &JPEG2000ShortGroup
+- &JPEG2000ImageShortGroup
   extension: ".j2c"
-  name: "JPEG 2000"
+  name: "JPEG 2000 Image"
   pattern:
     - fromIndex: 0
       hex: "FF 4F FF 51"
   patternVariant: "Short"
-- <<: *JPEG2000ShortGroup
+- <<: *JPEG2000ImageShortGroup
   extension: ".j2k"
-- <<: *JPEG2000ShortGroup
+- <<: *JPEG2000ImageShortGroup
   extension: ".jp2"
-- <<: *JPEG2000ShortGroup
+- <<: *JPEG2000ImageShortGroup
   extension: ".jpc"
-- <<: *JPEG2000ShortGroup
+- <<: *JPEG2000ImageShortGroup
   extension: ".jpf"
-- <<: *JPEG2000ShortGroup
+- <<: *JPEG2000ImageShortGroup
   extension: ".jpg2"
-- <<: *JPEG2000ShortGroup
+- <<: *JPEG2000ImageShortGroup
   extension: ".jpm"
-- <<: *JPEG2000ShortGroup
+- <<: *JPEG2000ImageShortGroup
   extension: ".jpx"
-- <<: *JPEG2000ShortGroup
+- <<: *JPEG2000ImageShortGroup
   extension: ".mj2"
 - extension: ".hl7"
   name: "Electronic Data Exchange Health Level Seven (HL7) Standard File"

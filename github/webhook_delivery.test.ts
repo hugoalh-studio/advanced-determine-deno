@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.210.0/assert/assert_equals.ts";
+import { assertEquals } from "https://deno.land/std@0.211.0/assert/assert_equals.ts";
 import { GitHubWebhookDeliveryValidator } from "./webhook_delivery.ts";
 const sample1 = new Headers({
 	"Content-Type": "application/json",

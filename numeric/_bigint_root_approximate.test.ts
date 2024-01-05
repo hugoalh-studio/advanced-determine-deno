@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.210.0/assert/assert_equals.ts";
+import { assertEquals } from "https://deno.land/std@0.211.0/assert/assert_equals.ts";
 import { randomInt } from "node:crypto";
 import { bigintRootApproximate } from "./_bigint_root_approximate.ts";
 Deno.test("Matrix", { permissions: "none" }, async (t) => {

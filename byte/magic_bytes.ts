@@ -1,4 +1,4 @@
-import { includesNeedle as bytesIncludesNeedle } from "https://deno.land/std@0.210.0/bytes/includes_needle.ts";
+import { includesNeedle as bytesIncludesNeedle } from "https://deno.land/std@0.211.0/bytes/includes_needle.ts";
 import MagicBytesListRaw from "./_magic_bytes_list.ts";
 const regexpPatternHex = /^[\dA-F]{2}(?: [\dA-F]{2})*$/v;
 interface MagicBytesPattern<T extends string | Uint8Array> {

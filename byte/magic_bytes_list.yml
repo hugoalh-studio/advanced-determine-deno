@@ -1274,7 +1274,9 @@
   name: "Rich Text Format (RTF) File"
   pattern:
     - fromIndex: 0
-      hex: "7B 5C 72 74 66 31"
+      hex: "7B 5C 72 74 66"
+    - fromIndex: -1
+      hex: "7D"
 - extension: null
   name: "Microsoft Tape File"
   pattern:
@@ -2015,3 +2017,22 @@
   pattern:
     - fromIndex: 0
       hex: "0D F0 1D C0"
+- extension: ".mdf"
+  name: "Alcohol 120% CD Image"
+  pattern:
+    - fromIndex: 0
+      hex: "00 FF FF FF FF FF FF FF FF FF FF 00 00 02 00 01"
+- extension: ".b85"
+  name: "ASCII85/BASE85 Encoded File"
+  pattern:
+    - fromIndex: 0
+      hex: "3C 7E 36 3C 5C 25 5F 30 67 53 71 68 3B"
+    - fromIndex: -3
+      hex: "7E 3E 0A"
+- extension: ".jb2"
+  name: "JBIG2 Image"
+  pattern:
+    - fromIndex: 0
+      hex: "97 4A 42 32 0D 0A 1A 0A"
+    - fromIndex: -8
+      hex: "03 33 00 01 00 00 00 00"

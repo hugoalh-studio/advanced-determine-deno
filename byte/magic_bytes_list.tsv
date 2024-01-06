@@ -273,7 +273,7 @@ extension	mime	name	pattern	patternVariant
 .woff2		WOFF 2.0 Font	"[{""fromIndex"":0,""hex"":""77 4F 46 32""}]"	
 .lep		Lepton Compressed JPEG Image	"[{""fromIndex"":0,""hex"":""CF 84 01""}]"	
 .deb		Linux Deb File	"[{""fromIndex"":0,""hex"":""21 3C 61 72 63 68 3E 0A""}]"	
-.rtf		Rich Text Format (RTF) File	"[{""fromIndex"":0,""hex"":""7B 5C 72 74 66 31""}]"	
+.rtf		Rich Text Format (RTF) File	"[{""fromIndex"":0,""hex"":""7B 5C 72 74 66""},{""fromIndex"":-1,""hex"":""7D""}]"	
 		Microsoft Tape File	"[{""fromIndex"":0,""hex"":""54 41 50 45""}]"	
 .mp4		MPEG-4 Video	"[{""fromIndex"":4,""hex"":""66 74 79 70 69 73 6F 6D""}]"	isom
 .mp4		MPEG-4 Video	"[{""fromIndex"":4,""hex"":""66 74 79 70 4D 53 4E 56""}]"	MSNV
@@ -431,4 +431,7 @@ extension	mime	name	pattern	patternVariant
 .hdr		Radiance High Dynamic Range Image	"[{""fromIndex"":0,""hex"":""23 3F 52 41 44 49 41 4E 43 45 0A""}]"	
 .vbe		VBScript Encoded Script	"[{""fromIndex"":0,""hex"":""23 40 7E 5E""}]"	
 .cdb		MikroTik WinBox Connection Database (Address Book)	"[{""fromIndex"":0,""hex"":""0D F0 1D C0""}]"	
+.mdf		Alcohol 120% CD Image	"[{""fromIndex"":0,""hex"":""00 FF FF FF FF FF FF FF FF FF FF 00 00 02 00 01""}]"	
+.b85		ASCII85/BASE85 Encoded File	"[{""fromIndex"":0,""hex"":""3C 7E 36 3C 5C 25 5F 30 67 53 71 68 3B""},{""fromIndex"":-3,""hex"":""7E 3E 0A""}]"	
+.jb2		JBIG2 Image	"[{""fromIndex"":0,""hex"":""97 4A 42 32 0D 0A 1A 0A""},{""fromIndex"":-8,""hex"":""03 33 00 01 00 00 00 00""}]"	
 

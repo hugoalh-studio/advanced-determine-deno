@@ -34,7 +34,7 @@ export function getIPInfo(): NetworkIPAddressInformation {
 		}
 	}
 	return result;
-};
+}
 export {
 	getIPInfo as getIPInformation
 };

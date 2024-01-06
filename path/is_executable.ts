@@ -57,7 +57,7 @@ function assertPathExecutablePosix(stat: Deno.FileInfo, options: IsPathExecutabl
 		(Boolean(pathMode & u) && pathUid === ownUid) ||
 		(Boolean(pathMode & (u | g)) && ownUid === 0)
 	);
-};
+}
 /**
  * @access private
  * @param {Deno.FileInfo} stat

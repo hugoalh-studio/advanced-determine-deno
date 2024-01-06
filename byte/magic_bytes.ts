@@ -53,10 +53,10 @@ class BytesMatcher {
 }
 export class MagicBytesMatcher {
 	#list: Map<MagicBytesMeta, BytesMatcher> = new Map<MagicBytesMeta, BytesMatcher>();
-	constructor(filter: (meta: MagicBytesMeta) => boolean) {
+	constructor(filter?: (meta: MagicBytesMeta) => boolean) {
 		for (const { extension, name, pattern, mime, patternVariant } of MagicBytesList) {
 			const meta: MagicBytesMeta = { extension, name, mime, patternVariant };
-			if (filter(meta)) {
+			if (filter?.(meta) ?? true) {
 				this.#list.set(meta, new BytesMatcher(pattern));
 			}
 		}

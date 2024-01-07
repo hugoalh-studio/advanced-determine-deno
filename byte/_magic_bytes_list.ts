@@ -2390,7 +2390,9 @@ export default [
 		"mimes": [
 			"audio/wav",
 			"audio/wave",
-			"audio/x-wav"
+			"audio/x-wav",
+			"audio/vnd.wave",
+			"audio/x-pn-wav"
 		],
 		"name": "Waveform Audio",
 		"pattern": [

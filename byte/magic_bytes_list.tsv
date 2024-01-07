@@ -155,7 +155,7 @@ extensions	mimes	name	pattern	patternVariant
 		System Deployment Image	"[{""fromIndex"":0,""hex"":""24 53 44 49 30 30 30 31""}]"	
 .ogg, .oga	audio/ogg	Ogg Audio	"[{""fromIndex"":0,""hex"":""4F 67 67 53""}]"	
 .ogv	video/ogg	Ogg Video	"[{""fromIndex"":0,""hex"":""4F 67 67 53""}]"	
-.wav	audio/wav, audio/wave, audio/x-wav	Waveform Audio	"[{""fromIndex"":0,""hex"":""52 49 46 46""},{""fromIndex"":8,""hex"":""57 41 56 45""}]"	
+.wav	audio/wav, audio/wave, audio/x-wav, audio/vnd.wave, audio/x-pn-wav	Waveform Audio	"[{""fromIndex"":0,""hex"":""52 49 46 46""},{""fromIndex"":8,""hex"":""57 41 56 45""}]"	
 .avi	video/x-msvideo	Audio Video Interleave (AVI)	"[{""fromIndex"":0,""hex"":""52 49 46 46""},{""fromIndex"":8,""hex"":""41 56 49 20""}]"	
 .mp3	audio/mp3	MP3 Audio	"[{""fromIndex"":0,""hex"":""FF FB FF F3 FF F2""}]"	
 .mp3	audio/mpeg	MP3 Audio With ID3v2 Container	"[{""fromIndex"":0,""hex"":""49 44 33""}]"	

@@ -1236,6 +1236,8 @@
     - "audio/wav"
     - "audio/wave"
     - "audio/x-wav"
+    - "audio/vnd.wave"
+    - "audio/x-pn-wav"
   name: "Waveform Audio"
   pattern:
     - fromIndex: 0

@@ -85,7 +85,7 @@ function* dissectSegmentWithRegExp({ matcher, segment, type }: StringDissectSegm
 	}
 }
 /**
- * Dissect the string; Safe with the emojis, URLs, and words.
+ * String dissector to dissect the string; Safe with the emojis, URLs, and words.
  */
 export class StringDissector {
 	#locales?: StringDissectorLocales;

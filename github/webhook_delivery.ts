@@ -21,7 +21,7 @@ export interface GitHubWebhookDeliveryMeta {
 	id: string;
 }
 /**
- * Determine the request whether is from GitHub webhook delivery. For more information, please visit https://docs.github.com/en/webhooks/using-webhooks/validating-webhook-deliveries.
+ * GitHub webhook delivery validator to determine the request whether is from GitHub webhook delivery. For more information, please visit https://docs.github.com/en/webhooks/using-webhooks/validating-webhook-deliveries.
  */
 export class GitHubWebhookDeliveryValidator {
 	#cryptor?: CryptoKey;

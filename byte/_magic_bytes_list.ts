@@ -1,6 +1,9 @@
 export default [
 	{
-		"extension": ".wk1",
+		"extensions": [
+			".wk1"
+		],
+		"mimes": [],
 		"name": "Lotus 1-2-3 Spreadsheet (V1) File",
 		"pattern": [
 			{
@@ -10,7 +13,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".wk3",
+		"extensions": [
+			".wk3"
+		],
+		"mimes": [],
 		"name": "Lotus 1-2-3 Spreadsheet (V3) File",
 		"pattern": [
 			{
@@ -20,8 +26,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".wk4",
-		"name": "Lotus 1-2-3 Spreadsheet (V4) File",
+		"extensions": [
+			".wk4",
+			".wk5"
+		],
+		"mimes": [],
+		"name": "Lotus 1-2-3 Spreadsheet (V4 / V5) File",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -30,17 +40,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".wk5",
-		"name": "Lotus 1-2-3 Spreadsheet (V5) File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "00 00 1A 00 02 10 04 00 00 00 00 00"
-			}
-		]
-	},
-	{
-		"extension": ".123",
+		"extensions": [
+			".123"
+		],
+		"mimes": [
+			"application/vnd.lotus-1-2-3"
+		],
 		"name": "Lotus 1-2-3 Spreadsheet (V9) File",
 		"pattern": [
 			{
@@ -50,7 +55,8 @@ export default [
 		]
 	},
 	{
-		"extension": null,
+		"extensions": [],
+		"mimes": [],
 		"name": "Amiga Hunk Executable File",
 		"pattern": [
 			{
@@ -60,7 +66,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".qxd",
+		"extensions": [
+			".qxd"
+		],
+		"mimes": [
+			"application/vnd.quark.quarkxpress"
+		],
 		"name": "Quark Express Document",
 		"pattern": [
 			{
@@ -71,7 +82,12 @@ export default [
 		"patternVariant": "BE"
 	},
 	{
-		"extension": ".qxd",
+		"extensions": [
+			".qxd"
+		],
+		"mimes": [
+			"application/vnd.quark.quarkxpress"
+		],
 		"name": "Quark Express Document",
 		"pattern": [
 			{
@@ -82,7 +98,10 @@ export default [
 		"patternVariant": "LE"
 	},
 	{
-		"extension": ".psafe3",
+		"extensions": [
+			".psafe3"
+		],
+		"mimes": [],
 		"name": "Password Gorilla Password Database",
 		"pattern": [
 			{
@@ -92,7 +111,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".pcap",
+		"extensions": [
+			".pcap"
+		],
+		"mimes": [
+			"application/vnd.tcpdump.pcap"
+		],
 		"name": "Libpcap File",
 		"pattern": [
 			{
@@ -103,7 +127,12 @@ export default [
 		"patternVariant": "BE"
 	},
 	{
-		"extension": ".pcap",
+		"extensions": [
+			".pcap"
+		],
+		"mimes": [
+			"application/vnd.tcpdump.pcap"
+		],
 		"name": "Libpcap File",
 		"pattern": [
 			{
@@ -114,7 +143,12 @@ export default [
 		"patternVariant": "LE"
 	},
 	{
-		"extension": ".pcap",
+		"extensions": [
+			".pcap"
+		],
+		"mimes": [
+			"application/vnd.tcpdump.pcap"
+		],
 		"name": "Libpcap File",
 		"pattern": [
 			{
@@ -125,7 +159,12 @@ export default [
 		"patternVariant": "Nanosecond Resolution; BE"
 	},
 	{
-		"extension": ".pcap",
+		"extensions": [
+			".pcap"
+		],
+		"mimes": [
+			"application/vnd.tcpdump.pcap"
+		],
 		"name": "Libpcap File",
 		"pattern": [
 			{
@@ -136,7 +175,10 @@ export default [
 		"patternVariant": "Nanosecond Resolution; LE"
 	},
 	{
-		"extension": ".pcapng",
+		"extensions": [
+			".pcapng"
+		],
+		"mimes": [],
 		"name": "PCAP Next Generation Dump File",
 		"pattern": [
 			{
@@ -146,7 +188,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".rpm",
+		"extensions": [
+			".rpm"
+		],
+		"mimes": [
+			"application/x-redhat-package-manager"
+		],
 		"name": "RedHat Package Manager (RPM) Package",
 		"pattern": [
 			{
@@ -156,7 +203,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".bin",
+		"extensions": [
+			".bin"
+		],
+		"mimes": [],
 		"name": "Amazon Kindle Update Package",
 		"pattern": [
 			{
@@ -166,7 +216,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".wad",
+		"extensions": [
+			".wad"
+		],
+		"mimes": [
+			"application/x-doom"
+		],
 		"name": "Internal WAD",
 		"pattern": [
 			{
@@ -176,7 +231,13 @@ export default [
 		]
 	},
 	{
-		"extension": ".pdb",
+		"extensions": [
+			".pdb"
+		],
+		"mimes": [
+			"application/vnd.palm",
+			"application/x-pilot"
+		],
 		"name": "PalmPilot Database/Document File",
 		"pattern": [
 			{
@@ -186,7 +247,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".dba",
+		"extensions": [
+			".dba"
+		],
+		"mimes": [],
 		"name": "Palm Desktop Calendar Archive",
 		"pattern": [
 			{
@@ -196,7 +260,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".dba",
+		"extensions": [
+			".dba"
+		],
+		"mimes": [],
 		"name": "Palm Desktop To Do Archive",
 		"pattern": [
 			{
@@ -206,7 +273,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".tda",
+		"extensions": [
+			".tda"
+		],
+		"mimes": [],
 		"name": "Palm Desktop Calendar Archive",
 		"pattern": [
 			{
@@ -216,7 +286,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".tdf$",
+		"extensions": [
+			".tdf$"
+		],
+		"mimes": [],
 		"name": "Telegram Desktop File",
 		"pattern": [
 			{
@@ -226,7 +299,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".tdef",
+		"extensions": [
+			".tdef"
+		],
+		"mimes": [],
 		"name": "Telegram Desktop Encrypted File",
 		"pattern": [
 			{
@@ -236,8 +312,14 @@ export default [
 		]
 	},
 	{
-		"extension": ".ico",
-		"mime": "image/vnd.microsoft.icon",
+		"extensions": [
+			".ico"
+		],
+		"mimes": [
+			"image/vnd.microsoft.icon",
+			"image/x-icon",
+			"image/ico"
+		],
 		"name": "Computer Icons",
 		"pattern": [
 			{
@@ -247,29 +329,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".ico",
-		"mime": "image/x-icon",
-		"name": "Computer Icons",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "00 00 01 00"
-			}
-		]
-	},
-	{
-		"extension": ".ico",
-		"mime": "image/ico",
-		"name": "Computer Icons",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "00 00 01 00"
-			}
-		]
-	},
-	{
-		"extension": ".icns",
+		"extensions": [
+			".icns"
+		],
+		"mimes": [],
 		"name": "Apple Icon Image",
 		"pattern": [
 			{
@@ -279,7 +342,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".heic",
+		"extensions": [
+			".heic"
+		],
+		"mimes": [
+			"image/heic"
+		],
 		"name": "High Efficiency Image Container (HEIC)",
 		"pattern": [
 			{
@@ -289,7 +357,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".lzh",
+		"extensions": [
+			".lzh"
+		],
+		"mimes": [
+			"application/x-lzh-compressed"
+		],
 		"name": "Lempel Ziv Huffman Archive",
 		"pattern": [
 			{
@@ -300,7 +373,12 @@ export default [
 		"patternVariant": "Method 0 (No Compression)"
 	},
 	{
-		"extension": ".lzh",
+		"extensions": [
+			".lzh"
+		],
+		"mimes": [
+			"application/x-lzh-compressed"
+		],
 		"name": "Lempel Ziv Huffman Archive",
 		"pattern": [
 			{
@@ -311,7 +389,10 @@ export default [
 		"patternVariant": "Method 5 (8 KiB Sliding Window)"
 	},
 	{
-		"extension": ".bac",
+		"extensions": [
+			".bac"
+		],
+		"mimes": [],
 		"name": "AmiBack Amiga Backup Data File",
 		"pattern": [
 			{
@@ -321,7 +402,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".idx",
+		"extensions": [
+			".idx"
+		],
+		"mimes": [],
 		"name": "AmiBack Amiga Backup Index File",
 		"pattern": [
 			{
@@ -331,7 +415,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".plist",
+		"extensions": [
+			".plist"
+		],
+		"mimes": [],
 		"name": "Binary Property List File",
 		"pattern": [
 			{
@@ -341,7 +428,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".bz2",
+		"extensions": [
+			".bz2"
+		],
+		"mimes": [
+			"application/x-bzip2"
+		],
 		"name": "BZip2 Archive",
 		"pattern": [
 			{
@@ -351,7 +443,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".vdr",
+		"extensions": [
+			".vdr"
+		],
+		"mimes": [],
 		"name": "VirtualDub",
 		"pattern": [
 			{
@@ -365,7 +460,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".trd",
+		"extensions": [
+			".trd"
+		],
+		"mimes": [],
 		"name": "TrID",
 		"pattern": [
 			{
@@ -379,7 +477,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".shw",
+		"extensions": [
+			".shw"
+		],
+		"mimes": [],
 		"name": "Corel SHOW! 4.0",
 		"pattern": [
 			{
@@ -393,7 +494,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".shw",
+		"extensions": [
+			".shw"
+		],
+		"mimes": [],
 		"name": "Corel SHOW! 5.0",
 		"pattern": [
 			{
@@ -407,7 +511,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".shb",
+		"extensions": [
+			".shb"
+		],
+		"mimes": [],
 		"name": "Corel SHOW! 5.0 Background",
 		"pattern": [
 			{
@@ -421,7 +528,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".shr",
+		"extensions": [
+			".shr"
+		],
+		"mimes": [],
 		"name": "Corel SHOW! 5.0 Player",
 		"pattern": [
 			{
@@ -435,7 +545,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".dcr",
+		"extensions": [
+			".dcr"
+		],
+		"mimes": [
+			"application/x-director"
+		],
 		"name": "Adobe Shockwave File",
 		"pattern": [
 			{
@@ -450,7 +565,12 @@ export default [
 		"patternVariant": "BE"
 	},
 	{
-		"extension": ".dcr",
+		"extensions": [
+			".dcr"
+		],
+		"mimes": [
+			"application/x-director"
+		],
 		"name": "Adobe Shockwave File",
 		"pattern": [
 			{
@@ -465,7 +585,10 @@ export default [
 		"patternVariant": "LE"
 	},
 	{
-		"extension": ".mmm",
+		"extensions": [
+			".mmm"
+		],
+		"mimes": [],
 		"name": "Multimedia Movie",
 		"pattern": [
 			{
@@ -479,7 +602,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".mny",
+		"extensions": [
+			".mny"
+		],
+		"mimes": [
+			"application/x-msmoney"
+		],
 		"name": "Microsoft Money File",
 		"pattern": [
 			{
@@ -489,7 +617,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".accdb",
+		"extensions": [
+			".accdb"
+		],
+		"mimes": [],
 		"name": "Microsoft Access 2007 Database",
 		"pattern": [
 			{
@@ -499,7 +630,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".mdb",
+		"extensions": [
+			".mdb"
+		],
+		"mimes": [
+			"application/x-msaccess"
+		],
 		"name": "Microsoft Access Database",
 		"pattern": [
 			{
@@ -509,7 +645,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".swf",
+		"extensions": [
+			".swf"
+		],
+		"mimes": [
+			"application/x-shockwave-flash"
+		],
 		"name": "Adobe Flash File",
 		"pattern": [
 			{
@@ -520,7 +661,12 @@ export default [
 		"patternVariant": "C"
 	},
 	{
-		"extension": ".swf",
+		"extensions": [
+			".swf"
+		],
+		"mimes": [
+			"application/x-shockwave-flash"
+		],
 		"name": "Adobe Flash File",
 		"pattern": [
 			{
@@ -531,7 +677,10 @@ export default [
 		"patternVariant": "F"
 	},
 	{
-		"extension": ".indd",
+		"extensions": [
+			".indd"
+		],
+		"mimes": [],
 		"name": "Adobe InDesign Document",
 		"pattern": [
 			{
@@ -541,7 +690,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".zlib",
+		"extensions": [
+			".zlib"
+		],
+		"mimes": [],
 		"name": "ZLib Archive",
 		"pattern": [
 			{
@@ -552,7 +704,10 @@ export default [
 		"patternVariant": "No Compression Without Preset Dictionary"
 	},
 	{
-		"extension": ".zlib",
+		"extensions": [
+			".zlib"
+		],
+		"mimes": [],
 		"name": "ZLib Archive",
 		"pattern": [
 			{
@@ -563,7 +718,10 @@ export default [
 		"patternVariant": "Best Speed Without Preset Dictionary"
 	},
 	{
-		"extension": ".zlib",
+		"extensions": [
+			".zlib"
+		],
+		"mimes": [],
 		"name": "ZLib Archive",
 		"pattern": [
 			{
@@ -574,7 +732,10 @@ export default [
 		"patternVariant": "Default Compression Without Preset Dictionary"
 	},
 	{
-		"extension": ".zlib",
+		"extensions": [
+			".zlib"
+		],
+		"mimes": [],
 		"name": "ZLib Archive",
 		"pattern": [
 			{
@@ -585,7 +746,10 @@ export default [
 		"patternVariant": "Best Compression Without Preset Dictionary"
 	},
 	{
-		"extension": ".zlib",
+		"extensions": [
+			".zlib"
+		],
+		"mimes": [],
 		"name": "ZLib Archive",
 		"pattern": [
 			{
@@ -596,7 +760,10 @@ export default [
 		"patternVariant": "No Compression With Preset Dictionary"
 	},
 	{
-		"extension": ".zlib",
+		"extensions": [
+			".zlib"
+		],
+		"mimes": [],
 		"name": "ZLib Archive",
 		"pattern": [
 			{
@@ -607,7 +774,10 @@ export default [
 		"patternVariant": "Best Speed With Preset Dictionary"
 	},
 	{
-		"extension": ".zlib",
+		"extensions": [
+			".zlib"
+		],
+		"mimes": [],
 		"name": "ZLib Archive",
 		"pattern": [
 			{
@@ -618,7 +788,10 @@ export default [
 		"patternVariant": "Default Compression With Preset Dictionary"
 	},
 	{
-		"extension": ".zlib",
+		"extensions": [
+			".zlib"
+		],
+		"mimes": [],
 		"name": "ZLib Archive",
 		"pattern": [
 			{
@@ -629,7 +802,10 @@ export default [
 		"patternVariant": "Best Compression With Preset Dictionary"
 	},
 	{
-		"extension": ".zoo",
+		"extensions": [
+			".zoo"
+		],
+		"mimes": [],
 		"name": "Zoo File",
 		"pattern": [
 			{
@@ -639,7 +815,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".pbm",
+		"extensions": [
+			".pbm"
+		],
+		"mimes": [
+			"image/x-portable-bitmap"
+		],
 		"name": "Portable Bitmap ASCII",
 		"pattern": [
 			{
@@ -649,7 +830,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".pbm",
+		"extensions": [
+			".pbm"
+		],
+		"mimes": [
+			"image/x-portable-bitmap"
+		],
 		"name": "Portable Bitmap Binary",
 		"pattern": [
 			{
@@ -659,7 +845,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".pgm",
+		"extensions": [
+			".pgm"
+		],
+		"mimes": [
+			"image/x-portable-graymap"
+		],
 		"name": "Portable Gray Map ASCII",
 		"pattern": [
 			{
@@ -669,7 +860,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".pgm",
+		"extensions": [
+			".pgm"
+		],
+		"mimes": [
+			"image/x-portable-graymap"
+		],
 		"name": "Portable Gray Map Binary",
 		"pattern": [
 			{
@@ -679,7 +875,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".ppm",
+		"extensions": [
+			".ppm"
+		],
+		"mimes": [
+			"image/x-portable-pixmap"
+		],
 		"name": "Portable Pixmap ASCII",
 		"pattern": [
 			{
@@ -689,7 +890,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".ppm",
+		"extensions": [
+			".ppm"
+		],
+		"mimes": [
+			"image/x-portable-pixmap"
+		],
 		"name": "Portable Pixmap Binary",
 		"pattern": [
 			{
@@ -699,7 +905,23 @@ export default [
 		]
 	},
 	{
-		"extension": ".j2c",
+		"extensions": [
+			".j2c",
+			".j2k",
+			".jp2",
+			".jpc",
+			".jpf",
+			".jpg2",
+			".jpm",
+			".jpx",
+			".mj2"
+		],
+		"mimes": [
+			"image/jp2",
+			"image/jpx",
+			"image/jpm",
+			"image/mj2"
+		],
 		"name": "JPEG 2000 Image",
 		"pattern": [
 			{
@@ -710,95 +932,23 @@ export default [
 		"patternVariant": "Long"
 	},
 	{
-		"extension": ".j2k",
-		"name": "JPEG 2000 Image",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "00 00 00 0C 6A 50 20 20 0D 0A 87 0A"
-			}
+		"extensions": [
+			".j2c",
+			".j2k",
+			".jp2",
+			".jpc",
+			".jpf",
+			".jpg2",
+			".jpm",
+			".jpx",
+			".mj2"
 		],
-		"patternVariant": "Long"
-	},
-	{
-		"extension": ".jp2",
-		"name": "JPEG 2000 Image",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "00 00 00 0C 6A 50 20 20 0D 0A 87 0A"
-			}
+		"mimes": [
+			"image/jp2",
+			"image/jpx",
+			"image/jpm",
+			"image/mj2"
 		],
-		"patternVariant": "Long"
-	},
-	{
-		"extension": ".jpc",
-		"name": "JPEG 2000 Image",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "00 00 00 0C 6A 50 20 20 0D 0A 87 0A"
-			}
-		],
-		"patternVariant": "Long"
-	},
-	{
-		"extension": ".jpf",
-		"name": "JPEG 2000 Image",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "00 00 00 0C 6A 50 20 20 0D 0A 87 0A"
-			}
-		],
-		"patternVariant": "Long"
-	},
-	{
-		"extension": ".jpg2",
-		"name": "JPEG 2000 Image",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "00 00 00 0C 6A 50 20 20 0D 0A 87 0A"
-			}
-		],
-		"patternVariant": "Long"
-	},
-	{
-		"extension": ".jpm",
-		"name": "JPEG 2000 Image",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "00 00 00 0C 6A 50 20 20 0D 0A 87 0A"
-			}
-		],
-		"patternVariant": "Long"
-	},
-	{
-		"extension": ".jpx",
-		"name": "JPEG 2000 Image",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "00 00 00 0C 6A 50 20 20 0D 0A 87 0A"
-			}
-		],
-		"patternVariant": "Long"
-	},
-	{
-		"extension": ".mj2",
-		"name": "JPEG 2000 Image",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "00 00 00 0C 6A 50 20 20 0D 0A 87 0A"
-			}
-		],
-		"patternVariant": "Long"
-	},
-	{
-		"extension": ".j2c",
 		"name": "JPEG 2000 Image",
 		"pattern": [
 			{
@@ -809,95 +959,10 @@ export default [
 		"patternVariant": "Short"
 	},
 	{
-		"extension": ".j2k",
-		"name": "JPEG 2000 Image",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "FF 4F FF 51"
-			}
+		"extensions": [
+			".hl7"
 		],
-		"patternVariant": "Short"
-	},
-	{
-		"extension": ".jp2",
-		"name": "JPEG 2000 Image",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "FF 4F FF 51"
-			}
-		],
-		"patternVariant": "Short"
-	},
-	{
-		"extension": ".jpc",
-		"name": "JPEG 2000 Image",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "FF 4F FF 51"
-			}
-		],
-		"patternVariant": "Short"
-	},
-	{
-		"extension": ".jpf",
-		"name": "JPEG 2000 Image",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "FF 4F FF 51"
-			}
-		],
-		"patternVariant": "Short"
-	},
-	{
-		"extension": ".jpg2",
-		"name": "JPEG 2000 Image",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "FF 4F FF 51"
-			}
-		],
-		"patternVariant": "Short"
-	},
-	{
-		"extension": ".jpm",
-		"name": "JPEG 2000 Image",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "FF 4F FF 51"
-			}
-		],
-		"patternVariant": "Short"
-	},
-	{
-		"extension": ".jpx",
-		"name": "JPEG 2000 Image",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "FF 4F FF 51"
-			}
-		],
-		"patternVariant": "Short"
-	},
-	{
-		"extension": ".mj2",
-		"name": "JPEG 2000 Image",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "FF 4F FF 51"
-			}
-		],
-		"patternVariant": "Short"
-	},
-	{
-		"extension": ".hl7",
+		"mimes": [],
 		"name": "Electronic Data Exchange Health Level Seven (HL7) Standard File",
 		"pattern": [
 			{
@@ -908,7 +973,10 @@ export default [
 		"patternVariant": "B"
 	},
 	{
-		"extension": ".hl7",
+		"extensions": [
+			".hl7"
+		],
+		"mimes": [],
 		"name": "Electronic Data Exchange Health Level Seven (HL7) Standard File",
 		"pattern": [
 			{
@@ -919,7 +987,12 @@ export default [
 		"patternVariant": "M"
 	},
 	{
-		"extension": ".sqlitedb",
+		"extensions": [
+			".sqlitedb",
+			".sqlite",
+			".db"
+		],
+		"mimes": [],
 		"name": "SQLite Database",
 		"pattern": [
 			{
@@ -929,27 +1002,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".sqlite",
-		"name": "SQLite Database",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "53 51 4C 69 74 65 20 66 6F 72 6D 61 74 20 33 00"
-			}
-		]
-	},
-	{
-		"extension": ".db",
-		"name": "SQLite Database",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "53 51 4C 69 74 65 20 66 6F 72 6D 61 74 20 33 00"
-			}
-		]
-	},
-	{
-		"extension": ".pic",
+		"extensions": [
+			".pic"
+		],
+		"mimes": [
+			"image/x-pict"
+		],
 		"name": "IBM Storyboard Bitmap File",
 		"pattern": [
 			{
@@ -959,7 +1017,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".mov",
+		"extensions": [
+			".mov"
+		],
+		"mimes": [
+			"video/quicktime"
+		],
 		"name": "Apple QuickTime Movie File",
 		"pattern": [
 			{
@@ -969,7 +1032,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".pif",
+		"extensions": [
+			".pif"
+		],
+		"mimes": [],
 		"name": "Windows Program Information File",
 		"pattern": [
 			{
@@ -979,7 +1045,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".sea",
+		"extensions": [
+			".sea"
+		],
+		"mimes": [
+			"application/x-sea"
+		],
 		"name": "Mac Stuffit Self-Extracting Archive",
 		"pattern": [
 			{
@@ -989,7 +1060,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".ytr",
+		"extensions": [
+			".ytr"
+		],
+		"mimes": [],
 		"name": "IRIS OCR Data File",
 		"pattern": [
 			{
@@ -999,7 +1073,8 @@ export default [
 		]
 	},
 	{
-		"extension": null,
+		"extensions": [],
+		"mimes": [],
 		"name": "Palm Desktop Data File (Access Format)",
 		"pattern": [
 			{
@@ -1009,7 +1084,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".3gp",
+		"extensions": [
+			".3gp"
+		],
+		"mimes": [
+			"video/3gpp"
+		],
 		"name": "3rd Generation Partnership Project Multimedia File",
 		"pattern": [
 			{
@@ -1019,7 +1099,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".3g2",
+		"extensions": [
+			".3g2"
+		],
+		"mimes": [
+			"video/3gpp2"
+		],
 		"name": "3rd Generation Partnership Project 2 Multimedia File",
 		"pattern": [
 			{
@@ -1029,7 +1114,11 @@ export default [
 		]
 	},
 	{
-		"extension": ".z",
+		"extensions": [
+			".tar.z",
+			".z"
+		],
+		"mimes": [],
 		"name": "Tar Zip Lempel-Ziv-Welch Algorithm Archive",
 		"pattern": [
 			{
@@ -1039,17 +1128,11 @@ export default [
 		]
 	},
 	{
-		"extension": ".tar.z",
-		"name": "Tar Zip Lempel-Ziv-Welch Algorithm Archive",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "1F 9D"
-			}
-		]
-	},
-	{
-		"extension": ".z",
+		"extensions": [
+			".tar.z",
+			".z"
+		],
+		"mimes": [],
 		"name": "Tar Zip LZH Algorithm Archive",
 		"pattern": [
 			{
@@ -1059,18 +1142,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".tar.z",
-		"name": "Tar Zip LZH Algorithm Archive",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "1F A0"
-			}
-		]
-	},
-	{
-		"extension": ".gif",
-		"mime": "image/gif",
+		"extensions": [
+			".gif"
+		],
+		"mimes": [
+			"image/gif"
+		],
 		"name": "Graphics Interchange Format (GIF) File",
 		"pattern": [
 			{
@@ -1081,8 +1158,12 @@ export default [
 		"patternVariant": "7"
 	},
 	{
-		"extension": ".gif",
-		"mime": "image/gif",
+		"extensions": [
+			".gif"
+		],
+		"mimes": [
+			"image/gif"
+		],
 		"name": "Graphics Interchange Format (GIF) File",
 		"pattern": [
 			{
@@ -1093,7 +1174,13 @@ export default [
 		"patternVariant": "9"
 	},
 	{
-		"extension": ".tif",
+		"extensions": [
+			".tif",
+			".tiff"
+		],
+		"mimes": [
+			"image/tiff"
+		],
 		"name": "Tagged Image File Format (TIFF)",
 		"pattern": [
 			{
@@ -1104,18 +1191,13 @@ export default [
 		"patternVariant": "BE"
 	},
 	{
-		"extension": ".tiff",
-		"name": "Tagged Image File Format (TIFF)",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "4D 4D 00 2A"
-			}
+		"extensions": [
+			".tif",
+			".tiff"
 		],
-		"patternVariant": "BE"
-	},
-	{
-		"extension": ".tif",
+		"mimes": [
+			"image/tiff"
+		],
 		"name": "Tagged Image File Format (TIFF)",
 		"pattern": [
 			{
@@ -1126,18 +1208,10 @@ export default [
 		"patternVariant": "LE"
 	},
 	{
-		"extension": ".tiff",
-		"name": "Tagged Image File Format (TIFF)",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "49 49 2A 00"
-			}
+		"extensions": [
+			".cr2"
 		],
-		"patternVariant": "LE"
-	},
-	{
-		"extension": ".cr2",
+		"mimes": [],
 		"name": "Canon RAW Format Version 2",
 		"pattern": [
 			{
@@ -1147,7 +1221,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".cin",
+		"extensions": [
+			".cin"
+		],
+		"mimes": [],
 		"name": "Kodak Cineon Image",
 		"pattern": [
 			{
@@ -1157,7 +1234,8 @@ export default [
 		]
 	},
 	{
-		"extension": null,
+		"extensions": [],
+		"mimes": [],
 		"name": "Rob Northen Compression (Version 1) Algorithm Archive",
 		"pattern": [
 			{
@@ -1167,7 +1245,8 @@ export default [
 		]
 	},
 	{
-		"extension": null,
+		"extensions": [],
+		"mimes": [],
 		"name": "Rob Northen Compression (Version 2) Algorithm Archive",
 		"pattern": [
 			{
@@ -1177,7 +1256,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".nui",
+		"extensions": [
+			".nui"
+		],
+		"mimes": [],
 		"name": "nuru Image File",
 		"pattern": [
 			{
@@ -1187,7 +1269,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".nup",
+		"extensions": [
+			".nup"
+		],
+		"mimes": [],
 		"name": "nuru Palette File",
 		"pattern": [
 			{
@@ -1197,7 +1282,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".dpx",
+		"extensions": [
+			".dpx"
+		],
+		"mimes": [],
 		"name": "SMPTE DPX Image",
 		"pattern": [
 			{
@@ -1208,7 +1296,10 @@ export default [
 		"patternVariant": "BE"
 	},
 	{
-		"extension": ".dpx",
+		"extensions": [
+			".dpx"
+		],
+		"mimes": [],
 		"name": "SMPTE DPX Image",
 		"pattern": [
 			{
@@ -1219,7 +1310,12 @@ export default [
 		"patternVariant": "LE"
 	},
 	{
-		"extension": ".exr",
+		"extensions": [
+			".exr"
+		],
+		"mimes": [
+			"image/aces"
+		],
 		"name": "OpenEXR Image",
 		"pattern": [
 			{
@@ -1229,7 +1325,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".bpg",
+		"extensions": [
+			".bpg"
+		],
+		"mimes": [],
 		"name": "Better Portable Graphic (BPG)",
 		"pattern": [
 			{
@@ -1239,37 +1338,58 @@ export default [
 		]
 	},
 	{
-		"extension": ".iso",
+		"extensions": [
+			".iso"
+		],
+		"mimes": [
+			"application/x-iso9660-image"
+		],
 		"name": "ISO9660 CD/DVD Image",
 		"pattern": [
 			{
 				"fromIndex": 32769,
 				"hex": "43 44 30 30 31"
 			}
-		]
+		],
+		"patternVariant": "1"
 	},
 	{
-		"extension": ".iso",
+		"extensions": [
+			".iso"
+		],
+		"mimes": [
+			"application/x-iso9660-image"
+		],
 		"name": "ISO9660 CD/DVD Image",
 		"pattern": [
 			{
 				"fromIndex": 34817,
 				"hex": "43 44 30 30 31"
 			}
-		]
+		],
+		"patternVariant": "2"
 	},
 	{
-		"extension": ".iso",
+		"extensions": [
+			".iso"
+		],
+		"mimes": [
+			"application/x-iso9660-image"
+		],
 		"name": "ISO9660 CD/DVD Image",
 		"pattern": [
 			{
 				"fromIndex": 36865,
 				"hex": "43 44 30 30 31"
 			}
-		]
+		],
+		"patternVariant": "3"
 	},
 	{
-		"extension": ".qoi",
+		"extensions": [
+			".qoi"
+		],
+		"mimes": [],
 		"name": "Quite OK Image (QOI)",
 		"pattern": [
 			{
@@ -1279,7 +1399,13 @@ export default [
 		]
 	},
 	{
-		"extension": ".ilbm",
+		"extensions": [
+			".ilbm",
+			".lbm",
+			".ibm",
+			".iff"
+		],
+		"mimes": [],
 		"name": "IFF Interleaved Bitmap Image",
 		"pattern": [
 			{
@@ -1293,49 +1419,16 @@ export default [
 		]
 	},
 	{
-		"extension": ".lbm",
-		"name": "IFF Interleaved Bitmap Image",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "46 4F 52 4D"
-			},
-			{
-				"fromIndex": 8,
-				"hex": "49 4C 42 4D"
-			}
-		]
-	},
-	{
-		"extension": ".ibm",
-		"name": "IFF Interleaved Bitmap Image",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "46 4F 52 4D"
-			},
-			{
-				"fromIndex": 8,
-				"hex": "49 4C 42 4D"
-			}
-		]
-	},
-	{
-		"extension": ".iff",
-		"name": "IFF Interleaved Bitmap Image",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "46 4F 52 4D"
-			},
-			{
-				"fromIndex": 8,
-				"hex": "49 4C 42 4D"
-			}
-		]
-	},
-	{
-		"extension": ".8svx",
+		"extensions": [
+			".8svx",
+			".8sv",
+			".svx",
+			".snd",
+			".iff"
+		],
+		"mimes": [
+			"audio/basic"
+		],
 		"name": "IFF 8-Bit Sampled Voice",
 		"pattern": [
 			{
@@ -1349,63 +1442,11 @@ export default [
 		]
 	},
 	{
-		"extension": ".8sv",
-		"name": "IFF 8-Bit Sampled Voice",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "46 4F 52 4D"
-			},
-			{
-				"fromIndex": 8,
-				"hex": "38 53 56 58"
-			}
-		]
-	},
-	{
-		"extension": ".svx",
-		"name": "IFF 8-Bit Sampled Voice",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "46 4F 52 4D"
-			},
-			{
-				"fromIndex": 8,
-				"hex": "38 53 56 58"
-			}
-		]
-	},
-	{
-		"extension": ".snd",
-		"name": "IFF 8-Bit Sampled Voice",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "46 4F 52 4D"
-			},
-			{
-				"fromIndex": 8,
-				"hex": "38 53 56 58"
-			}
-		]
-	},
-	{
-		"extension": ".iff",
-		"name": "IFF 8-Bit Sampled Voice",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "46 4F 52 4D"
-			},
-			{
-				"fromIndex": 8,
-				"hex": "38 53 56 58"
-			}
-		]
-	},
-	{
-		"extension": ".acbm",
+		"extensions": [
+			".acbm",
+			".iff"
+		],
+		"mimes": [],
 		"name": "Amiga Contiguous Bitmap File",
 		"pattern": [
 			{
@@ -1419,21 +1460,11 @@ export default [
 		]
 	},
 	{
-		"extension": ".iff",
-		"name": "Amiga Contiguous Bitmap File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "46 4F 52 4D"
-			},
-			{
-				"fromIndex": 8,
-				"hex": "41 43 42 4D"
-			}
-		]
-	},
-	{
-		"extension": ".anbm",
+		"extensions": [
+			".anbm",
+			".iff"
+		],
+		"mimes": [],
 		"name": "IFF Animated Bitmap File",
 		"pattern": [
 			{
@@ -1447,21 +1478,11 @@ export default [
 		]
 	},
 	{
-		"extension": ".iff",
-		"name": "IFF Animated Bitmap File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "46 4F 52 4D"
-			},
-			{
-				"fromIndex": 8,
-				"hex": "41 4E 42 4D"
-			}
-		]
-	},
-	{
-		"extension": ".anim",
+		"extensions": [
+			".anim",
+			".iff"
+		],
+		"mimes": [],
 		"name": "IFF CEL Animation File",
 		"pattern": [
 			{
@@ -1475,21 +1496,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".iff",
-		"name": "IFF CEL Animation File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "46 4F 52 4D"
-			},
-			{
-				"fromIndex": 8,
-				"hex": "41 4E 49 4D"
-			}
-		]
-	},
-	{
-		"extension": ".faxx",
+		"extensions": [
+			".faxx",
+			".fax",
+			".iff"
+		],
+		"mimes": [],
 		"name": "IFF Facsimile Image",
 		"pattern": [
 			{
@@ -1503,35 +1515,11 @@ export default [
 		]
 	},
 	{
-		"extension": ".fax",
-		"name": "IFF Facsimile Image",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "46 4F 52 4D"
-			},
-			{
-				"fromIndex": 8,
-				"hex": "46 41 58 58"
-			}
-		]
-	},
-	{
-		"extension": ".iff",
-		"name": "IFF Facsimile Image",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "46 4F 52 4D"
-			},
-			{
-				"fromIndex": 8,
-				"hex": "46 41 58 58"
-			}
-		]
-	},
-	{
-		"extension": ".ftxt",
+		"extensions": [
+			".ftxt",
+			".iff"
+		],
+		"mimes": [],
 		"name": "IFF Formatted Text File",
 		"pattern": [
 			{
@@ -1545,21 +1533,15 @@ export default [
 		]
 	},
 	{
-		"extension": ".iff",
-		"name": "IFF Formatted Text File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "46 4F 52 4D"
-			},
-			{
-				"fromIndex": 8,
-				"hex": "46 54 58 54"
-			}
-		]
-	},
-	{
-		"extension": ".smus",
+		"extensions": [
+			".smus",
+			".smu",
+			".mus",
+			".iff"
+		],
+		"mimes": [
+			"application/vnd.musician"
+		],
 		"name": "IFF Simple Musical Score File",
 		"pattern": [
 			{
@@ -1573,49 +1555,14 @@ export default [
 		]
 	},
 	{
-		"extension": ".smu",
-		"name": "IFF Simple Musical Score File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "46 4F 52 4D"
-			},
-			{
-				"fromIndex": 8,
-				"hex": "53 4D 55 53"
-			}
-		]
-	},
-	{
-		"extension": ".mus",
-		"name": "IFF Simple Musical Score File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "46 4F 52 4D"
-			},
-			{
-				"fromIndex": 8,
-				"hex": "53 4D 55 53"
-			}
-		]
-	},
-	{
-		"extension": ".iff",
-		"name": "IFF Simple Musical Score File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "46 4F 52 4D"
-			},
-			{
-				"fromIndex": 8,
-				"hex": "53 4D 55 53"
-			}
-		]
-	},
-	{
-		"extension": ".cmus",
+		"extensions": [
+			".cmus",
+			".mus",
+			".iff"
+		],
+		"mimes": [
+			"application/vnd.musician"
+		],
 		"name": "IFF Musical Score File",
 		"pattern": [
 			{
@@ -1629,35 +1576,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".mus",
-		"name": "IFF Musical Score File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "46 4F 52 4D"
-			},
-			{
-				"fromIndex": 8,
-				"hex": "43 4D 55 53"
-			}
-		]
-	},
-	{
-		"extension": ".iff",
-		"name": "IFF Musical Score File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "46 4F 52 4D"
-			},
-			{
-				"fromIndex": 8,
-				"hex": "43 4D 55 53"
-			}
-		]
-	},
-	{
-		"extension": ".yuv",
+		"extensions": [
+			".yuv",
+			".yuvn",
+			".iff"
+		],
+		"mimes": [],
 		"name": "IFF YUV Image",
 		"pattern": [
 			{
@@ -1671,35 +1595,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".yuvn",
-		"name": "IFF YUV Image",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "46 4F 52 4D"
-			},
-			{
-				"fromIndex": 8,
-				"hex": "59 55 56 4E"
-			}
-		]
-	},
-	{
-		"extension": ".iff",
-		"name": "IFF YUV Image",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "46 4F 52 4D"
-			},
-			{
-				"fromIndex": 8,
-				"hex": "59 55 56 4E"
-			}
-		]
-	},
-	{
-		"extension": ".iff",
+		"extensions": [
+			".iff"
+		],
+		"mimes": [],
 		"name": "Amiga Fantavision Movie",
 		"pattern": [
 			{
@@ -1713,7 +1612,17 @@ export default [
 		]
 	},
 	{
-		"extension": ".aif",
+		"extensions": [
+			".aif",
+			".aifc",
+			".aiff",
+			".iff",
+			".snd"
+		],
+		"mimes": [
+			"audio/x-aiff",
+			"audio/basic"
+		],
 		"name": "Audio Interchange File",
 		"pattern": [
 			{
@@ -1727,64 +1636,14 @@ export default [
 		]
 	},
 	{
-		"extension": ".aifc",
-		"name": "Audio Interchange File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "46 4F 52 4D"
-			},
-			{
-				"fromIndex": 8,
-				"hex": "41 49 46 46"
-			}
-		]
-	},
-	{
-		"extension": ".aiff",
-		"name": "Audio Interchange File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "46 4F 52 4D"
-			},
-			{
-				"fromIndex": 8,
-				"hex": "41 49 46 46"
-			}
-		]
-	},
-	{
-		"extension": ".iff",
-		"name": "Audio Interchange File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "46 4F 52 4D"
-			},
-			{
-				"fromIndex": 8,
-				"hex": "41 49 46 46"
-			}
-		]
-	},
-	{
-		"extension": ".snd",
-		"name": "Audio Interchange File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "46 4F 52 4D"
-			},
-			{
-				"fromIndex": 8,
-				"hex": "41 49 46 46"
-			}
-		]
-	},
-	{
-		"extension": ".xml",
-		"name": "eXtensible Markup Language",
+		"extensions": [
+			".xml"
+		],
+		"mimes": [
+			"application/xml",
+			"text/xml"
+		],
+		"name": "eXtensible Markup Language (XML) File",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -1794,8 +1653,14 @@ export default [
 		"patternVariant": "1"
 	},
 	{
-		"extension": ".xml",
-		"name": "eXtensible Markup Language",
+		"extensions": [
+			".xml"
+		],
+		"mimes": [
+			"application/xml",
+			"text/xml"
+		],
+		"name": "eXtensible Markup Language (XML) File",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -1805,8 +1670,14 @@ export default [
 		"patternVariant": "2"
 	},
 	{
-		"extension": ".xml",
-		"name": "eXtensible Markup Language",
+		"extensions": [
+			".xml"
+		],
+		"mimes": [
+			"application/xml",
+			"text/xml"
+		],
+		"name": "eXtensible Markup Language (XML) File",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -1816,8 +1687,14 @@ export default [
 		"patternVariant": "3"
 	},
 	{
-		"extension": ".xml",
-		"name": "eXtensible Markup Language",
+		"extensions": [
+			".xml"
+		],
+		"mimes": [
+			"application/xml",
+			"text/xml"
+		],
+		"name": "eXtensible Markup Language (XML) File",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -1827,8 +1704,14 @@ export default [
 		"patternVariant": "4"
 	},
 	{
-		"extension": ".xml",
-		"name": "eXtensible Markup Language",
+		"extensions": [
+			".xml"
+		],
+		"mimes": [
+			"application/xml",
+			"text/xml"
+		],
+		"name": "eXtensible Markup Language (XML) File",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -1838,8 +1721,14 @@ export default [
 		"patternVariant": "5"
 	},
 	{
-		"extension": ".xml",
-		"name": "eXtensible Markup Language",
+		"extensions": [
+			".xml"
+		],
+		"mimes": [
+			"application/xml",
+			"text/xml"
+		],
+		"name": "eXtensible Markup Language (XML) File",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -1849,7 +1738,12 @@ export default [
 		"patternVariant": "6"
 	},
 	{
-		"extension": ".wim",
+		"extensions": [
+			".wim",
+			".swm",
+			".esd"
+		],
+		"mimes": [],
 		"name": "Windows Imaging Format File",
 		"pattern": [
 			{
@@ -1859,27 +1753,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".swm",
-		"name": "Windows Imaging Format File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "4D 53 57 49 4D 00 00 00 D0 00 00 00 00"
-			}
-		]
-	},
-	{
-		"extension": ".esd",
-		"name": "Windows Imaging Format File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "4D 53 57 49 4D 00 00 00 D0 00 00 00 00"
-			}
-		]
-	},
-	{
-		"extension": ".webp",
+		"extensions": [
+			".webp"
+		],
+		"mimes": [
+			"image/webp"
+		],
 		"name": "WebP Image File",
 		"pattern": [
 			{
@@ -1893,7 +1772,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".psd",
+		"extensions": [
+			".psd"
+		],
+		"mimes": [
+			"image/vnd.adobe.photoshop"
+		],
 		"name": "Adobe Photoshop Document File",
 		"pattern": [
 			{
@@ -1903,7 +1787,13 @@ export default [
 		]
 	},
 	{
-		"extension": ".bmp",
+		"extensions": [
+			".bmp"
+		],
+		"mimes": [
+			"image/bmp",
+			"image/x-ms-bmp"
+		],
 		"name": "BMP Image File",
 		"pattern": [
 			{
@@ -1913,17 +1803,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".dib",
-		"name": "BMP Image File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "42 4D"
-			}
-		]
-	},
-	{
-		"extension": ".wasm",
+		"extensions": [
+			".wasm"
+		],
+		"mimes": [
+			"application/wasm"
+		],
 		"name": "WebAssembly Binary",
 		"pattern": [
 			{
@@ -1933,7 +1818,13 @@ export default [
 		]
 	},
 	{
-		"extension": ".jpg",
+		"extensions": [
+			".jpg",
+			".jpeg"
+		],
+		"mimes": [
+			"image/jpeg"
+		],
 		"name": "JPEG Image",
 		"pattern": [
 			{
@@ -1944,18 +1835,13 @@ export default [
 		"patternVariant": "DB"
 	},
 	{
-		"extension": ".jpeg",
-		"name": "JPEG Image",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "FF D8 FF DB"
-			}
+		"extensions": [
+			".jpg",
+			".jpeg"
 		],
-		"patternVariant": "DB"
-	},
-	{
-		"extension": ".jpg",
+		"mimes": [
+			"image/jpeg"
+		],
 		"name": "JPEG Image",
 		"pattern": [
 			{
@@ -1966,18 +1852,13 @@ export default [
 		"patternVariant": "E0"
 	},
 	{
-		"extension": ".jpeg",
-		"name": "JPEG Image",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "FF D8 FF E0"
-			}
+		"extensions": [
+			".jpg",
+			".jpeg"
 		],
-		"patternVariant": "E0"
-	},
-	{
-		"extension": ".jpg",
+		"mimes": [
+			"image/jpeg"
+		],
 		"name": "JPEG Image",
 		"pattern": [
 			{
@@ -1988,18 +1869,13 @@ export default [
 		"patternVariant": "EE"
 	},
 	{
-		"extension": ".jpeg",
-		"name": "JPEG Image",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "FF D8 FF EE"
-			}
+		"extensions": [
+			".jpg",
+			".jpeg"
 		],
-		"patternVariant": "EE"
-	},
-	{
-		"extension": ".jpg",
+		"mimes": [
+			"image/jpeg"
+		],
 		"name": "JPEG JFIF Image",
 		"pattern": [
 			{
@@ -2009,17 +1885,13 @@ export default [
 		]
 	},
 	{
-		"extension": ".jpeg",
-		"name": "JPEG JFIF Image",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "FF D8 FF E0 00 10 4A 46 49 46 00 01"
-			}
-		]
-	},
-	{
-		"extension": ".jpg",
+		"extensions": [
+			".jpg",
+			".jpeg"
+		],
+		"mimes": [
+			"image/jpeg"
+		],
 		"name": "JPEG Exif Image",
 		"pattern": [
 			{
@@ -2033,21 +1905,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".jpeg",
-		"name": "JPEG Exif Image",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "FF D8 FF E1"
-			},
-			{
-				"fromIndex": 6,
-				"hex": "45 78 69 66 00 00"
-			}
-		]
-	},
-	{
-		"extension": ".lz",
+		"extensions": [
+			".lz"
+		],
+		"mimes": [],
 		"name": "LZip Archive",
 		"pattern": [
 			{
@@ -2057,7 +1918,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".cpio",
+		"extensions": [
+			".cpio"
+		],
+		"mimes": [
+			"application/x-cpio"
+		],
 		"name": "cpio Archive",
 		"pattern": [
 			{
@@ -2067,7 +1933,13 @@ export default [
 		]
 	},
 	{
-		"extension": ".exe",
+		"extensions": [
+			".exe"
+		],
+		"mimes": [
+			"application/x-msdos-program",
+			"application/x-msdownload"
+		],
 		"name": "DOS Executable File",
 		"pattern": [
 			{
@@ -2078,7 +1950,13 @@ export default [
 		"patternVariant": "ZM"
 	},
 	{
-		"extension": ".exe",
+		"extensions": [
+			".exe"
+		],
+		"mimes": [
+			"application/x-msdos-program",
+			"application/x-msdownload"
+		],
 		"name": "DOS Executable File",
 		"pattern": [
 			{
@@ -2089,150 +1967,13 @@ export default [
 		"patternVariant": "MZ"
 	},
 	{
-		"extension": ".dll",
-		"name": "DOS Executable File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "4D 5A"
-			}
+		"extensions": [
+			".rar"
 		],
-		"patternVariant": "MZ"
-	},
-	{
-		"extension": ".mui",
-		"name": "DOS Executable File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "4D 5A"
-			}
+		"mimes": [
+			"application/vnd.rar",
+			"application/x-rar-compressed"
 		],
-		"patternVariant": "MZ"
-	},
-	{
-		"extension": ".sys",
-		"name": "DOS Executable File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "4D 5A"
-			}
-		],
-		"patternVariant": "MZ"
-	},
-	{
-		"extension": ".scr",
-		"name": "DOS Executable File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "4D 5A"
-			}
-		],
-		"patternVariant": "MZ"
-	},
-	{
-		"extension": ".cpl",
-		"name": "DOS Executable File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "4D 5A"
-			}
-		],
-		"patternVariant": "MZ"
-	},
-	{
-		"extension": ".ocx",
-		"name": "DOS Executable File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "4D 5A"
-			}
-		],
-		"patternVariant": "MZ"
-	},
-	{
-		"extension": ".ax",
-		"name": "DOS Executable File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "4D 5A"
-			}
-		],
-		"patternVariant": "MZ"
-	},
-	{
-		"extension": ".iec",
-		"name": "DOS Executable File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "4D 5A"
-			}
-		],
-		"patternVariant": "MZ"
-	},
-	{
-		"extension": ".ime",
-		"name": "DOS Executable File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "4D 5A"
-			}
-		],
-		"patternVariant": "MZ"
-	},
-	{
-		"extension": ".rs",
-		"name": "DOS Executable File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "4D 5A"
-			}
-		],
-		"patternVariant": "MZ"
-	},
-	{
-		"extension": ".tsp",
-		"name": "DOS Executable File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "4D 5A"
-			}
-		],
-		"patternVariant": "MZ"
-	},
-	{
-		"extension": ".fon",
-		"name": "DOS Executable File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "4D 5A"
-			}
-		],
-		"patternVariant": "MZ"
-	},
-	{
-		"extension": ".efi",
-		"name": "DOS Executable File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "4D 5A"
-			}
-		],
-		"patternVariant": "MZ"
-	},
-	{
-		"extension": ".rar",
 		"name": "Roshal Archive V1.50",
 		"pattern": [
 			{
@@ -2242,7 +1983,13 @@ export default [
 		]
 	},
 	{
-		"extension": ".rar",
+		"extensions": [
+			".rar"
+		],
+		"mimes": [
+			"application/vnd.rar",
+			"application/x-rar-compressed"
+		],
 		"name": "Roshal Archive V5.00",
 		"pattern": [
 			{
@@ -2252,7 +1999,8 @@ export default [
 		]
 	},
 	{
-		"extension": null,
+		"extensions": [],
+		"mimes": [],
 		"name": "Executable & Linkable Format",
 		"pattern": [
 			{
@@ -2262,7 +2010,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".png",
+		"extensions": [
+			".png"
+		],
+		"mimes": [
+			"image/png"
+		],
 		"name": "Portable Network Graphics (PNG) Image",
 		"pattern": [
 			{
@@ -2272,7 +2025,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".com",
+		"extensions": [
+			".com"
+		],
+		"mimes": [
+			"application/x-msdownload"
+		],
 		"name": "CP/M 3 File",
 		"pattern": [
 			{
@@ -2282,7 +2040,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".d64",
+		"extensions": [
+			".d64"
+		],
+		"mimes": [],
 		"name": "Commodore 64 1541 Disk Image (D64 Format)",
 		"pattern": [
 			{
@@ -2292,7 +2053,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".g64",
+		"extensions": [
+			".g64"
+		],
+		"mimes": [],
 		"name": "Commodore 64 1541 Disk Image (G64 Format)",
 		"pattern": [
 			{
@@ -2302,7 +2066,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".d81",
+		"extensions": [
+			".d81"
+		],
+		"mimes": [],
 		"name": "Commodore 64 1581 Disk Image (D81 Format)",
 		"pattern": [
 			{
@@ -2312,7 +2079,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".t64",
+		"extensions": [
+			".t64"
+		],
+		"mimes": [],
 		"name": "Commodore 64 Tape Image",
 		"pattern": [
 			{
@@ -2322,7 +2092,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".crt",
+		"extensions": [
+			".crt"
+		],
+		"mimes": [],
 		"name": "Commodore 64 Cartridge Image",
 		"pattern": [
 			{
@@ -2332,7 +2105,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".class",
+		"extensions": [
+			".class"
+		],
+		"mimes": [
+			"application/java-vm"
+		],
 		"name": "Java Class File",
 		"pattern": [
 			{
@@ -2342,7 +2120,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".class",
+		"extensions": [
+			".class"
+		],
+		"mimes": [],
 		"name": "Mach-O Fat Binary",
 		"pattern": [
 			{
@@ -2352,7 +2133,8 @@ export default [
 		]
 	},
 	{
-		"extension": null,
+		"extensions": [],
+		"mimes": [],
 		"name": "Mach-O Binary",
 		"pattern": [
 			{
@@ -2363,7 +2145,8 @@ export default [
 		"patternVariant": "32-Bit; Head 0"
 	},
 	{
-		"extension": null,
+		"extensions": [],
+		"mimes": [],
 		"name": "Mach-O Binary",
 		"pattern": [
 			{
@@ -2374,7 +2157,8 @@ export default [
 		"patternVariant": "32-Bit; Head 4096"
 	},
 	{
-		"extension": null,
+		"extensions": [],
+		"mimes": [],
 		"name": "Mach-O Binary",
 		"pattern": [
 			{
@@ -2385,7 +2169,8 @@ export default [
 		"patternVariant": "64-Bit; Head 0"
 	},
 	{
-		"extension": null,
+		"extensions": [],
+		"mimes": [],
 		"name": "Mach-O Binary",
 		"pattern": [
 			{
@@ -2396,7 +2181,8 @@ export default [
 		"patternVariant": "64-Bit; Head 4096"
 	},
 	{
-		"extension": null,
+		"extensions": [],
+		"mimes": [],
 		"name": "Mach-O Binary",
 		"pattern": [
 			{
@@ -2407,7 +2193,8 @@ export default [
 		"patternVariant": "32-Bit; Reverse Byte Ordering Scheme"
 	},
 	{
-		"extension": null,
+		"extensions": [],
+		"mimes": [],
 		"name": "Mach-O Binary",
 		"pattern": [
 			{
@@ -2418,7 +2205,8 @@ export default [
 		"patternVariant": "64-Bit; Reverse Byte Ordering Scheme"
 	},
 	{
-		"extension": null,
+		"extensions": [],
+		"mimes": [],
 		"name": "JKS JavakeyStore",
 		"pattern": [
 			{
@@ -2428,7 +2216,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".ps",
+		"extensions": [
+			".ps"
+		],
+		"mimes": [
+			"application/postscript"
+		],
 		"name": "PostScript Document",
 		"pattern": [
 			{
@@ -2438,7 +2231,13 @@ export default [
 		]
 	},
 	{
-		"extension": ".eps",
+		"extensions": [
+			".eps",
+			".epsf"
+		],
+		"mimes": [
+			"application/postscript"
+		],
 		"name": "Encapsulated PostScript File Version 3.0",
 		"pattern": [
 			{
@@ -2448,17 +2247,13 @@ export default [
 		]
 	},
 	{
-		"extension": ".epsf",
-		"name": "Encapsulated PostScript File Version 3.0",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "25 21 50 53 2D 41 64 6F 62 65 2D 33 2E 30 20 45 50 53 46 2D 33 2E 30"
-			}
-		]
-	},
-	{
-		"extension": ".eps",
+		"extensions": [
+			".eps",
+			".epsf"
+		],
+		"mimes": [
+			"application/postscript"
+		],
 		"name": "Encapsulated PostScript File Version 3.1",
 		"pattern": [
 			{
@@ -2468,17 +2263,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".epsf",
-		"name": "Encapsulated PostScript File Version 3.1",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "25 21 50 53 2D 41 64 6F 62 65 2D 33 2E 31 20 45 50 53 46 2D 33 2E 30"
-			}
-		]
-	},
-	{
-		"extension": ".chm",
+		"extensions": [
+			".chm"
+		],
+		"mimes": [
+			"application/vnd.ms-htmlhelp"
+		],
 		"name": "Windows HTML Help Data",
 		"pattern": [
 			{
@@ -2488,7 +2278,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".hlp",
+		"extensions": [
+			".hlp"
+		],
+		"mimes": [
+			"application/winhlp"
+		],
 		"name": "Windows Help file",
 		"pattern": [
 			{
@@ -2499,7 +2294,12 @@ export default [
 		"patternVariant": "Short"
 	},
 	{
-		"extension": ".hlp",
+		"extensions": [
+			".hlp"
+		],
+		"mimes": [
+			"application/winhlp"
+		],
 		"name": "Windows Help file",
 		"pattern": [
 			{
@@ -2510,7 +2310,12 @@ export default [
 		"patternVariant": "Long"
 	},
 	{
-		"extension": ".pdf",
+		"extensions": [
+			".pdf"
+		],
+		"mimes": [
+			"application/pdf"
+		],
 		"name": "Portable Document Format (PDF) File",
 		"pattern": [
 			{
@@ -2520,8 +2325,15 @@ export default [
 		]
 	},
 	{
-		"extension": ".asf",
-		"name": "Advanced Systems Format",
+		"extensions": [
+			".asf",
+			".wma",
+			".wmv"
+		],
+		"mimes": [
+			"video/x-ms-asf"
+		],
+		"name": "Advanced Systems Format Video",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -2530,27 +2342,8 @@ export default [
 		]
 	},
 	{
-		"extension": ".wma",
-		"name": "Advanced Systems Format",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "30 26 B2 75 8E 66 CF 11 A6 D9 00 AA 00 62 CE 6C"
-			}
-		]
-	},
-	{
-		"extension": ".wmv",
-		"name": "Advanced Systems Format",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "30 26 B2 75 8E 66 CF 11 A6 D9 00 AA 00 62 CE 6C"
-			}
-		]
-	},
-	{
-		"extension": null,
+		"extensions": [],
+		"mimes": [],
 		"name": "System Deployment Image",
 		"pattern": [
 			{
@@ -2560,8 +2353,14 @@ export default [
 		]
 	},
 	{
-		"extension": ".ogg",
-		"name": "Ogg Media",
+		"extensions": [
+			".ogg",
+			".oga"
+		],
+		"mimes": [
+			"audio/ogg"
+		],
+		"name": "Ogg Audio",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -2570,8 +2369,13 @@ export default [
 		]
 	},
 	{
-		"extension": ".oga",
-		"name": "Ogg Media",
+		"extensions": [
+			".ogv"
+		],
+		"mimes": [
+			"video/ogg"
+		],
+		"name": "Ogg Video",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -2580,18 +2384,15 @@ export default [
 		]
 	},
 	{
-		"extension": ".ogv",
-		"name": "Ogg Media",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "4F 67 67 53"
-			}
-		]
-	},
-	{
-		"extension": ".wav",
-		"name": "Waveform Audio File",
+		"extensions": [
+			".wav"
+		],
+		"mimes": [
+			"audio/wav",
+			"audio/wave",
+			"audio/x-wav"
+		],
+		"name": "Waveform Audio",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -2604,7 +2405,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".avi",
+		"extensions": [
+			".avi"
+		],
+		"mimes": [
+			"video/x-msvideo"
+		],
 		"name": "Audio Video Interleave (AVI)",
 		"pattern": [
 			{
@@ -2618,7 +2424,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".mp3",
+		"extensions": [
+			".mp3"
+		],
+		"mimes": [
+			"audio/mp3"
+		],
 		"name": "MP3 Audio",
 		"pattern": [
 			{
@@ -2628,7 +2439,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".mp3",
+		"extensions": [
+			".mp3"
+		],
+		"mimes": [
+			"audio/mpeg"
+		],
 		"name": "MP3 Audio With ID3v2 Container",
 		"pattern": [
 			{
@@ -2638,7 +2454,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".cdi",
+		"extensions": [
+			".cdi"
+		],
+		"mimes": [],
 		"name": "CD-i CD Image",
 		"pattern": [
 			{
@@ -2648,7 +2467,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".mgw",
+		"extensions": [
+			".mgw"
+		],
+		"mimes": [],
 		"name": "Nintendo Game & Watch Image",
 		"pattern": [
 			{
@@ -2658,7 +2480,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".nes",
+		"extensions": [
+			".nes"
+		],
+		"mimes": [],
 		"name": "Nintendo Entertainment System Image",
 		"pattern": [
 			{
@@ -2668,7 +2493,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".fits",
+		"extensions": [
+			".fits"
+		],
+		"mimes": [
+			"image/fits"
+		],
 		"name": "Flexible Image Transport System (FITS) File",
 		"pattern": [
 			{
@@ -2678,7 +2508,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".flac",
+		"extensions": [
+			".flac"
+		],
+		"mimes": [
+			"audio/x-flac"
+		],
 		"name": "Free Lossless Audio Codec (FLAC) File",
 		"pattern": [
 			{
@@ -2688,7 +2523,13 @@ export default [
 		]
 	},
 	{
-		"extension": ".mid",
+		"extensions": [
+			".mid",
+			".midi"
+		],
+		"mimes": [
+			"audio/midi"
+		],
 		"name": "MIDI Sound File",
 		"pattern": [
 			{
@@ -2698,17 +2539,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".midi",
-		"name": "MIDI Sound File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "4D 54 68 64"
-			}
-		]
-	},
-	{
-		"extension": ".dex",
+		"extensions": [
+			".dex"
+		],
+		"mimes": [],
 		"name": "Dalvik Executable",
 		"pattern": [
 			{
@@ -2718,7 +2552,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".vmdk",
+		"extensions": [
+			".vmdk"
+		],
+		"mimes": [
+			"application/x-virtualbox-vmdk"
+		],
 		"name": "VMware Virtual Disk",
 		"pattern": [
 			{
@@ -2728,7 +2567,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".vmdk",
+		"extensions": [
+			".vmdk"
+		],
+		"mimes": [
+			"application/x-virtualbox-vmdk"
+		],
 		"name": "VMware 4 Virtual Disk Description File",
 		"pattern": [
 			{
@@ -2738,7 +2582,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".crx",
+		"extensions": [
+			".crx"
+		],
+		"mimes": [
+			"application/x-chrome-extension"
+		],
 		"name": "Google Chrome Extension",
 		"pattern": [
 			{
@@ -2748,7 +2597,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".fh8",
+		"extensions": [
+			".fh8"
+		],
+		"mimes": [],
 		"name": "FreeHand 8 Document",
 		"pattern": [
 			{
@@ -2758,7 +2610,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".cwk",
+		"extensions": [
+			".cwk"
+		],
+		"mimes": [],
 		"name": "AppleWorks 5 Document",
 		"pattern": [
 			{
@@ -2768,7 +2623,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".cwk",
+		"extensions": [
+			".cwk"
+		],
+		"mimes": [],
 		"name": "AppleWorks 6 Document",
 		"pattern": [
 			{
@@ -2778,7 +2636,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".toast",
+		"extensions": [
+			".toast"
+		],
+		"mimes": [],
 		"name": "Roxio Toast Disc Image",
 		"pattern": [
 			{
@@ -2789,7 +2650,10 @@ export default [
 		"patternVariant": "NoPrefix"
 	},
 	{
-		"extension": ".toast",
+		"extensions": [
+			".toast"
+		],
+		"mimes": [],
 		"name": "Roxio Toast Disc Image",
 		"pattern": [
 			{
@@ -2800,7 +2664,12 @@ export default [
 		"patternVariant": "Prefix"
 	},
 	{
-		"extension": ".xar",
+		"extensions": [
+			".xar"
+		],
+		"mimes": [
+			"application/vnd.xara"
+		],
 		"name": "eXtensible ARchive",
 		"pattern": [
 			{
@@ -2810,7 +2679,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".dat",
+		"extensions": [
+			".dat"
+		],
+		"mimes": [],
 		"name": "Windows Files & Settings Transfer Repository File",
 		"pattern": [
 			{
@@ -2820,17 +2692,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".nes",
-		"name": "Nintendo Entertainment System ROM file",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "4E 45 53 1A"
-			}
-		]
-	},
-	{
-		"extension": ".tar",
+		"extensions": [
+			".tar"
+		],
+		"mimes": [
+			"application/x-tar"
+		],
 		"name": "TAR Archive",
 		"pattern": [
 			{
@@ -2840,7 +2707,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".oar",
+		"extensions": [
+			".oar"
+		],
+		"mimes": [],
 		"name": "OAR Archive",
 		"pattern": [
 			{
@@ -2850,7 +2720,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".tox",
+		"extensions": [
+			".tox"
+		],
+		"mimes": [],
 		"name": "Open Source Portable Voxel File",
 		"pattern": [
 			{
@@ -2860,8 +2733,11 @@ export default [
 		]
 	},
 	{
-		"extension": ".MLV",
-		"name": "Magic Lantern Video file",
+		"extensions": [
+			".mlv"
+		],
+		"mimes": [],
+		"name": "Magic Lantern Video File",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -2870,7 +2746,8 @@ export default [
 		]
 	},
 	{
-		"extension": null,
+		"extensions": [],
+		"mimes": [],
 		"name": "Windows Update Binary Delta Compression File",
 		"pattern": [
 			{
@@ -2880,8 +2757,13 @@ export default [
 		]
 	},
 	{
-		"extension": ".7z",
-		"name": "7-Zip File Format",
+		"extensions": [
+			".7z"
+		],
+		"mimes": [
+			"application/x-7z-compressed"
+		],
+		"name": "7-Zip Archive",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -2890,7 +2772,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".lz4",
+		"extensions": [
+			".lz4"
+		],
+		"mimes": [],
 		"name": "LZ4 Frame File",
 		"pattern": [
 			{
@@ -2900,7 +2785,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".cab",
+		"extensions": [
+			".cab"
+		],
+		"mimes": [
+			"application/vnd.ms-cab-compressed"
+		],
 		"name": "Microsoft Cabinet File",
 		"pattern": [
 			{
@@ -2910,7 +2800,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".flif",
+		"extensions": [
+			".flif"
+		],
+		"mimes": [],
 		"name": "Free Lossless Image Format (FLIF) File",
 		"pattern": [
 			{
@@ -2920,7 +2813,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".stg",
+		"extensions": [
+			".stg"
+		],
+		"mimes": [],
 		"name": "SEAN Session Analysis Training File",
 		"pattern": [
 			{
@@ -2930,7 +2826,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".der",
+		"extensions": [
+			".der"
+		],
+		"mimes": [
+			"application/x-x509-ca-cert"
+		],
 		"name": "DER Encoded X.509 Certificate File",
 		"pattern": [
 			{
@@ -2940,7 +2841,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".ppk",
+		"extensions": [
+			".ppk"
+		],
+		"mimes": [],
 		"name": "PuTTY Private Key File Version 2",
 		"pattern": [
 			{
@@ -2950,7 +2854,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".ppk",
+		"extensions": [
+			".ppk"
+		],
+		"mimes": [],
 		"name": "PuTTY Private Key File Version 3",
 		"pattern": [
 			{
@@ -2960,7 +2867,8 @@ export default [
 		]
 	},
 	{
-		"extension": null,
+		"extensions": [],
+		"mimes": [],
 		"name": "OpenSSH Private Key File",
 		"pattern": [
 			{
@@ -2970,7 +2878,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".pub",
+		"extensions": [
+			".pub"
+		],
+		"mimes": [],
 		"name": "OpenSSH Public Key File",
 		"pattern": [
 			{
@@ -2980,7 +2891,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".dcm",
+		"extensions": [
+			".dcm"
+		],
+		"mimes": [],
 		"name": "DICOM Medical File Format",
 		"pattern": [
 			{
@@ -2990,7 +2904,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".woff",
+		"extensions": [
+			".woff"
+		],
+		"mimes": [
+			"font/woff"
+		],
 		"name": "WOFF 1.0 Font",
 		"pattern": [
 			{
@@ -3000,7 +2919,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".woff2",
+		"extensions": [
+			".woff2"
+		],
+		"mimes": [
+			"font/woff2"
+		],
 		"name": "WOFF 2.0 Font",
 		"pattern": [
 			{
@@ -3010,7 +2934,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".lep",
+		"extensions": [
+			".lep"
+		],
+		"mimes": [],
 		"name": "Lepton Compressed JPEG Image",
 		"pattern": [
 			{
@@ -3020,7 +2947,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".deb",
+		"extensions": [
+			".deb"
+		],
+		"mimes": [
+			"application/x-debian-package"
+		],
 		"name": "Linux Deb File",
 		"pattern": [
 			{
@@ -3030,7 +2962,13 @@ export default [
 		]
 	},
 	{
-		"extension": ".rtf",
+		"extensions": [
+			".rtf"
+		],
+		"mimes": [
+			"application/rtf",
+			"text/rtf"
+		],
 		"name": "Rich Text Format (RTF) File",
 		"pattern": [
 			{
@@ -3044,7 +2982,8 @@ export default [
 		]
 	},
 	{
-		"extension": null,
+		"extensions": [],
+		"mimes": [],
 		"name": "Microsoft Tape File",
 		"pattern": [
 			{
@@ -3054,7 +2993,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".mp4",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"video/mp4"
+		],
 		"name": "MPEG-4 Video",
 		"pattern": [
 			{
@@ -3065,7 +3009,12 @@ export default [
 		"patternVariant": "isom"
 	},
 	{
-		"extension": ".mp4",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"video/mp4"
+		],
 		"name": "MPEG-4 Video",
 		"pattern": [
 			{
@@ -3076,7 +3025,10 @@ export default [
 		"patternVariant": "MSNV"
 	},
 	{
-		"extension": ".orc",
+		"extensions": [
+			".orc"
+		],
+		"mimes": [],
 		"name": "Apache Optimized Row Columnar (ORC) File",
 		"pattern": [
 			{
@@ -3086,7 +3038,14 @@ export default [
 		]
 	},
 	{
-		"extension": ".m3u8",
+		"extensions": [
+			".m3u8",
+			".m3u"
+		],
+		"mimes": [
+			"application/vnd.apple.mpegurl",
+			"audio/x-mpegurl"
+		],
 		"name": "Multimedia Playlist",
 		"pattern": [
 			{
@@ -3096,17 +3055,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".m3u",
-		"name": "Multimedia Playlist",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "23 45 58 54 4D 33 55"
-			}
-		]
-	},
-	{
-		"extension": ".m",
+		"extensions": [
+			".m"
+		],
+		"mimes": [],
 		"name": "M2 Archive",
 		"pattern": [
 			{
@@ -3116,7 +3068,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".pak",
+		"extensions": [
+			".pak"
+		],
+		"mimes": [],
 		"name": "Capcom RE Engine Game Data Archive",
 		"pattern": [
 			{
@@ -3126,7 +3081,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".arc",
+		"extensions": [
+			".arc"
+		],
+		"mimes": [],
 		"name": "Capcom MT Framework Game Data Archive",
 		"pattern": [
 			{
@@ -3136,7 +3094,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".pl",
+		"extensions": [
+			".pl"
+		],
+		"mimes": [],
 		"name": "Interleaf PrinterLeaf",
 		"pattern": [
 			{
@@ -3146,7 +3107,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".nii",
+		"extensions": [
+			".nii"
+		],
+		"mimes": [],
 		"name": "NIfTI File",
 		"pattern": [
 			{
@@ -3156,7 +3120,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".hdr",
+		"extensions": [
+			".hdr"
+		],
+		"mimes": [],
 		"name": "NIfTI Header File",
 		"pattern": [
 			{
@@ -3166,7 +3133,8 @@ export default [
 		]
 	},
 	{
-		"extension": null,
+		"extensions": [],
+		"mimes": [],
 		"name": "Digital Metaphors Report Builder File",
 		"pattern": [
 			{
@@ -3176,7 +3144,8 @@ export default [
 		]
 	},
 	{
-		"extension": null,
+		"extensions": [],
+		"mimes": [],
 		"name": "Visionaire 3 Engine Resource File",
 		"pattern": [
 			{
@@ -3186,7 +3155,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".pwrdata",
+		"extensions": [
+			".pwrdata"
+		],
+		"mimes": [],
 		"name": "SAP Power Monitor (Version 1.1.0) Data File",
 		"pattern": [
 			{
@@ -3196,7 +3168,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".arc",
+		"extensions": [
+			".arc"
+		],
+		"mimes": [
+			"application/x-freearc"
+		],
 		"name": "ARC Archive",
 		"pattern": [
 			{
@@ -3206,7 +3183,13 @@ export default [
 		]
 	},
 	{
-		"extension": ".asc",
+		"extensions": [
+			".asc"
+		],
+		"mimes": [
+			"application/pgp-keys",
+			"application/pgp-signature"
+		],
 		"name": "Armored PGP Public Key File",
 		"pattern": [
 			{
@@ -3216,7 +3199,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".cnt",
+		"extensions": [
+			".cnt"
+		],
+		"mimes": [],
 		"name": "Windows Help Content File",
 		"pattern": [
 			{
@@ -3226,7 +3212,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".nri",
+		"extensions": [
+			".nri"
+		],
+		"mimes": [],
 		"name": "Nero CD Compilation File",
 		"pattern": [
 			{
@@ -3236,7 +3225,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".wks",
+		"extensions": [
+			".wks"
+		],
+		"mimes": [],
 		"name": "DeskMate Worksheet File",
 		"pattern": [
 			{
@@ -3246,7 +3238,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".sib",
+		"extensions": [
+			".sib"
+		],
+		"mimes": [],
 		"name": "Sibelius Music Score File",
 		"pattern": [
 			{
@@ -3256,7 +3251,13 @@ export default [
 		]
 	},
 	{
-		"extension": ".gz",
+		"extensions": [
+			".gz",
+			".tar.gz"
+		],
+		"mimes": [
+			"application/gzip"
+		],
 		"name": "GZip Archive",
 		"pattern": [
 			{
@@ -3266,17 +3267,13 @@ export default [
 		]
 	},
 	{
-		"extension": ".tar.gz",
-		"name": "GZip Archive",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "1F 8B"
-			}
-		]
-	},
-	{
-		"extension": ".xz",
+		"extensions": [
+			".xz",
+			".tar.xz"
+		],
+		"mimes": [
+			"application/x-xz"
+		],
 		"name": "XZ LZMA2 Archive",
 		"pattern": [
 			{
@@ -3286,17 +3283,13 @@ export default [
 		]
 	},
 	{
-		"extension": ".tar.xz",
-		"name": "XZ LZMA2 Archive",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "FD 37 7A 58 5A 00"
-			}
-		]
-	},
-	{
-		"extension": ".crt",
+		"extensions": [
+			".crt",
+			".pem"
+		],
+		"mimes": [
+			"application/x-x509-ca-cert"
+		],
 		"name": "PEM Encoded X.509 Certificate File",
 		"pattern": [
 			{
@@ -3306,17 +3299,11 @@ export default [
 		]
 	},
 	{
-		"extension": ".pem",
-		"name": "PEM Encoded X.509 Certificate File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "2D 2D 2D 2D 2D 42 45 47 49 4E 20 43 45 52 54 49 46 49 43 41 54 45 2D 2D 2D 2D 2D"
-			}
-		]
-	},
-	{
-		"extension": ".csr",
+		"extensions": [
+			".csr",
+			".pem"
+		],
+		"mimes": [],
 		"name": "PEM Encoded X.509 Certificate Signing Request File",
 		"pattern": [
 			{
@@ -3326,17 +3313,11 @@ export default [
 		]
 	},
 	{
-		"extension": ".pem",
-		"name": "PEM Encoded X.509 Certificate Signing Request File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "2D 2D 2D 2D 2D 42 45 47 49 4E 20 43 45 52 54 49 46 49 43 41 54 45 20 52 45 51 55 45 53 54 2D 2D 2D 2D 2D"
-			}
-		]
-	},
-	{
-		"extension": ".key",
+		"extensions": [
+			".key",
+			".pem"
+		],
+		"mimes": [],
 		"name": "Pem Encoded X.509 PKCS#8 Private Key File",
 		"pattern": [
 			{
@@ -3346,17 +3327,11 @@ export default [
 		]
 	},
 	{
-		"extension": ".pem",
-		"name": "Pem Encoded X.509 PKCS#8 Private Key File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "2D 2D 2D 2D 2D 42 45 47 49 4E 20 50 52 49 56 41 54 45 20 4B 45 59 2D 2D 2D 2D 2D"
-			}
-		]
-	},
-	{
-		"extension": ".key",
+		"extensions": [
+			".key",
+			".pem"
+		],
+		"mimes": [],
 		"name": "PEM Encoded X.509 PKCS#1 DSA Private Key File",
 		"pattern": [
 			{
@@ -3366,17 +3341,11 @@ export default [
 		]
 	},
 	{
-		"extension": ".pem",
-		"name": "PEM Encoded X.509 PKCS#1 DSA Private Key File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "2D 2D 2D 2D 2D 42 45 47 49 4E 20 44 53 41 20 50 52 49 56 41 54 45 20 4B 45 59 2D 2D 2D 2D 2D"
-			}
-		]
-	},
-	{
-		"extension": ".key",
+		"extensions": [
+			".key",
+			".pem"
+		],
+		"mimes": [],
 		"name": "PEM Encoded X.509 PKCS#1 RSA Private Key File",
 		"pattern": [
 			{
@@ -3386,17 +3355,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".pem",
-		"name": "PEM Encoded X.509 PKCS#1 RSA Private Key File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "2D 2D 2D 2D 2D 42 45 47 49 4E 20 52 45 41 20 50 52 49 56 41 54 45 20 4B 45 59 2D 2D 2D 2D 2D"
-			}
-		]
-	},
-	{
-		"extension": ".tga",
+		"extensions": [
+			".tga"
+		],
+		"mimes": [
+			"image/x-tga"
+		],
 		"name": "Truevision Targa Graphic File",
 		"pattern": [
 			{
@@ -3406,8 +3370,13 @@ export default [
 		]
 	},
 	{
-		"extension": ".avif",
-		"name": "Alliance for Open Media (AOMedia) Video 1 (AV1) Image Format",
+		"extensions": [
+			".avif"
+		],
+		"mimes": [
+			"image/avif"
+		],
+		"name": "Alliance for Open Media (AOMedia) Video 1 (AV1) Image",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -3416,7 +3385,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".xxx",
+		"extensions": [
+			".xxx"
+		],
+		"mimes": [],
 		"name": "Compucon/Singer Embroidery Design File",
 		"pattern": [
 			{
@@ -3426,7 +3398,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".rvt",
+		"extensions": [
+			".rvt"
+		],
+		"mimes": [],
 		"name": "Revit Project File Subheader",
 		"pattern": [
 			{
@@ -3436,7 +3411,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".tbi",
+		"extensions": [
+			".tbi"
+		],
+		"mimes": [],
 		"name": "Windows Disk Image File",
 		"pattern": [
 			{
@@ -3446,7 +3424,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".dat",
+		"extensions": [
+			".dat"
+		],
+		"mimes": [],
 		"name": "Bitcoin Core Wallet File",
 		"pattern": [
 			{
@@ -3456,7 +3437,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".bsb",
+		"extensions": [
+			".bsb"
+		],
+		"mimes": [],
 		"name": "NOAA Raster Navigation Chart (RNC) File",
 		"pattern": [
 			{
@@ -3466,7 +3450,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".epub",
+		"extensions": [
+			".epub"
+		],
+		"mimes": [
+			"application/epub+zip"
+		],
 		"name": "Electronic Publication File",
 		"pattern": [
 			{
@@ -3480,7 +3469,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".doc",
+		"extensions": [
+			".doc"
+		],
+		"mimes": [
+			"application/msword"
+		],
 		"name": "Microsoft Office Word Document",
 		"pattern": [
 			{
@@ -3490,7 +3484,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".xls",
+		"extensions": [
+			".xls"
+		],
+		"mimes": [
+			"application/vnd.ms-excel"
+		],
 		"name": "Microsoft Office Excel Document",
 		"pattern": [
 			{
@@ -3500,7 +3499,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".ppt",
+		"extensions": [
+			".ppt"
+		],
+		"mimes": [
+			"application/vnd.ms-powerpoint"
+		],
 		"name": "Microsoft Office PowerPoint Document",
 		"pattern": [
 			{
@@ -3510,7 +3514,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".msi",
+		"extensions": [
+			".msi"
+		],
+		"mimes": [
+			"application/x-msdownload"
+		],
 		"name": "Windows Installer",
 		"pattern": [
 			{
@@ -3520,7 +3529,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".msg",
+		"extensions": [
+			".msg"
+		],
+		"mimes": [
+			"application/vnd.ms-outlook"
+		],
 		"name": "Microsoft Outlook Item",
 		"pattern": [
 			{
@@ -3530,7 +3544,15 @@ export default [
 		]
 	},
 	{
-		"extension": ".mkv",
+		"extensions": [
+			".mkv",
+			".mka",
+			".mks",
+			".mk3d"
+		],
+		"mimes": [
+			"video/x-matroska"
+		],
 		"name": "Matroska Media File",
 		"pattern": [
 			{
@@ -3540,37 +3562,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".mka",
-		"name": "Matroska Media File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "1A 45 DF A3"
-			}
-		]
-	},
-	{
-		"extension": ".mks",
-		"name": "Matroska Media File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "1A 45 DF A3"
-			}
-		]
-	},
-	{
-		"extension": ".mk3d",
-		"name": "Matroska Media File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "1A 45 DF A3"
-			}
-		]
-	},
-	{
-		"extension": ".webm",
+		"extensions": [
+			".webm"
+		],
+		"mimes": [
+			"video/webm"
+		],
 		"name": "WebM File",
 		"pattern": [
 			{
@@ -3580,7 +3577,13 @@ export default [
 		]
 	},
 	{
-		"extension": ".djvu",
+		"extensions": [
+			".djvu",
+			".djv"
+		],
+		"mimes": [
+			"image/vnd.djvu"
+		],
 		"name": "DjVu Document",
 		"pattern": [
 			{
@@ -3594,21 +3597,8 @@ export default [
 		]
 	},
 	{
-		"extension": ".djv",
-		"name": "DjVu Document",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "41 54 26 54 46 4F 52 4D"
-			},
-			{
-				"fromIndex": 12,
-				"hex": "44 4A 56"
-			}
-		]
-	},
-	{
-		"extension": null,
+		"extensions": [],
+		"mimes": [],
 		"name": "uImage File",
 		"pattern": [
 			{
@@ -3618,7 +3608,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".lzfse",
+		"extensions": [
+			".lzfse"
+		],
+		"mimes": [],
 		"name": "LZFSE File",
 		"pattern": [
 			{
@@ -3628,8 +3621,11 @@ export default [
 		]
 	},
 	{
-		"extension": ".avro",
-		"name": "Apache Avro binary file format",
+		"extensions": [
+			".avro"
+		],
+		"mimes": [],
+		"name": "Apache Avro Binary File",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -3638,8 +3634,11 @@ export default [
 		]
 	},
 	{
-		"extension": ".rc",
-		"name": "RCFile columnar file format",
+		"extensions": [
+			".rc"
+		],
+		"mimes": [],
+		"name": "RCFile Columnar File",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -3648,7 +3647,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".rbxl",
+		"extensions": [
+			".rbxl"
+		],
+		"mimes": [],
 		"name": "Roblox Place File",
 		"pattern": [
 			{
@@ -3658,7 +3660,11 @@ export default [
 		]
 	},
 	{
-		"extension": ".p25",
+		"extensions": [
+			".p25",
+			".obt"
+		],
+		"mimes": [],
 		"name": "PhotoCap Object Templates File",
 		"pattern": [
 			{
@@ -3668,17 +3674,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".obt",
-		"name": "PhotoCap Object Templates File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "65 87 78 56"
-			}
-		]
-	},
-	{
-		"extension": ".pcv",
+		"extensions": [
+			".pcv"
+		],
+		"mimes": [],
 		"name": "PhotoCap Vector File",
 		"pattern": [
 			{
@@ -3688,7 +3687,19 @@ export default [
 		]
 	},
 	{
-		"extension": ".pbt",
+		"extensions": [
+			".pbt",
+			".pdt",
+			".pea",
+			".peb",
+			".pet",
+			".pgt",
+			".pict",
+			".pjt",
+			".pkt",
+			".pmt"
+		],
+		"mimes": [],
 		"name": "PhotoCap Template File",
 		"pattern": [
 			{
@@ -3698,97 +3709,8 @@ export default [
 		]
 	},
 	{
-		"extension": ".pdt",
-		"name": "PhotoCap Template File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "78 56 34"
-			}
-		]
-	},
-	{
-		"extension": ".pea",
-		"name": "PhotoCap Template File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "78 56 34"
-			}
-		]
-	},
-	{
-		"extension": ".peb",
-		"name": "PhotoCap Template File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "78 56 34"
-			}
-		]
-	},
-	{
-		"extension": ".pet",
-		"name": "PhotoCap Template File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "78 56 34"
-			}
-		]
-	},
-	{
-		"extension": ".pgt",
-		"name": "PhotoCap Template File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "78 56 34"
-			}
-		]
-	},
-	{
-		"extension": ".pict",
-		"name": "PhotoCap Template File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "78 56 34"
-			}
-		]
-	},
-	{
-		"extension": ".pjt",
-		"name": "PhotoCap Template File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "78 56 34"
-			}
-		]
-	},
-	{
-		"extension": ".pkt",
-		"name": "PhotoCap Template File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "78 56 34"
-			}
-		]
-	},
-	{
-		"extension": ".pmt",
-		"name": "PhotoCap Template File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "78 56 34"
-			}
-		]
-	},
-	{
-		"extension": null,
+		"extensions": [],
+		"mimes": [],
 		"name": "Apache Parquet Columnar File",
 		"pattern": [
 			{
@@ -3798,7 +3720,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".ez2",
+		"extensions": [
+			".ez2"
+		],
+		"mimes": [
+			"application/vnd.ezpix-album"
+		],
 		"name": "Emulator Emaxsynth Samples File",
 		"pattern": [
 			{
@@ -3808,7 +3735,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".ez3",
+		"extensions": [
+			".ez3"
+		],
+		"mimes": [
+			"application/vnd.ezpix-package"
+		],
 		"name": "Emulator III Synth Samples File",
 		"pattern": [
 			{
@@ -3818,7 +3750,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".luac",
+		"extensions": [
+			".luac"
+		],
+		"mimes": [
+			"application/x-lua-bytecode"
+		],
 		"name": "Lua Bytecode File",
 		"pattern": [
 			{
@@ -3828,8 +3765,11 @@ export default [
 		]
 	},
 	{
-		"extension": ".alias",
-		"name": "macOS File Alias (Symbolic Link)",
+		"extensions": [
+			".alias"
+		],
+		"mimes": [],
+		"name": "MacOS File Alias (Symbolic Link)",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -3838,7 +3778,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".Identifier",
+		"extensions": [
+			".identifier"
+		],
+		"mimes": [],
 		"name": "Microsoft URL Security Zones Identifier File",
 		"pattern": [
 			{
@@ -3848,7 +3791,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".eml",
+		"extensions": [
+			".eml"
+		],
+		"mimes": [
+			"message/rfc822"
+		],
 		"name": "Email Message Var5 File",
 		"pattern": [
 			{
@@ -3858,7 +3806,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".tde",
+		"extensions": [
+			".tde"
+		],
+		"mimes": [],
 		"name": "Tableau Datasource File",
 		"pattern": [
 			{
@@ -3868,7 +3819,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".kdb",
+		"extensions": [
+			".kdb"
+		],
+		"mimes": [],
 		"name": "KDB File",
 		"pattern": [
 			{
@@ -3878,7 +3832,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".pgp",
+		"extensions": [
+			".pgp"
+		],
+		"mimes": [
+			"application/pgp-encrypted"
+		],
 		"name": "PGP File",
 		"pattern": [
 			{
@@ -3892,7 +3851,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".zst",
+		"extensions": [
+			".zst"
+		],
+		"mimes": [],
 		"name": "Zstandard Archive",
 		"pattern": [
 			{
@@ -3902,7 +3864,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".rs",
+		"extensions": [
+			".rs"
+		],
+		"mimes": [
+			"application/rls-services+xml"
+		],
 		"name": "QuickZip RS Archive",
 		"pattern": [
 			{
@@ -3912,7 +3879,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".sml",
+		"extensions": [
+			".sml"
+		],
+		"mimes": [],
 		"name": "Smile file",
 		"pattern": [
 			{
@@ -3922,7 +3892,8 @@ export default [
 		]
 	},
 	{
-		"extension": null,
+		"extensions": [],
+		"mimes": [],
 		"name": "Preferred Executable Format",
 		"pattern": [
 			{
@@ -3932,7 +3903,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".srt",
+		"extensions": [
+			".srt"
+		],
+		"mimes": [
+			"application/x-subrip"
+		],
 		"name": "SubRip File",
 		"pattern": [
 			{
@@ -3942,7 +3918,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".vpk",
+		"extensions": [
+			".vpk"
+		],
+		"mimes": [],
 		"name": "VPK File",
 		"pattern": [
 			{
@@ -3952,7 +3931,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".ace",
+		"extensions": [
+			".ace"
+		],
+		"mimes": [
+			"application/x-ace-compressed"
+		],
 		"name": "ACE Archive",
 		"pattern": [
 			{
@@ -3962,7 +3946,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".arj",
+		"extensions": [
+			".arj"
+		],
+		"mimes": [
+			"application/x-arj"
+		],
 		"name": "ARJ File",
 		"pattern": [
 			{
@@ -3972,7 +3961,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".cab",
+		"extensions": [
+			".cab"
+		],
+		"mimes": [],
 		"name": "InstallShield CAB Archive",
 		"pattern": [
 			{
@@ -3982,7 +3974,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".wmf",
+		"extensions": [
+			".wmf"
+		],
+		"mimes": [
+			"application/x-msmetafile"
+		],
 		"name": "Windows Metafile",
 		"pattern": [
 			{
@@ -3992,7 +3989,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".xcf",
+		"extensions": [
+			".xcf"
+		],
+		"mimes": [],
 		"name": "XCF File",
 		"pattern": [
 			{
@@ -4002,8 +4002,13 @@ export default [
 		]
 	},
 	{
-		"extension": ".xpm",
-		"name": "X PixMap File",
+		"extensions": [
+			".xpm"
+		],
+		"mimes": [
+			"image/x-xpixmap"
+		],
+		"name": "X PixMap Image",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -4012,7 +4017,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".aff",
+		"extensions": [
+			".aff"
+		],
+		"mimes": [],
 		"name": "Advanced Forensics File",
 		"pattern": [
 			{
@@ -4022,8 +4030,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".Ex01",
-		"name": "EnCase EWF Version 2 File",
+		"extensions": [
+			".e01",
+			".ex01"
+		],
+		"mimes": [],
+		"name": "EnCase EWF File",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -4032,17 +4044,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".e01",
-		"name": "EnCase EWF Version 1 File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "45 56 46"
-			}
-		]
-	},
-	{
-		"extension": ".qcow",
+		"extensions": [
+			".qcow"
+		],
+		"mimes": [],
 		"name": "QEMU Copy On Write (QCOW) File",
 		"pattern": [
 			{
@@ -4052,7 +4057,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".ani",
+		"extensions": [
+			".ani"
+		],
+		"mimes": [],
 		"name": "Animated Cursor File",
 		"pattern": [
 			{
@@ -4066,7 +4074,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".cda",
+		"extensions": [
+			".cda"
+		],
+		"mimes": [],
 		"name": "CDA File",
 		"pattern": [
 			{
@@ -4080,7 +4091,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".qcp",
+		"extensions": [
+			".qcp"
+		],
+		"mimes": [],
 		"name": "Qualcomm PureVoice File",
 		"pattern": [
 			{
@@ -4094,7 +4108,14 @@ export default [
 		]
 	},
 	{
-		"extension": ".dir",
+		"extensions": [
+			".dir",
+			".dxr",
+			".drx"
+		],
+		"mimes": [
+			"application/x-director"
+		],
 		"name": "Macromedia Director File",
 		"pattern": [
 			{
@@ -4109,37 +4130,14 @@ export default [
 		"patternVariant": "BE"
 	},
 	{
-		"extension": ".dxr",
-		"name": "Macromedia Director File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "52 49 46 58"
-			},
-			{
-				"fromIndex": 8,
-				"hex": "4D 56 39 33"
-			}
+		"extensions": [
+			".dir",
+			".dxr",
+			".drx"
 		],
-		"patternVariant": "BE"
-	},
-	{
-		"extension": ".drx",
-		"name": "Macromedia Director File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "52 49 46 58"
-			},
-			{
-				"fromIndex": 8,
-				"hex": "4D 56 39 33"
-			}
+		"mimes": [
+			"application/x-director"
 		],
-		"patternVariant": "BE"
-	},
-	{
-		"extension": ".dir",
 		"name": "Macromedia Director File",
 		"pattern": [
 			{
@@ -4154,37 +4152,12 @@ export default [
 		"patternVariant": "LE"
 	},
 	{
-		"extension": ".dxr",
-		"name": "Macromedia Director File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "58 46 49 52"
-			},
-			{
-				"fromIndex": 8,
-				"hex": "33 39 56 4D"
-			}
+		"extensions": [
+			".flv"
 		],
-		"patternVariant": "LE"
-	},
-	{
-		"extension": ".drx",
-		"name": "Macromedia Director File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "58 46 49 52"
-			},
-			{
-				"fromIndex": 8,
-				"hex": "33 39 56 4D"
-			}
+		"mimes": [
+			"video/x-flv"
 		],
-		"patternVariant": "LE"
-	},
-	{
-		"extension": ".flv",
 		"name": "Flash Video",
 		"pattern": [
 			{
@@ -4194,7 +4167,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".vdi",
+		"extensions": [
+			".vdi"
+		],
+		"mimes": [
+			"application/x-virtualbox-vdi"
+		],
 		"name": "VirtualBox Virtual Hard Disk File",
 		"pattern": [
 			{
@@ -4204,7 +4182,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".vhd",
+		"extensions": [
+			".vhd"
+		],
+		"mimes": [
+			"application/x-virtualbox-vhd"
+		],
 		"name": "Windows Virtual PC Virtual Hard Disk File",
 		"pattern": [
 			{
@@ -4214,7 +4197,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".vhdx",
+		"extensions": [
+			".vhdx"
+		],
+		"mimes": [],
 		"name": "Windows Virtual PC Windows 8 Virtual Hard Disk File",
 		"pattern": [
 			{
@@ -4224,7 +4210,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".isz",
+		"extensions": [
+			".isz"
+		],
+		"mimes": [],
 		"name": "Compressed ISO Image",
 		"pattern": [
 			{
@@ -4234,7 +4223,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".daa",
+		"extensions": [
+			".daa"
+		],
+		"mimes": [],
 		"name": "Direct Access Archive PowerISO File",
 		"pattern": [
 			{
@@ -4244,7 +4236,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".evt",
+		"extensions": [
+			".evt"
+		],
+		"mimes": [],
 		"name": "Windows Event Viewer File",
 		"pattern": [
 			{
@@ -4254,7 +4249,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".evtx",
+		"extensions": [
+			".evtx"
+		],
+		"mimes": [],
 		"name": "Windows Event Viewer XML File",
 		"pattern": [
 			{
@@ -4264,7 +4262,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".sdb",
+		"extensions": [
+			".sdb"
+		],
+		"mimes": [],
 		"name": "Windows Customized Database",
 		"pattern": [
 			{
@@ -4274,7 +4275,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".grp",
+		"extensions": [
+			".grp"
+		],
+		"mimes": [],
 		"name": "Windows Program Manager Program Group File",
 		"pattern": [
 			{
@@ -4284,7 +4288,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".icm",
+		"extensions": [
+			".icm"
+		],
+		"mimes": [
+			"application/vnd.iccprofile"
+		],
 		"name": "ICC Profile File",
 		"pattern": [
 			{
@@ -4294,7 +4303,11 @@ export default [
 		]
 	},
 	{
-		"extension": ".dat",
+		"extensions": [
+			".dat",
+			".hiv"
+		],
+		"mimes": [],
 		"name": "Windows Registry File",
 		"pattern": [
 			{
@@ -4304,17 +4317,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".hiv",
-		"name": "Windows Registry File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "72 65 67 66"
-			}
-		]
-	},
-	{
-		"extension": ".pst",
+		"extensions": [
+			".pst"
+		],
+		"mimes": [],
 		"name": "Microsoft Outlook Personal Storage Table File",
 		"pattern": [
 			{
@@ -4324,7 +4330,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".drc",
+		"extensions": [
+			".drc"
+		],
+		"mimes": [],
 		"name": "Google Draco 3D Model File",
 		"pattern": [
 			{
@@ -4334,7 +4343,11 @@ export default [
 		]
 	},
 	{
-		"extension": ".grib",
+		"extensions": [
+			".grib",
+			".grib2"
+		],
+		"mimes": [],
 		"name": "Gridded Data File",
 		"pattern": [
 			{
@@ -4344,17 +4357,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".grib2",
-		"name": "Gridded Data File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "47 52 49 42"
-			}
-		]
-	},
-	{
-		"extension": ".blend",
+		"extensions": [
+			".blend"
+		],
+		"mimes": [],
 		"name": "Blender File",
 		"pattern": [
 			{
@@ -4364,8 +4370,11 @@ export default [
 		]
 	},
 	{
-		"extension": ".jxl",
+		"extensions": [
+			".jxl"
+		],
 		"name": "JPEG XL Image",
+		"mimes": [],
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -4375,8 +4384,11 @@ export default [
 		"patternVariant": "Long"
 	},
 	{
-		"extension": ".jxl",
+		"extensions": [
+			".jxl"
+		],
 		"name": "JPEG XL Image",
+		"mimes": [],
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -4386,7 +4398,14 @@ export default [
 		"patternVariant": "Short"
 	},
 	{
-		"extension": ".ttf",
+		"extensions": [
+			".ttf",
+			".tte",
+			".dfont"
+		],
+		"mimes": [
+			"font/ttf"
+		],
 		"name": "TrueType Font",
 		"pattern": [
 			{
@@ -4396,27 +4415,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".tte",
-		"name": "TrueType Font",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "00 01 00 00 00"
-			}
-		]
-	},
-	{
-		"extension": ".dfont",
-		"name": "TrueType Font",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "00 01 00 00 00"
-			}
-		]
-	},
-	{
-		"extension": ".otf",
+		"extensions": [
+			".otf"
+		],
+		"mimes": [
+			"font/otf"
+		],
 		"name": "OpenType Font",
 		"pattern": [
 			{
@@ -4426,7 +4430,8 @@ export default [
 		]
 	},
 	{
-		"extension": null,
+		"extensions": [],
+		"mimes": [],
 		"name": "Modulefile for Environment Modules",
 		"pattern": [
 			{
@@ -4436,7 +4441,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".slob",
+		"extensions": [
+			".slob"
+		],
+		"mimes": [],
 		"name": "Slob File",
 		"pattern": [
 			{
@@ -4446,7 +4454,8 @@ export default [
 		]
 	},
 	{
-		"extension": null,
+		"extensions": [],
+		"mimes": [],
 		"name": "Serialized Java Data",
 		"pattern": [
 			{
@@ -4456,7 +4465,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".voc",
+		"extensions": [
+			".voc"
+		],
+		"mimes": [],
 		"name": "Creative Voice File",
 		"pattern": [
 			{
@@ -4466,7 +4478,13 @@ export default [
 		]
 	},
 	{
-		"extension": ".au",
+		"extensions": [
+			".au",
+			".snd"
+		],
+		"mimes": [
+			"audio/basic"
+		],
 		"name": "Au Audio File",
 		"pattern": [
 			{
@@ -4476,17 +4494,8 @@ export default [
 		]
 	},
 	{
-		"extension": ".snd",
-		"name": "Au Audio File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "2E 73 6E 64"
-			}
-		]
-	},
-	{
-		"extension": null,
+		"extensions": [],
+		"mimes": [],
 		"name": "OpenGL Iris Perfomer Performer Fast Binary (PFB)",
 		"pattern": [
 			{
@@ -4496,7 +4505,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".hazelrules",
+		"extensions": [
+			".hazelrules"
+		],
+		"mimes": [],
 		"name": "Noodlesoft Hazel Rules File",
 		"pattern": [
 			{
@@ -4506,7 +4518,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".flp",
+		"extensions": [
+			".flp"
+		],
+		"mimes": [],
 		"name": "FL Studio Project File",
 		"pattern": [
 			{
@@ -4516,7 +4531,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".flm",
+		"extensions": [
+			".flm"
+		],
+		"mimes": [],
 		"name": "FL Studio Mobile Project File",
 		"pattern": [
 			{
@@ -4526,7 +4544,8 @@ export default [
 		]
 	},
 	{
-		"extension": null,
+		"extensions": [],
+		"mimes": [],
 		"name": "Vormetric Encryption DPM Version 2.1 Header",
 		"pattern": [
 			{
@@ -4536,7 +4555,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".drw",
+		"extensions": [
+			".drw"
+		],
+		"mimes": [],
 		"name": "Micrografx Vector Graphic File",
 		"pattern": [
 			{
@@ -4546,7 +4568,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".dss",
+		"extensions": [
+			".dss"
+		],
+		"mimes": [],
 		"name": "Digital Speech Standard (Olympus, Grundig, & Phillips) V2",
 		"pattern": [
 			{
@@ -4556,7 +4581,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".dss",
+		"extensions": [
+			".dss"
+		],
+		"mimes": [],
 		"name": "Digital Speech Standard (Olympus, Grundig, & Phillips) V3",
 		"pattern": [
 			{
@@ -4566,7 +4594,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".adx",
+		"extensions": [
+			".adx"
+		],
+		"mimes": [],
 		"name": "Approach Index File",
 		"pattern": [
 			{
@@ -4576,7 +4607,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".skf",
+		"extensions": [
+			".skf"
+		],
+		"mimes": [],
 		"name": "SkinCrafter Skin File",
 		"pattern": [
 			{
@@ -4586,7 +4620,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".dtd",
+		"extensions": [
+			".dtd"
+		],
+		"mimes": [
+			"application/xml-dtd"
+		],
 		"name": "DesignTools 2D Design File",
 		"pattern": [
 			{
@@ -4596,7 +4635,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".wallet",
+		"extensions": [
+			".wallet"
+		],
+		"mimes": [],
 		"name": "MultiBit Bitcoin Wallet File",
 		"pattern": [
 			{
@@ -4606,7 +4648,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".doc",
+		"extensions": [
+			".doc"
+		],
+		"mimes": [],
 		"name": "DeskMate Document",
 		"pattern": [
 			{
@@ -4616,7 +4661,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".dsp",
+		"extensions": [
+			".dsp"
+		],
+		"mimes": [],
 		"name": "Microsoft Developer Studio Project File",
 		"pattern": [
 			{
@@ -4626,7 +4674,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".amr",
+		"extensions": [
+			".amr"
+		],
+		"mimes": [
+			"audio/amr"
+		],
 		"name": "Adaptive Multi-Rate ACELP (Algebraic Code Excited Linear Prediction) Codec File",
 		"pattern": [
 			{
@@ -4636,7 +4689,12 @@ export default [
 		]
 	},
 	{
-		"extension": ".sil",
+		"extensions": [
+			".sil"
+		],
+		"mimes": [
+			"audio/silk"
+		],
 		"name": "Skype Compressed Audio",
 		"pattern": [
 			{
@@ -4646,7 +4704,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".hdr",
+		"extensions": [
+			".hdr"
+		],
+		"mimes": [],
 		"name": "Radiance High Dynamic Range Image",
 		"pattern": [
 			{
@@ -4656,7 +4717,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".vbe",
+		"extensions": [
+			".vbe"
+		],
+		"mimes": [],
 		"name": "VBScript Encoded Script",
 		"pattern": [
 			{
@@ -4666,7 +4730,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".cdb",
+		"extensions": [
+			".cdb"
+		],
+		"mimes": [],
 		"name": "MikroTik WinBox Connection Database (Address Book)",
 		"pattern": [
 			{
@@ -4676,7 +4743,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".mdf",
+		"extensions": [
+			".mdf"
+		],
+		"mimes": [],
 		"name": "Alcohol 120% CD Image",
 		"pattern": [
 			{
@@ -4686,7 +4756,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".b85",
+		"extensions": [
+			".b85"
+		],
+		"mimes": [],
 		"name": "ASCII85/BASE85 Encoded File",
 		"pattern": [
 			{
@@ -4700,7 +4773,10 @@ export default [
 		]
 	},
 	{
-		"extension": ".jb2",
+		"extensions": [
+			".jb2"
+		],
+		"mimes": [],
 		"name": "JBIG2 Image",
 		"pattern": [
 			{

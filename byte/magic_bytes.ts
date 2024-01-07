@@ -6,8 +6,8 @@ interface MagicBytesPattern<T extends string | Uint8Array> {
 	hex: T;
 }
 export interface MagicBytesMeta {
-	extension: `.${string}` | null;
-	mime?: string;
+	extensions: `.${string}`[];
+	mimes: string[];
 	name: string;
 	patternVariant?: string;
 }
@@ -54,8 +54,7 @@ class BytesMatcher {
 export class MagicBytesMatcher {
 	#list: Map<MagicBytesMeta, BytesMatcher> = new Map<MagicBytesMeta, BytesMatcher>();
 	constructor(filter?: (meta: MagicBytesMeta) => boolean) {
-		for (const { extension, name, pattern, mime, patternVariant } of MagicBytesList) {
-			const meta: MagicBytesMeta = { extension, name, mime, patternVariant };
+		for (const { pattern, ...meta } of MagicBytesList) {
 			if (filter?.(meta) ?? true) {
 				this.#list.set(meta, new BytesMatcher(pattern));
 			}

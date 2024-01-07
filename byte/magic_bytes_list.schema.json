@@ -4,22 +4,23 @@
 	"items": {
 		"type": "object",
 		"properties": {
-			"extension": {
-				"anyOf": [
-					{
-						"type": "string",
-						"minLength": 1,
-						"pattern": "^\\.[^\\r\\n\\s\\t]+$"
-					},
-					{
-						"type": "null"
-					}
-				]
+			"extensions": {
+				"type": "array",
+				"items": {
+					"type": "string",
+					"minLength": 1,
+					"pattern": "^\\.[^\\r\\n\\s\\t]+$"
+				},
+				"uniqueItems": true
 			},
-			"mime": {
-				"type": "string",
-				"minLength": 1,
-				"pattern": "^(?:[^\\s].*)?[^\\s]$"
+			"mimes": {
+				"type": "array",
+				"items": {
+					"type": "string",
+					"minLength": 1,
+					"pattern": "^(?:[^\\s].*)?[^\\s]$"
+				},
+				"uniqueItems": true
 			},
 			"name": {
 				"type": "string",
@@ -64,7 +65,8 @@
 			}
 		},
 		"required": [
-			"extension",
+			"extensions",
+			"mimes",
 			"name",
 			"pattern"
 		]

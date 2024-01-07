@@ -11,12 +11,14 @@ const dataStringify = JSON.stringify(data, undefined, "\t");
 await Deno.writeTextFile(pathJoin(root, `${fileName}.tsv`), `${csvStringify(data.map((_) => {
 	return {
 		..._,
+		extensions: _.extensions.join(", "),
+		mimes: _.mimes.join(", "),
 		pattern: JSON.stringify(_.pattern)
 	}
 }), {
 	columns: [
-		"extension",
-		"mime",
+		"extensions",
+		"mimes",
 		"name",
 		"pattern",
 		"patternVariant"

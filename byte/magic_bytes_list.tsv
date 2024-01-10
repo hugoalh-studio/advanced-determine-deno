@@ -325,4 +325,3 @@ extensions	mimes	name	pattern	patternVariant
 .mdf		Alcohol 120% CD Image	"[{""fromIndex"":0,""hex"":""00 FF FF FF FF FF FF FF FF FF FF 00 00 02 00 01""}]"	
 .b85		ASCII85/BASE85 Encoded File	"[{""fromIndex"":0,""hex"":""3C 7E 36 3C 5C 25 5F 30 67 53 71 68 3B""},{""fromIndex"":-3,""hex"":""7E 3E 0A""}]"	
 .jb2		JBIG2 Image	"[{""fromIndex"":0,""hex"":""97 4A 42 32 0D 0A 1A 0A""},{""fromIndex"":-8,""hex"":""03 33 00 01 00 00 00 00""}]"	
-

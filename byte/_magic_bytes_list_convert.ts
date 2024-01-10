@@ -24,6 +24,5 @@ await Deno.writeTextFile(pathJoin(root, `${fileName}.tsv`), `${csvStringify(data
 		"patternVariant"
 	],
 	separator: "\t"
-})}\n`);
+})}`);
 await Deno.writeTextFile(pathJoin(root, `${fileName}.json`), `${dataStringify}\n`);
-await Deno.writeTextFile(pathJoin(root, `_${fileName}.ts`), `export default ${dataStringify} as const;\n`);

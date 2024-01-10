@@ -1,4 +1,4 @@
-import MagicBytesListRaw from "./_magic_bytes_list.ts";
+import MagicBytesListRaw from "./magic_bytes_list.json" with { type: "json" };
 import { BytesMatcher, type BytesMatcherPattern } from "./matcher.ts";
 export interface MagicBytesMeta {
 	/**
@@ -25,7 +25,6 @@ interface MagicBytesEntry<T extends string | Uint8Array> extends MagicBytesMeta 
 	pattern: BytesMatcherPattern<T>[];
 }
 const MagicBytesList: MagicBytesEntry<string>[] = MagicBytesListRaw as unknown as MagicBytesEntry<string>[];
-
 /**
  * Magic bytes matcher to determine whether the bytes is match the specify magic bytes.
  */

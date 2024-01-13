@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.211.0/assert/assert_equals.ts";
+import { assertEquals } from "https://deno.land/std@0.212.0/assert/assert_equals.ts";
 import { isStringCaseUpper } from "./is_case_upper.ts";
 Deno.test("False 1", { permissions: "none" }, () => {
 	assertEquals(isStringCaseUpper("Hello, world!"), false);

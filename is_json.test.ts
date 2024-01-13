@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.211.0/assert/assert_equals.ts";
+import { assertEquals } from "https://deno.land/std@0.212.0/assert/assert_equals.ts";
 import { isJSON } from "./is_json.ts";
 Deno.test("False 1", { permissions: "none" }, () => {
 	assertEquals(isJSON({

@@ -1,4 +1,4 @@
-import { extname as pathExtname } from "https://deno.land/std@0.211.0/path/extname.ts";
+import { extname as pathExtname } from "https://deno.land/std@0.212.0/path/extname.ts";
 import { isOSWindows } from "../environment/_os.ts";
 import { getEnvironmentPathExts } from "../environment/pathext.ts";
 export interface IsPathExecutableOptions {

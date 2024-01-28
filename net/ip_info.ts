@@ -23,14 +23,19 @@ export function getIPInfo(): NetworkIPAddressInformation {
 		if (typeof networkInterface === "undefined") {
 			continue;
 		}
-		if (!networkInterface.internal && networkInterface.family === "IPv4") {
-			result.externalIPv4 ??= networkInterface.address;
-		} else if (!networkInterface.internal && networkInterface.family === "IPv6") {
-			result.externalIPv6 ??= networkInterface.address;
-		} else if (networkInterface.internal && networkInterface.family === "IPv4") {
-			result.internalIPv4 ??= networkInterface.address;
-		} else if (networkInterface.internal && networkInterface.family === "IPv6") {
-			result.internalIPv6 ??= networkInterface.address;
+		const { address, family, internal } = networkInterface;
+		if (internal) {
+			if (family === "IPv4") {
+				result.internalIPv4 ??= address;
+			} else if (family === "IPv6") {
+				result.internalIPv6 ??= address;
+			}
+		} else {
+			if (family === "IPv4") {
+				result.externalIPv4 ??= address;
+			} else if (family === "IPv6") {
+				result.externalIPv6 ??= address;
+			}
 		}
 	}
 	return result;

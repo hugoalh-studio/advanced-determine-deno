@@ -1,5 +1,5 @@
 import { shuffleArray } from "https://deno.land/x/shuffle_array@v1.0.7/mod.ts";
-const servicesIPv4: Set<string> = new Set<string>([
+const dnsProvidersIPv4: Set<string> = new Set<string>([
 	/* Cloudflare */"1.0.0.1",
 	/* Cloudflare */"1.1.1.1",
 	/* Google */"8.8.4.4",
@@ -7,7 +7,7 @@ const servicesIPv4: Set<string> = new Set<string>([
 	/* OpenDNS */"208.67.220.2",
 	/* OpenDNS */"208.67.222.2"
 ]);
-const servicesIPv6: Set<string> = new Set<string>([
+const dnsProvidersIPv6: Set<string> = new Set<string>([
 	/* Cloudflare */"2606:4700:4700::64",
 	/* Cloudflare */"2606:4700:4700::1001",
 	/* Cloudflare */"2606:4700:4700::1111",
@@ -34,19 +34,19 @@ export async function isDNSClean(query: string | URL, recordType: "A" | "AAAA", 
 	if (!(Number.isSafeInteger(samples) && samples > 0)) {
 		throw new RangeError(`Argument \`samples\` is not a number which is integer, safe, and > 0!`);
 	}
-	const resultClient: string[] = await Deno.resolveDns(queryResolve, recordType).catch((): string[] => {
+	const resultsLocal: string[] = await Deno.resolveDns(queryResolve, recordType).catch((): string[] => {
 		return [];
 	});
-	const servicesIP: string[] = shuffleArray(Array.from((recordType === "AAAA" ? servicesIPv6 : servicesIPv4).values()));
-	const resultServices: string[] = [];
-	for (let count = 0, index = 0; count < samples && index < servicesIP.length; count += 1, index += 1) {
-		resultServices.push(...await Deno.resolveDns(queryResolve, recordType, { nameServer: { ipAddr: servicesIP[index] } }).catch((): string[] => {
+	const dnsProviders: string[] = shuffleArray(Array.from((recordType === "AAAA" ? dnsProvidersIPv6 : dnsProvidersIPv4).values()));
+	const resultsRemote: string[] = [];
+	for (let count = 0, index = 0; count < samples && index < dnsProviders.length; count += 1, index += 1) {
+		resultsRemote.push(...await Deno.resolveDns(queryResolve, recordType, { nameServer: { ipAddr: dnsProviders[index] } }).catch((): string[] => {
 			count -= 1;
 			return [];
 		}));
 	}
-	for (const clientValue of resultClient) {
-		if (resultServices.includes(clientValue)) {
+	for (const resultClient of resultsLocal) {
+		if (resultsRemote.includes(resultClient)) {
 			return true;
 		}
 	}

@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+name: "PMD - Analysis"
+on:
+  push:
+    branches:
+      - "**"
+  pull_request:
+    branches:
+      - "**"
+    types:
+      - "edited"
+      - "opened"
+      - "reopened"
+      - "synchronize"
+  workflow_dispatch:
+permissions:
+  actions: "read"
+  contents: "read"
+  security-events: "write"
+jobs:
+  main:
+    name: "Main"
+    uses: "hugoalh/hugoalh/.github/workflows/call-pmd-analysis-0.yml@main"

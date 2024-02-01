@@ -1,4 +1,4 @@
-import { includesNeedle as bytesIncludesNeedle } from "https://deno.land/std@0.213.0/bytes/includes_needle.ts";
+import { includesNeedle as bytesIncludesNeedle } from "https://deno.land/std@0.214.0/bytes/includes_needle.ts";
 const regexpPatternHex = /^[\dA-F]{2}(?: [\dA-F]{2})*$/v;
 export interface BytesMatcherPattern<T extends string | Uint8Array> {
 	fromIndex: "*" | number;

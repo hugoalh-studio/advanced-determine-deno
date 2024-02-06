@@ -1,7 +1,6 @@
 # Advanced Determine (Deno)
 
 [⚖️ MIT](./LICENSE.md)
-[![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/hugoalh-studio/advanced-determine-deno?label=Grade&logo=codefactor&logoColor=ffffff&style=flat-square "CodeFactor Grade")](https://www.codefactor.io/repository/github/hugoalh-studio/advanced-determine-deno)
 
 |  | **Release - Latest** | **Release - Pre** |
 |:-:|:-:|:-:|
@@ -15,7 +14,7 @@ A Deno module to provide advanced method to determine item.
 
 - **Target Version:** >= v1.40.0
 - **Require Permission:** *N/A*
-- **Domain/Registry:**
+- **Registry:**
   - DenoPKG
     ```ts
     import ... from "https://denopkg.com/hugoalh-studio/advanced-determine-deno[@<Tag>]/mod.ts";

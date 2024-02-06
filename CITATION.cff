@@ -9,4 +9,7 @@ repository-code: "https://github.com/hugoalh-studio/advanced-determine-deno"
 keywords:
   - "deno"
   - "determine"
+  - "item-check"
+  - "item-determine"
+  - "item-test"
 license: "MIT"

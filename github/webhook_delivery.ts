@@ -1,4 +1,4 @@
-import { decodeHex } from "https://deno.land/std@0.215.0/encoding/hex.ts";
+import { decodeHex } from "https://deno.land/std@0.216.0/encoding/hex.ts";
 const signatureAlgorithm: HmacImportParams = {
 	name: "HMAC",
 	hash: {

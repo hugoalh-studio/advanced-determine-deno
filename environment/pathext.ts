@@ -12,17 +12,16 @@ export function getEnvironmentPathExts(): string[] | null {
 	if (!isOSWindows) {
 		return null;
 	}
-	let output = ".EXE;.CMD;.BAT;.COM";
 	try {
 		const value: string | undefined = Deno.env.get("PATHEXT");
 		if (typeof value !== "undefined") {
-			output = value;
+			return splitEnvironmentValue(value);
 		}
 	} catch (error) {
 		if (!(error instanceof Deno.errors.PermissionDenied)) {
 			throw error;
 		}
 	}
-	return splitEnvironmentValue(output);
+	return splitEnvironmentValue(".EXE;.CMD;.BAT;.COM");
 }
 export default getEnvironmentPathExts;

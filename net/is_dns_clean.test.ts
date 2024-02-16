@@ -7,11 +7,14 @@ const hostnames = new Set([
 	"deno.com",
 	"deno.dev",
 	"deno.land",
+	"discord.com",
 	"docs.deno.com",
 	"examples.deno.land",
 	"github.com",
+	"gitlab.com",
 	"google.com",
 	"microsoft.com",
+	"nodejs.org",
 	"outlook.com"
 ]);
 Deno.test("IPv4", {

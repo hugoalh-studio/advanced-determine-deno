@@ -8,7 +8,7 @@ export { isAsyncGenerator, isAsynchronousGenerator } from "./is_async_generator.
 export { isAsyncGeneratorFunction, isAsynchronousGeneratorFunction } from "./is_async_generator_function.ts";
 export { isEmpty } from "./is_empty.ts";
 export { isJSON, isJSONArray, isJSONObject, isJSONPrimitive, isJSONValue, type JSONArray, type JSONArrayExtend, type JSONObject, type JSONObjectExtend, type JSONPrimitive, type JSONValue, type JSONValueExtend } from "./is_json.ts";
-export { getIPInfo, getIPInformation, isDNSClean, isIPValid, resolveIPVersion, type NetworkIPAddressInformation } from "./net/mod.ts";
+export { getIPInfo, getIPInformation, isDNSClean, isIPValid, resolveIPVersion, type DNSCleanSupportRecordType,type NetworkIPAddressInformation } from "./net/mod.ts";
 export { isPrimitive, type Primitive } from "./is_primitive.ts";
 export { isSyncFunction, isSynchronousFunction } from "./is_sync_function.ts";
 export { isSyncGenerator, isSynchronousGenerator } from "./is_sync_generator.ts";

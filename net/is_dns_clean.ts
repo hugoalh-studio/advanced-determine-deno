@@ -1,5 +1,8 @@
 import { shuffleArray } from "https://deno.land/x/shuffle_array@v1.0.7/mod.ts";
 import { resolveIPVersion } from "./ip_version.ts";
+/**
+ * Supported DNS record type in function `isDNSClean`.
+ */
 export type DNSCleanSupportRecordType = "A" | "AAAA" | "ANAME" | "CNAME" | "NS" | "PTR";
 class DNSResolveFromProvider {// This class is private, validators are unnecessary.
 	#ipv4: Set<string> = new Set<string>();
@@ -23,14 +26,20 @@ class DNSResolveFromProvider {// This class is private, validators are unnecessa
 		for (const address of ((recordType === "AAAA") ? this.#ipv6 : this.#ipv4).values()) {
 			try {
 				return await Deno.resolveDns(query, recordType, { nameServer: { ipAddr: address } });
-			} catch {
-				// Continue on error.
+			} catch (error: unknown) {
+				if (error instanceof Deno.errors.NotFound) {
+					continue;
+				}
+				throw error;
 			}
 		}
 		return [];
 	}
 }
-enum DNSProviderName {
+/**
+ * Enum of the DNS provider name.
+ */
+export enum DNSProviderName {
 	adguard = "adguard",
 	AdGuard = "adguard",
 	cloudflare = "cloudflare",
@@ -44,40 +53,62 @@ enum DNSProviderName {
 	opendns = "opendns",
 	OpenDNS = "opendns",
 	quad9 = "quad9",
-	Quad9 = "quad9"
+	Quad9 = "quad9",
+	quad101 = "quad101",
+	Quad101 = "quad101"
 }
-const dnsProvidersList: Map<DNSProviderName, DNSResolveFromProvider> = new Map([
-	[DNSProviderName.AdGuard, new DNSResolveFromProvider(["94.140.14.140", "94.140.14.141", "2a10:50c0::1:ff", "2a10:50c0::2:ff"])],
-	[DNSProviderName.Cloudflare, new DNSResolveFromProvider(["1.1.1.1", "1.0.0.1", "2606:4700:4700::64", "2606:4700:4700::6400", "2606:4700:4700::1111", "2606:4700:4700::1001"])],
-	[DNSProviderName.Google, new DNSResolveFromProvider(["8.8.8.8", "8.8.4.4", "2001:4860:4860::6464", "2001:4860:4860::64", "2001:4860:4860::8888", "2001:4860:4860::8844"])],
-	[DNSProviderName.Gcore, new DNSResolveFromProvider(["95.85.95.85", "2.56.220.2", "2a03:90c0:999d::1", "2a03:90c0:9992::1"])],
-	[DNSProviderName.Mullvad, new DNSResolveFromProvider(["194.242.2.2", "2a07:e340::2"])],
-	[DNSProviderName.OpenDNS, new DNSResolveFromProvider(["208.67.222.2", "208.67.220.2", "2620:0:ccc::2", "2620:0:ccd::2"])],
-	[DNSProviderName.Quad9, new DNSResolveFromProvider(["9.9.9.10", "149.112.112.10", "2620:fe::10", "2620:fe::fe:10"])]
+/**
+ * Key of enum of the DNS provider name.
+ */
+export type DNSProviderNameStringify = keyof typeof DNSProviderName;
+const dnsProvidersList: Map<`${DNSProviderName}`, DNSResolveFromProvider> = new Map<`${DNSProviderName}`, DNSResolveFromProvider>([
+	["adguard", new DNSResolveFromProvider(["94.140.14.140", "94.140.14.141", "2a10:50c0::1:ff", "2a10:50c0::2:ff"])],
+	["cloudflare", new DNSResolveFromProvider(["1.1.1.1", "1.0.0.1", "2606:4700:4700::64", "2606:4700:4700::6400", "2606:4700:4700::1111", "2606:4700:4700::1001"])],
+	["google", new DNSResolveFromProvider(["8.8.8.8", "8.8.4.4", "2001:4860:4860::6464", "2001:4860:4860::64", "2001:4860:4860::8888", "2001:4860:4860::8844"])],
+	["gcore", new DNSResolveFromProvider(["95.85.95.85", "2.56.220.2", "2a03:90c0:999d::1", "2a03:90c0:9992::1"])],
+	["mullvad", new DNSResolveFromProvider(["194.242.2.2", "2a07:e340::2"])],
+	["opendns", new DNSResolveFromProvider(["208.67.222.2", "208.67.220.2", "2620:0:ccc::2", "2620:0:ccd::2"])],
+	["quad9", new DNSResolveFromProvider(["9.9.9.10", "149.112.112.10", "2620:fe::10", "2620:fe::fe:10"])],
+	["quad101", new DNSResolveFromProvider(["101.101.101.101", "101.102.103.104", "2001:de4::101", "2001:de4::102"])]
 ]);
-/*
-export async function isDNSClean(query: string | URL, recordType: DNSCleanSupportRecordType, samples?: number): Promise<boolean>;
-export async function isDNSClean(query: string | URL, recordType: DNSCleanSupportRecordType, providers?: (DNSProviderName | keyof typeof DNSProviderName)[]): Promise<boolean>;
-*/
 /**
  * Determine whether the DNS query is clean (i.e.: not hijack, poison, or redirect). Only record types of "A", "AAAA", "ANAME", "CNAME", "NS", and "PTR" are supported.
  * 
  * **Require Permission:**
  * - Network (`allow-net`): All
- * @param {string | URL} query Query.
+ * @param {string} query Query.
  * @param {DNSCleanSupportRecordType} recordType Record type.
- * @param {number} [samples=2] Number of samples.
+ * @param {number | (DNSProviderName | DNSProviderNameStringify)[]} [samples=2] Number of samples, or array of DNS providers.
  * @returns {Promise<boolean>} Determine result.
  */
-export async function isDNSClean(query: string | URL, recordType: DNSCleanSupportRecordType, samples = 2): Promise<boolean> {
-	const queryResolve: string = (typeof query === "string") ? query : query.hostname;
-	if (!(Number.isSafeInteger(samples) && samples > 0)) {
-		throw new RangeError(`Argument \`samples\` is not a number which is integer, safe, and > 0!`);
-	}
-	const resultsLocal: string[] = await Deno.resolveDns(queryResolve, recordType);
-	const resultsRemote: string[] = (await Promise.all(shuffleArray(Array.from(dnsProvidersList.values())).slice(0, samples).map((dnsProvider: DNSResolveFromProvider): Promise<string[]> => {
-		return dnsProvider.resolve(queryResolve, recordType);
+export async function isDNSClean(query: string, recordType: DNSCleanSupportRecordType, samples: number | (DNSProviderName | DNSProviderNameStringify)[] = 2): Promise<boolean> {
+	const dnsProviders: DNSResolveFromProvider[] = ((): DNSResolveFromProvider[] => {
+		if (Array.isArray(samples)) {
+			return samples.map((sample: DNSProviderName | DNSProviderNameStringify): DNSResolveFromProvider => {
+				const value: DNSResolveFromProvider | undefined = dnsProvidersList.get(DNSProviderName[sample]);
+				if (typeof value === "undefined") {
+					throw new RangeError(`\`${sample}\` is not a valid DNS provider! Only accept these values: ${Array.from(new Set(Object.keys(DNSProviderName).sort()).values()).join(", ")}`);
+				}
+				return value;
+			});
+		}
+		if (samples !== Infinity && !(Number.isSafeInteger(samples) && samples > 0)) {
+			throw new RangeError(`Argument \`samples\` is not \`Infinity\`, or a number which is integer, safe, and > 0!`);
+		}
+		return shuffleArray(Array.from(dnsProvidersList.values())).slice(0, samples);
+	})();
+	const resultsLocal: string[] = await Deno.resolveDns(query, recordType).catch((reason: unknown): string[] => {
+		if (reason instanceof Deno.errors.NotFound) {
+			return [];
+		}
+		throw reason;
+	});
+	const resultsRemote: string[] = (await Promise.all(dnsProviders.map((dnsProvider: DNSResolveFromProvider): Promise<string[]> => {
+		return dnsProvider.resolve(query, recordType);
 	}))).flat();
+	if (resultsLocal.length === 0 && resultsRemote.length === 0) {
+		return true;
+	}
 	for (const resultLocal of resultsLocal) {
 		if (resultsRemote.includes(resultLocal)) {
 			return true;

@@ -18,4 +18,4 @@ export { isNumericIntegralType, isNumericPrime, NumericIntegralType, type Numeri
 export { isObjectPlain } from "./object/mod.ts";
 export { isPathExecutable, isPathExecutableSync, pathSeparator, type IsPathExecutableOptions } from "./path/mod.ts";
 export { isStringASCII, isStringCaseLower, isStringCaseUpper, isStringLowerCase, isStringSingleLine, isStringTrimmable, isStringTrimmableEnd, isStringTrimmableStart, isStringUpperCase, stringDissect, stringDissectExtend, StringDissector, stringTruncate, StringTruncator, StringSegmentType, StringTruncateEllipsisPosition, type StringDissectorOptions, type StringSegmentDescriptor, type StringSegmentDescriptorExtend, type StringTruncateEllipsisPositionStringify, type StringTruncatorOptions } from "./string/mod.ts";
-export { isTerminalInteractive, isTerminalUnicode } from "./terminal/mod.ts";
+export { getCharactersWidth, isTerminalInteractive, isTerminalUnicode } from "./terminal/mod.ts";

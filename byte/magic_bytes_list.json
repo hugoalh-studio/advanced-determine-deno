@@ -2205,9 +2205,11 @@
 		"patternVariant": "64-Bit; Reverse Byte Ordering Scheme"
 	},
 	{
-		"extensions": [],
+		"extensions": [
+			".jks"
+		],
 		"mimes": [],
-		"name": "JKS JavakeyStore",
+		"name": "Java Key Store File",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -4418,6 +4420,21 @@
 	},
 	{
 		"extensions": [
+			".ttf"
+		],
+		"mimes": [
+			"font/ttf"
+		],
+		"name": "TrueType Font",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "74 72 75 65 00"
+			}
+		]
+	},
+	{
+		"extensions": [
 			".otf"
 		],
 		"mimes": [
@@ -4788,6 +4805,323 @@
 			{
 				"fromIndex": -8,
 				"hex": "03 33 00 01 00 00 00 00"
+			}
+		]
+	},
+	{
+		"extensions": [
+			".wks"
+		],
+		"mimes": [],
+		"name": "Works for Windows Spreadsheet",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "FF 00 02 00 04 04 05 54 02 00"
+			}
+		]
+	},
+	{
+		"extensions": [
+			".qrp"
+		],
+		"mimes": [],
+		"name": "QuickReport Report File",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "FF 0A 00"
+			}
+		]
+	},
+	{
+		"extensions": [
+			".cpi"
+		],
+		"mimes": [],
+		"name": "Windows International Code Page",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "FF 46 4F 4E 54"
+			}
+		]
+	},
+	{
+		"extensions": [
+			".sys"
+		],
+		"mimes": [],
+		"name": "Keyboard Driver File",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "FF 4B 45 59 42 20 20 20"
+			}
+		]
+	},
+	{
+		"extensions": [
+			".wp",
+			".wp5",
+			".wp6",
+			".wpd",
+			".wpg",
+			".wpp"
+		],
+		"mimes": [],
+		"name": "WordPerfect Text and Graphics File",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "FF 57 50 43"
+			}
+		]
+	},
+	{
+		"extensions": [
+			".tib"
+		],
+		"mimes": [],
+		"name": "Acronis True Image",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "CE 24 B9 A2 20 00 00 00"
+			}
+		]
+	},
+	{
+		"extensions": [
+			".qdf"
+		],
+		"mimes": [],
+		"name": "Quicken Data File",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "AC 9E BD 8F 00 00"
+			}
+		]
+	},
+	{
+		"extensions": [
+			".flt"
+		],
+		"mimes": [],
+		"name": "Qimage Filter",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "76 32 30 30 33 2E 31 30 0D 0A 30 0D 0A"
+			}
+		]
+	},
+	{
+		"extensions": [
+			".dat"
+		],
+		"mimes": [],
+		"name": "Windows NT Registry Hive File",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "72 65 67 66"
+			}
+		]
+	},
+	{
+		"extensions": [
+			".acd"
+		],
+		"mimes": [],
+		"name": "Sonic Foundry Acid Music File",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "72 69 66 66"
+			}
+		]
+	},
+	{
+		"extensions": [
+			".ram"
+		],
+		"mimes": [],
+		"name": "RealMedia Metafile",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "72 74 73 70 3A 2F 2F"
+			}
+		]
+	},
+	{
+		"extensions": [
+			".torrent"
+		],
+		"mimes": [],
+		"name": "Torrent File",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "64 38 3A 61 6E 6E 6F 75 6E 63 65"
+			}
+		]
+	},
+	{
+		"extensions": [
+			".sit"
+		],
+		"mimes": [],
+		"name": "StuffIt Compressed Archive",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "53 49 54 21 00"
+			}
+		]
+	},
+	{
+		"extensions": [
+			".sdr"
+		],
+		"mimes": [],
+		"name": "SmartDraw Drawing File",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "53 4D 41 52 54 44 52 57"
+			}
+		]
+	},
+	{
+		"extensions": [
+			".spf"
+		],
+		"mimes": [],
+		"name": "StorageCraft ShadownProtect Backup File",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "53 50 46 49 00"
+			}
+		]
+	},
+	{
+		"extensions": [
+			".spvchain"
+		],
+		"mimes": [],
+		"name": "MultiBit Bitcoin Blockchain File",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "53 50 56 42"
+			}
+		]
+	},
+	{
+		"extensions": [
+			".db"
+		],
+		"mimes": [],
+		"name": "Netscape Navigator (v4) Database File",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "00 06 15 61 00 00 00 02 00 00 04 D2 00 00 10 00"
+			}
+		]
+	},
+	{
+		"extensions": [
+			".tbi"
+		],
+		"mimes": [],
+		"name": "The Bat! Secure E-mail Message Base Index File",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "01 01 47 19 A4 00 00 00 00 00 00 00"
+			}
+		]
+	},
+	{
+		"extensions": [
+			".mxf"
+		],
+		"mimes": [],
+		"name": "Material Exchange Format File",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "06 0E 2B 34 02 05 01 01 0D 01 02 01 01 02"
+			}
+		]
+	},
+	{
+		"extensions": [
+			".dat"
+		],
+		"mimes": [],
+		"name": "Runtime Software Compressed Disk Image",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "1A 52 54 53 20 43 4F 4D 50 52 45 53 53 45 44 20 49 4D 41 47 45 20 56 31 2E 30 1A"
+			}
+		]
+	},
+	{
+		"extensions": [
+			".eta"
+		],
+		"mimes": [],
+		"name": "Google Earth Keyhole Placemark File",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "23 20 54 68 69 73 20 69 73 20 61 6E 20 4B 65 79"
+			}
+		]
+	},
+	{
+		"extensions": [
+			".sav"
+		],
+		"mimes": [],
+		"name": "SPSS Statistics Data File",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "24 46 4C 32 40 28 23 29 20 53 50 53 53 20 44 41 54 41 20 46 49 4C 45"
+			}
+		]
+	},
+	{
+		"extensions": [
+			".hqx"
+		],
+		"mimes": [],
+		"name": "Macintosh BinHex 4 Compressed Archive",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "28 54 68 69 73 20 66 69 6C 65 20 6D 75 73 74 20 62 65 20 63 6F 6E 76 65 72 74 65 64 20 77 69 74 68 20 42 69 6E 48 65 78 20"
+			}
+		]
+	},
+	{
+		"extensions": [
+			".log"
+		],
+		"mimes": [],
+		"name": "Symantec Wise Installer Log File",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "2A 2A 2A 20 20 49 6E 73 74 61 6C 6C 61 74 69 6F 6E 20 53 74 61 72 74 65 64 20"
 			}
 		]
 	}

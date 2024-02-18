@@ -9,6 +9,7 @@ export interface BytesMatcherPattern<T extends string | Uint8Array> {
  */
 export class BytesMatcher {
 	#pattern: BytesMatcherPattern<Uint8Array>[];
+	#weight: bigint;
 	/**
 	 * Initialize bytes matcher.
 	 * @param {BytesMatcherPattern<string | Uint8Array>[]} pattern Pattern.
@@ -37,6 +38,11 @@ export class BytesMatcher {
 				}))
 			};
 		});
+		this.#weight = this.#pattern.map(({ hex }: BytesMatcherPattern<Uint8Array>): bigint => {
+			return BigInt(hex.length);
+		}).reduce((valuePrevious: bigint, valueCurrent: bigint): bigint => {
+			return (valuePrevious + valueCurrent);
+		}, 0n);
 	}
 	/**
 	 * Determine whether the bytes is match the specify pattern.
@@ -48,14 +54,20 @@ export class BytesMatcher {
 			if (fromIndex === "*") {
 				return bytesIncludesNeedle(item, hex);
 			}
-			const sourceSection: Uint8Array = (fromIndex >= 0) ? item.slice(fromIndex, fromIndex + hex.length) : item.slice(item.length + fromIndex, item.length + fromIndex + hex.length);
-			if (sourceSection.length !== hex.length) {
+			const itemSlice: Uint8Array = (fromIndex >= 0) ? item.slice(fromIndex, fromIndex + hex.length) : item.slice(item.length + fromIndex, item.length + fromIndex + hex.length);
+			if (itemSlice.length !== hex.length) {
 				return false;
 			}
 			return hex.every((byte: number, index: number): boolean => {
-				return (sourceSection[index] === byte);
+				return (itemSlice[index] === byte);
 			});
 		});
+	}
+	/**
+	 * Weight of the bytes matcher.
+	 */
+	get weight(): bigint {
+		return this.#weight;
 	}
 }
 export default BytesMatcher;

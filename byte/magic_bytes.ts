@@ -1,4 +1,4 @@
-import MagicBytesListRaw from "./magic_bytes_list.json" with { type: "json" };
+import MagicBytesList from "./magic_bytes_list.json" with { type: "json" };
 import { BytesMatcher, type BytesMatcherPattern } from "./matcher.ts";
 export interface MagicBytesMeta {
 	/**
@@ -24,20 +24,35 @@ export interface MagicBytesMeta {
 interface MagicBytesEntry<T extends string | Uint8Array> extends MagicBytesMeta {
 	pattern: BytesMatcherPattern<T>[];
 }
-const MagicBytesList: MagicBytesEntry<string>[] = MagicBytesListRaw as unknown as MagicBytesEntry<string>[];
+export interface MagicBytesMetaWithWeight extends MagicBytesMeta {
+	/**
+	 * Weight of the magic bytes.
+	 */
+	weight: bigint;
+}
+interface MagicBytesListEntry {
+	matcher: BytesMatcher;
+	meta: MagicBytesMeta;
+	weight: bigint;
+}
 /**
  * Magic bytes matcher to determine whether the bytes is match the specify magic bytes.
  */
 export class MagicBytesMatcher {
-	#list: Map<MagicBytesMeta, BytesMatcher> = new Map<MagicBytesMeta, BytesMatcher>();
+	#list: Set<MagicBytesListEntry> = new Set<MagicBytesListEntry>();
 	/**
 	 * Initialize magic bytes matcher.
-	 * @param {(meta: MagicBytesMeta) => boolean} [filter] Filter
+	 * @param {(meta: MagicBytesMeta) => boolean} [filter] Filter.
 	 */
 	constructor(filter?: (meta: MagicBytesMeta) => boolean) {
-		for (const { pattern, ...meta } of MagicBytesList) {
+		for (const { pattern, ...meta } of (MagicBytesList as unknown as MagicBytesEntry<string>[])) {
 			if (filter?.(meta) ?? true) {
-				this.#list.set(meta, new BytesMatcher(pattern));
+				const matcher: BytesMatcher = new BytesMatcher(pattern);
+				this.#list.add({
+					matcher,
+					meta,
+					weight: matcher.weight
+				});
 			}
 		}
 		if (this.#list.size === 0) {
@@ -45,24 +60,40 @@ export class MagicBytesMatcher {
 		}
 	}
 	/**
-	 * List meta of the magic bytes which the bytes is match.
+	 * List all of the magic bytes meta which the bytes is match.
 	 * @param item Item that need to determine.
-	 * @returns {Generator<MagicBytesMeta>} Magic bytes meta list.
+	 * @returns {Generator<MagicBytesMetaWithWeight>} Magic bytes meta list.
 	 */
-	*matchIterate(item: Uint8Array): Generator<MagicBytesMeta> {
-		for (const [meta, pattern] of this.#list.entries()) {
-			if (pattern.test(item)) {
-				yield meta;
+	*matchAllIterate(item: Uint8Array): Generator<MagicBytesMetaWithWeight> {
+		for (const { matcher, meta, weight } of this.#list.values()) {
+			if (matcher.test(item)) {
+				yield { ...meta, weight };
 			}
 		}
 	}
 	/**
-	 * List meta of the magic bytes which the bytes is match.
+	 * List all of the magic bytes meta which the bytes is match.
 	 * @param item Item that need to determine.
-	 * @returns {MagicBytesMeta[]} Magic bytes meta list.
+	 * @returns {MagicBytesMetaWithWeight[]} Magic bytes meta list.
 	 */
-	match(item: Uint8Array): MagicBytesMeta[] {
-		return Array.from(this.matchIterate(item));
+	matchAll(item: Uint8Array): MagicBytesMetaWithWeight[] {
+		return Array.from(this.matchAllIterate(item));
+	}
+	/**
+	 * Return the magic bytes meta which the bytes is match the closest.
+	 * @param item Item that need to determine.
+	 * @returns {MagicBytesMetaWithWeight | null} Magic bytes meta.
+	 */
+	match(item: Uint8Array): MagicBytesMetaWithWeight | null {
+		return this.matchAll(item).sort((a: MagicBytesMetaWithWeight, b: MagicBytesMetaWithWeight): number => {
+			if (a.weight > b.weight) {
+				return 1;
+			}
+			if (a.weight < b.weight) {
+				return -1;
+			}
+			return 0;
+		})[0] ?? null;
 	}
 	/**
 	 * Determine whether the bytes is match any of specify magic bytes.
@@ -70,7 +101,10 @@ export class MagicBytesMatcher {
 	 * @returns {boolean} Determine result.
 	 */
 	test(item: Uint8Array): boolean {
-		return (this.match(item).length > 0);
+		for (const _ of this.matchAllIterate(item)) {
+			return true;
+		}
+		return false;
 	}
 }
 export default MagicBytesMatcher;

@@ -4,5 +4,5 @@ const sampleWASM1 = new Uint8Array([0, 97, 115, 109, 1, 0, 0, 0, 1, 7, 1, 96, 2,
 Deno.test("True 1", { permissions: "none" }, () => {
 	assertEquals(new MagicBytesMatcher(({ mimes }) => {
 		return mimes.includes("application/wasm");
-	}).match(sampleWASM1).length, 1);
+	}).matchAll(sampleWASM1).length, 1);
 });

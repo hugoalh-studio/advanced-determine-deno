@@ -1,5 +1,6 @@
 [
 	{
+		"category": "spreadsheet",
 		"extensions": [
 			".wk1"
 		],
@@ -13,6 +14,7 @@
 		]
 	},
 	{
+		"category": "spreadsheet",
 		"extensions": [
 			".wk3"
 		],
@@ -26,6 +28,7 @@
 		]
 	},
 	{
+		"category": "spreadsheet",
 		"extensions": [
 			".wk4",
 			".wk5"
@@ -40,6 +43,7 @@
 		]
 	},
 	{
+		"category": "spreadsheet",
 		"extensions": [
 			".123"
 		],
@@ -55,9 +59,10 @@
 		]
 	},
 	{
+		"category": "executable",
 		"extensions": [],
 		"mimes": [],
-		"name": "Amiga Hunk Executable File",
+		"name": "Amiga Hunk Executable",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -66,6 +71,7 @@
 		]
 	},
 	{
+		"category": "document",
 		"extensions": [
 			".qxd"
 		],
@@ -82,6 +88,7 @@
 		"patternVariant": "BE"
 	},
 	{
+		"category": "document",
 		"extensions": [
 			".qxd"
 		],
@@ -98,6 +105,7 @@
 		"patternVariant": "LE"
 	},
 	{
+		"category": "database",
 		"extensions": [
 			".psafe3"
 		],
@@ -111,6 +119,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".pcap"
 		],
@@ -127,6 +136,7 @@
 		"patternVariant": "BE"
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".pcap"
 		],
@@ -143,6 +153,7 @@
 		"patternVariant": "LE"
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".pcap"
 		],
@@ -156,9 +167,10 @@
 				"hex": "A1 B2 3C 4D"
 			}
 		],
-		"patternVariant": "Nanosecond Resolution; BE"
+		"patternVariant": "Nanosecond Resolution, BE"
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".pcap"
 		],
@@ -172,13 +184,16 @@
 				"hex": "4D 3C B2 A1"
 			}
 		],
-		"patternVariant": "Nanosecond Resolution; LE"
+		"patternVariant": "Nanosecond Resolution, LE"
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".pcapng"
 		],
-		"mimes": [],
+		"mimes": [
+			"application/x-pcapng"
+		],
 		"name": "PCAP Next Generation Dump File",
 		"pattern": [
 			{
@@ -188,11 +203,13 @@
 		]
 	},
 	{
+		"category": "package",
 		"extensions": [
 			".rpm"
 		],
 		"mimes": [
-			"application/x-redhat-package-manager"
+			"application/x-redhat-package-manager",
+			"application/x-rpm"
 		],
 		"name": "RedHat Package Manager (RPM) Package",
 		"pattern": [
@@ -203,6 +220,7 @@
 		]
 	},
 	{
+		"category": "package",
 		"extensions": [
 			".bin"
 		],
@@ -216,6 +234,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".wad"
 		],
@@ -231,6 +250,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".pdb"
 		],
@@ -860,6 +880,24 @@
 		]
 	},
 	{
+		"category": "image",
+		"extensions": [
+			".pgm"
+		],
+		"mimes": [
+			"image/x-portable-graymap"
+		],
+		"name": "Portable Gray Map Binary",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "50 35 09"
+			}
+		],
+		"patternVariant": "Tab"
+	},
+	{
+		"category": "image",
 		"extensions": [
 			".pgm"
 		],
@@ -872,9 +910,62 @@
 				"fromIndex": 0,
 				"hex": "50 35 0A"
 			}
-		]
+		],
+		"patternVariant": "LF"
 	},
 	{
+		"category": "image",
+		"extensions": [
+			".pgm"
+		],
+		"mimes": [
+			"image/x-portable-graymap"
+		],
+		"name": "Portable Gray Map Binary",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "50 35 0D"
+			}
+		],
+		"patternVariant": "CR"
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".pgm"
+		],
+		"mimes": [
+			"image/x-portable-graymap"
+		],
+		"name": "Portable Gray Map Binary",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "50 35 20"
+			}
+		],
+		"patternVariant": "Space"
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".ppm"
+		],
+		"mimes": [
+			"image/x-portable-pixmap"
+		],
+		"name": "Portable Pixmap ASCII",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "50 33 09"
+			}
+		],
+		"patternVariant": "Tab"
+	},
+	{
+		"category": "image",
 		"extensions": [
 			".ppm"
 		],
@@ -887,9 +978,62 @@
 				"fromIndex": 0,
 				"hex": "50 33 0A"
 			}
-		]
+		],
+		"patternVariant": "LF"
 	},
 	{
+		"category": "image",
+		"extensions": [
+			".ppm"
+		],
+		"mimes": [
+			"image/x-portable-pixmap"
+		],
+		"name": "Portable Pixmap ASCII",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "50 33 0D"
+			}
+		],
+		"patternVariant": "CR"
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".ppm"
+		],
+		"mimes": [
+			"image/x-portable-pixmap"
+		],
+		"name": "Portable Pixmap ASCII",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "50 33 20"
+			}
+		],
+		"patternVariant": "Space"
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".ppm"
+		],
+		"mimes": [
+			"image/x-portable-pixmap"
+		],
+		"name": "Portable Pixmap Binary",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "50 36 09"
+			}
+		],
+		"patternVariant": "Tab"
+	},
+	{
+		"category": "image",
 		"extensions": [
 			".ppm"
 		],
@@ -902,7 +1046,42 @@
 				"fromIndex": 0,
 				"hex": "50 36 0A"
 			}
-		]
+		],
+		"patternVariant": "LF"
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".ppm"
+		],
+		"mimes": [
+			"image/x-portable-pixmap"
+		],
+		"name": "Portable Pixmap Binary",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "50 36 0D"
+			}
+		],
+		"patternVariant": "CR"
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".ppm"
+		],
+		"mimes": [
+			"image/x-portable-pixmap"
+		],
+		"name": "Portable Pixmap Binary",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "50 36 20"
+			}
+		],
+		"patternVariant": "Space"
 	},
 	{
 		"extensions": [
@@ -1114,12 +1293,15 @@
 		]
 	},
 	{
+		"category": "compressed",
 		"extensions": [
 			".tar.z",
 			".z"
 		],
-		"mimes": [],
-		"name": "Tar Zip Lempel-Ziv-Welch Algorithm Archive",
+		"mimes": [
+			"application/x-compress"
+		],
+		"name": "Tar Zip Lempel-Ziv-Welch Algorithm Archive / UNIX Compress",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -1132,8 +1314,10 @@
 			".tar.z",
 			".z"
 		],
-		"mimes": [],
-		"name": "Tar Zip LZH Algorithm Archive",
+		"mimes": [
+			"application/x-compress"
+		],
+		"name": "Tar Zip LZH Algorithm Archive / UNIX Compress",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -1933,31 +2117,16 @@
 		]
 	},
 	{
+		"category": "executable",
 		"extensions": [
 			".exe"
 		],
 		"mimes": [
+			"application/x-dosexec",
 			"application/x-msdos-program",
 			"application/x-msdownload"
 		],
-		"name": "DOS Executable File",
-		"pattern": [
-			{
-				"fromIndex": 0,
-				"hex": "5A 4D"
-			}
-		],
-		"patternVariant": "ZM"
-	},
-	{
-		"extensions": [
-			".exe"
-		],
-		"mimes": [
-			"application/x-msdos-program",
-			"application/x-msdownload"
-		],
-		"name": "DOS Executable File",
+		"name": "MS-DOS Executable",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -1965,6 +2134,25 @@
 			}
 		],
 		"patternVariant": "MZ"
+	},
+	{
+		"category": "executable",
+		"extensions": [
+			".exe"
+		],
+		"mimes": [
+			"application/x-dosexec",
+			"application/x-msdos-program",
+			"application/x-msdownload"
+		],
+		"name": "MS-DOS Executable",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "5A 4D"
+			}
+		],
+		"patternVariant": "ZM"
 	},
 	{
 		"extensions": [
@@ -2142,7 +2330,7 @@
 				"hex": "FE ED FA CE"
 			}
 		],
-		"patternVariant": "32-Bit; Head 0"
+		"patternVariant": "32-Bit, Head 0"
 	},
 	{
 		"extensions": [],
@@ -2154,7 +2342,7 @@
 				"hex": "FE ED FA CE"
 			}
 		],
-		"patternVariant": "32-Bit; Head 4096"
+		"patternVariant": "32-Bit, Head 4096"
 	},
 	{
 		"extensions": [],
@@ -2166,7 +2354,7 @@
 				"hex": "FE ED FA CF"
 			}
 		],
-		"patternVariant": "64-Bit; Head 0"
+		"patternVariant": "64-Bit, Head 0"
 	},
 	{
 		"extensions": [],
@@ -2178,7 +2366,7 @@
 				"hex": "FE ED FA CF"
 			}
 		],
-		"patternVariant": "64-Bit; Head 4096"
+		"patternVariant": "64-Bit, Head 4096"
 	},
 	{
 		"extensions": [],
@@ -2190,7 +2378,7 @@
 				"hex": "CE FA ED FE"
 			}
 		],
-		"patternVariant": "32-Bit; Reverse Byte Ordering Scheme"
+		"patternVariant": "32-Bit, Reverse Byte Ordering Scheme"
 	},
 	{
 		"extensions": [],
@@ -2202,7 +2390,7 @@
 				"hex": "CF FA ED FE"
 			}
 		],
-		"patternVariant": "64-Bit; Reverse Byte Ordering Scheme"
+		"patternVariant": "64-Bit, Reverse Byte Ordering Scheme"
 	},
 	{
 		"extensions": [
@@ -2830,6 +3018,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".der"
 		],
@@ -3255,6 +3444,7 @@
 		]
 	},
 	{
+		"category": "compressed",
 		"extensions": [
 			".gz",
 			".tar.gz"
@@ -5124,5 +5314,53 @@
 				"hex": "2A 2A 2A 20 20 49 6E 73 74 61 6C 6C 61 74 69 6F 6E 20 53 74 61 72 74 65 64 20"
 			}
 		]
+	},
+	{
+		"extensions": [
+			".sln"
+		],
+		"mimes": [
+			"application/vnd.ms-developer"
+		],
+		"name": "Microsoft Visual Studio Solution",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "EF BB BF 0D 0A 4D 69 63 72 6F 73 6F 66 74 20 56 69 73 75 61 6C 20 53 74 75 64 69 6F 20 53 6F 6C 75 74 69 6F 6E 20 46 69 6C 65 2C 20 46 6F 72 6D 61 74 20 56 65 72 73 69 6F 6E 20"
+			}
+		],
+		"patternVariant": "BOM CRLF"
+	},
+	{
+		"extensions": [
+			".sln"
+		],
+		"mimes": [
+			"application/vnd.ms-developer"
+		],
+		"name": "Microsoft Visual Studio Solution",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "EF BB BF 0A 4D 69 63 72 6F 73 6F 66 74 20 56 69 73 75 61 6C 20 53 74 75 64 69 6F 20 53 6F 6C 75 74 69 6F 6E 20 46 69 6C 65 2C 20 46 6F 72 6D 61 74 20 56 65 72 73 69 6F 6E 20"
+			}
+		],
+		"patternVariant": "BOM LF"
+	},
+	{
+		"extensions": [
+			".sln"
+		],
+		"mimes": [
+			"application/vnd.ms-developer"
+		],
+		"name": "Microsoft Visual Studio Solution",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "4D 69 63 72 6F 73 6F 66 74 20 56 69 73 75 61 6C 20 53 74 75 64 69 6F 20 53 6F 6C 75 74 69 6F 6E 20 46 69 6C 65 2C 20 46 6F 72 6D 61 74 20 56 65 72 73 69 6F 6E 20"
+			}
+		],
+		"patternVariant": "Plain"
 	}
 ]

@@ -17,6 +17,7 @@ await Deno.writeTextFile(pathJoin(root, `${fileName}.tsv`), `${csvStringify(data
 	}
 }), {
 	columns: [
+		"category",
 		"extensions",
 		"mimes",
 		"name",

@@ -1,6 +1,6 @@
 export { isArrayStrict, isArrayUnique, isArrayUniqueReference } from "./array/mod.ts";
 export { isBigIntEven, isBigIntIntegralType, isBigIntNegative, isBigIntOdd, isBigIntPositive, isBigIntPrime, isBigIntSafe, isBigIntegerEven, isBigIntegerIntegralType, isBigIntegerNegative, isBigIntegerOdd, isBigIntegerPositive, isBigIntegerPrime, isBigIntegerSafe } from "./bigint/mod.ts";
-export { BytesMatcher, MagicBytesMatcher, type BytesMatcherPattern, type MagicBytesMeta } from "./byte/mod.ts";
+export { BytesMatcher, MagicBytesMatcher, type BytesMatcherPattern, type MagicBytesCategory, type MagicBytesMeta, type MagicBytesMetaWithWeight } from "./byte/mod.ts";
 export { environmentValueDelimiter, getEnvironmentPathExts, getEnvironmentPaths, isEnvironmentCI, isEnvironmentDocker, isEnvironmentDockerSync, isEnvironmentHeroku, isEnvironmentHyper, isEnvironmentPodman, isEnvironmentPodmanSync, isEnvironmentRoot, isEnvironmentSSH, isEnvironmentTravis, isEnvironmentWSL, isEnvironmentWSLSync } from "./environment/mod.ts";
 export { GitHubWebhookDeliveryValidator, type GitHubWebhookDeliveryMeta } from "./github/mod.ts";
 export { isAsyncFunction, isAsynchronousFunction } from "./is_async_function.ts";

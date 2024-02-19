@@ -4,6 +4,33 @@
 	"items": {
 		"type": "object",
 		"properties": {
+			"category": {
+				"enum": [
+					"archive",
+					"audio",
+					"compressed",
+					"database",
+					"diagram",
+					"disk",
+					"document",
+					"ebook",
+					"executable",
+					"font",
+					"formula",
+					"geospatial",
+					"image",
+					"metadata",
+					"model",
+					"other",
+					"package",
+					"playlist",
+					"presentation",
+					"rom",
+					"spreadsheet",
+					"subtitle",
+					"video"
+				]
+			},
 			"extensions": {
 				"type": "array",
 				"items": {

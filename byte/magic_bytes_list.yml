@@ -5,21 +5,24 @@
 # - https://en.wikipedia.org/wiki/Magic_number_(programming)#In_files
 # - https://github.com/mmalecot/file-format
 # - https://www.garykessler.net/library/file_sigs.html
-- extensions:
+- category: "spreadsheet"
+  extensions:
     - ".wk1"
   mimes: []
   name: "Lotus 1-2-3 Spreadsheet (V1) File"
   pattern:
     - fromIndex: 0
       hex: "00 00 02 00 06 04 06 00 08 00 00 00 00 00"
-- extensions:
+- category: "spreadsheet"
+  extensions:
     - ".wk3"
   mimes: []
   name: "Lotus 1-2-3 Spreadsheet (V3) File"
   pattern:
     - fromIndex: 0
       hex: "00 00 1A 00 00 10 04 00 00 00 00 00"
-- extensions:
+- category: "spreadsheet"
+  extensions:
     - ".wk4"
     - ".wk5"
   mimes: []
@@ -27,7 +30,8 @@
   pattern:
     - fromIndex: 0
       hex: "00 00 1A 00 02 10 04 00 00 00 00 00"
-- extensions:
+- category: "spreadsheet"
+  extensions:
     - ".123"
   mimes:
     - "application/vnd.lotus-1-2-3"
@@ -35,13 +39,15 @@
   pattern:
     - fromIndex: 0
       hex: "00 00 1A 00 05 10 04"
-- extensions: []
+- category: "executable"
+  extensions: []
   mimes: []
-  name: "Amiga Hunk Executable File"
+  name: "Amiga Hunk Executable"
   pattern:
     - fromIndex: 0
       hex: "00 00 03 F3"
 - &QuarkExpressDocumentGroup
+  category: "document"
   extensions:
     - ".qxd"
   mimes:
@@ -56,7 +62,8 @@
     - fromIndex: 0
       hex: "00 00 49 49 58 50 52"
   patternVariant: "LE"
-- extensions:
+- category: "database"
+  extensions:
     - ".psafe3"
   mimes: []
   name: "Password Gorilla Password Database"
@@ -64,6 +71,7 @@
     - fromIndex: 0
       hex: "50 57 53 33"
 - &LibpcapFileGroup
+  category: "other"
   extensions:
     - ".pcap"
   mimes:
@@ -82,35 +90,41 @@
   pattern:
     - fromIndex: 0
       hex: "A1 B2 3C 4D"
-  patternVariant: "Nanosecond Resolution; BE"
+  patternVariant: "Nanosecond Resolution, BE"
 - <<: *LibpcapFileGroup
   pattern:
     - fromIndex: 0
       hex: "4D 3C B2 A1"
-  patternVariant: "Nanosecond Resolution; LE"
-- extensions:
+  patternVariant: "Nanosecond Resolution, LE"
+- category: "other"
+  extensions:
     - ".pcapng"
-  mimes: []
+  mimes:
+    - "application/x-pcapng"
   name: "PCAP Next Generation Dump File"
   pattern:
     - fromIndex: 0
       hex: "0A 0D 0D 0A"
-- extensions:
+- category: "package"
+  extensions:
     - ".rpm"
   mimes:
     - "application/x-redhat-package-manager"
+    - "application/x-rpm"
   name: "RedHat Package Manager (RPM) Package"
   pattern:
     - fromIndex: 0
       hex: "ED AB EE DB"
-- extensions:
+- category: "package"
+  extensions:
     - ".bin"
   mimes: []
   name: "Amazon Kindle Update Package"
   pattern:
     - fromIndex: 0
       hex: "53 50 30 31"
-- extensions:
+- category: "other"
+  extensions:
     - ".wad"
   mimes:
     - "application/x-doom"
@@ -118,7 +132,8 @@
   pattern:
     - fromIndex: 0
       hex: "49 57 41 44"
-- extensions:
+- category: "other"
+  extensions:
     - ".pdb"
   mimes:
     - "application/vnd.palm"
@@ -433,30 +448,84 @@
   pattern:
     - fromIndex: 0
       hex: "50 32 0A"
-- extensions:
+- &PortableGrayMapBinaryGroup
+  category: "image"
+  extensions:
     - ".pgm"
   mimes:
     - "image/x-portable-graymap"
   name: "Portable Gray Map Binary"
   pattern:
     - fromIndex: 0
+      hex: "50 35 09"
+  patternVariant: "Tab"
+- <<: *PortableGrayMapBinaryGroup
+  pattern:
+    - fromIndex: 0
       hex: "50 35 0A"
-- extensions:
+  patternVariant: "LF"
+- <<: *PortableGrayMapBinaryGroup
+  pattern:
+    - fromIndex: 0
+      hex: "50 35 0D"
+  patternVariant: "CR"
+- <<: *PortableGrayMapBinaryGroup
+  pattern:
+    - fromIndex: 0
+      hex: "50 35 20"
+  patternVariant: "Space"
+- &PortablePixmapASCIIGroup
+  category: "image"
+  extensions:
     - ".ppm"
   mimes:
     - "image/x-portable-pixmap"
   name: "Portable Pixmap ASCII"
   pattern:
     - fromIndex: 0
+      hex: "50 33 09"
+  patternVariant: "Tab"
+- <<: *PortablePixmapASCIIGroup
+  pattern:
+    - fromIndex: 0
       hex: "50 33 0A"
-- extensions:
+  patternVariant: "LF"
+- <<: *PortablePixmapASCIIGroup
+  pattern:
+    - fromIndex: 0
+      hex: "50 33 0D"
+  patternVariant: "CR"
+- <<: *PortablePixmapASCIIGroup
+  pattern:
+    - fromIndex: 0
+      hex: "50 33 20"
+  patternVariant: "Space"
+- &PortablePixmapBinaryGroup
+  category: "image"
+  extensions:
     - ".ppm"
   mimes:
     - "image/x-portable-pixmap"
   name: "Portable Pixmap Binary"
   pattern:
     - fromIndex: 0
+      hex: "50 36 09"
+  patternVariant: "Tab"
+- <<: *PortablePixmapBinaryGroup
+  pattern:
+    - fromIndex: 0
       hex: "50 36 0A"
+  patternVariant: "LF"
+- <<: *PortablePixmapBinaryGroup
+  pattern:
+    - fromIndex: 0
+      hex: "50 36 0D"
+  patternVariant: "CR"
+- <<: *PortablePixmapBinaryGroup
+  pattern:
+    - fromIndex: 0
+      hex: "50 36 20"
+  patternVariant: "Space"
 - extensions:
     - ".j2c"
     - ".j2k"
@@ -578,19 +647,22 @@
     - "video/3gpp2"
   name: "3rd Generation Partnership Project 2 Multimedia File"
   pattern: *3GPPPattern
-- extensions:
+- category: "compressed"
+  extensions:
     - ".tar.z"
     - ".z"
-  mimes: []
-  name: "Tar Zip Lempel-Ziv-Welch Algorithm Archive"
+  mimes:
+    - "application/x-compress"
+  name: "Tar Zip Lempel-Ziv-Welch Algorithm Archive / UNIX Compress"
   pattern:
     - fromIndex: 0
       hex: "1F 9D"
 - extensions:
     - ".tar.z"
     - ".z"
-  mimes: []
-  name: "Tar Zip LZH Algorithm Archive"
+  mimes:
+    - "application/x-compress"
+  name: "Tar Zip LZH Algorithm Archive / UNIX Compress"
   pattern:
     - fromIndex: 0
       hex: "1F A0"
@@ -997,21 +1069,23 @@
     - fromIndex: 0
       hex: "30 37 30 37 30 37"
 - &EXEGroup
+  category: "executable"
   extensions:
     - ".exe"
   mimes:
+    - "application/x-dosexec"
     - "application/x-msdos-program"
     - "application/x-msdownload"
-  name: "DOS Executable File"
-  pattern:
-    - fromIndex: 0
-      hex: "5A 4D"
-  patternVariant: "ZM"
-- <<: *EXEGroup
+  name: "MS-DOS Executable"
   pattern:
     - fromIndex: 0
       hex: "4D 5A"
   patternVariant: "MZ"
+- <<: *EXEGroup
+  pattern:
+    - fromIndex: 0
+      hex: "5A 4D"
+  patternVariant: "ZM"
 - extensions:
     - ".rar"
   mimes: 
@@ -1109,32 +1183,32 @@
   pattern:
     - fromIndex: 0
       hex: "FE ED FA CE"
-  patternVariant: "32-Bit; Head 0"
+  patternVariant: "32-Bit, Head 0"
 - <<: *MachOBinaryGroup
   pattern:
     - fromIndex: 0x1000
       hex: "FE ED FA CE"
-  patternVariant: "32-Bit; Head 4096"
+  patternVariant: "32-Bit, Head 4096"
 - <<: *MachOBinaryGroup
   pattern:
     - fromIndex: 0
       hex: "FE ED FA CF"
-  patternVariant: "64-Bit; Head 0"
+  patternVariant: "64-Bit, Head 0"
 - <<: *MachOBinaryGroup
   pattern:
     - fromIndex: 0x1000
       hex: "FE ED FA CF"
-  patternVariant: "64-Bit; Head 4096"
+  patternVariant: "64-Bit, Head 4096"
 - <<: *MachOBinaryGroup
   pattern:
     - fromIndex: 0
       hex: "CE FA ED FE"
-  patternVariant: "32-Bit; Reverse Byte Ordering Scheme"
+  patternVariant: "32-Bit, Reverse Byte Ordering Scheme"
 - <<: *MachOBinaryGroup
   pattern:
     - fromIndex: 0
       hex: "CF FA ED FE"
-  patternVariant: "64-Bit; Reverse Byte Ordering Scheme"
+  patternVariant: "64-Bit, Reverse Byte Ordering Scheme"
 - extensions:
     - ".jks"
   mimes: []
@@ -1471,7 +1545,8 @@
   pattern:
     - fromIndex: 0
       hex: "4D 49 4C 20"
-- extensions:
+- category: "other"
+  extensions:
     - ".der"
   mimes:
     - "application/x-x509-ca-cert"
@@ -1699,7 +1774,8 @@
   pattern:
     - fromIndex: 0
       hex: "0F 53 49 42 45 4C 49 55 53"
-- extensions:
+- category: "compressed"
+  extensions:
     - ".gz"
     - ".tar.gz"
   mimes:

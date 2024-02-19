@@ -1,6 +1,14 @@
 import MagicBytesList from "./magic_bytes_list.json" with { type: "json" };
 import { BytesMatcher, type BytesMatcherPattern } from "./matcher.ts";
+export type MagicBytesCategory = "archive" | "audio" | "compressed" | "database" | "diagram" | "disk" | "document" | "ebook" | "executable" | "font" | "formula" | "geospatial" | "image" | "metadata" | "model" | "other" | "package" | "playlist" | "presentation" | "rom" | "spreadsheet" | "subtitle" | "video";
 export interface MagicBytesMeta {
+	/**
+	 * Category of the magic bytes.
+	 * 
+	 * **NOTE:** Assign category is in progress, and will not `undefined` afterward.
+	 * @default undefined
+	 */
+	category?: MagicBytesCategory;
 	/**
 	 * Extensions of the magic bytes.
 	 * @default []
@@ -16,7 +24,7 @@ export interface MagicBytesMeta {
 	 */
 	name: string;
 	/**
-	 * Pattern variant of the magic bytes.
+	 * Pattern variant of the magic bytes. Only available when multiple patterns with same meta.
 	 * @default undefined
 	 */
 	patternVariant?: string;

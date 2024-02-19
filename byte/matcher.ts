@@ -68,6 +68,55 @@ export class BytesMatcher {
 		return true;
 	}
 	/**
+	 * Determine whether the file is match the specify pattern.
+	 * @param {Deno.FsFile} file File that need to determine.
+	 * @returns {Promise<boolean>} Determine result.
+	 */
+	async testFile(file: Deno.FsFile): Promise<boolean> {
+		const info: Deno.FileInfo = await file.stat();
+		if (!info.isFile) {
+			throw new Error(`This is not a file!`);
+		}
+		if (info.size === 0) {
+			return false;
+		}
+		const reader = file.readable.getReader();
+		const item: number[] = [];
+		let finish = false;
+		while (!finish) {
+			const { done, value = [] } = await reader.read();
+			if (value.length > 0) {
+				item.push(...Array.from(value));
+			}
+			finish = (
+				done ||
+				item.length >= this.#bytesMinimum
+			);
+		}
+		return this.test(Uint8Array.of(...item));
+	}
+	/**
+	 * Determine whether the file is match the specify pattern.
+	 * @param {Deno.FsFile} file File that need to determine.
+	 * @returns {boolean} Determine result.
+	 */
+	testFileSync(file: Deno.FsFile): boolean {
+		const info: Deno.FileInfo = file.statSync();
+		if (!info.isFile) {
+			throw new Error(`This is not a file!`);
+		}
+		if (info.size === 0) {
+			return false;
+		}
+		const lengthNeed: number = Math.min(info.size, this.#bytesMinimum);
+		const reader = new Uint8Array(lengthNeed);
+		const lengthRead: number = file.readSync(reader) ?? 0;
+		if (lengthNeed !== lengthRead) {
+			throw new Deno.errors.InvalidData();
+		}
+		return this.test(reader);
+	}
+	/**
 	 * Require minimum bytes to read in the stream for the bytes matcher. Useful for file stream.
 	 * @returns {number} Minimum bytes to read in the stream.
 	 */

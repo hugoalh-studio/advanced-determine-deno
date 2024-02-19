@@ -1,8 +1,9 @@
 # yaml-language-server: $schema=./magic_bytes_list.schema.json
 
-# SOURCES:
+# Sources:
 # - https://en.wikipedia.org/wiki/List_of_file_signatures
 # - https://en.wikipedia.org/wiki/Magic_number_(programming)#In_files
+# - https://github.com/mmalecot/file-format
 # - https://www.garykessler.net/library/file_sigs.html
 - extensions:
     - ".wk1"
@@ -2713,3 +2714,23 @@
   pattern:
     - fromIndex: 0
       hex: "2A 2A 2A 20 20 49 6E 73 74 61 6C 6C 61 74 69 6F 6E 20 53 74 61 72 74 65 64 20"
+- &MicrosoftVisualStudioSolutionGroup
+  extensions:
+    - ".sln"
+  mimes:
+    - "application/vnd.ms-developer"
+  name: "Microsoft Visual Studio Solution"
+  pattern:
+    - fromIndex: 0
+      hex: "EF BB BF 0D 0A 4D 69 63 72 6F 73 6F 66 74 20 56 69 73 75 61 6C 20 53 74 75 64 69 6F 20 53 6F 6C 75 74 69 6F 6E 20 46 69 6C 65 2C 20 46 6F 72 6D 61 74 20 56 65 72 73 69 6F 6E 20"
+  patternVariant: "BOM CRLF"
+- <<: *MicrosoftVisualStudioSolutionGroup
+  pattern:
+    - fromIndex: 0
+      hex: "EF BB BF 0A 4D 69 63 72 6F 73 6F 66 74 20 56 69 73 75 61 6C 20 53 74 75 64 69 6F 20 53 6F 6C 75 74 69 6F 6E 20 46 69 6C 65 2C 20 46 6F 72 6D 61 74 20 56 65 72 73 69 6F 6E 20"
+  patternVariant: "BOM LF"
+- <<: *MicrosoftVisualStudioSolutionGroup
+  pattern:
+    - fromIndex: 0
+      hex: "4D 69 63 72 6F 73 6F 66 74 20 56 69 73 75 61 6C 20 53 74 75 64 69 6F 20 53 6F 6C 75 74 69 6F 6E 20 46 69 6C 65 2C 20 46 6F 72 6D 61 74 20 56 65 72 73 69 6F 6E 20"
+  patternVariant: "Plain"

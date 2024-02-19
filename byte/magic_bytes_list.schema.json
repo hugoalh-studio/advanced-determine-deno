@@ -33,17 +33,7 @@
 					"type": "object",
 					"properties": {
 						"fromIndex": {
-							"anyOf": [
-								{
-									"type": "integer"
-								},
-								{
-									"type": "string",
-									"enum": [
-										"*"
-									]
-								}
-							]
+							"type": "integer"
 						},
 						"hex": {
 							"type": "string",

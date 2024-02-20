@@ -2619,7 +2619,7 @@
   name: "Serialized Java Data"
   signature:
     - fromIndex: 0
-      pattern: "\xACí"
+      pattern: "¬í"
 - extensions:
     - ".voc"
   mimes: []
@@ -2641,7 +2641,7 @@
   name: "OpenGL Iris Perfomer Performer Fast Binary (PFB)"
   signature:
     - fromIndex: 0
-      pattern: "\xDB\nÎ\x00"
+      pattern: "Û\nÎ\x00"
 - extensions:
     - ".hazelrules"
   mimes: []
@@ -2762,14 +2762,14 @@
   name: "VBScript Encoded Script"
   signature:
     - fromIndex: 0
-      pattern: "#@\x7E\x5E"
+      pattern: "#@~^"
 - extensions:
     - ".cdb"
   mimes: []
   name: "MikroTik WinBox Connection Database (Address Book)"
   signature:
     - fromIndex: 0
-      pattern: "\r\xF0\x1D\xC0"
+      pattern: "\rð\x1DÀ"
 - extensions:
     - ".mdf"
   mimes: []
@@ -2783,16 +2783,16 @@
   name: "ASCII85/BASE85 Encoded File"
   signature:
     - fromIndex: 0
-      pattern: "<\x7E6<\\%_0gS\x71h\x3B"
+      pattern: "<~6<\\%_0gSqh;"
     - fromIndex: -3
-      pattern: "\x7E>\n"
+      pattern: "~>\n"
 - extensions:
     - ".jb2"
   mimes: []
   name: "JBIG2 Image"
   signature:
     - fromIndex: 0
-      pattern: "\x97JB2\r\n\x1A\n"
+      pattern: "JB2\r\n\x1A\n"
     - fromIndex: -8
       pattern: "\x033\x00\x01\x00\x00\x00\x00"
 - extensions:
@@ -2841,14 +2841,14 @@
   name: "Acronis True Image"
   signature:
     - fromIndex: 0
-      pattern: "Î$\xB9\xA2 \x00\x00\x00"
+      pattern: "Î$¹¢ \x00\x00\x00"
 - extensions:
     - ".qdf"
   mimes: []
   name: "Quicken Data File"
   signature:
     - fromIndex: 0
-      pattern: "\xAC\x9E\xBD\x8F\x00\x00"
+      pattern: "¬\x9E½\x8F\x00\x00"
 - extensions:
     - ".flt"
   mimes: []
@@ -2918,14 +2918,14 @@
   name: "Netscape Navigator (v4) Database File"
   signature:
     - fromIndex: 0
-      pattern: "\x00\x06\x15a\x00\x00\x00\x02\x00\x00\x04\xD2\x00\x00\x10\x00"
+      pattern: "\x00\x06\x15a\x00\x00\x00\x02\x00\x00\x04Ò\x00\x00\x10\x00"
 - extensions:
     - ".tbi"
   mimes: []
   name: "The Bat! Secure E-mail Message Base Index File"
   signature:
     - fromIndex: 0
-      pattern: "\x01\x01G\x19\xA4\x00\x00\x00\x00\x00\x00\x00"
+      pattern: "\x01\x01G\x19¤\x00\x00\x00\x00\x00\x00\x00"
 - extensions:
     - ".mxf"
   mimes: []
@@ -2980,15 +2980,15 @@
   name: "Microsoft Visual Studio Solution"
   signature:
     - fromIndex: 0
-      pattern: "\xEF\xBB\xBF\r\nMicrosoft Visual Studio Solution File\x2C Format Version "
+      pattern: "ï»¿\r\nMicrosoft Visual Studio Solution File, Format Version "
   variant: "BOM CRLF"
 - <<: *MicrosoftVisualStudioSolutionGroup
   signature:
     - fromIndex: 0
-      pattern: "\xEF\xBB\xBF\nMicrosoft Visual Studio Solution File\x2C Format Version "
+      pattern: "ï»¿\nMicrosoft Visual Studio Solution File, Format Version "
   variant: "BOM LF"
 - <<: *MicrosoftVisualStudioSolutionGroup
   signature:
     - fromIndex: 0
-      pattern: "Microsoft Visual Studio Solution File\x2C Format Version "
+      pattern: "Microsoft Visual Studio Solution File, Format Version "
   variant: "Plain"

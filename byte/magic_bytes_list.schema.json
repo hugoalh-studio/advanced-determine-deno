@@ -54,7 +54,7 @@
 				"minLength": 1,
 				"pattern": "^(?:[^\\s].*)?[^\\s]$"
 			},
-			"pattern": {
+			"signature": {
 				"type": "array",
 				"items": {
 					"type": "object",
@@ -62,20 +62,19 @@
 						"fromIndex": {
 							"type": "integer"
 						},
-						"hex": {
+						"pattern": {
 							"type": "string",
-							"minLength": 1,
-							"pattern": "^[\\dA-F]{2}(?: [\\dA-F]{2})*$"
+							"minLength": 1
 						}
 					},
 					"required": [
 						"fromIndex",
-						"hex"
+						"pattern"
 					]
 				},
 				"uniqueItems": true
 			},
-			"patternVariant": {
+			"variant": {
 				"type": "string",
 				"minLength": 1,
 				"pattern": "^(?:[^\\s].*)?[^\\s]$"
@@ -86,7 +85,7 @@
 			"extensions",
 			"mimes",
 			"name",
-			"pattern"
+			"signature"
 		]
 	},
 	"uniqueItems": true

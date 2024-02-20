@@ -13,7 +13,7 @@ await Deno.writeTextFile(pathJoin(root, `${fileName}.tsv`), `${csvStringify(data
 		..._,
 		extensions: _.extensions.join(", "),
 		mimes: _.mimes.join(", "),
-		pattern: JSON.stringify(_.pattern)
+		signature: JSON.stringify(_.signature)
 	}
 }), {
 	columns: [
@@ -21,8 +21,8 @@ await Deno.writeTextFile(pathJoin(root, `${fileName}.tsv`), `${csvStringify(data
 		"extensions",
 		"mimes",
 		"name",
-		"pattern",
-		"patternVariant"
+		"signature",
+		"variant"
 	],
 	separator: "\t"
 })}`);

@@ -6,10 +6,10 @@
 		],
 		"mimes": [],
 		"name": "Lotus 1-2-3 Spreadsheet (V1) File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "00 00 02 00 06 04 06 00 08 00 00 00 00 00"
+				"pattern": "\u0000\u0000\u0002\u0000\u0006\u0004\u0006\u0000\b\u0000\u0000\u0000\u0000\u0000"
 			}
 		]
 	},
@@ -20,10 +20,10 @@
 		],
 		"mimes": [],
 		"name": "Lotus 1-2-3 Spreadsheet (V3) File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "00 00 1A 00 00 10 04 00 00 00 00 00"
+				"pattern": "\u0000\u0000\u001a\u0000\u0000\u0010\u0004\u0000\u0000\u0000\u0000\u0000"
 			}
 		]
 	},
@@ -35,10 +35,10 @@
 		],
 		"mimes": [],
 		"name": "Lotus 1-2-3 Spreadsheet (V4 / V5) File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "00 00 1A 00 02 10 04 00 00 00 00 00"
+				"pattern": "\u0000\u0000\u001a\u0000\u0002\u0010\u0004\u0000\u0000\u0000\u0000\u0000"
 			}
 		]
 	},
@@ -51,10 +51,10 @@
 			"application/vnd.lotus-1-2-3"
 		],
 		"name": "Lotus 1-2-3 Spreadsheet (V9) File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "00 00 1A 00 05 10 04"
+				"pattern": "\u0000\u0000\u001a\u0000\u0005\u0010\u0004"
 			}
 		]
 	},
@@ -63,10 +63,10 @@
 		"extensions": [],
 		"mimes": [],
 		"name": "Amiga Hunk Executable",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "00 00 03 F3"
+				"pattern": "\u0000\u0000\u0003ó"
 			}
 		]
 	},
@@ -79,13 +79,13 @@
 			"application/vnd.quark.quarkxpress"
 		],
 		"name": "Quark Express Document",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "00 00 4D 4D 58 50 52"
+				"pattern": "\u0000\u0000MMXPR"
 			}
 		],
-		"patternVariant": "BE"
+		"variant": "BE"
 	},
 	{
 		"category": "document",
@@ -96,13 +96,13 @@
 			"application/vnd.quark.quarkxpress"
 		],
 		"name": "Quark Express Document",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "00 00 49 49 58 50 52"
+				"pattern": "\u0000\u0000IIXPR"
 			}
 		],
-		"patternVariant": "LE"
+		"variant": "LE"
 	},
 	{
 		"category": "database",
@@ -111,10 +111,10 @@
 		],
 		"mimes": [],
 		"name": "Password Gorilla Password Database",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "50 57 53 33"
+				"pattern": "PWS3"
 			}
 		]
 	},
@@ -127,13 +127,13 @@
 			"application/vnd.tcpdump.pcap"
 		],
 		"name": "Libpcap File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "A1 B2 C3 D4"
+				"pattern": "¡²ÃÔ"
 			}
 		],
-		"patternVariant": "BE"
+		"variant": "BE"
 	},
 	{
 		"category": "other",
@@ -144,13 +144,13 @@
 			"application/vnd.tcpdump.pcap"
 		],
 		"name": "Libpcap File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "D4 C3 B2 A1"
+				"pattern": "ÔÃ²¡"
 			}
 		],
-		"patternVariant": "LE"
+		"variant": "LE"
 	},
 	{
 		"category": "other",
@@ -161,13 +161,13 @@
 			"application/vnd.tcpdump.pcap"
 		],
 		"name": "Libpcap File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "A1 B2 3C 4D"
+				"pattern": "¡²<M"
 			}
 		],
-		"patternVariant": "Nanosecond Resolution, BE"
+		"variant": "Nanosecond Resolution, BE"
 	},
 	{
 		"category": "other",
@@ -178,13 +178,13 @@
 			"application/vnd.tcpdump.pcap"
 		],
 		"name": "Libpcap File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "4D 3C B2 A1"
+				"pattern": "M<²¡"
 			}
 		],
-		"patternVariant": "Nanosecond Resolution, LE"
+		"variant": "Nanosecond Resolution, LE"
 	},
 	{
 		"category": "other",
@@ -195,10 +195,10 @@
 			"application/x-pcapng"
 		],
 		"name": "PCAP Next Generation Dump File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "0A 0D 0D 0A"
+				"pattern": "\n\r\r\n"
 			}
 		]
 	},
@@ -212,10 +212,10 @@
 			"application/x-rpm"
 		],
 		"name": "RedHat Package Manager (RPM) Package",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "ED AB EE DB"
+				"pattern": "í«îÛ"
 			}
 		]
 	},
@@ -226,10 +226,10 @@
 		],
 		"mimes": [],
 		"name": "Amazon Kindle Update Package",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "53 50 30 31"
+				"pattern": "SP01"
 			}
 		]
 	},
@@ -242,10 +242,10 @@
 			"application/x-doom"
 		],
 		"name": "Internal WAD",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "49 57 41 44"
+				"pattern": "IWAD"
 			}
 		]
 	},
@@ -259,10 +259,10 @@
 			"application/x-pilot"
 		],
 		"name": "PalmPilot Database/Document File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 11,
-				"hex": "00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00"
+				"pattern": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
 			}
 		]
 	},
@@ -273,10 +273,10 @@
 		],
 		"mimes": [],
 		"name": "Palm Desktop Calendar Archive",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "BE BA FE CA"
+				"pattern": "¾ºþÊ"
 			}
 		]
 	},
@@ -287,10 +287,10 @@
 		],
 		"mimes": [],
 		"name": "Palm Desktop To Do Archive",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "00 01 42 44"
+				"pattern": "\u0000\u0001BD"
 			}
 		]
 	},
@@ -301,10 +301,10 @@
 		],
 		"mimes": [],
 		"name": "Palm Desktop Calendar Archive",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "00 01 44 54"
+				"pattern": "\u0000\u0001DT"
 			}
 		]
 	},
@@ -315,10 +315,10 @@
 		],
 		"mimes": [],
 		"name": "Telegram Desktop File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "54 44 46 24"
+				"pattern": "TDF$"
 			}
 		]
 	},
@@ -329,10 +329,10 @@
 		],
 		"mimes": [],
 		"name": "Telegram Desktop Encrypted File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "54 44 45 46"
+				"pattern": "TDEF"
 			}
 		]
 	},
@@ -347,10 +347,10 @@
 			"image/ico"
 		],
 		"name": "Computer Icons",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "00 00 01 00"
+				"pattern": "\u0000\u0000\u0001\u0000"
 			}
 		]
 	},
@@ -363,10 +363,10 @@
 			"image/x-icns"
 		],
 		"name": "Apple Icon Image",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "69 63 6E 73"
+				"pattern": "icns"
 			}
 		]
 	},
@@ -379,10 +379,10 @@
 			"image/heic"
 		],
 		"name": "High Efficiency Image Container (HEIC)",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 4,
-				"hex": "66 74 79 70 68 65 69 63"
+				"pattern": "ftypheic"
 			}
 		]
 	},
@@ -395,13 +395,13 @@
 			"application/x-lzh-compressed"
 		],
 		"name": "Lempel Ziv Huffman Archive",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 2,
-				"hex": "2D 68 6C 30 2D"
+				"pattern": "-hl0-"
 			}
 		],
-		"patternVariant": "Method 0 (No Compression)"
+		"variant": "Method 0 (No Compression)"
 	},
 	{
 		"category": "archive",
@@ -412,13 +412,13 @@
 			"application/x-lzh-compressed"
 		],
 		"name": "Lempel Ziv Huffman Archive",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 2,
-				"hex": "2D 68 6C 35 2D"
+				"pattern": "-hl5-"
 			}
 		],
-		"patternVariant": "Method 5 (8 KiB Sliding Window)"
+		"variant": "Method 5 (8 KiB Sliding Window)"
 	},
 	{
 		"category": "other",
@@ -427,10 +427,10 @@
 		],
 		"mimes": [],
 		"name": "AmiBack Amiga Backup Data File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "42 41 43 4B 4D 49 4B 45 44 49 53 4B"
+				"pattern": "BACKMIKEDISK"
 			}
 		]
 	},
@@ -441,10 +441,10 @@
 		],
 		"mimes": [],
 		"name": "AmiBack Amiga Backup Index File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "49 4E 44 58"
+				"pattern": "INDX"
 			}
 		]
 	},
@@ -455,10 +455,10 @@
 		],
 		"mimes": [],
 		"name": "Binary Property List File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "62 70 6C 69 73 74"
+				"pattern": "bplist"
 			}
 		]
 	},
@@ -471,10 +471,10 @@
 			"application/x-bzip2"
 		],
 		"name": "BZip2 Archive",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "42 5A 68"
+				"pattern": "BZh"
 			}
 		]
 	},
@@ -485,14 +485,14 @@
 		],
 		"mimes": [],
 		"name": "VirtualDub",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "52 49 46 46"
+				"pattern": "RIFF"
 			},
 			{
 				"fromIndex": 8,
-				"hex": "56 44 52 4D"
+				"pattern": "VDRM"
 			}
 		]
 	},
@@ -503,14 +503,14 @@
 		],
 		"mimes": [],
 		"name": "TrID",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "52 59 46 46"
+				"pattern": "RYFF"
 			},
 			{
 				"fromIndex": 8,
-				"hex": "54 52 49 44"
+				"pattern": "TRID"
 			}
 		]
 	},
@@ -523,14 +523,14 @@
 			"application/x-corelpresentations"
 		],
 		"name": "Corel SHOW! 4.0",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "52 49 46 46"
+				"pattern": "RIFF"
 			},
 			{
 				"fromIndex": 8,
-				"hex": "73 68 77 34"
+				"pattern": "shw4"
 			}
 		]
 	},
@@ -543,14 +543,14 @@
 			"application/x-corelpresentations"
 		],
 		"name": "Corel SHOW! 5.0",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "52 49 46 46"
+				"pattern": "RIFF"
 			},
 			{
 				"fromIndex": 8,
-				"hex": "73 68 77 35"
+				"pattern": "shw5"
 			}
 		]
 	},
@@ -561,14 +561,14 @@
 		],
 		"mimes": [],
 		"name": "Corel SHOW! 5.0 Background",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "52 49 46 46"
+				"pattern": "RIFF"
 			},
 			{
 				"fromIndex": 8,
-				"hex": "73 68 62 35"
+				"pattern": "shb5"
 			}
 		]
 	},
@@ -579,14 +579,14 @@
 		],
 		"mimes": [],
 		"name": "Corel SHOW! 5.0 Player",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "52 49 46 46"
+				"pattern": "RIFF"
 			},
 			{
 				"fromIndex": 8,
-				"hex": "73 68 72 35"
+				"pattern": "shr5"
 			}
 		]
 	},
@@ -599,17 +599,17 @@
 			"application/x-director"
 		],
 		"name": "Adobe Shockwave File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "52 49 46 58"
+				"pattern": "RIFX"
 			},
 			{
 				"fromIndex": 8,
-				"hex": "46 47 44 4D"
+				"pattern": "FGDM"
 			}
 		],
-		"patternVariant": "BE"
+		"variant": "BE"
 	},
 	{
 		"category": "other",
@@ -620,17 +620,17 @@
 			"application/x-director"
 		],
 		"name": "Adobe Shockwave File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "58 46 49 52"
+				"pattern": "XFIR"
 			},
 			{
 				"fromIndex": 8,
-				"hex": "4D 44 47 46"
+				"pattern": "MDGF"
 			}
 		],
-		"patternVariant": "LE"
+		"variant": "LE"
 	},
 	{
 		"category": "video",
@@ -639,14 +639,14 @@
 		],
 		"mimes": [],
 		"name": "Multimedia Movie",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "52 49 46 46"
+				"pattern": "RIFF"
 			},
 			{
 				"fromIndex": 8,
-				"hex": "52 4D 4D 50"
+				"pattern": "RMMP"
 			}
 		]
 	},
@@ -659,10 +659,10 @@
 			"application/x-msmoney"
 		],
 		"name": "Microsoft Money File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "00 01 00 00 4D 53 49 53 41 4D 20 44 61 74 61 62 61 73 65"
+				"pattern": "\u0000\u0001\u0000\u0000MSISAM Database"
 			}
 		]
 	},
@@ -675,10 +675,10 @@
 			"application/x-msaccess"
 		],
 		"name": "Microsoft Access 2007 Database",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "00 01 00 00 53 74 61 6E 64 61 72 64 20 41 43 45 20 44 42"
+				"pattern": "\u0000\u0001\u0000\u0000Standard ACE DB"
 			}
 		]
 	},
@@ -691,10 +691,10 @@
 			"application/x-msaccess"
 		],
 		"name": "Microsoft Access Database",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "00 01 00 00 53 74 61 6E 64 61 72 64 20 4A 65 74 20 44 42"
+				"pattern": "\u0000\u0001\u0000\u0000Standard Jet DB"
 			}
 		]
 	},
@@ -707,13 +707,13 @@
 			"application/x-shockwave-flash"
 		],
 		"name": "Adobe Flash File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "43 57 53"
+				"pattern": "CWS"
 			}
 		],
-		"patternVariant": "C"
+		"variant": "C"
 	},
 	{
 		"category": "other",
@@ -724,13 +724,13 @@
 			"application/x-shockwave-flash"
 		],
 		"name": "Adobe Flash File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "46 57 53"
+				"pattern": "FWS"
 			}
 		],
-		"patternVariant": "F"
+		"variant": "F"
 	},
 	{
 		"category": "document",
@@ -741,10 +741,10 @@
 			"application/x-indesign"
 		],
 		"name": "Adobe InDesign Document",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "06 06 ED F5 D8 1D 46 E5 BD 31 EF E7 FE 74 B7 1D"
+				"pattern": "\u0006\u0006íõØ\u001dFå½1ïçþt·\u001d"
 			}
 		]
 	},
@@ -755,13 +755,13 @@
 		],
 		"mimes": [],
 		"name": "ZLib Archive",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "78 01"
+				"pattern": "x\u0001"
 			}
 		],
-		"patternVariant": "No Compression Without Preset Dictionary"
+		"variant": "No Compression Without Preset Dictionary"
 	},
 	{
 		"category": "archive",
@@ -770,13 +770,13 @@
 		],
 		"mimes": [],
 		"name": "ZLib Archive",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "78 5E"
+				"pattern": "x^"
 			}
 		],
-		"patternVariant": "Best Speed Without Preset Dictionary"
+		"variant": "Best Speed Without Preset Dictionary"
 	},
 	{
 		"category": "archive",
@@ -785,13 +785,13 @@
 		],
 		"mimes": [],
 		"name": "ZLib Archive",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "78 9C"
+				"pattern": "x"
 			}
 		],
-		"patternVariant": "Default Compression Without Preset Dictionary"
+		"variant": "Default Compression Without Preset Dictionary"
 	},
 	{
 		"category": "archive",
@@ -800,13 +800,13 @@
 		],
 		"mimes": [],
 		"name": "ZLib Archive",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "78 DA"
+				"pattern": "xÚ"
 			}
 		],
-		"patternVariant": "Best Compression Without Preset Dictionary"
+		"variant": "Best Compression Without Preset Dictionary"
 	},
 	{
 		"category": "archive",
@@ -815,13 +815,13 @@
 		],
 		"mimes": [],
 		"name": "ZLib Archive",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "78 20"
+				"pattern": "x "
 			}
 		],
-		"patternVariant": "No Compression With Preset Dictionary"
+		"variant": "No Compression With Preset Dictionary"
 	},
 	{
 		"category": "archive",
@@ -830,13 +830,13 @@
 		],
 		"mimes": [],
 		"name": "ZLib Archive",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "78 7D"
+				"pattern": "x}"
 			}
 		],
-		"patternVariant": "Best Speed With Preset Dictionary"
+		"variant": "Best Speed With Preset Dictionary"
 	},
 	{
 		"category": "archive",
@@ -845,13 +845,13 @@
 		],
 		"mimes": [],
 		"name": "ZLib Archive",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "78 BB"
+				"pattern": "x»"
 			}
 		],
-		"patternVariant": "Default Compression With Preset Dictionary"
+		"variant": "Default Compression With Preset Dictionary"
 	},
 	{
 		"category": "archive",
@@ -860,13 +860,13 @@
 		],
 		"mimes": [],
 		"name": "ZLib Archive",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "78 F9"
+				"pattern": "xù"
 			}
 		],
-		"patternVariant": "Best Compression With Preset Dictionary"
+		"variant": "Best Compression With Preset Dictionary"
 	},
 	{
 		"category": "archive",
@@ -877,10 +877,10 @@
 			"application/x-zoo"
 		],
 		"name": "Zoo File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "5A 4F 4F"
+				"pattern": "ZOO"
 			}
 		]
 	},
@@ -893,10 +893,10 @@
 			"image/x-portable-bitmap"
 		],
 		"name": "Portable Bitmap ASCII",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "50 31 0A"
+				"pattern": "P1\n"
 			}
 		]
 	},
@@ -909,10 +909,10 @@
 			"image/x-portable-bitmap"
 		],
 		"name": "Portable Bitmap Binary",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "50 34 0A"
+				"pattern": "P4\n"
 			}
 		]
 	},
@@ -925,10 +925,10 @@
 			"image/x-portable-graymap"
 		],
 		"name": "Portable Gray Map ASCII",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "50 32 0A"
+				"pattern": "P2\n"
 			}
 		]
 	},
@@ -941,13 +941,13 @@
 			"image/x-portable-graymap"
 		],
 		"name": "Portable Gray Map Binary",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "50 35 09"
+				"pattern": "P5\t"
 			}
 		],
-		"patternVariant": "Tab"
+		"variant": "Tab"
 	},
 	{
 		"category": "image",
@@ -958,13 +958,13 @@
 			"image/x-portable-graymap"
 		],
 		"name": "Portable Gray Map Binary",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "50 35 0A"
+				"pattern": "P5\n"
 			}
 		],
-		"patternVariant": "LF"
+		"variant": "LF"
 	},
 	{
 		"category": "image",
@@ -975,13 +975,13 @@
 			"image/x-portable-graymap"
 		],
 		"name": "Portable Gray Map Binary",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "50 35 0D"
+				"pattern": "P5\r"
 			}
 		],
-		"patternVariant": "CR"
+		"variant": "CR"
 	},
 	{
 		"category": "image",
@@ -992,13 +992,13 @@
 			"image/x-portable-graymap"
 		],
 		"name": "Portable Gray Map Binary",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "50 35 20"
+				"pattern": "P5 "
 			}
 		],
-		"patternVariant": "Space"
+		"variant": "Space"
 	},
 	{
 		"category": "image",
@@ -1009,13 +1009,13 @@
 			"image/x-portable-pixmap"
 		],
 		"name": "Portable Pixmap ASCII",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "50 33 09"
+				"pattern": "P3\t"
 			}
 		],
-		"patternVariant": "Tab"
+		"variant": "Tab"
 	},
 	{
 		"category": "image",
@@ -1026,13 +1026,13 @@
 			"image/x-portable-pixmap"
 		],
 		"name": "Portable Pixmap ASCII",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "50 33 0A"
+				"pattern": "P3\n"
 			}
 		],
-		"patternVariant": "LF"
+		"variant": "LF"
 	},
 	{
 		"category": "image",
@@ -1043,13 +1043,13 @@
 			"image/x-portable-pixmap"
 		],
 		"name": "Portable Pixmap ASCII",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "50 33 0D"
+				"pattern": "P3\r"
 			}
 		],
-		"patternVariant": "CR"
+		"variant": "CR"
 	},
 	{
 		"category": "image",
@@ -1060,13 +1060,13 @@
 			"image/x-portable-pixmap"
 		],
 		"name": "Portable Pixmap ASCII",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "50 33 20"
+				"pattern": "P3 "
 			}
 		],
-		"patternVariant": "Space"
+		"variant": "Space"
 	},
 	{
 		"category": "image",
@@ -1077,13 +1077,13 @@
 			"image/x-portable-pixmap"
 		],
 		"name": "Portable Pixmap Binary",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "50 36 09"
+				"pattern": "P6\t"
 			}
 		],
-		"patternVariant": "Tab"
+		"variant": "Tab"
 	},
 	{
 		"category": "image",
@@ -1094,13 +1094,13 @@
 			"image/x-portable-pixmap"
 		],
 		"name": "Portable Pixmap Binary",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "50 36 0A"
+				"pattern": "P6\n"
 			}
 		],
-		"patternVariant": "LF"
+		"variant": "LF"
 	},
 	{
 		"category": "image",
@@ -1111,13 +1111,13 @@
 			"image/x-portable-pixmap"
 		],
 		"name": "Portable Pixmap Binary",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "50 36 0D"
+				"pattern": "P6\r"
 			}
 		],
-		"patternVariant": "CR"
+		"variant": "CR"
 	},
 	{
 		"category": "image",
@@ -1128,13 +1128,13 @@
 			"image/x-portable-pixmap"
 		],
 		"name": "Portable Pixmap Binary",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "50 36 20"
+				"pattern": "P6 "
 			}
 		],
-		"patternVariant": "Space"
+		"variant": "Space"
 	},
 	{
 		"category": "image",
@@ -1158,13 +1158,13 @@
 			"video/mj2"
 		],
 		"name": "JPEG 2000 Image",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "00 00 00 0C 6A 50 20 20 0D 0A 87 0A"
+				"pattern": "\u0000\u0000\u0000\fjP  \r\n\n"
 			}
 		],
-		"patternVariant": "Long"
+		"variant": "Long"
 	},
 	{
 		"category": "image",
@@ -1188,13 +1188,13 @@
 			"video/mj2"
 		],
 		"name": "JPEG 2000 Image",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "FF 4F FF 51"
+				"pattern": "ÿOÿQ"
 			}
 		],
-		"patternVariant": "Short"
+		"variant": "Short"
 	},
 	{
 		"category": "other",
@@ -1203,13 +1203,13 @@
 		],
 		"mimes": [],
 		"name": "Electronic Data Exchange Health Level Seven (HL7) Standard File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "42 53 48 7C"
+				"pattern": "BSH|"
 			}
 		],
-		"patternVariant": "B"
+		"variant": "B"
 	},
 	{
 		"category": "other",
@@ -1218,13 +1218,13 @@
 		],
 		"mimes": [],
 		"name": "Electronic Data Exchange Health Level Seven (HL7) Standard File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "4D 53 48 7C"
+				"pattern": "MSH|"
 			}
 		],
-		"patternVariant": "M"
+		"variant": "M"
 	},
 	{
 		"category": "database",
@@ -1237,10 +1237,10 @@
 			"application/vnd.sqlite3"
 		],
 		"name": "SQLite Database",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "53 51 4C 69 74 65 20 66 6F 72 6D 61 74 20 33 00"
+				"pattern": "SQLite format 3\u0000"
 			}
 		]
 	},
@@ -1253,10 +1253,10 @@
 			"image/x-pict"
 		],
 		"name": "IBM Storyboard Bitmap File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "00"
+				"pattern": "\u0000"
 			}
 		]
 	},
@@ -1269,13 +1269,13 @@
 			"video/quicktime"
 		],
 		"name": "Apple QuickTime Movie File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 4,
-				"hex": "66 74 79 70 71 74"
+				"pattern": "ftypqt"
 			}
 		],
-		"patternVariant": "ftypqt"
+		"variant": "ftypqt"
 	},
 	{
 		"category": "video",
@@ -1286,13 +1286,13 @@
 			"video/quicktime"
 		],
 		"name": "Apple QuickTime Movie File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 4,
-				"hex": "66 72 65 65"
+				"pattern": "free"
 			}
 		],
-		"patternVariant": "free"
+		"variant": "free"
 	},
 	{
 		"category": "video",
@@ -1303,13 +1303,13 @@
 			"video/quicktime"
 		],
 		"name": "Apple QuickTime Movie File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 4,
-				"hex": "6D 64 61 74"
+				"pattern": "mdat"
 			}
 		],
-		"patternVariant": "mdat"
+		"variant": "mdat"
 	},
 	{
 		"category": "video",
@@ -1320,13 +1320,13 @@
 			"video/quicktime"
 		],
 		"name": "Apple QuickTime Movie File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 4,
-				"hex": "6D 6F 6F 76"
+				"pattern": "moov"
 			}
 		],
-		"patternVariant": "moov"
+		"variant": "moov"
 	},
 	{
 		"category": "video",
@@ -1337,13 +1337,13 @@
 			"video/quicktime"
 		],
 		"name": "Apple QuickTime Movie File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 4,
-				"hex": "73 6B 69 70"
+				"pattern": "skip"
 			}
 		],
-		"patternVariant": "skip"
+		"variant": "skip"
 	},
 	{
 		"category": "video",
@@ -1354,13 +1354,13 @@
 			"video/quicktime"
 		],
 		"name": "Apple QuickTime Movie File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 4,
-				"hex": "77 69 64 65"
+				"pattern": "wide"
 			}
 		],
-		"patternVariant": "wide"
+		"variant": "wide"
 	},
 	{
 		"category": "other",
@@ -1369,10 +1369,10 @@
 		],
 		"mimes": [],
 		"name": "Windows Program Information File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "00"
+				"pattern": "\u0000"
 			}
 		]
 	},
@@ -1385,10 +1385,10 @@
 			"application/x-sea"
 		],
 		"name": "Mac Stuffit Self-Extracting Archive",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "00"
+				"pattern": "\u0000"
 			}
 		]
 	},
@@ -1399,10 +1399,10 @@
 		],
 		"mimes": [],
 		"name": "IRIS OCR Data File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "00"
+				"pattern": "\u0000"
 			}
 		]
 	},
@@ -1411,10 +1411,10 @@
 		"extensions": [],
 		"mimes": [],
 		"name": "Palm Desktop Data File (Access Format)",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "00 01 00 00"
+				"pattern": "\u0000\u0001\u0000\u0000"
 			}
 		]
 	},
@@ -1427,13 +1427,13 @@
 			"video/3gpp"
 		],
 		"name": "3rd Generation Partnership Project Multimedia File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 4,
-				"hex": "66 74 79 70 33 67 65"
+				"pattern": "ftyp3ge"
 			}
 		],
-		"patternVariant": "e"
+		"variant": "e"
 	},
 	{
 		"category": "video",
@@ -1444,13 +1444,13 @@
 			"video/3gpp"
 		],
 		"name": "3rd Generation Partnership Project Multimedia File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 4,
-				"hex": "66 74 79 70 33 67 66"
+				"pattern": "ftyp3gf"
 			}
 		],
-		"patternVariant": "f"
+		"variant": "f"
 	},
 	{
 		"category": "video",
@@ -1461,13 +1461,13 @@
 			"video/3gpp"
 		],
 		"name": "3rd Generation Partnership Project Multimedia File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 4,
-				"hex": "66 74 79 70 33 67 67"
+				"pattern": "ftyp3gg"
 			}
 		],
-		"patternVariant": "g"
+		"variant": "g"
 	},
 	{
 		"category": "video",
@@ -1478,13 +1478,13 @@
 			"video/3gpp"
 		],
 		"name": "3rd Generation Partnership Project Multimedia File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 4,
-				"hex": "66 74 79 70 33 67 68"
+				"pattern": "ftyp3gh"
 			}
 		],
-		"patternVariant": "h"
+		"variant": "h"
 	},
 	{
 		"category": "video",
@@ -1495,13 +1495,13 @@
 			"video/3gpp"
 		],
 		"name": "3rd Generation Partnership Project Multimedia File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 4,
-				"hex": "66 74 79 70 33 67 6D"
+				"pattern": "ftyp3gm"
 			}
 		],
-		"patternVariant": "m"
+		"variant": "m"
 	},
 	{
 		"category": "video",
@@ -1512,13 +1512,13 @@
 			"video/3gpp"
 		],
 		"name": "3rd Generation Partnership Project Multimedia File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 4,
-				"hex": "66 74 79 70 33 67 70"
+				"pattern": "ftyp3gp"
 			}
 		],
-		"patternVariant": "p"
+		"variant": "p"
 	},
 	{
 		"category": "video",
@@ -1529,13 +1529,13 @@
 			"video/3gpp"
 		],
 		"name": "3rd Generation Partnership Project Multimedia File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 4,
-				"hex": "66 74 79 70 33 67 72"
+				"pattern": "ftyp3gr"
 			}
 		],
-		"patternVariant": "r"
+		"variant": "r"
 	},
 	{
 		"category": "video",
@@ -1546,13 +1546,13 @@
 			"video/3gpp"
 		],
 		"name": "3rd Generation Partnership Project Multimedia File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 4,
-				"hex": "66 74 79 70 33 67 73"
+				"pattern": "ftyp3gs"
 			}
 		],
-		"patternVariant": "s"
+		"variant": "s"
 	},
 	{
 		"category": "video",
@@ -1563,13 +1563,13 @@
 			"video/3gpp"
 		],
 		"name": "3rd Generation Partnership Project Multimedia File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 4,
-				"hex": "66 74 79 70 33 67 74"
+				"pattern": "ftyp3gt"
 			}
 		],
-		"patternVariant": "t"
+		"variant": "t"
 	},
 	{
 		"category": "video",
@@ -1580,13 +1580,13 @@
 			"video/3gpp2"
 		],
 		"name": "3rd Generation Partnership Project 2 Multimedia File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 4,
-				"hex": "66 74 79 70 33 67 32"
+				"pattern": "ftyp3g2"
 			}
 		],
-		"patternVariant": "3g2"
+		"variant": "3g2"
 	},
 	{
 		"category": "video",
@@ -1597,13 +1597,13 @@
 			"video/3gpp2"
 		],
 		"name": "3rd Generation Partnership Project 2 Multimedia File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 4,
-				"hex": "66 74 79 70 4B 44 44 49"
+				"pattern": "ftypKDDI"
 			}
 		],
-		"patternVariant": "KDDI"
+		"variant": "KDDI"
 	},
 	{
 		"category": "compressed",
@@ -1615,10 +1615,10 @@
 			"application/x-compress"
 		],
 		"name": "Tar Zip Lempel-Ziv-Welch Algorithm Archive / UNIX Compress",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "1F 9D"
+				"pattern": "\u001f"
 			}
 		]
 	},
@@ -1632,10 +1632,10 @@
 			"application/x-compress"
 		],
 		"name": "Tar Zip LZH Algorithm Archive / UNIX Compress",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "1F A0"
+				"pattern": "\u001f "
 			}
 		]
 	},
@@ -1648,13 +1648,13 @@
 			"image/gif"
 		],
 		"name": "Graphics Interchange Format (GIF) File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "47 49 46 38 37 61"
+				"pattern": "GIF87a"
 			}
 		],
-		"patternVariant": "7"
+		"variant": "7"
 	},
 	{
 		"category": "image",
@@ -1665,13 +1665,13 @@
 			"image/gif"
 		],
 		"name": "Graphics Interchange Format (GIF) File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "47 49 46 38 39 61"
+				"pattern": "GIF89a"
 			}
 		],
-		"patternVariant": "9"
+		"variant": "9"
 	},
 	{
 		"category": "image",
@@ -1683,13 +1683,13 @@
 			"image/tiff"
 		],
 		"name": "Tagged Image File Format (TIFF)",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "4D 4D 00 2A"
+				"pattern": "MM\u0000*"
 			}
 		],
-		"patternVariant": "BE, 2A"
+		"variant": "BE, 2A"
 	},
 	{
 		"category": "image",
@@ -1701,13 +1701,13 @@
 			"image/tiff"
 		],
 		"name": "Tagged Image File Format (TIFF)",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "49 49 00 2B"
+				"pattern": "II\u0000+"
 			}
 		],
-		"patternVariant": "BE, 2B"
+		"variant": "BE, 2B"
 	},
 	{
 		"category": "image",
@@ -1719,13 +1719,13 @@
 			"image/tiff"
 		],
 		"name": "Tagged Image File Format (TIFF)",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "49 49 2A 00"
+				"pattern": "II*\u0000"
 			}
 		],
-		"patternVariant": "LE, 2A"
+		"variant": "LE, 2A"
 	},
 	{
 		"category": "image",
@@ -1737,13 +1737,13 @@
 			"image/tiff"
 		],
 		"name": "Tagged Image File Format (TIFF)",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "49 49 2B 00"
+				"pattern": "II+\u0000"
 			}
 		],
-		"patternVariant": "LE, 2B"
+		"variant": "LE, 2B"
 	},
 	{
 		"category": "image",
@@ -1754,10 +1754,10 @@
 			"image/x-canon-crw"
 		],
 		"name": "Canon RAW Format",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "49 49 1A 00 00 00 48 45 41 50 43 43 44 52"
+				"pattern": "II\u001a\u0000\u0000\u0000HEAPCCDR"
 			}
 		]
 	},
@@ -1770,10 +1770,10 @@
 			"image/x-canon-cr2"
 		],
 		"name": "Canon RAW Format Version 2",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "49 49 2A 00 10 00 00 00 43 52"
+				"pattern": "II*\u0000\u0010\u0000\u0000\u0000CR"
 			}
 		]
 	},
@@ -1786,10 +1786,10 @@
 			"image/x-canon-cr2"
 		],
 		"name": "Canon RAW Format Version 2",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "4D 4D 00 2A 10 00 00 00 43 52"
+				"pattern": "MM\u0000*\u0010\u0000\u0000\u0000CR"
 			}
 		]
 	},
@@ -1802,10 +1802,10 @@
 			"image/x-canon-cr3"
 		],
 		"name": "Canon RAW Format Version 3",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 4,
-				"hex": "66 74 79 70 63 72 78"
+				"pattern": "ftypcrx"
 			}
 		]
 	},
@@ -1818,10 +1818,10 @@
 			"image/cineon"
 		],
 		"name": "Kodak Cineon Image",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "80 2A 5F D7"
+				"pattern": "*_×"
 			}
 		]
 	},
@@ -1830,10 +1830,10 @@
 		"extensions": [],
 		"mimes": [],
 		"name": "Rob Northen Compression (Version 1) Algorithm Archive",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "52 4E 43 01"
+				"pattern": "RNC\u0001"
 			}
 		]
 	},
@@ -1842,10 +1842,10 @@
 		"extensions": [],
 		"mimes": [],
 		"name": "Rob Northen Compression (Version 2) Algorithm Archive",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "52 4E 43 02"
+				"pattern": "RNC\u0002"
 			}
 		]
 	},
@@ -1856,10 +1856,10 @@
 		],
 		"mimes": [],
 		"name": "nuru Image File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "4E 55 52 55 49 4D 47"
+				"pattern": "NURUIMG"
 			}
 		]
 	},
@@ -1870,10 +1870,10 @@
 		],
 		"mimes": [],
 		"name": "nuru Palette File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "4E 55 52 55 50 41 4C"
+				"pattern": "NURUPAL"
 			}
 		]
 	},
@@ -1886,13 +1886,13 @@
 			"image/x-dpx"
 		],
 		"name": "Digital Picture Exchange (DPX) Image",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "53 44 50 58"
+				"pattern": "SDPX"
 			}
 		],
-		"patternVariant": "BE"
+		"variant": "BE"
 	},
 	{
 		"category": "image",
@@ -1903,13 +1903,13 @@
 			"image/x-dpx"
 		],
 		"name": "Digital Picture Exchange (DPX) Image",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "58 50 44 53"
+				"pattern": "XPDS"
 			}
 		],
-		"patternVariant": "LE"
+		"variant": "LE"
 	},
 	{
 		"category": "image",
@@ -1921,10 +1921,10 @@
 			"image/x-exr"
 		],
 		"name": "OpenEXR Image",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "76 2F 31 01"
+				"pattern": "v/1\u0001"
 			}
 		]
 	},
@@ -1934,10 +1934,10 @@
 		],
 		"mimes": [],
 		"name": "Better Portable Graphic (BPG)",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "42 50 47 FB"
+				"pattern": "BPGû"
 			}
 		]
 	},
@@ -1949,13 +1949,13 @@
 			"application/x-iso9660-image"
 		],
 		"name": "ISO9660 CD/DVD Image",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 32769,
-				"hex": "43 44 30 30 31"
+				"pattern": "CD001"
 			}
 		],
-		"patternVariant": "1"
+		"variant": "1"
 	},
 	{
 		"extensions": [
@@ -1965,13 +1965,13 @@
 			"application/x-iso9660-image"
 		],
 		"name": "ISO9660 CD/DVD Image",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 34817,
-				"hex": "43 44 30 30 31"
+				"pattern": "CD001"
 			}
 		],
-		"patternVariant": "2"
+		"variant": "2"
 	},
 	{
 		"extensions": [
@@ -1981,13 +1981,13 @@
 			"application/x-iso9660-image"
 		],
 		"name": "ISO9660 CD/DVD Image",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 36865,
-				"hex": "43 44 30 30 31"
+				"pattern": "CD001"
 			}
 		],
-		"patternVariant": "3"
+		"variant": "3"
 	},
 	{
 		"extensions": [
@@ -1995,10 +1995,10 @@
 		],
 		"mimes": [],
 		"name": "Quite OK Image (QOI)",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "71 6F 69 66"
+				"pattern": "qoif"
 			}
 		]
 	},
@@ -2011,14 +2011,14 @@
 		],
 		"mimes": [],
 		"name": "IFF Interleaved Bitmap Image",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "46 4F 52 4D"
+				"pattern": "FORM"
 			},
 			{
 				"fromIndex": 8,
-				"hex": "49 4C 42 4D"
+				"pattern": "ILBM"
 			}
 		]
 	},
@@ -2034,14 +2034,14 @@
 			"audio/basic"
 		],
 		"name": "IFF 8-Bit Sampled Voice",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "46 4F 52 4D"
+				"pattern": "FORM"
 			},
 			{
 				"fromIndex": 8,
-				"hex": "38 53 56 58"
+				"pattern": "8SVX"
 			}
 		]
 	},
@@ -2052,14 +2052,14 @@
 		],
 		"mimes": [],
 		"name": "Amiga Contiguous Bitmap File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "46 4F 52 4D"
+				"pattern": "FORM"
 			},
 			{
 				"fromIndex": 8,
-				"hex": "41 43 42 4D"
+				"pattern": "ACBM"
 			}
 		]
 	},
@@ -2070,14 +2070,14 @@
 		],
 		"mimes": [],
 		"name": "IFF Animated Bitmap File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "46 4F 52 4D"
+				"pattern": "FORM"
 			},
 			{
 				"fromIndex": 8,
-				"hex": "41 4E 42 4D"
+				"pattern": "ANBM"
 			}
 		]
 	},
@@ -2088,14 +2088,14 @@
 		],
 		"mimes": [],
 		"name": "IFF CEL Animation File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "46 4F 52 4D"
+				"pattern": "FORM"
 			},
 			{
 				"fromIndex": 8,
-				"hex": "41 4E 49 4D"
+				"pattern": "ANIM"
 			}
 		]
 	},
@@ -2107,14 +2107,14 @@
 		],
 		"mimes": [],
 		"name": "IFF Facsimile Image",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "46 4F 52 4D"
+				"pattern": "FORM"
 			},
 			{
 				"fromIndex": 8,
-				"hex": "46 41 58 58"
+				"pattern": "FAXX"
 			}
 		]
 	},
@@ -2125,14 +2125,14 @@
 		],
 		"mimes": [],
 		"name": "IFF Formatted Text File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "46 4F 52 4D"
+				"pattern": "FORM"
 			},
 			{
 				"fromIndex": 8,
-				"hex": "46 54 58 54"
+				"pattern": "FTXT"
 			}
 		]
 	},
@@ -2147,14 +2147,14 @@
 			"application/vnd.musician"
 		],
 		"name": "IFF Simple Musical Score File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "46 4F 52 4D"
+				"pattern": "FORM"
 			},
 			{
 				"fromIndex": 8,
-				"hex": "53 4D 55 53"
+				"pattern": "SMUS"
 			}
 		]
 	},
@@ -2168,14 +2168,14 @@
 			"application/vnd.musician"
 		],
 		"name": "IFF Musical Score File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "46 4F 52 4D"
+				"pattern": "FORM"
 			},
 			{
 				"fromIndex": 8,
-				"hex": "43 4D 55 53"
+				"pattern": "CMUS"
 			}
 		]
 	},
@@ -2187,14 +2187,14 @@
 		],
 		"mimes": [],
 		"name": "IFF YUV Image",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "46 4F 52 4D"
+				"pattern": "FORM"
 			},
 			{
 				"fromIndex": 8,
-				"hex": "59 55 56 4E"
+				"pattern": "YUVN"
 			}
 		]
 	},
@@ -2204,14 +2204,14 @@
 		],
 		"mimes": [],
 		"name": "Amiga Fantavision Movie",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "46 4F 52 4D"
+				"pattern": "FORM"
 			},
 			{
 				"fromIndex": 8,
-				"hex": "46 41 4E 54"
+				"pattern": "FANT"
 			}
 		]
 	},
@@ -2228,14 +2228,14 @@
 			"audio/basic"
 		],
 		"name": "Audio Interchange File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "46 4F 52 4D"
+				"pattern": "FORM"
 			},
 			{
 				"fromIndex": 8,
-				"hex": "41 49 46 46"
+				"pattern": "AIFF"
 			}
 		]
 	},
@@ -2248,13 +2248,13 @@
 			"text/xml"
 		],
 		"name": "eXtensible Markup Language (XML) File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "3C 3F 78 6D 6C 20"
+				"pattern": "<?xml "
 			}
 		],
-		"patternVariant": "1"
+		"variant": "1"
 	},
 	{
 		"extensions": [
@@ -2265,13 +2265,13 @@
 			"text/xml"
 		],
 		"name": "eXtensible Markup Language (XML) File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "3C 00 3F 00 78 00 6D 00 6C 00 20"
+				"pattern": "<\u0000?\u0000x\u0000m\u0000l\u0000 "
 			}
 		],
-		"patternVariant": "2"
+		"variant": "2"
 	},
 	{
 		"extensions": [
@@ -2282,13 +2282,13 @@
 			"text/xml"
 		],
 		"name": "eXtensible Markup Language (XML) File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "00 3C 00 3F 00 78 00 6D 00 6C 00 20"
+				"pattern": "\u0000<\u0000?\u0000x\u0000m\u0000l\u0000 "
 			}
 		],
-		"patternVariant": "3"
+		"variant": "3"
 	},
 	{
 		"extensions": [
@@ -2299,13 +2299,13 @@
 			"text/xml"
 		],
 		"name": "eXtensible Markup Language (XML) File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "3C 00 00 00 3F 00 00 00 78 00 00 00 6D 00 00 00 6C 00 00 00 20 00 00 00"
+				"pattern": "<\u0000\u0000\u0000?\u0000\u0000\u0000x\u0000\u0000\u0000m\u0000\u0000\u0000l\u0000\u0000\u0000 \u0000\u0000\u0000"
 			}
 		],
-		"patternVariant": "4"
+		"variant": "4"
 	},
 	{
 		"extensions": [
@@ -2316,13 +2316,13 @@
 			"text/xml"
 		],
 		"name": "eXtensible Markup Language (XML) File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "00 00 00 3C 00 00 00 3F 00 00 00 78 00 00 00 6D 00 00 00 6C 00 00 00 20"
+				"pattern": "\u0000\u0000\u0000<\u0000\u0000\u0000?\u0000\u0000\u0000x\u0000\u0000\u0000m\u0000\u0000\u0000l\u0000\u0000\u0000 "
 			}
 		],
-		"patternVariant": "5"
+		"variant": "5"
 	},
 	{
 		"extensions": [
@@ -2333,13 +2333,13 @@
 			"text/xml"
 		],
 		"name": "eXtensible Markup Language (XML) File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "4C 6F A7 94 93 40"
+				"pattern": "Lo§@"
 			}
 		],
-		"patternVariant": "6"
+		"variant": "6"
 	},
 	{
 		"extensions": [
@@ -2349,10 +2349,10 @@
 		],
 		"mimes": [],
 		"name": "Windows Imaging Format File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "4D 53 57 49 4D 00 00 00 D0 00 00 00 00"
+				"pattern": "MSWIM\u0000\u0000\u0000Ð\u0000\u0000\u0000\u0000"
 			}
 		]
 	},
@@ -2364,14 +2364,14 @@
 			"image/webp"
 		],
 		"name": "WebP Image File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "52 49 46 46"
+				"pattern": "RIFF"
 			},
 			{
 				"fromIndex": 8,
-				"hex": "57 45 42 50"
+				"pattern": "WEBP"
 			}
 		]
 	},
@@ -2383,10 +2383,10 @@
 			"image/vnd.adobe.photoshop"
 		],
 		"name": "Adobe Photoshop Document File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "38 42 50 53"
+				"pattern": "8BPS"
 			}
 		]
 	},
@@ -2399,10 +2399,10 @@
 			"image/x-ms-bmp"
 		],
 		"name": "BMP Image File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "42 4D"
+				"pattern": "BM"
 			}
 		]
 	},
@@ -2414,10 +2414,10 @@
 			"application/wasm"
 		],
 		"name": "WebAssembly Binary",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "00 61 73 6D"
+				"pattern": "\u0000asm"
 			}
 		]
 	},
@@ -2430,13 +2430,13 @@
 			"image/jpeg"
 		],
 		"name": "JPEG Image",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "FF D8 FF DB"
+				"pattern": "ÿØÿÛ"
 			}
 		],
-		"patternVariant": "DB"
+		"variant": "DB"
 	},
 	{
 		"extensions": [
@@ -2447,13 +2447,13 @@
 			"image/jpeg"
 		],
 		"name": "JPEG Image",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "FF D8 FF E0"
+				"pattern": "ÿØÿà"
 			}
 		],
-		"patternVariant": "E0"
+		"variant": "E0"
 	},
 	{
 		"extensions": [
@@ -2464,13 +2464,13 @@
 			"image/jpeg"
 		],
 		"name": "JPEG Image",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "FF D8 FF EE"
+				"pattern": "ÿØÿî"
 			}
 		],
-		"patternVariant": "EE"
+		"variant": "EE"
 	},
 	{
 		"extensions": [
@@ -2481,10 +2481,10 @@
 			"image/jpeg"
 		],
 		"name": "JPEG JFIF Image",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "FF D8 FF E0 00 10 4A 46 49 46 00 01"
+				"pattern": "ÿØÿà\u0000\u0010JFIF\u0000\u0001"
 			}
 		]
 	},
@@ -2497,14 +2497,14 @@
 			"image/jpeg"
 		],
 		"name": "JPEG Exif Image",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "FF D8 FF E1"
+				"pattern": "ÿØÿá"
 			},
 			{
 				"fromIndex": 6,
-				"hex": "45 78 69 66 00 00"
+				"pattern": "Exif\u0000\u0000"
 			}
 		]
 	},
@@ -2514,10 +2514,10 @@
 		],
 		"mimes": [],
 		"name": "LZip Archive",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "4C 5A 49 50"
+				"pattern": "LZIP"
 			}
 		]
 	},
@@ -2529,10 +2529,10 @@
 			"application/x-cpio"
 		],
 		"name": "cpio Archive",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "30 37 30 37 30 37"
+				"pattern": "070707"
 			}
 		]
 	},
@@ -2547,13 +2547,13 @@
 			"application/x-msdownload"
 		],
 		"name": "MS-DOS Executable",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "4D 5A"
+				"pattern": "MZ"
 			}
 		],
-		"patternVariant": "MZ"
+		"variant": "MZ"
 	},
 	{
 		"category": "executable",
@@ -2566,13 +2566,13 @@
 			"application/x-msdownload"
 		],
 		"name": "MS-DOS Executable",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "5A 4D"
+				"pattern": "ZM"
 			}
 		],
-		"patternVariant": "ZM"
+		"variant": "ZM"
 	},
 	{
 		"extensions": [
@@ -2583,10 +2583,10 @@
 			"application/x-rar-compressed"
 		],
 		"name": "Roshal Archive V1.50",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "52 61 72 21 1A 07 00"
+				"pattern": "Rar!\u001a\u0007\u0000"
 			}
 		]
 	},
@@ -2599,10 +2599,10 @@
 			"application/x-rar-compressed"
 		],
 		"name": "Roshal Archive V5.00",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "52 61 72 21 1A 07 01 00"
+				"pattern": "Rar!\u001a\u0007\u0001\u0000"
 			}
 		]
 	},
@@ -2610,10 +2610,10 @@
 		"extensions": [],
 		"mimes": [],
 		"name": "Executable & Linkable Format",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "7F 45 4C 46"
+				"pattern": "ELF"
 			}
 		]
 	},
@@ -2625,10 +2625,10 @@
 			"image/png"
 		],
 		"name": "Portable Network Graphics (PNG) Image",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "89 50 4E 47 0D 0A 1A 0A"
+				"pattern": "PNG\r\n\u001a\n"
 			}
 		]
 	},
@@ -2640,10 +2640,10 @@
 			"application/x-msdownload"
 		],
 		"name": "CP/M 3 File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "C9"
+				"pattern": "É"
 			}
 		]
 	},
@@ -2653,10 +2653,10 @@
 		],
 		"mimes": [],
 		"name": "Commodore 64 1541 Disk Image (D64 Format)",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 91556,
-				"hex": "A0 32 41 A0 A0 A0"
+				"pattern": " 2A   "
 			}
 		]
 	},
@@ -2666,10 +2666,10 @@
 		],
 		"mimes": [],
 		"name": "Commodore 64 1541 Disk Image (G64 Format)",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "47 53 52 2D 31 35 34 31"
+				"pattern": "GSR-1541"
 			}
 		]
 	},
@@ -2679,10 +2679,10 @@
 		],
 		"mimes": [],
 		"name": "Commodore 64 1581 Disk Image (D81 Format)",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 399385,
-				"hex": "A0 33 44 A0 A0"
+				"pattern": " 3D  "
 			}
 		]
 	},
@@ -2692,10 +2692,10 @@
 		],
 		"mimes": [],
 		"name": "Commodore 64 Tape Image",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "43 36 34 20 74 61 70 65 20 69 6D 61 67 65 20 66 69 6C 65"
+				"pattern": "C64 tape image file"
 			}
 		]
 	},
@@ -2705,10 +2705,10 @@
 		],
 		"mimes": [],
 		"name": "Commodore 64 Cartridge Image",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "43 36 34 20 43 41 52 54 52 49 44 47 45 20 20 20"
+				"pattern": "C64 CARTRIDGE   "
 			}
 		]
 	},
@@ -2720,10 +2720,10 @@
 			"application/java-vm"
 		],
 		"name": "Java Class File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "CA FE BA BE"
+				"pattern": "Êþº¾"
 			}
 		]
 	},
@@ -2733,10 +2733,10 @@
 		],
 		"mimes": [],
 		"name": "Mach-O Fat Binary",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "CA FE BA BE"
+				"pattern": "Êþº¾"
 			}
 		]
 	},
@@ -2744,73 +2744,73 @@
 		"extensions": [],
 		"mimes": [],
 		"name": "Mach-O Binary",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "FE ED FA CE"
+				"pattern": "þíúÎ"
 			}
 		],
-		"patternVariant": "32-Bit, Head 0"
+		"variant": "32-Bit, Head 0"
 	},
 	{
 		"extensions": [],
 		"mimes": [],
 		"name": "Mach-O Binary",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 4096,
-				"hex": "FE ED FA CE"
+				"pattern": "þíúÎ"
 			}
 		],
-		"patternVariant": "32-Bit, Head 4096"
+		"variant": "32-Bit, Head 4096"
 	},
 	{
 		"extensions": [],
 		"mimes": [],
 		"name": "Mach-O Binary",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "FE ED FA CF"
+				"pattern": "þíúÏ"
 			}
 		],
-		"patternVariant": "64-Bit, Head 0"
+		"variant": "64-Bit, Head 0"
 	},
 	{
 		"extensions": [],
 		"mimes": [],
 		"name": "Mach-O Binary",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 4096,
-				"hex": "FE ED FA CF"
+				"pattern": "þíúÏ"
 			}
 		],
-		"patternVariant": "64-Bit, Head 4096"
+		"variant": "64-Bit, Head 4096"
 	},
 	{
 		"extensions": [],
 		"mimes": [],
 		"name": "Mach-O Binary",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "CE FA ED FE"
+				"pattern": "Îúíþ"
 			}
 		],
-		"patternVariant": "32-Bit, Reverse Byte Ordering Scheme"
+		"variant": "32-Bit, Reverse Byte Ordering Scheme"
 	},
 	{
 		"extensions": [],
 		"mimes": [],
 		"name": "Mach-O Binary",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "CF FA ED FE"
+				"pattern": "Ïúíþ"
 			}
 		],
-		"patternVariant": "64-Bit, Reverse Byte Ordering Scheme"
+		"variant": "64-Bit, Reverse Byte Ordering Scheme"
 	},
 	{
 		"extensions": [
@@ -2818,10 +2818,10 @@
 		],
 		"mimes": [],
 		"name": "Java Key Store File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "FE ED FE ED"
+				"pattern": "þíþí"
 			}
 		]
 	},
@@ -2833,10 +2833,10 @@
 			"application/postscript"
 		],
 		"name": "PostScript Document",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "25 21 50 53"
+				"pattern": "%!PS"
 			}
 		]
 	},
@@ -2849,10 +2849,10 @@
 			"application/postscript"
 		],
 		"name": "Encapsulated PostScript File Version 3.0",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "25 21 50 53 2D 41 64 6F 62 65 2D 33 2E 30 20 45 50 53 46 2D 33 2E 30"
+				"pattern": "%!PS-Adobe-3.0 EPSF-3.0"
 			}
 		]
 	},
@@ -2865,10 +2865,10 @@
 			"application/postscript"
 		],
 		"name": "Encapsulated PostScript File Version 3.1",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "25 21 50 53 2D 41 64 6F 62 65 2D 33 2E 31 20 45 50 53 46 2D 33 2E 30"
+				"pattern": "%!PS-Adobe-3.1 EPSF-3.0"
 			}
 		]
 	},
@@ -2880,10 +2880,10 @@
 			"application/vnd.ms-htmlhelp"
 		],
 		"name": "Windows HTML Help Data",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "49 54 53 46 03 00 00 00 60 00 00 00"
+				"pattern": "ITSF\u0003\u0000\u0000\u0000`\u0000\u0000\u0000"
 			}
 		]
 	},
@@ -2895,13 +2895,13 @@
 			"application/winhlp"
 		],
 		"name": "Windows Help file",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "3F 5F"
+				"pattern": "?_"
 			}
 		],
-		"patternVariant": "Short"
+		"variant": "Short"
 	},
 	{
 		"extensions": [
@@ -2911,13 +2911,13 @@
 			"application/winhlp"
 		],
 		"name": "Windows Help file",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 6,
-				"hex": "00 00 FF FF FF FF"
+				"pattern": "\u0000\u0000ÿÿÿÿ"
 			}
 		],
-		"patternVariant": "Long"
+		"variant": "Long"
 	},
 	{
 		"extensions": [
@@ -2927,10 +2927,10 @@
 			"application/pdf"
 		],
 		"name": "Portable Document Format (PDF) File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "25 50 44 46 2D"
+				"pattern": "%PDF-"
 			}
 		]
 	},
@@ -2944,10 +2944,10 @@
 			"video/x-ms-asf"
 		],
 		"name": "Advanced Systems Format Video",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "30 26 B2 75 8E 66 CF 11 A6 D9 00 AA 00 62 CE 6C"
+				"pattern": "0&²ufÏ\u0011¦Ù\u0000ª\u0000bÎl"
 			}
 		]
 	},
@@ -2955,10 +2955,10 @@
 		"extensions": [],
 		"mimes": [],
 		"name": "System Deployment Image",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "24 53 44 49 30 30 30 31"
+				"pattern": "$SDI0001"
 			}
 		]
 	},
@@ -2971,10 +2971,10 @@
 			"audio/ogg"
 		],
 		"name": "Ogg Audio",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "4F 67 67 53"
+				"pattern": "OggS"
 			}
 		]
 	},
@@ -2986,10 +2986,10 @@
 			"video/ogg"
 		],
 		"name": "Ogg Video",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "4F 67 67 53"
+				"pattern": "OggS"
 			}
 		]
 	},
@@ -3005,14 +3005,14 @@
 			"audio/x-pn-wav"
 		],
 		"name": "Waveform Audio",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "52 49 46 46"
+				"pattern": "RIFF"
 			},
 			{
 				"fromIndex": 8,
-				"hex": "57 41 56 45"
+				"pattern": "WAVE"
 			}
 		]
 	},
@@ -3024,14 +3024,14 @@
 			"video/x-msvideo"
 		],
 		"name": "Audio Video Interleave (AVI)",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "52 49 46 46"
+				"pattern": "RIFF"
 			},
 			{
 				"fromIndex": 8,
-				"hex": "41 56 49 20"
+				"pattern": "AVI "
 			}
 		]
 	},
@@ -3043,10 +3043,10 @@
 			"audio/mp3"
 		],
 		"name": "MP3 Audio",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "FF FB FF F3 FF F2"
+				"pattern": "ÿûÿóÿò"
 			}
 		]
 	},
@@ -3058,10 +3058,10 @@
 			"audio/mpeg"
 		],
 		"name": "MP3 Audio With ID3v2 Container",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "49 44 33"
+				"pattern": "ID3"
 			}
 		]
 	},
@@ -3071,10 +3071,10 @@
 		],
 		"mimes": [],
 		"name": "CD-i CD Image",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 387785,
-				"hex": "43 44 30 30 31"
+				"pattern": "CD001"
 			}
 		]
 	},
@@ -3084,10 +3084,10 @@
 		],
 		"mimes": [],
 		"name": "Nintendo Game & Watch Image",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "6D 61 69 6E 2E 62 73"
+				"pattern": "main.bs"
 			}
 		]
 	},
@@ -3097,10 +3097,10 @@
 		],
 		"mimes": [],
 		"name": "Nintendo Entertainment System Image",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "4E 45 53"
+				"pattern": "NES"
 			}
 		]
 	},
@@ -3112,10 +3112,10 @@
 			"image/fits"
 		],
 		"name": "Flexible Image Transport System (FITS) File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "53 49 4D 50 4C 45 20 20 3D 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 54"
+				"pattern": "SIMPLE  =                    T"
 			}
 		]
 	},
@@ -3127,10 +3127,10 @@
 			"audio/x-flac"
 		],
 		"name": "Free Lossless Audio Codec (FLAC) File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "66 4C 61 43"
+				"pattern": "fLaC"
 			}
 		]
 	},
@@ -3143,10 +3143,10 @@
 			"audio/midi"
 		],
 		"name": "MIDI Sound File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "4D 54 68 64"
+				"pattern": "MThd"
 			}
 		]
 	},
@@ -3156,10 +3156,10 @@
 		],
 		"mimes": [],
 		"name": "Dalvik Executable",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "64 65 78 0A 30 33 35 00"
+				"pattern": "dex\n035\u0000"
 			}
 		]
 	},
@@ -3171,10 +3171,10 @@
 			"application/x-virtualbox-vmdk"
 		],
 		"name": "VMware Virtual Disk",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "4B 44 4D"
+				"pattern": "KDM"
 			}
 		]
 	},
@@ -3186,10 +3186,10 @@
 			"application/x-virtualbox-vmdk"
 		],
 		"name": "VMware 4 Virtual Disk Description File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "23 20 44 69 73 6B 20 44 65 73 63 72 69 70 74 6F"
+				"pattern": "# Disk Descripto"
 			}
 		]
 	},
@@ -3201,10 +3201,10 @@
 			"application/x-chrome-extension"
 		],
 		"name": "Google Chrome Extension",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "43 72 32 34"
+				"pattern": "Cr24"
 			}
 		]
 	},
@@ -3214,10 +3214,10 @@
 		],
 		"mimes": [],
 		"name": "FreeHand 8 Document",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "41 47 44 33"
+				"pattern": "AGD3"
 			}
 		]
 	},
@@ -3227,10 +3227,10 @@
 		],
 		"mimes": [],
 		"name": "AppleWorks 5 Document",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "05 07 00 00 42 4F 42 4F 05 07 00 00 00 00 00 00 00 00 00 00 00 01"
+				"pattern": "\u0005\u0007\u0000\u0000BOBO\u0005\u0007\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001"
 			}
 		]
 	},
@@ -3240,10 +3240,10 @@
 		],
 		"mimes": [],
 		"name": "AppleWorks 6 Document",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "06 07 E1 00 42 4F 42 4F 06 07 E1 00 00 00 00 00 00 00 00 00 00 01"
+				"pattern": "\u0006\u0007á\u0000BOBO\u0006\u0007á\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001"
 			}
 		]
 	},
@@ -3253,13 +3253,13 @@
 		],
 		"mimes": [],
 		"name": "Roxio Toast Disc Image",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "45 52 02 00 00 00"
+				"pattern": "ER\u0002\u0000\u0000\u0000"
 			}
 		],
-		"patternVariant": "NoPrefix"
+		"variant": "NoPrefix"
 	},
 	{
 		"extensions": [
@@ -3267,13 +3267,13 @@
 		],
 		"mimes": [],
 		"name": "Roxio Toast Disc Image",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "8B 45 52 02 00 00 00"
+				"pattern": "ER\u0002\u0000\u0000\u0000"
 			}
 		],
-		"patternVariant": "Prefix"
+		"variant": "Prefix"
 	},
 	{
 		"extensions": [
@@ -3283,10 +3283,10 @@
 			"application/vnd.xara"
 		],
 		"name": "eXtensible ARchive",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "78 61 72 21"
+				"pattern": "xar!"
 			}
 		]
 	},
@@ -3296,10 +3296,10 @@
 		],
 		"mimes": [],
 		"name": "Windows Files & Settings Transfer Repository File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "50 4D 4F 43 43 4D 4F 43"
+				"pattern": "PMOCCMOC"
 			}
 		]
 	},
@@ -3311,10 +3311,10 @@
 			"application/x-tar"
 		],
 		"name": "TAR Archive",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 257,
-				"hex": "75 73 74 61 72 00 30 30 75 73 74 61 72 20 20 00"
+				"pattern": "ustar\u000000ustar  \u0000"
 			}
 		]
 	},
@@ -3324,10 +3324,10 @@
 		],
 		"mimes": [],
 		"name": "OAR Archive",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "4F 41 52"
+				"pattern": "OAR"
 			}
 		]
 	},
@@ -3337,10 +3337,10 @@
 		],
 		"mimes": [],
 		"name": "Open Source Portable Voxel File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "74 6F 78 33"
+				"pattern": "tox3"
 			}
 		]
 	},
@@ -3350,10 +3350,10 @@
 		],
 		"mimes": [],
 		"name": "Magic Lantern Video File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "4D 4C 56 49"
+				"pattern": "MLVI"
 			}
 		]
 	},
@@ -3361,10 +3361,10 @@
 		"extensions": [],
 		"mimes": [],
 		"name": "Windows Update Binary Delta Compression File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "44 43 4D 01 50 41 33 30 50 41 33 30"
+				"pattern": "DCM\u0001PA30PA30"
 			}
 		]
 	},
@@ -3376,10 +3376,10 @@
 			"application/x-7z-compressed"
 		],
 		"name": "7-Zip Archive",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "37 7A BC AF 27 1C"
+				"pattern": "7z¼¯'\u001c"
 			}
 		]
 	},
@@ -3389,10 +3389,10 @@
 		],
 		"mimes": [],
 		"name": "LZ4 Frame File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "04 22 4D 18"
+				"pattern": "\u0004\"M\u0018"
 			}
 		]
 	},
@@ -3404,10 +3404,10 @@
 			"application/vnd.ms-cab-compressed"
 		],
 		"name": "Microsoft Cabinet File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "4D 53 43 46"
+				"pattern": "MSCF"
 			}
 		]
 	},
@@ -3417,10 +3417,10 @@
 		],
 		"mimes": [],
 		"name": "Free Lossless Image Format (FLIF) File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "46 4C 49 46"
+				"pattern": "FLIF"
 			}
 		]
 	},
@@ -3430,10 +3430,10 @@
 		],
 		"mimes": [],
 		"name": "SEAN Session Analysis Training File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "4D 49 4C 20"
+				"pattern": "MIL "
 			}
 		]
 	},
@@ -3446,10 +3446,10 @@
 			"application/x-x509-ca-cert"
 		],
 		"name": "DER Encoded X.509 Certificate File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "30 82"
+				"pattern": "0"
 			}
 		]
 	},
@@ -3459,10 +3459,10 @@
 		],
 		"mimes": [],
 		"name": "PuTTY Private Key File Version 2",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "50 75 54 54 59 2D 55 73 65 72 2D 4B 65 79 2D 46 69 6C 65 2D 32 3A"
+				"pattern": "PuTTY-User-Key-File-2:"
 			}
 		]
 	},
@@ -3472,10 +3472,10 @@
 		],
 		"mimes": [],
 		"name": "PuTTY Private Key File Version 3",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "50 75 54 54 59 2D 55 73 65 72 2D 4B 65 79 2D 46 69 6C 65 2D 33 3A"
+				"pattern": "PuTTY-User-Key-File-3:"
 			}
 		]
 	},
@@ -3483,10 +3483,10 @@
 		"extensions": [],
 		"mimes": [],
 		"name": "OpenSSH Private Key File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "2D 2D 2D 2D 2D 42 45 47 49 4E 20 4F 50 45 4E 53 53 48 20 50 52 49 56 41 54 45 20 4B 45 59 2D 2D 2D 2D 2D"
+				"pattern": "-----BEGIN OPENSSH PRIVATE KEY-----"
 			}
 		]
 	},
@@ -3496,10 +3496,10 @@
 		],
 		"mimes": [],
 		"name": "OpenSSH Public Key File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "2D 2D 2D 2D 2D 42 45 47 49 4E 20 53 53 48 32 20 4B 45 59 2D 2D 2D 2D 2D"
+				"pattern": "-----BEGIN SSH2 KEY-----"
 			}
 		]
 	},
@@ -3509,10 +3509,10 @@
 		],
 		"mimes": [],
 		"name": "DICOM Medical File Format",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 128,
-				"hex": "44 49 43 4D"
+				"pattern": "DICM"
 			}
 		]
 	},
@@ -3524,10 +3524,10 @@
 			"font/woff"
 		],
 		"name": "WOFF 1.0 Font",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "77 4F 46 46"
+				"pattern": "wOFF"
 			}
 		]
 	},
@@ -3539,10 +3539,10 @@
 			"font/woff2"
 		],
 		"name": "WOFF 2.0 Font",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "77 4F 46 32"
+				"pattern": "wOF2"
 			}
 		]
 	},
@@ -3552,10 +3552,10 @@
 		],
 		"mimes": [],
 		"name": "Lepton Compressed JPEG Image",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "CF 84 01"
+				"pattern": "Ï\u0001"
 			}
 		]
 	},
@@ -3567,10 +3567,10 @@
 			"application/x-debian-package"
 		],
 		"name": "Linux Deb File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "21 3C 61 72 63 68 3E 0A"
+				"pattern": "!<arch>\n"
 			}
 		]
 	},
@@ -3583,14 +3583,14 @@
 			"text/rtf"
 		],
 		"name": "Rich Text Format (RTF) File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "7B 5C 72 74 66"
+				"pattern": "{\\rtf"
 			},
 			{
 				"fromIndex": -1,
-				"hex": "7D"
+				"pattern": "}"
 			}
 		]
 	},
@@ -3598,10 +3598,10 @@
 		"extensions": [],
 		"mimes": [],
 		"name": "Microsoft Tape File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "54 41 50 45"
+				"pattern": "TAPE"
 			}
 		]
 	},
@@ -3613,13 +3613,13 @@
 			"video/mp4"
 		],
 		"name": "MPEG-4 Video",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 4,
-				"hex": "66 74 79 70 69 73 6F 6D"
+				"pattern": "ftypisom"
 			}
 		],
-		"patternVariant": "isom"
+		"variant": "isom"
 	},
 	{
 		"extensions": [
@@ -3629,13 +3629,13 @@
 			"video/mp4"
 		],
 		"name": "MPEG-4 Video",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 4,
-				"hex": "66 74 79 70 4D 53 4E 56"
+				"pattern": "ftypMSNV"
 			}
 		],
-		"patternVariant": "MSNV"
+		"variant": "MSNV"
 	},
 	{
 		"extensions": [
@@ -3643,10 +3643,10 @@
 		],
 		"mimes": [],
 		"name": "Apache Optimized Row Columnar (ORC) File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "4F 52 43"
+				"pattern": "ORC"
 			}
 		]
 	},
@@ -3660,10 +3660,10 @@
 			"audio/x-mpegurl"
 		],
 		"name": "Multimedia Playlist",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "23 45 58 54 4D 33 55"
+				"pattern": "#EXTM3U"
 			}
 		]
 	},
@@ -3673,10 +3673,10 @@
 		],
 		"mimes": [],
 		"name": "M2 Archive",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "6D 64 66 00"
+				"pattern": "mdf\u0000"
 			}
 		]
 	},
@@ -3686,10 +3686,10 @@
 		],
 		"mimes": [],
 		"name": "Capcom RE Engine Game Data Archive",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "4B 50 4B 41"
+				"pattern": "KPKA"
 			}
 		]
 	},
@@ -3699,10 +3699,10 @@
 		],
 		"mimes": [],
 		"name": "Capcom MT Framework Game Data Archive",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "41 52 43"
+				"pattern": "ARC"
 			}
 		]
 	},
@@ -3712,10 +3712,10 @@
 		],
 		"mimes": [],
 		"name": "Interleaf PrinterLeaf",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "D0 4F 50 53"
+				"pattern": "ÐOPS"
 			}
 		]
 	},
@@ -3725,10 +3725,10 @@
 		],
 		"mimes": [],
 		"name": "NIfTI File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 344,
-				"hex": "6E 2B 31 00"
+				"pattern": "n+1\u0000"
 			}
 		]
 	},
@@ -3738,10 +3738,10 @@
 		],
 		"mimes": [],
 		"name": "NIfTI Header File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 344,
-				"hex": "6E 69 31 00"
+				"pattern": "ni1\u0000"
 			}
 		]
 	},
@@ -3749,10 +3749,10 @@
 		"extensions": [],
 		"mimes": [],
 		"name": "Digital Metaphors Report Builder File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "52 41 46 36 34"
+				"pattern": "RAF64"
 			}
 		]
 	},
@@ -3760,10 +3760,10 @@
 		"extensions": [],
 		"mimes": [],
 		"name": "Visionaire 3 Engine Resource File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "56 49 53 33"
+				"pattern": "VIS3"
 			}
 		]
 	},
@@ -3773,10 +3773,10 @@
 		],
 		"mimes": [],
 		"name": "SAP Power Monitor (Version 1.1.0) Data File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "70 77 72 64 61 74 61"
+				"pattern": "pwrdata"
 			}
 		]
 	},
@@ -3788,10 +3788,10 @@
 			"application/x-freearc"
 		],
 		"name": "ARC Archive",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "1A 08"
+				"pattern": "\u001a\b"
 			}
 		]
 	},
@@ -3804,10 +3804,10 @@
 			"application/pgp-signature"
 		],
 		"name": "Armored PGP Public Key File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "2D 2D 2D 2D 2D 42 45 47 49 4E 20 50 47 50 20 50 55 42 4C 49 43 20 4B 45 49 20 42 4C 4F 43 4B 2D 2D 2D 2D 2D"
+				"pattern": "-----BEGIN PGP PUBLIC KEI BLOCK-----"
 			}
 		]
 	},
@@ -3817,10 +3817,10 @@
 		],
 		"mimes": [],
 		"name": "Windows Help Content File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "3A 42 61 73 65 20"
+				"pattern": ":Base "
 			}
 		]
 	},
@@ -3830,10 +3830,10 @@
 		],
 		"mimes": [],
 		"name": "Nero CD Compilation File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "0E 4E 65 72 6F 49 53 4F"
+				"pattern": "\u000eNeroISO"
 			}
 		]
 	},
@@ -3843,10 +3843,10 @@
 		],
 		"mimes": [],
 		"name": "DeskMate Worksheet File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "0E 57 4B 53"
+				"pattern": "\u000eWKS"
 			}
 		]
 	},
@@ -3856,10 +3856,10 @@
 		],
 		"mimes": [],
 		"name": "Sibelius Music Score File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "0F 53 49 42 45 4C 49 55 53"
+				"pattern": "\u000fSIBELIUS"
 			}
 		]
 	},
@@ -3873,10 +3873,10 @@
 			"application/gzip"
 		],
 		"name": "GZip Archive",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "1F 8B"
+				"pattern": "\u001f"
 			}
 		]
 	},
@@ -3889,10 +3889,10 @@
 			"application/x-xz"
 		],
 		"name": "XZ LZMA2 Archive",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "FD 37 7A 58 5A 00"
+				"pattern": "ý7zXZ\u0000"
 			}
 		]
 	},
@@ -3905,10 +3905,10 @@
 			"application/x-x509-ca-cert"
 		],
 		"name": "PEM Encoded X.509 Certificate File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "2D 2D 2D 2D 2D 42 45 47 49 4E 20 43 45 52 54 49 46 49 43 41 54 45 2D 2D 2D 2D 2D"
+				"pattern": "-----BEGIN CERTIFICATE-----"
 			}
 		]
 	},
@@ -3919,10 +3919,10 @@
 		],
 		"mimes": [],
 		"name": "PEM Encoded X.509 Certificate Signing Request File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "2D 2D 2D 2D 2D 42 45 47 49 4E 20 43 45 52 54 49 46 49 43 41 54 45 20 52 45 51 55 45 53 54 2D 2D 2D 2D 2D"
+				"pattern": "-----BEGIN CERTIFICATE REQUEST-----"
 			}
 		]
 	},
@@ -3933,10 +3933,10 @@
 		],
 		"mimes": [],
 		"name": "Pem Encoded X.509 PKCS#8 Private Key File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "2D 2D 2D 2D 2D 42 45 47 49 4E 20 50 52 49 56 41 54 45 20 4B 45 59 2D 2D 2D 2D 2D"
+				"pattern": "-----BEGIN PRIVATE KEY-----"
 			}
 		]
 	},
@@ -3947,10 +3947,10 @@
 		],
 		"mimes": [],
 		"name": "PEM Encoded X.509 PKCS#1 DSA Private Key File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "2D 2D 2D 2D 2D 42 45 47 49 4E 20 44 53 41 20 50 52 49 56 41 54 45 20 4B 45 59 2D 2D 2D 2D 2D"
+				"pattern": "-----BEGIN DSA PRIVATE KEY-----"
 			}
 		]
 	},
@@ -3961,10 +3961,10 @@
 		],
 		"mimes": [],
 		"name": "PEM Encoded X.509 PKCS#1 RSA Private Key File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "2D 2D 2D 2D 2D 42 45 47 49 4E 20 52 45 41 20 50 52 49 56 41 54 45 20 4B 45 59 2D 2D 2D 2D 2D"
+				"pattern": "-----BEGIN REA PRIVATE KEY-----"
 			}
 		]
 	},
@@ -3976,10 +3976,10 @@
 			"image/x-tga"
 		],
 		"name": "Truevision Targa Graphic File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": -18,
-				"hex": "54 52 55 45 56 49 53 49 4F 4E 2D 58 46 49 4C 45 2E 00"
+				"pattern": "TRUEVISION-XFILE.\u0000"
 			}
 		]
 	},
@@ -3991,10 +3991,10 @@
 			"image/avif"
 		],
 		"name": "Alliance for Open Media (AOMedia) Video 1 (AV1) Image",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "00 00 00"
+				"pattern": "\u0000\u0000\u0000"
 			}
 		]
 	},
@@ -4004,10 +4004,10 @@
 		],
 		"mimes": [],
 		"name": "Compucon/Singer Embroidery Design File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00"
+				"pattern": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
 			}
 		]
 	},
@@ -4017,10 +4017,10 @@
 		],
 		"mimes": [],
 		"name": "Revit Project File Subheader",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 512,
-				"hex": "00 00 00 00 00 00 00 00"
+				"pattern": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
 			}
 		]
 	},
@@ -4030,10 +4030,10 @@
 		],
 		"mimes": [],
 		"name": "Windows Disk Image File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "00 00 00 00 14 00 00 00"
+				"pattern": "\u0000\u0000\u0000\u0000\u0014\u0000\u0000\u0000"
 			}
 		]
 	},
@@ -4043,10 +4043,10 @@
 		],
 		"mimes": [],
 		"name": "Bitcoin Core Wallet File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 8,
-				"hex": "00 00 00 00 62 31 05 00 09 00 00 00 00 20 00 00 00 09 00 00 00 00 00 00"
+				"pattern": "\u0000\u0000\u0000\u0000b1\u0005\u0000\t\u0000\u0000\u0000\u0000 \u0000\u0000\u0000\t\u0000\u0000\u0000\u0000\u0000\u0000"
 			}
 		]
 	},
@@ -4056,10 +4056,10 @@
 		],
 		"mimes": [],
 		"name": "NOAA Raster Navigation Chart (RNC) File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "21 0D 0A 43 52 52 2F 54 68 69 73 20 65 6C 65 63 74 72 6F 6E 69 63 20 63 68 61 72 74 20 77 61 73 20 70 72 6F 64 75 63 65 64 20 75 6E 64 65 72 20 74 68 65 20 61 75 74 68 6F 72 69 74 79 20 6F 66 20 55 53 41 2D 4E 4F 41 41 2F 4E 4F 53 2E 0D 0A"
+				"pattern": "!\r\nCRR/This electronic chart was produced under the authority of USA-NOAA/NOS.\r\n"
 			}
 		]
 	},
@@ -4071,14 +4071,14 @@
 			"application/epub+zip"
 		],
 		"name": "Electronic Publication File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "50 4B 03 04"
+				"pattern": "PK\u0003\u0004"
 			},
 			{
 				"fromIndex": 30,
-				"hex": "6D 69 6D 65 74 79 70 65 61 70 70 6C 69 63 61 74 69 6F 6E 2F 65 70 75 62 2B 7A 69 70"
+				"pattern": "mimetypeapplication/epub+zip"
 			}
 		]
 	},
@@ -4090,10 +4090,10 @@
 			"application/msword"
 		],
 		"name": "Microsoft Office Word Document",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "D0 CF 11 E0 A1 B1 1A E1"
+				"pattern": "ÐÏ\u0011à¡±\u001aá"
 			}
 		]
 	},
@@ -4105,10 +4105,10 @@
 			"application/vnd.ms-excel"
 		],
 		"name": "Microsoft Office Excel Document",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "D0 CF 11 E0 A1 B1 1A E1"
+				"pattern": "ÐÏ\u0011à¡±\u001aá"
 			}
 		]
 	},
@@ -4120,10 +4120,10 @@
 			"application/vnd.ms-powerpoint"
 		],
 		"name": "Microsoft Office PowerPoint Document",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "D0 CF 11 E0 A1 B1 1A E1"
+				"pattern": "ÐÏ\u0011à¡±\u001aá"
 			}
 		]
 	},
@@ -4135,10 +4135,10 @@
 			"application/x-msdownload"
 		],
 		"name": "Windows Installer",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "D0 CF 11 E0 A1 B1 1A E1"
+				"pattern": "ÐÏ\u0011à¡±\u001aá"
 			}
 		]
 	},
@@ -4150,10 +4150,10 @@
 			"application/vnd.ms-outlook"
 		],
 		"name": "Microsoft Outlook Item",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "D0 CF 11 E0 A1 B1 1A E1"
+				"pattern": "ÐÏ\u0011à¡±\u001aá"
 			}
 		]
 	},
@@ -4168,10 +4168,10 @@
 			"video/x-matroska"
 		],
 		"name": "Matroska Media File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "1A 45 DF A3"
+				"pattern": "\u001aEß£"
 			}
 		]
 	},
@@ -4183,10 +4183,10 @@
 			"video/webm"
 		],
 		"name": "WebM File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "1A 45 DF A3"
+				"pattern": "\u001aEß£"
 			}
 		]
 	},
@@ -4199,14 +4199,14 @@
 			"image/vnd.djvu"
 		],
 		"name": "DjVu Document",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "41 54 26 54 46 4F 52 4D"
+				"pattern": "AT&TFORM"
 			},
 			{
 				"fromIndex": 12,
-				"hex": "44 4A 56"
+				"pattern": "DJV"
 			}
 		]
 	},
@@ -4214,10 +4214,10 @@
 		"extensions": [],
 		"mimes": [],
 		"name": "uImage File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "27 05 19 56"
+				"pattern": "'\u0005\u0019V"
 			}
 		]
 	},
@@ -4227,10 +4227,10 @@
 		],
 		"mimes": [],
 		"name": "LZFSE File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "62 76 78 32"
+				"pattern": "bvx2"
 			}
 		]
 	},
@@ -4240,10 +4240,10 @@
 		],
 		"mimes": [],
 		"name": "Apache Avro Binary File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "4F 62 6A 01"
+				"pattern": "Obj\u0001"
 			}
 		]
 	},
@@ -4253,10 +4253,10 @@
 		],
 		"mimes": [],
 		"name": "RCFile Columnar File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "53 45 51 36"
+				"pattern": "SEQ6"
 			}
 		]
 	},
@@ -4266,10 +4266,10 @@
 		],
 		"mimes": [],
 		"name": "Roblox Place File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "3C 72 6F 62 6C 6F 78 21"
+				"pattern": "<roblox!"
 			}
 		]
 	},
@@ -4280,10 +4280,10 @@
 		],
 		"mimes": [],
 		"name": "PhotoCap Object Templates File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "65 87 78 56"
+				"pattern": "exV"
 			}
 		]
 	},
@@ -4293,10 +4293,10 @@
 		],
 		"mimes": [],
 		"name": "PhotoCap Vector File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "55 55 AA AA"
+				"pattern": "UUªª"
 			}
 		]
 	},
@@ -4315,10 +4315,10 @@
 		],
 		"mimes": [],
 		"name": "PhotoCap Template File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "78 56 34"
+				"pattern": "xV4"
 			}
 		]
 	},
@@ -4326,10 +4326,10 @@
 		"extensions": [],
 		"mimes": [],
 		"name": "Apache Parquet Columnar File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "50 41 52 31"
+				"pattern": "PAR1"
 			}
 		]
 	},
@@ -4341,10 +4341,10 @@
 			"application/vnd.ezpix-album"
 		],
 		"name": "Emulator Emaxsynth Samples File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "45 4D 58 32"
+				"pattern": "EMX2"
 			}
 		]
 	},
@@ -4356,10 +4356,10 @@
 			"application/vnd.ezpix-package"
 		],
 		"name": "Emulator III Synth Samples File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "45 4D 55 33"
+				"pattern": "EMU3"
 			}
 		]
 	},
@@ -4371,10 +4371,10 @@
 			"application/x-lua-bytecode"
 		],
 		"name": "Lua Bytecode File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "1B 4C 75 61"
+				"pattern": "\u001bLua"
 			}
 		]
 	},
@@ -4384,10 +4384,10 @@
 		],
 		"mimes": [],
 		"name": "MacOS File Alias (Symbolic Link)",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "62 6F 6F 6B 00 00 00 00 6D 61 72 6B 00 00 00 00"
+				"pattern": "book\u0000\u0000\u0000\u0000mark\u0000\u0000\u0000\u0000"
 			}
 		]
 	},
@@ -4397,10 +4397,10 @@
 		],
 		"mimes": [],
 		"name": "Microsoft URL Security Zones Identifier File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "5B 5A 6F 6E 65 54 72 61 6E 73 66 65 72 5D"
+				"pattern": "[ZoneTransfer]"
 			}
 		]
 	},
@@ -4412,10 +4412,10 @@
 			"message/rfc822"
 		],
 		"name": "Email Message Var5 File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "52 65 63 65 69 76 65 64 3A"
+				"pattern": "Received:"
 			}
 		]
 	},
@@ -4425,10 +4425,10 @@
 		],
 		"mimes": [],
 		"name": "Tableau Datasource File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "20 02 01 62 A0 1E AB 07 02 00 00 00"
+				"pattern": " \u0002\u0001b \u001e«\u0007\u0002\u0000\u0000\u0000"
 			}
 		]
 	},
@@ -4438,10 +4438,10 @@
 		],
 		"mimes": [],
 		"name": "KDB File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "37 48 03 02 00 00 00 00 58 35 30 39 4B 45 59"
+				"pattern": "7H\u0003\u0002\u0000\u0000\u0000\u0000X509KEY"
 			}
 		]
 	},
@@ -4453,14 +4453,14 @@
 			"application/pgp-encrypted"
 		],
 		"name": "PGP File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "85"
+				"pattern": ""
 			},
 			{
 				"fromIndex": 3,
-				"hex": "03"
+				"pattern": "\u0003"
 			}
 		]
 	},
@@ -4470,10 +4470,10 @@
 		],
 		"mimes": [],
 		"name": "Zstandard Archive",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "28 B5 2F FD"
+				"pattern": "(µ/ý"
 			}
 		]
 	},
@@ -4485,10 +4485,10 @@
 			"application/rls-services+xml"
 		],
 		"name": "QuickZip RS Archive",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "52 53 56 4B 44 41 54 41"
+				"pattern": "RSVKDATA"
 			}
 		]
 	},
@@ -4498,10 +4498,10 @@
 		],
 		"mimes": [],
 		"name": "Smile file",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "3A 29 0A"
+				"pattern": ":)\n"
 			}
 		]
 	},
@@ -4509,10 +4509,10 @@
 		"extensions": [],
 		"mimes": [],
 		"name": "Preferred Executable Format",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "4A 6F 79 21"
+				"pattern": "Joy!"
 			}
 		]
 	},
@@ -4524,10 +4524,10 @@
 			"application/x-subrip"
 		],
 		"name": "SubRip File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "31 0A 30 30"
+				"pattern": "1\n00"
 			}
 		]
 	},
@@ -4537,10 +4537,10 @@
 		],
 		"mimes": [],
 		"name": "VPK File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "34 12 AA 55"
+				"pattern": "4\u0012ªU"
 			}
 		]
 	},
@@ -4552,10 +4552,10 @@
 			"application/x-ace-compressed"
 		],
 		"name": "ACE Archive",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 7,
-				"hex": "2A 2A 41 43 45 2A 2A"
+				"pattern": "**ACE**"
 			}
 		]
 	},
@@ -4567,10 +4567,10 @@
 			"application/x-arj"
 		],
 		"name": "ARJ File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "60 EA"
+				"pattern": "`ê"
 			}
 		]
 	},
@@ -4580,10 +4580,10 @@
 		],
 		"mimes": [],
 		"name": "InstallShield CAB Archive",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "49 53 63 28"
+				"pattern": "ISc("
 			}
 		]
 	},
@@ -4595,10 +4595,10 @@
 			"application/x-msmetafile"
 		],
 		"name": "Windows Metafile",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "D7 CD C6 9A"
+				"pattern": "×ÍÆ"
 			}
 		]
 	},
@@ -4608,10 +4608,10 @@
 		],
 		"mimes": [],
 		"name": "XCF File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "67 69 6D 70 20 78 63 66"
+				"pattern": "gimp xcf"
 			}
 		]
 	},
@@ -4623,10 +4623,10 @@
 			"image/x-xpixmap"
 		],
 		"name": "X PixMap Image",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "2F 2A 20 58 50 4D 20 2A 2F"
+				"pattern": "/* XPM */"
 			}
 		]
 	},
@@ -4636,10 +4636,10 @@
 		],
 		"mimes": [],
 		"name": "Advanced Forensics File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "41 46 46"
+				"pattern": "AFF"
 			}
 		]
 	},
@@ -4650,10 +4650,10 @@
 		],
 		"mimes": [],
 		"name": "EnCase EWF File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "45 56 46 32"
+				"pattern": "EVF2"
 			}
 		]
 	},
@@ -4663,10 +4663,10 @@
 		],
 		"mimes": [],
 		"name": "QEMU Copy On Write (QCOW) File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "51 46 49"
+				"pattern": "QFI"
 			}
 		]
 	},
@@ -4676,14 +4676,14 @@
 		],
 		"mimes": [],
 		"name": "Animated Cursor File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "52 49 46 46"
+				"pattern": "RIFF"
 			},
 			{
 				"fromIndex": 8,
-				"hex": "41 43 4F 4E"
+				"pattern": "ACON"
 			}
 		]
 	},
@@ -4693,14 +4693,14 @@
 		],
 		"mimes": [],
 		"name": "CDA File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "52 49 46 46"
+				"pattern": "RIFF"
 			},
 			{
 				"fromIndex": 8,
-				"hex": "43 44 44 41"
+				"pattern": "CDDA"
 			}
 		]
 	},
@@ -4710,14 +4710,14 @@
 		],
 		"mimes": [],
 		"name": "Qualcomm PureVoice File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "52 49 46 46"
+				"pattern": "RIFF"
 			},
 			{
 				"fromIndex": 8,
-				"hex": "51 4C 43 4D"
+				"pattern": "QLCM"
 			}
 		]
 	},
@@ -4731,17 +4731,17 @@
 			"application/x-director"
 		],
 		"name": "Macromedia Director File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "52 49 46 58"
+				"pattern": "RIFX"
 			},
 			{
 				"fromIndex": 8,
-				"hex": "4D 56 39 33"
+				"pattern": "MV93"
 			}
 		],
-		"patternVariant": "BE"
+		"variant": "BE"
 	},
 	{
 		"extensions": [
@@ -4753,17 +4753,17 @@
 			"application/x-director"
 		],
 		"name": "Macromedia Director File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "58 46 49 52"
+				"pattern": "XFIR"
 			},
 			{
 				"fromIndex": 8,
-				"hex": "33 39 56 4D"
+				"pattern": "39VM"
 			}
 		],
-		"patternVariant": "LE"
+		"variant": "LE"
 	},
 	{
 		"extensions": [
@@ -4773,10 +4773,10 @@
 			"video/x-flv"
 		],
 		"name": "Flash Video",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "46 4C 56"
+				"pattern": "FLV"
 			}
 		]
 	},
@@ -4788,10 +4788,10 @@
 			"application/x-virtualbox-vdi"
 		],
 		"name": "VirtualBox Virtual Hard Disk File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "3C 3C 3C 20 4F 72 61 63 6C 65 20 56 4D 20 56 69 72 74 75 61 6C 42 6F 78 20 44 69 73 6B 20 49 6D 61 67 65 20 3E 3E 3E"
+				"pattern": "<<< Oracle VM VirtualBox Disk Image >>>"
 			}
 		]
 	},
@@ -4803,10 +4803,10 @@
 			"application/x-virtualbox-vhd"
 		],
 		"name": "Windows Virtual PC Virtual Hard Disk File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "63 6F 6E 6E 65 63 74 69 78"
+				"pattern": "connectix"
 			}
 		]
 	},
@@ -4816,10 +4816,10 @@
 		],
 		"mimes": [],
 		"name": "Windows Virtual PC Windows 8 Virtual Hard Disk File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "76 68 64 78 66 69 6C 65"
+				"pattern": "vhdxfile"
 			}
 		]
 	},
@@ -4829,10 +4829,10 @@
 		],
 		"mimes": [],
 		"name": "Compressed ISO Image",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "49 73 5A 21"
+				"pattern": "IsZ!"
 			}
 		]
 	},
@@ -4842,10 +4842,10 @@
 		],
 		"mimes": [],
 		"name": "Direct Access Archive PowerISO File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "44 41 41"
+				"pattern": "DAA"
 			}
 		]
 	},
@@ -4855,10 +4855,10 @@
 		],
 		"mimes": [],
 		"name": "Windows Event Viewer File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "4C 66 4C 65"
+				"pattern": "LfLe"
 			}
 		]
 	},
@@ -4868,10 +4868,10 @@
 		],
 		"mimes": [],
 		"name": "Windows Event Viewer XML File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "45 6C 66 46 69 6C 65"
+				"pattern": "ElfFile"
 			}
 		]
 	},
@@ -4881,10 +4881,10 @@
 		],
 		"mimes": [],
 		"name": "Windows Customized Database",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 8,
-				"hex": "73 64 62 66"
+				"pattern": "sdbf"
 			}
 		]
 	},
@@ -4894,10 +4894,10 @@
 		],
 		"mimes": [],
 		"name": "Windows Program Manager Program Group File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "50 4D 43 43"
+				"pattern": "PMCC"
 			}
 		]
 	},
@@ -4909,10 +4909,10 @@
 			"application/vnd.iccprofile"
 		],
 		"name": "ICC Profile File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "4B 43 4D 53"
+				"pattern": "KCMS"
 			}
 		]
 	},
@@ -4923,10 +4923,10 @@
 		],
 		"mimes": [],
 		"name": "Windows Registry File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "72 65 67 66"
+				"pattern": "regf"
 			}
 		]
 	},
@@ -4936,10 +4936,10 @@
 		],
 		"mimes": [],
 		"name": "Microsoft Outlook Personal Storage Table File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "21 42 44 4E"
+				"pattern": "!BDN"
 			}
 		]
 	},
@@ -4949,10 +4949,10 @@
 		],
 		"mimes": [],
 		"name": "Google Draco 3D Model File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "44 52 41 43 4F"
+				"pattern": "DRACO"
 			}
 		]
 	},
@@ -4963,10 +4963,10 @@
 		],
 		"mimes": [],
 		"name": "Gridded Data File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "47 52 49 42"
+				"pattern": "GRIB"
 			}
 		]
 	},
@@ -4976,10 +4976,10 @@
 		],
 		"mimes": [],
 		"name": "Blender File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "42 4C 45 4E 44 45 52"
+				"pattern": "BLENDER"
 			}
 		]
 	},
@@ -4989,13 +4989,13 @@
 		],
 		"name": "JPEG XL Image",
 		"mimes": [],
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "00 00 00 0C 4A 58 4C 20 0D 0A 87 0A"
+				"pattern": "\u0000\u0000\u0000\fJXL \r\n\n"
 			}
 		],
-		"patternVariant": "Long"
+		"variant": "Long"
 	},
 	{
 		"extensions": [
@@ -5003,13 +5003,13 @@
 		],
 		"name": "JPEG XL Image",
 		"mimes": [],
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "FF 0A"
+				"pattern": "ÿ\n"
 			}
 		],
-		"patternVariant": "Short"
+		"variant": "Short"
 	},
 	{
 		"extensions": [
@@ -5021,10 +5021,10 @@
 			"font/ttf"
 		],
 		"name": "TrueType Font",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "00 01 00 00 00"
+				"pattern": "\u0000\u0001\u0000\u0000\u0000"
 			}
 		]
 	},
@@ -5036,10 +5036,10 @@
 			"font/ttf"
 		],
 		"name": "TrueType Font",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "74 72 75 65 00"
+				"pattern": "true\u0000"
 			}
 		]
 	},
@@ -5051,10 +5051,10 @@
 			"font/otf"
 		],
 		"name": "OpenType Font",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "4F 54 54 4F"
+				"pattern": "OTTO"
 			}
 		]
 	},
@@ -5062,10 +5062,10 @@
 		"extensions": [],
 		"mimes": [],
 		"name": "Modulefile for Environment Modules",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "23 25 4D 6F 64 75 6C 65"
+				"pattern": "#%Module"
 			}
 		]
 	},
@@ -5075,10 +5075,10 @@
 		],
 		"mimes": [],
 		"name": "Slob File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "21 2D 31 53 4C 4F 42 1F"
+				"pattern": "!-1SLOB\u001f"
 			}
 		]
 	},
@@ -5086,10 +5086,10 @@
 		"extensions": [],
 		"mimes": [],
 		"name": "Serialized Java Data",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "AC ED"
+				"pattern": "¬í"
 			}
 		]
 	},
@@ -5099,10 +5099,10 @@
 		],
 		"mimes": [],
 		"name": "Creative Voice File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "43 72 65 61 74 69 76 65 20 56 6F 69 63 65 20 46 69 6C 65 1A 1A 00"
+				"pattern": "Creative Voice File\u001a\u001a\u0000"
 			}
 		]
 	},
@@ -5115,10 +5115,10 @@
 			"audio/basic"
 		],
 		"name": "Au Audio File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "2E 73 6E 64"
+				"pattern": ".snd"
 			}
 		]
 	},
@@ -5126,10 +5126,10 @@
 		"extensions": [],
 		"mimes": [],
 		"name": "OpenGL Iris Perfomer Performer Fast Binary (PFB)",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "DB 0A CE 00"
+				"pattern": "Û\nÎ\u0000"
 			}
 		]
 	},
@@ -5139,10 +5139,10 @@
 		],
 		"mimes": [],
 		"name": "Noodlesoft Hazel Rules File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "48 5A 4C 52 00 00 00 18"
+				"pattern": "HZLR\u0000\u0000\u0000\u0018"
 			}
 		]
 	},
@@ -5152,10 +5152,10 @@
 		],
 		"mimes": [],
 		"name": "FL Studio Project File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "46 4C 68 64"
+				"pattern": "FLhd"
 			}
 		]
 	},
@@ -5165,10 +5165,10 @@
 		],
 		"mimes": [],
 		"name": "FL Studio Mobile Project File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "31 30 4C 46"
+				"pattern": "10LF"
 			}
 		]
 	},
@@ -5176,10 +5176,10 @@
 		"extensions": [],
 		"mimes": [],
 		"name": "Vormetric Encryption DPM Version 2.1 Header",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "52 4B 4D 43 32 31 30"
+				"pattern": "RKMC210"
 			}
 		]
 	},
@@ -5189,10 +5189,10 @@
 		],
 		"mimes": [],
 		"name": "Micrografx Vector Graphic File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "01 FF 02 04 03 02"
+				"pattern": "\u0001ÿ\u0002\u0004\u0003\u0002"
 			}
 		]
 	},
@@ -5202,10 +5202,10 @@
 		],
 		"mimes": [],
 		"name": "Digital Speech Standard (Olympus, Grundig, & Phillips) V2",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "02 64 73 73"
+				"pattern": "\u0002dss"
 			}
 		]
 	},
@@ -5215,10 +5215,10 @@
 		],
 		"mimes": [],
 		"name": "Digital Speech Standard (Olympus, Grundig, & Phillips) V3",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "03 64 73 73"
+				"pattern": "\u0003dss"
 			}
 		]
 	},
@@ -5228,10 +5228,10 @@
 		],
 		"mimes": [],
 		"name": "Approach Index File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "03 00 00 00 41 50 50 52"
+				"pattern": "\u0003\u0000\u0000\u0000APPR"
 			}
 		]
 	},
@@ -5241,10 +5241,10 @@
 		],
 		"mimes": [],
 		"name": "SkinCrafter Skin File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "07 53 4B 46"
+				"pattern": "\u0007SKF"
 			}
 		]
 	},
@@ -5256,10 +5256,10 @@
 			"application/xml-dtd"
 		],
 		"name": "DesignTools 2D Design File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "07 64 74 32 64 64 74 64"
+				"pattern": "\u0007dt2ddtd"
 			}
 		]
 	},
@@ -5269,10 +5269,10 @@
 		],
 		"mimes": [],
 		"name": "MultiBit Bitcoin Wallet File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "0A 16 6F 72 67 2E 62 69 74 63 6F 69 6E 2E 70 72"
+				"pattern": "\n\u0016org.bitcoin.pr"
 			}
 		]
 	},
@@ -5282,10 +5282,10 @@
 		],
 		"mimes": [],
 		"name": "DeskMate Document",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "0D 44 4F 43"
+				"pattern": "\rDOC"
 			}
 		]
 	},
@@ -5295,10 +5295,10 @@
 		],
 		"mimes": [],
 		"name": "Microsoft Developer Studio Project File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "23 20 4D 69 63 72 6F 73 6F 66 74 20 44 65 76 65 6C 6F 70 65 72 20 53 74 75 64 69 6F"
+				"pattern": "# Microsoft Developer Studio"
 			}
 		]
 	},
@@ -5310,10 +5310,10 @@
 			"audio/amr"
 		],
 		"name": "Adaptive Multi-Rate ACELP (Algebraic Code Excited Linear Prediction) Codec File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "23 21 41 4D 52"
+				"pattern": "#!AMR"
 			}
 		]
 	},
@@ -5325,10 +5325,10 @@
 			"audio/silk"
 		],
 		"name": "Skype Compressed Audio",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "23 21 53 49 4C 4B 0A"
+				"pattern": "#!SILK\n"
 			}
 		]
 	},
@@ -5338,10 +5338,10 @@
 		],
 		"mimes": [],
 		"name": "Radiance High Dynamic Range Image",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "23 3F 52 41 44 49 41 4E 43 45 0A"
+				"pattern": "#?RADIANCE\n"
 			}
 		]
 	},
@@ -5351,10 +5351,10 @@
 		],
 		"mimes": [],
 		"name": "VBScript Encoded Script",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "23 40 7E 5E"
+				"pattern": "#@~^"
 			}
 		]
 	},
@@ -5364,10 +5364,10 @@
 		],
 		"mimes": [],
 		"name": "MikroTik WinBox Connection Database (Address Book)",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "0D F0 1D C0"
+				"pattern": "\rð\u001dÀ"
 			}
 		]
 	},
@@ -5377,10 +5377,10 @@
 		],
 		"mimes": [],
 		"name": "Alcohol 120% CD Image",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "00 FF FF FF FF FF FF FF FF FF FF 00 00 02 00 01"
+				"pattern": "\u0000ÿÿÿÿÿÿÿÿÿÿ\u0000\u0000\u0002\u0000\u0001"
 			}
 		]
 	},
@@ -5390,14 +5390,14 @@
 		],
 		"mimes": [],
 		"name": "ASCII85/BASE85 Encoded File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "3C 7E 36 3C 5C 25 5F 30 67 53 71 68 3B"
+				"pattern": "<~6<\\%_0gSqh;"
 			},
 			{
 				"fromIndex": -3,
-				"hex": "7E 3E 0A"
+				"pattern": "~>\n"
 			}
 		]
 	},
@@ -5407,14 +5407,14 @@
 		],
 		"mimes": [],
 		"name": "JBIG2 Image",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "97 4A 42 32 0D 0A 1A 0A"
+				"pattern": "JB2\r\n\u001a\n"
 			},
 			{
 				"fromIndex": -8,
-				"hex": "03 33 00 01 00 00 00 00"
+				"pattern": "\u00033\u0000\u0001\u0000\u0000\u0000\u0000"
 			}
 		]
 	},
@@ -5424,10 +5424,10 @@
 		],
 		"mimes": [],
 		"name": "Works for Windows Spreadsheet",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "FF 00 02 00 04 04 05 54 02 00"
+				"pattern": "ÿ\u0000\u0002\u0000\u0004\u0004\u0005T\u0002\u0000"
 			}
 		]
 	},
@@ -5437,10 +5437,10 @@
 		],
 		"mimes": [],
 		"name": "QuickReport Report File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "FF 0A 00"
+				"pattern": "ÿ\n\u0000"
 			}
 		]
 	},
@@ -5450,10 +5450,10 @@
 		],
 		"mimes": [],
 		"name": "Windows International Code Page",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "FF 46 4F 4E 54"
+				"pattern": "ÿFONT"
 			}
 		]
 	},
@@ -5463,10 +5463,10 @@
 		],
 		"mimes": [],
 		"name": "Keyboard Driver File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "FF 4B 45 59 42 20 20 20"
+				"pattern": "ÿKEYB   "
 			}
 		]
 	},
@@ -5481,10 +5481,10 @@
 		],
 		"mimes": [],
 		"name": "WordPerfect Text and Graphics File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "FF 57 50 43"
+				"pattern": "ÿWPC"
 			}
 		]
 	},
@@ -5494,10 +5494,10 @@
 		],
 		"mimes": [],
 		"name": "Acronis True Image",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "CE 24 B9 A2 20 00 00 00"
+				"pattern": "Î$¹¢ \u0000\u0000\u0000"
 			}
 		]
 	},
@@ -5507,10 +5507,10 @@
 		],
 		"mimes": [],
 		"name": "Quicken Data File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "AC 9E BD 8F 00 00"
+				"pattern": "¬½\u0000\u0000"
 			}
 		]
 	},
@@ -5520,10 +5520,10 @@
 		],
 		"mimes": [],
 		"name": "Qimage Filter",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "76 32 30 30 33 2E 31 30 0D 0A 30 0D 0A"
+				"pattern": "v2003.10\r\n0\r\n"
 			}
 		]
 	},
@@ -5533,10 +5533,10 @@
 		],
 		"mimes": [],
 		"name": "Windows NT Registry Hive File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "72 65 67 66"
+				"pattern": "regf"
 			}
 		]
 	},
@@ -5546,10 +5546,10 @@
 		],
 		"mimes": [],
 		"name": "Sonic Foundry Acid Music File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "72 69 66 66"
+				"pattern": "riff"
 			}
 		]
 	},
@@ -5559,10 +5559,10 @@
 		],
 		"mimes": [],
 		"name": "RealMedia Metafile",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "72 74 73 70 3A 2F 2F"
+				"pattern": "rtsp://"
 			}
 		]
 	},
@@ -5572,10 +5572,10 @@
 		],
 		"mimes": [],
 		"name": "Torrent File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "64 38 3A 61 6E 6E 6F 75 6E 63 65"
+				"pattern": "d8:announce"
 			}
 		]
 	},
@@ -5585,10 +5585,10 @@
 		],
 		"mimes": [],
 		"name": "StuffIt Compressed Archive",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "53 49 54 21 00"
+				"pattern": "SIT!\u0000"
 			}
 		]
 	},
@@ -5598,10 +5598,10 @@
 		],
 		"mimes": [],
 		"name": "SmartDraw Drawing File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "53 4D 41 52 54 44 52 57"
+				"pattern": "SMARTDRW"
 			}
 		]
 	},
@@ -5611,10 +5611,10 @@
 		],
 		"mimes": [],
 		"name": "StorageCraft ShadownProtect Backup File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "53 50 46 49 00"
+				"pattern": "SPFI\u0000"
 			}
 		]
 	},
@@ -5624,10 +5624,10 @@
 		],
 		"mimes": [],
 		"name": "MultiBit Bitcoin Blockchain File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "53 50 56 42"
+				"pattern": "SPVB"
 			}
 		]
 	},
@@ -5637,10 +5637,10 @@
 		],
 		"mimes": [],
 		"name": "Netscape Navigator (v4) Database File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "00 06 15 61 00 00 00 02 00 00 04 D2 00 00 10 00"
+				"pattern": "\u0000\u0006\u0015a\u0000\u0000\u0000\u0002\u0000\u0000\u0004Ò\u0000\u0000\u0010\u0000"
 			}
 		]
 	},
@@ -5650,10 +5650,10 @@
 		],
 		"mimes": [],
 		"name": "The Bat! Secure E-mail Message Base Index File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "01 01 47 19 A4 00 00 00 00 00 00 00"
+				"pattern": "\u0001\u0001G\u0019¤\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
 			}
 		]
 	},
@@ -5663,10 +5663,10 @@
 		],
 		"mimes": [],
 		"name": "Material Exchange Format File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "06 0E 2B 34 02 05 01 01 0D 01 02 01 01 02"
+				"pattern": "\u0006\u000e+4\u0002\u0005\u0001\u0001\r\u0001\u0002\u0001\u0001\u0002"
 			}
 		]
 	},
@@ -5676,10 +5676,10 @@
 		],
 		"mimes": [],
 		"name": "Runtime Software Compressed Disk Image",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "1A 52 54 53 20 43 4F 4D 50 52 45 53 53 45 44 20 49 4D 41 47 45 20 56 31 2E 30 1A"
+				"pattern": "\u001aRTS COMPRESSED IMAGE V1.0\u001a"
 			}
 		]
 	},
@@ -5689,10 +5689,10 @@
 		],
 		"mimes": [],
 		"name": "Google Earth Keyhole Placemark File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "23 20 54 68 69 73 20 69 73 20 61 6E 20 4B 65 79"
+				"pattern": "# This is an Key"
 			}
 		]
 	},
@@ -5702,10 +5702,10 @@
 		],
 		"mimes": [],
 		"name": "SPSS Statistics Data File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "24 46 4C 32 40 28 23 29 20 53 50 53 53 20 44 41 54 41 20 46 49 4C 45"
+				"pattern": "$FL2@(#) SPSS DATA FILE"
 			}
 		]
 	},
@@ -5715,10 +5715,10 @@
 		],
 		"mimes": [],
 		"name": "Macintosh BinHex 4 Compressed Archive",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "28 54 68 69 73 20 66 69 6C 65 20 6D 75 73 74 20 62 65 20 63 6F 6E 76 65 72 74 65 64 20 77 69 74 68 20 42 69 6E 48 65 78 20"
+				"pattern": "(This file must be converted with BinHex "
 			}
 		]
 	},
@@ -5732,10 +5732,10 @@
 			"text/x-log"
 		],
 		"name": "Symantec Wise Installer Log File",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "2A 2A 2A 20 20 49 6E 73 74 61 6C 6C 61 74 69 6F 6E 20 53 74 61 72 74 65 64 20"
+				"pattern": "***  Installation Started "
 			}
 		]
 	},
@@ -5748,13 +5748,13 @@
 			"application/vnd.ms-developer"
 		],
 		"name": "Microsoft Visual Studio Solution",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "EF BB BF 0D 0A 4D 69 63 72 6F 73 6F 66 74 20 56 69 73 75 61 6C 20 53 74 75 64 69 6F 20 53 6F 6C 75 74 69 6F 6E 20 46 69 6C 65 2C 20 46 6F 72 6D 61 74 20 56 65 72 73 69 6F 6E 20"
+				"pattern": "ï»¿\r\nMicrosoft Visual Studio Solution File, Format Version "
 			}
 		],
-		"patternVariant": "BOM CRLF"
+		"variant": "BOM CRLF"
 	},
 	{
 		"category": "other",
@@ -5765,13 +5765,13 @@
 			"application/vnd.ms-developer"
 		],
 		"name": "Microsoft Visual Studio Solution",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "EF BB BF 0A 4D 69 63 72 6F 73 6F 66 74 20 56 69 73 75 61 6C 20 53 74 75 64 69 6F 20 53 6F 6C 75 74 69 6F 6E 20 46 69 6C 65 2C 20 46 6F 72 6D 61 74 20 56 65 72 73 69 6F 6E 20"
+				"pattern": "ï»¿\nMicrosoft Visual Studio Solution File, Format Version "
 			}
 		],
-		"patternVariant": "BOM LF"
+		"variant": "BOM LF"
 	},
 	{
 		"category": "other",
@@ -5782,12 +5782,12 @@
 			"application/vnd.ms-developer"
 		],
 		"name": "Microsoft Visual Studio Solution",
-		"pattern": [
+		"signature": [
 			{
 				"fromIndex": 0,
-				"hex": "4D 69 63 72 6F 73 6F 66 74 20 56 69 73 75 61 6C 20 53 74 75 64 69 6F 20 53 6F 6C 75 74 69 6F 6E 20 46 69 6C 65 2C 20 46 6F 72 6D 61 74 20 56 65 72 73 69 6F 6E 20"
+				"pattern": "Microsoft Visual Studio Solution File, Format Version "
 			}
 		],
-		"patternVariant": "Plain"
+		"variant": "Plain"
 	}
 ]

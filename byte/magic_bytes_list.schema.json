@@ -82,6 +82,7 @@
 			}
 		},
 		"required": [
+			"category",
 			"extensions",
 			"mimes",
 			"name",

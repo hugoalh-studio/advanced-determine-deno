@@ -267,6 +267,7 @@
 		]
 	},
 	{
+		"category": "archive",
 		"extensions": [
 			".dba"
 		],
@@ -280,6 +281,7 @@
 		]
 	},
 	{
+		"category": "archive",
 		"extensions": [
 			".dba"
 		],
@@ -293,6 +295,7 @@
 		]
 	},
 	{
+		"category": "archive",
 		"extensions": [
 			".tda"
 		],
@@ -306,6 +309,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".tdf$"
 		],
@@ -319,6 +323,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".tdef"
 		],
@@ -332,6 +337,7 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".ico"
 		],
@@ -349,10 +355,13 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".icns"
 		],
-		"mimes": [],
+		"mimes": [
+			"image/x-icns"
+		],
 		"name": "Apple Icon Image",
 		"pattern": [
 			{
@@ -362,6 +371,7 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".heic"
 		],
@@ -377,6 +387,7 @@
 		]
 	},
 	{
+		"category": "archive",
 		"extensions": [
 			".lzh"
 		],
@@ -393,6 +404,7 @@
 		"patternVariant": "Method 0 (No Compression)"
 	},
 	{
+		"category": "archive",
 		"extensions": [
 			".lzh"
 		],
@@ -409,6 +421,7 @@
 		"patternVariant": "Method 5 (8 KiB Sliding Window)"
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".bac"
 		],
@@ -422,6 +435,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".idx"
 		],
@@ -435,6 +449,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".plist"
 		],
@@ -448,6 +463,7 @@
 		]
 	},
 	{
+		"category": "compressed",
 		"extensions": [
 			".bz2"
 		],
@@ -463,6 +479,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".vdr"
 		],
@@ -480,6 +497,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".trd"
 		],
@@ -497,10 +515,13 @@
 		]
 	},
 	{
+		"category": "presentation",
 		"extensions": [
 			".shw"
 		],
-		"mimes": [],
+		"mimes": [
+			"application/x-corelpresentations"
+		],
 		"name": "Corel SHOW! 4.0",
 		"pattern": [
 			{
@@ -514,10 +535,13 @@
 		]
 	},
 	{
+		"category": "presentation",
 		"extensions": [
 			".shw"
 		],
-		"mimes": [],
+		"mimes": [
+			"application/x-corelpresentations"
+		],
 		"name": "Corel SHOW! 5.0",
 		"pattern": [
 			{
@@ -531,6 +555,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".shb"
 		],
@@ -548,6 +573,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".shr"
 		],
@@ -565,6 +591,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".dcr"
 		],
@@ -585,6 +612,7 @@
 		"patternVariant": "BE"
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".dcr"
 		],
@@ -605,6 +633,7 @@
 		"patternVariant": "LE"
 	},
 	{
+		"category": "video",
 		"extensions": [
 			".mmm"
 		],
@@ -622,6 +651,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".mny"
 		],
@@ -637,10 +667,13 @@
 		]
 	},
 	{
+		"category": "database",
 		"extensions": [
 			".accdb"
 		],
-		"mimes": [],
+		"mimes": [
+			"application/x-msaccess"
+		],
 		"name": "Microsoft Access 2007 Database",
 		"pattern": [
 			{
@@ -650,6 +683,7 @@
 		]
 	},
 	{
+		"category": "database",
 		"extensions": [
 			".mdb"
 		],
@@ -665,6 +699,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".swf"
 		],
@@ -681,6 +716,7 @@
 		"patternVariant": "C"
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".swf"
 		],
@@ -697,10 +733,13 @@
 		"patternVariant": "F"
 	},
 	{
+		"category": "document",
 		"extensions": [
 			".indd"
 		],
-		"mimes": [],
+		"mimes": [
+			"application/x-indesign"
+		],
 		"name": "Adobe InDesign Document",
 		"pattern": [
 			{
@@ -710,6 +749,7 @@
 		]
 	},
 	{
+		"category": "archive",
 		"extensions": [
 			".zlib"
 		],
@@ -724,6 +764,7 @@
 		"patternVariant": "No Compression Without Preset Dictionary"
 	},
 	{
+		"category": "archive",
 		"extensions": [
 			".zlib"
 		],
@@ -738,6 +779,7 @@
 		"patternVariant": "Best Speed Without Preset Dictionary"
 	},
 	{
+		"category": "archive",
 		"extensions": [
 			".zlib"
 		],
@@ -752,6 +794,7 @@
 		"patternVariant": "Default Compression Without Preset Dictionary"
 	},
 	{
+		"category": "archive",
 		"extensions": [
 			".zlib"
 		],
@@ -766,6 +809,7 @@
 		"patternVariant": "Best Compression Without Preset Dictionary"
 	},
 	{
+		"category": "archive",
 		"extensions": [
 			".zlib"
 		],
@@ -780,6 +824,7 @@
 		"patternVariant": "No Compression With Preset Dictionary"
 	},
 	{
+		"category": "archive",
 		"extensions": [
 			".zlib"
 		],
@@ -794,6 +839,7 @@
 		"patternVariant": "Best Speed With Preset Dictionary"
 	},
 	{
+		"category": "archive",
 		"extensions": [
 			".zlib"
 		],
@@ -808,6 +854,7 @@
 		"patternVariant": "Default Compression With Preset Dictionary"
 	},
 	{
+		"category": "archive",
 		"extensions": [
 			".zlib"
 		],
@@ -822,10 +869,13 @@
 		"patternVariant": "Best Compression With Preset Dictionary"
 	},
 	{
+		"category": "archive",
 		"extensions": [
 			".zoo"
 		],
-		"mimes": [],
+		"mimes": [
+			"application/x-zoo"
+		],
 		"name": "Zoo File",
 		"pattern": [
 			{
@@ -835,6 +885,7 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".pbm"
 		],
@@ -850,6 +901,7 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".pbm"
 		],
@@ -865,6 +917,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".pgm"
 		],
@@ -1084,6 +1137,7 @@
 		"patternVariant": "Space"
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".j2c",
 			".j2k",
@@ -1097,9 +1151,11 @@
 		],
 		"mimes": [
 			"image/jp2",
-			"image/jpx",
 			"image/jpm",
-			"image/mj2"
+			"image/jpx",
+			"image/mj2",
+			"image/x-jp2-codestream",
+			"video/mj2"
 		],
 		"name": "JPEG 2000 Image",
 		"pattern": [
@@ -1111,6 +1167,7 @@
 		"patternVariant": "Long"
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".j2c",
 			".j2k",
@@ -1124,9 +1181,11 @@
 		],
 		"mimes": [
 			"image/jp2",
-			"image/jpx",
 			"image/jpm",
-			"image/mj2"
+			"image/jpx",
+			"image/mj2",
+			"image/x-jp2-codestream",
+			"video/mj2"
 		],
 		"name": "JPEG 2000 Image",
 		"pattern": [
@@ -1138,6 +1197,7 @@
 		"patternVariant": "Short"
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".hl7"
 		],
@@ -1152,6 +1212,7 @@
 		"patternVariant": "B"
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".hl7"
 		],
@@ -1166,12 +1227,15 @@
 		"patternVariant": "M"
 	},
 	{
+		"category": "database",
 		"extensions": [
 			".sqlitedb",
 			".sqlite",
 			".db"
 		],
-		"mimes": [],
+		"mimes": [
+			"application/vnd.sqlite3"
+		],
 		"name": "SQLite Database",
 		"pattern": [
 			{
@@ -1181,6 +1245,7 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".pic"
 		],
@@ -1196,6 +1261,7 @@
 		]
 	},
 	{
+		"category": "video",
 		"extensions": [
 			".mov"
 		],
@@ -1205,12 +1271,99 @@
 		"name": "Apple QuickTime Movie File",
 		"pattern": [
 			{
-				"fromIndex": 0,
-				"hex": "00"
+				"fromIndex": 4,
+				"hex": "66 74 79 70 71 74"
 			}
-		]
+		],
+		"patternVariant": "ftypqt"
 	},
 	{
+		"category": "video",
+		"extensions": [
+			".mov"
+		],
+		"mimes": [
+			"video/quicktime"
+		],
+		"name": "Apple QuickTime Movie File",
+		"pattern": [
+			{
+				"fromIndex": 4,
+				"hex": "66 72 65 65"
+			}
+		],
+		"patternVariant": "free"
+	},
+	{
+		"category": "video",
+		"extensions": [
+			".mov"
+		],
+		"mimes": [
+			"video/quicktime"
+		],
+		"name": "Apple QuickTime Movie File",
+		"pattern": [
+			{
+				"fromIndex": 4,
+				"hex": "6D 64 61 74"
+			}
+		],
+		"patternVariant": "mdat"
+	},
+	{
+		"category": "video",
+		"extensions": [
+			".mov"
+		],
+		"mimes": [
+			"video/quicktime"
+		],
+		"name": "Apple QuickTime Movie File",
+		"pattern": [
+			{
+				"fromIndex": 4,
+				"hex": "6D 6F 6F 76"
+			}
+		],
+		"patternVariant": "moov"
+	},
+	{
+		"category": "video",
+		"extensions": [
+			".mov"
+		],
+		"mimes": [
+			"video/quicktime"
+		],
+		"name": "Apple QuickTime Movie File",
+		"pattern": [
+			{
+				"fromIndex": 4,
+				"hex": "73 6B 69 70"
+			}
+		],
+		"patternVariant": "skip"
+	},
+	{
+		"category": "video",
+		"extensions": [
+			".mov"
+		],
+		"mimes": [
+			"video/quicktime"
+		],
+		"name": "Apple QuickTime Movie File",
+		"pattern": [
+			{
+				"fromIndex": 4,
+				"hex": "77 69 64 65"
+			}
+		],
+		"patternVariant": "wide"
+	},
+	{
+		"category": "other",
 		"extensions": [
 			".pif"
 		],
@@ -1224,6 +1377,7 @@
 		]
 	},
 	{
+		"category": "archive",
 		"extensions": [
 			".sea"
 		],
@@ -1239,6 +1393,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".ytr"
 		],
@@ -1252,6 +1407,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [],
 		"mimes": [],
 		"name": "Palm Desktop Data File (Access Format)",
@@ -1263,6 +1419,7 @@
 		]
 	},
 	{
+		"category": "video",
 		"extensions": [
 			".3gp"
 		],
@@ -1273,11 +1430,149 @@
 		"pattern": [
 			{
 				"fromIndex": 4,
-				"hex": "66 74 79 70 33 67"
+				"hex": "66 74 79 70 33 67 65"
 			}
-		]
+		],
+		"patternVariant": "e"
 	},
 	{
+		"category": "video",
+		"extensions": [
+			".3gp"
+		],
+		"mimes": [
+			"video/3gpp"
+		],
+		"name": "3rd Generation Partnership Project Multimedia File",
+		"pattern": [
+			{
+				"fromIndex": 4,
+				"hex": "66 74 79 70 33 67 66"
+			}
+		],
+		"patternVariant": "f"
+	},
+	{
+		"category": "video",
+		"extensions": [
+			".3gp"
+		],
+		"mimes": [
+			"video/3gpp"
+		],
+		"name": "3rd Generation Partnership Project Multimedia File",
+		"pattern": [
+			{
+				"fromIndex": 4,
+				"hex": "66 74 79 70 33 67 67"
+			}
+		],
+		"patternVariant": "g"
+	},
+	{
+		"category": "video",
+		"extensions": [
+			".3gp"
+		],
+		"mimes": [
+			"video/3gpp"
+		],
+		"name": "3rd Generation Partnership Project Multimedia File",
+		"pattern": [
+			{
+				"fromIndex": 4,
+				"hex": "66 74 79 70 33 67 68"
+			}
+		],
+		"patternVariant": "h"
+	},
+	{
+		"category": "video",
+		"extensions": [
+			".3gp"
+		],
+		"mimes": [
+			"video/3gpp"
+		],
+		"name": "3rd Generation Partnership Project Multimedia File",
+		"pattern": [
+			{
+				"fromIndex": 4,
+				"hex": "66 74 79 70 33 67 6D"
+			}
+		],
+		"patternVariant": "m"
+	},
+	{
+		"category": "video",
+		"extensions": [
+			".3gp"
+		],
+		"mimes": [
+			"video/3gpp"
+		],
+		"name": "3rd Generation Partnership Project Multimedia File",
+		"pattern": [
+			{
+				"fromIndex": 4,
+				"hex": "66 74 79 70 33 67 70"
+			}
+		],
+		"patternVariant": "p"
+	},
+	{
+		"category": "video",
+		"extensions": [
+			".3gp"
+		],
+		"mimes": [
+			"video/3gpp"
+		],
+		"name": "3rd Generation Partnership Project Multimedia File",
+		"pattern": [
+			{
+				"fromIndex": 4,
+				"hex": "66 74 79 70 33 67 72"
+			}
+		],
+		"patternVariant": "r"
+	},
+	{
+		"category": "video",
+		"extensions": [
+			".3gp"
+		],
+		"mimes": [
+			"video/3gpp"
+		],
+		"name": "3rd Generation Partnership Project Multimedia File",
+		"pattern": [
+			{
+				"fromIndex": 4,
+				"hex": "66 74 79 70 33 67 73"
+			}
+		],
+		"patternVariant": "s"
+	},
+	{
+		"category": "video",
+		"extensions": [
+			".3gp"
+		],
+		"mimes": [
+			"video/3gpp"
+		],
+		"name": "3rd Generation Partnership Project Multimedia File",
+		"pattern": [
+			{
+				"fromIndex": 4,
+				"hex": "66 74 79 70 33 67 74"
+			}
+		],
+		"patternVariant": "t"
+	},
+	{
+		"category": "video",
 		"extensions": [
 			".3g2"
 		],
@@ -1288,9 +1583,27 @@
 		"pattern": [
 			{
 				"fromIndex": 4,
-				"hex": "66 74 79 70 33 67"
+				"hex": "66 74 79 70 33 67 32"
 			}
-		]
+		],
+		"patternVariant": "3g2"
+	},
+	{
+		"category": "video",
+		"extensions": [
+			".3g2"
+		],
+		"mimes": [
+			"video/3gpp2"
+		],
+		"name": "3rd Generation Partnership Project 2 Multimedia File",
+		"pattern": [
+			{
+				"fromIndex": 4,
+				"hex": "66 74 79 70 4B 44 44 49"
+			}
+		],
+		"patternVariant": "KDDI"
 	},
 	{
 		"category": "compressed",
@@ -1310,6 +1623,7 @@
 		]
 	},
 	{
+		"category": "compressed",
 		"extensions": [
 			".tar.z",
 			".z"
@@ -1326,6 +1640,7 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".gif"
 		],
@@ -1342,6 +1657,7 @@
 		"patternVariant": "7"
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".gif"
 		],
@@ -1358,6 +1674,7 @@
 		"patternVariant": "9"
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".tif",
 			".tiff"
@@ -1372,9 +1689,28 @@
 				"hex": "4D 4D 00 2A"
 			}
 		],
-		"patternVariant": "BE"
+		"patternVariant": "BE, 2A"
 	},
 	{
+		"category": "image",
+		"extensions": [
+			".tif",
+			".tiff"
+		],
+		"mimes": [
+			"image/tiff"
+		],
+		"name": "Tagged Image File Format (TIFF)",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "49 49 00 2B"
+			}
+		],
+		"patternVariant": "BE, 2B"
+	},
+	{
+		"category": "image",
 		"extensions": [
 			".tif",
 			".tiff"
@@ -1389,13 +1725,50 @@
 				"hex": "49 49 2A 00"
 			}
 		],
-		"patternVariant": "LE"
+		"patternVariant": "LE, 2A"
 	},
 	{
+		"category": "image",
+		"extensions": [
+			".tif",
+			".tiff"
+		],
+		"mimes": [
+			"image/tiff"
+		],
+		"name": "Tagged Image File Format (TIFF)",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "49 49 2B 00"
+			}
+		],
+		"patternVariant": "LE, 2B"
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".crw"
+		],
+		"mimes": [
+			"image/x-canon-crw"
+		],
+		"name": "Canon RAW Format",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "49 49 1A 00 00 00 48 45 41 50 43 43 44 52"
+			}
+		]
+	},
+	{
+		"category": "image",
 		"extensions": [
 			".cr2"
 		],
-		"mimes": [],
+		"mimes": [
+			"image/x-canon-cr2"
+		],
 		"name": "Canon RAW Format Version 2",
 		"pattern": [
 			{
@@ -1405,10 +1778,45 @@
 		]
 	},
 	{
+		"category": "image",
+		"extensions": [
+			".cr2"
+		],
+		"mimes": [
+			"image/x-canon-cr2"
+		],
+		"name": "Canon RAW Format Version 2",
+		"pattern": [
+			{
+				"fromIndex": 0,
+				"hex": "4D 4D 00 2A 10 00 00 00 43 52"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".cr3"
+		],
+		"mimes": [
+			"image/x-canon-cr3"
+		],
+		"name": "Canon RAW Format Version 3",
+		"pattern": [
+			{
+				"fromIndex": 4,
+				"hex": "66 74 79 70 63 72 78"
+			}
+		]
+	},
+	{
+		"category": "image",
 		"extensions": [
 			".cin"
 		],
-		"mimes": [],
+		"mimes": [
+			"image/cineon"
+		],
 		"name": "Kodak Cineon Image",
 		"pattern": [
 			{
@@ -1418,6 +1826,7 @@
 		]
 	},
 	{
+		"category": "archive",
 		"extensions": [],
 		"mimes": [],
 		"name": "Rob Northen Compression (Version 1) Algorithm Archive",
@@ -1429,6 +1838,7 @@
 		]
 	},
 	{
+		"category": "archive",
 		"extensions": [],
 		"mimes": [],
 		"name": "Rob Northen Compression (Version 2) Algorithm Archive",
@@ -1440,6 +1850,7 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".nui"
 		],
@@ -1453,6 +1864,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".nup"
 		],
@@ -1466,11 +1878,14 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".dpx"
 		],
-		"mimes": [],
-		"name": "SMPTE DPX Image",
+		"mimes": [
+			"image/x-dpx"
+		],
+		"name": "Digital Picture Exchange (DPX) Image",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -1480,11 +1895,14 @@
 		"patternVariant": "BE"
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".dpx"
 		],
-		"mimes": [],
-		"name": "SMPTE DPX Image",
+		"mimes": [
+			"image/x-dpx"
+		],
+		"name": "Digital Picture Exchange (DPX) Image",
 		"pattern": [
 			{
 				"fromIndex": 0,
@@ -1494,11 +1912,13 @@
 		"patternVariant": "LE"
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".exr"
 		],
 		"mimes": [
-			"image/aces"
+			"image/aces",
+			"image/x-exr"
 		],
 		"name": "OpenEXR Image",
 		"pattern": [
@@ -5303,10 +5723,14 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".log"
 		],
-		"mimes": [],
+		"mimes": [
+			"text/plain",
+			"text/x-log"
+		],
 		"name": "Symantec Wise Installer Log File",
 		"pattern": [
 			{
@@ -5316,6 +5740,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".sln"
 		],
@@ -5332,6 +5757,7 @@
 		"patternVariant": "BOM CRLF"
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".sln"
 		],
@@ -5348,6 +5774,7 @@
 		"patternVariant": "BOM LF"
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".sln"
 		],

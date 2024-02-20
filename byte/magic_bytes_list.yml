@@ -142,42 +142,48 @@
   pattern:
     - fromIndex: 11
       hex: "00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00"
-- extensions:
+- category: "archive"
+  extensions:
     - ".dba"
   mimes: []
   name: "Palm Desktop Calendar Archive"
   pattern:
     - fromIndex: 0
       hex: "BE BA FE CA"
-- extensions:
+- category: "archive"
+  extensions:
     - ".dba"
   mimes: []
   name: "Palm Desktop To Do Archive"
   pattern:
     - fromIndex: 0
       hex: "00 01 42 44"
-- extensions:
+- category: "archive"
+  extensions:
     - ".tda"
   mimes: []
   name: "Palm Desktop Calendar Archive"
   pattern:
     - fromIndex: 0
       hex: "00 01 44 54"
-- extensions:
+- category: "other"
+  extensions:
     - ".tdf$"
   mimes: []
   name: "Telegram Desktop File"
   pattern:
     - fromIndex: 0
       hex: "54 44 46 24"
-- extensions:
+- category: "other"
+  extensions:
     - ".tdef"
   mimes: []
   name: "Telegram Desktop Encrypted File"
   pattern:
     - fromIndex: 0
       hex: "54 44 45 46"
-- extensions:
+- category: "image"
+  extensions:
     - ".ico"
   mimes:
     - "image/vnd.microsoft.icon"
@@ -187,14 +193,17 @@
   pattern:
     - fromIndex: 0
       hex: "00 00 01 00"
-- extensions:
+- category: "image"
+  extensions:
     - ".icns"
-  mimes: []
+  mimes:
+    - "image/x-icns"
   name: "Apple Icon Image"
   pattern:
     - fromIndex: 0
       hex: "69 63 6E 73"
-- extensions:
+- category: "image"
+  extensions:
     - ".heic"
   mimes:
     - "image/heic"
@@ -203,6 +212,7 @@
     - fromIndex: 4
       hex: "66 74 79 70 68 65 69 63"
 - &LempelZivHuffmanArchiveGroup
+  category: "archive"
   extensions:
     - ".lzh"
   mimes:
@@ -217,28 +227,32 @@
     - fromIndex: 2
       hex: "2D 68 6C 35 2D"
   patternVariant: "Method 5 (8 KiB Sliding Window)"
-- extensions:
+- category: "other"
+  extensions:
     - ".bac"
   mimes: []
   name: "AmiBack Amiga Backup Data File"
   pattern:
     - fromIndex: 0
       hex: "42 41 43 4B 4D 49 4B 45 44 49 53 4B"
-- extensions:
+- category: "other"
+  extensions:
     - ".idx"
   mimes: []
   name: "AmiBack Amiga Backup Index File"
   pattern:
     - fromIndex: 0
       hex: "49 4E 44 58"
-- extensions:
+- category: "other"
+  extensions:
     - ".plist"
   mimes: []
   name: "Binary Property List File"
   pattern:
     - fromIndex: 0
       hex: "62 70 6C 69 73 74"
-- extensions:
+- category: "compressed"
+  extensions:
     - ".bz2"
   mimes:
     - "application/x-bzip2"
@@ -246,7 +260,8 @@
   pattern:
     - fromIndex: 0
       hex: "42 5A 68"
-- extensions:
+- category: "other"
+  extensions:
     - ".vdr"
   mimes: []
   name: "VirtualDub"
@@ -255,7 +270,8 @@
       hex: "52 49 46 46"
     - fromIndex: 8
       hex: "56 44 52 4D"
-- extensions:
+- category: "other"
+  extensions:
     - ".trd"
   mimes: []
   name: "TrID"
@@ -264,25 +280,30 @@
       hex: "52 59 46 46"
     - fromIndex: 8
       hex: "54 52 49 44"
-- extensions:
+- category: "presentation"
+  extensions:
     - ".shw"
-  mimes: []
+  mimes:
+    - "application/x-corelpresentations"
   name: "Corel SHOW! 4.0"
   pattern:
     - fromIndex: 0
       hex: "52 49 46 46"
     - fromIndex: 8
       hex: "73 68 77 34"
-- extensions:
+- category: "presentation"
+  extensions:
     - ".shw"
-  mimes: []
+  mimes:
+    - "application/x-corelpresentations"
   name: "Corel SHOW! 5.0"
   pattern:
     - fromIndex: 0
       hex: "52 49 46 46"
     - fromIndex: 8
       hex: "73 68 77 35"
-- extensions:
+- category: "other"
+  extensions:
     - ".shb"
   mimes: []
   name: "Corel SHOW! 5.0 Background"
@@ -291,7 +312,8 @@
       hex: "52 49 46 46"
     - fromIndex: 8
       hex: "73 68 62 35"
-- extensions:
+- category: "other"
+  extensions:
     - ".shr"
   mimes: []
   name: "Corel SHOW! 5.0 Player"
@@ -301,6 +323,7 @@
     - fromIndex: 8
       hex: "73 68 72 35"
 - &AdobeShockwaveFileGroup
+  category: "other"
   extensions:
     - ".dcr"
   mimes:
@@ -319,7 +342,8 @@
     - fromIndex: 8
       hex: "4D 44 47 46"
   patternVariant: "LE"
-- extensions:
+- category: "video"
+  extensions:
     - ".mmm"
   mimes: []
   name: "Multimedia Movie"
@@ -328,7 +352,8 @@
       hex: "52 49 46 46"
     - fromIndex: 8
       hex: "52 4D 4D 50"
-- extensions:
+- category: "other"
+  extensions:
     - ".mny"
   mimes:
     - "application/x-msmoney"
@@ -336,14 +361,17 @@
   pattern:
     - fromIndex: 0
       hex: "00 01 00 00 4D 53 49 53 41 4D 20 44 61 74 61 62 61 73 65"
-- extensions:
+- category: "database"
+  extensions:
     - ".accdb"
-  mimes: []
+  mimes:
+    - "application/x-msaccess"
   name: "Microsoft Access 2007 Database"
   pattern:
     - fromIndex: 0
       hex: "00 01 00 00 53 74 61 6E 64 61 72 64 20 41 43 45 20 44 42"
-- extensions:
+- category: "database"
+  extensions:
     - ".mdb"
   mimes:
     - "application/x-msaccess"
@@ -352,6 +380,7 @@
     - fromIndex: 0
       hex: "00 01 00 00 53 74 61 6E 64 61 72 64 20 4A 65 74 20 44 42"
 - &AdobeFlashFileGroup
+  category: "other"
   extensions:
     - ".swf"
   mimes:
@@ -366,14 +395,17 @@
     - fromIndex: 0
       hex: "46 57 53"
   patternVariant: "F"
-- extensions:
+- category: "document"
+  extensions:
     - ".indd"
-  mimes: []
+  mimes:
+    - "application/x-indesign"
   name: "Adobe InDesign Document"
   pattern:
     - fromIndex: 0
       hex: "06 06 ED F5 D8 1D 46 E5 BD 31 EF E7 FE 74 B7 1D"
 - &ZLibArchiveGroup
+  category: "archive"
   extensions:
     - ".zlib"
   mimes: []
@@ -417,14 +449,17 @@
     - fromIndex: 0
       hex: "78 F9"
   patternVariant: "Best Compression With Preset Dictionary"
-- extensions:
+- category: "archive"
+  extensions:
     - ".zoo"
-  mimes: []
+  mimes:
+    - "application/x-zoo"
   name: "Zoo File"
   pattern:
     - fromIndex: 0
       hex: "5A 4F 4F"
-- extensions:
+- category: "image"
+  extensions:
     - ".pbm"
   mimes:
     - "image/x-portable-bitmap"
@@ -432,7 +467,8 @@
   pattern:
     - fromIndex: 0
       hex: "50 31 0A"
-- extensions:
+- category: "image"
+  extensions:
     - ".pbm"
   mimes:
     - "image/x-portable-bitmap"
@@ -440,7 +476,8 @@
   pattern:
     - fromIndex: 0
       hex: "50 34 0A"
-- extensions:
+- category: "other"
+  extensions:
     - ".pgm"
   mimes:
     - "image/x-portable-graymap"
@@ -526,7 +563,8 @@
     - fromIndex: 0
       hex: "50 36 20"
   patternVariant: "Space"
-- extensions:
+- category: "image"
+  extensions:
     - ".j2c"
     - ".j2k"
     - ".jp2"
@@ -538,15 +576,18 @@
     - ".mj2"
   mimes:
     - "image/jp2"
-    - "image/jpx"
     - "image/jpm"
+    - "image/jpx"
     - "image/mj2"
+    - "image/x-jp2-codestream"
+    - "video/mj2"
   name: "JPEG 2000 Image"
   pattern:
     - fromIndex: 0
       hex: "00 00 00 0C 6A 50 20 20 0D 0A 87 0A"
   patternVariant: "Long"
-- extensions:
+- category: "image"
+  extensions:
     - ".j2c"
     - ".j2k"
     - ".jp2"
@@ -558,15 +599,18 @@
     - ".mj2"
   mimes:
     - "image/jp2"
-    - "image/jpx"
     - "image/jpm"
+    - "image/jpx"
     - "image/mj2"
+    - "image/x-jp2-codestream"
+    - "video/mj2"
   name: "JPEG 2000 Image"
   pattern:
     - fromIndex: 0
       hex: "FF 4F FF 51"
   patternVariant: "Short"
 - &HL7Group
+  category: "other"
   extensions:
     - ".hl7"
   mimes: []
@@ -580,16 +624,19 @@
     - fromIndex: 0
       hex: "4D 53 48 7C"
   patternVariant: "M"
-- extensions:
+- category: "database"
+  extensions:
     - ".sqlitedb"
     - ".sqlite"
     - ".db"
-  mimes: []
+  mimes:
+    - "application/vnd.sqlite3"
   name: "SQLite Database"
   pattern:
     - fromIndex: 0
       hex: "53 51 4C 69 74 65 20 66 6F 72 6D 61 74 20 33 00"
-- extensions:
+- category: "image"
+  extensions:
     - ".pic"
   mimes:
     - "image/x-pict"
@@ -597,22 +644,52 @@
   pattern:
     - fromIndex: 0
       hex: "00"
-- extensions:
+- &AppleQuickTimeMovieFileGroup
+  category: "video"
+  extensions:
     - ".mov"
   mimes:
     - "video/quicktime"
   name: "Apple QuickTime Movie File"
   pattern:
-    - fromIndex: 0
-      hex: "00"
-- extensions:
+    - fromIndex: 4
+      hex: "66 74 79 70 71 74"
+  patternVariant: "ftypqt"
+- <<: *AppleQuickTimeMovieFileGroup
+  pattern:
+    - fromIndex: 4
+      hex: "66 72 65 65"
+  patternVariant: "free"
+- <<: *AppleQuickTimeMovieFileGroup
+  pattern:
+    - fromIndex: 4
+      hex: "6D 64 61 74"
+  patternVariant: "mdat"
+- <<: *AppleQuickTimeMovieFileGroup
+  pattern:
+    - fromIndex: 4
+      hex: "6D 6F 6F 76"
+  patternVariant: "moov"
+- <<: *AppleQuickTimeMovieFileGroup
+  pattern:
+    - fromIndex: 4
+      hex: "73 6B 69 70"
+  patternVariant: "skip"
+- <<: *AppleQuickTimeMovieFileGroup
+  pattern:
+    - fromIndex: 4
+      hex: "77 69 64 65"
+  patternVariant: "wide"
+- category: "other"
+  extensions:
     - ".pif"
   mimes: []
   name: "Windows Program Information File"
   pattern:
     - fromIndex: 0
       hex: "00"
-- extensions:
+- category: "archive"
+  extensions:
     - ".sea"
   mimes:
     - "application/x-sea"
@@ -620,33 +697,88 @@
   pattern:
     - fromIndex: 0
       hex: "00"
-- extensions:
+- category: "other"
+  extensions:
     - ".ytr"
   mimes: []
   name: "IRIS OCR Data File"
   pattern:
     - fromIndex: 0
       hex: "00"
-- extensions: []
+- category: "other"
+  extensions: []
   mimes: []
   name: "Palm Desktop Data File (Access Format)"
   pattern:
     - fromIndex: 0
       hex: "00 01 00 00"
-- extensions:
+- &3GPPMFGroup
+  category: "video"
+  extensions:
     - ".3gp"
   mimes:
     - "video/3gpp"
   name: "3rd Generation Partnership Project Multimedia File"
-  pattern: &3GPPPattern
+  pattern:
     - fromIndex: 4
-      hex: "66 74 79 70 33 67"
-- extensions:
+      hex: "66 74 79 70 33 67 65"
+  patternVariant: "e"
+- <<: *3GPPMFGroup
+  pattern:
+    - fromIndex: 4
+      hex: "66 74 79 70 33 67 66"
+  patternVariant: "f"
+- <<: *3GPPMFGroup
+  pattern:
+    - fromIndex: 4
+      hex: "66 74 79 70 33 67 67"
+  patternVariant: "g"
+- <<: *3GPPMFGroup
+  pattern:
+    - fromIndex: 4
+      hex: "66 74 79 70 33 67 68"
+  patternVariant: "h"
+- <<: *3GPPMFGroup
+  pattern:
+    - fromIndex: 4
+      hex: "66 74 79 70 33 67 6D"
+  patternVariant: "m"
+- <<: *3GPPMFGroup
+  pattern:
+    - fromIndex: 4
+      hex: "66 74 79 70 33 67 70"
+  patternVariant: "p"
+- <<: *3GPPMFGroup
+  pattern:
+    - fromIndex: 4
+      hex: "66 74 79 70 33 67 72"
+  patternVariant: "r"
+- <<: *3GPPMFGroup
+  pattern:
+    - fromIndex: 4
+      hex: "66 74 79 70 33 67 73"
+  patternVariant: "s"
+- <<: *3GPPMFGroup
+  pattern:
+    - fromIndex: 4
+      hex: "66 74 79 70 33 67 74"
+  patternVariant: "t"
+- &3GPP2MFGroup
+  category: "video"
+  extensions:
     - ".3g2"
   mimes:
     - "video/3gpp2"
   name: "3rd Generation Partnership Project 2 Multimedia File"
-  pattern: *3GPPPattern
+  pattern:
+    - fromIndex: 4
+      hex: "66 74 79 70 33 67 32"
+  patternVariant: "3g2"
+- <<: *3GPP2MFGroup
+  pattern:
+    - fromIndex: 4
+      hex: "66 74 79 70 4B 44 44 49"
+  patternVariant: "KDDI"
 - category: "compressed"
   extensions:
     - ".tar.z"
@@ -657,7 +789,8 @@
   pattern:
     - fromIndex: 0
       hex: "1F 9D"
-- extensions:
+- category: "compressed"
+  extensions:
     - ".tar.z"
     - ".z"
   mimes:
@@ -667,6 +800,7 @@
     - fromIndex: 0
       hex: "1F A0"
 - &GIFGroup
+  category: "image"
   extensions:
     - ".gif"
   mimes:
@@ -682,6 +816,7 @@
       hex: "47 49 46 38 39 61"
   patternVariant: "9"
 - &TIFFGroup
+  category: "image"
   extensions:
     - ".tif"
     - ".tiff"
@@ -691,72 +826,115 @@
   pattern:
     - fromIndex: 0
       hex: "4D 4D 00 2A"
-  patternVariant: "BE"
+  patternVariant: "BE, 2A"
+- <<: *TIFFGroup
+  pattern:
+    - fromIndex: 0
+      hex: "49 49 00 2B"
+  patternVariant: "BE, 2B"
 - <<: *TIFFGroup
   pattern:
     - fromIndex: 0
       hex: "49 49 2A 00"
-  patternVariant: "LE"
-- extensions:
+  patternVariant: "LE, 2A"
+- <<: *TIFFGroup
+  pattern:
+    - fromIndex: 0
+      hex: "49 49 2B 00"
+  patternVariant: "LE, 2B"
+- category: "image"
+  extensions:
+    - ".crw"
+  mimes:
+    - "image/x-canon-crw"
+  name: "Canon RAW Format"
+  pattern:
+    - fromIndex: 0
+      hex: "49 49 1A 00 00 00 48 45 41 50 43 43 44 52"
+- &CanonRAW2Group
+  category: "image"
+  extensions:
     - ".cr2"
-  mimes: []
+  mimes:
+    - "image/x-canon-cr2"
   name: "Canon RAW Format Version 2"
   pattern:
     - fromIndex: 0
       hex: "49 49 2A 00 10 00 00 00 43 52"
-- extensions:
+- <<: *CanonRAW2Group
+  pattern:
+    - fromIndex: 0
+      hex: "4D 4D 00 2A 10 00 00 00 43 52"
+- category: "image"
+  extensions:
+    - ".cr3"
+  mimes:
+    - "image/x-canon-cr3"
+  name: "Canon RAW Format Version 3"
+  pattern:
+    - fromIndex: 4
+      hex: "66 74 79 70 63 72 78"
+- category: "image"
+  extensions:
     - ".cin"
-  mimes: []
+  mimes:
+    - "image/cineon"
   name: "Kodak Cineon Image"
   pattern:
     - fromIndex: 0
       hex: "80 2A 5F D7"
-- extensions: []
+- category: "archive"
+  extensions: []
   mimes: []
   name: "Rob Northen Compression (Version 1) Algorithm Archive"
   pattern:
     - fromIndex: 0
       hex: "52 4E 43 01"
-- extensions: []
+- category: "archive"
+  extensions: []
   mimes: []
   name: "Rob Northen Compression (Version 2) Algorithm Archive"
   pattern:
     - fromIndex: 0
       hex: "52 4E 43 02"
-- extensions:
+- category: "image"
+  extensions:
     - ".nui"
   mimes: []
   name: "nuru Image File"
   pattern:
     - fromIndex: 0
       hex: "4E 55 52 55 49 4D 47"
-- extensions:
+- category: "other"
+  extensions:
     - ".nup"
   mimes: []
   name: "nuru Palette File"
   pattern:
     - fromIndex: 0
       hex: "4E 55 52 55 50 41 4C"
-- extensions:
+- &DPXImageGroup
+  category: "image"
+  extensions:
     - ".dpx"
-  mimes: []
-  name: "SMPTE DPX Image"
+  mimes:
+    - "image/x-dpx"
+  name: "Digital Picture Exchange (DPX) Image"
   pattern:
     - fromIndex: 0
       hex: "53 44 50 58"
   patternVariant: "BE"
-- extensions:
-    - ".dpx"
-  mimes: []
-  name: "SMPTE DPX Image"
+- <<: *DPXImageGroup
   pattern:
     - fromIndex: 0
       hex: "58 50 44 53"
   patternVariant: "LE"
-- extensions:
+- category: "image"
+  extensions:
     - ".exr"
   mimes:
     - "image/aces"
+    - "image/x-exr"
   name: "OpenEXR Image"
   pattern:
     - fromIndex: 0
@@ -2783,14 +2961,18 @@
   pattern:
     - fromIndex: 0
       hex: "28 54 68 69 73 20 66 69 6C 65 20 6D 75 73 74 20 62 65 20 63 6F 6E 76 65 72 74 65 64 20 77 69 74 68 20 42 69 6E 48 65 78 20"
-- extensions:
+- category: "other"
+  extensions:
     - ".log"
-  mimes: []
+  mimes:
+    - "text/plain"
+    - "text/x-log"
   name: "Symantec Wise Installer Log File"
   pattern:
     - fromIndex: 0
       hex: "2A 2A 2A 20 20 49 6E 73 74 61 6C 6C 61 74 69 6F 6E 20 53 74 61 72 74 65 64 20"
 - &MicrosoftVisualStudioSolutionGroup
+  category: "other"
   extensions:
     - ".sln"
   mimes:

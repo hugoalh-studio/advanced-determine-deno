@@ -16,47 +16,47 @@ package	.rpm	application/x-redhat-package-manager, application/x-rpm	RedHat Pack
 package	.bin		Amazon Kindle Update Package	"[{""fromIndex"":0,""hex"":""53 50 30 31""}]"	
 other	.wad	application/x-doom	Internal WAD	"[{""fromIndex"":0,""hex"":""49 57 41 44""}]"	
 other	.pdb	application/vnd.palm, application/x-pilot	PalmPilot Database/Document File	"[{""fromIndex"":11,""hex"":""00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00""}]"	
-	.dba		Palm Desktop Calendar Archive	"[{""fromIndex"":0,""hex"":""BE BA FE CA""}]"	
-	.dba		Palm Desktop To Do Archive	"[{""fromIndex"":0,""hex"":""00 01 42 44""}]"	
-	.tda		Palm Desktop Calendar Archive	"[{""fromIndex"":0,""hex"":""00 01 44 54""}]"	
-	.tdf$		Telegram Desktop File	"[{""fromIndex"":0,""hex"":""54 44 46 24""}]"	
-	.tdef		Telegram Desktop Encrypted File	"[{""fromIndex"":0,""hex"":""54 44 45 46""}]"	
-	.ico	image/vnd.microsoft.icon, image/x-icon, image/ico	Computer Icons	"[{""fromIndex"":0,""hex"":""00 00 01 00""}]"	
-	.icns		Apple Icon Image	"[{""fromIndex"":0,""hex"":""69 63 6E 73""}]"	
-	.heic	image/heic	High Efficiency Image Container (HEIC)	"[{""fromIndex"":4,""hex"":""66 74 79 70 68 65 69 63""}]"	
-	.lzh	application/x-lzh-compressed	Lempel Ziv Huffman Archive	"[{""fromIndex"":2,""hex"":""2D 68 6C 30 2D""}]"	Method 0 (No Compression)
-	.lzh	application/x-lzh-compressed	Lempel Ziv Huffman Archive	"[{""fromIndex"":2,""hex"":""2D 68 6C 35 2D""}]"	Method 5 (8 KiB Sliding Window)
-	.bac		AmiBack Amiga Backup Data File	"[{""fromIndex"":0,""hex"":""42 41 43 4B 4D 49 4B 45 44 49 53 4B""}]"	
-	.idx		AmiBack Amiga Backup Index File	"[{""fromIndex"":0,""hex"":""49 4E 44 58""}]"	
-	.plist		Binary Property List File	"[{""fromIndex"":0,""hex"":""62 70 6C 69 73 74""}]"	
-	.bz2	application/x-bzip2	BZip2 Archive	"[{""fromIndex"":0,""hex"":""42 5A 68""}]"	
-	.vdr		VirtualDub	"[{""fromIndex"":0,""hex"":""52 49 46 46""},{""fromIndex"":8,""hex"":""56 44 52 4D""}]"	
-	.trd		TrID	"[{""fromIndex"":0,""hex"":""52 59 46 46""},{""fromIndex"":8,""hex"":""54 52 49 44""}]"	
-	.shw		Corel SHOW! 4.0	"[{""fromIndex"":0,""hex"":""52 49 46 46""},{""fromIndex"":8,""hex"":""73 68 77 34""}]"	
-	.shw		Corel SHOW! 5.0	"[{""fromIndex"":0,""hex"":""52 49 46 46""},{""fromIndex"":8,""hex"":""73 68 77 35""}]"	
-	.shb		Corel SHOW! 5.0 Background	"[{""fromIndex"":0,""hex"":""52 49 46 46""},{""fromIndex"":8,""hex"":""73 68 62 35""}]"	
-	.shr		Corel SHOW! 5.0 Player	"[{""fromIndex"":0,""hex"":""52 49 46 46""},{""fromIndex"":8,""hex"":""73 68 72 35""}]"	
-	.dcr	application/x-director	Adobe Shockwave File	"[{""fromIndex"":0,""hex"":""52 49 46 58""},{""fromIndex"":8,""hex"":""46 47 44 4D""}]"	BE
-	.dcr	application/x-director	Adobe Shockwave File	"[{""fromIndex"":0,""hex"":""58 46 49 52""},{""fromIndex"":8,""hex"":""4D 44 47 46""}]"	LE
-	.mmm		Multimedia Movie	"[{""fromIndex"":0,""hex"":""52 49 46 46""},{""fromIndex"":8,""hex"":""52 4D 4D 50""}]"	
-	.mny	application/x-msmoney	Microsoft Money File	"[{""fromIndex"":0,""hex"":""00 01 00 00 4D 53 49 53 41 4D 20 44 61 74 61 62 61 73 65""}]"	
-	.accdb		Microsoft Access 2007 Database	"[{""fromIndex"":0,""hex"":""00 01 00 00 53 74 61 6E 64 61 72 64 20 41 43 45 20 44 42""}]"	
-	.mdb	application/x-msaccess	Microsoft Access Database	"[{""fromIndex"":0,""hex"":""00 01 00 00 53 74 61 6E 64 61 72 64 20 4A 65 74 20 44 42""}]"	
-	.swf	application/x-shockwave-flash	Adobe Flash File	"[{""fromIndex"":0,""hex"":""43 57 53""}]"	C
-	.swf	application/x-shockwave-flash	Adobe Flash File	"[{""fromIndex"":0,""hex"":""46 57 53""}]"	F
-	.indd		Adobe InDesign Document	"[{""fromIndex"":0,""hex"":""06 06 ED F5 D8 1D 46 E5 BD 31 EF E7 FE 74 B7 1D""}]"	
-	.zlib		ZLib Archive	"[{""fromIndex"":0,""hex"":""78 01""}]"	No Compression Without Preset Dictionary
-	.zlib		ZLib Archive	"[{""fromIndex"":0,""hex"":""78 5E""}]"	Best Speed Without Preset Dictionary
-	.zlib		ZLib Archive	"[{""fromIndex"":0,""hex"":""78 9C""}]"	Default Compression Without Preset Dictionary
-	.zlib		ZLib Archive	"[{""fromIndex"":0,""hex"":""78 DA""}]"	Best Compression Without Preset Dictionary
-	.zlib		ZLib Archive	"[{""fromIndex"":0,""hex"":""78 20""}]"	No Compression With Preset Dictionary
-	.zlib		ZLib Archive	"[{""fromIndex"":0,""hex"":""78 7D""}]"	Best Speed With Preset Dictionary
-	.zlib		ZLib Archive	"[{""fromIndex"":0,""hex"":""78 BB""}]"	Default Compression With Preset Dictionary
-	.zlib		ZLib Archive	"[{""fromIndex"":0,""hex"":""78 F9""}]"	Best Compression With Preset Dictionary
-	.zoo		Zoo File	"[{""fromIndex"":0,""hex"":""5A 4F 4F""}]"	
-	.pbm	image/x-portable-bitmap	Portable Bitmap ASCII	"[{""fromIndex"":0,""hex"":""50 31 0A""}]"	
-	.pbm	image/x-portable-bitmap	Portable Bitmap Binary	"[{""fromIndex"":0,""hex"":""50 34 0A""}]"	
-	.pgm	image/x-portable-graymap	Portable Gray Map ASCII	"[{""fromIndex"":0,""hex"":""50 32 0A""}]"	
+archive	.dba		Palm Desktop Calendar Archive	"[{""fromIndex"":0,""hex"":""BE BA FE CA""}]"	
+archive	.dba		Palm Desktop To Do Archive	"[{""fromIndex"":0,""hex"":""00 01 42 44""}]"	
+archive	.tda		Palm Desktop Calendar Archive	"[{""fromIndex"":0,""hex"":""00 01 44 54""}]"	
+other	.tdf$		Telegram Desktop File	"[{""fromIndex"":0,""hex"":""54 44 46 24""}]"	
+other	.tdef		Telegram Desktop Encrypted File	"[{""fromIndex"":0,""hex"":""54 44 45 46""}]"	
+image	.ico	image/vnd.microsoft.icon, image/x-icon, image/ico	Computer Icons	"[{""fromIndex"":0,""hex"":""00 00 01 00""}]"	
+image	.icns	image/x-icns	Apple Icon Image	"[{""fromIndex"":0,""hex"":""69 63 6E 73""}]"	
+image	.heic	image/heic	High Efficiency Image Container (HEIC)	"[{""fromIndex"":4,""hex"":""66 74 79 70 68 65 69 63""}]"	
+archive	.lzh	application/x-lzh-compressed	Lempel Ziv Huffman Archive	"[{""fromIndex"":2,""hex"":""2D 68 6C 30 2D""}]"	Method 0 (No Compression)
+archive	.lzh	application/x-lzh-compressed	Lempel Ziv Huffman Archive	"[{""fromIndex"":2,""hex"":""2D 68 6C 35 2D""}]"	Method 5 (8 KiB Sliding Window)
+other	.bac		AmiBack Amiga Backup Data File	"[{""fromIndex"":0,""hex"":""42 41 43 4B 4D 49 4B 45 44 49 53 4B""}]"	
+other	.idx		AmiBack Amiga Backup Index File	"[{""fromIndex"":0,""hex"":""49 4E 44 58""}]"	
+other	.plist		Binary Property List File	"[{""fromIndex"":0,""hex"":""62 70 6C 69 73 74""}]"	
+compressed	.bz2	application/x-bzip2	BZip2 Archive	"[{""fromIndex"":0,""hex"":""42 5A 68""}]"	
+other	.vdr		VirtualDub	"[{""fromIndex"":0,""hex"":""52 49 46 46""},{""fromIndex"":8,""hex"":""56 44 52 4D""}]"	
+other	.trd		TrID	"[{""fromIndex"":0,""hex"":""52 59 46 46""},{""fromIndex"":8,""hex"":""54 52 49 44""}]"	
+presentation	.shw	application/x-corelpresentations	Corel SHOW! 4.0	"[{""fromIndex"":0,""hex"":""52 49 46 46""},{""fromIndex"":8,""hex"":""73 68 77 34""}]"	
+presentation	.shw	application/x-corelpresentations	Corel SHOW! 5.0	"[{""fromIndex"":0,""hex"":""52 49 46 46""},{""fromIndex"":8,""hex"":""73 68 77 35""}]"	
+other	.shb		Corel SHOW! 5.0 Background	"[{""fromIndex"":0,""hex"":""52 49 46 46""},{""fromIndex"":8,""hex"":""73 68 62 35""}]"	
+other	.shr		Corel SHOW! 5.0 Player	"[{""fromIndex"":0,""hex"":""52 49 46 46""},{""fromIndex"":8,""hex"":""73 68 72 35""}]"	
+other	.dcr	application/x-director	Adobe Shockwave File	"[{""fromIndex"":0,""hex"":""52 49 46 58""},{""fromIndex"":8,""hex"":""46 47 44 4D""}]"	BE
+other	.dcr	application/x-director	Adobe Shockwave File	"[{""fromIndex"":0,""hex"":""58 46 49 52""},{""fromIndex"":8,""hex"":""4D 44 47 46""}]"	LE
+video	.mmm		Multimedia Movie	"[{""fromIndex"":0,""hex"":""52 49 46 46""},{""fromIndex"":8,""hex"":""52 4D 4D 50""}]"	
+other	.mny	application/x-msmoney	Microsoft Money File	"[{""fromIndex"":0,""hex"":""00 01 00 00 4D 53 49 53 41 4D 20 44 61 74 61 62 61 73 65""}]"	
+database	.accdb	application/x-msaccess	Microsoft Access 2007 Database	"[{""fromIndex"":0,""hex"":""00 01 00 00 53 74 61 6E 64 61 72 64 20 41 43 45 20 44 42""}]"	
+database	.mdb	application/x-msaccess	Microsoft Access Database	"[{""fromIndex"":0,""hex"":""00 01 00 00 53 74 61 6E 64 61 72 64 20 4A 65 74 20 44 42""}]"	
+other	.swf	application/x-shockwave-flash	Adobe Flash File	"[{""fromIndex"":0,""hex"":""43 57 53""}]"	C
+other	.swf	application/x-shockwave-flash	Adobe Flash File	"[{""fromIndex"":0,""hex"":""46 57 53""}]"	F
+document	.indd	application/x-indesign	Adobe InDesign Document	"[{""fromIndex"":0,""hex"":""06 06 ED F5 D8 1D 46 E5 BD 31 EF E7 FE 74 B7 1D""}]"	
+archive	.zlib		ZLib Archive	"[{""fromIndex"":0,""hex"":""78 01""}]"	No Compression Without Preset Dictionary
+archive	.zlib		ZLib Archive	"[{""fromIndex"":0,""hex"":""78 5E""}]"	Best Speed Without Preset Dictionary
+archive	.zlib		ZLib Archive	"[{""fromIndex"":0,""hex"":""78 9C""}]"	Default Compression Without Preset Dictionary
+archive	.zlib		ZLib Archive	"[{""fromIndex"":0,""hex"":""78 DA""}]"	Best Compression Without Preset Dictionary
+archive	.zlib		ZLib Archive	"[{""fromIndex"":0,""hex"":""78 20""}]"	No Compression With Preset Dictionary
+archive	.zlib		ZLib Archive	"[{""fromIndex"":0,""hex"":""78 7D""}]"	Best Speed With Preset Dictionary
+archive	.zlib		ZLib Archive	"[{""fromIndex"":0,""hex"":""78 BB""}]"	Default Compression With Preset Dictionary
+archive	.zlib		ZLib Archive	"[{""fromIndex"":0,""hex"":""78 F9""}]"	Best Compression With Preset Dictionary
+archive	.zoo	application/x-zoo	Zoo File	"[{""fromIndex"":0,""hex"":""5A 4F 4F""}]"	
+image	.pbm	image/x-portable-bitmap	Portable Bitmap ASCII	"[{""fromIndex"":0,""hex"":""50 31 0A""}]"	
+image	.pbm	image/x-portable-bitmap	Portable Bitmap Binary	"[{""fromIndex"":0,""hex"":""50 34 0A""}]"	
+other	.pgm	image/x-portable-graymap	Portable Gray Map ASCII	"[{""fromIndex"":0,""hex"":""50 32 0A""}]"	
 image	.pgm	image/x-portable-graymap	Portable Gray Map Binary	"[{""fromIndex"":0,""hex"":""50 35 09""}]"	Tab
 image	.pgm	image/x-portable-graymap	Portable Gray Map Binary	"[{""fromIndex"":0,""hex"":""50 35 0A""}]"	LF
 image	.pgm	image/x-portable-graymap	Portable Gray Map Binary	"[{""fromIndex"":0,""hex"":""50 35 0D""}]"	CR
@@ -69,34 +69,53 @@ image	.ppm	image/x-portable-pixmap	Portable Pixmap Binary	"[{""fromIndex"":0,""h
 image	.ppm	image/x-portable-pixmap	Portable Pixmap Binary	"[{""fromIndex"":0,""hex"":""50 36 0A""}]"	LF
 image	.ppm	image/x-portable-pixmap	Portable Pixmap Binary	"[{""fromIndex"":0,""hex"":""50 36 0D""}]"	CR
 image	.ppm	image/x-portable-pixmap	Portable Pixmap Binary	"[{""fromIndex"":0,""hex"":""50 36 20""}]"	Space
-	.j2c, .j2k, .jp2, .jpc, .jpf, .jpg2, .jpm, .jpx, .mj2	image/jp2, image/jpx, image/jpm, image/mj2	JPEG 2000 Image	"[{""fromIndex"":0,""hex"":""00 00 00 0C 6A 50 20 20 0D 0A 87 0A""}]"	Long
-	.j2c, .j2k, .jp2, .jpc, .jpf, .jpg2, .jpm, .jpx, .mj2	image/jp2, image/jpx, image/jpm, image/mj2	JPEG 2000 Image	"[{""fromIndex"":0,""hex"":""FF 4F FF 51""}]"	Short
-	.hl7		Electronic Data Exchange Health Level Seven (HL7) Standard File	"[{""fromIndex"":0,""hex"":""42 53 48 7C""}]"	B
-	.hl7		Electronic Data Exchange Health Level Seven (HL7) Standard File	"[{""fromIndex"":0,""hex"":""4D 53 48 7C""}]"	M
-	.sqlitedb, .sqlite, .db		SQLite Database	"[{""fromIndex"":0,""hex"":""53 51 4C 69 74 65 20 66 6F 72 6D 61 74 20 33 00""}]"	
-	.pic	image/x-pict	IBM Storyboard Bitmap File	"[{""fromIndex"":0,""hex"":""00""}]"	
-	.mov	video/quicktime	Apple QuickTime Movie File	"[{""fromIndex"":0,""hex"":""00""}]"	
-	.pif		Windows Program Information File	"[{""fromIndex"":0,""hex"":""00""}]"	
-	.sea	application/x-sea	Mac Stuffit Self-Extracting Archive	"[{""fromIndex"":0,""hex"":""00""}]"	
-	.ytr		IRIS OCR Data File	"[{""fromIndex"":0,""hex"":""00""}]"	
-			Palm Desktop Data File (Access Format)	"[{""fromIndex"":0,""hex"":""00 01 00 00""}]"	
-	.3gp	video/3gpp	3rd Generation Partnership Project Multimedia File	"[{""fromIndex"":4,""hex"":""66 74 79 70 33 67""}]"	
-	.3g2	video/3gpp2	3rd Generation Partnership Project 2 Multimedia File	"[{""fromIndex"":4,""hex"":""66 74 79 70 33 67""}]"	
+image	.j2c, .j2k, .jp2, .jpc, .jpf, .jpg2, .jpm, .jpx, .mj2	image/jp2, image/jpm, image/jpx, image/mj2, image/x-jp2-codestream, video/mj2	JPEG 2000 Image	"[{""fromIndex"":0,""hex"":""00 00 00 0C 6A 50 20 20 0D 0A 87 0A""}]"	Long
+image	.j2c, .j2k, .jp2, .jpc, .jpf, .jpg2, .jpm, .jpx, .mj2	image/jp2, image/jpm, image/jpx, image/mj2, image/x-jp2-codestream, video/mj2	JPEG 2000 Image	"[{""fromIndex"":0,""hex"":""FF 4F FF 51""}]"	Short
+other	.hl7		Electronic Data Exchange Health Level Seven (HL7) Standard File	"[{""fromIndex"":0,""hex"":""42 53 48 7C""}]"	B
+other	.hl7		Electronic Data Exchange Health Level Seven (HL7) Standard File	"[{""fromIndex"":0,""hex"":""4D 53 48 7C""}]"	M
+database	.sqlitedb, .sqlite, .db	application/vnd.sqlite3	SQLite Database	"[{""fromIndex"":0,""hex"":""53 51 4C 69 74 65 20 66 6F 72 6D 61 74 20 33 00""}]"	
+image	.pic	image/x-pict	IBM Storyboard Bitmap File	"[{""fromIndex"":0,""hex"":""00""}]"	
+video	.mov	video/quicktime	Apple QuickTime Movie File	"[{""fromIndex"":4,""hex"":""66 74 79 70 71 74""}]"	ftypqt
+video	.mov	video/quicktime	Apple QuickTime Movie File	"[{""fromIndex"":4,""hex"":""66 72 65 65""}]"	free
+video	.mov	video/quicktime	Apple QuickTime Movie File	"[{""fromIndex"":4,""hex"":""6D 64 61 74""}]"	mdat
+video	.mov	video/quicktime	Apple QuickTime Movie File	"[{""fromIndex"":4,""hex"":""6D 6F 6F 76""}]"	moov
+video	.mov	video/quicktime	Apple QuickTime Movie File	"[{""fromIndex"":4,""hex"":""73 6B 69 70""}]"	skip
+video	.mov	video/quicktime	Apple QuickTime Movie File	"[{""fromIndex"":4,""hex"":""77 69 64 65""}]"	wide
+other	.pif		Windows Program Information File	"[{""fromIndex"":0,""hex"":""00""}]"	
+archive	.sea	application/x-sea	Mac Stuffit Self-Extracting Archive	"[{""fromIndex"":0,""hex"":""00""}]"	
+other	.ytr		IRIS OCR Data File	"[{""fromIndex"":0,""hex"":""00""}]"	
+other			Palm Desktop Data File (Access Format)	"[{""fromIndex"":0,""hex"":""00 01 00 00""}]"	
+video	.3gp	video/3gpp	3rd Generation Partnership Project Multimedia File	"[{""fromIndex"":4,""hex"":""66 74 79 70 33 67 65""}]"	e
+video	.3gp	video/3gpp	3rd Generation Partnership Project Multimedia File	"[{""fromIndex"":4,""hex"":""66 74 79 70 33 67 66""}]"	f
+video	.3gp	video/3gpp	3rd Generation Partnership Project Multimedia File	"[{""fromIndex"":4,""hex"":""66 74 79 70 33 67 67""}]"	g
+video	.3gp	video/3gpp	3rd Generation Partnership Project Multimedia File	"[{""fromIndex"":4,""hex"":""66 74 79 70 33 67 68""}]"	h
+video	.3gp	video/3gpp	3rd Generation Partnership Project Multimedia File	"[{""fromIndex"":4,""hex"":""66 74 79 70 33 67 6D""}]"	m
+video	.3gp	video/3gpp	3rd Generation Partnership Project Multimedia File	"[{""fromIndex"":4,""hex"":""66 74 79 70 33 67 70""}]"	p
+video	.3gp	video/3gpp	3rd Generation Partnership Project Multimedia File	"[{""fromIndex"":4,""hex"":""66 74 79 70 33 67 72""}]"	r
+video	.3gp	video/3gpp	3rd Generation Partnership Project Multimedia File	"[{""fromIndex"":4,""hex"":""66 74 79 70 33 67 73""}]"	s
+video	.3gp	video/3gpp	3rd Generation Partnership Project Multimedia File	"[{""fromIndex"":4,""hex"":""66 74 79 70 33 67 74""}]"	t
+video	.3g2	video/3gpp2	3rd Generation Partnership Project 2 Multimedia File	"[{""fromIndex"":4,""hex"":""66 74 79 70 33 67 32""}]"	3g2
+video	.3g2	video/3gpp2	3rd Generation Partnership Project 2 Multimedia File	"[{""fromIndex"":4,""hex"":""66 74 79 70 4B 44 44 49""}]"	KDDI
 compressed	.tar.z, .z	application/x-compress	Tar Zip Lempel-Ziv-Welch Algorithm Archive / UNIX Compress	"[{""fromIndex"":0,""hex"":""1F 9D""}]"	
-	.tar.z, .z	application/x-compress	Tar Zip LZH Algorithm Archive / UNIX Compress	"[{""fromIndex"":0,""hex"":""1F A0""}]"	
-	.gif	image/gif	Graphics Interchange Format (GIF) File	"[{""fromIndex"":0,""hex"":""47 49 46 38 37 61""}]"	7
-	.gif	image/gif	Graphics Interchange Format (GIF) File	"[{""fromIndex"":0,""hex"":""47 49 46 38 39 61""}]"	9
-	.tif, .tiff	image/tiff	Tagged Image File Format (TIFF)	"[{""fromIndex"":0,""hex"":""4D 4D 00 2A""}]"	BE
-	.tif, .tiff	image/tiff	Tagged Image File Format (TIFF)	"[{""fromIndex"":0,""hex"":""49 49 2A 00""}]"	LE
-	.cr2		Canon RAW Format Version 2	"[{""fromIndex"":0,""hex"":""49 49 2A 00 10 00 00 00 43 52""}]"	
-	.cin		Kodak Cineon Image	"[{""fromIndex"":0,""hex"":""80 2A 5F D7""}]"	
-			Rob Northen Compression (Version 1) Algorithm Archive	"[{""fromIndex"":0,""hex"":""52 4E 43 01""}]"	
-			Rob Northen Compression (Version 2) Algorithm Archive	"[{""fromIndex"":0,""hex"":""52 4E 43 02""}]"	
-	.nui		nuru Image File	"[{""fromIndex"":0,""hex"":""4E 55 52 55 49 4D 47""}]"	
-	.nup		nuru Palette File	"[{""fromIndex"":0,""hex"":""4E 55 52 55 50 41 4C""}]"	
-	.dpx		SMPTE DPX Image	"[{""fromIndex"":0,""hex"":""53 44 50 58""}]"	BE
-	.dpx		SMPTE DPX Image	"[{""fromIndex"":0,""hex"":""58 50 44 53""}]"	LE
-	.exr	image/aces	OpenEXR Image	"[{""fromIndex"":0,""hex"":""76 2F 31 01""}]"	
+compressed	.tar.z, .z	application/x-compress	Tar Zip LZH Algorithm Archive / UNIX Compress	"[{""fromIndex"":0,""hex"":""1F A0""}]"	
+image	.gif	image/gif	Graphics Interchange Format (GIF) File	"[{""fromIndex"":0,""hex"":""47 49 46 38 37 61""}]"	7
+image	.gif	image/gif	Graphics Interchange Format (GIF) File	"[{""fromIndex"":0,""hex"":""47 49 46 38 39 61""}]"	9
+image	.tif, .tiff	image/tiff	Tagged Image File Format (TIFF)	"[{""fromIndex"":0,""hex"":""4D 4D 00 2A""}]"	BE, 2A
+image	.tif, .tiff	image/tiff	Tagged Image File Format (TIFF)	"[{""fromIndex"":0,""hex"":""49 49 00 2B""}]"	BE, 2B
+image	.tif, .tiff	image/tiff	Tagged Image File Format (TIFF)	"[{""fromIndex"":0,""hex"":""49 49 2A 00""}]"	LE, 2A
+image	.tif, .tiff	image/tiff	Tagged Image File Format (TIFF)	"[{""fromIndex"":0,""hex"":""49 49 2B 00""}]"	LE, 2B
+image	.crw	image/x-canon-crw	Canon RAW Format	"[{""fromIndex"":0,""hex"":""49 49 1A 00 00 00 48 45 41 50 43 43 44 52""}]"	
+image	.cr2	image/x-canon-cr2	Canon RAW Format Version 2	"[{""fromIndex"":0,""hex"":""49 49 2A 00 10 00 00 00 43 52""}]"	
+image	.cr2	image/x-canon-cr2	Canon RAW Format Version 2	"[{""fromIndex"":0,""hex"":""4D 4D 00 2A 10 00 00 00 43 52""}]"	
+image	.cr3	image/x-canon-cr3	Canon RAW Format Version 3	"[{""fromIndex"":4,""hex"":""66 74 79 70 63 72 78""}]"	
+image	.cin	image/cineon	Kodak Cineon Image	"[{""fromIndex"":0,""hex"":""80 2A 5F D7""}]"	
+archive			Rob Northen Compression (Version 1) Algorithm Archive	"[{""fromIndex"":0,""hex"":""52 4E 43 01""}]"	
+archive			Rob Northen Compression (Version 2) Algorithm Archive	"[{""fromIndex"":0,""hex"":""52 4E 43 02""}]"	
+image	.nui		nuru Image File	"[{""fromIndex"":0,""hex"":""4E 55 52 55 49 4D 47""}]"	
+other	.nup		nuru Palette File	"[{""fromIndex"":0,""hex"":""4E 55 52 55 50 41 4C""}]"	
+image	.dpx	image/x-dpx	Digital Picture Exchange (DPX) Image	"[{""fromIndex"":0,""hex"":""53 44 50 58""}]"	BE
+image	.dpx	image/x-dpx	Digital Picture Exchange (DPX) Image	"[{""fromIndex"":0,""hex"":""58 50 44 53""}]"	LE
+image	.exr	image/aces, image/x-exr	OpenEXR Image	"[{""fromIndex"":0,""hex"":""76 2F 31 01""}]"	
 	.bpg		Better Portable Graphic (BPG)	"[{""fromIndex"":0,""hex"":""42 50 47 FB""}]"	
 	.iso	application/x-iso9660-image	ISO9660 CD/DVD Image	"[{""fromIndex"":32769,""hex"":""43 44 30 30 31""}]"	1
 	.iso	application/x-iso9660-image	ISO9660 CD/DVD Image	"[{""fromIndex"":34817,""hex"":""43 44 30 30 31""}]"	2
@@ -358,7 +377,7 @@ compressed	.gz, .tar.gz	application/gzip	GZip Archive	"[{""fromIndex"":0,""hex""
 	.eta		Google Earth Keyhole Placemark File	"[{""fromIndex"":0,""hex"":""23 20 54 68 69 73 20 69 73 20 61 6E 20 4B 65 79""}]"	
 	.sav		SPSS Statistics Data File	"[{""fromIndex"":0,""hex"":""24 46 4C 32 40 28 23 29 20 53 50 53 53 20 44 41 54 41 20 46 49 4C 45""}]"	
 	.hqx		Macintosh BinHex 4 Compressed Archive	"[{""fromIndex"":0,""hex"":""28 54 68 69 73 20 66 69 6C 65 20 6D 75 73 74 20 62 65 20 63 6F 6E 76 65 72 74 65 64 20 77 69 74 68 20 42 69 6E 48 65 78 20""}]"	
-	.log		Symantec Wise Installer Log File	"[{""fromIndex"":0,""hex"":""2A 2A 2A 20 20 49 6E 73 74 61 6C 6C 61 74 69 6F 6E 20 53 74 61 72 74 65 64 20""}]"	
-	.sln	application/vnd.ms-developer	Microsoft Visual Studio Solution	"[{""fromIndex"":0,""hex"":""EF BB BF 0D 0A 4D 69 63 72 6F 73 6F 66 74 20 56 69 73 75 61 6C 20 53 74 75 64 69 6F 20 53 6F 6C 75 74 69 6F 6E 20 46 69 6C 65 2C 20 46 6F 72 6D 61 74 20 56 65 72 73 69 6F 6E 20""}]"	BOM CRLF
-	.sln	application/vnd.ms-developer	Microsoft Visual Studio Solution	"[{""fromIndex"":0,""hex"":""EF BB BF 0A 4D 69 63 72 6F 73 6F 66 74 20 56 69 73 75 61 6C 20 53 74 75 64 69 6F 20 53 6F 6C 75 74 69 6F 6E 20 46 69 6C 65 2C 20 46 6F 72 6D 61 74 20 56 65 72 73 69 6F 6E 20""}]"	BOM LF
-	.sln	application/vnd.ms-developer	Microsoft Visual Studio Solution	"[{""fromIndex"":0,""hex"":""4D 69 63 72 6F 73 6F 66 74 20 56 69 73 75 61 6C 20 53 74 75 64 69 6F 20 53 6F 6C 75 74 69 6F 6E 20 46 69 6C 65 2C 20 46 6F 72 6D 61 74 20 56 65 72 73 69 6F 6E 20""}]"	Plain
+other	.log	text/plain, text/x-log	Symantec Wise Installer Log File	"[{""fromIndex"":0,""hex"":""2A 2A 2A 20 20 49 6E 73 74 61 6C 6C 61 74 69 6F 6E 20 53 74 61 72 74 65 64 20""}]"	
+other	.sln	application/vnd.ms-developer	Microsoft Visual Studio Solution	"[{""fromIndex"":0,""hex"":""EF BB BF 0D 0A 4D 69 63 72 6F 73 6F 66 74 20 56 69 73 75 61 6C 20 53 74 75 64 69 6F 20 53 6F 6C 75 74 69 6F 6E 20 46 69 6C 65 2C 20 46 6F 72 6D 61 74 20 56 65 72 73 69 6F 6E 20""}]"	BOM CRLF
+other	.sln	application/vnd.ms-developer	Microsoft Visual Studio Solution	"[{""fromIndex"":0,""hex"":""EF BB BF 0A 4D 69 63 72 6F 73 6F 66 74 20 56 69 73 75 61 6C 20 53 74 75 64 69 6F 20 53 6F 6C 75 74 69 6F 6E 20 46 69 6C 65 2C 20 46 6F 72 6D 61 74 20 56 65 72 73 69 6F 6E 20""}]"	BOM LF
+other	.sln	application/vnd.ms-developer	Microsoft Visual Studio Solution	"[{""fromIndex"":0,""hex"":""4D 69 63 72 6F 73 6F 66 74 20 56 69 73 75 61 6C 20 53 74 75 64 69 6F 20 53 6F 6C 75 74 69 6F 6E 20 46 69 6C 65 2C 20 46 6F 72 6D 61 74 20 56 65 72 73 69 6F 6E 20""}]"	Plain

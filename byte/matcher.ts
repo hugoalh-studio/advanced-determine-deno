@@ -1,5 +1,5 @@
 export interface BytesMatcherSignature<T extends string | Uint8Array> {
-	fromIndex: number;
+	offset: number;
 	pattern: T;
 }
 /**
@@ -7,7 +7,8 @@ export interface BytesMatcherSignature<T extends string | Uint8Array> {
  */
 export class BytesMatcher {
 	#bytesMinimum: number;
-	#signature: Map<number, number> = new Map<number, number>();
+	#signatureHead: Map<number, number> = new Map<number, number>();
+	#signatureTail: Map<number, number> = new Map<number, number>();
 	/**
 	 * Initialize bytes matcher.
 	 * @param {BytesMatcherSignature<string | Uint8Array>[]} signature Signature.
@@ -16,33 +17,32 @@ export class BytesMatcher {
 		if (signature.length === 0) {
 			throw new TypeError(`Argument \`signature\` is not defined!`);
 		}
-		for (const { fromIndex: indexFrom, pattern } of signature) {
-			if (!Number.isSafeInteger(indexFrom)) {
-				throw new SyntaxError(`\`${indexFrom}\` is not a valid index!`);
+		for (const { offset: offsetFrom, pattern } of signature) {
+			if (!Number.isSafeInteger(offsetFrom)) {
+				throw new SyntaxError(`\`${offsetFrom}\` is not a valid offset!`);
 			}
 			if (pattern.length === 0) {
-				throw new SyntaxError(`Pattern is empty from index ${indexFrom}!`);
+				throw new SyntaxError(`Pattern is empty from offset ${offsetFrom}!`);
 			}
 			const patternResolve: number[] = Array.from((typeof pattern === "string") ? (new TextEncoder().encode(pattern)) : Uint8Array.of(...pattern));
-			const indexTo: number = indexFrom + patternResolve.length;
-			if (indexFrom < 0 && indexTo > 0) {
-				throw new Error(`Pattern is overflow (most likely cause by incorrect index)! Current: ${indexFrom}; Expect: ${indexFrom - indexTo}`);
+			const offsetTo: number = offsetFrom + patternResolve.length;
+			if (offsetFrom < 0 && offsetTo > 0) {
+				throw new Error(`Pattern is overflow (most likely cause by incorrect offset)! Offset Current: ${offsetFrom}; Offset Possible: <= ${offsetFrom - offsetTo}`);
 			}
-			for (let indexCursor: number = indexFrom, indexPattern = 0; indexCursor < indexTo; indexCursor += 1, indexPattern += 1) {
-				const byte: number = patternResolve[indexPattern];
-				if (this.#signature.has(indexCursor)) {
-					throw new SyntaxError(`Signature index of ${indexCursor} is already defined! Exist: \\x${this.#signature.get(indexCursor)!.toString(16)}; Override: \\x${byte.toString(16)}`);
+			for (let index = 0; index < patternResolve.length; index += 1) {
+				const cursor: number = offsetFrom + index;
+				const byte: number = patternResolve[index];
+				const byteMayDefine: number | undefined = this.#signatureHead.get(cursor) ?? this.#signatureTail.get(cursor);
+				if (typeof byteMayDefine !== "undefined") {
+					throw new SyntaxError(`Signature offset of ${cursor} is already defined! Exist: \\x${byteMayDefine.toString(16)}; Override: \\x${byte.toString(16)}`);
 				}
-				this.#signature.set(indexCursor, byte);
+				(cursor >= 0) ? this.#signatureHead.set(cursor, byte) : this.#signatureTail.set(cursor, byte);
 			}
 		}
-		if (this.#signature.size === 0) {
+		if (this.#signatureHead.size + this.#signatureTail.size === 0) {
 			throw new Error(`Signature is empty!`);
 		}
-		const indexes: number[] = Array.from(this.#signature.keys());
-		this.#bytesMinimum = indexes.some((index: number): boolean => {
-			return (index < 0);
-		}) ? Infinity : Math.max(...indexes);
+		this.#bytesMinimum = (this.#signatureTail.size > 0) ? Infinity : Math.max(...Array.from(this.#signatureHead.keys()));
 	}
 	/**
 	 * Determine whether the bytes is match the specify signature.
@@ -54,8 +54,13 @@ export class BytesMatcher {
 			return false;
 		}
 		const itemResolve: Uint8Array = (typeof item === "string") ? (new TextEncoder().encode(item)) : Uint8Array.of(...item);
-		for (const [index, byte] of this.#signature.entries()) {
-			if (itemResolve[index] !== byte) {
+		for (const [offset, byte] of this.#signatureHead.entries()) {
+			if (itemResolve[offset] !== byte) {
+				return false;
+			}
+		}
+		for (const [offset, byte] of this.#signatureTail.entries()) {
+			if (itemResolve[offset] !== byte) {
 				return false;
 			}
 		}
@@ -69,52 +74,46 @@ export class BytesMatcher {
 	async testFile(file: string | URL | Deno.FsFile): Promise<boolean> {
 		const fileResolve: Deno.FsFile = (file instanceof Deno.FsFile) ? file : (await Deno.open(file));
 		try {
-			const info: Deno.FileInfo = await fileResolve.stat();
-			if (!info.isFile) {
+			const { isFile, size }: Deno.FileInfo = await fileResolve.stat();
+			if (!isFile) {
 				throw new Error(`This is not a file!`);
+			}
+			if (size > Number.MAX_SAFE_INTEGER) {
+				throw new Error(`Size of the file is too large!`);
+			}
+			const signatureResolve: Map<number, number> = new Map<number, number>();
+			for (const [offset, byte] of this.#signatureHead.entries()) {
+				signatureResolve.set(offset, byte);
+			}
+			for (const [offset, byte] of this.#signatureTail.entries()) {
+				const offsetResolve: number = size + offset;
+				if (typeof signatureResolve.get(offsetResolve) !== "undefined") {
+					return false;
+				}
+				signatureResolve.set(offsetResolve, byte);
 			}
 			const reader: ReadableStreamDefaultReader<Uint8Array> = fileResolve.readable.getReader();
-			const item: number[] = [];
-			let finish = false;
-			while (!finish) {
-				const { done, value = [] } = await reader.read();
-				if (value.length > 0) {
-					item.push(...Array.from(value));
+			let cursor = 0;
+			const cursorMaximum: number = Math.max(...Array.from(signatureResolve.keys()));
+			while (true) {
+				const { done, value } = await reader.read();
+				if (typeof value !== "undefined") {
+					for (let index = 0; index < value.length; index += 1) {
+						const byte: number | undefined = signatureResolve.get(cursor);
+						if (typeof byte !== "undefined" && value[index] !== byte) {
+							return false;
+						}
+						cursor += 1;
+						if (cursor > cursorMaximum) {
+							return true;
+						}
+					}
 				}
-				finish = (
-					done ||
-					item.length >= this.#bytesMinimum
-				);
-			}
-			return this.test(Uint8Array.of(...item));
-		} finally {
-			if (!(file instanceof Deno.FsFile)) {
-				fileResolve.close();
-			}
-		}
-	}
-	/**
-	 * Determine whether the file is match the specify signature.
-	 * @param {string | URL | Deno.FsFile} file File that need to determine.
-	 * @returns {boolean} Determine result.
-	 */
-	testFileSync(file: string | URL | Deno.FsFile): boolean {
-		const fileResolve: Deno.FsFile = (file instanceof Deno.FsFile) ? file : Deno.openSync(file);
-		try {
-			const info: Deno.FileInfo = fileResolve.statSync();
-			if (!info.isFile) {
-				if (!(file instanceof Deno.FsFile)) {
-					fileResolve.close();
+				if (done) {
+					break;
 				}
-				throw new Error(`This is not a file!`);
 			}
-			const lengthNeed: number = Math.min(info.size, this.#bytesMinimum);
-			const reader: Uint8Array = new Uint8Array(lengthNeed);
-			const lengthRead: number = fileResolve.readSync(reader) ?? 0;
-			if (lengthNeed !== lengthRead) {
-				throw new Deno.errors.InvalidData();
-			}
-			return this.test(reader);
+			return false;
 		} finally {
 			if (!(file instanceof Deno.FsFile)) {
 				fileResolve.close();
@@ -133,7 +132,7 @@ export class BytesMatcher {
 	 * @returns {number} Weight of the bytes matcher.
 	 */
 	get weight(): number {
-		return this.#signature.size;
+		return (this.#signatureHead.size + this.#signatureTail.size);
 	}
 }
 export default BytesMatcher;

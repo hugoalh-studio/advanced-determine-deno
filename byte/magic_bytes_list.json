@@ -8,7 +8,7 @@
 		"name": "Lotus 1-2-3 Spreadsheet (V1) File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u0000\u0000\u0002\u0000\u0006\u0004\u0006\u0000\b\u0000\u0000\u0000\u0000\u0000"
 			}
 		]
@@ -22,7 +22,7 @@
 		"name": "Lotus 1-2-3 Spreadsheet (V3) File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u0000\u0000\u001a\u0000\u0000\u0010\u0004\u0000\u0000\u0000\u0000\u0000"
 			}
 		]
@@ -37,7 +37,7 @@
 		"name": "Lotus 1-2-3 Spreadsheet (V4 / V5) File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u0000\u0000\u001a\u0000\u0002\u0010\u0004\u0000\u0000\u0000\u0000\u0000"
 			}
 		]
@@ -53,7 +53,7 @@
 		"name": "Lotus 1-2-3 Spreadsheet (V9) File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u0000\u0000\u001a\u0000\u0005\u0010\u0004"
 			}
 		]
@@ -65,7 +65,7 @@
 		"name": "Amiga Hunk Executable",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u0000\u0000\u0003ó"
 			}
 		]
@@ -81,7 +81,7 @@
 		"name": "Quark Express Document",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u0000\u0000MMXPR"
 			}
 		],
@@ -98,7 +98,7 @@
 		"name": "Quark Express Document",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u0000\u0000IIXPR"
 			}
 		],
@@ -113,7 +113,7 @@
 		"name": "Password Gorilla Password Database",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "PWS3"
 			}
 		]
@@ -129,7 +129,7 @@
 		"name": "Libpcap File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "¡²ÃÔ"
 			}
 		],
@@ -146,7 +146,7 @@
 		"name": "Libpcap File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "ÔÃ²¡"
 			}
 		],
@@ -163,7 +163,7 @@
 		"name": "Libpcap File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "¡²<M"
 			}
 		],
@@ -180,7 +180,7 @@
 		"name": "Libpcap File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "M<²¡"
 			}
 		],
@@ -197,7 +197,7 @@
 		"name": "PCAP Next Generation Dump File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\n\r\r\n"
 			}
 		]
@@ -214,7 +214,7 @@
 		"name": "RedHat Package Manager (RPM) Package",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "í«îÛ"
 			}
 		]
@@ -228,7 +228,7 @@
 		"name": "Amazon Kindle Update Package",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "SP01"
 			}
 		]
@@ -244,7 +244,7 @@
 		"name": "Internal WAD",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "IWAD"
 			}
 		]
@@ -261,7 +261,7 @@
 		"name": "PalmPilot Database/Document File",
 		"signature": [
 			{
-				"fromIndex": 11,
+				"offset": 11,
 				"pattern": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
 			}
 		]
@@ -275,7 +275,7 @@
 		"name": "Palm Desktop Calendar Archive",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "¾ºþÊ"
 			}
 		]
@@ -289,7 +289,7 @@
 		"name": "Palm Desktop To Do Archive",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u0000\u0001BD"
 			}
 		]
@@ -303,7 +303,7 @@
 		"name": "Palm Desktop Calendar Archive",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u0000\u0001DT"
 			}
 		]
@@ -317,7 +317,7 @@
 		"name": "Telegram Desktop File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "TDF$"
 			}
 		]
@@ -331,7 +331,7 @@
 		"name": "Telegram Desktop Encrypted File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "TDEF"
 			}
 		]
@@ -349,7 +349,7 @@
 		"name": "Computer Icons",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u0000\u0000\u0001\u0000"
 			}
 		]
@@ -365,7 +365,7 @@
 		"name": "Apple Icon Image",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "icns"
 			}
 		]
@@ -381,7 +381,7 @@
 		"name": "High Efficiency Image Container (HEIC)",
 		"signature": [
 			{
-				"fromIndex": 4,
+				"offset": 4,
 				"pattern": "ftypheic"
 			}
 		]
@@ -397,7 +397,7 @@
 		"name": "Lempel Ziv Huffman Archive",
 		"signature": [
 			{
-				"fromIndex": 2,
+				"offset": 2,
 				"pattern": "-hl0-"
 			}
 		],
@@ -414,7 +414,7 @@
 		"name": "Lempel Ziv Huffman Archive",
 		"signature": [
 			{
-				"fromIndex": 2,
+				"offset": 2,
 				"pattern": "-hl5-"
 			}
 		],
@@ -429,7 +429,7 @@
 		"name": "AmiBack Amiga Backup Data File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "BACKMIKEDISK"
 			}
 		]
@@ -443,7 +443,7 @@
 		"name": "AmiBack Amiga Backup Index File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "INDX"
 			}
 		]
@@ -457,7 +457,7 @@
 		"name": "Binary Property List File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "bplist"
 			}
 		]
@@ -473,7 +473,7 @@
 		"name": "BZip2 Archive",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "BZh"
 			}
 		]
@@ -487,11 +487,11 @@
 		"name": "VirtualDub",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "RIFF"
 			},
 			{
-				"fromIndex": 8,
+				"offset": 8,
 				"pattern": "VDRM"
 			}
 		]
@@ -505,11 +505,11 @@
 		"name": "TrID",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "RYFF"
 			},
 			{
-				"fromIndex": 8,
+				"offset": 8,
 				"pattern": "TRID"
 			}
 		]
@@ -525,11 +525,11 @@
 		"name": "Corel SHOW! 4.0",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "RIFF"
 			},
 			{
-				"fromIndex": 8,
+				"offset": 8,
 				"pattern": "shw4"
 			}
 		]
@@ -545,11 +545,11 @@
 		"name": "Corel SHOW! 5.0",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "RIFF"
 			},
 			{
-				"fromIndex": 8,
+				"offset": 8,
 				"pattern": "shw5"
 			}
 		]
@@ -563,11 +563,11 @@
 		"name": "Corel SHOW! 5.0 Background",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "RIFF"
 			},
 			{
-				"fromIndex": 8,
+				"offset": 8,
 				"pattern": "shb5"
 			}
 		]
@@ -581,11 +581,11 @@
 		"name": "Corel SHOW! 5.0 Player",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "RIFF"
 			},
 			{
-				"fromIndex": 8,
+				"offset": 8,
 				"pattern": "shr5"
 			}
 		]
@@ -601,11 +601,11 @@
 		"name": "Adobe Shockwave File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "RIFX"
 			},
 			{
-				"fromIndex": 8,
+				"offset": 8,
 				"pattern": "FGDM"
 			}
 		],
@@ -622,11 +622,11 @@
 		"name": "Adobe Shockwave File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "XFIR"
 			},
 			{
-				"fromIndex": 8,
+				"offset": 8,
 				"pattern": "MDGF"
 			}
 		],
@@ -641,11 +641,11 @@
 		"name": "Multimedia Movie",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "RIFF"
 			},
 			{
-				"fromIndex": 8,
+				"offset": 8,
 				"pattern": "RMMP"
 			}
 		]
@@ -661,7 +661,7 @@
 		"name": "Microsoft Money File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u0000\u0001\u0000\u0000MSISAM Database"
 			}
 		]
@@ -677,7 +677,7 @@
 		"name": "Microsoft Access 2007 Database",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u0000\u0001\u0000\u0000Standard ACE DB"
 			}
 		]
@@ -693,7 +693,7 @@
 		"name": "Microsoft Access Database",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u0000\u0001\u0000\u0000Standard Jet DB"
 			}
 		]
@@ -709,7 +709,7 @@
 		"name": "Adobe Flash File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "CWS"
 			}
 		],
@@ -726,7 +726,7 @@
 		"name": "Adobe Flash File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "FWS"
 			}
 		],
@@ -743,7 +743,7 @@
 		"name": "Adobe InDesign Document",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u0006\u0006íõØ\u001dFå½1ïçþt·\u001d"
 			}
 		]
@@ -757,7 +757,7 @@
 		"name": "ZLib Archive",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "x\u0001"
 			}
 		],
@@ -772,7 +772,7 @@
 		"name": "ZLib Archive",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "x^"
 			}
 		],
@@ -787,7 +787,7 @@
 		"name": "ZLib Archive",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "x"
 			}
 		],
@@ -802,7 +802,7 @@
 		"name": "ZLib Archive",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "xÚ"
 			}
 		],
@@ -817,7 +817,7 @@
 		"name": "ZLib Archive",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "x "
 			}
 		],
@@ -832,7 +832,7 @@
 		"name": "ZLib Archive",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "x}"
 			}
 		],
@@ -847,7 +847,7 @@
 		"name": "ZLib Archive",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "x»"
 			}
 		],
@@ -862,7 +862,7 @@
 		"name": "ZLib Archive",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "xù"
 			}
 		],
@@ -879,7 +879,7 @@
 		"name": "Zoo File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "ZOO"
 			}
 		]
@@ -895,7 +895,7 @@
 		"name": "Portable Bitmap ASCII",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "P1\n"
 			}
 		]
@@ -911,7 +911,7 @@
 		"name": "Portable Bitmap Binary",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "P4\n"
 			}
 		]
@@ -927,7 +927,7 @@
 		"name": "Portable Gray Map ASCII",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "P2\n"
 			}
 		]
@@ -943,7 +943,7 @@
 		"name": "Portable Gray Map Binary",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "P5\t"
 			}
 		],
@@ -960,7 +960,7 @@
 		"name": "Portable Gray Map Binary",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "P5\n"
 			}
 		],
@@ -977,7 +977,7 @@
 		"name": "Portable Gray Map Binary",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "P5\r"
 			}
 		],
@@ -994,7 +994,7 @@
 		"name": "Portable Gray Map Binary",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "P5 "
 			}
 		],
@@ -1011,7 +1011,7 @@
 		"name": "Portable Pixmap ASCII",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "P3\t"
 			}
 		],
@@ -1028,7 +1028,7 @@
 		"name": "Portable Pixmap ASCII",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "P3\n"
 			}
 		],
@@ -1045,7 +1045,7 @@
 		"name": "Portable Pixmap ASCII",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "P3\r"
 			}
 		],
@@ -1062,7 +1062,7 @@
 		"name": "Portable Pixmap ASCII",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "P3 "
 			}
 		],
@@ -1079,7 +1079,7 @@
 		"name": "Portable Pixmap Binary",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "P6\t"
 			}
 		],
@@ -1096,7 +1096,7 @@
 		"name": "Portable Pixmap Binary",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "P6\n"
 			}
 		],
@@ -1113,7 +1113,7 @@
 		"name": "Portable Pixmap Binary",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "P6\r"
 			}
 		],
@@ -1130,7 +1130,7 @@
 		"name": "Portable Pixmap Binary",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "P6 "
 			}
 		],
@@ -1160,7 +1160,7 @@
 		"name": "JPEG 2000 Image",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u0000\u0000\u0000\fjP  \r\n\n"
 			}
 		],
@@ -1190,7 +1190,7 @@
 		"name": "JPEG 2000 Image",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "ÿOÿQ"
 			}
 		],
@@ -1205,7 +1205,7 @@
 		"name": "Electronic Data Exchange Health Level Seven (HL7) Standard File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "BSH|"
 			}
 		],
@@ -1220,7 +1220,7 @@
 		"name": "Electronic Data Exchange Health Level Seven (HL7) Standard File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "MSH|"
 			}
 		],
@@ -1239,7 +1239,7 @@
 		"name": "SQLite Database",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "SQLite format 3\u0000"
 			}
 		]
@@ -1255,7 +1255,7 @@
 		"name": "IBM Storyboard Bitmap File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u0000"
 			}
 		]
@@ -1271,7 +1271,7 @@
 		"name": "Apple QuickTime Movie File",
 		"signature": [
 			{
-				"fromIndex": 4,
+				"offset": 4,
 				"pattern": "ftypqt"
 			}
 		],
@@ -1288,7 +1288,7 @@
 		"name": "Apple QuickTime Movie File",
 		"signature": [
 			{
-				"fromIndex": 4,
+				"offset": 4,
 				"pattern": "free"
 			}
 		],
@@ -1305,7 +1305,7 @@
 		"name": "Apple QuickTime Movie File",
 		"signature": [
 			{
-				"fromIndex": 4,
+				"offset": 4,
 				"pattern": "mdat"
 			}
 		],
@@ -1322,7 +1322,7 @@
 		"name": "Apple QuickTime Movie File",
 		"signature": [
 			{
-				"fromIndex": 4,
+				"offset": 4,
 				"pattern": "moov"
 			}
 		],
@@ -1339,7 +1339,7 @@
 		"name": "Apple QuickTime Movie File",
 		"signature": [
 			{
-				"fromIndex": 4,
+				"offset": 4,
 				"pattern": "skip"
 			}
 		],
@@ -1356,7 +1356,7 @@
 		"name": "Apple QuickTime Movie File",
 		"signature": [
 			{
-				"fromIndex": 4,
+				"offset": 4,
 				"pattern": "wide"
 			}
 		],
@@ -1371,7 +1371,7 @@
 		"name": "Windows Program Information File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u0000"
 			}
 		]
@@ -1387,7 +1387,7 @@
 		"name": "Mac Stuffit Self-Extracting Archive",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u0000"
 			}
 		]
@@ -1401,7 +1401,7 @@
 		"name": "IRIS OCR Data File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u0000"
 			}
 		]
@@ -1413,7 +1413,7 @@
 		"name": "Palm Desktop Data File (Access Format)",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u0000\u0001\u0000\u0000"
 			}
 		]
@@ -1429,7 +1429,7 @@
 		"name": "3rd Generation Partnership Project Multimedia File",
 		"signature": [
 			{
-				"fromIndex": 4,
+				"offset": 4,
 				"pattern": "ftyp3ge"
 			}
 		],
@@ -1446,7 +1446,7 @@
 		"name": "3rd Generation Partnership Project Multimedia File",
 		"signature": [
 			{
-				"fromIndex": 4,
+				"offset": 4,
 				"pattern": "ftyp3gf"
 			}
 		],
@@ -1463,7 +1463,7 @@
 		"name": "3rd Generation Partnership Project Multimedia File",
 		"signature": [
 			{
-				"fromIndex": 4,
+				"offset": 4,
 				"pattern": "ftyp3gg"
 			}
 		],
@@ -1480,7 +1480,7 @@
 		"name": "3rd Generation Partnership Project Multimedia File",
 		"signature": [
 			{
-				"fromIndex": 4,
+				"offset": 4,
 				"pattern": "ftyp3gh"
 			}
 		],
@@ -1497,7 +1497,7 @@
 		"name": "3rd Generation Partnership Project Multimedia File",
 		"signature": [
 			{
-				"fromIndex": 4,
+				"offset": 4,
 				"pattern": "ftyp3gm"
 			}
 		],
@@ -1514,7 +1514,7 @@
 		"name": "3rd Generation Partnership Project Multimedia File",
 		"signature": [
 			{
-				"fromIndex": 4,
+				"offset": 4,
 				"pattern": "ftyp3gp"
 			}
 		],
@@ -1531,7 +1531,7 @@
 		"name": "3rd Generation Partnership Project Multimedia File",
 		"signature": [
 			{
-				"fromIndex": 4,
+				"offset": 4,
 				"pattern": "ftyp3gr"
 			}
 		],
@@ -1548,7 +1548,7 @@
 		"name": "3rd Generation Partnership Project Multimedia File",
 		"signature": [
 			{
-				"fromIndex": 4,
+				"offset": 4,
 				"pattern": "ftyp3gs"
 			}
 		],
@@ -1565,7 +1565,7 @@
 		"name": "3rd Generation Partnership Project Multimedia File",
 		"signature": [
 			{
-				"fromIndex": 4,
+				"offset": 4,
 				"pattern": "ftyp3gt"
 			}
 		],
@@ -1582,7 +1582,7 @@
 		"name": "3rd Generation Partnership Project 2 Multimedia File",
 		"signature": [
 			{
-				"fromIndex": 4,
+				"offset": 4,
 				"pattern": "ftyp3g2"
 			}
 		],
@@ -1599,7 +1599,7 @@
 		"name": "3rd Generation Partnership Project 2 Multimedia File",
 		"signature": [
 			{
-				"fromIndex": 4,
+				"offset": 4,
 				"pattern": "ftypKDDI"
 			}
 		],
@@ -1617,7 +1617,7 @@
 		"name": "Tar Zip Lempel-Ziv-Welch Algorithm Archive / UNIX Compress",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u001f"
 			}
 		]
@@ -1634,7 +1634,7 @@
 		"name": "Tar Zip LZH Algorithm Archive / UNIX Compress",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u001f "
 			}
 		]
@@ -1650,7 +1650,7 @@
 		"name": "Graphics Interchange Format (GIF) File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "GIF87a"
 			}
 		],
@@ -1667,7 +1667,7 @@
 		"name": "Graphics Interchange Format (GIF) File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "GIF89a"
 			}
 		],
@@ -1685,7 +1685,7 @@
 		"name": "Tagged Image File Format (TIFF)",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "MM\u0000*"
 			}
 		],
@@ -1703,7 +1703,7 @@
 		"name": "Tagged Image File Format (TIFF)",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "II\u0000+"
 			}
 		],
@@ -1721,7 +1721,7 @@
 		"name": "Tagged Image File Format (TIFF)",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "II*\u0000"
 			}
 		],
@@ -1739,7 +1739,7 @@
 		"name": "Tagged Image File Format (TIFF)",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "II+\u0000"
 			}
 		],
@@ -1756,7 +1756,7 @@
 		"name": "Canon RAW Format",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "II\u001a\u0000\u0000\u0000HEAPCCDR"
 			}
 		]
@@ -1772,7 +1772,7 @@
 		"name": "Canon RAW Format Version 2",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "II*\u0000\u0010\u0000\u0000\u0000CR"
 			}
 		]
@@ -1788,7 +1788,7 @@
 		"name": "Canon RAW Format Version 2",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "MM\u0000*\u0010\u0000\u0000\u0000CR"
 			}
 		]
@@ -1804,7 +1804,7 @@
 		"name": "Canon RAW Format Version 3",
 		"signature": [
 			{
-				"fromIndex": 4,
+				"offset": 4,
 				"pattern": "ftypcrx"
 			}
 		]
@@ -1820,7 +1820,7 @@
 		"name": "Kodak Cineon Image",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "*_×"
 			}
 		]
@@ -1832,7 +1832,7 @@
 		"name": "Rob Northen Compression (Version 1) Algorithm Archive",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "RNC\u0001"
 			}
 		]
@@ -1844,7 +1844,7 @@
 		"name": "Rob Northen Compression (Version 2) Algorithm Archive",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "RNC\u0002"
 			}
 		]
@@ -1858,7 +1858,7 @@
 		"name": "nuru Image File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "NURUIMG"
 			}
 		]
@@ -1872,7 +1872,7 @@
 		"name": "nuru Palette File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "NURUPAL"
 			}
 		]
@@ -1888,7 +1888,7 @@
 		"name": "Digital Picture Exchange (DPX) Image",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "SDPX"
 			}
 		],
@@ -1905,7 +1905,7 @@
 		"name": "Digital Picture Exchange (DPX) Image",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "XPDS"
 			}
 		],
@@ -1923,7 +1923,7 @@
 		"name": "OpenEXR Image",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "v/1\u0001"
 			}
 		]
@@ -1936,7 +1936,7 @@
 		"name": "Better Portable Graphic (BPG)",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "BPGû"
 			}
 		]
@@ -1951,7 +1951,7 @@
 		"name": "ISO9660 CD/DVD Image",
 		"signature": [
 			{
-				"fromIndex": 32769,
+				"offset": 32769,
 				"pattern": "CD001"
 			}
 		],
@@ -1967,7 +1967,7 @@
 		"name": "ISO9660 CD/DVD Image",
 		"signature": [
 			{
-				"fromIndex": 34817,
+				"offset": 34817,
 				"pattern": "CD001"
 			}
 		],
@@ -1983,7 +1983,7 @@
 		"name": "ISO9660 CD/DVD Image",
 		"signature": [
 			{
-				"fromIndex": 36865,
+				"offset": 36865,
 				"pattern": "CD001"
 			}
 		],
@@ -1997,7 +1997,7 @@
 		"name": "Quite OK Image (QOI)",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "qoif"
 			}
 		]
@@ -2013,11 +2013,11 @@
 		"name": "IFF Interleaved Bitmap Image",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "FORM"
 			},
 			{
-				"fromIndex": 8,
+				"offset": 8,
 				"pattern": "ILBM"
 			}
 		]
@@ -2036,11 +2036,11 @@
 		"name": "IFF 8-Bit Sampled Voice",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "FORM"
 			},
 			{
-				"fromIndex": 8,
+				"offset": 8,
 				"pattern": "8SVX"
 			}
 		]
@@ -2054,11 +2054,11 @@
 		"name": "Amiga Contiguous Bitmap File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "FORM"
 			},
 			{
-				"fromIndex": 8,
+				"offset": 8,
 				"pattern": "ACBM"
 			}
 		]
@@ -2072,11 +2072,11 @@
 		"name": "IFF Animated Bitmap File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "FORM"
 			},
 			{
-				"fromIndex": 8,
+				"offset": 8,
 				"pattern": "ANBM"
 			}
 		]
@@ -2090,11 +2090,11 @@
 		"name": "IFF CEL Animation File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "FORM"
 			},
 			{
-				"fromIndex": 8,
+				"offset": 8,
 				"pattern": "ANIM"
 			}
 		]
@@ -2109,11 +2109,11 @@
 		"name": "IFF Facsimile Image",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "FORM"
 			},
 			{
-				"fromIndex": 8,
+				"offset": 8,
 				"pattern": "FAXX"
 			}
 		]
@@ -2127,11 +2127,11 @@
 		"name": "IFF Formatted Text File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "FORM"
 			},
 			{
-				"fromIndex": 8,
+				"offset": 8,
 				"pattern": "FTXT"
 			}
 		]
@@ -2149,11 +2149,11 @@
 		"name": "IFF Simple Musical Score File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "FORM"
 			},
 			{
-				"fromIndex": 8,
+				"offset": 8,
 				"pattern": "SMUS"
 			}
 		]
@@ -2170,11 +2170,11 @@
 		"name": "IFF Musical Score File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "FORM"
 			},
 			{
-				"fromIndex": 8,
+				"offset": 8,
 				"pattern": "CMUS"
 			}
 		]
@@ -2189,11 +2189,11 @@
 		"name": "IFF YUV Image",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "FORM"
 			},
 			{
-				"fromIndex": 8,
+				"offset": 8,
 				"pattern": "YUVN"
 			}
 		]
@@ -2206,11 +2206,11 @@
 		"name": "Amiga Fantavision Movie",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "FORM"
 			},
 			{
-				"fromIndex": 8,
+				"offset": 8,
 				"pattern": "FANT"
 			}
 		]
@@ -2230,11 +2230,11 @@
 		"name": "Audio Interchange File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "FORM"
 			},
 			{
-				"fromIndex": 8,
+				"offset": 8,
 				"pattern": "AIFF"
 			}
 		]
@@ -2250,7 +2250,7 @@
 		"name": "eXtensible Markup Language (XML) File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "<?xml "
 			}
 		],
@@ -2267,7 +2267,7 @@
 		"name": "eXtensible Markup Language (XML) File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "<\u0000?\u0000x\u0000m\u0000l\u0000 "
 			}
 		],
@@ -2284,7 +2284,7 @@
 		"name": "eXtensible Markup Language (XML) File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u0000<\u0000?\u0000x\u0000m\u0000l\u0000 "
 			}
 		],
@@ -2301,7 +2301,7 @@
 		"name": "eXtensible Markup Language (XML) File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "<\u0000\u0000\u0000?\u0000\u0000\u0000x\u0000\u0000\u0000m\u0000\u0000\u0000l\u0000\u0000\u0000 \u0000\u0000\u0000"
 			}
 		],
@@ -2318,7 +2318,7 @@
 		"name": "eXtensible Markup Language (XML) File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u0000\u0000\u0000<\u0000\u0000\u0000?\u0000\u0000\u0000x\u0000\u0000\u0000m\u0000\u0000\u0000l\u0000\u0000\u0000 "
 			}
 		],
@@ -2335,7 +2335,7 @@
 		"name": "eXtensible Markup Language (XML) File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "Lo§@"
 			}
 		],
@@ -2351,7 +2351,7 @@
 		"name": "Windows Imaging Format File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "MSWIM\u0000\u0000\u0000Ð\u0000\u0000\u0000\u0000"
 			}
 		]
@@ -2366,11 +2366,11 @@
 		"name": "WebP Image File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "RIFF"
 			},
 			{
-				"fromIndex": 8,
+				"offset": 8,
 				"pattern": "WEBP"
 			}
 		]
@@ -2385,7 +2385,7 @@
 		"name": "Adobe Photoshop Document File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "8BPS"
 			}
 		]
@@ -2401,7 +2401,7 @@
 		"name": "BMP Image File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "BM"
 			}
 		]
@@ -2416,7 +2416,7 @@
 		"name": "WebAssembly Binary",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u0000asm"
 			}
 		]
@@ -2432,7 +2432,7 @@
 		"name": "JPEG Image",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "ÿØÿÛ"
 			}
 		],
@@ -2449,7 +2449,7 @@
 		"name": "JPEG Image",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "ÿØÿà"
 			}
 		],
@@ -2466,7 +2466,7 @@
 		"name": "JPEG Image",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "ÿØÿî"
 			}
 		],
@@ -2483,7 +2483,7 @@
 		"name": "JPEG JFIF Image",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "ÿØÿà\u0000\u0010JFIF\u0000\u0001"
 			}
 		]
@@ -2499,11 +2499,11 @@
 		"name": "JPEG Exif Image",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "ÿØÿá"
 			},
 			{
-				"fromIndex": 6,
+				"offset": 6,
 				"pattern": "Exif\u0000\u0000"
 			}
 		]
@@ -2516,7 +2516,7 @@
 		"name": "LZip Archive",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "LZIP"
 			}
 		]
@@ -2531,7 +2531,7 @@
 		"name": "cpio Archive",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "070707"
 			}
 		]
@@ -2549,7 +2549,7 @@
 		"name": "MS-DOS Executable",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "MZ"
 			}
 		],
@@ -2568,7 +2568,7 @@
 		"name": "MS-DOS Executable",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "ZM"
 			}
 		],
@@ -2585,7 +2585,7 @@
 		"name": "Roshal Archive V1.50",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "Rar!\u001a\u0007\u0000"
 			}
 		]
@@ -2601,7 +2601,7 @@
 		"name": "Roshal Archive V5.00",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "Rar!\u001a\u0007\u0001\u0000"
 			}
 		]
@@ -2612,7 +2612,7 @@
 		"name": "Executable & Linkable Format",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "ELF"
 			}
 		]
@@ -2627,7 +2627,7 @@
 		"name": "Portable Network Graphics (PNG) Image",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "PNG\r\n\u001a\n"
 			}
 		]
@@ -2642,7 +2642,7 @@
 		"name": "CP/M 3 File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "É"
 			}
 		]
@@ -2655,7 +2655,7 @@
 		"name": "Commodore 64 1541 Disk Image (D64 Format)",
 		"signature": [
 			{
-				"fromIndex": 91556,
+				"offset": 91556,
 				"pattern": " 2A   "
 			}
 		]
@@ -2668,7 +2668,7 @@
 		"name": "Commodore 64 1541 Disk Image (G64 Format)",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "GSR-1541"
 			}
 		]
@@ -2681,7 +2681,7 @@
 		"name": "Commodore 64 1581 Disk Image (D81 Format)",
 		"signature": [
 			{
-				"fromIndex": 399385,
+				"offset": 399385,
 				"pattern": " 3D  "
 			}
 		]
@@ -2694,7 +2694,7 @@
 		"name": "Commodore 64 Tape Image",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "C64 tape image file"
 			}
 		]
@@ -2707,7 +2707,7 @@
 		"name": "Commodore 64 Cartridge Image",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "C64 CARTRIDGE   "
 			}
 		]
@@ -2722,7 +2722,7 @@
 		"name": "Java Class File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "Êþº¾"
 			}
 		]
@@ -2735,7 +2735,7 @@
 		"name": "Mach-O Fat Binary",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "Êþº¾"
 			}
 		]
@@ -2746,7 +2746,7 @@
 		"name": "Mach-O Binary",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "þíúÎ"
 			}
 		],
@@ -2758,7 +2758,7 @@
 		"name": "Mach-O Binary",
 		"signature": [
 			{
-				"fromIndex": 4096,
+				"offset": 4096,
 				"pattern": "þíúÎ"
 			}
 		],
@@ -2770,7 +2770,7 @@
 		"name": "Mach-O Binary",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "þíúÏ"
 			}
 		],
@@ -2782,7 +2782,7 @@
 		"name": "Mach-O Binary",
 		"signature": [
 			{
-				"fromIndex": 4096,
+				"offset": 4096,
 				"pattern": "þíúÏ"
 			}
 		],
@@ -2794,7 +2794,7 @@
 		"name": "Mach-O Binary",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "Îúíþ"
 			}
 		],
@@ -2806,7 +2806,7 @@
 		"name": "Mach-O Binary",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "Ïúíþ"
 			}
 		],
@@ -2820,7 +2820,7 @@
 		"name": "Java Key Store File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "þíþí"
 			}
 		]
@@ -2835,7 +2835,7 @@
 		"name": "PostScript Document",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "%!PS"
 			}
 		]
@@ -2851,7 +2851,7 @@
 		"name": "Encapsulated PostScript File Version 3.0",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "%!PS-Adobe-3.0 EPSF-3.0"
 			}
 		]
@@ -2867,7 +2867,7 @@
 		"name": "Encapsulated PostScript File Version 3.1",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "%!PS-Adobe-3.1 EPSF-3.0"
 			}
 		]
@@ -2882,7 +2882,7 @@
 		"name": "Windows HTML Help Data",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "ITSF\u0003\u0000\u0000\u0000`\u0000\u0000\u0000"
 			}
 		]
@@ -2897,7 +2897,7 @@
 		"name": "Windows Help file",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "?_"
 			}
 		],
@@ -2913,7 +2913,7 @@
 		"name": "Windows Help file",
 		"signature": [
 			{
-				"fromIndex": 6,
+				"offset": 6,
 				"pattern": "\u0000\u0000ÿÿÿÿ"
 			}
 		],
@@ -2929,7 +2929,7 @@
 		"name": "Portable Document Format (PDF) File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "%PDF-"
 			}
 		]
@@ -2946,7 +2946,7 @@
 		"name": "Advanced Systems Format Video",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "0&²ufÏ\u0011¦Ù\u0000ª\u0000bÎl"
 			}
 		]
@@ -2957,7 +2957,7 @@
 		"name": "System Deployment Image",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "$SDI0001"
 			}
 		]
@@ -2973,7 +2973,7 @@
 		"name": "Ogg Audio",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "OggS"
 			}
 		]
@@ -2988,7 +2988,7 @@
 		"name": "Ogg Video",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "OggS"
 			}
 		]
@@ -3007,11 +3007,11 @@
 		"name": "Waveform Audio",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "RIFF"
 			},
 			{
-				"fromIndex": 8,
+				"offset": 8,
 				"pattern": "WAVE"
 			}
 		]
@@ -3026,11 +3026,11 @@
 		"name": "Audio Video Interleave (AVI)",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "RIFF"
 			},
 			{
-				"fromIndex": 8,
+				"offset": 8,
 				"pattern": "AVI "
 			}
 		]
@@ -3045,7 +3045,7 @@
 		"name": "MP3 Audio",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "ÿûÿóÿò"
 			}
 		]
@@ -3060,7 +3060,7 @@
 		"name": "MP3 Audio With ID3v2 Container",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "ID3"
 			}
 		]
@@ -3073,7 +3073,7 @@
 		"name": "CD-i CD Image",
 		"signature": [
 			{
-				"fromIndex": 387785,
+				"offset": 387785,
 				"pattern": "CD001"
 			}
 		]
@@ -3086,7 +3086,7 @@
 		"name": "Nintendo Game & Watch Image",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "main.bs"
 			}
 		]
@@ -3099,7 +3099,7 @@
 		"name": "Nintendo Entertainment System Image",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "NES"
 			}
 		]
@@ -3114,7 +3114,7 @@
 		"name": "Flexible Image Transport System (FITS) File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "SIMPLE  =                    T"
 			}
 		]
@@ -3129,7 +3129,7 @@
 		"name": "Free Lossless Audio Codec (FLAC) File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "fLaC"
 			}
 		]
@@ -3145,7 +3145,7 @@
 		"name": "MIDI Sound File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "MThd"
 			}
 		]
@@ -3158,7 +3158,7 @@
 		"name": "Dalvik Executable",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "dex\n035\u0000"
 			}
 		]
@@ -3173,7 +3173,7 @@
 		"name": "VMware Virtual Disk",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "KDM"
 			}
 		]
@@ -3188,7 +3188,7 @@
 		"name": "VMware 4 Virtual Disk Description File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "# Disk Descripto"
 			}
 		]
@@ -3203,7 +3203,7 @@
 		"name": "Google Chrome Extension",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "Cr24"
 			}
 		]
@@ -3216,7 +3216,7 @@
 		"name": "FreeHand 8 Document",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "AGD3"
 			}
 		]
@@ -3229,7 +3229,7 @@
 		"name": "AppleWorks 5 Document",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u0005\u0007\u0000\u0000BOBO\u0005\u0007\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001"
 			}
 		]
@@ -3242,7 +3242,7 @@
 		"name": "AppleWorks 6 Document",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u0006\u0007á\u0000BOBO\u0006\u0007á\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001"
 			}
 		]
@@ -3255,7 +3255,7 @@
 		"name": "Roxio Toast Disc Image",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "ER\u0002\u0000\u0000\u0000"
 			}
 		],
@@ -3269,7 +3269,7 @@
 		"name": "Roxio Toast Disc Image",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "ER\u0002\u0000\u0000\u0000"
 			}
 		],
@@ -3285,7 +3285,7 @@
 		"name": "eXtensible ARchive",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "xar!"
 			}
 		]
@@ -3298,7 +3298,7 @@
 		"name": "Windows Files & Settings Transfer Repository File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "PMOCCMOC"
 			}
 		]
@@ -3313,7 +3313,7 @@
 		"name": "TAR Archive",
 		"signature": [
 			{
-				"fromIndex": 257,
+				"offset": 257,
 				"pattern": "ustar\u000000ustar  \u0000"
 			}
 		]
@@ -3326,7 +3326,7 @@
 		"name": "OAR Archive",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "OAR"
 			}
 		]
@@ -3339,7 +3339,7 @@
 		"name": "Open Source Portable Voxel File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "tox3"
 			}
 		]
@@ -3352,7 +3352,7 @@
 		"name": "Magic Lantern Video File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "MLVI"
 			}
 		]
@@ -3363,7 +3363,7 @@
 		"name": "Windows Update Binary Delta Compression File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "DCM\u0001PA30PA30"
 			}
 		]
@@ -3378,7 +3378,7 @@
 		"name": "7-Zip Archive",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "7z¼¯'\u001c"
 			}
 		]
@@ -3391,7 +3391,7 @@
 		"name": "LZ4 Frame File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u0004\"M\u0018"
 			}
 		]
@@ -3406,7 +3406,7 @@
 		"name": "Microsoft Cabinet File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "MSCF"
 			}
 		]
@@ -3419,7 +3419,7 @@
 		"name": "Free Lossless Image Format (FLIF) File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "FLIF"
 			}
 		]
@@ -3432,7 +3432,7 @@
 		"name": "SEAN Session Analysis Training File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "MIL "
 			}
 		]
@@ -3448,7 +3448,7 @@
 		"name": "DER Encoded X.509 Certificate File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "0"
 			}
 		]
@@ -3461,7 +3461,7 @@
 		"name": "PuTTY Private Key File Version 2",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "PuTTY-User-Key-File-2:"
 			}
 		]
@@ -3474,7 +3474,7 @@
 		"name": "PuTTY Private Key File Version 3",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "PuTTY-User-Key-File-3:"
 			}
 		]
@@ -3485,7 +3485,7 @@
 		"name": "OpenSSH Private Key File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "-----BEGIN OPENSSH PRIVATE KEY-----"
 			}
 		]
@@ -3498,7 +3498,7 @@
 		"name": "OpenSSH Public Key File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "-----BEGIN SSH2 KEY-----"
 			}
 		]
@@ -3511,7 +3511,7 @@
 		"name": "DICOM Medical File Format",
 		"signature": [
 			{
-				"fromIndex": 128,
+				"offset": 128,
 				"pattern": "DICM"
 			}
 		]
@@ -3526,7 +3526,7 @@
 		"name": "WOFF 1.0 Font",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "wOFF"
 			}
 		]
@@ -3541,7 +3541,7 @@
 		"name": "WOFF 2.0 Font",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "wOF2"
 			}
 		]
@@ -3554,7 +3554,7 @@
 		"name": "Lepton Compressed JPEG Image",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "Ï\u0001"
 			}
 		]
@@ -3569,7 +3569,7 @@
 		"name": "Linux Deb File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "!<arch>\n"
 			}
 		]
@@ -3585,11 +3585,11 @@
 		"name": "Rich Text Format (RTF) File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "{\\rtf"
 			},
 			{
-				"fromIndex": -1,
+				"offset": -1,
 				"pattern": "}"
 			}
 		]
@@ -3600,7 +3600,7 @@
 		"name": "Microsoft Tape File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "TAPE"
 			}
 		]
@@ -3615,7 +3615,7 @@
 		"name": "MPEG-4 Video",
 		"signature": [
 			{
-				"fromIndex": 4,
+				"offset": 4,
 				"pattern": "ftypisom"
 			}
 		],
@@ -3631,7 +3631,7 @@
 		"name": "MPEG-4 Video",
 		"signature": [
 			{
-				"fromIndex": 4,
+				"offset": 4,
 				"pattern": "ftypMSNV"
 			}
 		],
@@ -3645,7 +3645,7 @@
 		"name": "Apache Optimized Row Columnar (ORC) File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "ORC"
 			}
 		]
@@ -3662,7 +3662,7 @@
 		"name": "Multimedia Playlist",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "#EXTM3U"
 			}
 		]
@@ -3675,7 +3675,7 @@
 		"name": "M2 Archive",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "mdf\u0000"
 			}
 		]
@@ -3688,7 +3688,7 @@
 		"name": "Capcom RE Engine Game Data Archive",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "KPKA"
 			}
 		]
@@ -3701,7 +3701,7 @@
 		"name": "Capcom MT Framework Game Data Archive",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "ARC"
 			}
 		]
@@ -3714,7 +3714,7 @@
 		"name": "Interleaf PrinterLeaf",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "ÐOPS"
 			}
 		]
@@ -3727,7 +3727,7 @@
 		"name": "NIfTI File",
 		"signature": [
 			{
-				"fromIndex": 344,
+				"offset": 344,
 				"pattern": "n+1\u0000"
 			}
 		]
@@ -3740,7 +3740,7 @@
 		"name": "NIfTI Header File",
 		"signature": [
 			{
-				"fromIndex": 344,
+				"offset": 344,
 				"pattern": "ni1\u0000"
 			}
 		]
@@ -3751,7 +3751,7 @@
 		"name": "Digital Metaphors Report Builder File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "RAF64"
 			}
 		]
@@ -3762,7 +3762,7 @@
 		"name": "Visionaire 3 Engine Resource File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "VIS3"
 			}
 		]
@@ -3775,7 +3775,7 @@
 		"name": "SAP Power Monitor (Version 1.1.0) Data File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "pwrdata"
 			}
 		]
@@ -3790,7 +3790,7 @@
 		"name": "ARC Archive",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u001a\b"
 			}
 		]
@@ -3806,7 +3806,7 @@
 		"name": "Armored PGP Public Key File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "-----BEGIN PGP PUBLIC KEI BLOCK-----"
 			}
 		]
@@ -3819,7 +3819,7 @@
 		"name": "Windows Help Content File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": ":Base "
 			}
 		]
@@ -3832,7 +3832,7 @@
 		"name": "Nero CD Compilation File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u000eNeroISO"
 			}
 		]
@@ -3845,7 +3845,7 @@
 		"name": "DeskMate Worksheet File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u000eWKS"
 			}
 		]
@@ -3858,7 +3858,7 @@
 		"name": "Sibelius Music Score File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u000fSIBELIUS"
 			}
 		]
@@ -3875,7 +3875,7 @@
 		"name": "GZip Archive",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u001f"
 			}
 		]
@@ -3891,7 +3891,7 @@
 		"name": "XZ LZMA2 Archive",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "ý7zXZ\u0000"
 			}
 		]
@@ -3907,7 +3907,7 @@
 		"name": "PEM Encoded X.509 Certificate File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "-----BEGIN CERTIFICATE-----"
 			}
 		]
@@ -3921,7 +3921,7 @@
 		"name": "PEM Encoded X.509 Certificate Signing Request File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "-----BEGIN CERTIFICATE REQUEST-----"
 			}
 		]
@@ -3935,7 +3935,7 @@
 		"name": "Pem Encoded X.509 PKCS#8 Private Key File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "-----BEGIN PRIVATE KEY-----"
 			}
 		]
@@ -3949,7 +3949,7 @@
 		"name": "PEM Encoded X.509 PKCS#1 DSA Private Key File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "-----BEGIN DSA PRIVATE KEY-----"
 			}
 		]
@@ -3963,7 +3963,7 @@
 		"name": "PEM Encoded X.509 PKCS#1 RSA Private Key File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "-----BEGIN REA PRIVATE KEY-----"
 			}
 		]
@@ -3978,7 +3978,7 @@
 		"name": "Truevision Targa Graphic File",
 		"signature": [
 			{
-				"fromIndex": -18,
+				"offset": -18,
 				"pattern": "TRUEVISION-XFILE.\u0000"
 			}
 		]
@@ -3993,7 +3993,7 @@
 		"name": "Alliance for Open Media (AOMedia) Video 1 (AV1) Image",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u0000\u0000\u0000"
 			}
 		]
@@ -4006,7 +4006,7 @@
 		"name": "Compucon/Singer Embroidery Design File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
 			}
 		]
@@ -4019,7 +4019,7 @@
 		"name": "Revit Project File Subheader",
 		"signature": [
 			{
-				"fromIndex": 512,
+				"offset": 512,
 				"pattern": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
 			}
 		]
@@ -4032,7 +4032,7 @@
 		"name": "Windows Disk Image File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u0000\u0000\u0000\u0000\u0014\u0000\u0000\u0000"
 			}
 		]
@@ -4045,7 +4045,7 @@
 		"name": "Bitcoin Core Wallet File",
 		"signature": [
 			{
-				"fromIndex": 8,
+				"offset": 8,
 				"pattern": "\u0000\u0000\u0000\u0000b1\u0005\u0000\t\u0000\u0000\u0000\u0000 \u0000\u0000\u0000\t\u0000\u0000\u0000\u0000\u0000\u0000"
 			}
 		]
@@ -4058,7 +4058,7 @@
 		"name": "NOAA Raster Navigation Chart (RNC) File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "!\r\nCRR/This electronic chart was produced under the authority of USA-NOAA/NOS.\r\n"
 			}
 		]
@@ -4073,11 +4073,11 @@
 		"name": "Electronic Publication File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "PK\u0003\u0004"
 			},
 			{
-				"fromIndex": 30,
+				"offset": 30,
 				"pattern": "mimetypeapplication/epub+zip"
 			}
 		]
@@ -4092,7 +4092,7 @@
 		"name": "Microsoft Office Word Document",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "ÐÏ\u0011à¡±\u001aá"
 			}
 		]
@@ -4107,7 +4107,7 @@
 		"name": "Microsoft Office Excel Document",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "ÐÏ\u0011à¡±\u001aá"
 			}
 		]
@@ -4122,7 +4122,7 @@
 		"name": "Microsoft Office PowerPoint Document",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "ÐÏ\u0011à¡±\u001aá"
 			}
 		]
@@ -4137,7 +4137,7 @@
 		"name": "Windows Installer",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "ÐÏ\u0011à¡±\u001aá"
 			}
 		]
@@ -4152,7 +4152,7 @@
 		"name": "Microsoft Outlook Item",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "ÐÏ\u0011à¡±\u001aá"
 			}
 		]
@@ -4170,7 +4170,7 @@
 		"name": "Matroska Media File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u001aEß£"
 			}
 		]
@@ -4185,7 +4185,7 @@
 		"name": "WebM File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u001aEß£"
 			}
 		]
@@ -4201,11 +4201,11 @@
 		"name": "DjVu Document",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "AT&TFORM"
 			},
 			{
-				"fromIndex": 12,
+				"offset": 12,
 				"pattern": "DJV"
 			}
 		]
@@ -4216,7 +4216,7 @@
 		"name": "uImage File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "'\u0005\u0019V"
 			}
 		]
@@ -4229,7 +4229,7 @@
 		"name": "LZFSE File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "bvx2"
 			}
 		]
@@ -4242,7 +4242,7 @@
 		"name": "Apache Avro Binary File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "Obj\u0001"
 			}
 		]
@@ -4255,7 +4255,7 @@
 		"name": "RCFile Columnar File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "SEQ6"
 			}
 		]
@@ -4268,7 +4268,7 @@
 		"name": "Roblox Place File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "<roblox!"
 			}
 		]
@@ -4282,7 +4282,7 @@
 		"name": "PhotoCap Object Templates File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "exV"
 			}
 		]
@@ -4295,7 +4295,7 @@
 		"name": "PhotoCap Vector File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "UUªª"
 			}
 		]
@@ -4317,7 +4317,7 @@
 		"name": "PhotoCap Template File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "xV4"
 			}
 		]
@@ -4328,7 +4328,7 @@
 		"name": "Apache Parquet Columnar File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "PAR1"
 			}
 		]
@@ -4343,7 +4343,7 @@
 		"name": "Emulator Emaxsynth Samples File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "EMX2"
 			}
 		]
@@ -4358,7 +4358,7 @@
 		"name": "Emulator III Synth Samples File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "EMU3"
 			}
 		]
@@ -4373,7 +4373,7 @@
 		"name": "Lua Bytecode File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u001bLua"
 			}
 		]
@@ -4386,7 +4386,7 @@
 		"name": "MacOS File Alias (Symbolic Link)",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "book\u0000\u0000\u0000\u0000mark\u0000\u0000\u0000\u0000"
 			}
 		]
@@ -4399,7 +4399,7 @@
 		"name": "Microsoft URL Security Zones Identifier File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "[ZoneTransfer]"
 			}
 		]
@@ -4414,7 +4414,7 @@
 		"name": "Email Message Var5 File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "Received:"
 			}
 		]
@@ -4427,7 +4427,7 @@
 		"name": "Tableau Datasource File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": " \u0002\u0001b \u001e«\u0007\u0002\u0000\u0000\u0000"
 			}
 		]
@@ -4440,7 +4440,7 @@
 		"name": "KDB File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "7H\u0003\u0002\u0000\u0000\u0000\u0000X509KEY"
 			}
 		]
@@ -4455,11 +4455,11 @@
 		"name": "PGP File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": ""
 			},
 			{
-				"fromIndex": 3,
+				"offset": 3,
 				"pattern": "\u0003"
 			}
 		]
@@ -4472,7 +4472,7 @@
 		"name": "Zstandard Archive",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "(µ/ý"
 			}
 		]
@@ -4487,7 +4487,7 @@
 		"name": "QuickZip RS Archive",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "RSVKDATA"
 			}
 		]
@@ -4500,7 +4500,7 @@
 		"name": "Smile file",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": ":)\n"
 			}
 		]
@@ -4511,7 +4511,7 @@
 		"name": "Preferred Executable Format",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "Joy!"
 			}
 		]
@@ -4526,7 +4526,7 @@
 		"name": "SubRip File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "1\n00"
 			}
 		]
@@ -4539,7 +4539,7 @@
 		"name": "VPK File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "4\u0012ªU"
 			}
 		]
@@ -4554,7 +4554,7 @@
 		"name": "ACE Archive",
 		"signature": [
 			{
-				"fromIndex": 7,
+				"offset": 7,
 				"pattern": "**ACE**"
 			}
 		]
@@ -4569,7 +4569,7 @@
 		"name": "ARJ File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "`ê"
 			}
 		]
@@ -4582,7 +4582,7 @@
 		"name": "InstallShield CAB Archive",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "ISc("
 			}
 		]
@@ -4597,7 +4597,7 @@
 		"name": "Windows Metafile",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "×ÍÆ"
 			}
 		]
@@ -4610,7 +4610,7 @@
 		"name": "XCF File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "gimp xcf"
 			}
 		]
@@ -4625,7 +4625,7 @@
 		"name": "X PixMap Image",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "/* XPM */"
 			}
 		]
@@ -4638,7 +4638,7 @@
 		"name": "Advanced Forensics File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "AFF"
 			}
 		]
@@ -4652,7 +4652,7 @@
 		"name": "EnCase EWF File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "EVF2"
 			}
 		]
@@ -4665,7 +4665,7 @@
 		"name": "QEMU Copy On Write (QCOW) File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "QFI"
 			}
 		]
@@ -4678,11 +4678,11 @@
 		"name": "Animated Cursor File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "RIFF"
 			},
 			{
-				"fromIndex": 8,
+				"offset": 8,
 				"pattern": "ACON"
 			}
 		]
@@ -4695,11 +4695,11 @@
 		"name": "CDA File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "RIFF"
 			},
 			{
-				"fromIndex": 8,
+				"offset": 8,
 				"pattern": "CDDA"
 			}
 		]
@@ -4712,11 +4712,11 @@
 		"name": "Qualcomm PureVoice File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "RIFF"
 			},
 			{
-				"fromIndex": 8,
+				"offset": 8,
 				"pattern": "QLCM"
 			}
 		]
@@ -4733,11 +4733,11 @@
 		"name": "Macromedia Director File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "RIFX"
 			},
 			{
-				"fromIndex": 8,
+				"offset": 8,
 				"pattern": "MV93"
 			}
 		],
@@ -4755,11 +4755,11 @@
 		"name": "Macromedia Director File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "XFIR"
 			},
 			{
-				"fromIndex": 8,
+				"offset": 8,
 				"pattern": "39VM"
 			}
 		],
@@ -4775,7 +4775,7 @@
 		"name": "Flash Video",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "FLV"
 			}
 		]
@@ -4790,7 +4790,7 @@
 		"name": "VirtualBox Virtual Hard Disk File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "<<< Oracle VM VirtualBox Disk Image >>>"
 			}
 		]
@@ -4805,7 +4805,7 @@
 		"name": "Windows Virtual PC Virtual Hard Disk File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "connectix"
 			}
 		]
@@ -4818,7 +4818,7 @@
 		"name": "Windows Virtual PC Windows 8 Virtual Hard Disk File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "vhdxfile"
 			}
 		]
@@ -4831,7 +4831,7 @@
 		"name": "Compressed ISO Image",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "IsZ!"
 			}
 		]
@@ -4844,7 +4844,7 @@
 		"name": "Direct Access Archive PowerISO File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "DAA"
 			}
 		]
@@ -4857,7 +4857,7 @@
 		"name": "Windows Event Viewer File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "LfLe"
 			}
 		]
@@ -4870,7 +4870,7 @@
 		"name": "Windows Event Viewer XML File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "ElfFile"
 			}
 		]
@@ -4883,7 +4883,7 @@
 		"name": "Windows Customized Database",
 		"signature": [
 			{
-				"fromIndex": 8,
+				"offset": 8,
 				"pattern": "sdbf"
 			}
 		]
@@ -4896,7 +4896,7 @@
 		"name": "Windows Program Manager Program Group File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "PMCC"
 			}
 		]
@@ -4911,7 +4911,7 @@
 		"name": "ICC Profile File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "KCMS"
 			}
 		]
@@ -4925,7 +4925,7 @@
 		"name": "Windows Registry File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "regf"
 			}
 		]
@@ -4938,7 +4938,7 @@
 		"name": "Microsoft Outlook Personal Storage Table File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "!BDN"
 			}
 		]
@@ -4951,7 +4951,7 @@
 		"name": "Google Draco 3D Model File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "DRACO"
 			}
 		]
@@ -4965,7 +4965,7 @@
 		"name": "Gridded Data File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "GRIB"
 			}
 		]
@@ -4978,7 +4978,7 @@
 		"name": "Blender File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "BLENDER"
 			}
 		]
@@ -4991,7 +4991,7 @@
 		"mimes": [],
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u0000\u0000\u0000\fJXL \r\n\n"
 			}
 		],
@@ -5005,7 +5005,7 @@
 		"mimes": [],
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "ÿ\n"
 			}
 		],
@@ -5023,7 +5023,7 @@
 		"name": "TrueType Font",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u0000\u0001\u0000\u0000\u0000"
 			}
 		]
@@ -5038,7 +5038,7 @@
 		"name": "TrueType Font",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "true\u0000"
 			}
 		]
@@ -5053,7 +5053,7 @@
 		"name": "OpenType Font",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "OTTO"
 			}
 		]
@@ -5064,7 +5064,7 @@
 		"name": "Modulefile for Environment Modules",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "#%Module"
 			}
 		]
@@ -5077,7 +5077,7 @@
 		"name": "Slob File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "!-1SLOB\u001f"
 			}
 		]
@@ -5088,7 +5088,7 @@
 		"name": "Serialized Java Data",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "¬í"
 			}
 		]
@@ -5101,7 +5101,7 @@
 		"name": "Creative Voice File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "Creative Voice File\u001a\u001a\u0000"
 			}
 		]
@@ -5117,7 +5117,7 @@
 		"name": "Au Audio File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": ".snd"
 			}
 		]
@@ -5128,7 +5128,7 @@
 		"name": "OpenGL Iris Perfomer Performer Fast Binary (PFB)",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "Û\nÎ\u0000"
 			}
 		]
@@ -5141,7 +5141,7 @@
 		"name": "Noodlesoft Hazel Rules File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "HZLR\u0000\u0000\u0000\u0018"
 			}
 		]
@@ -5154,7 +5154,7 @@
 		"name": "FL Studio Project File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "FLhd"
 			}
 		]
@@ -5167,7 +5167,7 @@
 		"name": "FL Studio Mobile Project File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "10LF"
 			}
 		]
@@ -5178,7 +5178,7 @@
 		"name": "Vormetric Encryption DPM Version 2.1 Header",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "RKMC210"
 			}
 		]
@@ -5191,7 +5191,7 @@
 		"name": "Micrografx Vector Graphic File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u0001ÿ\u0002\u0004\u0003\u0002"
 			}
 		]
@@ -5204,7 +5204,7 @@
 		"name": "Digital Speech Standard (Olympus, Grundig, & Phillips) V2",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u0002dss"
 			}
 		]
@@ -5217,7 +5217,7 @@
 		"name": "Digital Speech Standard (Olympus, Grundig, & Phillips) V3",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u0003dss"
 			}
 		]
@@ -5230,7 +5230,7 @@
 		"name": "Approach Index File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u0003\u0000\u0000\u0000APPR"
 			}
 		]
@@ -5243,7 +5243,7 @@
 		"name": "SkinCrafter Skin File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u0007SKF"
 			}
 		]
@@ -5258,7 +5258,7 @@
 		"name": "DesignTools 2D Design File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u0007dt2ddtd"
 			}
 		]
@@ -5271,7 +5271,7 @@
 		"name": "MultiBit Bitcoin Wallet File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\n\u0016org.bitcoin.pr"
 			}
 		]
@@ -5284,7 +5284,7 @@
 		"name": "DeskMate Document",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\rDOC"
 			}
 		]
@@ -5297,7 +5297,7 @@
 		"name": "Microsoft Developer Studio Project File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "# Microsoft Developer Studio"
 			}
 		]
@@ -5312,7 +5312,7 @@
 		"name": "Adaptive Multi-Rate ACELP (Algebraic Code Excited Linear Prediction) Codec File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "#!AMR"
 			}
 		]
@@ -5327,7 +5327,7 @@
 		"name": "Skype Compressed Audio",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "#!SILK\n"
 			}
 		]
@@ -5340,7 +5340,7 @@
 		"name": "Radiance High Dynamic Range Image",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "#?RADIANCE\n"
 			}
 		]
@@ -5353,7 +5353,7 @@
 		"name": "VBScript Encoded Script",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "#@~^"
 			}
 		]
@@ -5366,7 +5366,7 @@
 		"name": "MikroTik WinBox Connection Database (Address Book)",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\rð\u001dÀ"
 			}
 		]
@@ -5379,7 +5379,7 @@
 		"name": "Alcohol 120% CD Image",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u0000ÿÿÿÿÿÿÿÿÿÿ\u0000\u0000\u0002\u0000\u0001"
 			}
 		]
@@ -5392,11 +5392,11 @@
 		"name": "ASCII85/BASE85 Encoded File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "<~6<\\%_0gSqh;"
 			},
 			{
-				"fromIndex": -3,
+				"offset": -3,
 				"pattern": "~>\n"
 			}
 		]
@@ -5409,11 +5409,11 @@
 		"name": "JBIG2 Image",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "JB2\r\n\u001a\n"
 			},
 			{
-				"fromIndex": -8,
+				"offset": -8,
 				"pattern": "\u00033\u0000\u0001\u0000\u0000\u0000\u0000"
 			}
 		]
@@ -5426,7 +5426,7 @@
 		"name": "Works for Windows Spreadsheet",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "ÿ\u0000\u0002\u0000\u0004\u0004\u0005T\u0002\u0000"
 			}
 		]
@@ -5439,7 +5439,7 @@
 		"name": "QuickReport Report File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "ÿ\n\u0000"
 			}
 		]
@@ -5452,7 +5452,7 @@
 		"name": "Windows International Code Page",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "ÿFONT"
 			}
 		]
@@ -5465,7 +5465,7 @@
 		"name": "Keyboard Driver File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "ÿKEYB   "
 			}
 		]
@@ -5483,7 +5483,7 @@
 		"name": "WordPerfect Text and Graphics File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "ÿWPC"
 			}
 		]
@@ -5496,7 +5496,7 @@
 		"name": "Acronis True Image",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "Î$¹¢ \u0000\u0000\u0000"
 			}
 		]
@@ -5509,7 +5509,7 @@
 		"name": "Quicken Data File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "¬½\u0000\u0000"
 			}
 		]
@@ -5522,7 +5522,7 @@
 		"name": "Qimage Filter",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "v2003.10\r\n0\r\n"
 			}
 		]
@@ -5535,7 +5535,7 @@
 		"name": "Windows NT Registry Hive File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "regf"
 			}
 		]
@@ -5548,7 +5548,7 @@
 		"name": "Sonic Foundry Acid Music File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "riff"
 			}
 		]
@@ -5561,7 +5561,7 @@
 		"name": "RealMedia Metafile",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "rtsp://"
 			}
 		]
@@ -5574,7 +5574,7 @@
 		"name": "Torrent File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "d8:announce"
 			}
 		]
@@ -5587,7 +5587,7 @@
 		"name": "StuffIt Compressed Archive",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "SIT!\u0000"
 			}
 		]
@@ -5600,7 +5600,7 @@
 		"name": "SmartDraw Drawing File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "SMARTDRW"
 			}
 		]
@@ -5613,7 +5613,7 @@
 		"name": "StorageCraft ShadownProtect Backup File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "SPFI\u0000"
 			}
 		]
@@ -5626,7 +5626,7 @@
 		"name": "MultiBit Bitcoin Blockchain File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "SPVB"
 			}
 		]
@@ -5639,7 +5639,7 @@
 		"name": "Netscape Navigator (v4) Database File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u0000\u0006\u0015a\u0000\u0000\u0000\u0002\u0000\u0000\u0004Ò\u0000\u0000\u0010\u0000"
 			}
 		]
@@ -5652,7 +5652,7 @@
 		"name": "The Bat! Secure E-mail Message Base Index File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u0001\u0001G\u0019¤\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
 			}
 		]
@@ -5665,7 +5665,7 @@
 		"name": "Material Exchange Format File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u0006\u000e+4\u0002\u0005\u0001\u0001\r\u0001\u0002\u0001\u0001\u0002"
 			}
 		]
@@ -5678,7 +5678,7 @@
 		"name": "Runtime Software Compressed Disk Image",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "\u001aRTS COMPRESSED IMAGE V1.0\u001a"
 			}
 		]
@@ -5691,7 +5691,7 @@
 		"name": "Google Earth Keyhole Placemark File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "# This is an Key"
 			}
 		]
@@ -5704,7 +5704,7 @@
 		"name": "SPSS Statistics Data File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "$FL2@(#) SPSS DATA FILE"
 			}
 		]
@@ -5717,7 +5717,7 @@
 		"name": "Macintosh BinHex 4 Compressed Archive",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "(This file must be converted with BinHex "
 			}
 		]
@@ -5734,7 +5734,7 @@
 		"name": "Symantec Wise Installer Log File",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "***  Installation Started "
 			}
 		]
@@ -5750,7 +5750,7 @@
 		"name": "Microsoft Visual Studio Solution",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "ï»¿\r\nMicrosoft Visual Studio Solution File, Format Version "
 			}
 		],
@@ -5767,7 +5767,7 @@
 		"name": "Microsoft Visual Studio Solution",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "ï»¿\nMicrosoft Visual Studio Solution File, Format Version "
 			}
 		],
@@ -5784,7 +5784,7 @@
 		"name": "Microsoft Visual Studio Solution",
 		"signature": [
 			{
-				"fromIndex": 0,
+				"offset": 0,
 				"pattern": "Microsoft Visual Studio Solution File, Format Version "
 			}
 		],

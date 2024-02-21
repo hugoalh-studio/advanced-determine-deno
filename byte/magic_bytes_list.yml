@@ -11,7 +11,7 @@
   mimes: []
   name: "Lotus 1-2-3 Spreadsheet (V1) File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x00\x00\x02\x00\x06\x04\x06\x00\x08\x00\x00\x00\x00\x00"
 - category: "spreadsheet"
   extensions:
@@ -19,7 +19,7 @@
   mimes: []
   name: "Lotus 1-2-3 Spreadsheet (V3) File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x00\x00\x1A\x00\x00\x10\x04\x00\x00\x00\x00\x00"
 - category: "spreadsheet"
   extensions:
@@ -28,7 +28,7 @@
   mimes: []
   name: "Lotus 1-2-3 Spreadsheet (V4 / V5) File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x00\x00\x1A\x00\x02\x10\x04\x00\x00\x00\x00\x00"
 - category: "spreadsheet"
   extensions:
@@ -37,14 +37,14 @@
     - "application/vnd.lotus-1-2-3"
   name: "Lotus 1-2-3 Spreadsheet (V9) File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x00\x00\x1A\x00\x05\x10\x04"
 - category: "executable"
   extensions: []
   mimes: []
   name: "Amiga Hunk Executable"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x00\x00\x03ó"
 - &QuarkExpressDocumentGroup
   category: "document"
@@ -54,12 +54,12 @@
     - "application/vnd.quark.quarkxpress"
   name: "Quark Express Document"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x00\x00MMXPR"
   variant: "BE"
 - <<: *QuarkExpressDocumentGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x00\x00IIXPR"
   variant: "LE"
 - category: "database"
@@ -68,7 +68,7 @@
   mimes: []
   name: "Password Gorilla Password Database"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "PWS3"
 - &LibpcapFileGroup
   category: "other"
@@ -78,22 +78,22 @@
     - "application/vnd.tcpdump.pcap"
   name: "Libpcap File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "¡²ÃÔ"
   variant: "BE"
 - <<: *LibpcapFileGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "ÔÃ²¡"
   variant: "LE"
 - <<: *LibpcapFileGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "¡²<M"
   variant: "Nanosecond Resolution, BE"
 - <<: *LibpcapFileGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "M<²¡"
   variant: "Nanosecond Resolution, LE"
 - category: "other"
@@ -103,7 +103,7 @@
     - "application/x-pcapng"
   name: "PCAP Next Generation Dump File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\n\r\r\n"
 - category: "package"
   extensions:
@@ -113,7 +113,7 @@
     - "application/x-rpm"
   name: "RedHat Package Manager (RPM) Package"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "í«îÛ"
 - category: "package"
   extensions:
@@ -121,7 +121,7 @@
   mimes: []
   name: "Amazon Kindle Update Package"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "SP01"
 - category: "other"
   extensions:
@@ -130,7 +130,7 @@
     - "application/x-doom"
   name: "Internal WAD"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "IWAD"
 - category: "other"
   extensions:
@@ -140,7 +140,7 @@
     - "application/x-pilot"
   name: "PalmPilot Database/Document File"
   signature:
-    - fromIndex: 11
+    - offset: 11
       pattern: "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
 - category: "archive"
   extensions:
@@ -148,7 +148,7 @@
   mimes: []
   name: "Palm Desktop Calendar Archive"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "¾ºþÊ"
 - category: "archive"
   extensions:
@@ -156,7 +156,7 @@
   mimes: []
   name: "Palm Desktop To Do Archive"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x00\x01BD"
 - category: "archive"
   extensions:
@@ -164,7 +164,7 @@
   mimes: []
   name: "Palm Desktop Calendar Archive"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x00\x01DT"
 - category: "other"
   extensions:
@@ -172,7 +172,7 @@
   mimes: []
   name: "Telegram Desktop File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "TDF$"
 - category: "other"
   extensions:
@@ -180,7 +180,7 @@
   mimes: []
   name: "Telegram Desktop Encrypted File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "TDEF"
 - category: "image"
   extensions:
@@ -191,7 +191,7 @@
     - "image/ico"
   name: "Computer Icons"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x00\x00\x01\x00"
 - category: "image"
   extensions:
@@ -200,7 +200,7 @@
     - "image/x-icns"
   name: "Apple Icon Image"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "icns"
 - category: "image"
   extensions:
@@ -209,7 +209,7 @@
     - "image/heic"
   name: "High Efficiency Image Container (HEIC)"
   signature:
-    - fromIndex: 4
+    - offset: 4
       pattern: "ftypheic"
 - &LempelZivHuffmanArchiveGroup
   category: "archive"
@@ -219,12 +219,12 @@
     - "application/x-lzh-compressed"
   name: "Lempel Ziv Huffman Archive"
   signature:
-    - fromIndex: 2
+    - offset: 2
       pattern: "-hl0-"
   variant: "Method 0 (No Compression)"
 - <<: *LempelZivHuffmanArchiveGroup
   signature:
-    - fromIndex: 2
+    - offset: 2
       pattern: "-hl5-"
   variant: "Method 5 (8 KiB Sliding Window)"
 - category: "other"
@@ -233,7 +233,7 @@
   mimes: []
   name: "AmiBack Amiga Backup Data File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "BACKMIKEDISK"
 - category: "other"
   extensions:
@@ -241,7 +241,7 @@
   mimes: []
   name: "AmiBack Amiga Backup Index File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "INDX"
 - category: "other"
   extensions:
@@ -249,7 +249,7 @@
   mimes: []
   name: "Binary Property List File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "bplist"
 - category: "compressed"
   extensions:
@@ -258,7 +258,7 @@
     - "application/x-bzip2"
   name: "BZip2 Archive"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "BZh"
 - category: "other"
   extensions:
@@ -266,9 +266,9 @@
   mimes: []
   name: "VirtualDub"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "RIFF"
-    - fromIndex: 8
+    - offset: 8
       pattern: "VDRM"
 - category: "other"
   extensions:
@@ -276,9 +276,9 @@
   mimes: []
   name: "TrID"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "RYFF"
-    - fromIndex: 8
+    - offset: 8
       pattern: "TRID"
 - category: "presentation"
   extensions:
@@ -287,9 +287,9 @@
     - "application/x-corelpresentations"
   name: "Corel SHOW! 4.0"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "RIFF"
-    - fromIndex: 8
+    - offset: 8
       pattern: "shw4"
 - category: "presentation"
   extensions:
@@ -298,9 +298,9 @@
     - "application/x-corelpresentations"
   name: "Corel SHOW! 5.0"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "RIFF"
-    - fromIndex: 8
+    - offset: 8
       pattern: "shw5"
 - category: "other"
   extensions:
@@ -308,9 +308,9 @@
   mimes: []
   name: "Corel SHOW! 5.0 Background"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "RIFF"
-    - fromIndex: 8
+    - offset: 8
       pattern: "shb5"
 - category: "other"
   extensions:
@@ -318,9 +318,9 @@
   mimes: []
   name: "Corel SHOW! 5.0 Player"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "RIFF"
-    - fromIndex: 8
+    - offset: 8
       pattern: "shr5"
 - &AdobeShockwaveFileGroup
   category: "other"
@@ -330,16 +330,16 @@
     - "application/x-director"
   name: "Adobe Shockwave File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "RIFX"
-    - fromIndex: 8
+    - offset: 8
       pattern: "FGDM"
   variant: "BE"
 - <<: *AdobeShockwaveFileGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "XFIR"
-    - fromIndex: 8
+    - offset: 8
       pattern: "MDGF"
   variant: "LE"
 - category: "video"
@@ -348,9 +348,9 @@
   mimes: []
   name: "Multimedia Movie"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "RIFF"
-    - fromIndex: 8
+    - offset: 8
       pattern: "RMMP"
 - category: "other"
   extensions:
@@ -359,7 +359,7 @@
     - "application/x-msmoney"
   name: "Microsoft Money File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x00\x01\x00\x00MSISAM Database"
 - category: "database"
   extensions:
@@ -368,7 +368,7 @@
     - "application/x-msaccess"
   name: "Microsoft Access 2007 Database"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x00\x01\x00\x00Standard ACE DB"
 - category: "database"
   extensions:
@@ -377,7 +377,7 @@
     - "application/x-msaccess"
   name: "Microsoft Access Database"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x00\x01\x00\x00Standard Jet DB"
 - &AdobeFlashFileGroup
   category: "other"
@@ -387,12 +387,12 @@
     - "application/x-shockwave-flash"
   name: "Adobe Flash File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "CWS"
   variant: "C"
 - <<: *AdobeFlashFileGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "FWS"
   variant: "F"
 - category: "document"
@@ -402,7 +402,7 @@
     - "application/x-indesign"
   name: "Adobe InDesign Document"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x06\x06íõØ\x1DFå½1ïçþt·\x1D"
 - &ZLibArchiveGroup
   category: "archive"
@@ -411,42 +411,42 @@
   mimes: []
   name: "ZLib Archive"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "x\x01"
   variant: "No Compression Without Preset Dictionary"
 - <<: *ZLibArchiveGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "x^"
   variant: "Best Speed Without Preset Dictionary"
 - <<: *ZLibArchiveGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "x"
   variant: "Default Compression Without Preset Dictionary"
 - <<: *ZLibArchiveGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "xÚ"
   variant: "Best Compression Without Preset Dictionary"
 - <<: *ZLibArchiveGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "x "
   variant: "No Compression With Preset Dictionary"
 - <<: *ZLibArchiveGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "x}"
   variant: "Best Speed With Preset Dictionary"
 - <<: *ZLibArchiveGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "x»"
   variant: "Default Compression With Preset Dictionary"
 - <<: *ZLibArchiveGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "xù"
   variant: "Best Compression With Preset Dictionary"
 - category: "archive"
@@ -456,7 +456,7 @@
     - "application/x-zoo"
   name: "Zoo File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "ZOO"
 - category: "image"
   extensions:
@@ -465,7 +465,7 @@
     - "image/x-portable-bitmap"
   name: "Portable Bitmap ASCII"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "P1\n"
 - category: "image"
   extensions:
@@ -474,7 +474,7 @@
     - "image/x-portable-bitmap"
   name: "Portable Bitmap Binary"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "P4\n"
 - category: "other"
   extensions:
@@ -483,7 +483,7 @@
     - "image/x-portable-graymap"
   name: "Portable Gray Map ASCII"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "P2\n"
 - &PortableGrayMapBinaryGroup
   category: "image"
@@ -493,22 +493,22 @@
     - "image/x-portable-graymap"
   name: "Portable Gray Map Binary"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "P5\t"
   variant: "Tab"
 - <<: *PortableGrayMapBinaryGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "P5\n"
   variant: "LF"
 - <<: *PortableGrayMapBinaryGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "P5\r"
   variant: "CR"
 - <<: *PortableGrayMapBinaryGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "P5 "
   variant: "Space"
 - &PortablePixmapASCIIGroup
@@ -519,22 +519,22 @@
     - "image/x-portable-pixmap"
   name: "Portable Pixmap ASCII"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "P3\t"
   variant: "Tab"
 - <<: *PortablePixmapASCIIGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "P3\n"
   variant: "LF"
 - <<: *PortablePixmapASCIIGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "P3\r"
   variant: "CR"
 - <<: *PortablePixmapASCIIGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "P3 "
   variant: "Space"
 - &PortablePixmapBinaryGroup
@@ -545,22 +545,22 @@
     - "image/x-portable-pixmap"
   name: "Portable Pixmap Binary"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "P6\t"
   variant: "Tab"
 - <<: *PortablePixmapBinaryGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "P6\n"
   variant: "LF"
 - <<: *PortablePixmapBinaryGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "P6\r"
   variant: "CR"
 - <<: *PortablePixmapBinaryGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "P6 "
   variant: "Space"
 - category: "image"
@@ -583,7 +583,7 @@
     - "video/mj2"
   name: "JPEG 2000 Image"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x00\x00\x00\fjP  \r\n\n"
   variant: "Long"
 - category: "image"
@@ -606,7 +606,7 @@
     - "video/mj2"
   name: "JPEG 2000 Image"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "ÿOÿQ"
   variant: "Short"
 - &HL7Group
@@ -616,12 +616,12 @@
   mimes: []
   name: "Electronic Data Exchange Health Level Seven (HL7) Standard File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "BSH|"
   variant: "B"
 - <<: *HL7Group
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "MSH|"
   variant: "M"
 - category: "database"
@@ -633,7 +633,7 @@
     - "application/vnd.sqlite3"
   name: "SQLite Database"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "SQLite format 3\x00"
 - category: "image"
   extensions:
@@ -642,7 +642,7 @@
     - "image/x-pict"
   name: "IBM Storyboard Bitmap File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x00"
 - &AppleQuickTimeMovieFileGroup
   category: "video"
@@ -652,32 +652,32 @@
     - "video/quicktime"
   name: "Apple QuickTime Movie File"
   signature:
-    - fromIndex: 4
+    - offset: 4
       pattern: "ftypqt"
   variant: "ftypqt"
 - <<: *AppleQuickTimeMovieFileGroup
   signature:
-    - fromIndex: 4
+    - offset: 4
       pattern: "free"
   variant: "free"
 - <<: *AppleQuickTimeMovieFileGroup
   signature:
-    - fromIndex: 4
+    - offset: 4
       pattern: "mdat"
   variant: "mdat"
 - <<: *AppleQuickTimeMovieFileGroup
   signature:
-    - fromIndex: 4
+    - offset: 4
       pattern: "moov"
   variant: "moov"
 - <<: *AppleQuickTimeMovieFileGroup
   signature:
-    - fromIndex: 4
+    - offset: 4
       pattern: "skip"
   variant: "skip"
 - <<: *AppleQuickTimeMovieFileGroup
   signature:
-    - fromIndex: 4
+    - offset: 4
       pattern: "wide"
   variant: "wide"
 - category: "other"
@@ -686,7 +686,7 @@
   mimes: []
   name: "Windows Program Information File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x00"
 - category: "archive"
   extensions:
@@ -695,7 +695,7 @@
     - "application/x-sea"
   name: "Mac Stuffit Self-Extracting Archive"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x00"
 - category: "other"
   extensions:
@@ -703,14 +703,14 @@
   mimes: []
   name: "IRIS OCR Data File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x00"
 - category: "other"
   extensions: []
   mimes: []
   name: "Palm Desktop Data File (Access Format)"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x00\x01\x00\x00"
 - &3GPPMFGroup
   category: "video"
@@ -720,47 +720,47 @@
     - "video/3gpp"
   name: "3rd Generation Partnership Project Multimedia File"
   signature:
-    - fromIndex: 4
+    - offset: 4
       pattern: "ftyp3ge"
   variant: "e"
 - <<: *3GPPMFGroup
   signature:
-    - fromIndex: 4
+    - offset: 4
       pattern: "ftyp3gf"
   variant: "f"
 - <<: *3GPPMFGroup
   signature:
-    - fromIndex: 4
+    - offset: 4
       pattern: "ftyp3gg"
   variant: "g"
 - <<: *3GPPMFGroup
   signature:
-    - fromIndex: 4
+    - offset: 4
       pattern: "ftyp3gh"
   variant: "h"
 - <<: *3GPPMFGroup
   signature:
-    - fromIndex: 4
+    - offset: 4
       pattern: "ftyp3gm"
   variant: "m"
 - <<: *3GPPMFGroup
   signature:
-    - fromIndex: 4
+    - offset: 4
       pattern: "ftyp3gp"
   variant: "p"
 - <<: *3GPPMFGroup
   signature:
-    - fromIndex: 4
+    - offset: 4
       pattern: "ftyp3gr"
   variant: "r"
 - <<: *3GPPMFGroup
   signature:
-    - fromIndex: 4
+    - offset: 4
       pattern: "ftyp3gs"
   variant: "s"
 - <<: *3GPPMFGroup
   signature:
-    - fromIndex: 4
+    - offset: 4
       pattern: "ftyp3gt"
   variant: "t"
 - &3GPP2MFGroup
@@ -771,12 +771,12 @@
     - "video/3gpp2"
   name: "3rd Generation Partnership Project 2 Multimedia File"
   signature:
-    - fromIndex: 4
+    - offset: 4
       pattern: "ftyp3g2"
   variant: "3g2"
 - <<: *3GPP2MFGroup
   signature:
-    - fromIndex: 4
+    - offset: 4
       pattern: "ftypKDDI"
   variant: "KDDI"
 - category: "compressed"
@@ -787,7 +787,7 @@
     - "application/x-compress"
   name: "Tar Zip Lempel-Ziv-Welch Algorithm Archive / UNIX Compress"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x1F\x9D"
 - category: "compressed"
   extensions:
@@ -797,7 +797,7 @@
     - "application/x-compress"
   name: "Tar Zip LZH Algorithm Archive / UNIX Compress"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x1F\xA0"
 - &GIFGroup
   category: "image"
@@ -807,12 +807,12 @@
     - "image/gif"
   name: "Graphics Interchange Format (GIF) File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "GIF87a"
   variant: "7"
 - <<: *GIFGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "GIF89a"
   variant: "9"
 - &TIFFGroup
@@ -824,22 +824,22 @@
     - "image/tiff"
   name: "Tagged Image File Format (TIFF)"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "MM\x00*"
   variant: "BE, 2A"
 - <<: *TIFFGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "II\x00+"
   variant: "BE, 2B"
 - <<: *TIFFGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "II*\x00"
   variant: "LE, 2A"
 - <<: *TIFFGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "II+\x00"
   variant: "LE, 2B"
 - category: "image"
@@ -849,7 +849,7 @@
     - "image/x-canon-crw"
   name: "Canon RAW Format"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "II\x1A\x00\x00\x00HEAPCCDR"
 - &CanonRAW2Group
   category: "image"
@@ -859,11 +859,11 @@
     - "image/x-canon-cr2"
   name: "Canon RAW Format Version 2"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "II*\x00\x10\x00\x00\x00CR"
 - <<: *CanonRAW2Group
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "MM\x00*\x10\x00\x00\x00CR"
 - category: "image"
   extensions:
@@ -872,7 +872,7 @@
     - "image/x-canon-cr3"
   name: "Canon RAW Format Version 3"
   signature:
-    - fromIndex: 4
+    - offset: 4
       pattern: "ftypcrx"
 - category: "image"
   extensions:
@@ -881,21 +881,21 @@
     - "image/cineon"
   name: "Kodak Cineon Image"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x80*_×"
 - category: "archive"
   extensions: []
   mimes: []
   name: "Rob Northen Compression (Version 1) Algorithm Archive"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "RNC\x01"
 - category: "archive"
   extensions: []
   mimes: []
   name: "Rob Northen Compression (Version 2) Algorithm Archive"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "RNC\x02"
 - category: "image"
   extensions:
@@ -903,7 +903,7 @@
   mimes: []
   name: "nuru Image File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "NURUIMG"
 - category: "other"
   extensions:
@@ -911,7 +911,7 @@
   mimes: []
   name: "nuru Palette File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "NURUPAL"
 - &DPXImageGroup
   category: "image"
@@ -921,12 +921,12 @@
     - "image/x-dpx"
   name: "Digital Picture Exchange (DPX) Image"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "SDPX"
   variant: "BE"
 - <<: *DPXImageGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "XPDS"
   variant: "LE"
 - category: "image"
@@ -937,14 +937,14 @@
     - "image/x-exr"
   name: "OpenEXR Image"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "v/1\x01"
 - extensions:
     - ".bpg"
   mimes: []
   name: "Better Portable Graphic (BPG)"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "BPGû"
 - &ISOGroup
   extensions:
@@ -953,17 +953,17 @@
     - "application/x-iso9660-image"
   name: "ISO9660 CD/DVD Image"
   signature:
-    - fromIndex: 0x8001
+    - offset: 0x8001
       pattern: &ISO9660ImageMagicBytes "CD001"
   variant: "1"
 - <<: *ISOGroup
   signature:
-    - fromIndex: 0x8801
+    - offset: 0x8801
       pattern: *ISO9660ImageMagicBytes
   variant: "2"
 - <<: *ISOGroup
   signature:
-    - fromIndex: 0x9001
+    - offset: 0x9001
       pattern: *ISO9660ImageMagicBytes
   variant: "3"
 - extensions:
@@ -971,7 +971,7 @@
   mimes: []
   name: "Quite OK Image (QOI)"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "qoif"
 - extensions:
     - ".ilbm"
@@ -981,9 +981,9 @@
   mimes: []
   name: "IFF Interleaved Bitmap Image"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "FORM"
-    - fromIndex: 8
+    - offset: 8
       pattern: "ILBM"
 - extensions:
     - ".8svx"
@@ -995,9 +995,9 @@
     - "audio/basic"
   name: "IFF 8-Bit Sampled Voice"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "FORM"
-    - fromIndex: 8
+    - offset: 8
       pattern: "8SVX"
 - extensions:
     - ".acbm"
@@ -1005,9 +1005,9 @@
   mimes: []
   name: "Amiga Contiguous Bitmap File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "FORM"
-    - fromIndex: 8
+    - offset: 8
       pattern: "ACBM"
 - extensions:
     - ".anbm"
@@ -1015,9 +1015,9 @@
   mimes: []
   name: "IFF Animated Bitmap File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "FORM"
-    - fromIndex: 8
+    - offset: 8
       pattern: "ANBM"
 - extensions:
     - ".anim"
@@ -1025,9 +1025,9 @@
   mimes: []
   name: "IFF CEL Animation File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "FORM"
-    - fromIndex: 8
+    - offset: 8
       pattern: "ANIM"
 - extensions:
     - ".faxx"
@@ -1036,9 +1036,9 @@
   mimes: []
   name: "IFF Facsimile Image"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "FORM"
-    - fromIndex: 8
+    - offset: 8
       pattern: "FAXX"
 - extensions:
     - ".ftxt"
@@ -1046,9 +1046,9 @@
   mimes: []
   name: "IFF Formatted Text File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "FORM"
-    - fromIndex: 8
+    - offset: 8
       pattern: "FTXT"
 - extensions:
     - ".smus"
@@ -1059,9 +1059,9 @@
     - "application/vnd.musician"
   name: "IFF Simple Musical Score File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "FORM"
-    - fromIndex: 8
+    - offset: 8
       pattern: "SMUS"
 - extensions:
     - ".cmus"
@@ -1071,9 +1071,9 @@
     - "application/vnd.musician"
   name: "IFF Musical Score File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "FORM"
-    - fromIndex: 8
+    - offset: 8
       pattern: "CMUS"
 - extensions:
     - ".yuv"
@@ -1082,18 +1082,18 @@
   mimes: []
   name: "IFF YUV Image"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "FORM"
-    - fromIndex: 8
+    - offset: 8
       pattern: "YUVN"
 - extensions:
     - ".iff"
   mimes: []
   name: "Amiga Fantavision Movie"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "FORM"
-    - fromIndex: 8
+    - offset: 8
       pattern: "FANT"
 - extensions:
     - ".aif"
@@ -1106,9 +1106,9 @@
     - "audio/basic"
   name: "Audio Interchange File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "FORM"
-    - fromIndex: 8
+    - offset: 8
       pattern: "AIFF"
 - &XMLFileGroup
   extensions:
@@ -1118,32 +1118,32 @@
     - "text/xml"
   name: "eXtensible Markup Language (XML) File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "<?xml "
   variant: "1"
 - <<: *XMLFileGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "<\x00?\x00x\x00m\x00l\x00 "
   variant: "2"
 - <<: *XMLFileGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x00<\x00?\x00x\x00m\x00l\x00 "
   variant: "3"
 - <<: *XMLFileGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "<\x00\x00\x00?\x00\x00\x00x\x00\x00\x00m\x00\x00\x00l\x00\x00\x00 \x00\x00\x00"
   variant: "4"
 - <<: *XMLFileGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x00\x00\x00<\x00\x00\x00?\x00\x00\x00x\x00\x00\x00m\x00\x00\x00l\x00\x00\x00 "
   variant: "5"
 - <<: *XMLFileGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "Lo§@"
   variant: "6"
 - extensions:
@@ -1153,7 +1153,7 @@
   mimes: []
   name: "Windows Imaging Format File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "MSWIM\x00\x00\x00Ð\x00\x00\x00\x00"
 - extensions:
     - ".webp"
@@ -1161,9 +1161,9 @@
     - "image/webp"
   name: "WebP Image File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "RIFF"
-    - fromIndex: 8
+    - offset: 8
       pattern: "WEBP"
 - extensions:
     - ".psd"
@@ -1171,7 +1171,7 @@
     - "image/vnd.adobe.photoshop"
   name: "Adobe Photoshop Document File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "8BPS"
 - extensions:
     - ".bmp"
@@ -1180,7 +1180,7 @@
     - "image/x-ms-bmp"
   name: "BMP Image File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "BM"
 - extensions:
     - ".wasm"
@@ -1188,7 +1188,7 @@
     - "application/wasm"
   name: "WebAssembly Binary"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x00asm"
 - &JPEGGroup
   extensions:
@@ -1198,17 +1198,17 @@
     - "image/jpeg"
   name: "JPEG Image"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "ÿØÿÛ"
   variant: "DB"
 - <<: *JPEGGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "ÿØÿà"
   variant: "E0"
 - <<: *JPEGGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "ÿØÿî"
   variant: "EE"
 - extensions:
@@ -1218,7 +1218,7 @@
     - "image/jpeg"
   name: "JPEG JFIF Image"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "ÿØÿà\x00\x10JFIF\x00\x01"
 - extensions:
     - ".jpg"
@@ -1227,16 +1227,16 @@
     - "image/jpeg"
   name: "JPEG Exif Image"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "ÿØÿá"
-    - fromIndex: 6
+    - offset: 6
       pattern: "Exif\x00\x00"
 - extensions:
     - ".lz"
   mimes: []
   name: "LZip Archive"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "LZIP"
 - extensions:
     - ".cpio"
@@ -1244,7 +1244,7 @@
     - "application/x-cpio"
   name: "cpio Archive"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "070707"
 - &EXEGroup
   category: "executable"
@@ -1256,12 +1256,12 @@
     - "application/x-msdownload"
   name: "MS-DOS Executable"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "MZ"
   variant: "MZ"
 - <<: *EXEGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "ZM"
   variant: "ZM"
 - extensions:
@@ -1271,7 +1271,7 @@
     - "application/x-rar-compressed"
   name: "Roshal Archive V1.50"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "Rar!\x1A\x07\x00"
 - extensions:
     - ".rar"
@@ -1280,13 +1280,13 @@
     - "application/x-rar-compressed"
   name: "Roshal Archive V5.00"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "Rar!\x1A\x07\x01\x00"
 - extensions: []
   mimes: []
   name: "Executable & Linkable Format"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x7FELF"
 - extensions:
     - ".png"
@@ -1294,7 +1294,7 @@
     - "image/png"
   name: "Portable Network Graphics (PNG) Image"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "PNG\r\n\x1A\n"
 - extensions:
     - ".com"
@@ -1302,42 +1302,42 @@
     - "application/x-msdownload"
   name: "CP/M 3 File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "É"
 - extensions:
     - ".d64"
   mimes: []
   name: "Commodore 64 1541 Disk Image (D64 Format)"
   signature:
-    - fromIndex: 0x165A4
+    - offset: 0x165A4
       pattern: "\xA02A\xA0\xA0\xA0"
 - extensions:
     - ".g64"
   mimes: []
   name: "Commodore 64 1541 Disk Image (G64 Format)"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "GSR-1541"
 - extensions:
     - ".d81"
   mimes: []
   name: "Commodore 64 1581 Disk Image (D81 Format)"
   signature:
-    - fromIndex: 0x61819
+    - offset: 0x61819
       pattern: "\xA03D\xA0\xA0"
 - extensions:
     - ".t64"
   mimes: []
   name: "Commodore 64 Tape Image"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "C64 tape image file"
 - extensions:
     - ".crt"
   mimes: []
   name: "Commodore 64 Cartridge Image"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "C64 CARTRIDGE   "
 - extensions:
     - ".class"
@@ -1345,46 +1345,46 @@
     - "application/java-vm"
   name: "Java Class File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "Êþº¾"
 - extensions:
     - ".class"
   mimes: []
   name: "Mach-O Fat Binary"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "Êþº¾"
 - &MachOBinaryGroup
   extensions: []
   mimes: []
   name: "Mach-O Binary"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "þíúÎ"
   variant: "32-Bit, Head 0"
 - <<: *MachOBinaryGroup
   signature:
-    - fromIndex: 0x1000
+    - offset: 0x1000
       pattern: "þíúÎ"
   variant: "32-Bit, Head 4096"
 - <<: *MachOBinaryGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "þíúÏ"
   variant: "64-Bit, Head 0"
 - <<: *MachOBinaryGroup
   signature:
-    - fromIndex: 0x1000
+    - offset: 0x1000
       pattern: "þíúÏ"
   variant: "64-Bit, Head 4096"
 - <<: *MachOBinaryGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "Îúíþ"
   variant: "32-Bit, Reverse Byte Ordering Scheme"
 - <<: *MachOBinaryGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "Ïúíþ"
   variant: "64-Bit, Reverse Byte Ordering Scheme"
 - extensions:
@@ -1392,7 +1392,7 @@
   mimes: []
   name: "Java Key Store File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "þíþí"
 - extensions:
     - ".ps"
@@ -1400,7 +1400,7 @@
     - "application/postscript"
   name: "PostScript Document"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "%!PS"
 - extensions:
     - ".eps"
@@ -1409,7 +1409,7 @@
     - "application/postscript"
   name: "Encapsulated PostScript File Version 3.0"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "%!PS-Adobe-3.0 EPSF-3.0"
 - extensions:
     - ".eps"
@@ -1418,7 +1418,7 @@
     - "application/postscript"
   name: "Encapsulated PostScript File Version 3.1"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "%!PS-Adobe-3.1 EPSF-3.0"
 - extensions:
     - ".chm"
@@ -1426,7 +1426,7 @@
     - "application/vnd.ms-htmlhelp"
   name: "Windows HTML Help Data"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "ITSF\x03\x00\x00\x00`\x00\x00\x00"
 - &WindowsHelpFileGroup
   extensions:
@@ -1435,12 +1435,12 @@
     - "application/winhlp"
   name: "Windows Help file"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "?_"
   variant: "Short"
 - <<: *WindowsHelpFileGroup
   signature:
-    - fromIndex: 6
+    - offset: 6
       pattern: "\x00\x00ÿÿÿÿ"
   variant: "Long"
 - extensions:
@@ -1449,7 +1449,7 @@
     - "application/pdf"
   name: "Portable Document Format (PDF) File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "%PDF-"
 - extensions:
     - ".asf"
@@ -1459,13 +1459,13 @@
     - "video/x-ms-asf"
   name: "Advanced Systems Format Video"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "0&²u\x8EfÏ\x11¦Ù\x00ª\x00bÎl"
 - extensions: []
   mimes: []
   name: "System Deployment Image"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "$SDI0001"
 - extensions:
     - ".ogg"
@@ -1474,7 +1474,7 @@
     - "audio/ogg"
   name: "Ogg Audio"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "OggS"
 - extensions:
     - ".ogv"
@@ -1482,7 +1482,7 @@
     - "video/ogg"
   name: "Ogg Video"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "OggS"
 - extensions:
     - ".wav"
@@ -1494,9 +1494,9 @@
     - "audio/x-pn-wav"
   name: "Waveform Audio"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "RIFF"
-    - fromIndex: 8
+    - offset: 8
       pattern: "WAVE"
 - extensions:
     - ".avi"
@@ -1504,9 +1504,9 @@
     - "video/x-msvideo"
   name: "Audio Video Interleave (AVI)"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "RIFF"
-    - fromIndex: 8
+    - offset: 8
       pattern: "AVI "
 - extensions:
     - ".mp3"
@@ -1514,7 +1514,7 @@
     - "audio/mp3"
   name: "MP3 Audio"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "ÿûÿóÿò"
 - extensions:
     - ".mp3"
@@ -1522,28 +1522,28 @@
     - "audio/mpeg"
   name: "MP3 Audio With ID3v2 Container"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "ID3"
 - extensions:
     - ".cdi"
   mimes: []
   name: "CD-i CD Image"
   signature:
-    - fromIndex: 0x5EAC9
+    - offset: 0x5EAC9
       pattern: "CD001"
 - extensions:
     - ".mgw"
   mimes: []
   name: "Nintendo Game & Watch Image"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "main.bs"
 - extensions:
     - ".nes"
   mimes: []
   name: "Nintendo Entertainment System Image"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "NES"
 - extensions:
     - ".fits"
@@ -1551,7 +1551,7 @@
     - "image/fits"
   name: "Flexible Image Transport System (FITS) File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "SIMPLE  =                    T"
 - extensions:
     - ".flac"
@@ -1559,7 +1559,7 @@
     - "audio/x-flac"
   name: "Free Lossless Audio Codec (FLAC) File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "fLaC"
 - extensions:
     - ".mid"
@@ -1568,14 +1568,14 @@
     - "audio/midi"
   name: "MIDI Sound File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "MThd"
 - extensions:
     - ".dex"
   mimes: []
   name: "Dalvik Executable"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "dex\n035\x00"
 - extensions:
     - ".vmdk"
@@ -1583,7 +1583,7 @@
     - "application/x-virtualbox-vmdk"
   name: "VMware Virtual Disk"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "KDM"
 - extensions:
     - ".vmdk"
@@ -1591,7 +1591,7 @@
     - "application/x-virtualbox-vmdk"
   name: "VMware 4 Virtual Disk Description File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "# Disk Descripto"
 - extensions:
     - ".crx"
@@ -1599,28 +1599,28 @@
     - "application/x-chrome-extension"
   name: "Google Chrome Extension"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "Cr24"
 - extensions:
     - ".fh8"
   mimes: []
   name: "FreeHand 8 Document"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "AGD3"
 - extensions:
     - ".cwk"
   mimes: []
   name: "AppleWorks 5 Document"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x05\x07\x00\x00BOBO\x05\x07\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01"
 - extensions:
     - ".cwk"
   mimes: []
   name: "AppleWorks 6 Document"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x06\x07á\x00BOBO\x06\x07á\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01"
 - &RoxioToastDiscImageGroup
   extensions:
@@ -1628,12 +1628,12 @@
   mimes: []
   name: "Roxio Toast Disc Image"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "ER\x02\x00\x00\x00"
   variant: "NoPrefix"
 - <<: *RoxioToastDiscImageGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "ER\x02\x00\x00\x00"
   variant: "Prefix"
 - extensions:
@@ -1642,14 +1642,14 @@
     - "application/vnd.xara"
   name: "eXtensible ARchive"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "xar!"
 - extensions:
     - ".dat"
   mimes: []
   name: "Windows Files & Settings Transfer Repository File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "PMOCCMOC"
 - extensions:
     - ".tar"
@@ -1657,34 +1657,34 @@
     - "application/x-tar"
   name: "TAR Archive"
   signature:
-    - fromIndex: 257
+    - offset: 257
       pattern: "ustar\x0000ustar  \x00"
 - extensions:
     - ".oar"
   mimes: []
   name: "OAR Archive"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "OAR"
 - extensions:
     - ".tox"
   mimes: []
   name: "Open Source Portable Voxel File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "tox3"
 - extensions:
     - ".mlv"
   mimes: []
   name: "Magic Lantern Video File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "MLVI"
 - extensions: []
   mimes: []
   name: "Windows Update Binary Delta Compression File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "DCM\x01PA30PA30"
 - extensions:
     - ".7z"
@@ -1692,14 +1692,14 @@
     - "application/x-7z-compressed"
   name: "7-Zip Archive"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "7z¼¯'\x1C"
 - extensions:
     - ".lz4"
   mimes: []
   name: "LZ4 Frame File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x04\"M\x18"
 - extensions:
     - ".cab"
@@ -1707,21 +1707,21 @@
     - "application/vnd.ms-cab-compressed"
   name: "Microsoft Cabinet File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "MSCF"
 - extensions:
     - ".flif"
   mimes: []
   name: "Free Lossless Image Format (FLIF) File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "FLIF"
 - extensions:
     - ".stg"
   mimes: []
   name: "SEAN Session Analysis Training File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "MIL "
 - category: "other"
   extensions:
@@ -1730,41 +1730,41 @@
     - "application/x-x509-ca-cert"
   name: "DER Encoded X.509 Certificate File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "0"
 - extensions:
     - ".ppk"
   mimes: []
   name: "PuTTY Private Key File Version 2"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "PuTTY-User-Key-File-2:"
 - extensions:
     - ".ppk"
   mimes: []
   name: "PuTTY Private Key File Version 3"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "PuTTY-User-Key-File-3:"
 - extensions: []
   mimes: []
   name: "OpenSSH Private Key File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "-----BEGIN OPENSSH PRIVATE KEY-----"
 - extensions:
     - ".pub"
   mimes: []
   name: "OpenSSH Public Key File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "-----BEGIN SSH2 KEY-----"
 - extensions:
     - ".dcm"
   mimes: []
   name: "DICOM Medical File Format"
   signature:
-    - fromIndex: 128
+    - offset: 128
       pattern: "DICM"
 - extensions:
     - ".woff"
@@ -1772,7 +1772,7 @@
     - "font/woff"
   name: "WOFF 1.0 Font"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "wOFF"
 - extensions:
     - ".woff2"
@@ -1780,14 +1780,14 @@
     - "font/woff2"
   name: "WOFF 2.0 Font"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "wOF2"
 - extensions:
     - ".lep"
   mimes: []
   name: "Lepton Compressed JPEG Image"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "Ï\x01"
 - extensions:
     - ".deb"
@@ -1795,7 +1795,7 @@
     - "application/x-debian-package"
   name: "Linux Deb File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "!<arch>\n"
 - extensions:
     - ".rtf"
@@ -1804,15 +1804,15 @@
     - "text/rtf"
   name: "Rich Text Format (RTF) File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "{\\rtf"
-    - fromIndex: -1
+    - offset: -1
       pattern: "}"
 - extensions: []
   mimes: []
   name: "Microsoft Tape File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "TAPE"
 - &MP4Group
   extensions:
@@ -1821,12 +1821,12 @@
     - "video/mp4"
   name: "MPEG-4 Video"
   signature:
-    - fromIndex: 4
+    - offset: 4
       pattern: "ftypisom"
   variant: "isom"
 - <<: *MP4Group
   signature:
-    - fromIndex: 4
+    - offset: 4
       pattern: "ftypMSNV"
   variant: "MSNV"
 - extensions:
@@ -1834,7 +1834,7 @@
   mimes: []
   name: "Apache Optimized Row Columnar (ORC) File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "ORC"
 - extensions:
     - ".m3u8"
@@ -1844,68 +1844,68 @@
     - "audio/x-mpegurl"
   name: "Multimedia Playlist"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "#EXTM3U"
 - extensions:
     - ".m"
   mimes: []
   name: "M2 Archive"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "mdf\x00"
 - extensions:
     - ".pak"
   mimes: []
   name: "Capcom RE Engine Game Data Archive"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "KPKA"
 - extensions:
     - ".arc"
   mimes: []
   name: "Capcom MT Framework Game Data Archive"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "ARC"
 - extensions:
     - ".pl"
   mimes: []
   name: "Interleaf PrinterLeaf"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "ÐOPS"
 - extensions:
     - ".nii"
   mimes: []
   name: "NIfTI File"
   signature:
-    - fromIndex: 344
+    - offset: 344
       pattern: "n+1\x00"
 - extensions:
     - ".hdr"
   mimes: []
   name: "NIfTI Header File"
   signature:
-    - fromIndex: 344
+    - offset: 344
       pattern: "ni1\x00"
 - extensions: []
   mimes: []
   name: "Digital Metaphors Report Builder File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "RAF64"
 - extensions: []
   mimes: []
   name: "Visionaire 3 Engine Resource File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "VIS3"
 - extensions:
     - ".pwrdata"
   mimes: []
   name: "SAP Power Monitor (Version 1.1.0) Data File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "pwrdata"
 - extensions:
     - ".arc"
@@ -1913,7 +1913,7 @@
     - "application/x-freearc"
   name: "ARC Archive"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x1A\x08"
 - extensions:
     - ".asc"
@@ -1922,35 +1922,35 @@
     - "application/pgp-signature"
   name: "Armored PGP Public Key File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "-----BEGIN PGP PUBLIC KEI BLOCK-----"
 - extensions:
     - ".cnt"
   mimes: []
   name: "Windows Help Content File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: ":Base "
 - extensions:
     - ".nri"
   mimes: []
   name: "Nero CD Compilation File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x0ENeroISO"
 - extensions:
     - ".wks"
   mimes: []
   name: "DeskMate Worksheet File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x0EWKS"
 - extensions:
     - ".sib"
   mimes: []
   name: "Sibelius Music Score File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x0FSIBELIUS"
 - category: "compressed"
   extensions:
@@ -1960,7 +1960,7 @@
     - "application/gzip"
   name: "GZip Archive"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x1F"
 - extensions:
     - ".xz"
@@ -1969,7 +1969,7 @@
     - "application/x-xz"
   name: "XZ LZMA2 Archive"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "ý7zXZ\x00"
 - extensions:
     - ".crt"
@@ -1978,7 +1978,7 @@
     - "application/x-x509-ca-cert"
   name: "PEM Encoded X.509 Certificate File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "-----BEGIN CERTIFICATE-----"
 - extensions:
     - ".csr"
@@ -1986,7 +1986,7 @@
   mimes: []
   name: "PEM Encoded X.509 Certificate Signing Request File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "-----BEGIN CERTIFICATE REQUEST-----"
 - extensions:
     - ".key"
@@ -1994,7 +1994,7 @@
   mimes: []
   name: "Pem Encoded X.509 PKCS#8 Private Key File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "-----BEGIN PRIVATE KEY-----"
 - extensions:
     - ".key"
@@ -2002,7 +2002,7 @@
   mimes: []
   name: "PEM Encoded X.509 PKCS#1 DSA Private Key File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "-----BEGIN DSA PRIVATE KEY-----"
 - extensions:
     - ".key"
@@ -2010,7 +2010,7 @@
   mimes: []
   name: "PEM Encoded X.509 PKCS#1 RSA Private Key File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "-----BEGIN REA PRIVATE KEY-----"
 - extensions:
     - ".tga"
@@ -2018,7 +2018,7 @@
     - "image/x-tga"
   name: "Truevision Targa Graphic File"
   signature:
-    - fromIndex: -18
+    - offset: -18
       pattern: "TRUEVISION-XFILE.\x00"
 - extensions:
     - ".avif"
@@ -2026,42 +2026,42 @@
     - "image/avif"
   name: "Alliance for Open Media (AOMedia) Video 1 (AV1) Image"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x00\x00\x00"
 - extensions:
     - ".xxx"
   mimes: []
   name: "Compucon/Singer Embroidery Design File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
 - extensions:
     - ".rvt"
   mimes: []
   name: "Revit Project File Subheader"
   signature:
-    - fromIndex: 512
+    - offset: 512
       pattern: "\x00\x00\x00\x00\x00\x00\x00\x00"
 - extensions:
     - ".tbi"
   mimes: []
   name: "Windows Disk Image File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x00\x00\x00\x00\x14\x00\x00\x00"
 - extensions:
     - ".dat"
   mimes: []
   name: "Bitcoin Core Wallet File"
   signature:
-    - fromIndex: 8
+    - offset: 8
       pattern: "\x00\x00\x00\x00b1\x05\x00\t\x00\x00\x00\x00 \x00\x00\x00\t\x00\x00\x00\x00\x00\x00"
 - extensions:
     - ".bsb"
   mimes: []
   name: "NOAA Raster Navigation Chart (RNC) File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "!\r\nCRR/This electronic chart was produced under the authority of USA-NOAA/NOS.\r\n"
 - extensions:
     - ".epub"
@@ -2069,9 +2069,9 @@
     - "application/epub+zip"
   name: "Electronic Publication File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "PK\x03\x04"
-    - fromIndex: 30
+    - offset: 30
       pattern: "mimetypeapplication/epub+zip"
 - extensions:
     - ".doc"
@@ -2079,7 +2079,7 @@
     - "application/msword"
   name: "Microsoft Office Word Document"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "ÐÏ\x11à¡±\x1Aá"
 - extensions:
     - ".xls"
@@ -2087,7 +2087,7 @@
     - "application/vnd.ms-excel"
   name: "Microsoft Office Excel Document"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "ÐÏ\x11à¡±\x1Aá"
 - extensions:
     - ".ppt"
@@ -2095,7 +2095,7 @@
     - "application/vnd.ms-powerpoint"
   name: "Microsoft Office PowerPoint Document"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "ÐÏ\x11à¡±\x1Aá"
 - extensions:
     - ".msi"
@@ -2103,7 +2103,7 @@
     - "application/x-msdownload"
   name: "Windows Installer"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "ÐÏ\x11à¡±\x1Aá"
 - extensions:
     - ".msg"
@@ -2111,7 +2111,7 @@
     - "application/vnd.ms-outlook"
   name: "Microsoft Outlook Item"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "ÐÏ\x11à¡±\x1Aá"
 - extensions:
     - ".mkv"
@@ -2122,7 +2122,7 @@
     - "video/x-matroska"
   name: "Matroska Media File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x1AEß£"
 - extensions:
     - ".webm"
@@ -2130,7 +2130,7 @@
     - "video/webm"
   name: "WebM File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x1AEß£"
 - extensions:
     - ".djvu"
@@ -2139,43 +2139,43 @@
     - "image/vnd.djvu"
   name: "DjVu Document"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "AT&TFORM"
-    - fromIndex: 12
+    - offset: 12
       pattern: "DJV"
 - extensions: []
   mimes: []
   name: "uImage File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "'\x05\x19V"
 - extensions:
     - ".lzfse"
   mimes: []
   name: "LZFSE File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "bvx2"
 - extensions:
     - ".avro"
   mimes: []
   name: "Apache Avro Binary File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "Obj\x01"
 - extensions:
     - ".rc"
   mimes: []
   name: "RCFile Columnar File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "SEQ6"
 - extensions:
     - ".rbxl"
   mimes: []
   name: "Roblox Place File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "<roblox!"
 - extensions:
     - ".p25"
@@ -2183,14 +2183,14 @@
   mimes: []
   name: "PhotoCap Object Templates File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "exV"
 - extensions:
     - ".pcv"
   mimes: []
   name: "PhotoCap Vector File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "UUªª"
 - extensions:
     - ".pbt"
@@ -2206,13 +2206,13 @@
   mimes: []
   name: "PhotoCap Template File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "xV4"
 - extensions: []
   mimes: []
   name: "Apache Parquet Columnar File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "PAR1"
 - extensions:
     - ".ez2"
@@ -2220,7 +2220,7 @@
     - "application/vnd.ezpix-album"
   name: "Emulator Emaxsynth Samples File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "EMX2"
 - extensions:
     - ".ez3"
@@ -2228,7 +2228,7 @@
     - "application/vnd.ezpix-package"
   name: "Emulator III Synth Samples File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "EMU3"
 - extensions:
     - ".luac"
@@ -2236,21 +2236,21 @@
     - "application/x-lua-bytecode"
   name: "Lua Bytecode File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x1BLua"
 - extensions:
     - ".alias"
   mimes: []
   name: "MacOS File Alias (Symbolic Link)"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "book\x00\x00\x00\x00mark\x00\x00\x00\x00"
 - extensions:
     - ".identifier"
   mimes: []
   name: "Microsoft URL Security Zones Identifier File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "[ZoneTransfer]"
 - extensions:
     - ".eml"
@@ -2258,21 +2258,21 @@
     - "message/rfc822"
   name: "Email Message Var5 File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "Received:"
 - extensions:
     - ".tde"
   mimes: []
   name: "Tableau Datasource File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: " \x02\x01b\xA0\x1E«\x07\x02\x00\x00\x00"
 - extensions:
     - ".kdb"
   mimes: []
   name: "KDB File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "7H\x03\x02\x00\x00\x00\x00X509KEY"
 - extensions:
     - ".pgp"
@@ -2280,16 +2280,16 @@
     - "application/pgp-encrypted"
   name: "PGP File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x85"
-    - fromIndex: 3
+    - offset: 3
       pattern: "\x03"
 - extensions:
     - ".zst"
   mimes: []
   name: "Zstandard Archive"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "(µ/ý"
 - extensions:
     - ".rs"
@@ -2297,20 +2297,20 @@
     - "application/rls-services+xml"
   name: "QuickZip RS Archive"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "RSVKDATA"
 - extensions:
     - ".sml"
   mimes: []
   name: "Smile file"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: ":)\n"
 - extensions: []
   mimes: []
   name: "Preferred Executable Format"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "Joy!"
 - extensions:
     - ".srt"
@@ -2318,14 +2318,14 @@
     - "application/x-subrip"
   name: "SubRip File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "1\n00"
 - extensions:
     - ".vpk"
   mimes: []
   name: "VPK File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "4\x12ªU"
 - extensions:
     - ".ace"
@@ -2333,7 +2333,7 @@
     - "application/x-ace-compressed"
   name: "ACE Archive"
   signature:
-    - fromIndex: 7
+    - offset: 7
       pattern: "**ACE**"
 - extensions:
     - ".arj"
@@ -2341,14 +2341,14 @@
     - "application/x-arj"
   name: "ARJ File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "`ê"
 - extensions:
     - ".cab"
   mimes: []
   name: "InstallShield CAB Archive"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "ISc("
 - extensions:
     - ".wmf"
@@ -2356,14 +2356,14 @@
     - "application/x-msmetafile"
   name: "Windows Metafile"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "×ÍÆ"
 - extensions:
     - ".xcf"
   mimes: []
   name: "XCF File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "gimp xcf"
 - extensions:
     - ".xpm"
@@ -2371,14 +2371,14 @@
     - "image/x-xpixmap"
   name: "X PixMap Image"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "/* XPM */"
 - extensions:
     - ".aff"
   mimes: []
   name: "Advanced Forensics File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "AFF"
 - extensions:
     - ".e01"
@@ -2386,41 +2386,41 @@
   mimes: []
   name: "EnCase EWF File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "EVF2"
 - extensions:
     - ".qcow"
   mimes: []
   name: "QEMU Copy On Write (QCOW) File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "QFI"
 - extensions:
     - ".ani"
   mimes: []
   name: "Animated Cursor File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "RIFF"
-    - fromIndex: 8
+    - offset: 8
       pattern: "ACON"
 - extensions:
     - ".cda"
   mimes: []
   name: "CDA File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "RIFF"
-    - fromIndex: 8
+    - offset: 8
       pattern: "CDDA"
 - extensions:
     - ".qcp"
   mimes: []
   name: "Qualcomm PureVoice File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "RIFF"
-    - fromIndex: 8
+    - offset: 8
       pattern: "QLCM"
 - &MacromediaDirectorFileGroup
   extensions:
@@ -2431,16 +2431,16 @@
     - "application/x-director"
   name: "Macromedia Director File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "RIFX"
-    - fromIndex: 8
+    - offset: 8
       pattern: "MV93"
   variant: "BE"
 - <<: *MacromediaDirectorFileGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "XFIR"
-    - fromIndex: 8
+    - offset: 8
       pattern: "39VM"
   variant: "LE"
 - extensions:
@@ -2449,7 +2449,7 @@
     - "video/x-flv"
   name: "Flash Video"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "FLV"
 - extensions:
     - ".vdi"
@@ -2457,7 +2457,7 @@
     - "application/x-virtualbox-vdi"
   name: "VirtualBox Virtual Hard Disk File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "<<< Oracle VM VirtualBox Disk Image >>>"
 - extensions:
     - ".vhd"
@@ -2465,56 +2465,56 @@
     - "application/x-virtualbox-vhd"
   name: "Windows Virtual PC Virtual Hard Disk File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "connectix"
 - extensions:
     - ".vhdx"
   mimes: []
   name: "Windows Virtual PC Windows 8 Virtual Hard Disk File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "vhdxfile"
 - extensions:
     - ".isz"
   mimes: []
   name: "Compressed ISO Image"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "IsZ!"
 - extensions:
     - ".daa"
   mimes: []
   name: "Direct Access Archive PowerISO File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "DAA"
 - extensions:
     - ".evt"
   mimes: []
   name: "Windows Event Viewer File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "LfLe"
 - extensions:
     - ".evtx"
   mimes: []
   name: "Windows Event Viewer XML File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "ElfFile"
 - extensions:
     - ".sdb"
   mimes: []
   name: "Windows Customized Database"
   signature:
-    - fromIndex: 8
+    - offset: 8
       pattern: "sdbf"
 - extensions:
     - ".grp"
   mimes: []
   name: "Windows Program Manager Program Group File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "PMCC"
 - extensions:
     - ".icm"
@@ -2522,7 +2522,7 @@
     - "application/vnd.iccprofile"
   name: "ICC Profile File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "KCMS"
 - extensions:
     - ".dat"
@@ -2530,21 +2530,21 @@
   mimes: []
   name: "Windows Registry File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "regf"
 - extensions:
     - ".pst"
   mimes: []
   name: "Microsoft Outlook Personal Storage Table File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "!BDN"
 - extensions:
     - ".drc"
   mimes: []
   name: "Google Draco 3D Model File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "DRACO"
 - extensions:
     - ".grib"
@@ -2552,14 +2552,14 @@
   mimes: []
   name: "Gridded Data File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "GRIB"
 - extensions:
     - ".blend"
   mimes: []
   name: "Blender File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "BLENDER"
 - &JPEGXLImageGroup
   extensions:
@@ -2567,12 +2567,12 @@
   name: "JPEG XL Image"
   mimes: []
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x00\x00\x00\x0CJXL \r\n\n"
   variant: "Long"
 - <<: *JPEGXLImageGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "ÿ\n"
   variant: "Short"
 - extensions:
@@ -2583,7 +2583,7 @@
     - "font/ttf"
   name: "TrueType Font"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x00\x01\x00\x00\x00"
 - extensions:
     - ".ttf"
@@ -2591,7 +2591,7 @@
     - "font/ttf"
   name: "TrueType Font"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "true\x00"
 - extensions:
     - ".otf"
@@ -2599,33 +2599,33 @@
     - "font/otf"
   name: "OpenType Font"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "OTTO"
 - extensions: []
   mimes: []
   name: "Modulefile for Environment Modules"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "#%Module"
 - extensions:
     - ".slob"
   mimes: []
   name: "Slob File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "!-1SLOB\x1F"
 - extensions: []
   mimes: []
   name: "Serialized Java Data"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "¬í"
 - extensions:
     - ".voc"
   mimes: []
   name: "Creative Voice File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "Creative Voice File\x1A\x1A\x00"
 - extensions:
     - ".au"
@@ -2634,75 +2634,75 @@
     - "audio/basic"
   name: "Au Audio File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: ".snd"
 - extensions: []
   mimes: []
   name: "OpenGL Iris Perfomer Performer Fast Binary (PFB)"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "Û\nÎ\x00"
 - extensions:
     - ".hazelrules"
   mimes: []
   name: "Noodlesoft Hazel Rules File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "HZLR\x00\x00\x00\x18"
 - extensions:
     - ".flp"
   mimes: []
   name: "FL Studio Project File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "FLhd"
 - extensions:
     - ".flm"
   mimes: []
   name: "FL Studio Mobile Project File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "10LF"
 - extensions: []
   mimes: []
   name: "Vormetric Encryption DPM Version 2.1 Header"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "RKMC210"
 - extensions:
     - ".drw"
   mimes: []
   name: "Micrografx Vector Graphic File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x01ÿ\x02\x04\x03\x02"
 - extensions:
     - ".dss"
   mimes: []
   name: "Digital Speech Standard (Olympus, Grundig, & Phillips) V2"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x02dss"
 - extensions:
     - ".dss"
   mimes: []
   name: "Digital Speech Standard (Olympus, Grundig, & Phillips) V3"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x03dss"
 - extensions:
     - ".adx"
   mimes: []
   name: "Approach Index File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x03\x00\x00\x00APPR"
 - extensions:
     - ".skf"
   mimes: []
   name: "SkinCrafter Skin File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x07SKF"
 - extensions:
     - ".dtd"
@@ -2710,28 +2710,28 @@
     - "application/xml-dtd"
   name: "DesignTools 2D Design File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x07dt2ddtd"
 - extensions:
     - ".wallet"
   mimes: []
   name: "MultiBit Bitcoin Wallet File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\n\x16org.bitcoin.pr"
 - extensions:
     - ".doc"
   mimes: []
   name: "DeskMate Document"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\rDOC"
 - extensions:
     - ".dsp"
   mimes: []
   name: "Microsoft Developer Studio Project File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "# Microsoft Developer Studio"
 - extensions:
     - ".amr"
@@ -2739,7 +2739,7 @@
     - "audio/amr"
   name: "Adaptive Multi-Rate ACELP (Algebraic Code Excited Linear Prediction) Codec File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "#!AMR"
 - extensions:
     - ".sil"
@@ -2747,81 +2747,81 @@
     - "audio/silk"
   name: "Skype Compressed Audio"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "#!SILK\n"
 - extensions:
     - ".hdr"
   mimes: []
   name: "Radiance High Dynamic Range Image"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "#?RADIANCE\n"
 - extensions:
     - ".vbe"
   mimes: []
   name: "VBScript Encoded Script"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "#@~^"
 - extensions:
     - ".cdb"
   mimes: []
   name: "MikroTik WinBox Connection Database (Address Book)"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\rð\x1DÀ"
 - extensions:
     - ".mdf"
   mimes: []
   name: "Alcohol 120% CD Image"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x00ÿÿÿÿÿÿÿÿÿÿ\x00\x00\x02\x00\x01"
 - extensions:
     - ".b85"
   mimes: []
   name: "ASCII85/BASE85 Encoded File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "<~6<\\%_0gSqh;"
-    - fromIndex: -3
+    - offset: -3
       pattern: "~>\n"
 - extensions:
     - ".jb2"
   mimes: []
   name: "JBIG2 Image"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "JB2\r\n\x1A\n"
-    - fromIndex: -8
+    - offset: -8
       pattern: "\x033\x00\x01\x00\x00\x00\x00"
 - extensions:
     - ".wks"
   mimes: []
   name: "Works for Windows Spreadsheet"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "ÿ\x00\x02\x00\x04\x04\x05T\x02\x00"
 - extensions:
     - ".qrp"
   mimes: []
   name: "QuickReport Report File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "ÿ\n\x00"
 - extensions:
     - ".cpi"
   mimes: []
   name: "Windows International Code Page"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "ÿFONT"
 - extensions:
     - ".sys"
   mimes: []
   name: "Keyboard Driver File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "ÿKEYB   "
 - extensions:
     - ".wp"
@@ -2833,133 +2833,133 @@
   mimes: []
   name: "WordPerfect Text and Graphics File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "ÿWPC"
 - extensions:
     - ".tib"
   mimes: []
   name: "Acronis True Image"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "Î$¹¢ \x00\x00\x00"
 - extensions:
     - ".qdf"
   mimes: []
   name: "Quicken Data File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "¬\x9E½\x8F\x00\x00"
 - extensions:
     - ".flt"
   mimes: []
   name: "Qimage Filter"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "v2003.10\r\n0\r\n"
 - extensions:
     - ".dat"
   mimes: []
   name: "Windows NT Registry Hive File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "regf"
 - extensions:
     - ".acd"
   mimes: []
   name: "Sonic Foundry Acid Music File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "riff"
 - extensions:
     - ".ram"
   mimes: []
   name: "RealMedia Metafile"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "rtsp://"
 - extensions:
     - ".torrent"
   mimes: []
   name: "Torrent File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "d8:announce"
 - extensions:
     - ".sit"
   mimes: []
   name: "StuffIt Compressed Archive"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "SIT!\x00"
 - extensions:
     - ".sdr"
   mimes: []
   name: "SmartDraw Drawing File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "SMARTDRW"
 - extensions:
     - ".spf"
   mimes: []
   name: "StorageCraft ShadownProtect Backup File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "SPFI\x00"
 - extensions:
     - ".spvchain"
   mimes: []
   name: "MultiBit Bitcoin Blockchain File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "SPVB"
 - extensions:
     - ".db"
   mimes: []
   name: "Netscape Navigator (v4) Database File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x00\x06\x15a\x00\x00\x00\x02\x00\x00\x04Ò\x00\x00\x10\x00"
 - extensions:
     - ".tbi"
   mimes: []
   name: "The Bat! Secure E-mail Message Base Index File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x01\x01G\x19¤\x00\x00\x00\x00\x00\x00\x00"
 - extensions:
     - ".mxf"
   mimes: []
   name: "Material Exchange Format File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x06\x0E+4\x02\x05\x01\x01\r\x01\x02\x01\x01\x02"
 - extensions:
     - ".dat"
   mimes: []
   name: "Runtime Software Compressed Disk Image"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "\x1ARTS COMPRESSED IMAGE V1.0\x1A"
 - extensions:
     - ".eta"
   mimes: []
   name: "Google Earth Keyhole Placemark File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "# This is an Key"
 - extensions:
     - ".sav"
   mimes: []
   name: "SPSS Statistics Data File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "$FL2@(#) SPSS DATA FILE"
 - extensions:
     - ".hqx"
   mimes: []
   name: "Macintosh BinHex 4 Compressed Archive"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "(This file must be converted with BinHex "
 - category: "other"
   extensions:
@@ -2969,7 +2969,7 @@
     - "text/x-log"
   name: "Symantec Wise Installer Log File"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "***  Installation Started "
 - &MicrosoftVisualStudioSolutionGroup
   category: "other"
@@ -2979,16 +2979,16 @@
     - "application/vnd.ms-developer"
   name: "Microsoft Visual Studio Solution"
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "ï»¿\r\nMicrosoft Visual Studio Solution File, Format Version "
   variant: "BOM CRLF"
 - <<: *MicrosoftVisualStudioSolutionGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "ï»¿\nMicrosoft Visual Studio Solution File, Format Version "
   variant: "BOM LF"
 - <<: *MicrosoftVisualStudioSolutionGroup
   signature:
-    - fromIndex: 0
+    - offset: 0
       pattern: "Microsoft Visual Studio Solution File, Format Version "
   variant: "Plain"

@@ -59,7 +59,7 @@
 				"items": {
 					"type": "object",
 					"properties": {
-						"fromIndex": {
+						"offset": {
 							"type": "integer"
 						},
 						"pattern": {
@@ -68,7 +68,7 @@
 						}
 					},
 					"required": [
-						"fromIndex",
+						"offset",
 						"pattern"
 					]
 				},

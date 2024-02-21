@@ -6,7 +6,6 @@ export interface BytesMatcherSignature<T extends string | Uint8Array> {
  * Bytes matcher to determine whether the bytes is match the specify signature.
  */
 export class BytesMatcher {
-	#bytesMinimum: number;
 	#signatureHead: Map<number, number> = new Map<number, number>();
 	#signatureTail: Map<number, number> = new Map<number, number>();
 	/**
@@ -42,7 +41,35 @@ export class BytesMatcher {
 		if (this.#signatureHead.size + this.#signatureTail.size === 0) {
 			throw new Error(`Signature is empty!`);
 		}
-		this.#bytesMinimum = (this.#signatureTail.size > 0) ? Infinity : Math.max(...Array.from(this.#signatureHead.keys()));
+	}
+	/**
+	 * Helper to map signature of tail by the file size.
+	 * @access private
+	 * @param {Deno.FileInfo} info File info.
+	 * @returns {false | Map<number, number>}
+	 */
+	#mapSignatureByFile(info: Deno.FileInfo): false | Map<number, number> {
+		const { size }: Deno.FileInfo = info;
+		if (size > Number.MAX_SAFE_INTEGER) {
+			throw new Error(`Size of the file is too large!`);
+		}
+		if (Math.max(...Array.from(this.#signatureHead.keys())) >= size) {
+			// Signature of head must smaller than or equal to the size of the file.
+			return false;
+		}
+		const signatureResolve: Map<number, number> = new Map<number, number>(this.#signatureHead.entries());
+		for (const [offset, byte] of this.#signatureTail.entries()) {
+			const offsetResolve: number = size + offset;
+			if (
+				offsetResolve < 0 ||
+				typeof signatureResolve.get(offsetResolve) !== "undefined"
+			) {
+				// Signature of head and tail must not overlap each other, overlapped means the file is too small and definitely not match.
+				return false;
+			}
+			signatureResolve.set(offsetResolve, byte);
+		}
+		return signatureResolve;
 	}
 	/**
 	 * Determine whether the bytes is match the specify signature.
@@ -74,23 +101,13 @@ export class BytesMatcher {
 	async testFile(file: string | URL | Deno.FsFile): Promise<boolean> {
 		const fileResolve: Deno.FsFile = (file instanceof Deno.FsFile) ? file : (await Deno.open(file));
 		try {
-			const { isFile, size }: Deno.FileInfo = await fileResolve.stat();
-			if (!isFile) {
+			const fileInfo: Deno.FileInfo = await fileResolve.stat();
+			if (!fileInfo.isFile) {
 				throw new Error(`This is not a file!`);
 			}
-			if (size > Number.MAX_SAFE_INTEGER) {
-				throw new Error(`Size of the file is too large!`);
-			}
-			const signatureResolve: Map<number, number> = new Map<number, number>();
-			for (const [offset, byte] of this.#signatureHead.entries()) {
-				signatureResolve.set(offset, byte);
-			}
-			for (const [offset, byte] of this.#signatureTail.entries()) {
-				const offsetResolve: number = size + offset;
-				if (typeof signatureResolve.get(offsetResolve) !== "undefined") {
-					return false;
-				}
-				signatureResolve.set(offsetResolve, byte);
+			const signatureResolve: false | Map<number, number> = this.#mapSignatureByFile(fileInfo);
+			if (!signatureResolve) {
+				return false;
 			}
 			const reader: ReadableStreamDefaultReader<Uint8Array> = fileResolve.readable.getReader();
 			let cursor = 0;
@@ -110,22 +127,14 @@ export class BytesMatcher {
 					}
 				}
 				if (done) {
-					break;
+					return false;
 				}
 			}
-			return false;
 		} finally {
 			if (!(file instanceof Deno.FsFile)) {
 				fileResolve.close();
 			}
 		}
-	}
-	/**
-	 * Require minimum bytes to read in the file stream for the bytes matcher.
-	 * @returns {number} Minimum bytes to read in the stream.
-	 */
-	get bytesMinimum(): number {
-		return this.#bytesMinimum;
 	}
 	/**
 	 * Weight of the bytes matcher. Useful for reduce rate of false positive.

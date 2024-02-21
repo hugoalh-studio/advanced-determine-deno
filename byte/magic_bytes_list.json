@@ -1929,10 +1929,13 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".bpg"
 		],
-		"mimes": [],
+		"mimes": [
+			"image/bpg"
+		],
 		"name": "Better Portable Graphic (BPG)",
 		"signature": [
 			{
@@ -1942,13 +1945,14 @@
 		]
 	},
 	{
+		"category": "disk",
 		"extensions": [
 			".iso"
 		],
 		"mimes": [
 			"application/x-iso9660-image"
 		],
-		"name": "ISO9660 CD/DVD Image",
+		"name": "ISO 9660 CD/DVD Image",
 		"signature": [
 			{
 				"offset": 32769,
@@ -1958,13 +1962,14 @@
 		"variant": "1"
 	},
 	{
+		"category": "disk",
 		"extensions": [
 			".iso"
 		],
 		"mimes": [
 			"application/x-iso9660-image"
 		],
-		"name": "ISO9660 CD/DVD Image",
+		"name": "ISO 9660 CD/DVD Image",
 		"signature": [
 			{
 				"offset": 34817,
@@ -1974,13 +1979,14 @@
 		"variant": "2"
 	},
 	{
+		"category": "disk",
 		"extensions": [
 			".iso"
 		],
 		"mimes": [
 			"application/x-iso9660-image"
 		],
-		"name": "ISO9660 CD/DVD Image",
+		"name": "ISO 9660 CD/DVD Image",
 		"signature": [
 			{
 				"offset": 36865,
@@ -1990,10 +1996,13 @@
 		"variant": "3"
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".qoi"
 		],
-		"mimes": [],
+		"mimes": [
+			"image/x-qoi"
+		],
 		"name": "Quite OK Image (QOI)",
 		"signature": [
 			{
@@ -2003,6 +2012,7 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".ilbm",
 			".lbm",
@@ -2023,6 +2033,7 @@
 		]
 	},
 	{
+		"category": "audio",
 		"extensions": [
 			".8svx",
 			".8sv",
@@ -2031,7 +2042,8 @@
 			".iff"
 		],
 		"mimes": [
-			"audio/basic"
+			"audio/basic",
+			"audio/x-8svx"
 		],
 		"name": "IFF 8-Bit Sampled Voice",
 		"signature": [
@@ -2046,6 +2058,7 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".acbm",
 			".iff"
@@ -2064,6 +2077,7 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".anbm",
 			".iff"
@@ -2082,6 +2096,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".anim",
 			".iff"
@@ -2100,6 +2115,7 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".faxx",
 			".fax",
@@ -2119,6 +2135,7 @@
 		]
 	},
 	{
+		"category": "document",
 		"extensions": [
 			".ftxt",
 			".iff"
@@ -2137,6 +2154,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".smus",
 			".smu",
@@ -2159,6 +2177,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".cmus",
 			".mus",
@@ -2180,6 +2199,7 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".yuv",
 			".yuvn",
@@ -2199,6 +2219,7 @@
 		]
 	},
 	{
+		"category": "video",
 		"extensions": [
 			".iff"
 		],
@@ -2216,6 +2237,7 @@
 		]
 	},
 	{
+		"category": "audio",
 		"extensions": [
 			".aif",
 			".aifc",
@@ -2224,8 +2246,8 @@
 			".snd"
 		],
 		"mimes": [
-			"audio/x-aiff",
-			"audio/basic"
+			"audio/basic",
+			"audio/x-aiff"
 		],
 		"name": "Audio Interchange File",
 		"signature": [
@@ -2240,6 +2262,7 @@
 		]
 	},
 	{
+		"category": "metadata",
 		"extensions": [
 			".xml"
 		],
@@ -2253,10 +2276,10 @@
 				"offset": 0,
 				"pattern": "<?xml "
 			}
-		],
-		"variant": "1"
+		]
 	},
 	{
+		"category": "metadata",
 		"extensions": [
 			".xml"
 		],
@@ -2270,10 +2293,10 @@
 				"offset": 0,
 				"pattern": "<\u0000?\u0000x\u0000m\u0000l\u0000 "
 			}
-		],
-		"variant": "2"
+		]
 	},
 	{
+		"category": "metadata",
 		"extensions": [
 			".xml"
 		],
@@ -2287,10 +2310,10 @@
 				"offset": 0,
 				"pattern": "\u0000<\u0000?\u0000x\u0000m\u0000l\u0000 "
 			}
-		],
-		"variant": "3"
+		]
 	},
 	{
+		"category": "metadata",
 		"extensions": [
 			".xml"
 		],
@@ -2304,10 +2327,10 @@
 				"offset": 0,
 				"pattern": "<\u0000\u0000\u0000?\u0000\u0000\u0000x\u0000\u0000\u0000m\u0000\u0000\u0000l\u0000\u0000\u0000 \u0000\u0000\u0000"
 			}
-		],
-		"variant": "4"
+		]
 	},
 	{
+		"category": "metadata",
 		"extensions": [
 			".xml"
 		],
@@ -2321,10 +2344,10 @@
 				"offset": 0,
 				"pattern": "\u0000\u0000\u0000<\u0000\u0000\u0000?\u0000\u0000\u0000x\u0000\u0000\u0000m\u0000\u0000\u0000l\u0000\u0000\u0000 "
 			}
-		],
-		"variant": "5"
+		]
 	},
 	{
+		"category": "metadata",
 		"extensions": [
 			".xml"
 		],
@@ -2338,16 +2361,18 @@
 				"offset": 0,
 				"pattern": "Lo§@"
 			}
-		],
-		"variant": "6"
+		]
 	},
 	{
+		"category": "archive",
 		"extensions": [
 			".wim",
 			".swm",
 			".esd"
 		],
-		"mimes": [],
+		"mimes": [
+			"application/x-ms-wim"
+		],
 		"name": "Windows Imaging Format File",
 		"signature": [
 			{
@@ -2357,13 +2382,14 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".webp"
 		],
 		"mimes": [
 			"image/webp"
 		],
-		"name": "WebP Image File",
+		"name": "WebP Image",
 		"signature": [
 			{
 				"offset": 0,
@@ -2376,6 +2402,7 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".psd"
 		],
@@ -2391,6 +2418,7 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".bmp"
 		],
@@ -2398,7 +2426,7 @@
 			"image/bmp",
 			"image/x-ms-bmp"
 		],
-		"name": "BMP Image File",
+		"name": "BMP Image",
 		"signature": [
 			{
 				"offset": 0,
@@ -2407,6 +2435,7 @@
 		]
 	},
 	{
+		"category": "executable",
 		"extensions": [
 			".wasm"
 		],
@@ -2422,6 +2451,7 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".jpg",
 			".jpeg"
@@ -2429,7 +2459,7 @@
 		"mimes": [
 			"image/jpeg"
 		],
-		"name": "JPEG Image",
+		"name": "Joint Photographic Experts Group (JPEG) Image",
 		"signature": [
 			{
 				"offset": 0,
@@ -2439,6 +2469,7 @@
 		"variant": "DB"
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".jpg",
 			".jpeg"
@@ -2446,7 +2477,7 @@
 		"mimes": [
 			"image/jpeg"
 		],
-		"name": "JPEG Image",
+		"name": "Joint Photographic Experts Group (JPEG) Image",
 		"signature": [
 			{
 				"offset": 0,
@@ -2456,6 +2487,7 @@
 		"variant": "E0"
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".jpg",
 			".jpeg"
@@ -2463,7 +2495,7 @@
 		"mimes": [
 			"image/jpeg"
 		],
-		"name": "JPEG Image",
+		"name": "Joint Photographic Experts Group (JPEG) Image",
 		"signature": [
 			{
 				"offset": 0,
@@ -2473,6 +2505,7 @@
 		"variant": "EE"
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".jpg",
 			".jpeg"
@@ -2489,6 +2522,7 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".jpg",
 			".jpeg"
@@ -2509,10 +2543,13 @@
 		]
 	},
 	{
+		"category": "compressed",
 		"extensions": [
 			".lz"
 		],
-		"mimes": [],
+		"mimes": [
+			"application/x-lzip"
+		],
 		"name": "LZip Archive",
 		"signature": [
 			{
@@ -2522,6 +2559,7 @@
 		]
 	},
 	{
+		"category": "compressed",
 		"extensions": [
 			".cpio"
 		],
@@ -2575,6 +2613,7 @@
 		"variant": "ZM"
 	},
 	{
+		"category": "archive",
 		"extensions": [
 			".rar"
 		],
@@ -2591,6 +2630,7 @@
 		]
 	},
 	{
+		"category": "archive",
 		"extensions": [
 			".rar"
 		],
@@ -2607,8 +2647,13 @@
 		]
 	},
 	{
-		"extensions": [],
-		"mimes": [],
+		"category": "executable",
+		"extensions": [
+			".elf"
+		],
+		"mimes": [
+			"application/x-executable"
+		],
 		"name": "Executable & Linkable Format",
 		"signature": [
 			{
@@ -2618,6 +2663,7 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".png"
 		],
@@ -2633,6 +2679,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".com"
 		],
@@ -2648,6 +2695,7 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".d64"
 		],
@@ -2661,6 +2709,7 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".g64"
 		],
@@ -2674,6 +2723,7 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".d81"
 		],
@@ -2687,6 +2737,7 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".t64"
 		],
@@ -2700,10 +2751,13 @@
 		]
 	},
 	{
+		"category": "rom",
 		"extensions": [
 			".crt"
 		],
-		"mimes": [],
+		"mimes": [
+			"application/x-commodore-64-cartridge"
+		],
 		"name": "Commodore 64 Cartridge Image",
 		"signature": [
 			{
@@ -2713,6 +2767,7 @@
 		]
 	},
 	{
+		"category": "executable",
 		"extensions": [
 			".class"
 		],
@@ -2728,6 +2783,7 @@
 		]
 	},
 	{
+		"category": "executable",
 		"extensions": [
 			".class"
 		],
@@ -2741,8 +2797,13 @@
 		]
 	},
 	{
-		"extensions": [],
-		"mimes": [],
+		"category": "executable",
+		"extensions": [
+			".mach"
+		],
+		"mimes": [
+			"application/x-mach-binary"
+		],
 		"name": "Mach-O Binary",
 		"signature": [
 			{
@@ -2753,8 +2814,13 @@
 		"variant": "32-Bit, Head 0"
 	},
 	{
-		"extensions": [],
-		"mimes": [],
+		"category": "executable",
+		"extensions": [
+			".mach"
+		],
+		"mimes": [
+			"application/x-mach-binary"
+		],
 		"name": "Mach-O Binary",
 		"signature": [
 			{
@@ -2765,8 +2831,13 @@
 		"variant": "32-Bit, Head 4096"
 	},
 	{
-		"extensions": [],
-		"mimes": [],
+		"category": "executable",
+		"extensions": [
+			".mach"
+		],
+		"mimes": [
+			"application/x-mach-binary"
+		],
 		"name": "Mach-O Binary",
 		"signature": [
 			{
@@ -2777,8 +2848,13 @@
 		"variant": "64-Bit, Head 0"
 	},
 	{
-		"extensions": [],
-		"mimes": [],
+		"category": "executable",
+		"extensions": [
+			".mach"
+		],
+		"mimes": [
+			"application/x-mach-binary"
+		],
 		"name": "Mach-O Binary",
 		"signature": [
 			{
@@ -2789,8 +2865,13 @@
 		"variant": "64-Bit, Head 4096"
 	},
 	{
-		"extensions": [],
-		"mimes": [],
+		"category": "executable",
+		"extensions": [
+			".mach"
+		],
+		"mimes": [
+			"application/x-mach-binary"
+		],
 		"name": "Mach-O Binary",
 		"signature": [
 			{
@@ -2801,8 +2882,13 @@
 		"variant": "32-Bit, Reverse Byte Ordering Scheme"
 	},
 	{
-		"extensions": [],
-		"mimes": [],
+		"category": "executable",
+		"extensions": [
+			".mach"
+		],
+		"mimes": [
+			"application/x-mach-binary"
+		],
 		"name": "Mach-O Binary",
 		"signature": [
 			{
@@ -2813,11 +2899,14 @@
 		"variant": "64-Bit, Reverse Byte Ordering Scheme"
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".jks"
 		],
-		"mimes": [],
-		"name": "Java Key Store File",
+		"mimes": [
+			"application/x-java-keystore"
+		],
+		"name": "Java KeyStore File",
 		"signature": [
 			{
 				"offset": 0,
@@ -2826,6 +2915,7 @@
 		]
 	},
 	{
+		"category": "document",
 		"extensions": [
 			".ps"
 		],
@@ -2841,12 +2931,13 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".eps",
 			".epsf"
 		],
 		"mimes": [
-			"application/postscript"
+			"application/eps"
 		],
 		"name": "Encapsulated PostScript File Version 3.0",
 		"signature": [
@@ -2857,12 +2948,13 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".eps",
 			".epsf"
 		],
 		"mimes": [
-			"application/postscript"
+			"application/eps"
 		],
 		"name": "Encapsulated PostScript File Version 3.1",
 		"signature": [
@@ -2873,13 +2965,14 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".chm"
 		],
 		"mimes": [
 			"application/vnd.ms-htmlhelp"
 		],
-		"name": "Windows HTML Help Data",
+		"name": "Microsoft Compiled HTML Help Data",
 		"signature": [
 			{
 				"offset": 0,
@@ -2888,13 +2981,14 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".hlp"
 		],
 		"mimes": [
 			"application/winhlp"
 		],
-		"name": "Windows Help file",
+		"name": "Windows Help File",
 		"signature": [
 			{
 				"offset": 0,
@@ -2904,13 +2998,14 @@
 		"variant": "Short"
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".hlp"
 		],
 		"mimes": [
 			"application/winhlp"
 		],
-		"name": "Windows Help file",
+		"name": "Windows Help File",
 		"signature": [
 			{
 				"offset": 6,
@@ -2920,6 +3015,7 @@
 		"variant": "Long"
 	},
 	{
+		"category": "document",
 		"extensions": [
 			".pdf"
 		],
@@ -2935,12 +3031,12 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
-			".asf",
-			".wma",
-			".wmv"
+			".asf"
 		],
 		"mimes": [
+			"application/vnd.ms-asf",
 			"video/x-ms-asf"
 		],
 		"name": "Advanced Systems Format Video",
@@ -2952,6 +3048,39 @@
 		]
 	},
 	{
+		"category": "audio",
+		"extensions": [
+			".wma"
+		],
+		"mimes": [
+			"audio/x-ms-wma"
+		],
+		"name": "Windows Media Audio",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "0&²ufÏ\u0011¦Ù\u0000ª\u0000bÎl"
+			}
+		]
+	},
+	{
+		"category": "video",
+		"extensions": [
+			".wmv"
+		],
+		"mimes": [
+			"video/x-ms-wmv"
+		],
+		"name": "Windows Media Video",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "0&²ufÏ\u0011¦Ù\u0000ª\u0000bÎl"
+			}
+		]
+	},
+	{
+		"category": "image",
 		"extensions": [],
 		"mimes": [],
 		"name": "System Deployment Image",
@@ -2963,33 +3092,62 @@
 		]
 	},
 	{
+		"category": "audio",
 		"extensions": [
-			".ogg",
+			".ogg"
+		],
+		"mimes": [
+			"audio/ogg"
+		],
+		"name": "Ogg Vorbis Audio",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "OggS"
+			},
+			{
+				"offset": 28,
+				"pattern": "\u0001vorbis"
+			}
+		]
+	},
+	{
+		"category": "audio",
+		"extensions": [
 			".oga"
 		],
 		"mimes": [
 			"audio/ogg"
 		],
-		"name": "Ogg Audio",
+		"name": "Ogg FLAC Audio",
 		"signature": [
 			{
 				"offset": 0,
 				"pattern": "OggS"
+			},
+			{
+				"offset": 28,
+				"pattern": "FLAC"
 			}
 		]
 	},
 	{
+		"category": "video",
 		"extensions": [
 			".ogv"
 		],
 		"mimes": [
 			"video/ogg"
 		],
-		"name": "Ogg Video",
+		"name": "Ogg Theora Video",
 		"signature": [
 			{
 				"offset": 0,
 				"pattern": "OggS"
+			},
+			{
+				"offset": 28,
+				"pattern": "theora"
 			}
 		]
 	},
@@ -4781,6 +4939,7 @@
 		]
 	},
 	{
+		"category": "disk",
 		"extensions": [
 			".vdi"
 		],
@@ -5754,7 +5913,7 @@
 				"pattern": "ï»¿\r\nMicrosoft Visual Studio Solution File, Format Version "
 			}
 		],
-		"variant": "BOM CRLF"
+		"variant": "BOM, CRLF"
 	},
 	{
 		"category": "other",
@@ -5771,7 +5930,7 @@
 				"pattern": "ï»¿\nMicrosoft Visual Studio Solution File, Format Version "
 			}
 		],
-		"variant": "BOM LF"
+		"variant": "BOM, LF"
 	},
 	{
 		"category": "other",
@@ -5789,5 +5948,220 @@
 			}
 		],
 		"variant": "Plain"
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".lzs"
+		],
+		"mimes": [
+			"application/x-lzh-compressed"
+		],
+		"name": "LArc",
+		"signature": [
+			{
+				"offset": 2,
+				"pattern": "-lz2-"
+			}
+		],
+		"variant": "2"
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".lzs"
+		],
+		"mimes": [
+			"application/x-lzh-compressed"
+		],
+		"name": "LArc",
+		"signature": [
+			{
+				"offset": 2,
+				"pattern": "-lz3-"
+			}
+		],
+		"variant": "3"
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".lzs"
+		],
+		"mimes": [
+			"application/x-lzh-compressed"
+		],
+		"name": "LArc",
+		"signature": [
+			{
+				"offset": 2,
+				"pattern": "-lz4-"
+			}
+		],
+		"variant": "4"
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".lzs"
+		],
+		"mimes": [
+			"application/x-lzh-compressed"
+		],
+		"name": "LArc",
+		"signature": [
+			{
+				"offset": 2,
+				"pattern": "-lz5-"
+			}
+		],
+		"variant": "5"
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".lzs"
+		],
+		"mimes": [
+			"application/x-lzh-compressed"
+		],
+		"name": "LArc",
+		"signature": [
+			{
+				"offset": 2,
+				"pattern": "-lz7-"
+			}
+		],
+		"variant": "7"
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".lzs"
+		],
+		"mimes": [
+			"application/x-lzh-compressed"
+		],
+		"name": "LArc",
+		"signature": [
+			{
+				"offset": 2,
+				"pattern": "-lz8-"
+			}
+		],
+		"variant": "8"
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".lzs"
+		],
+		"mimes": [
+			"application/x-lzh-compressed"
+		],
+		"name": "LArc",
+		"signature": [
+			{
+				"offset": 2,
+				"pattern": "-lzs-"
+			}
+		],
+		"variant": "s"
+	},
+	{
+		"category": "document",
+		"extensions": [
+			".abw"
+		],
+		"mimes": [
+			"application/x-abiword"
+		],
+		"name": "AbiWord Document",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ï»¿<!DOCTYPE abiword PUBLIC"
+			},
+			{
+				"offset": 102,
+				"pattern": "<abiword template=\"false\""
+			}
+		],
+		"variant": "BOM, DOCTYPE"
+	},
+	{
+		"category": "document",
+		"extensions": [
+			".abw"
+		],
+		"mimes": [
+			"application/x-abiword"
+		],
+		"name": "AbiWord Document",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "<!DOCTYPE abiword PUBLIC"
+			},
+			{
+				"offset": 102,
+				"pattern": "<abiword template=\"false\""
+			}
+		],
+		"variant": "DOCTYPE"
+	},
+	{
+		"category": "document",
+		"extensions": [
+			".abw"
+		],
+		"mimes": [
+			"application/x-abiword"
+		],
+		"name": "AbiWord Document",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ï»¿<abiword template=\"false\""
+			}
+		],
+		"variant": "BOM, Short"
+	},
+	{
+		"category": "document",
+		"extensions": [
+			".abw"
+		],
+		"mimes": [
+			"application/x-abiword"
+		],
+		"name": "AbiWord Document",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "<abiword template=\"false\""
+			}
+		],
+		"variant": "Short"
+	},
+	{
+		"category": "ebook",
+		"extensions": [
+			".lit"
+		],
+		"mimes": [
+			"application/x-ms-reader"
+		],
+		"name": "Microsoft Reader",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ITOLITLS\u0001\u0000\u0000\u0000(\u0000\u0000\u0000"
+			},
+			{
+				"offset": 24,
+				"pattern": "Á\u0007\nv@Ó\u0011\u0000\u0000ø\u0010WT"
+			}
+		]
 	}
 ]

@@ -116,73 +116,76 @@ other	.nup		nuru Palette File	"[{""offset"":0,""pattern"":""NURUPAL""}]"
 image	.dpx	image/x-dpx	Digital Picture Exchange (DPX) Image	"[{""offset"":0,""pattern"":""SDPX""}]"	BE
 image	.dpx	image/x-dpx	Digital Picture Exchange (DPX) Image	"[{""offset"":0,""pattern"":""XPDS""}]"	LE
 image	.exr	image/aces, image/x-exr	OpenEXR Image	"[{""offset"":0,""pattern"":""v/1\u0001""}]"	
-	.bpg		Better Portable Graphic (BPG)	"[{""offset"":0,""pattern"":""BPGû""}]"	
-	.iso	application/x-iso9660-image	ISO9660 CD/DVD Image	"[{""offset"":32769,""pattern"":""CD001""}]"	1
-	.iso	application/x-iso9660-image	ISO9660 CD/DVD Image	"[{""offset"":34817,""pattern"":""CD001""}]"	2
-	.iso	application/x-iso9660-image	ISO9660 CD/DVD Image	"[{""offset"":36865,""pattern"":""CD001""}]"	3
-	.qoi		Quite OK Image (QOI)	"[{""offset"":0,""pattern"":""qoif""}]"	
-	.ilbm, .lbm, .ibm, .iff		IFF Interleaved Bitmap Image	"[{""offset"":0,""pattern"":""FORM""},{""offset"":8,""pattern"":""ILBM""}]"	
-	.8svx, .8sv, .svx, .snd, .iff	audio/basic	IFF 8-Bit Sampled Voice	"[{""offset"":0,""pattern"":""FORM""},{""offset"":8,""pattern"":""8SVX""}]"	
-	.acbm, .iff		Amiga Contiguous Bitmap File	"[{""offset"":0,""pattern"":""FORM""},{""offset"":8,""pattern"":""ACBM""}]"	
-	.anbm, .iff		IFF Animated Bitmap File	"[{""offset"":0,""pattern"":""FORM""},{""offset"":8,""pattern"":""ANBM""}]"	
-	.anim, .iff		IFF CEL Animation File	"[{""offset"":0,""pattern"":""FORM""},{""offset"":8,""pattern"":""ANIM""}]"	
-	.faxx, .fax, .iff		IFF Facsimile Image	"[{""offset"":0,""pattern"":""FORM""},{""offset"":8,""pattern"":""FAXX""}]"	
-	.ftxt, .iff		IFF Formatted Text File	"[{""offset"":0,""pattern"":""FORM""},{""offset"":8,""pattern"":""FTXT""}]"	
-	.smus, .smu, .mus, .iff	application/vnd.musician	IFF Simple Musical Score File	"[{""offset"":0,""pattern"":""FORM""},{""offset"":8,""pattern"":""SMUS""}]"	
-	.cmus, .mus, .iff	application/vnd.musician	IFF Musical Score File	"[{""offset"":0,""pattern"":""FORM""},{""offset"":8,""pattern"":""CMUS""}]"	
-	.yuv, .yuvn, .iff		IFF YUV Image	"[{""offset"":0,""pattern"":""FORM""},{""offset"":8,""pattern"":""YUVN""}]"	
-	.iff		Amiga Fantavision Movie	"[{""offset"":0,""pattern"":""FORM""},{""offset"":8,""pattern"":""FANT""}]"	
-	.aif, .aifc, .aiff, .iff, .snd	audio/x-aiff, audio/basic	Audio Interchange File	"[{""offset"":0,""pattern"":""FORM""},{""offset"":8,""pattern"":""AIFF""}]"	
-	.xml	application/xml, text/xml	eXtensible Markup Language (XML) File	"[{""offset"":0,""pattern"":""<?xml ""}]"	1
-	.xml	application/xml, text/xml	eXtensible Markup Language (XML) File	"[{""offset"":0,""pattern"":""<\u0000?\u0000x\u0000m\u0000l\u0000 ""}]"	2
-	.xml	application/xml, text/xml	eXtensible Markup Language (XML) File	"[{""offset"":0,""pattern"":""\u0000<\u0000?\u0000x\u0000m\u0000l\u0000 ""}]"	3
-	.xml	application/xml, text/xml	eXtensible Markup Language (XML) File	"[{""offset"":0,""pattern"":""<\u0000\u0000\u0000?\u0000\u0000\u0000x\u0000\u0000\u0000m\u0000\u0000\u0000l\u0000\u0000\u0000 \u0000\u0000\u0000""}]"	4
-	.xml	application/xml, text/xml	eXtensible Markup Language (XML) File	"[{""offset"":0,""pattern"":""\u0000\u0000\u0000<\u0000\u0000\u0000?\u0000\u0000\u0000x\u0000\u0000\u0000m\u0000\u0000\u0000l\u0000\u0000\u0000 ""}]"	5
-	.xml	application/xml, text/xml	eXtensible Markup Language (XML) File	"[{""offset"":0,""pattern"":""Lo§@""}]"	6
-	.wim, .swm, .esd		Windows Imaging Format File	"[{""offset"":0,""pattern"":""MSWIM\u0000\u0000\u0000Ð\u0000\u0000\u0000\u0000""}]"	
-	.webp	image/webp	WebP Image File	"[{""offset"":0,""pattern"":""RIFF""},{""offset"":8,""pattern"":""WEBP""}]"	
-	.psd	image/vnd.adobe.photoshop	Adobe Photoshop Document File	"[{""offset"":0,""pattern"":""8BPS""}]"	
-	.bmp	image/bmp, image/x-ms-bmp	BMP Image File	"[{""offset"":0,""pattern"":""BM""}]"	
-	.wasm	application/wasm	WebAssembly Binary	"[{""offset"":0,""pattern"":""\u0000asm""}]"	
-	.jpg, .jpeg	image/jpeg	JPEG Image	"[{""offset"":0,""pattern"":""ÿØÿÛ""}]"	DB
-	.jpg, .jpeg	image/jpeg	JPEG Image	"[{""offset"":0,""pattern"":""ÿØÿà""}]"	E0
-	.jpg, .jpeg	image/jpeg	JPEG Image	"[{""offset"":0,""pattern"":""ÿØÿî""}]"	EE
-	.jpg, .jpeg	image/jpeg	JPEG JFIF Image	"[{""offset"":0,""pattern"":""ÿØÿà\u0000\u0010JFIF\u0000\u0001""}]"	
-	.jpg, .jpeg	image/jpeg	JPEG Exif Image	"[{""offset"":0,""pattern"":""ÿØÿá""},{""offset"":6,""pattern"":""Exif\u0000\u0000""}]"	
-	.lz		LZip Archive	"[{""offset"":0,""pattern"":""LZIP""}]"	
-	.cpio	application/x-cpio	cpio Archive	"[{""offset"":0,""pattern"":""070707""}]"	
+image	.bpg	image/bpg	Better Portable Graphic (BPG)	"[{""offset"":0,""pattern"":""BPGû""}]"	
+disk	.iso	application/x-iso9660-image	ISO 9660 CD/DVD Image	"[{""offset"":32769,""pattern"":""CD001""}]"	1
+disk	.iso	application/x-iso9660-image	ISO 9660 CD/DVD Image	"[{""offset"":34817,""pattern"":""CD001""}]"	2
+disk	.iso	application/x-iso9660-image	ISO 9660 CD/DVD Image	"[{""offset"":36865,""pattern"":""CD001""}]"	3
+image	.qoi	image/x-qoi	Quite OK Image (QOI)	"[{""offset"":0,""pattern"":""qoif""}]"	
+image	.ilbm, .lbm, .ibm, .iff		IFF Interleaved Bitmap Image	"[{""offset"":0,""pattern"":""FORM""},{""offset"":8,""pattern"":""ILBM""}]"	
+audio	.8svx, .8sv, .svx, .snd, .iff	audio/basic, audio/x-8svx	IFF 8-Bit Sampled Voice	"[{""offset"":0,""pattern"":""FORM""},{""offset"":8,""pattern"":""8SVX""}]"	
+image	.acbm, .iff		Amiga Contiguous Bitmap File	"[{""offset"":0,""pattern"":""FORM""},{""offset"":8,""pattern"":""ACBM""}]"	
+image	.anbm, .iff		IFF Animated Bitmap File	"[{""offset"":0,""pattern"":""FORM""},{""offset"":8,""pattern"":""ANBM""}]"	
+other	.anim, .iff		IFF CEL Animation File	"[{""offset"":0,""pattern"":""FORM""},{""offset"":8,""pattern"":""ANIM""}]"	
+image	.faxx, .fax, .iff		IFF Facsimile Image	"[{""offset"":0,""pattern"":""FORM""},{""offset"":8,""pattern"":""FAXX""}]"	
+document	.ftxt, .iff		IFF Formatted Text File	"[{""offset"":0,""pattern"":""FORM""},{""offset"":8,""pattern"":""FTXT""}]"	
+other	.smus, .smu, .mus, .iff	application/vnd.musician	IFF Simple Musical Score File	"[{""offset"":0,""pattern"":""FORM""},{""offset"":8,""pattern"":""SMUS""}]"	
+other	.cmus, .mus, .iff	application/vnd.musician	IFF Musical Score File	"[{""offset"":0,""pattern"":""FORM""},{""offset"":8,""pattern"":""CMUS""}]"	
+image	.yuv, .yuvn, .iff		IFF YUV Image	"[{""offset"":0,""pattern"":""FORM""},{""offset"":8,""pattern"":""YUVN""}]"	
+video	.iff		Amiga Fantavision Movie	"[{""offset"":0,""pattern"":""FORM""},{""offset"":8,""pattern"":""FANT""}]"	
+audio	.aif, .aifc, .aiff, .iff, .snd	audio/basic, audio/x-aiff	Audio Interchange File	"[{""offset"":0,""pattern"":""FORM""},{""offset"":8,""pattern"":""AIFF""}]"	
+metadata	.xml	application/xml, text/xml	eXtensible Markup Language (XML) File	"[{""offset"":0,""pattern"":""<?xml ""}]"	
+metadata	.xml	application/xml, text/xml	eXtensible Markup Language (XML) File	"[{""offset"":0,""pattern"":""<\u0000?\u0000x\u0000m\u0000l\u0000 ""}]"	
+metadata	.xml	application/xml, text/xml	eXtensible Markup Language (XML) File	"[{""offset"":0,""pattern"":""\u0000<\u0000?\u0000x\u0000m\u0000l\u0000 ""}]"	
+metadata	.xml	application/xml, text/xml	eXtensible Markup Language (XML) File	"[{""offset"":0,""pattern"":""<\u0000\u0000\u0000?\u0000\u0000\u0000x\u0000\u0000\u0000m\u0000\u0000\u0000l\u0000\u0000\u0000 \u0000\u0000\u0000""}]"	
+metadata	.xml	application/xml, text/xml	eXtensible Markup Language (XML) File	"[{""offset"":0,""pattern"":""\u0000\u0000\u0000<\u0000\u0000\u0000?\u0000\u0000\u0000x\u0000\u0000\u0000m\u0000\u0000\u0000l\u0000\u0000\u0000 ""}]"	
+metadata	.xml	application/xml, text/xml	eXtensible Markup Language (XML) File	"[{""offset"":0,""pattern"":""Lo§@""}]"	
+archive	.wim, .swm, .esd	application/x-ms-wim	Windows Imaging Format File	"[{""offset"":0,""pattern"":""MSWIM\u0000\u0000\u0000Ð\u0000\u0000\u0000\u0000""}]"	
+image	.webp	image/webp	WebP Image	"[{""offset"":0,""pattern"":""RIFF""},{""offset"":8,""pattern"":""WEBP""}]"	
+image	.psd	image/vnd.adobe.photoshop	Adobe Photoshop Document File	"[{""offset"":0,""pattern"":""8BPS""}]"	
+image	.bmp	image/bmp, image/x-ms-bmp	BMP Image	"[{""offset"":0,""pattern"":""BM""}]"	
+executable	.wasm	application/wasm	WebAssembly Binary	"[{""offset"":0,""pattern"":""\u0000asm""}]"	
+image	.jpg, .jpeg	image/jpeg	Joint Photographic Experts Group (JPEG) Image	"[{""offset"":0,""pattern"":""ÿØÿÛ""}]"	DB
+image	.jpg, .jpeg	image/jpeg	Joint Photographic Experts Group (JPEG) Image	"[{""offset"":0,""pattern"":""ÿØÿà""}]"	E0
+image	.jpg, .jpeg	image/jpeg	Joint Photographic Experts Group (JPEG) Image	"[{""offset"":0,""pattern"":""ÿØÿî""}]"	EE
+image	.jpg, .jpeg	image/jpeg	JPEG JFIF Image	"[{""offset"":0,""pattern"":""ÿØÿà\u0000\u0010JFIF\u0000\u0001""}]"	
+image	.jpg, .jpeg	image/jpeg	JPEG Exif Image	"[{""offset"":0,""pattern"":""ÿØÿá""},{""offset"":6,""pattern"":""Exif\u0000\u0000""}]"	
+compressed	.lz	application/x-lzip	LZip Archive	"[{""offset"":0,""pattern"":""LZIP""}]"	
+compressed	.cpio	application/x-cpio	cpio Archive	"[{""offset"":0,""pattern"":""070707""}]"	
 executable	.exe	application/x-dosexec, application/x-msdos-program, application/x-msdownload	MS-DOS Executable	"[{""offset"":0,""pattern"":""MZ""}]"	MZ
 executable	.exe	application/x-dosexec, application/x-msdos-program, application/x-msdownload	MS-DOS Executable	"[{""offset"":0,""pattern"":""ZM""}]"	ZM
-	.rar	application/vnd.rar, application/x-rar-compressed	Roshal Archive V1.50	"[{""offset"":0,""pattern"":""Rar!\u001a\u0007\u0000""}]"	
-	.rar	application/vnd.rar, application/x-rar-compressed	Roshal Archive V5.00	"[{""offset"":0,""pattern"":""Rar!\u001a\u0007\u0001\u0000""}]"	
-			Executable & Linkable Format	"[{""offset"":0,""pattern"":""ELF""}]"	
-	.png	image/png	Portable Network Graphics (PNG) Image	"[{""offset"":0,""pattern"":""PNG\r\n\u001a\n""}]"	
-	.com	application/x-msdownload	CP/M 3 File	"[{""offset"":0,""pattern"":""É""}]"	
-	.d64		Commodore 64 1541 Disk Image (D64 Format)	"[{""offset"":91556,""pattern"":"" 2A   ""}]"	
-	.g64		Commodore 64 1541 Disk Image (G64 Format)	"[{""offset"":0,""pattern"":""GSR-1541""}]"	
-	.d81		Commodore 64 1581 Disk Image (D81 Format)	"[{""offset"":399385,""pattern"":"" 3D  ""}]"	
-	.t64		Commodore 64 Tape Image	"[{""offset"":0,""pattern"":""C64 tape image file""}]"	
-	.crt		Commodore 64 Cartridge Image	"[{""offset"":0,""pattern"":""C64 CARTRIDGE   ""}]"	
-	.class	application/java-vm	Java Class File	"[{""offset"":0,""pattern"":""Êþº¾""}]"	
-	.class		Mach-O Fat Binary	"[{""offset"":0,""pattern"":""Êþº¾""}]"	
-			Mach-O Binary	"[{""offset"":0,""pattern"":""þíúÎ""}]"	32-Bit, Head 0
-			Mach-O Binary	"[{""offset"":4096,""pattern"":""þíúÎ""}]"	32-Bit, Head 4096
-			Mach-O Binary	"[{""offset"":0,""pattern"":""þíúÏ""}]"	64-Bit, Head 0
-			Mach-O Binary	"[{""offset"":4096,""pattern"":""þíúÏ""}]"	64-Bit, Head 4096
-			Mach-O Binary	"[{""offset"":0,""pattern"":""Îúíþ""}]"	32-Bit, Reverse Byte Ordering Scheme
-			Mach-O Binary	"[{""offset"":0,""pattern"":""Ïúíþ""}]"	64-Bit, Reverse Byte Ordering Scheme
-	.jks		Java Key Store File	"[{""offset"":0,""pattern"":""þíþí""}]"	
-	.ps	application/postscript	PostScript Document	"[{""offset"":0,""pattern"":""%!PS""}]"	
-	.eps, .epsf	application/postscript	Encapsulated PostScript File Version 3.0	"[{""offset"":0,""pattern"":""%!PS-Adobe-3.0 EPSF-3.0""}]"	
-	.eps, .epsf	application/postscript	Encapsulated PostScript File Version 3.1	"[{""offset"":0,""pattern"":""%!PS-Adobe-3.1 EPSF-3.0""}]"	
-	.chm	application/vnd.ms-htmlhelp	Windows HTML Help Data	"[{""offset"":0,""pattern"":""ITSF\u0003\u0000\u0000\u0000`\u0000\u0000\u0000""}]"	
-	.hlp	application/winhlp	Windows Help file	"[{""offset"":0,""pattern"":""?_""}]"	Short
-	.hlp	application/winhlp	Windows Help file	"[{""offset"":6,""pattern"":""\u0000\u0000ÿÿÿÿ""}]"	Long
-	.pdf	application/pdf	Portable Document Format (PDF) File	"[{""offset"":0,""pattern"":""%PDF-""}]"	
-	.asf, .wma, .wmv	video/x-ms-asf	Advanced Systems Format Video	"[{""offset"":0,""pattern"":""0&²ufÏ\u0011¦Ù\u0000ª\u0000bÎl""}]"	
-			System Deployment Image	"[{""offset"":0,""pattern"":""$SDI0001""}]"	
-	.ogg, .oga	audio/ogg	Ogg Audio	"[{""offset"":0,""pattern"":""OggS""}]"	
-	.ogv	video/ogg	Ogg Video	"[{""offset"":0,""pattern"":""OggS""}]"	
+archive	.rar	application/vnd.rar, application/x-rar-compressed	Roshal Archive V1.50	"[{""offset"":0,""pattern"":""Rar!\u001a\u0007\u0000""}]"	
+archive	.rar	application/vnd.rar, application/x-rar-compressed	Roshal Archive V5.00	"[{""offset"":0,""pattern"":""Rar!\u001a\u0007\u0001\u0000""}]"	
+executable	.elf	application/x-executable	Executable & Linkable Format	"[{""offset"":0,""pattern"":""ELF""}]"	
+image	.png	image/png	Portable Network Graphics (PNG) Image	"[{""offset"":0,""pattern"":""PNG\r\n\u001a\n""}]"	
+other	.com	application/x-msdownload	CP/M 3 File	"[{""offset"":0,""pattern"":""É""}]"	
+image	.d64		Commodore 64 1541 Disk Image (D64 Format)	"[{""offset"":91556,""pattern"":"" 2A   ""}]"	
+image	.g64		Commodore 64 1541 Disk Image (G64 Format)	"[{""offset"":0,""pattern"":""GSR-1541""}]"	
+image	.d81		Commodore 64 1581 Disk Image (D81 Format)	"[{""offset"":399385,""pattern"":"" 3D  ""}]"	
+image	.t64		Commodore 64 Tape Image	"[{""offset"":0,""pattern"":""C64 tape image file""}]"	
+rom	.crt	application/x-commodore-64-cartridge	Commodore 64 Cartridge Image	"[{""offset"":0,""pattern"":""C64 CARTRIDGE   ""}]"	
+executable	.class	application/java-vm	Java Class File	"[{""offset"":0,""pattern"":""Êþº¾""}]"	
+executable	.class		Mach-O Fat Binary	"[{""offset"":0,""pattern"":""Êþº¾""}]"	
+executable	.mach	application/x-mach-binary	Mach-O Binary	"[{""offset"":0,""pattern"":""þíúÎ""}]"	32-Bit, Head 0
+executable	.mach	application/x-mach-binary	Mach-O Binary	"[{""offset"":4096,""pattern"":""þíúÎ""}]"	32-Bit, Head 4096
+executable	.mach	application/x-mach-binary	Mach-O Binary	"[{""offset"":0,""pattern"":""þíúÏ""}]"	64-Bit, Head 0
+executable	.mach	application/x-mach-binary	Mach-O Binary	"[{""offset"":4096,""pattern"":""þíúÏ""}]"	64-Bit, Head 4096
+executable	.mach	application/x-mach-binary	Mach-O Binary	"[{""offset"":0,""pattern"":""Îúíþ""}]"	32-Bit, Reverse Byte Ordering Scheme
+executable	.mach	application/x-mach-binary	Mach-O Binary	"[{""offset"":0,""pattern"":""Ïúíþ""}]"	64-Bit, Reverse Byte Ordering Scheme
+other	.jks	application/x-java-keystore	Java KeyStore File	"[{""offset"":0,""pattern"":""þíþí""}]"	
+document	.ps	application/postscript	PostScript Document	"[{""offset"":0,""pattern"":""%!PS""}]"	
+image	.eps, .epsf	application/eps	Encapsulated PostScript File Version 3.0	"[{""offset"":0,""pattern"":""%!PS-Adobe-3.0 EPSF-3.0""}]"	
+image	.eps, .epsf	application/eps	Encapsulated PostScript File Version 3.1	"[{""offset"":0,""pattern"":""%!PS-Adobe-3.1 EPSF-3.0""}]"	
+other	.chm	application/vnd.ms-htmlhelp	Microsoft Compiled HTML Help Data	"[{""offset"":0,""pattern"":""ITSF\u0003\u0000\u0000\u0000`\u0000\u0000\u0000""}]"	
+other	.hlp	application/winhlp	Windows Help File	"[{""offset"":0,""pattern"":""?_""}]"	Short
+other	.hlp	application/winhlp	Windows Help File	"[{""offset"":6,""pattern"":""\u0000\u0000ÿÿÿÿ""}]"	Long
+document	.pdf	application/pdf	Portable Document Format (PDF) File	"[{""offset"":0,""pattern"":""%PDF-""}]"	
+other	.asf	application/vnd.ms-asf, video/x-ms-asf	Advanced Systems Format Video	"[{""offset"":0,""pattern"":""0&²ufÏ\u0011¦Ù\u0000ª\u0000bÎl""}]"	
+audio	.wma	audio/x-ms-wma	Windows Media Audio	"[{""offset"":0,""pattern"":""0&²ufÏ\u0011¦Ù\u0000ª\u0000bÎl""}]"	
+video	.wmv	video/x-ms-wmv	Windows Media Video	"[{""offset"":0,""pattern"":""0&²ufÏ\u0011¦Ù\u0000ª\u0000bÎl""}]"	
+image			System Deployment Image	"[{""offset"":0,""pattern"":""$SDI0001""}]"	
+audio	.ogg	audio/ogg	Ogg Vorbis Audio	"[{""offset"":0,""pattern"":""OggS""},{""offset"":28,""pattern"":""\u0001vorbis""}]"	
+audio	.oga	audio/ogg	Ogg FLAC Audio	"[{""offset"":0,""pattern"":""OggS""},{""offset"":28,""pattern"":""FLAC""}]"	
+video	.ogv	video/ogg	Ogg Theora Video	"[{""offset"":0,""pattern"":""OggS""},{""offset"":28,""pattern"":""theora""}]"	
 	.wav	audio/wav, audio/wave, audio/x-wav, audio/vnd.wave, audio/x-pn-wav	Waveform Audio	"[{""offset"":0,""pattern"":""RIFF""},{""offset"":8,""pattern"":""WAVE""}]"	
 	.avi	video/x-msvideo	Audio Video Interleave (AVI)	"[{""offset"":0,""pattern"":""RIFF""},{""offset"":8,""pattern"":""AVI ""}]"	
 	.mp3	audio/mp3	MP3 Audio	"[{""offset"":0,""pattern"":""ÿûÿóÿò""}]"	
@@ -307,7 +310,7 @@ compressed	.gz, .tar.gz	application/gzip	GZip Archive	"[{""offset"":0,""pattern"
 	.dir, .dxr, .drx	application/x-director	Macromedia Director File	"[{""offset"":0,""pattern"":""RIFX""},{""offset"":8,""pattern"":""MV93""}]"	BE
 	.dir, .dxr, .drx	application/x-director	Macromedia Director File	"[{""offset"":0,""pattern"":""XFIR""},{""offset"":8,""pattern"":""39VM""}]"	LE
 	.flv	video/x-flv	Flash Video	"[{""offset"":0,""pattern"":""FLV""}]"	
-	.vdi	application/x-virtualbox-vdi	VirtualBox Virtual Hard Disk File	"[{""offset"":0,""pattern"":""<<< Oracle VM VirtualBox Disk Image >>>""}]"	
+disk	.vdi	application/x-virtualbox-vdi	VirtualBox Virtual Hard Disk File	"[{""offset"":0,""pattern"":""<<< Oracle VM VirtualBox Disk Image >>>""}]"	
 	.vhd	application/x-virtualbox-vhd	Windows Virtual PC Virtual Hard Disk File	"[{""offset"":0,""pattern"":""connectix""}]"	
 	.vhdx		Windows Virtual PC Windows 8 Virtual Hard Disk File	"[{""offset"":0,""pattern"":""vhdxfile""}]"	
 	.isz		Compressed ISO Image	"[{""offset"":0,""pattern"":""IsZ!""}]"	
@@ -378,6 +381,18 @@ compressed	.gz, .tar.gz	application/gzip	GZip Archive	"[{""offset"":0,""pattern"
 	.sav		SPSS Statistics Data File	"[{""offset"":0,""pattern"":""$FL2@(#) SPSS DATA FILE""}]"	
 	.hqx		Macintosh BinHex 4 Compressed Archive	"[{""offset"":0,""pattern"":""(This file must be converted with BinHex ""}]"	
 other	.log	text/plain, text/x-log	Symantec Wise Installer Log File	"[{""offset"":0,""pattern"":""***  Installation Started ""}]"	
-other	.sln	application/vnd.ms-developer	Microsoft Visual Studio Solution	"[{""offset"":0,""pattern"":""ï»¿\r\nMicrosoft Visual Studio Solution File, Format Version ""}]"	BOM CRLF
-other	.sln	application/vnd.ms-developer	Microsoft Visual Studio Solution	"[{""offset"":0,""pattern"":""ï»¿\nMicrosoft Visual Studio Solution File, Format Version ""}]"	BOM LF
+other	.sln	application/vnd.ms-developer	Microsoft Visual Studio Solution	"[{""offset"":0,""pattern"":""ï»¿\r\nMicrosoft Visual Studio Solution File, Format Version ""}]"	BOM, CRLF
+other	.sln	application/vnd.ms-developer	Microsoft Visual Studio Solution	"[{""offset"":0,""pattern"":""ï»¿\nMicrosoft Visual Studio Solution File, Format Version ""}]"	BOM, LF
 other	.sln	application/vnd.ms-developer	Microsoft Visual Studio Solution	"[{""offset"":0,""pattern"":""Microsoft Visual Studio Solution File, Format Version ""}]"	Plain
+archive	.lzs	application/x-lzh-compressed	LArc	"[{""offset"":2,""pattern"":""-lz2-""}]"	2
+archive	.lzs	application/x-lzh-compressed	LArc	"[{""offset"":2,""pattern"":""-lz3-""}]"	3
+archive	.lzs	application/x-lzh-compressed	LArc	"[{""offset"":2,""pattern"":""-lz4-""}]"	4
+archive	.lzs	application/x-lzh-compressed	LArc	"[{""offset"":2,""pattern"":""-lz5-""}]"	5
+archive	.lzs	application/x-lzh-compressed	LArc	"[{""offset"":2,""pattern"":""-lz7-""}]"	7
+archive	.lzs	application/x-lzh-compressed	LArc	"[{""offset"":2,""pattern"":""-lz8-""}]"	8
+archive	.lzs	application/x-lzh-compressed	LArc	"[{""offset"":2,""pattern"":""-lzs-""}]"	s
+document	.abw	application/x-abiword	AbiWord Document	"[{""offset"":0,""pattern"":""ï»¿<!DOCTYPE abiword PUBLIC""},{""offset"":102,""pattern"":""<abiword template=\""false\""""}]"	BOM, DOCTYPE
+document	.abw	application/x-abiword	AbiWord Document	"[{""offset"":0,""pattern"":""<!DOCTYPE abiword PUBLIC""},{""offset"":102,""pattern"":""<abiword template=\""false\""""}]"	DOCTYPE
+document	.abw	application/x-abiword	AbiWord Document	"[{""offset"":0,""pattern"":""ï»¿<abiword template=\""false\""""}]"	BOM, Short
+document	.abw	application/x-abiword	AbiWord Document	"[{""offset"":0,""pattern"":""<abiword template=\""false\""""}]"	Short
+ebook	.lit	application/x-ms-reader	Microsoft Reader	"[{""offset"":0,""pattern"":""ITOLITLS\u0001\u0000\u0000\u0000(\u0000\u0000\u0000""},{""offset"":24,""pattern"":""Á\u0007\nv@Ó\u0011\u0000\u0000ø\u0010WT""}]"	

@@ -939,19 +939,22 @@
   signature:
     - offset: 0
       pattern: "v/1\x01"
-- extensions:
+- category: "image"
+  extensions:
     - ".bpg"
-  mimes: []
+  mimes:
+    - "image/bpg"
   name: "Better Portable Graphic (BPG)"
   signature:
     - offset: 0
       pattern: "BPGû"
 - &ISOGroup
+  category: "disk"
   extensions:
     - ".iso"
   mimes:
     - "application/x-iso9660-image"
-  name: "ISO9660 CD/DVD Image"
+  name: "ISO 9660 CD/DVD Image"
   signature:
     - offset: 0x8001
       pattern: &ISO9660ImageMagicBytes "CD001"
@@ -966,14 +969,17 @@
     - offset: 0x9001
       pattern: *ISO9660ImageMagicBytes
   variant: "3"
-- extensions:
+- category: "image"
+  extensions:
     - ".qoi"
-  mimes: []
+  mimes:
+    - "image/x-qoi"
   name: "Quite OK Image (QOI)"
   signature:
     - offset: 0
       pattern: "qoif"
-- extensions:
+- category: "image"
+  extensions:
     - ".ilbm"
     - ".lbm"
     - ".ibm"
@@ -985,7 +991,8 @@
       pattern: "FORM"
     - offset: 8
       pattern: "ILBM"
-- extensions:
+- category: "audio"
+  extensions:
     - ".8svx"
     - ".8sv"
     - ".svx"
@@ -993,13 +1000,15 @@
     - ".iff"
   mimes:
     - "audio/basic"
+    - "audio/x-8svx"
   name: "IFF 8-Bit Sampled Voice"
   signature:
     - offset: 0
       pattern: "FORM"
     - offset: 8
       pattern: "8SVX"
-- extensions:
+- category: "image"
+  extensions:
     - ".acbm"
     - ".iff"
   mimes: []
@@ -1009,7 +1018,8 @@
       pattern: "FORM"
     - offset: 8
       pattern: "ACBM"
-- extensions:
+- category: "image"
+  extensions:
     - ".anbm"
     - ".iff"
   mimes: []
@@ -1019,7 +1029,8 @@
       pattern: "FORM"
     - offset: 8
       pattern: "ANBM"
-- extensions:
+- category: "other"
+  extensions:
     - ".anim"
     - ".iff"
   mimes: []
@@ -1029,7 +1040,8 @@
       pattern: "FORM"
     - offset: 8
       pattern: "ANIM"
-- extensions:
+- category: "image"
+  extensions:
     - ".faxx"
     - ".fax"
     - ".iff"
@@ -1040,7 +1052,8 @@
       pattern: "FORM"
     - offset: 8
       pattern: "FAXX"
-- extensions:
+- category: "document"
+  extensions:
     - ".ftxt"
     - ".iff"
   mimes: []
@@ -1050,7 +1063,8 @@
       pattern: "FORM"
     - offset: 8
       pattern: "FTXT"
-- extensions:
+- category: "other"
+  extensions:
     - ".smus"
     - ".smu"
     - ".mus"
@@ -1063,7 +1077,8 @@
       pattern: "FORM"
     - offset: 8
       pattern: "SMUS"
-- extensions:
+- category: "other"
+  extensions:
     - ".cmus"
     - ".mus"
     - ".iff"
@@ -1075,7 +1090,8 @@
       pattern: "FORM"
     - offset: 8
       pattern: "CMUS"
-- extensions:
+- category: "image"
+  extensions:
     - ".yuv"
     - ".yuvn"
     - ".iff"
@@ -1086,7 +1102,8 @@
       pattern: "FORM"
     - offset: 8
       pattern: "YUVN"
-- extensions:
+- category: "video"
+  extensions:
     - ".iff"
   mimes: []
   name: "Amiga Fantavision Movie"
@@ -1095,15 +1112,16 @@
       pattern: "FORM"
     - offset: 8
       pattern: "FANT"
-- extensions:
+- category: "audio"
+  extensions:
     - ".aif"
     - ".aifc"
     - ".aiff"
     - ".iff"
     - ".snd"
   mimes:
-    - "audio/x-aiff"
     - "audio/basic"
+    - "audio/x-aiff"
   name: "Audio Interchange File"
   signature:
     - offset: 0
@@ -1111,6 +1129,7 @@
     - offset: 8
       pattern: "AIFF"
 - &XMLFileGroup
+  category: "metadata"
   extensions:
     - ".xml"
   mimes:
@@ -1120,52 +1139,50 @@
   signature:
     - offset: 0
       pattern: "<?xml "
-  variant: "1"
 - <<: *XMLFileGroup
   signature:
     - offset: 0
       pattern: "<\x00?\x00x\x00m\x00l\x00 "
-  variant: "2"
 - <<: *XMLFileGroup
   signature:
     - offset: 0
       pattern: "\x00<\x00?\x00x\x00m\x00l\x00 "
-  variant: "3"
 - <<: *XMLFileGroup
   signature:
     - offset: 0
       pattern: "<\x00\x00\x00?\x00\x00\x00x\x00\x00\x00m\x00\x00\x00l\x00\x00\x00 \x00\x00\x00"
-  variant: "4"
 - <<: *XMLFileGroup
   signature:
     - offset: 0
       pattern: "\x00\x00\x00<\x00\x00\x00?\x00\x00\x00x\x00\x00\x00m\x00\x00\x00l\x00\x00\x00 "
-  variant: "5"
 - <<: *XMLFileGroup
   signature:
     - offset: 0
       pattern: "Lo§@"
-  variant: "6"
-- extensions:
+- category: "archive"
+  extensions:
     - ".wim"
     - ".swm"
     - ".esd"
-  mimes: []
+  mimes:
+    - "application/x-ms-wim"
   name: "Windows Imaging Format File"
   signature:
     - offset: 0
       pattern: "MSWIM\x00\x00\x00Ð\x00\x00\x00\x00"
-- extensions:
+- category: "image"
+  extensions:
     - ".webp"
   mimes:
     - "image/webp"
-  name: "WebP Image File"
+  name: "WebP Image"
   signature:
     - offset: 0
       pattern: "RIFF"
     - offset: 8
       pattern: "WEBP"
-- extensions:
+- category: "image"
+  extensions:
     - ".psd"
   mimes:
     - "image/vnd.adobe.photoshop"
@@ -1173,16 +1190,18 @@
   signature:
     - offset: 0
       pattern: "8BPS"
-- extensions:
+- category: "image"
+  extensions:
     - ".bmp"
   mimes:
     - "image/bmp"
     - "image/x-ms-bmp"
-  name: "BMP Image File"
+  name: "BMP Image"
   signature:
     - offset: 0
       pattern: "BM"
-- extensions:
+- category: "executable"
+  extensions:
     - ".wasm"
   mimes:
     - "application/wasm"
@@ -1191,12 +1210,13 @@
     - offset: 0
       pattern: "\x00asm"
 - &JPEGGroup
+  category: "image"
   extensions:
     - ".jpg"
     - ".jpeg"
   mimes:
     - "image/jpeg"
-  name: "JPEG Image"
+  name: "Joint Photographic Experts Group (JPEG) Image"
   signature:
     - offset: 0
       pattern: "ÿØÿÛ"
@@ -1211,7 +1231,8 @@
     - offset: 0
       pattern: "ÿØÿî"
   variant: "EE"
-- extensions:
+- category: "image"
+  extensions:
     - ".jpg"
     - ".jpeg"
   mimes:
@@ -1220,7 +1241,8 @@
   signature:
     - offset: 0
       pattern: "ÿØÿà\x00\x10JFIF\x00\x01"
-- extensions:
+- category: "image"
+  extensions:
     - ".jpg"
     - ".jpeg"
   mimes:
@@ -1231,14 +1253,17 @@
       pattern: "ÿØÿá"
     - offset: 6
       pattern: "Exif\x00\x00"
-- extensions:
+- category: "compressed"
+  extensions:
     - ".lz"
-  mimes: []
+  mimes:
+    - "application/x-lzip"
   name: "LZip Archive"
   signature:
     - offset: 0
       pattern: "LZIP"
-- extensions:
+- category: "compressed"
+  extensions:
     - ".cpio"
   mimes:
     - "application/x-cpio"
@@ -1264,7 +1289,8 @@
     - offset: 0
       pattern: "ZM"
   variant: "ZM"
-- extensions:
+- category: "archive"
+  extensions:
     - ".rar"
   mimes: 
     - "application/vnd.rar"
@@ -1273,7 +1299,8 @@
   signature:
     - offset: 0
       pattern: "Rar!\x1A\x07\x00"
-- extensions:
+- category: "archive"
+  extensions:
     - ".rar"
   mimes: 
     - "application/vnd.rar"
@@ -1282,13 +1309,17 @@
   signature:
     - offset: 0
       pattern: "Rar!\x1A\x07\x01\x00"
-- extensions: []
-  mimes: []
+- category: "executable"
+  extensions:
+    - ".elf"
+  mimes:
+    - "application/x-executable"
   name: "Executable & Linkable Format"
   signature:
     - offset: 0
       pattern: "\x7FELF"
-- extensions:
+- category: "image"
+  extensions:
     - ".png"
   mimes:
     - "image/png"
@@ -1296,7 +1327,8 @@
   signature:
     - offset: 0
       pattern: "PNG\r\n\x1A\n"
-- extensions:
+- category: "other"
+  extensions:
     - ".com"
   mimes:
     - "application/x-msdownload"
@@ -1304,42 +1336,49 @@
   signature:
     - offset: 0
       pattern: "É"
-- extensions:
+- category: "image"
+  extensions:
     - ".d64"
   mimes: []
   name: "Commodore 64 1541 Disk Image (D64 Format)"
   signature:
     - offset: 0x165A4
       pattern: "\xA02A\xA0\xA0\xA0"
-- extensions:
+- category: "image"
+  extensions:
     - ".g64"
   mimes: []
   name: "Commodore 64 1541 Disk Image (G64 Format)"
   signature:
     - offset: 0
       pattern: "GSR-1541"
-- extensions:
+- category: "image"
+  extensions:
     - ".d81"
   mimes: []
   name: "Commodore 64 1581 Disk Image (D81 Format)"
   signature:
     - offset: 0x61819
       pattern: "\xA03D\xA0\xA0"
-- extensions:
+- category: "image"
+  extensions:
     - ".t64"
   mimes: []
   name: "Commodore 64 Tape Image"
   signature:
     - offset: 0
       pattern: "C64 tape image file"
-- extensions:
+- category: "rom"
+  extensions:
     - ".crt"
-  mimes: []
+  mimes:
+    - "application/x-commodore-64-cartridge"
   name: "Commodore 64 Cartridge Image"
   signature:
     - offset: 0
       pattern: "C64 CARTRIDGE   "
-- extensions:
+- category: "executable"
+  extensions:
     - ".class"
   mimes:
     - "application/java-vm"
@@ -1347,7 +1386,8 @@
   signature:
     - offset: 0
       pattern: "Êþº¾"
-- extensions:
+- category: "executable"
+  extensions:
     - ".class"
   mimes: []
   name: "Mach-O Fat Binary"
@@ -1355,8 +1395,11 @@
     - offset: 0
       pattern: "Êþº¾"
 - &MachOBinaryGroup
-  extensions: []
-  mimes: []
+  category: "executable"
+  extensions:
+    - ".mach"
+  mimes:
+    - "application/x-mach-binary"
   name: "Mach-O Binary"
   signature:
     - offset: 0
@@ -1387,14 +1430,17 @@
     - offset: 0
       pattern: "Ïúíþ"
   variant: "64-Bit, Reverse Byte Ordering Scheme"
-- extensions:
+- category: "other"
+  extensions:
     - ".jks"
-  mimes: []
-  name: "Java Key Store File"
+  mimes:
+    - "application/x-java-keystore"
+  name: "Java KeyStore File"
   signature:
     - offset: 0
       pattern: "þíþí"
-- extensions:
+- category: "document"
+  extensions:
     - ".ps"
   mimes:
     - "application/postscript"
@@ -1402,38 +1448,42 @@
   signature:
     - offset: 0
       pattern: "%!PS"
-- extensions:
+- category: "image"
+  extensions:
     - ".eps"
     - ".epsf"
   mimes:
-    - "application/postscript"
+    - "application/eps"
   name: "Encapsulated PostScript File Version 3.0"
   signature:
     - offset: 0
       pattern: "%!PS-Adobe-3.0 EPSF-3.0"
-- extensions:
+- category: "image"
+  extensions:
     - ".eps"
     - ".epsf"
   mimes:
-    - "application/postscript"
+    - "application/eps"
   name: "Encapsulated PostScript File Version 3.1"
   signature:
     - offset: 0
       pattern: "%!PS-Adobe-3.1 EPSF-3.0"
-- extensions:
+- category: "other"
+  extensions:
     - ".chm"
   mimes:
     - "application/vnd.ms-htmlhelp"
-  name: "Windows HTML Help Data"
+  name: "Microsoft Compiled HTML Help Data"
   signature:
     - offset: 0
       pattern: "ITSF\x03\x00\x00\x00`\x00\x00\x00"
 - &WindowsHelpFileGroup
+  category: "other"
   extensions:
     - ".hlp"
   mimes:
     - "application/winhlp"
-  name: "Windows Help file"
+  name: "Windows Help File"
   signature:
     - offset: 0
       pattern: "?_"
@@ -1443,7 +1493,8 @@
     - offset: 6
       pattern: "\x00\x00ÿÿÿÿ"
   variant: "Long"
-- extensions:
+- category: "document"
+  extensions:
     - ".pdf"
   mimes:
     - "application/pdf"
@@ -1451,39 +1502,74 @@
   signature:
     - offset: 0
       pattern: "%PDF-"
-- extensions:
+- category: "other"
+  extensions:
     - ".asf"
-    - ".wma"
-    - ".wmv"
   mimes:
+    - "application/vnd.ms-asf"
     - "video/x-ms-asf"
   name: "Advanced Systems Format Video"
   signature:
     - offset: 0
       pattern: "0&²u\x8EfÏ\x11¦Ù\x00ª\x00bÎl"
-- extensions: []
+- category: "audio"
+  extensions:
+    - ".wma"
+  mimes:
+    - "audio/x-ms-wma"
+  name: "Windows Media Audio"
+  signature:
+    - offset: 0
+      pattern: "0&²u\x8EfÏ\x11¦Ù\x00ª\x00bÎl"
+- category: "video"
+  extensions:
+    - ".wmv"
+  mimes:
+    - "video/x-ms-wmv"
+  name: "Windows Media Video"
+  signature:
+    - offset: 0
+      pattern: "0&²u\x8EfÏ\x11¦Ù\x00ª\x00bÎl"
+- category: "image"
+  extensions: []
   mimes: []
   name: "System Deployment Image"
   signature:
     - offset: 0
       pattern: "$SDI0001"
-- extensions:
+- category: "audio"
+  extensions:
     - ".ogg"
+  mimes:
+    - "audio/ogg"
+  name: "Ogg Vorbis Audio"
+  signature:
+    - offset: 0
+      pattern: "OggS"
+    - offset: 28
+      pattern: "\x01vorbis"
+- category: "audio"
+  extensions:
     - ".oga"
   mimes:
     - "audio/ogg"
-  name: "Ogg Audio"
+  name: "Ogg FLAC Audio"
   signature:
     - offset: 0
       pattern: "OggS"
-- extensions:
+    - offset: 28
+      pattern: "\x7FFLAC"
+- category: "video"
+  extensions:
     - ".ogv"
   mimes:
     - "video/ogg"
-  name: "Ogg Video"
+  name: "Ogg Theora Video"
   signature:
     - offset: 0
       pattern: "OggS"
+    - offset: 28
+      pattern: "\x80theora"
 - extensions:
     - ".wav"
   mimes:
@@ -2451,7 +2537,8 @@
   signature:
     - offset: 0
       pattern: "FLV"
-- extensions:
+- category: "disk"
+  extensions:
     - ".vdi"
   mimes:
     - "application/x-virtualbox-vdi"
@@ -2981,14 +3068,96 @@
   signature:
     - offset: 0
       pattern: "ï»¿\r\nMicrosoft Visual Studio Solution File, Format Version "
-  variant: "BOM CRLF"
+  variant: "BOM, CRLF"
 - <<: *MicrosoftVisualStudioSolutionGroup
   signature:
     - offset: 0
       pattern: "ï»¿\nMicrosoft Visual Studio Solution File, Format Version "
-  variant: "BOM LF"
+  variant: "BOM, LF"
 - <<: *MicrosoftVisualStudioSolutionGroup
   signature:
     - offset: 0
       pattern: "Microsoft Visual Studio Solution File, Format Version "
   variant: "Plain"
+- &LArcGroup
+  category: "archive"
+  extensions:
+    - ".lzs"
+  mimes:
+    - "application/x-lzh-compressed"
+  name: "LArc"
+  signature:
+    - offset: 2
+      pattern: "-lz2-"
+  variant: "2"
+- <<: *LArcGroup
+  signature:
+    - offset: 2
+      pattern: "-lz3-"
+  variant: "3"
+- <<: *LArcGroup
+  signature:
+    - offset: 2
+      pattern: "-lz4-"
+  variant: "4"
+- <<: *LArcGroup
+  signature:
+    - offset: 2
+      pattern: "-lz5-"
+  variant: "5"
+- <<: *LArcGroup
+  signature:
+    - offset: 2
+      pattern: "-lz7-"
+  variant: "7"
+- <<: *LArcGroup
+  signature:
+    - offset: 2
+      pattern: "-lz8-"
+  variant: "8"
+- <<: *LArcGroup
+  signature:
+    - offset: 2
+      pattern: "-lzs-"
+  variant: "s"
+- &AbiWordDocumentGroup
+  category: "document"
+  extensions:
+    - ".abw"
+  mimes:
+    - "application/x-abiword"
+  name: "AbiWord Document"
+  signature:
+    - offset: 0
+      pattern: "\xEF\xBB\xBF<!DOCTYPE abiword PUBLIC"
+    - offset: 102
+      pattern: "<abiword template=\"false\""
+  variant: "BOM, DOCTYPE"
+- <<: *AbiWordDocumentGroup
+  signature:
+    - offset: 0
+      pattern: "<!DOCTYPE abiword PUBLIC"
+    - offset: 102
+      pattern: "<abiword template=\"false\""
+  variant: "DOCTYPE"
+- <<: *AbiWordDocumentGroup
+  signature:
+    - offset: 0
+      pattern: "\xEF\xBB\xBF<abiword template=\"false\""
+  variant: "BOM, Short"
+- <<: *AbiWordDocumentGroup
+  signature:
+    - offset: 0
+      pattern: "<abiword template=\"false\""
+  variant: "Short"
+- category: "ebook"
+  extensions:
+    - ".lit"
+  mimes:
+    - "application/x-ms-reader"
+  name: "Microsoft Reader"
+  signature:
+    - offset: 0
+      pattern: "ITOLITLS\x01\x00\x00\x00(\x00\x00\x00"
+    - offset: 24
+      pattern: "Á\x07\x90\nv@Ó\x11\x87\x89\x00\x00ø\x10WT"

@@ -3152,6 +3152,7 @@
 		]
 	},
 	{
+		"category": "audio",
 		"extensions": [
 			".wav"
 		],
@@ -3175,6 +3176,7 @@
 		]
 	},
 	{
+		"category": "video",
 		"extensions": [
 			".avi"
 		],
@@ -3194,13 +3196,15 @@
 		]
 	},
 	{
+		"category": "audio",
 		"extensions": [
 			".mp3"
 		],
 		"mimes": [
-			"audio/mp3"
+			"audio/mp3",
+			"audio/mpeg"
 		],
-		"name": "MP3 Audio",
+		"name": "MPEG-1/2 Audio Layer 3",
 		"signature": [
 			{
 				"offset": 0,
@@ -3209,13 +3213,14 @@
 		]
 	},
 	{
+		"category": "audio",
 		"extensions": [
 			".mp3"
 		],
 		"mimes": [
 			"audio/mpeg"
 		],
-		"name": "MP3 Audio With ID3v2 Container",
+		"name": "MPEG-1/2 Audio Layer 3 With ID3v2 Container",
 		"signature": [
 			{
 				"offset": 0,
@@ -3224,6 +3229,7 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".cdi"
 		],
@@ -3237,6 +3243,7 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".mgw"
 		],
@@ -3250,11 +3257,14 @@
 		]
 	},
 	{
+		"category": "rom",
 		"extensions": [
 			".nes"
 		],
-		"mimes": [],
-		"name": "Nintendo Entertainment System Image",
+		"mimes": [
+			"application/x-nintendo-nes-rom"
+		],
+		"name": "Nintendo Entertainment System ROM",
 		"signature": [
 			{
 				"offset": 0,
@@ -3263,6 +3273,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".fits"
 		],
@@ -3278,6 +3289,7 @@
 		]
 	},
 	{
+		"category": "audio",
 		"extensions": [
 			".flac"
 		],
@@ -3293,6 +3305,7 @@
 		]
 	},
 	{
+		"category": "audio",
 		"extensions": [
 			".mid",
 			".midi"
@@ -3300,7 +3313,7 @@
 		"mimes": [
 			"audio/midi"
 		],
-		"name": "MIDI Sound File",
+		"name": "Musical Instrument Digital Interface (MIDI) Audio",
 		"signature": [
 			{
 				"offset": 0,
@@ -3309,10 +3322,13 @@
 		]
 	},
 	{
+		"category": "executable",
 		"extensions": [
 			".dex"
 		],
-		"mimes": [],
+		"mimes": [
+			"application/vnd.android.dex"
+		],
 		"name": "Dalvik Executable",
 		"signature": [
 			{
@@ -3322,21 +3338,79 @@
 		]
 	},
 	{
+		"category": "disk",
 		"extensions": [
 			".vmdk"
 		],
 		"mimes": [
+			"application/x-vmdk",
 			"application/x-virtualbox-vmdk"
 		],
-		"name": "VMware Virtual Disk",
+		"name": "Virtual Machine Disk",
 		"signature": [
 			{
 				"offset": 0,
-				"pattern": "KDM"
+				"pattern": "COWD\u0001"
 			}
-		]
+		],
+		"variant": "COWD"
 	},
 	{
+		"category": "disk",
+		"extensions": [
+			".vmdk"
+		],
+		"mimes": [
+			"application/x-vmdk",
+			"application/x-virtualbox-vmdk"
+		],
+		"name": "Virtual Machine Disk",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "KDMV\u0001"
+			}
+		],
+		"variant": "KDMV01"
+	},
+	{
+		"category": "disk",
+		"extensions": [
+			".vmdk"
+		],
+		"mimes": [
+			"application/x-vmdk",
+			"application/x-virtualbox-vmdk"
+		],
+		"name": "Virtual Machine Disk",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "KDMV\u0002"
+			}
+		],
+		"variant": "KDMV02"
+	},
+	{
+		"category": "disk",
+		"extensions": [
+			".vmdk"
+		],
+		"mimes": [
+			"application/x-vmdk",
+			"application/x-virtualbox-vmdk"
+		],
+		"name": "Virtual Machine Disk",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "KDMV\u0003"
+			}
+		],
+		"variant": "KDMV03"
+	},
+	{
+		"category": "other",
 		"extensions": [
 			".vmdk"
 		],
@@ -3352,11 +3426,13 @@
 		]
 	},
 	{
+		"category": "package",
 		"extensions": [
 			".crx"
 		],
 		"mimes": [
-			"application/x-chrome-extension"
+			"application/x-chrome-extension",
+			"application/x-google-chrome-extension"
 		],
 		"name": "Google Chrome Extension",
 		"signature": [
@@ -3367,6 +3443,7 @@
 		]
 	},
 	{
+		"category": "document",
 		"extensions": [
 			".fh8"
 		],
@@ -3380,6 +3457,7 @@
 		]
 	},
 	{
+		"category": "document",
 		"extensions": [
 			".cwk"
 		],
@@ -3393,6 +3471,7 @@
 		]
 	},
 	{
+		"category": "document",
 		"extensions": [
 			".cwk"
 		],
@@ -3406,6 +3485,7 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".toast"
 		],
@@ -3420,6 +3500,7 @@
 		"variant": "NoPrefix"
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".toast"
 		],
@@ -3434,11 +3515,13 @@
 		"variant": "Prefix"
 	},
 	{
+		"category": "archive",
 		"extensions": [
 			".xar"
 		],
 		"mimes": [
-			"application/vnd.xara"
+			"application/vnd.xara",
+			"application/x-xar"
 		],
 		"name": "eXtensible ARchive",
 		"signature": [
@@ -3449,6 +3532,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".dat"
 		],
@@ -3462,13 +3546,14 @@
 		]
 	},
 	{
+		"category": "archive",
 		"extensions": [
 			".tar"
 		],
 		"mimes": [
 			"application/x-tar"
 		],
-		"name": "TAR Archive",
+		"name": "Tape Archive",
 		"signature": [
 			{
 				"offset": 257,
@@ -3477,6 +3562,7 @@
 		]
 	},
 	{
+		"category": "archive",
 		"extensions": [
 			".oar"
 		],
@@ -3490,6 +3576,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".tox"
 		],
@@ -3503,11 +3590,12 @@
 		]
 	},
 	{
+		"category": "video",
 		"extensions": [
 			".mlv"
 		],
 		"mimes": [],
-		"name": "Magic Lantern Video File",
+		"name": "Magic Lantern Video",
 		"signature": [
 			{
 				"offset": 0,
@@ -3516,6 +3604,7 @@
 		]
 	},
 	{
+		"category": "package",
 		"extensions": [],
 		"mimes": [],
 		"name": "Windows Update Binary Delta Compression File",
@@ -3527,6 +3616,7 @@
 		]
 	},
 	{
+		"category": "archive",
 		"extensions": [
 			".7z"
 		],
@@ -3542,10 +3632,13 @@
 		]
 	},
 	{
+		"category": "compressed",
 		"extensions": [
 			".lz4"
 		],
-		"mimes": [],
+		"mimes": [
+			"application/x-lz4"
+		],
 		"name": "LZ4 Frame File",
 		"signature": [
 			{
@@ -3555,25 +3648,13 @@
 		]
 	},
 	{
-		"extensions": [
-			".cab"
-		],
-		"mimes": [
-			"application/vnd.ms-cab-compressed"
-		],
-		"name": "Microsoft Cabinet File",
-		"signature": [
-			{
-				"offset": 0,
-				"pattern": "MSCF"
-			}
-		]
-	},
-	{
+		"category": "image",
 		"extensions": [
 			".flif"
 		],
-		"mimes": [],
+		"mimes": [
+			"image/flif"
+		],
 		"name": "Free Lossless Image Format (FLIF) File",
 		"signature": [
 			{
@@ -3583,6 +3664,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".stg"
 		],
@@ -3612,6 +3694,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".ppk"
 		],
@@ -3625,6 +3708,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".ppk"
 		],
@@ -3638,6 +3722,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [],
 		"mimes": [],
 		"name": "OpenSSH Private Key File",
@@ -3649,10 +3734,13 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".pub"
 		],
-		"mimes": [],
+		"mimes": [
+			"application/x-pem-file"
+		],
 		"name": "OpenSSH Public Key File",
 		"signature": [
 			{
@@ -3662,11 +3750,14 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".dcm"
 		],
-		"mimes": [],
-		"name": "DICOM Medical File Format",
+		"mimes": [
+			"application/dicom"
+		],
+		"name": "Digital Imaging and Communications in Medicine (DICOM) Medical File Format",
 		"signature": [
 			{
 				"offset": 128,
@@ -3675,13 +3766,14 @@
 		]
 	},
 	{
+		"category": "font",
 		"extensions": [
 			".woff"
 		],
 		"mimes": [
 			"font/woff"
 		],
-		"name": "WOFF 1.0 Font",
+		"name": "Web Open Font Format (WOFF) 1.0",
 		"signature": [
 			{
 				"offset": 0,
@@ -3690,13 +3782,14 @@
 		]
 	},
 	{
+		"category": "font",
 		"extensions": [
 			".woff2"
 		],
 		"mimes": [
 			"font/woff2"
 		],
-		"name": "WOFF 2.0 Font",
+		"name": "Web Open Font Format (WOFF) 2.0",
 		"signature": [
 			{
 				"offset": 0,
@@ -3705,6 +3798,7 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".lep"
 		],
@@ -3718,21 +3812,24 @@
 		]
 	},
 	{
+		"category": "package",
 		"extensions": [
 			".deb"
 		],
 		"mimes": [
+			"application/vnd.debian.binary-package",
 			"application/x-debian-package"
 		],
-		"name": "Linux Deb File",
+		"name": "Debian Package",
 		"signature": [
 			{
 				"offset": 0,
-				"pattern": "!<arch>\n"
+				"pattern": "!<arch>\ndebian-binary"
 			}
 		]
 	},
 	{
+		"category": "document",
 		"extensions": [
 			".rtf"
 		],
@@ -3753,6 +3850,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [],
 		"mimes": [],
 		"name": "Microsoft Tape File",
@@ -3764,29 +3862,35 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".mp4"
 		],
 		"mimes": [
+			"application/mp4",
+			"audio/mp4",
 			"video/mp4"
 		],
-		"name": "MPEG-4 Video",
+		"name": "MPEG-4",
 		"signature": [
 			{
 				"offset": 4,
-				"pattern": "ftypisom"
+				"pattern": "ftypARRI"
 			}
 		],
-		"variant": "isom"
+		"variant": "ARRI"
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".mp4"
 		],
 		"mimes": [
+			"application/mp4",
+			"audio/mp4",
 			"video/mp4"
 		],
-		"name": "MPEG-4 Video",
+		"name": "MPEG-4",
 		"signature": [
 			{
 				"offset": 4,
@@ -3796,6 +3900,520 @@
 		"variant": "MSNV"
 	},
 	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypNDAS"
+			}
+		],
+		"variant": "NDAS"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypNDSC"
+			}
+		],
+		"variant": "NDSC"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypNDSH"
+			}
+		],
+		"variant": "NDSH"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypNDSM"
+			}
+		],
+		"variant": "NDSM"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypNDSP"
+			}
+		],
+		"variant": "NDSP"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypNDSS"
+			}
+		],
+		"variant": "NDSS"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypNDXC"
+			}
+		],
+		"variant": "NDXC"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypNDXH"
+			}
+		],
+		"variant": "NDXH"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypNDXM"
+			}
+		],
+		"variant": "NDXM"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypNDXP"
+			}
+		],
+		"variant": "NDXP"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypNDXS"
+			}
+		],
+		"variant": "NDXS"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypXAVC"
+			}
+		],
+		"variant": "XAVC"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypavc1"
+			}
+		],
+		"variant": "avc1"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypdash"
+			}
+		],
+		"variant": "dash"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypiso2"
+			}
+		],
+		"variant": "iso2"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypiso3"
+			}
+		],
+		"variant": "iso3"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypiso4"
+			}
+		],
+		"variant": "iso4"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypiso5"
+			}
+		],
+		"variant": "iso5"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypiso6"
+			}
+		],
+		"variant": "iso6"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypisom"
+			}
+		],
+		"variant": "isom"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypmmp4"
+			}
+		],
+		"variant": "mmp4"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypmobi"
+			}
+		],
+		"variant": "mobi"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypmp21"
+			}
+		],
+		"variant": "mp21"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypmp41"
+			}
+		],
+		"variant": "mp41"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypmp42"
+			}
+		],
+		"variant": "mp42"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypmp4v"
+			}
+		],
+		"variant": "mp4v"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypmp71"
+			}
+		],
+		"variant": "mp71"
+	},
+	{
+		"category": "other",
 		"extensions": [
 			".orc"
 		],
@@ -3809,6 +4427,7 @@
 		]
 	},
 	{
+		"category": "playlist",
 		"extensions": [
 			".m3u8",
 			".m3u"
@@ -3826,6 +4445,7 @@
 		]
 	},
 	{
+		"category": "archive",
 		"extensions": [
 			".m"
 		],
@@ -3839,6 +4459,7 @@
 		]
 	},
 	{
+		"category": "archive",
 		"extensions": [
 			".pak"
 		],
@@ -3852,6 +4473,7 @@
 		]
 	},
 	{
+		"category": "archive",
 		"extensions": [
 			".arc"
 		],
@@ -3865,6 +4487,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".pl"
 		],
@@ -3878,6 +4501,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".nii"
 		],
@@ -3891,6 +4515,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".hdr"
 		],
@@ -3904,6 +4529,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [],
 		"mimes": [],
 		"name": "Digital Metaphors Report Builder File",
@@ -3915,6 +4541,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [],
 		"mimes": [],
 		"name": "Visionaire 3 Engine Resource File",
@@ -3926,6 +4553,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".pwrdata"
 		],
@@ -3939,6 +4567,7 @@
 		]
 	},
 	{
+		"category": "archive",
 		"extensions": [
 			".arc"
 		],
@@ -3954,6 +4583,87 @@
 		]
 	},
 	{
+		"category": "other",
+		"extensions": [
+			".asc"
+		],
+		"mimes": [
+			"application/pgp"
+		],
+		"name": "PGP Message",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "-----BEGIN PGP MESSAGE-----"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".asc"
+		],
+		"mimes": [
+			"application/pgp-keys"
+		],
+		"name": "PGP Private Key Block",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "-----BEGIN PGP PRIVATE KEY BLOCK-----"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".asc"
+		],
+		"mimes": [
+			"application/pgp-keys"
+		],
+		"name": "PGP Public Key Block",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "-----BEGIN PGP PUBLIC KEY BLOCK-----"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".asc"
+		],
+		"mimes": [
+			"application/pgp-signature"
+		],
+		"name": "PGP Signature",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "-----BEGIN PGP SIGNATURE-----"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".asc"
+		],
+		"mimes": [
+			"application/pgp"
+		],
+		"name": "PGP Signed Message",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "-----BEGIN PGP SIGNED MESSAGE-----"
+			}
+		]
+	},
+	{
+		"category": "other",
 		"extensions": [
 			".asc"
 		],
@@ -3970,6 +4680,7 @@
 		]
 	},
 	{
+		"category": "document",
 		"extensions": [
 			".cnt"
 		],
@@ -3983,6 +4694,7 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".nri"
 		],
@@ -3996,6 +4708,7 @@
 		]
 	},
 	{
+		"category": "spreadsheet",
 		"extensions": [
 			".wks"
 		],
@@ -4009,6 +4722,41 @@
 		]
 	},
 	{
+		"category": "spreadsheet",
+		"extensions": [
+			".wks"
+		],
+		"mimes": [
+			"application/vnd.ms-works"
+		],
+		"name": "Microsoft Works Spreadsheet",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0000\u0000\u0002\u0000\u0004\u0004\u0005T\u0002\u0000"
+			}
+		],
+		"variant": "00"
+	},
+	{
+		"category": "spreadsheet",
+		"extensions": [
+			".wks"
+		],
+		"mimes": [
+			"application/vnd.ms-works"
+		],
+		"name": "Microsoft Works Spreadsheet",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ÿ\u0000\u0002\u0000\u0004\u0004\u0005T\u0002\u0000"
+			}
+		],
+		"variant": "FF"
+	},
+	{
+		"category": "other",
 		"extensions": [
 			".sib"
 		],
@@ -4039,6 +4787,7 @@
 		]
 	},
 	{
+		"category": "compressed",
 		"extensions": [
 			".xz",
 			".tar.xz"
@@ -4055,11 +4804,13 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".crt",
 			".pem"
 		],
 		"mimes": [
+			"application/x-pem-file",
 			"application/x-x509-ca-cert"
 		],
 		"name": "PEM Encoded X.509 Certificate File",
@@ -4071,11 +4822,14 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".csr",
 			".pem"
 		],
-		"mimes": [],
+		"mimes": [
+			"application/x-pem-file"
+		],
 		"name": "PEM Encoded X.509 Certificate Signing Request File",
 		"signature": [
 			{
@@ -4085,11 +4839,14 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".key",
 			".pem"
 		],
-		"mimes": [],
+		"mimes": [
+			"application/x-pem-file"
+		],
 		"name": "Pem Encoded X.509 PKCS#8 Private Key File",
 		"signature": [
 			{
@@ -4099,11 +4856,14 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".key",
 			".pem"
 		],
-		"mimes": [],
+		"mimes": [
+			"application/x-pem-file"
+		],
 		"name": "PEM Encoded X.509 PKCS#1 DSA Private Key File",
 		"signature": [
 			{
@@ -4113,11 +4873,14 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".key",
 			".pem"
 		],
-		"mimes": [],
+		"mimes": [
+			"application/x-pem-file"
+		],
 		"name": "PEM Encoded X.509 PKCS#1 RSA Private Key File",
 		"signature": [
 			{
@@ -4127,6 +4890,7 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".tga"
 		],
@@ -4142,6 +4906,7 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".avif"
 		],
@@ -4151,12 +4916,29 @@
 		"name": "Alliance for Open Media (AOMedia) Video 1 (AV1) Image",
 		"signature": [
 			{
-				"offset": 0,
-				"pattern": "\u0000\u0000\u0000"
+				"offset": 4,
+				"pattern": "ftypavif"
 			}
 		]
 	},
 	{
+		"category": "image",
+		"extensions": [
+			".avifs"
+		],
+		"mimes": [
+			"image/avif-sequence"
+		],
+		"name": "Alliance for Open Media (AOMedia) Video 1 (AV1) Image Sequence",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypavis"
+			}
+		]
+	},
+	{
+		"category": "other",
 		"extensions": [
 			".xxx"
 		],
@@ -4170,6 +4952,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".rvt"
 		],
@@ -4183,6 +4966,7 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".tbi"
 		],
@@ -4196,6 +4980,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".dat"
 		],
@@ -4209,6 +4994,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".bsb"
 		],
@@ -4222,6 +5008,7 @@
 		]
 	},
 	{
+		"category": "ebook",
 		"extensions": [
 			".epub"
 		],
@@ -4241,6 +5028,7 @@
 		]
 	},
 	{
+		"category": "document",
 		"extensions": [
 			".doc"
 		],
@@ -4256,13 +5044,14 @@
 		]
 	},
 	{
+		"category": "spreadsheet",
 		"extensions": [
 			".xls"
 		],
 		"mimes": [
 			"application/vnd.ms-excel"
 		],
-		"name": "Microsoft Office Excel Document",
+		"name": "Microsoft Office Excel Spreadsheet",
 		"signature": [
 			{
 				"offset": 0,
@@ -4271,6 +5060,7 @@
 		]
 	},
 	{
+		"category": "presentation",
 		"extensions": [
 			".ppt"
 		],
@@ -4286,11 +5076,13 @@
 		]
 	},
 	{
+		"category": "package",
 		"extensions": [
 			".msi"
 		],
 		"mimes": [
-			"application/x-msdownload"
+			"application/x-msdownload",
+			"application/x-msi"
 		],
 		"name": "Windows Installer",
 		"signature": [
@@ -4301,6 +5093,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".msg"
 		],
@@ -4316,13 +5109,16 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
-			".mkv",
+			".mk3d",
 			".mka",
 			".mks",
-			".mk3d"
+			".mkv"
 		],
 		"mimes": [
+			"application/x-matroska",
+			"audio/x-matroska",
 			"video/x-matroska"
 		],
 		"name": "Matroska Media File",
@@ -4334,6 +5130,7 @@
 		]
 	},
 	{
+		"category": "video",
 		"extensions": [
 			".webm"
 		],
@@ -4349,6 +5146,7 @@
 		]
 	},
 	{
+		"category": "document",
 		"extensions": [
 			".djvu",
 			".djv"
@@ -4364,11 +5162,79 @@
 			},
 			{
 				"offset": 12,
-				"pattern": "DJV"
+				"pattern": "DJVI"
 			}
-		]
+		],
+		"variant": "DJVI"
 	},
 	{
+		"category": "document",
+		"extensions": [
+			".djvu",
+			".djv"
+		],
+		"mimes": [
+			"image/vnd.djvu"
+		],
+		"name": "DjVu Document",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "AT&TFORM"
+			},
+			{
+				"offset": 12,
+				"pattern": "DJVM"
+			}
+		],
+		"variant": "DJVM"
+	},
+	{
+		"category": "document",
+		"extensions": [
+			".djvu",
+			".djv"
+		],
+		"mimes": [
+			"image/vnd.djvu"
+		],
+		"name": "DjVu Document",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "AT&TFORM"
+			},
+			{
+				"offset": 12,
+				"pattern": "DJVU"
+			}
+		],
+		"variant": "DJVU"
+	},
+	{
+		"category": "document",
+		"extensions": [
+			".djvu",
+			".djv"
+		],
+		"mimes": [
+			"image/vnd.djvu"
+		],
+		"name": "DjVu Document",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "AT&TFORM"
+			},
+			{
+				"offset": 12,
+				"pattern": "THUM"
+			}
+		],
+		"variant": "THUM"
+	},
+	{
+		"category": "other",
 		"extensions": [],
 		"mimes": [],
 		"name": "uImage File",
@@ -4380,23 +5246,81 @@
 		]
 	},
 	{
+		"category": "compressed",
 		"extensions": [
 			".lzfse"
 		],
-		"mimes": [],
-		"name": "LZFSE File",
+		"mimes": [
+			"application/x-lzfse"
+		],
+		"name": "Lempel-Ziv Finite State Entropy (LZFSE) File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "bvx-"
+			}
+		],
+		"variant": "-"
+	},
+	{
+		"category": "compressed",
+		"extensions": [
+			".lzfse"
+		],
+		"mimes": [
+			"application/x-lzfse"
+		],
+		"name": "Lempel-Ziv Finite State Entropy (LZFSE) File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "bvx1"
+			}
+		],
+		"variant": "1"
+	},
+	{
+		"category": "compressed",
+		"extensions": [
+			".lzfse"
+		],
+		"mimes": [
+			"application/x-lzfse"
+		],
+		"name": "Lempel-Ziv Finite State Entropy (LZFSE) File",
 		"signature": [
 			{
 				"offset": 0,
 				"pattern": "bvx2"
 			}
-		]
+		],
+		"variant": "2"
 	},
 	{
+		"category": "compressed",
+		"extensions": [
+			".lzfse"
+		],
+		"mimes": [
+			"application/x-lzfse"
+		],
+		"name": "Lempel-Ziv Finite State Entropy (LZFSE) File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "bvxn"
+			}
+		],
+		"variant": "n"
+	},
+	{
+		"category": "other",
 		"extensions": [
 			".avro"
 		],
-		"mimes": [],
+		"mimes": [
+			"application/vnd.apache.avro"
+		],
 		"name": "Apache Avro Binary File",
 		"signature": [
 			{
@@ -4406,6 +5330,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".rc"
 		],
@@ -4419,6 +5344,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".rbxl"
 		],
@@ -4432,9 +5358,10 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
-			".p25",
-			".obt"
+			".obt",
+			".p25"
 		],
 		"mimes": [],
 		"name": "PhotoCap Object Templates File",
@@ -4446,6 +5373,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".pcv"
 		],
@@ -4459,6 +5387,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".pbt",
 			".pdt",
@@ -4481,8 +5410,13 @@
 		]
 	},
 	{
-		"extensions": [],
-		"mimes": [],
+		"category": "other",
+		"extensions": [
+			".parquet"
+		],
+		"mimes": [
+			"application/vnd.apache.parquet"
+		],
 		"name": "Apache Parquet Columnar File",
 		"signature": [
 			{
@@ -4492,6 +5426,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".ez2"
 		],
@@ -4507,6 +5442,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".ez3"
 		],
@@ -4522,6 +5458,7 @@
 		]
 	},
 	{
+		"category": "executable",
 		"extensions": [
 			".luac"
 		],
@@ -4537,10 +5474,13 @@
 		]
 	},
 	{
+		"category": "metadata",
 		"extensions": [
 			".alias"
 		],
-		"mimes": [],
+		"mimes": [
+			"application/x-apple-alias"
+		],
 		"name": "MacOS File Alias (Symbolic Link)",
 		"signature": [
 			{
@@ -4550,6 +5490,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".identifier"
 		],
@@ -4563,6 +5504,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".eml"
 		],
@@ -4578,6 +5520,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".tde"
 		],
@@ -4591,6 +5534,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".kdb"
 		],
@@ -4604,6 +5548,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".pgp"
 		],
@@ -4623,10 +5568,13 @@
 		]
 	},
 	{
+		"category": "compressed",
 		"extensions": [
 			".zst"
 		],
-		"mimes": [],
+		"mimes": [
+			"application/zstd"
+		],
 		"name": "Zstandard Archive",
 		"signature": [
 			{
@@ -4636,6 +5584,7 @@
 		]
 	},
 	{
+		"category": "archive",
 		"extensions": [
 			".rs"
 		],
@@ -4651,6 +5600,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".sml"
 		],
@@ -4664,6 +5614,7 @@
 		]
 	},
 	{
+		"category": "executable",
 		"extensions": [],
 		"mimes": [],
 		"name": "Preferred Executable Format",
@@ -4675,6 +5626,7 @@
 		]
 	},
 	{
+		"category": "subtitle",
 		"extensions": [
 			".srt"
 		],
@@ -4685,11 +5637,64 @@
 		"signature": [
 			{
 				"offset": 0,
-				"pattern": "1\n00"
+				"pattern": "ï»¿1\r\n00:"
 			}
-		]
+		],
+		"variant": "BOM, CRLF"
 	},
 	{
+		"category": "subtitle",
+		"extensions": [
+			".srt"
+		],
+		"mimes": [
+			"application/x-subrip"
+		],
+		"name": "SubRip File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ï»¿1\n00:"
+			}
+		],
+		"variant": "BOM, LF"
+	},
+	{
+		"category": "subtitle",
+		"extensions": [
+			".srt"
+		],
+		"mimes": [
+			"application/x-subrip"
+		],
+		"name": "SubRip File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "1\r\n00:"
+			}
+		],
+		"variant": "1, CRLF"
+	},
+	{
+		"category": "subtitle",
+		"extensions": [
+			".srt"
+		],
+		"mimes": [
+			"application/x-subrip"
+		],
+		"name": "SubRip File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "1\n00:"
+			}
+		],
+		"variant": "1, LF"
+	},
+	{
+		"category": "other",
 		"extensions": [
 			".vpk"
 		],
@@ -4703,6 +5708,7 @@
 		]
 	},
 	{
+		"category": "archive",
 		"extensions": [
 			".ace"
 		],
@@ -4718,26 +5724,32 @@
 		]
 	},
 	{
+		"category": "archive",
 		"extensions": [
 			".arj"
 		],
 		"mimes": [
 			"application/x-arj"
 		],
-		"name": "ARJ File",
+		"name": "Archived by Robert Jung (ARJ) File",
 		"signature": [
 			{
 				"offset": 0,
 				"pattern": "`ê"
+			},
+			{
+				"offset": 10,
+				"pattern": "\u0002"
 			}
 		]
 	},
 	{
+		"category": "archive",
 		"extensions": [
 			".cab"
 		],
 		"mimes": [],
-		"name": "InstallShield CAB Archive",
+		"name": "InstallShield Cabinet Archive",
 		"signature": [
 			{
 				"offset": 0,
@@ -4746,11 +5758,63 @@
 		]
 	},
 	{
+		"category": "archive",
+		"extensions": [
+			".cab"
+		],
+		"mimes": [
+			"application/vnd.ms-cab-compressed"
+		],
+		"name": "Microsoft Cabinet Archive",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "MSCF"
+			}
+		]
+	},
+	{
+		"category": "image",
 		"extensions": [
 			".wmf"
 		],
 		"mimes": [
-			"application/x-msmetafile"
+			"application/x-msmetafile",
+			"image/wmf"
+		],
+		"name": "Windows Metafile",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0001\u0000\t\u0000"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".wmf"
+		],
+		"mimes": [
+			"application/x-msmetafile",
+			"image/wmf"
+		],
+		"name": "Windows Metafile",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0002\u0000\t\u0000"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".wmf"
+		],
+		"mimes": [
+			"application/x-msmetafile",
+			"image/wmf"
 		],
 		"name": "Windows Metafile",
 		"signature": [
@@ -4761,11 +5825,14 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".xcf"
 		],
-		"mimes": [],
-		"name": "XCF File",
+		"mimes": [
+			"image/x-xcf"
+		],
+		"name": "Experimental Computing Facility File",
 		"signature": [
 			{
 				"offset": 0,
@@ -4774,6 +5841,7 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".xpm"
 		],
@@ -4789,6 +5857,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".aff"
 		],
@@ -4802,6 +5871,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".e01",
 			".ex01"
@@ -4816,23 +5886,29 @@
 		]
 	},
 	{
+		"category": "disk",
 		"extensions": [
 			".qcow"
 		],
-		"mimes": [],
+		"mimes": [
+			"application/x-qemu-disk"
+		],
 		"name": "QEMU Copy On Write (QCOW) File",
 		"signature": [
 			{
 				"offset": 0,
-				"pattern": "QFI"
+				"pattern": "QFIû"
 			}
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".ani"
 		],
-		"mimes": [],
+		"mimes": [
+			"application/x-navi-animation"
+		],
 		"name": "Animated Cursor File",
 		"signature": [
 			{
@@ -4846,11 +5922,14 @@
 		]
 	},
 	{
+		"category": "metadata",
 		"extensions": [
 			".cda"
 		],
-		"mimes": [],
-		"name": "CDA File",
+		"mimes": [
+			"application/x-cdf"
+		],
+		"name": "CD Audio File",
 		"signature": [
 			{
 				"offset": 0,
@@ -4858,15 +5937,18 @@
 			},
 			{
 				"offset": 8,
-				"pattern": "CDDA"
+				"pattern": "CDDAfmt "
 			}
 		]
 	},
 	{
+		"category": "audio",
 		"extensions": [
 			".qcp"
 		],
-		"mimes": [],
+		"mimes": [
+			"audio/qcelp"
+		],
 		"name": "Qualcomm PureVoice File",
 		"signature": [
 			{
@@ -4880,6 +5962,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".dir",
 			".dxr",
@@ -4902,6 +5985,7 @@
 		"variant": "BE"
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".dir",
 			".dxr",
@@ -4924,6 +6008,7 @@
 		"variant": "LE"
 	},
 	{
+		"category": "video",
 		"extensions": [
 			".flv"
 		],
@@ -4934,7 +6019,7 @@
 		"signature": [
 			{
 				"offset": 0,
-				"pattern": "FLV"
+				"pattern": "FLV\u0001"
 			}
 		]
 	},
@@ -4955,10 +6040,12 @@
 		]
 	},
 	{
+		"category": "disk",
 		"extensions": [
 			".vhd"
 		],
 		"mimes": [
+			"application/x-vhd",
 			"application/x-virtualbox-vhd"
 		],
 		"name": "Windows Virtual PC Virtual Hard Disk File",
@@ -4970,10 +6057,13 @@
 		]
 	},
 	{
+		"category": "disk",
 		"extensions": [
 			".vhdx"
 		],
-		"mimes": [],
+		"mimes": [
+			"application/x-vhdx"
+		],
 		"name": "Windows Virtual PC Windows 8 Virtual Hard Disk File",
 		"signature": [
 			{
@@ -4983,6 +6073,7 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".isz"
 		],
@@ -4996,6 +6087,7 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".daa"
 		],
@@ -5009,6 +6101,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".evt"
 		],
@@ -5022,6 +6115,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".evtx"
 		],
@@ -5035,6 +6129,7 @@
 		]
 	},
 	{
+		"category": "database",
 		"extensions": [
 			".sdb"
 		],
@@ -5048,6 +6143,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".grp"
 		],
@@ -5061,6 +6157,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".icm"
 		],
@@ -5076,6 +6173,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".dat",
 			".hiv"
@@ -5090,10 +6188,13 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".pst"
 		],
-		"mimes": [],
+		"mimes": [
+			"application/vnd.ms-outlook"
+		],
 		"name": "Microsoft Outlook Personal Storage Table File",
 		"signature": [
 			{
@@ -5103,10 +6204,13 @@
 		]
 	},
 	{
+		"category": "model",
 		"extensions": [
 			".drc"
 		],
-		"mimes": [],
+		"mimes": [
+			"model/x-draco"
+		],
 		"name": "Google Draco 3D Model File",
 		"signature": [
 			{
@@ -5116,6 +6220,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".grib",
 			".grib2"
@@ -5130,10 +6235,13 @@
 		]
 	},
 	{
+		"category": "model",
 		"extensions": [
 			".blend"
 		],
-		"mimes": [],
+		"mimes": [
+			"application/x-blender"
+		],
 		"name": "Blender File",
 		"signature": [
 			{
@@ -5143,11 +6251,14 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".jxl"
 		],
 		"name": "JPEG XL Image",
-		"mimes": [],
+		"mimes": [
+			"image/jxl"
+		],
 		"signature": [
 			{
 				"offset": 0,
@@ -5157,11 +6268,14 @@
 		"variant": "Long"
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".jxl"
 		],
 		"name": "JPEG XL Image",
-		"mimes": [],
+		"mimes": [
+			"image/jxl"
+		],
 		"signature": [
 			{
 				"offset": 0,
@@ -5171,6 +6285,7 @@
 		"variant": "Short"
 	},
 	{
+		"category": "font",
 		"extensions": [
 			".ttf",
 			".tte",
@@ -5188,6 +6303,7 @@
 		]
 	},
 	{
+		"category": "font",
 		"extensions": [
 			".ttf"
 		],
@@ -5203,6 +6319,7 @@
 		]
 	},
 	{
+		"category": "font",
 		"extensions": [
 			".otf"
 		],
@@ -5213,11 +6330,12 @@
 		"signature": [
 			{
 				"offset": 0,
-				"pattern": "OTTO"
+				"pattern": "OTTO\u0000"
 			}
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [],
 		"mimes": [],
 		"name": "Modulefile for Environment Modules",
@@ -5229,6 +6347,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".slob"
 		],
@@ -5242,6 +6361,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [],
 		"mimes": [],
 		"name": "Serialized Java Data",
@@ -5253,10 +6373,13 @@
 		]
 	},
 	{
+		"category": "audio",
 		"extensions": [
 			".voc"
 		],
-		"mimes": [],
+		"mimes": [
+			"audio/x-voc"
+		],
 		"name": "Creative Voice File",
 		"signature": [
 			{
@@ -5266,6 +6389,7 @@
 		]
 	},
 	{
+		"category": "audio",
 		"extensions": [
 			".au",
 			".snd"
@@ -5282,6 +6406,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [],
 		"mimes": [],
 		"name": "OpenGL Iris Perfomer Performer Fast Binary (PFB)",
@@ -5293,6 +6418,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".hazelrules"
 		],
@@ -5306,6 +6432,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".flp"
 		],
@@ -5319,6 +6446,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".flm"
 		],
@@ -5332,6 +6460,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [],
 		"mimes": [],
 		"name": "Vormetric Encryption DPM Version 2.1 Header",
@@ -5343,6 +6472,7 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".drw"
 		],
@@ -5356,6 +6486,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".dss"
 		],
@@ -5369,6 +6500,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".dss"
 		],
@@ -5382,6 +6514,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".adx"
 		],
@@ -5395,6 +6528,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".skf"
 		],
@@ -5408,6 +6542,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".dtd"
 		],
@@ -5423,6 +6558,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".wallet"
 		],
@@ -5436,6 +6572,7 @@
 		]
 	},
 	{
+		"category": "document",
 		"extensions": [
 			".doc"
 		],
@@ -5449,6 +6586,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".dsp"
 		],
@@ -5462,6 +6600,7 @@
 		]
 	},
 	{
+		"category": "audio",
 		"extensions": [
 			".amr"
 		],
@@ -5477,6 +6616,7 @@
 		]
 	},
 	{
+		"category": "audio",
 		"extensions": [
 			".sil"
 		],
@@ -5492,11 +6632,14 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".hdr"
 		],
-		"mimes": [],
-		"name": "Radiance High Dynamic Range Image",
+		"mimes": [
+			"image/vnd.radiance"
+		],
+		"name": "Radiance High Dynamic Range (HDR) Image",
 		"signature": [
 			{
 				"offset": 0,
@@ -5505,6 +6648,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".vbe"
 		],
@@ -5518,6 +6662,7 @@
 		]
 	},
 	{
+		"category": "database",
 		"extensions": [
 			".cdb"
 		],
@@ -5531,6 +6676,7 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".mdf"
 		],
@@ -5544,6 +6690,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".b85"
 		],
@@ -5561,6 +6708,7 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".jb2"
 		],
@@ -5578,19 +6726,7 @@
 		]
 	},
 	{
-		"extensions": [
-			".wks"
-		],
-		"mimes": [],
-		"name": "Works for Windows Spreadsheet",
-		"signature": [
-			{
-				"offset": 0,
-				"pattern": "ÿ\u0000\u0002\u0000\u0004\u0004\u0005T\u0002\u0000"
-			}
-		]
-	},
-	{
+		"category": "other",
 		"extensions": [
 			".qrp"
 		],
@@ -5604,6 +6740,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".cpi"
 		],
@@ -5617,6 +6754,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".sys"
 		],
@@ -5630,16 +6768,18 @@
 		]
 	},
 	{
+		"category": "document",
 		"extensions": [
 			".wp",
 			".wp5",
 			".wp6",
 			".wpd",
-			".wpg",
 			".wpp"
 		],
-		"mimes": [],
-		"name": "WordPerfect Text and Graphics File",
+		"mimes": [
+			"application/vnd.wordperfect"
+		],
+		"name": "WordPerfect Document",
 		"signature": [
 			{
 				"offset": 0,
@@ -5648,6 +6788,27 @@
 		]
 	},
 	{
+		"category": "image",
+		"extensions": [
+			".wpg"
+		],
+		"mimes": [
+			"application/vnd.wordperfect"
+		],
+		"name": "WordPerfect Graphics",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ÿWPC\u0010\u0000\u0000\u0000\u0001\u0016\u0001\u0000"
+			},
+			{
+				"offset": 14,
+				"pattern": "\u0000\u0000"
+			}
+		]
+	},
+	{
+		"category": "image",
 		"extensions": [
 			".tib"
 		],
@@ -5661,6 +6822,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".qdf"
 		],
@@ -5674,6 +6836,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".flt"
 		],
@@ -5687,6 +6850,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".dat"
 		],
@@ -5700,6 +6864,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".acd"
 		],
@@ -5713,6 +6878,7 @@
 		]
 	},
 	{
+		"category": "metadata",
 		"extensions": [
 			".ram"
 		],
@@ -5726,10 +6892,13 @@
 		]
 	},
 	{
+		"category": "metadata",
 		"extensions": [
 			".torrent"
 		],
-		"mimes": [],
+		"mimes": [
+			"application/x-bittorrent"
+		],
 		"name": "Torrent File",
 		"signature": [
 			{
@@ -5739,10 +6908,13 @@
 		]
 	},
 	{
+		"category": "archive",
 		"extensions": [
 			".sit"
 		],
-		"mimes": [],
+		"mimes": [
+			"application/x-stuffit"
+		],
 		"name": "StuffIt Compressed Archive",
 		"signature": [
 			{
@@ -5752,6 +6924,67 @@
 		]
 	},
 	{
+		"category": "archive",
+		"extensions": [
+			".sit"
+		],
+		"mimes": [
+			"application/x-stuffit"
+		],
+		"name": "StuffIt Compressed Archive",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "StuffIt (c)1997"
+			},
+			{
+				"offset": 82,
+				"pattern": "\u0005"
+			}
+		]
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".sit"
+		],
+		"mimes": [
+			"application/x-stuffit"
+		],
+		"name": "StuffIt Compressed Archive",
+		"signature": [
+			{
+				"offset": 128,
+				"pattern": "SIT!"
+			},
+			{
+				"offset": 138,
+				"pattern": "rLau"
+			}
+		]
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".sit"
+		],
+		"mimes": [
+			"application/x-stuffit"
+		],
+		"name": "StuffIt Compressed Archive",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "SIT!"
+			},
+			{
+				"offset": 10,
+				"pattern": "rLau"
+			}
+		]
+	},
+	{
+		"category": "other",
 		"extensions": [
 			".sdr"
 		],
@@ -5765,6 +6998,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".spf"
 		],
@@ -5778,6 +7012,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".spvchain"
 		],
@@ -5791,6 +7026,7 @@
 		]
 	},
 	{
+		"category": "database",
 		"extensions": [
 			".db"
 		],
@@ -5804,6 +7040,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".tbi"
 		],
@@ -5817,10 +7054,13 @@
 		]
 	},
 	{
+		"category": "video",
 		"extensions": [
 			".mxf"
 		],
-		"mimes": [],
+		"mimes": [
+			"application/mxf"
+		],
 		"name": "Material Exchange Format File",
 		"signature": [
 			{
@@ -5830,6 +7070,7 @@
 		]
 	},
 	{
+		"category": "image",
 		"extensions": [
 			".dat"
 		],
@@ -5843,6 +7084,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".eta"
 		],
@@ -5856,6 +7098,7 @@
 		]
 	},
 	{
+		"category": "other",
 		"extensions": [
 			".sav"
 		],
@@ -5869,6 +7112,7 @@
 		]
 	},
 	{
+		"category": "compressed",
 		"extensions": [
 			".hqx"
 		],
@@ -6163,5 +7407,97 @@
 				"pattern": "Á\u0007\nv@Ó\u0011\u0000\u0000ø\u0010WT"
 			}
 		]
+	},
+	{
+		"category": "model",
+		"extensions": [
+			".skp"
+		],
+		"mimes": [
+			"application/vnd.sketchup.skp"
+		],
+		"name": "SketchUp Model File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ÿþÿ\u000eS\u0000k\u0000e\u0000t\u0000c\u0000h\u0000U\u0000p\u0000 \u0000M\u0000o\u0000d\u0000e\u0000l\u0000"
+			}
+		]
+	},
+	{
+		"category": "rom",
+		"extensions": [
+			".ngc"
+		],
+		"mimes": [
+			"application/x-neo-geo-pocket-rom"
+		],
+		"name": "Neo Geo Pocket Color ROM",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": " LICENSED BY SNK CORPORATION"
+			},
+			{
+				"offset": 35,
+				"pattern": "\u0010"
+			}
+		],
+		"variant": "LICENSED"
+	},
+	{
+		"category": "rom",
+		"extensions": [
+			".ngc"
+		],
+		"mimes": [
+			"application/x-neo-geo-pocket-rom"
+		],
+		"name": "Neo Geo Pocket Color ROM",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "COPYRIGHT BY SNK CORPORATION"
+			},
+			{
+				"offset": 35,
+				"pattern": "\u0010"
+			}
+		],
+		"variant": "COPYRIGHT"
+	},
+	{
+		"category": "rom",
+		"extensions": [
+			".ngp"
+		],
+		"mimes": [
+			"application/x-neo-geo-pocket-rom"
+		],
+		"name": "Neo Geo Pocket ROM",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": " LICENSED BY SNK CORPORATION"
+			}
+		],
+		"variant": "LICENSED"
+	},
+	{
+		"category": "rom",
+		"extensions": [
+			".ngp"
+		],
+		"mimes": [
+			"application/x-neo-geo-pocket-rom"
+		],
+		"name": "Neo Geo Pocket ROM",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "COPYRIGHT BY SNK CORPORATION"
+			}
+		],
+		"variant": "COPYRIGHT"
 	}
 ]

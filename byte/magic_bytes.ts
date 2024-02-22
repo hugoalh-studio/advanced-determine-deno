@@ -4,11 +4,8 @@ export type MagicBytesCategory = "archive" | "audio" | "compressed" | "database"
 export interface MagicBytesMeta {
 	/**
 	 * Category of the magic bytes.
-	 * 
-	 * **NOTE:** Assign category is in progress, and will not `undefined` afterward.
-	 * @default undefined
 	 */
-	category?: MagicBytesCategory;
+	category: MagicBytesCategory;
 	/**
 	 * Extensions of the magic bytes.
 	 * @default []

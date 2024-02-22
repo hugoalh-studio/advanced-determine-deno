@@ -51,14 +51,18 @@ export class MagicBytesMatcher {
 	constructor(filter?: (meta: MagicBytesMeta) => boolean) {
 		for (const { signature, ...meta } of (MagicBytesList as MagicBytesEntry[])) {
 			if (filter?.(meta) ?? true) {
-				const matcher: BytesMatcher = new BytesMatcher(signature);
-				this.#list.push({
-					matcher,
-					meta: {
-						...meta,
-						weight: matcher.weight
-					}
-				});
+				try {
+					const matcher: BytesMatcher = new BytesMatcher(signature);
+					this.#list.push({
+						matcher,
+						meta: {
+							...meta,
+							weight: matcher.weight
+						}
+					});
+				} catch (error) {
+					throw new Error(`Unable to initialize magic bytes matcher with meta ${JSON.stringify(meta)}: ${error?.message ?? error}`);
+				}
 			}
 		}
 		if (this.#list.length === 0) {

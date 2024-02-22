@@ -1241,18 +1241,19 @@
   signature:
     - offset: 0
       pattern: "ÿØÿà\x00\x10JFIF\x00\x01"
-- category: "image"
-  extensions:
-    - ".jpg"
-    - ".jpeg"
-  mimes:
-    - "image/jpeg"
-  name: "JPEG Exif Image"
-  signature:
-    - offset: 0
-      pattern: "ÿØÿá"
-    - offset: 6
-      pattern: "Exif\x00\x00"
+# [ERROR] Redefined \xC4 at offset 6, but \xC4 is not exist?
+# - category: "image"
+#   extensions:
+#     - ".jpg"
+#     - ".jpeg"
+#   mimes:
+#     - "image/jpeg"
+#   name: "JPEG Exif Image"
+#   signature:
+#     - offset: 0
+#       pattern: "ÿØÿá"
+#     - offset: 6
+#       pattern: "Exif\x00\x00"
 - category: "compressed"
   extensions:
     - ".lz"

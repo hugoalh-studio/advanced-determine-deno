@@ -148,7 +148,6 @@ image	.jpg, .jpeg	image/jpeg	Joint Photographic Experts Group (JPEG) Image	"[{""
 image	.jpg, .jpeg	image/jpeg	Joint Photographic Experts Group (JPEG) Image	"[{""offset"":0,""pattern"":""ÿØÿà""}]"	E0
 image	.jpg, .jpeg	image/jpeg	Joint Photographic Experts Group (JPEG) Image	"[{""offset"":0,""pattern"":""ÿØÿî""}]"	EE
 image	.jpg, .jpeg	image/jpeg	JPEG JFIF Image	"[{""offset"":0,""pattern"":""ÿØÿà\u0000\u0010JFIF\u0000\u0001""}]"	
-image	.jpg, .jpeg	image/jpeg	JPEG Exif Image	"[{""offset"":0,""pattern"":""ÿØÿá""},{""offset"":6,""pattern"":""Exif\u0000\u0000""}]"	
 compressed	.lz	application/x-lzip	LZip Archive	"[{""offset"":0,""pattern"":""LZIP""}]"	
 compressed	.cpio	application/x-cpio	cpio Archive	"[{""offset"":0,""pattern"":""070707""}]"	
 executable	.exe	application/x-dosexec, application/x-msdos-program, application/x-msdownload	MS-DOS Executable	"[{""offset"":0,""pattern"":""MZ""}]"	MZ

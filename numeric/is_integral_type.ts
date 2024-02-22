@@ -87,10 +87,6 @@ export enum NumericIntegralType {
 	UShort = "uint16"
 }
 /**
- * Key of enum of the numeric integral type.
- */
-export type NumericIntegralTypeStringify = keyof typeof NumericIntegralType;
-/**
  * @access private
  */
 interface NumericIntegralTypeRange {
@@ -122,10 +118,10 @@ function resolveNumericIntegralTypeRangeUIntBase(base: bigint): NumericIntegralT
 }
 /**
  * @access private
- * @param {NumericIntegralType | NumericIntegralTypeStringify} name
+ * @param {NumericIntegralType | keyof typeof NumericIntegralType} name
  * @returns {NumericIntegralTypeRange}
  */
-function resolveNumericIntegralTypeRange(name: NumericIntegralType | NumericIntegralTypeStringify): NumericIntegralTypeRange {
+function resolveNumericIntegralTypeRange(name: NumericIntegralType | keyof typeof NumericIntegralType): NumericIntegralTypeRange {
 	switch (NumericIntegralType[name]) {
 		case "int8":
 			return resolveNumericIntegralTypeRangeIntBase(8n);
@@ -153,11 +149,11 @@ function resolveNumericIntegralTypeRange(name: NumericIntegralType | NumericInte
 }
 /**
  * Determine whether the numeric is in the range of the specify integral type.
- * @param {NumericIntegralType | NumericIntegralTypeStringify} typeName Name of the integral numeric type.
+ * @param {NumericIntegralType | keyof typeof NumericIntegralType} typeName Name of the integral numeric type.
  * @param {bigint | number} item Item that need to determine.
  * @returns {boolean} Determine result.
  */
-export function isNumericIntegralType(typeName: NumericIntegralType | NumericIntegralTypeStringify, item: bigint | number): boolean {
+export function isNumericIntegralType(typeName: NumericIntegralType | keyof typeof NumericIntegralType, item: bigint | number): boolean {
 	const { maximum, minimum } = resolveNumericIntegralTypeRange(typeName);
 	if (typeof item === "bigint") {
 		return (minimum <= item && item <= maximum);

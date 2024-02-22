@@ -57,10 +57,6 @@ export enum DNSProviderName {
 	quad101 = "quad101",
 	Quad101 = "quad101"
 }
-/**
- * Key of enum of the DNS provider name.
- */
-export type DNSProviderNameStringify = keyof typeof DNSProviderName;
 const dnsProvidersList: Map<`${DNSProviderName}`, DNSResolveFromProvider> = new Map<`${DNSProviderName}`, DNSResolveFromProvider>([
 	["adguard", new DNSResolveFromProvider(["94.140.14.140", "94.140.14.141", "2a10:50c0::1:ff", "2a10:50c0::2:ff"])],
 	["cloudflare", new DNSResolveFromProvider(["1.1.1.1", "1.0.0.1", "2606:4700:4700::64", "2606:4700:4700::6400", "2606:4700:4700::1111", "2606:4700:4700::1001"])],
@@ -78,13 +74,13 @@ const dnsProvidersList: Map<`${DNSProviderName}`, DNSResolveFromProvider> = new 
  * - Network (`allow-net`): All
  * @param {string} query Query.
  * @param {DNSCleanSupportRecordType} recordType Record type.
- * @param {number | (DNSProviderName | DNSProviderNameStringify)[]} [samples=2] Number of samples, or array of DNS providers.
+ * @param {number | (DNSProviderName | keyof typeof DNSProviderName)[]} [samples=2] Number of samples, or array of DNS providers.
  * @returns {Promise<boolean>} Determine result.
  */
-export async function isDNSClean(query: string, recordType: DNSCleanSupportRecordType, samples: number | (DNSProviderName | DNSProviderNameStringify)[] = 2): Promise<boolean> {
+export async function isDNSClean(query: string, recordType: DNSCleanSupportRecordType, samples: number | (DNSProviderName | keyof typeof DNSProviderName)[] = 2): Promise<boolean> {
 	const dnsProviders: DNSResolveFromProvider[] = ((): DNSResolveFromProvider[] => {
 		if (Array.isArray(samples)) {
-			return samples.map((sample: DNSProviderName | DNSProviderNameStringify): DNSResolveFromProvider => {
+			return samples.map((sample: DNSProviderName | keyof typeof DNSProviderName): DNSResolveFromProvider => {
 				const value: DNSResolveFromProvider | undefined = dnsProvidersList.get(DNSProviderName[sample]);
 				if (typeof value === "undefined") {
 					throw new RangeError(`\`${sample}\` is not a valid DNS provider! Only accept these values: ${Array.from(new Set(Object.keys(DNSProviderName).sort()).values()).join(", ")}`);

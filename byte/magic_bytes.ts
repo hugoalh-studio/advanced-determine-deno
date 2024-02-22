@@ -1,11 +1,11 @@
 import MagicBytesList from "./magic_bytes_list.json" with { type: "json" };
 import { BytesMatcher, type BytesMatcherSignature } from "./matcher.ts";
-export type MagicBytesCategory = "archive" | "audio" | "compressed" | "database" | "diagram" | "disk" | "document" | "ebook" | "executable" | "font" | "formula" | "geospatial" | "image" | "metadata" | "model" | "other" | "package" | "playlist" | "presentation" | "rom" | "spreadsheet" | "subtitle" | "video";
+export type MagicBytesMetaCategory = "archive" | "audio" | "compressed" | "database" | "diagram" | "disk" | "document" | "ebook" | "executable" | "font" | "formula" | "geospatial" | "image" | "metadata" | "model" | "other" | "package" | "playlist" | "presentation" | "rom" | "spreadsheet" | "subtitle" | "video";
 export interface MagicBytesMeta {
 	/**
 	 * Category of the magic bytes.
 	 */
-	category: MagicBytesCategory;
+	category: MagicBytesMetaCategory;
 	/**
 	 * Extensions of the magic bytes.
 	 * @default []

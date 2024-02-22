@@ -48,5 +48,6 @@ jobs:
       ignores_post: |-
         Param($ElementPostMeta)
         Return (
+          $ElementPostMeta.Path -imatch '^byte[\\/]test_sample[\\/]' -or
           $ElementPostMeta.Path -imatch '^node_modules[\\/]'
         )

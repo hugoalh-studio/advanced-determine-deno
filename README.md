@@ -12,7 +12,7 @@ A Deno module to provide advanced method to determine item.
 
 ### Deno
 
-- **Target Version:** >= v1.40.0
+- **Target Version:** >= v1.41.0
 - **Require Permission:** *N/A*
 - **Registry:**
   - DenoPKG

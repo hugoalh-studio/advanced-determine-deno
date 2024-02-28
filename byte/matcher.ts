@@ -23,7 +23,7 @@ export class BytesMatcher {
 			if (pattern.length === 0) {
 				throw new SyntaxError(`Pattern is empty from offset ${offsetFrom}!`);
 			}
-			const patternResolve: number[] = Array.from((typeof pattern === "string") ? (new TextEncoder().encode(pattern)) : Uint8Array.of(...pattern));
+			const patternResolve: number[] = Array.from<number>((typeof pattern === "string") ? (new TextEncoder().encode(pattern)) : Uint8Array.of(...pattern));
 			const offsetTo: number = offsetFrom + patternResolve.length;
 			if (offsetFrom < 0 && offsetTo > 0) {
 				throw new Error(`Pattern is overflow (most likely cause by incorrect offset)! Offset Current: ${offsetFrom}; Offset Possible: <= ${offsetFrom - offsetTo}`);
@@ -53,7 +53,7 @@ export class BytesMatcher {
 		if (size > Number.MAX_SAFE_INTEGER) {
 			throw new Error(`Size of the file is too large!`);
 		}
-		if (Math.max(...Array.from(this.#signatureHead.keys())) >= size) {
+		if (Math.max(...Array.from<number>(this.#signatureHead.keys())) >= size) {
 			// Signature of head must smaller than or equal to the size of the file.
 			return false;
 		}
@@ -111,7 +111,7 @@ export class BytesMatcher {
 			}
 			const reader: ReadableStreamDefaultReader<Uint8Array> = fileResolve.readable.getReader();
 			let cursor = 0;
-			const cursorMaximum: number = Math.max(...Array.from(signatureResolve.keys()));
+			const cursorMaximum: number = Math.max(...Array.from<number>(signatureResolve.keys()));
 			while (true) {
 				const { done, value } = await reader.read();
 				if (typeof value !== "undefined") {

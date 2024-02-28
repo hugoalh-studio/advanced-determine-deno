@@ -71,7 +71,7 @@ interface StringDissectSegmentByRegExpParameters {
  */
 function* dissectSegmentWithRegExp({ matcher, segment, type }: StringDissectSegmentByRegExpParameters): Generator<string | StringSegmentDescriptor> {
 	let cursor = 0;
-	for (const match of Array.from(segment.matchAll(matcher))) {
+	for (const match of segment.matchAll(matcher)) {
 		const value: string = match[0];
 		const indexStart: number = match.index!;
 		if (cursor < indexStart) {

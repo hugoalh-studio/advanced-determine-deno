@@ -62,7 +62,7 @@ export class StringTruncator {
 		if (typeof options.ellipsisPosition !== "undefined") {
 			const value: StringTruncateEllipsisPosition | undefined = StringTruncateEllipsisPosition[options.ellipsisPosition];
 			if (typeof value === "undefined") {
-				throw new RangeError(`\`${options.ellipsisPosition}\` is not a valid ellipsis position! Only accept these values: ${Array.from(new Set(Object.keys(StringTruncateEllipsisPosition).sort()).values()).join(", ")}`);
+				throw new RangeError(`\`${options.ellipsisPosition}\` is not a valid ellipsis position! Only accept these values: ${Array.from<string>(new Set(Object.keys(StringTruncateEllipsisPosition).sort()).values()).join(", ")}`);
 			}
 			this.#ellipsisPosition = value;
 		}
@@ -109,7 +109,7 @@ export class StringTruncator {
 				resultLengthEnd = resultLengthMaximum;
 				break;
 		}
-		const stringSegments: string[] = Array.from(this.#stringDissector.dissect(item), (segment: StringSegmentDescriptor): string => {
+		const stringSegments: string[] = Array.from<StringSegmentDescriptor, string>(this.#stringDissector.dissect(item), (segment: StringSegmentDescriptor): string => {
 			return segment.value;
 		});
 		let resultStringStart = "";

@@ -80,18 +80,18 @@ const dnsProvidersList: Map<`${DNSProviderName}`, DNSResolveFromProvider> = new 
 export async function isDNSClean(query: string, recordType: DNSCleanSupportRecordType, samples: number | (DNSProviderName | keyof typeof DNSProviderName)[] = 2): Promise<boolean> {
 	const dnsProviders: DNSResolveFromProvider[] = ((): DNSResolveFromProvider[] => {
 		if (Array.isArray(samples)) {
-			return samples.map((sample: DNSProviderName | keyof typeof DNSProviderName): DNSResolveFromProvider => {
+			return Array.from<DNSResolveFromProvider>(new Set<DNSResolveFromProvider>(samples.map((sample: DNSProviderName | keyof typeof DNSProviderName): DNSResolveFromProvider => {
 				const value: DNSResolveFromProvider | undefined = dnsProvidersList.get(DNSProviderName[sample]);
 				if (typeof value === "undefined") {
-					throw new RangeError(`\`${sample}\` is not a valid DNS provider! Only accept these values: ${Array.from(new Set(Object.keys(DNSProviderName).sort()).values()).join(", ")}`);
+					throw new RangeError(`\`${sample}\` is not a valid DNS provider! Only accept these values: ${Array.from<string>(new Set(Object.keys(DNSProviderName).sort()).values()).join(", ")}`);
 				}
 				return value;
-			});
+			})).values());
 		}
 		if (samples !== Infinity && !(Number.isSafeInteger(samples) && samples > 0)) {
 			throw new RangeError(`Argument \`samples\` is not \`Infinity\`, or a number which is integer, safe, and > 0!`);
 		}
-		return shuffleArray(Array.from(dnsProvidersList.values())).slice(0, samples);
+		return shuffleArray(Array.from<DNSResolveFromProvider>(dnsProvidersList.values())).slice(0, samples);
 	})();
 	const resultsLocal: string[] = await Deno.resolveDns(query, recordType).catch((reason: unknown): string[] => {
 		if (reason instanceof Deno.errors.NotFound) {

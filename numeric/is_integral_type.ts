@@ -144,7 +144,7 @@ function resolveNumericIntegralTypeRange(name: NumericIntegralType | keyof typeo
 		case "uint128":
 			return resolveNumericIntegralTypeRangeUIntBase(128n);
 		default:
-			throw new RangeError(`\`${name}\` is not a valid integral numeric type! Only accept these values: ${Array.from(new Set(Object.keys(NumericIntegralType).sort()).values()).join(", ")}`);
+			throw new RangeError(`\`${name}\` is not a valid integral numeric type! Only accept these values: ${Array.from<string>(new Set(Object.keys(NumericIntegralType).sort()).values()).join(", ")}`);
 	}
 }
 /**

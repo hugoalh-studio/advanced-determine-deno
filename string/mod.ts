@@ -6,4 +6,4 @@ export { isStringSingleLine } from "./is_singleline.ts";
 export { isStringTrimmable } from "./is_trimmable.ts";
 export { isStringTrimmableEnd } from "./is_trimmable_end.ts";
 export { isStringTrimmableStart } from "./is_trimmable_start.ts";
-export { stringTruncate, StringTruncator, StringTruncateEllipsisPosition, type StringTruncateEllipsisPositionStringify, type StringTruncatorOptions } from "./truncate.ts";
+export { stringTruncate, StringTruncateEllipsisPosition, StringTruncator, type StringTruncatorOptions } from "./truncate.ts";

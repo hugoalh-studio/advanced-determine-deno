@@ -10,10 +10,6 @@ export enum StringTruncateEllipsisPosition {
 	start = "start",
 	Start = "start"
 }
-/**
- * Key of enum of the string truncate ellipsis position.
- */
-export type StringTruncateEllipsisPositionStringify = keyof typeof StringTruncateEllipsisPosition;
 export interface StringTruncatorOptions extends StringDissectorOptions {
 	/**
 	 * Ellipsis mark of the target string.
@@ -24,7 +20,7 @@ export interface StringTruncatorOptions extends StringDissectorOptions {
 	 * Ellipsis position at the target string.
 	 * @default "end"
 	 */
-	ellipsisPosition?: StringTruncateEllipsisPosition | StringTruncateEllipsisPositionStringify;
+	ellipsisPosition?: StringTruncateEllipsisPosition | keyof typeof StringTruncateEllipsisPosition;
 }
 /**
  * Check length.
